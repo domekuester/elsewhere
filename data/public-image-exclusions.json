@@ -7,18 +7,56 @@
       "photoId": "photo-0105",
       "filename": "P1210572.jpg",
       "reason": "Explicit owner rejection. Do not publish or select again."
+    },
+    {
+      "photoId": "photo-0351",
+      "filename": "P1260248.jpg",
+      "reason": "Explicit Phase 7 owner rejection. Do not publish or select again."
+    },
+    {
+      "photoId": "photo-0024",
+      "filename": "1210412-2.jpg",
+      "reason": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again."
+    },
+    {
+      "photoId": "photo-0025",
+      "filename": "1210412.jpg",
+      "reason": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again."
+    },
+    {
+      "photoId": "photo-0026",
+      "filename": "1210415-2.jpg",
+      "reason": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again."
+    },
+    {
+      "photoId": "photo-0027",
+      "filename": "1210415-3.jpg",
+      "reason": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again."
+    },
+    {
+      "photoId": "photo-0028",
+      "filename": "1210415-4.jpg",
+      "reason": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again."
+    },
+    {
+      "photoId": "photo-0029",
+      "filename": "1210415.jpg",
+      "reason": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again."
+    },
+    {
+      "photoId": "photo-0030",
+      "filename": "1210417.jpg",
+      "reason": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again."
     }
   ],
   "duplicateFamilies": [
-    { "keepId": "photo-0016", "keepFilename": "1200794-2.jpg", "excludeIds": ["photo-0017"] },
-    { "keepId": "photo-0024", "keepFilename": "1210412-2.jpg", "excludeIds": ["photo-0025"] },
-    { "keepId": "photo-0026", "keepFilename": "1210415-2.jpg", "excludeIds": ["photo-0027", "photo-0028", "photo-0029"] },
+    { "keepId": "photo-0533", "keepFilename": "1200794-3.jpg", "excludeIds": ["photo-0016", "photo-0017"], "reason": "Same-frame export family: the newly reviewed monochrome frame is the authored Black & White selection." },
     { "keepId": "photo-0052", "keepFilename": "IMG_9830-2.jpg", "excludeIds": ["photo-0053"] },
     { "keepId": "photo-0078", "keepFilename": "P1210177 Kopie.jpg", "excludeIds": ["photo-0077"] },
     { "keepId": "photo-0088", "keepFilename": "P1210297.jpg", "excludeIds": ["photo-0087"] },
     { "keepId": "photo-0108", "keepFilename": "P1210660-2.jpg", "excludeIds": ["photo-0109"] },
-    { "keepId": "photo-0112", "keepFilename": "P1210692.jpg", "excludeIds": ["photo-0111"] },
-    { "keepId": "photo-0168", "keepFilename": "P1230352.jpg", "excludeIds": ["photo-0167"] },
+    { "keepId": "photo-0112", "keepFilename": "P1210692.jpg", "excludeIds": ["photo-0111", "photo-0548"] },
+    { "keepId": "photo-0168", "keepFilename": "P1230352.jpg", "excludeIds": ["photo-0167", "photo-0551"] },
     { "keepId": "photo-0174", "keepFilename": "P1230472-2.jpg", "excludeIds": ["photo-0175"] },
     { "keepId": "photo-0191", "keepFilename": "P1230819-2.jpg", "excludeIds": ["photo-0192"] },
     { "keepId": "photo-0203", "keepFilename": "P1230935-2.jpg", "excludeIds": ["photo-0204"] },
@@ -26,8 +64,8 @@
     { "keepId": "photo-0227", "keepFilename": "P1240451-Enhanced-NR-2.jpg", "excludeIds": ["photo-0228"] },
     { "keepId": "photo-0247", "keepFilename": "P1240750.jpg", "excludeIds": ["photo-0245", "photo-0246"] },
     { "keepId": "photo-0327", "keepFilename": "P1260071.jpg", "excludeIds": ["photo-0326"] },
-    { "keepId": "photo-0329", "keepFilename": "P1260105-2.jpg", "excludeIds": ["photo-0330"] },
-    { "keepId": "photo-0364", "keepFilename": "P1260453-2.jpg", "excludeIds": ["photo-0365"] },
+    { "keepId": "photo-0329", "keepFilename": "P1260105-2.jpg", "excludeIds": ["photo-0330", "photo-0575"] },
+    { "keepId": "photo-0364", "keepFilename": "P1260453-2.jpg", "excludeIds": ["photo-0365", "photo-0582"] },
     { "keepId": "photo-0368", "keepFilename": "P1260473-2.jpg", "excludeIds": ["photo-0369"] },
     { "keepId": "photo-0403", "keepFilename": "P1270020-2.jpg", "excludeIds": ["photo-0404", "photo-0405", "photo-0406", "photo-0407"] },
     { "keepId": "photo-0408", "keepFilename": "P1270024-2.jpg", "excludeIds": ["photo-0409", "photo-0410"] },
@@ -45,6 +83,27 @@
     { "keepId": "photo-0525", "keepFilename": "P1300824.jpg", "excludeIds": ["photo-0524"] },
     { "keepId": "photo-0131", "keepFilename": "P1210804.jpg", "excludeIds": ["photo-0130"], "reason": "Near-duplicate sequence: stronger human gesture and more resolved full-scene composition." },
     { "keepId": "photo-0317", "keepFilename": "P1250930.jpg", "excludeIds": ["photo-0316"], "reason": "Near-duplicate sequence: cleaner hand/sun alignment and stronger tonal separation." },
-    { "keepId": "photo-0256", "keepFilename": "P1240866.jpg", "excludeIds": ["photo-0255"], "reason": "Near-duplicate sequence: clearer subject separation, color, and web-scale legibility." }
+    { "keepId": "photo-0256", "keepFilename": "P1240866.jpg", "excludeIds": ["photo-0255"], "reason": "Near-duplicate sequence: clearer subject separation, color, and web-scale legibility." },
+    { "keepId": "photo-0050", "keepFilename": "IMG_9319.jpg", "excludeIds": ["photo-0543"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0064", "keepFilename": "P1160394 Kopie.jpg", "excludeIds": ["photo-0545"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0079", "keepFilename": "P1210201 Kopie.jpg", "excludeIds": ["photo-0546"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0172", "keepFilename": "P1230418.jpg", "excludeIds": ["photo-0552"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0173", "keepFilename": "P1230469.jpg", "excludeIds": ["photo-0553"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0177", "keepFilename": "P1230482.jpg", "excludeIds": ["photo-0554"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0181", "keepFilename": "P1230638.jpg", "excludeIds": ["photo-0555"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0183", "keepFilename": "P1230676.jpg", "excludeIds": ["photo-0556"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0222", "keepFilename": "P1240384.jpg", "excludeIds": ["photo-0560"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0236", "keepFilename": "P1240584.jpg", "excludeIds": ["photo-0561"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0280", "keepFilename": "P1250371.jpg", "excludeIds": ["photo-0567"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0281", "keepFilename": "P1250387.jpg", "excludeIds": ["photo-0568"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0308", "keepFilename": "P1250789.jpg", "excludeIds": ["photo-0570"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0312", "keepFilename": "P1250824.jpg", "excludeIds": ["photo-0571"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0334", "keepFilename": "P1260140.jpg", "excludeIds": ["photo-0577"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0352", "keepFilename": "P1260262.jpg", "excludeIds": ["photo-0579"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0354", "keepFilename": "P1260276.jpg", "excludeIds": ["photo-0580"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0585", "keepFilename": "P1260472-2.jpg", "excludeIds": ["photo-0367"], "reason": "Same-frame export family: the newly reviewed monochrome frame is the authored Black & White selection." },
+    { "keepId": "photo-0374", "keepFilename": "P1260493.jpg", "excludeIds": ["photo-0586"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0378", "keepFilename": "P1260594.jpg", "excludeIds": ["photo-0587"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." },
+    { "keepId": "photo-0381", "keepFilename": "P1260635.jpg", "excludeIds": ["photo-0588"], "reason": "Same-frame color/monochrome export family; retain one public archive representative." }
   ]
 }

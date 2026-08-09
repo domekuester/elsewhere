@@ -23,6 +23,13 @@
 - [Phase 6 launch checklist](PHASE-6-LAUNCH-CHECKLIST.md)
 - [Phase 6 social sharing](PHASE-6-SOCIAL-SHARING.md)
 - [Phase 6 monetization readiness](PHASE-6-MONETIZATION-READINESS.md)
+- [Phase 7 report](PHASE-7-REPORT.md)
+- [Phase 7 editorial mastering](PHASE-7-EDITORIAL-MASTERING.md)
+- [Phase 7 Black & White re-edit](PHASE-7-BLACK-AND-WHITE-REEDIT.md)
+- [Phase 7 typography pass](PHASE-7-TYPOGRAPHY-PASS.md)
+- [Phase 7 scroll feel](PHASE-7-SCROLL-FEEL-REPORT.md)
+- [Phase 7 homepage re-cut](PHASE-7-HOMEPAGE-RE-CUT.md)
+- [Phase 7.5 final master QA](PHASE-7.5-FINAL-MASTER-QA.md)
 
 ## Earlier creative direction
 

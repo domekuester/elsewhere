@@ -3,6 +3,8 @@ import path from 'node:path';
 
 const errors = [];
 const read = (file) => fs.readFileSync(file, 'utf8');
+const exclusions = JSON.parse(read('data/public-image-exclusions.json'));
+const forbiddenTokens = exclusions.ownerRejected.flatMap((item) => [item.photoId, item.filename, path.parse(item.filename).name]);
 const htmlFiles = [];
 const walk = (directory) => {
   if (!fs.existsSync(directory)) return;
@@ -39,7 +41,15 @@ for (const file of htmlFiles) {
   }
   const socialPath = html.match(/<meta property="og:image" content="https?:\/\/[^/]+(\/[^\"]+)">/)?.[1];
   if (socialPath && !fs.existsSync(path.join('dist', socialPath))) errors.push(`${file} references missing social image ${socialPath}`);
-  if (/P1210572|photo-0105|people-laughing/.test(html)) errors.push(`${file} contains the rejected photograph reference`);
+  if (forbiddenTokens.some((token) => html.includes(token))) errors.push(`${file} contains an owner-rejected photograph reference`);
+}
+
+for (const item of exclusions.ownerRejected) {
+  const inventory = JSON.parse(read('docs/photo-inventory.json'));
+  const index = inventory.photos.findIndex((photo) => photo.id === item.photoId);
+  if (index < 0) continue;
+  const derivativeName = `${String(index + 1).padStart(4, '0')}-${path.parse(item.filename).name}.jpg`;
+  for (const role of ['thumbnails', 'archive', 'viewer']) if (fs.existsSync(path.join('dist/assets-derived', role, derivativeName))) errors.push(`Production exposes ${item.photoId} ${role} derivative`);
 }
 
 const robots = fs.existsSync('dist/robots.txt') ? read('dist/robots.txt') : '';

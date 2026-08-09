@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-09T16:20:02.895Z",
+  "generatedAt": "2026-08-09T21:26:42.305Z",
   "sourcePolicy": "Master source files. Never modify, move, rename, or serve directly in production.",
   "sourceRoot": "assets-source/photos",
-  "photoCount": 530,
+  "photoCount": 588,
   "photos": [
     {
       "id": "photo-0001",
@@ -25377,6 +25377,2906 @@
       "technical": {
         "metadataReadError": null,
         "thumbnailPath": ".photo-inventory-cache/thumbs/0530-P1310100.jpg"
+      }
+    },
+    {
+      "id": "photo-0531",
+      "filename": "1170823.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/1170823.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3607282,
+        "megabytes": 3.44,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-02-23T11:47:24.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 14,
+        "aperture": 2.8,
+        "iso": 400,
+        "exposureSeconds": 0.0000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0531-1170823.jpg"
+      }
+    },
+    {
+      "id": "photo-0532",
+      "filename": "1180477.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/1180477.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 1936136,
+        "megabytes": 1.85,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-03-02T06:03:38.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 5.9,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.00025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0532-1180477.jpg"
+      }
+    },
+    {
+      "id": "photo-0533",
+      "filename": "1200794-3.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/1200794-3.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2829127,
+        "megabytes": 2.7,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2523,
+        "height": 3235
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.7799,
+      "capture": {
+        "date": "2025-04-07T17:34:43.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 800,
+        "exposureSeconds": 0.02
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0533-1200794-3.jpg"
+      }
+    },
+    {
+      "id": "photo-0534",
+      "filename": "C78925E1-AF3F-4CFB-8936-2002CA639EDE.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/C78925E1-AF3F-4CFB-8936-2002CA639EDE.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 5469567,
+        "megabytes": 5.22,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-08-30T18:44:37.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0534-C78925E1-AF3F-4CFB-8936-2002CA639EDE.jpg"
+      }
+    },
+    {
+      "id": "photo-0535",
+      "filename": "IMG_0034.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_0034.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2194310,
+        "megabytes": 2.09,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2870,
+        "height": 3154
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.91,
+      "capture": {
+        "date": "2024-12-04T15:32:53.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 7.8,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0535-IMG-0034.jpg"
+      }
+    },
+    {
+      "id": "photo-0536",
+      "filename": "IMG_0439.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_0439.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2145398,
+        "megabytes": 2.05,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2024-12-13T16:01:10.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 104.4,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.01
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0536-IMG-0439.jpg"
+      }
+    },
+    {
+      "id": "photo-0537",
+      "filename": "IMG_0442.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_0442.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2793248,
+        "megabytes": 2.66,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2024-12-13T16:06:50.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0537-IMG-0442.jpg"
+      }
+    },
+    {
+      "id": "photo-0538",
+      "filename": "IMG_1109.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_1109.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 1691341,
+        "megabytes": 1.61,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2025-01-19T17:01:09.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 62.1,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0538-IMG-1109.jpg"
+      }
+    },
+    {
+      "id": "photo-0539",
+      "filename": "IMG_1272.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_1272.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 1222171,
+        "megabytes": 1.17,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-03-26T11:27:06.000Z",
+        "cameraMake": null,
+        "cameraModel": null,
+        "lens": null,
+        "focalLengthMm": null,
+        "aperture": null,
+        "iso": null,
+        "exposureSeconds": null
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0539-IMG-1272.jpg"
+      }
+    },
+    {
+      "id": "photo-0540",
+      "filename": "IMG_7266.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_7266.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3936455,
+        "megabytes": 3.75,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-09-06T16:11:31.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 10.9,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0540-IMG-7266.jpg"
+      }
+    },
+    {
+      "id": "photo-0541",
+      "filename": "IMG_7988.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_7988.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 1986143,
+        "megabytes": 1.89,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-10-03T12:15:36.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 8,
+        "iso": 100,
+        "exposureSeconds": 0.00025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0541-IMG-7988.jpg"
+      }
+    },
+    {
+      "id": "photo-0542",
+      "filename": "IMG_8220.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_8220.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3471011,
+        "megabytes": 3.31,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2523,
+        "height": 3873
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6514,
+      "capture": {
+        "date": "2024-10-10T13:08:03.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 8.1,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0542-IMG-8220.jpg"
+      }
+    },
+    {
+      "id": "photo-0543",
+      "filename": "IMG_9319-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_9319-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 920637,
+        "megabytes": 0.88,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-11-05T12:52:28.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 101.4,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.02
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0543-IMG-9319-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0544",
+      "filename": "IMG_9846.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_9846.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3205771,
+        "megabytes": 3.06,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-11-27T15:04:47.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 35.1,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.003125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0544-IMG-9846.jpg"
+      }
+    },
+    {
+      "id": "photo-0545",
+      "filename": "P1160394 Kopie-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1160394 Kopie-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 1762948,
+        "megabytes": 1.68,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-02-17T17:07:48.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 59.5,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.00015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0545-P1160394-Kopie-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0546",
+      "filename": "P1210201 Kopie-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1210201 Kopie-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2958079,
+        "megabytes": 2.82,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2494,
+        "height": 3937
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6335,
+      "capture": {
+        "date": "2025-04-17T16:57:59.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 2.8,
+        "iso": 800,
+        "exposureSeconds": 0.008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0546-P1210201-Kopie-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0547",
+      "filename": "P1210582.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1210582.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2659146,
+        "megabytes": 2.54,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-04-24T15:25:41.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 92.7,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.0125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0547-P1210582.jpg"
+      }
+    },
+    {
+      "id": "photo-0548",
+      "filename": "P1210692-3.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1210692-3.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 1888032,
+        "megabytes": 1.8,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-04-27T04:22:49.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 65.8,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0548-P1210692-3.jpg"
+      }
+    },
+    {
+      "id": "photo-0549",
+      "filename": "P1230281.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1230281.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3133896,
+        "megabytes": 2.99,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-05-13T07:38:21.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0549-P1230281.jpg"
+      }
+    },
+    {
+      "id": "photo-0550",
+      "filename": "P1230351.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1230351.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3204703,
+        "megabytes": 3.06,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-05-13T09:09:58.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 9.4,
+        "aperture": 3.5,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0550-P1230351.jpg"
+      }
+    },
+    {
+      "id": "photo-0551",
+      "filename": "P1230352-3.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1230352-3.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3217148,
+        "megabytes": 3.07,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-05-13T09:09:59.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 9.4,
+        "aperture": 3.5,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0551-P1230352-3.jpg"
+      }
+    },
+    {
+      "id": "photo-0552",
+      "filename": "P1230418-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1230418-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3767224,
+        "megabytes": 3.59,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2449,
+        "height": 3666
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-05-13T10:07:15.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0552-P1230418-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0553",
+      "filename": "P1230469-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1230469-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2628838,
+        "megabytes": 2.51,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2025-05-13T11:25:28.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0553-P1230469-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0554",
+      "filename": "P1230482-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1230482-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2894583,
+        "megabytes": 2.76,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-05-13T11:28:56.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 94,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.002
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0554-P1230482-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0555",
+      "filename": "P1230638-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1230638-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 5858261,
+        "megabytes": 5.59,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2492,
+        "height": 3322
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.7502,
+      "capture": {
+        "date": "2025-05-15T05:48:08.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 54.1,
+        "aperture": 5,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0555-P1230638-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0556",
+      "filename": "P1230676-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1230676-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 4691240,
+        "megabytes": 4.47,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2467,
+        "height": 3701
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6666,
+      "capture": {
+        "date": "2025-05-15T05:58:04.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 42.5,
+        "aperture": 5,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0556-P1230676-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0557",
+      "filename": "P1230800.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1230800.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 1055534,
+        "megabytes": 1.01,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 1311,
+        "height": 1967
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6665,
+      "capture": {
+        "date": "2025-05-16T07:04:32.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 59.5,
+        "aperture": 3.5,
+        "iso": 100,
+        "exposureSeconds": 0.0015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0557-P1230800.jpg"
+      }
+    },
+    {
+      "id": "photo-0558",
+      "filename": "P1240050.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1240050.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 5457925,
+        "megabytes": 5.21,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-05-21T09:45:25.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.002
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0558-P1240050.jpg"
+      }
+    },
+    {
+      "id": "photo-0559",
+      "filename": "P1240171.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1240171.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 6006636,
+        "megabytes": 5.73,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2512,
+        "height": 3768
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6667,
+      "capture": {
+        "date": "2025-05-22T08:20:57.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 29.2,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0559-P1240171.jpg"
+      }
+    },
+    {
+      "id": "photo-0560",
+      "filename": "P1240384-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1240384-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 5427001,
+        "megabytes": 5.18,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2667,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6667,
+      "capture": {
+        "date": "2025-05-22T09:56:00.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 88.7,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.004
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0560-P1240384-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0561",
+      "filename": "P1240584-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1240584-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3289936,
+        "megabytes": 3.14,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2407,
+        "height": 3610
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6668,
+      "capture": {
+        "date": "2025-05-23T07:29:36.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 5.6,
+        "iso": 100,
+        "exposureSeconds": 0.00125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0561-P1240584-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0562",
+      "filename": "P1240667.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1240667.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 1931948,
+        "megabytes": 1.84,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-05-27T07:09:35.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 96.3,
+        "aperture": 5.6,
+        "iso": 100,
+        "exposureSeconds": 0.002
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0562-P1240667.jpg"
+      }
+    },
+    {
+      "id": "photo-0563",
+      "filename": "P1240677.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1240677.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3697069,
+        "megabytes": 3.53,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-05-27T07:47:18.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 95.2,
+        "aperture": 3.2,
+        "iso": 100,
+        "exposureSeconds": 0.003125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0563-P1240677.jpg"
+      }
+    },
+    {
+      "id": "photo-0564",
+      "filename": "P1240796.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1240796.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 886276,
+        "megabytes": 0.85,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 1189,
+        "height": 1783
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6669,
+      "capture": {
+        "date": "2025-05-29T06:27:48.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 77,
+        "aperture": 5,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0564-P1240796.jpg"
+      }
+    },
+    {
+      "id": "photo-0565",
+      "filename": "P1240815.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1240815.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 1870082,
+        "megabytes": 1.78,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 1602,
+        "height": 2403
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6667,
+      "capture": {
+        "date": "2025-05-29T06:41:25.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0565-P1240815.jpg"
+      }
+    },
+    {
+      "id": "photo-0566",
+      "filename": "P1240840.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1240840.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 5668441,
+        "megabytes": 5.41,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-05-29T06:53:10.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.003125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0566-P1240840.jpg"
+      }
+    },
+    {
+      "id": "photo-0567",
+      "filename": "P1250371-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1250371-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 6198880,
+        "megabytes": 5.91,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3901,
+        "height": 2926
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3332,
+      "capture": {
+        "date": "2025-06-08T07:03:35.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 25.2,
+        "aperture": 3.5,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0567-P1250371-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0568",
+      "filename": "P1250387-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1250387-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3098823,
+        "megabytes": 2.96,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3963,
+        "height": 2647
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.4972,
+      "capture": {
+        "date": "2025-06-08T07:07:19.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 3.5,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0568-P1250387-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0569",
+      "filename": "P1250782.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1250782.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3360226,
+        "megabytes": 3.2,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-06-08T10:10:09.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 3.5,
+        "iso": 100,
+        "exposureSeconds": 0.00125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0569-P1250782.jpg"
+      }
+    },
+    {
+      "id": "photo-0570",
+      "filename": "P1250789-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1250789-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 1505285,
+        "megabytes": 1.44,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2470,
+        "height": 1650
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2025-06-08T10:11:56.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 94,
+        "aperture": 3.5,
+        "iso": 100,
+        "exposureSeconds": 0.002
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0570-P1250789-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0571",
+      "filename": "P1250824-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1250824-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2312750,
+        "megabytes": 2.21,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-06-08T10:29:08.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 69.3,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.02
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0571-P1250824-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0572",
+      "filename": "P1250828.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1250828.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2571984,
+        "megabytes": 2.45,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-06-08T10:29:22.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 104.4,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.02
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0572-P1250828.jpg"
+      }
+    },
+    {
+      "id": "photo-0573",
+      "filename": "P1250830.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1250830.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2187597,
+        "megabytes": 2.09,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-06-08T10:29:35.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 103.7,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.02
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0573-P1250830.jpg"
+      }
+    },
+    {
+      "id": "photo-0574",
+      "filename": "P1250928.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1250928.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 5890310,
+        "megabytes": 5.62,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-06-08T14:17:25.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 12.5,
+        "aperture": 8,
+        "iso": 100,
+        "exposureSeconds": 0.00025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0574-P1250928.jpg"
+      }
+    },
+    {
+      "id": "photo-0575",
+      "filename": "P1260105-3.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260105-3.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 4598227,
+        "megabytes": 4.39,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2632,
+        "height": 3948
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6667,
+      "capture": {
+        "date": "2025-06-16T08:49:38.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 53.4,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0575-P1260105-3.jpg"
+      }
+    },
+    {
+      "id": "photo-0576",
+      "filename": "P1260123.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260123.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 5664109,
+        "megabytes": 5.4,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2025-06-16T08:50:43.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.9,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0576-P1260123.jpg"
+      }
+    },
+    {
+      "id": "photo-0577",
+      "filename": "P1260140-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260140-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2748943,
+        "megabytes": 2.62,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 1991,
+        "height": 2987
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6666,
+      "capture": {
+        "date": "2025-06-16T10:12:12.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 24.8,
+        "aperture": 3.2,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0577-P1260140-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0578",
+      "filename": "P1260197.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260197.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 1527814,
+        "megabytes": 1.46,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2621,
+        "height": 3924
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6679,
+      "capture": {
+        "date": "2025-06-17T13:05:47.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 32.5,
+        "aperture": 3.2,
+        "iso": 100,
+        "exposureSeconds": 0.004
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0578-P1260197.jpg"
+      }
+    },
+    {
+      "id": "photo-0579",
+      "filename": "P1260262-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260262-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 5263020,
+        "megabytes": 5.02,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-06-21T11:05:32.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 13.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.0008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0579-P1260262-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0580",
+      "filename": "P1260276-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260276-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3321431,
+        "megabytes": 3.17,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2927,
+        "height": 3903
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.7499,
+      "capture": {
+        "date": "2025-06-21T11:09:56.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 13,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.0008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0580-P1260276-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0581",
+      "filename": "P1260426.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260426.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 5555411,
+        "megabytes": 5.3,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2652,
+        "height": 3970
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-06-26T12:28:31.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 9.1,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.0008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0581-P1260426.jpg"
+      }
+    },
+    {
+      "id": "photo-0582",
+      "filename": "P1260453-3.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260453-3.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 3807409,
+        "megabytes": 3.63,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2319,
+        "height": 3478
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6668,
+      "capture": {
+        "date": "2025-06-26T13:16:07.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 48.3,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0582-P1260453-3.jpg"
+      }
+    },
+    {
+      "id": "photo-0583",
+      "filename": "P1260455.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260455.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2179978,
+        "megabytes": 2.08,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2297,
+        "height": 3445
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6668,
+      "capture": {
+        "date": "2025-06-26T13:16:20.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 104.4,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0583-P1260455.jpg"
+      }
+    },
+    {
+      "id": "photo-0584",
+      "filename": "P1260466.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260466.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 6488380,
+        "megabytes": 6.19,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-06-26T13:24:21.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0584-P1260466.jpg"
+      }
+    },
+    {
+      "id": "photo-0585",
+      "filename": "P1260472-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260472-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 2922463,
+        "megabytes": 2.79,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2603,
+        "height": 3905
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6666,
+      "capture": {
+        "date": "2025-06-26T14:01:20.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 87.3,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0585-P1260472-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0586",
+      "filename": "P1260493-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260493-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 6252622,
+        "megabytes": 5.96,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2974,
+        "height": 3966
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.7499,
+      "capture": {
+        "date": "2025-06-26T14:04:15.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 15.5,
+        "aperture": 4.5,
+        "iso": 200,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0586-P1260493-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0587",
+      "filename": "P1260594-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260594-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 4334271,
+        "megabytes": 4.13,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2593,
+        "height": 3882
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-07-06T16:33:35.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 73,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0587-P1260594-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0588",
+      "filename": "P1260635-2.jpg",
+      "sourcePath": "assets-source/photos/Foto Set 1.0/P1260635-2.jpg",
+      "sourceSet": "Foto Set 1.0",
+      "file": {
+        "bytes": 5315806,
+        "megabytes": 5.07,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-07-13T18:03:36.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 400,
+        "exposureSeconds": 0.01
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [
+          "black-and-white-candidate"
+        ],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "notes": "New monochrome archive addition; visually reviewed in Phase 7."
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0588-P1260635-2.jpg"
       }
     }
   ]

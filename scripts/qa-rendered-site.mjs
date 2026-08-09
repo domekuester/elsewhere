@@ -1,7 +1,10 @@
 import fs from 'node:fs';
 
 const endpoint = 'http://127.0.0.1:9223';
-const base = 'http://127.0.0.1:4323';
+const base = process.env.QA_BASE ?? 'http://127.0.0.1:4323';
+const screenshotPhase = process.env.QA_PHASE ?? 'phase6';
+const exclusions = JSON.parse(fs.readFileSync('data/public-image-exclusions.json', 'utf8'));
+const forbiddenTokens = exclusions.ownerRejected.flatMap((item) => [item.photoId, item.filename, item.filename.replace(/\.[^.]+$/, '')]);
 const target = await fetch(`${endpoint}/json/new?${encodeURIComponent('about:blank')}`, { method: 'PUT' }).then((response) => response.json());
 const socket = new WebSocket(target.webSocketDebuggerUrl);
 await new Promise((resolve, reject) => { socket.addEventListener('open', resolve, { once: true }); socket.addEventListener('error', reject, { once: true }); });
@@ -79,8 +82,8 @@ for (const [name, route, width, height, fullPage] of cases) {
       overflow: document.documentElement.scrollWidth > innerWidth + 1,
       imageCount: images.length,
       brokenImages: images.filter(image => image.hasAttribute('src') && image.complete && image.naturalWidth === 0).map(image => image.currentSrc || image.src),
-      duplicateSources: [...new Set(sources.filter((source, index) => sources.indexOf(source) !== index))],
-      rejectedReference: document.documentElement.innerHTML.includes('P1210572') || document.documentElement.innerHTML.includes('photo-0105') || document.documentElement.innerHTML.includes('people-laughing'),
+      duplicateSources: [...new Set(sources.filter(Boolean).filter((source, index, all) => all.indexOf(source) !== index))],
+      rejectedReference: ${JSON.stringify(forbiddenTokens)}.some(token => document.documentElement.innerHTML.includes(token)),
       frameworkOverlay: Boolean(document.querySelector('vite-error-overlay, astro-dev-overlay, nextjs-portal'))
       ,metadata: {
         canonical: document.querySelector('link[rel="canonical"]')?.href ?? null,
@@ -98,14 +101,14 @@ for (const [name, route, width, height, fullPage] of cases) {
   })()`);
   results.push({ name, route, width, height, ...state });
 
-  if (['home-desktop', 'home-mobile', 'people-desktop', 'black-white', 'destinations', 'archive-desktop', 'japan-desktop'].includes(name)) {
+  if (['home-desktop', 'home-mobile', 'people-desktop', 'black-white', 'black-white-mobile', 'destinations', 'archive-desktop', 'japan-desktop'].includes(name)) {
     let screenshotParams = { format: 'png', captureBeyondViewport: true };
     if (fullPage) {
       const metrics = await send('Page.getLayoutMetrics');
       screenshotParams.clip = { x: 0, y: 0, width, height: Math.ceil(metrics.cssContentSize.height), scale: 1 };
     }
     const shot = await send('Page.captureScreenshot', screenshotParams);
-    fs.writeFileSync(`/tmp/elsewhere-phase6-${name}.png`, Buffer.from(shot.data, 'base64'));
+    fs.writeFileSync(`/tmp/elsewhere-${screenshotPhase}-${name}.png`, Buffer.from(shot.data, 'base64'));
   }
 }
 

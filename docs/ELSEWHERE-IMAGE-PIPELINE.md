@@ -2,23 +2,29 @@
 
 ## Immutable source
 
-`assets-source/photos/` contains master material and is never modified. `.photo-inventory-cache/` is regenerable internal review material. `public/assets-derived/` contains regenerable web delivery assets.
+`assets-source/photos/` contains master material and is never modified. `.photo-inventory-cache/` is regenerable internal review material. `public/assets-derived/` contains regenerable public delivery assets. Editorial exclusions are read before generation; owner-rejected work cannot re-enter public output through a rebuild.
 
-## Implemented classes
+## Implemented delivery roles
 
-- **THUMB** — 530 lightweight contact-sheet files copied from the existing inventory cache to `public/assets-derived/thumbnails/`; approximately 22 MB in aggregate, requested progressively.
-- **ARCHIVE** — 530 JPEG derivatives capped at 1600px and quality 78 in `public/assets-derived/archive/`; approximately 132 MB in aggregate, fetched only after a viewer selection.
-- **DISPLAY/HERO** — curated public surfaces continue to use Astro image processing with responsive WebP widths and explicit sizes.
+| Role | Maximum dimension | JPEG quality | Chroma | Use |
+| --- | ---: | ---: | --- | --- |
+| THUMB | 960 px | 84 | 4:2:0 | Archive/contact-sheet index |
+| ARCHIVE / DISPLAY | 1800 px | 86 | 4:4:4 | Medium editorial frames and destination sequences |
+| VIEWER / HERO | 3200 px | 90 | 4:4:4 | Immersive viewer and destination chapter hero |
 
-`scripts/build-photo-catalog.mjs` builds the privacy-safe index and seeds curation assignments. `scripts/generate-archive-derivatives.mjs` creates/resumes archive delivery files. Both preserve masters.
+All roles use decoded orientation, `fit: inside`, and `withoutEnlargement`. Embedded ICC profiles are retained. No global visual filter, artificial sharpening, or source upscaling is applied. `public/assets-derived/PIPELINE.json` records the reproducible settings.
 
-## Budgets
+The catalog exposes a separate `thumbnail`, `archiveImage`, and `viewerImage`. The viewer never reuses the contact-sheet or archive role. It first displays a temporary contained thumbnail preview, then reveals the decoded viewer asset. The main image remains `object-fit: contain`, centered inside the usable dynamic viewport.
 
-- Above fold: one genuine hero image on Home; Archive initially requests at most 24 thumbnails.
-- Hero target: generally below 500 KB per delivered responsive candidate.
-- Archive thumbnail target: generally below 120 KB; average is materially lower.
-- Viewer: one 1600px frame at a time; no preloading of 530 large files.
-- Initial custom JavaScript: keep archive/viewer enhancement below 25 KB compressed; do not add a UI framework.
-- Fonts: current system font stacks avoid blocking font downloads.
+## Commands and validation
 
-Future AVIF/WebP archive variants should be generated in the same pipeline when deployment storage/edge negotiation is chosen. The current JPEG derivatives maximize local reproducibility and broad decoding reliability.
+- `npm run images:derive` regenerates all three roles from read-only masters, removes forbidden derivatives, and rebuilds the public catalog.
+- `npm run images:repair-inventory` decodes missing master dimensions and rebuilds the catalog.
+- `npm run validate:content` verifies every public role exists at its expected dimension, rejects private fields, and proves owner-rejected assets have no public derivative.
+- `scripts/build-photo-catalog.mjs` removes orphan JPEG derivatives so old filenames or prior selections cannot remain directly reachable.
+
+The current public catalog contains 500 photographs and exactly 500 files in each delivery role. Archive rendering remains incremental at 24 frames. Viewer assets are fetched only after intent; no mass viewer preload occurs.
+
+## Performance and fidelity policy
+
+Photography is the product. A high-density display receives enough decoded pixels for the rendered slot where the master permits it, while index browsing remains substantially lighter. The largest viewer files are exceptional high-detail frames; only one is loaded at a time. Curated Astro surfaces continue to produce responsive WebP candidates with explicit sizes.

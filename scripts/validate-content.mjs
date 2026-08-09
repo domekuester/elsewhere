@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import path from 'node:path';
+import sharp from 'sharp';
 
 const read = (file) => JSON.parse(fs.readFileSync(file, 'utf8'));
 const inventory = read('docs/photo-inventory.json');
@@ -32,6 +34,7 @@ for (const [photoId, assignment] of Object.entries(curation.assignments)) {
 }
 for (const destination of destinations) {
   for (const id of [...destination.photoIds, ...destination.featuredPhotoIds, ...destination.manualOrder]) if (!photoIds.has(id)) errors.push(`${destination.id} references missing photo ${id}`);
+  for (const id of [...destination.photoIds, ...destination.featuredPhotoIds, ...destination.manualOrder]) if (excludedIds.has(id)) errors.push(`${destination.id} includes editorially excluded photo ${id}`);
   if (destination.publicationStatus === 'published' && (!destination.heroPhotoId || destination.confirmedPhotoCount < 5)) errors.push(`Published destination ${destination.id} fails content threshold`);
   if (destination.confirmedPhotoCount === 0 && destination.publicationStatus !== 'planned') errors.push(`Destination ${destination.id} has zero photos but is ${destination.publicationStatus}`);
 }
@@ -45,6 +48,25 @@ for (const photo of publicCatalog) {
   const assignment = curation.assignments[photo.id];
   if (assignment && ['private', 'do-not-publish'].includes(assignment.visibility)) errors.push(`Private photo ${photo.id} appears in public catalog`);
   if (excludedIds.has(photo.id)) errors.push(`Editorially excluded photo ${photo.id} appears in public catalog`);
+  for (const [role, asset] of Object.entries({ thumbnail: photo.thumbnail, archive: photo.archiveImage, viewer: photo.viewerImage })) {
+    if (!asset) { errors.push(`Public photo ${photo.id} has no ${role} derivative`); continue; }
+    const localPath = path.join('public', asset);
+    if (!fs.existsSync(localPath)) { errors.push(`Public photo ${photo.id} references missing ${role} derivative ${asset}`); continue; }
+    const metadata = await sharp(localPath).metadata();
+    const actualMax = Math.max(metadata.width ?? 0, metadata.height ?? 0);
+    const sourceMax = Math.max(photo.width ?? 0, photo.height ?? 0);
+    const expectedMax = Math.min(sourceMax, { thumbnail: 960, archive: 1800, viewer: 3200 }[role]);
+    if (actualMax < expectedMax - 2) errors.push(`${photo.id} ${role} derivative is undersized: ${actualMax}px; expected ${expectedMax}px`);
+  }
+}
+for (const rejected of exclusions.ownerRejected) {
+  const assignment = curation.assignments[rejected.photoId];
+  if (!assignment || assignment.visibility !== 'do-not-publish' || assignment.publicationStatus !== 'PRIVATE') errors.push(`Owner-rejected ${rejected.photoId} is not persistently PRIVATE/do-not-publish`);
+  const index = inventory.photos.findIndex((photo) => photo.id === rejected.photoId);
+  if (index >= 0) {
+    const derivativeName = `${String(index + 1).padStart(4, '0')}-${path.parse(rejected.filename).name}.jpg`;
+    for (const role of ['thumbnails', 'archive', 'viewer']) if (fs.existsSync(path.join('public/assets-derived', role, derivativeName))) errors.push(`Owner-rejected ${rejected.photoId} retains public ${role} derivative`);
+  }
 }
 const privateIds = new Set(Object.entries(curation.assignments).filter(([, item]) => ['private', 'do-not-publish'].includes(item.visibility)).map(([id]) => id));
 const expectedPublicCount = inventory.photos.length - new Set([...privateIds, ...excludedIds]).size;

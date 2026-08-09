@@ -3,12 +3,15 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
-import water from '../../assets/photos/water-portrait.jpg';
-import reflection from '../../assets/photos/bw-reflection.jpg';
-import artisan from '../../assets/photos/bw-artisan.jpg';
-import stall from '../../assets/photos/bw-stall.jpg';
 import horizon from '../../assets/photos/bw-horizon.jpg';
-import sculpture from '../../assets/photos/bw-sculpture.jpg';
+import marketWoman from '../../assets/photos/bw-market-woman.jpg';
+import joyReflection from '../../assets/photos/bw-joy-reflection.jpg';
+import smallBoat from '../../assets/photos/bw-small-boat.jpg';
+import doorwayMan from '../../assets/photos/bw-doorway-man.jpg';
+import reachSun from '../../assets/photos/bw-reach-sun.jpg';
+import prayer from '../../assets/photos/bw-prayer.jpg';
+import cityTaxis from '../../assets/photos/bw-city-taxis.jpg';
+import upward from '../../assets/photos/bw-upward.jpg';
 ---
 
 <BaseLayout title="Black & White photography — Elsewhere" description="A monochrome collection of gesture, work, weather, and distance from the Elsewhere archive." image="/social/black-and-white.jpg" imageAlt="A solitary figure at the edge of a grey sea">
@@ -22,12 +25,15 @@ import sculpture from '../../assets/photos/bw-sculpture.jpg';
     </header>
 
     <section class="bw-sequence" aria-label="Selected black and white photographs">
-      <figure class="bw-frame bw-frame-water" data-photo-reveal><Image src={water} alt="A man bends toward falling water" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 48vw, 100vw" loading="lazy" /><figcaption>Gesture</figcaption></figure>
+      <figure class="bw-frame bw-frame-opening" data-photo-reveal><Image src={marketWoman} alt="A market worker pauses with one hand at her shoulder" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 48vw, 100vw" loading="lazy" /><figcaption>Presence</figcaption></figure>
       <blockquote>Colour leaves.<br />Attention remains.</blockquote>
-      <figure class="bw-frame bw-frame-reflection" data-photo-reveal><Image src={reflection} alt="A woman seen through a mirror as she adjusts her hair" widths={[480, 768, 1200]} sizes="(min-width: 901px) 34vw, 86vw" loading="lazy" /><figcaption>Reflection</figcaption></figure>
-      <figure class="bw-frame bw-frame-artisan" data-photo-reveal><Image src={artisan} alt="A seated artisan working beside an open window" widths={[480, 768, 1200]} sizes="(min-width: 901px) 36vw, 86vw" loading="lazy" /><figcaption>Work</figcaption></figure>
-      <figure class="bw-frame bw-frame-stall" data-photo-reveal><Image src={stall} alt="An empty street-food stall at night" widths={[480, 768, 1200]} sizes="(min-width: 901px) 32vw, 82vw" loading="lazy" /><figcaption>After closing</figcaption></figure>
-      <figure class="bw-frame bw-frame-sculpture" data-photo-reveal><Image src={sculpture} alt="A weathered human sculpture against a mountain" widths={[480, 768, 1200]} sizes="(min-width: 901px) 30vw, 76vw" loading="lazy" /><figcaption>Figure and ground</figcaption></figure>
+      <figure class="bw-frame bw-frame-distance" data-photo-reveal><Image src={smallBoat} alt="A very small boat beneath an immense dark sky" widths={[480, 768, 1200]} sizes="(min-width: 901px) 30vw, 78vw" loading="lazy" /><figcaption>Distance</figcaption></figure>
+      <figure class="bw-frame bw-frame-threshold" data-photo-reveal><Image src={doorwayMan} alt="An older man stands at the edge of a dark doorway" widths={[480, 768, 1200]} sizes="(min-width: 901px) 34vw, 82vw" loading="lazy" /><figcaption>At the threshold</figcaption></figure>
+      <figure class="bw-frame bw-frame-reflection" data-photo-reveal><Image src={joyReflection} alt="A woman smiles at her reflection between foreground silhouettes" widths={[480, 768, 1200]} sizes="(min-width: 901px) 30vw, 78vw" loading="lazy" /><figcaption>Reflection</figcaption></figure>
+      <figure class="bw-frame bw-frame-city" data-photo-reveal><Image src={cityTaxis} alt="Dark taxis cross a dense city street beneath an overcast sky" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 55vw, 100vw" loading="lazy" /><figcaption>City weather</figcaption></figure>
+      <figure class="bw-frame bw-frame-reach" data-photo-reveal><Image src={reachSun} alt="A silhouetted hand reaches toward the sun above the sea" widths={[480, 768, 1000]} sizes="(min-width: 901px) 24vw, 68vw" loading="lazy" /><figcaption>Toward light</figcaption></figure>
+      <figure class="bw-frame bw-frame-upward" data-photo-reveal><Image src={upward} alt="A person raises a phone and looks upward inside a crowd" widths={[480, 768, 1000]} sizes="(min-width: 901px) 30vw, 76vw" loading="lazy" /><figcaption>Upward</figcaption></figure>
+      <figure class="bw-frame bw-frame-closing" data-photo-reveal><Image src={prayer} alt="A dark sculpted figure with hands held together in profile" widths={[480, 768, 1200]} sizes="(min-width: 901px) 34vw, 82vw" loading="lazy" /><figcaption>Stillness</figcaption></figure>
     </section>
 
     <aside class="bw-next"><p>Continue through the photographic index.</p><a href="/archive/"><span>Archive</span><b aria-hidden="true">→</b></a></aside>

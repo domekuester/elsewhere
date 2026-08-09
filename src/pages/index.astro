@@ -19,10 +19,10 @@ import oceanCurrent from '../assets/photos/ocean-current.jpg';
 import handShell from '../assets/photos/hand-shell.jpg';
 import cirquePortrait from '../assets/photos/cirque-portrait.jpg';
 import lagoonSunset from '../assets/photos/lagoon-sunset.jpg';
-import waterPortrait from '../assets/photos/water-portrait.jpg';
 import fernSpiral from '../assets/photos/fern-spiral.jpg';
-import bwReflection from '../assets/photos/bw-reflection.jpg';
-import bwArtisan from '../assets/photos/bw-artisan.jpg';
+import bwMarketWoman from '../assets/photos/bw-market-woman.jpg';
+import bwJoyReflection from '../assets/photos/bw-joy-reflection.jpg';
+import bwSmallBoat from '../assets/photos/bw-small-boat.jpg';
 import bwHorizon from '../assets/photos/bw-horizon.jpg';
 import yellowBird from '../assets/photos/yellow-bird.jpg';
 import boxingGloves from '../assets/photos/boxing-gloves.jpg';
@@ -61,7 +61,7 @@ const closingPhotos = [
     <CategoryIndex worlds={worlds} />
 
     <section class="people-memory" id="people" aria-labelledby="people-title">
-      <EditorialFigure src={waterPortrait} alt="A man bends toward falling water" class="people-memory-photo" sizes="(min-width: 901px) 58vw, 100vw" position="50% 38%" />
+      <EditorialFigure src={bwMarketWoman} alt="A market worker pauses with one hand at her shoulder" class="people-memory-photo" sizes="(min-width: 901px) 58vw, 100vw" position="50% 42%" />
       <div class="people-memory-copy">
         <span class="memory-mark" aria-hidden="true"></span>
         <h2 id="people-title">People I met<br />along the way.</h2>
@@ -80,7 +80,7 @@ const closingPhotos = [
       <div><span class="memory-mark" aria-hidden="true"></span><h2 id="environment-title">Some places<br />resist categories.</h2><p>They alter scale, weather, and the way a photograph is read.</p></div>
     </section>
 
-    <BlackWhitePreview reflection={bwReflection} artisan={bwArtisan} horizon={bwHorizon} />
+    <BlackWhitePreview portrait={bwJoyReflection} distance={bwSmallBoat} horizon={bwHorizon} />
 
     <DestinationBrowser />
 

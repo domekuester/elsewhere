@@ -27,3 +27,9 @@
 | `P1210859.jpg` | EDITORIAL | Closing sequence | People | Colour | The raised gloves offer gesture and anticipation rather than another portrait. | Preserve both gloves and eyes. | Keep hands and gaze within the upper two-thirds. | Ends the image edit on poised human movement. |
 
 Geographic assignments remain `null` unless independently verified. These selections are editorial classifications, not location claims.
+# Phase 7 addendum
+
+- Removed everywhere: `P1260248.jpg` — explicit owner rejection; no replacement elsewhere in the archive or relationships.
+- People anchor: `IMG_0442.jpg` — ANCHOR / People + Black & White; vertical; selected for direct gaze, physical gesture, backlight, and environmental texture. Desktop focal point 50% 42%; mobile retains the full upper-body relationship.
+- Black & White threshold: `1200794-3.jpg` — EDITORIAL / reflection and release; portrait; followed by the immense negative space of `P1240171.jpg` and expanded by `P1260122.jpg` lighthouse.
+- Sequence logic: large colour worlds → monochrome human intimacy → extreme distance → panoramic stillness → geographic index → saturated story/ocean return.

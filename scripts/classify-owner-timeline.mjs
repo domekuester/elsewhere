@@ -5,6 +5,11 @@ const write = (file, value) => fs.writeFileSync(file, `${JSON.stringify(value, n
 const inventory = read('docs/photo-inventory.json');
 const timeline = read('data/owner-travel-timeline.json');
 const curation = read('data/photo-curation.json');
+const exclusions = read('data/public-image-exclusions.json');
+const editorialExcludedIds = new Set([
+  ...exclusions.ownerRejected.map((item) => item.photoId),
+  ...exclusions.duplicateFamilies.flatMap((family) => family.excludeIds)
+]);
 const migrateExistingArchiveVisibility = (curation.schemaVersion ?? 1) < 3;
 const catalog = read('public/data/photo-catalog.json');
 const publicByFilename = new Map(catalog.photos.map((photo) => [photo.filename.toLowerCase(), photo]));
@@ -42,7 +47,9 @@ for (const photo of inventory.photos) {
     assignment.journeyId = result.period.journeyId;
     assignment.locationSource = 'OWNER_TRAVEL_TIMELINE';
     assignment.locationSourceAttribution = 'OWNER';
-    journeyPhotos.get(result.period.journeyId).push(photo.id);
+    if (!editorialExcludedIds.has(photo.id) && !['private', 'do-not-publish'].includes(assignment.visibility)) {
+      journeyPhotos.get(result.period.journeyId).push(photo.id);
+    }
   } else if (result.status === 'transition' && !hasStrongerLocation) {
     assignment.destination = null;
     assignment.destinationId = null;
@@ -84,7 +91,7 @@ const destinationDefinitions = [
 
 const assignments = Object.entries(curation.assignments);
 const destinations = destinationDefinitions.map((destination) => {
-  const photoIds = assignments.filter(([, value]) => value.destinationId === destination.id && value.locationConfidence === 'CONFIRMED_OWNER_RANGE').map(([id]) => id);
+  const photoIds = assignments.filter(([id, value]) => value.destinationId === destination.id && value.locationConfidence === 'CONFIRMED_OWNER_RANGE' && !editorialExcludedIds.has(id) && !['private', 'do-not-publish'].includes(value.visibility)).map(([id]) => id);
   const journeyIds = timeline.periods.filter((period) => period.destinationId === destination.id).map((period) => period.journeyId);
   const featured = catalog.photos.filter((photo) => photoIds.includes(photo.id) && photo.featured).sort((a, b) => Number(a.editorialOrder) - Number(b.editorialOrder));
   const publicationStatus = destination.id === 'japan' && featured.length >= 5 ? 'published' : photoIds.length ? 'in-edit' : 'planned';
@@ -100,7 +107,9 @@ const journeys = timeline.periods.map((period) => {
 write('data/journeys.json', { schemaVersion: 1, source: 'OWNER_TRAVEL_TIMELINE', journeys, transitionPhotos, outsidePhotos });
 
 // Timestamp continuity proposes review groups; it never assigns narrative meaning.
-const sorted = [...inventory.photos].sort((a, b) => Date.parse(a.capture.date) - Date.parse(b.capture.date));
+const sorted = inventory.photos
+  .filter((photo) => !editorialExcludedIds.has(photo.id) && !['private', 'do-not-publish'].includes(curation.assignments[photo.id]?.visibility))
+  .sort((a, b) => Date.parse(a.capture.date) - Date.parse(b.capture.date));
 const groups = [];
 let group = [];
 for (const photo of sorted) {

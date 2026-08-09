@@ -1,6 +1,8 @@
 <dialog class="photo-viewer" data-photo-viewer aria-label="Immersive photograph viewer" tabindex="-1">
-  <div class="viewer-stage">
-    <img data-viewer-image alt="" />
+  <div class="viewer-stage" data-viewer-stage aria-busy="false">
+    <img class="viewer-preview" data-viewer-preview alt="" aria-hidden="true" />
+    <img class="viewer-image" data-viewer-image alt="" decoding="async" />
+    <span class="viewer-loading" data-viewer-loading role="status">Loading full photograph</span>
   </div>
   <div class="viewer-chrome">
     <a class="viewer-wordmark" href="/">ELSEWHERE</a>

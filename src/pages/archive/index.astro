@@ -8,14 +8,16 @@ import catalogData from '../../../public/data/photo-catalog.json';
 const catalog = catalogData.photos;
 const selectedIds = new Set(catalog.filter((photo) => photo.featured).map((photo) => photo.id));
 const selected = catalog.filter((photo) => selectedIds.has(photo.id)).sort((a, b) => Number(a.editorialOrder) - Number(b.editorialOrder));
-const opening = [...selected, ...catalog.filter((photo) => !selectedIds.has(photo.id))].slice(0, 24);
+const depth = catalog.filter((photo) => !selectedIds.has(photo.id));
+const editorialCatalog = Array.from({ length: Math.max(selected.length, depth.length) }, (_, index) => [selected[index], depth[index]]).flat().filter(Boolean);
+const opening = editorialCatalog.slice(0, 24);
 const years = [...new Set(catalog.map((photo) => photo.year).filter(Boolean))].sort((a, b) => Number(b) - Number(a));
 const coreWorlds = ['people', 'beaches', 'urban', 'jungle', 'ocean', 'black-and-white'];
 const availableWorlds = coreWorlds.filter((world) => catalog.some((photo) => photo.visualWorlds.includes(world)));
 const availableDestinations = [...new Map(catalog.filter((photo) => photo.destinationId).map((photo) => [photo.destinationId, { id: photo.destinationId, name: photo.destination }])).values()];
 ---
 
-<BaseLayout title="Archive — Elsewhere" description="A living photographic index of 472 public frames, encountered slowly." image="/social/archive.jpg" imageAlt="Small human figures beside forceful moving water" motion={false}>
+<BaseLayout title="Archive — Elsewhere" description={`A living photographic index of ${catalog.length} public frames, encountered slowly.`} image="/social/archive.jpg" imageAlt="Small human figures beside forceful moving water" motion={false}>
   <SiteHeader />
   <main id="main" class="archive-page" data-archive-root>
     <header class="archive-intro">
@@ -56,7 +58,7 @@ const availableDestinations = [...new Map(catalog.filter((photo) => photo.destin
 
     <section class="archive-field" data-archive-field aria-label="Photographic archive">
       {opening.map((photo) => (
-        <button class:list={['archive-frame', `is-${photo.orientation}`, photo.featured && 'is-selected']} type="button" data-photo-id={photo.id} aria-label={`Open frame ${photo.index}`}>
+        <button class:list={['archive-frame', `is-${photo.orientation}`, ['hero', 'anchor'].includes(photo.role) && 'is-selected']} type="button" data-photo-id={photo.id} aria-label={`Open frame ${photo.index}`}>
           <span class="archive-image"><img src={photo.thumbnail} width={photo.width} height={photo.height} loading="lazy" decoding="async" alt={photo.altText} /></span>
           <span class="archive-label"><b>{String(photo.index).padStart(3, '0')}</b><span>{photo.year ?? 'Undated'}</span></span>
         </button>

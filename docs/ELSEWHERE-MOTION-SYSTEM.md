@@ -7,7 +7,7 @@ Motion behaves like an edit: reveal the frame, settle the image, then allow text
 ## Current vocabulary
 
 - Hero title rises once, after the photograph is visible.
-- Hero photography settles from `1.06` scale and moves by a restrained seven percent during the opening scroll.
+- Hero photography settles from `1.025` scale in 1.25 seconds. It does not drift after input.
 - Editorial photographs open through a vertical clip reveal while their image scale settles from `1.045`.
 - Premise copy enters in a short stagger.
 - Ultramarine memory marks draw from left to right.
@@ -16,11 +16,11 @@ Motion behaves like an edit: reveal the frame, settle the image, then allow text
 - Archive selection uses one signature spatial transition: the chosen frame expands into the immersive viewer, preserving the feeling of entering that photograph.
 - Viewer next/previous changes are immediate and quiet; the photograph, not a carousel animation, remains dominant.
 
-GSAP and ScrollTrigger are used only for photographic sequencing. Lenis smooths wheel input on motion-capable devices while retaining native DOM scrolling, anchors, keyboard navigation, and semantic document order.
+GSAP and ScrollTrigger are used only for photographic sequencing. Phase 7 removed Lenis from the public runtime after owner feedback identified perceptible input latency. Wheel, touch, anchors, and keyboard now use native browser scrolling.
 
 ## Reduced motion
 
-When `prefers-reduced-motion: reduce` is active, GSAP, ScrollTrigger, and Lenis are not initialized. CSS animation and transition durations collapse, native scrolling remains available, and no content begins hidden. The complete page was visually verified in this mode at desktop and mobile sizes.
+When `prefers-reduced-motion: reduce` is active, GSAP and ScrollTrigger are not initialized. CSS animation and transition durations collapse, native scrolling remains available, and no content begins hidden. The complete page was visually verified in this mode at desktop and mobile sizes.
 
 ## Performance guardrails
 
@@ -36,7 +36,7 @@ When `prefers-reduced-motion: reduce` is active, GSAP, ScrollTrigger, and Lenis 
 | Class | Purpose | Budget |
 | --- | --- | --- |
 | Essential | menu state, viewer entry/exit, focus continuity | 0–720ms; never blocks access |
-| Supportive | photographic reveal, title arrival, restrained parallax | 450–1100ms; transform/opacity/clip only |
+| Supportive | photographic reveal and title arrival | 450–950ms; transform/opacity/clip only |
 | Decorative | memory-line draw or rare ambient accent | at most one visible motif per chapter |
 
 Primary easing is `cubic-bezier(.16, 1, .3, 1)`. Staggers remain under 120ms per item and must not turn an image sequence into a queue. No animation owns scrolling. The archive viewer uses the Web Animations API instead of adding another library; reduced-motion bypasses the spatial transition and opens the native dialog immediately.

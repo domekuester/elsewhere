@@ -23,21 +23,22 @@ for (const match of selectionSource.matchAll(/\{ filename: '([^']+)', derivative
 
 const publicThumbDir = path.join(root, 'public/assets-derived/thumbnails');
 fs.mkdirSync(publicThumbDir, { recursive: true });
+const allowedDerivativeNames = new Set();
 
 const catalog = inventory.photos.map((photo, index) => {
-  const thumbName = path.basename(photo.technical.thumbnailPath);
-  const sourceThumb = path.join(root, photo.technical.thumbnailPath);
+  const thumbName = `${String(index + 1).padStart(4, '0')}-${path.parse(photo.filename).name}.jpg`;
   const targetThumb = path.join(publicThumbDir, thumbName);
   const manual = curated.get(photo.filename.toLowerCase());
   const assignment = existingCuration.assignments?.[photo.id] ?? {};
   const publicAllowed = !publicExclusions.has(photo.id) && !['private', 'do-not-publish'].includes(assignment.visibility ?? 'hold');
   const archiveName = `${String(index + 1).padStart(4, '0')}-${path.parse(photo.filename).name}.jpg`;
   const targetArchive = path.join(root, 'public/assets-derived/archive', archiveName);
-  if (publicAllowed) {
-    if (!fs.existsSync(targetThumb)) fs.copyFileSync(sourceThumb, targetThumb);
-  } else {
+  const targetViewer = path.join(root, 'public/assets-derived/viewer', archiveName);
+  if (publicAllowed) allowedDerivativeNames.add(archiveName);
+  if (!publicAllowed) {
     if (fs.existsSync(targetThumb)) fs.unlinkSync(targetThumb);
     if (fs.existsSync(targetArchive)) fs.unlinkSync(targetArchive);
+    if (fs.existsSync(targetViewer)) fs.unlinkSync(targetViewer);
   }
   const destination = destinations.get(assignment.destinationId ?? assignment.destination);
   const visualWorlds = assignment.visualWorlds?.length ? assignment.visualWorlds : (manual?.worlds ?? []);
@@ -48,6 +49,7 @@ const catalog = inventory.photos.map((photo, index) => {
     filename: photo.filename,
     thumbnail: `/assets-derived/thumbnails/${thumbName}`,
     archiveImage: `/assets-derived/archive/${archiveName}`,
+    viewerImage: `/assets-derived/viewer/${archiveName}`,
     width: photo.dimensions?.width ?? null,
     height: photo.dimensions?.height ?? null,
     aspectRatio: photo.aspectRatio ?? null,
@@ -81,6 +83,14 @@ const catalog = inventory.photos.map((photo, index) => {
     approvalStatus: manual ? 'editorially-selected' : (assignment.destinationId ? 'owner-timeline-assigned' : 'unassigned')
   };
 });
+
+for (const role of ['thumbnails', 'archive', 'viewer']) {
+  const directory = path.join(root, 'public/assets-derived', role);
+  if (!fs.existsSync(directory)) continue;
+  for (const file of fs.readdirSync(directory)) {
+    if (/\.jpe?g$/i.test(file) && !allowedDerivativeNames.has(file)) fs.unlinkSync(path.join(directory, file));
+  }
+}
 
 const publicCatalog = catalog.filter((photo) => photo.public);
 const output = { schemaVersion: 2, generatedAt: new Date().toISOString(), count: publicCatalog.length, privacy: 'Public-safe catalog. Exact coordinates, private notes, source paths, and private photographs are intentionally excluded.', photos: publicCatalog };
