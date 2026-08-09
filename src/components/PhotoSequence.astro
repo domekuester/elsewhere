@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Photo { image: ImageMetadata; alt: string; note: string; position?: string }
+interface Props { photos: Photo[] }
+const { photos } = Astro.props;
+---
+
+<section class="closing-sequence" id="archive" aria-labelledby="archive-title">
+  <header>
+    <span class="memory-mark" aria-hidden="true"></span>
+    <h2 id="archive-title">The archive is<br />always unfinished.</h2>
+    <p>More photographs. More relationships. Fewer conclusions.</p>
+  </header>
+  <div class="closing-photos">
+    {photos.map((photo, index) => (
+      <figure class={`closing-photo closing-photo-${index + 1}`}>
+        <div data-photo-reveal><Image src={photo.image} alt={photo.alt} widths={[480, 768, 1200]} sizes="(min-width: 901px) 38vw, 86vw" loading="lazy" style={`object-position:${photo.position ?? '50% 50%'}`} /></div>
+        <figcaption><span>{String(index + 1).padStart(2, '0')}</span>{photo.note}</figcaption>
+      </figure>
+    ))}
+  </div>
+</section>

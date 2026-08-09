@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import destinationData from '../../../data/destinations.json';
+import catalogData from '../../../public/data/photo-catalog.json';
+
+export function getStaticPaths() {
+  return destinationData.destinations.filter((destination) => destination.publicationStatus === 'published').map((destination) => ({ params: { slug: destination.slug }, props: { destination } }));
+}
+
+const { destination } = Astro.props;
+const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]));
+const orderedIds = [destination.heroPhotoId, ...destination.manualOrder.filter((id) => id !== destination.heroPhotoId)].filter(Boolean);
+const sequence = orderedIds.map((id) => photosById.get(id)).filter(Boolean);
+const [hero, ...rest] = sequence;
+const journey = destination.id === 'japan' ? { dates: '12 May — 27 June 2025', note: 'Country confirmed by the owner’s travel timeline. Cities and regions remain intentionally unassigned.' } : null;
+const altByFilename = {
+  'P1230620.jpg': 'A gull approaches a row of outstretched hands above the water.',
+  'P1230638.jpg': 'A hand extends beside a rope with churning water below.',
+  'P1250177.jpg': 'Dry grasses rise from a roofline beneath a dense field of cloud.',
+  'P1250557.jpg': 'Three people wave from a steep hillside dense with green plants.',
+  'P1260492.jpg': 'Late light falls across signs and buildings beside an urban canal.',
+  'P1230481.jpg': 'Pedestrians moving through a dense street scene with layered signs.',
+  'P1230676.jpg': 'Small human figures beside forceful moving water.',
+  'P1230972.jpg': 'A hand holding a shell in a close, quiet frame.',
+  'P1260122.jpg': 'A solitary figure standing against a long grey horizon.',
+  'P1260248.jpg': 'A man bending toward falling water.'
+};
+const canonicalPath = `/destinations/${destination.slug}/`;
+const destinationSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'CollectionPage', name: `${destination.name} photographs`, description: `A confirmed photographic chapter from ${destination.name}, edited from the Elsewhere archive.`, url: new URL(canonicalPath, Astro.site).href, primaryImageOfPage: { '@type': 'ImageObject', contentUrl: new URL(hero.archiveImage, Astro.site).href } },
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Elsewhere', item: new URL('/', Astro.site).href },
+      { '@type': 'ListItem', position: 2, name: 'Destinations', item: new URL('/destinations/', Astro.site).href },
+      { '@type': 'ListItem', position: 3, name: destination.name, item: new URL(canonicalPath, Astro.site).href },
+    ] },
+  ],
+};
+---
+
+<BaseLayout title={`${destination.name} travel photography — Elsewhere`} description={`A confirmed photographic chapter from ${destination.name}, edited from the Elsewhere archive.`} image={destination.slug === 'japan' ? '/social/japan.jpg' : hero.archiveImage} imageAlt={altByFilename[hero.filename] ?? hero.altText} schema={destinationSchema}>
+  <SiteHeader />
+  <main id="main" class="destination-chapter">
+    <header class="destination-hero">
+      <img src={hero.archiveImage} width={hero.width} height={hero.height} alt={altByFilename[hero.filename] ?? hero.altText} loading="eager" fetchpriority="high" />
+      <div class="destination-hero-title"><span class="memory-mark"></span><h1>{destination.name}</h1><p>{journey?.dates}</p></div>
+    </header>
+    <section class="destination-provenance">
+      <p>{journey?.note}</p>
+      <p>{destination.confirmedPhotoCount} photographs currently belong to this confirmed destination period. This opening chapter shows only the existing editorial selection.</p>
+    </section>
+    <section class="destination-sequence" aria-label={`Selected photographs from ${destination.name}`}>
+      {rest.map((photo, index) => (
+        <figure class:list={['destination-frame', `destination-frame-${index + 1}`]} data-photo-reveal>
+          <img src={photo.archiveImage} width={photo.width} height={photo.height} loading="lazy" decoding="async" alt={altByFilename[photo.filename] ?? photo.altText} />
+          <figcaption><span>{String(index + 2).padStart(2, '0')}</span><p>{photo.year}{photo.visualWorlds.length ? ` · ${photo.visualWorlds.map((world) => world.replaceAll('-', ' ')).join(', ')}` : ''}</p></figcaption>
+        </figure>
+      ))}
+    </section>
+    <aside class="destination-continuation">
+      <p>The remaining frames are still being edited.</p>
+      <a href={`/archive/?destination=${destination.slug}`} data-analytics-event="archive_open" data-analytics-context={`destination:${destination.slug}`}><span>Continue in the archive</span><b aria-hidden="true">→</b></a>
+      <a href="/collections/black-and-white/" data-analytics-event="black_white_open" data-analytics-context={`destination:${destination.slug}`}>Enter Black &amp; White</a>
+    </aside>
+  </main>
+  <SiteFooter />
+</BaseLayout>

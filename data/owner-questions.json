@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "questions": [
+    {
+      "id": "owner-question-boundary-01",
+      "priority": "HIGH_IMPACT",
+      "type": "DESTINATION_UNKNOWN",
+      "subjectIds": [
+        "photo-0031"
+      ],
+      "title": "1 photograph on a travel boundary",
+      "question": "Which side of the thailand-2024 → laos-2024-2025 transition do these photographs belong to?",
+      "context": {
+        "filenames": [
+          "IMG_0031.jpg"
+        ],
+        "captureDates": [
+          "2024-12-04T15:33:36.000Z"
+        ],
+        "candidateJourneyIds": [
+          "thailand-2024",
+          "laos-2024-2025"
+        ]
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-boundary-02",
+      "priority": "HIGH_IMPACT",
+      "type": "DESTINATION_UNKNOWN",
+      "subjectIds": [
+        "photo-0068",
+        "photo-0069"
+      ],
+      "title": "2 photographs on a travel boundary",
+      "question": "Which side of the thailand-2025-part-1 → vietnam-phu-quoc-2025 transition do these photographs belong to?",
+      "context": {
+        "filenames": [
+          "P1190313 Kopie.jpg",
+          "P1190682 Kopie.jpg"
+        ],
+        "captureDates": [
+          "2025-03-14T12:53:24.000Z",
+          "2025-03-14T15:50:55.000Z"
+        ],
+        "candidateJourneyIds": [
+          "thailand-2025-part-1",
+          "vietnam-phu-quoc-2025"
+        ]
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-boundary-03",
+      "priority": "HIGH_IMPACT",
+      "type": "DESTINATION_UNKNOWN",
+      "subjectIds": [
+        "photo-0379",
+        "photo-0380",
+        "photo-0381",
+        "photo-0382",
+        "photo-0383",
+        "photo-0384"
+      ],
+      "title": "6 photographs on a travel boundary",
+      "question": "Which side of the thailand-2025-part-2 → malaysia-2025-part-2 transition do these photographs belong to?",
+      "context": {
+        "filenames": [
+          "P1260605.jpg",
+          "P1260623.jpg",
+          "P1260635.jpg",
+          "P1260652.jpg",
+          "P1260667.jpg",
+          "P1260685.jpg"
+        ],
+        "captureDates": [
+          "2025-07-13T17:30:22.000Z",
+          "2025-07-13T17:57:34.000Z",
+          "2025-07-13T18:03:36.000Z",
+          "2025-07-13T18:17:53.000Z",
+          "2025-07-13T18:23:25.000Z",
+          "2025-07-13T18:33:12.000Z"
+        ],
+        "candidateJourneyIds": [
+          "thailand-2025-part-2",
+          "malaysia-2025-part-2"
+        ]
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-people-review-01",
+      "priority": "MEDIUM_IMPACT",
+      "type": "PERSON_UNKNOWN",
+      "subjectIds": [
+        "photo-0016"
+      ],
+      "title": "People review: 1200794-2.jpg",
+      "question": "Is this a known person, travel companion, meaningful encounter, anonymous subject, crowd/street photograph, or incidental human presence? What privacy state should apply?",
+      "context": {
+        "captureDate": "2025-04-07T17:34:43.000Z",
+        "destinationId": "phu-quoc"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-people-review-02",
+      "priority": "MEDIUM_IMPACT",
+      "type": "PERSON_UNKNOWN",
+      "subjectIds": [
+        "photo-0045"
+      ],
+      "title": "People review: IMG_8992.jpg",
+      "question": "Is this a known person, travel companion, meaningful encounter, anonymous subject, crowd/street photograph, or incidental human presence? What privacy state should apply?",
+      "context": {
+        "captureDate": "2024-10-28T10:45:04.000Z",
+        "destinationId": "thailand"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-people-review-06",
+      "priority": "MEDIUM_IMPACT",
+      "type": "PERSON_UNKNOWN",
+      "subjectIds": [
+        "photo-0331"
+      ],
+      "title": "People review: P1260122.jpg",
+      "question": "Is this a known person, travel companion, meaningful encounter, anonymous subject, crowd/street photograph, or incidental human presence? What privacy state should apply?",
+      "context": {
+        "captureDate": "2025-06-16T08:50:40.000Z",
+        "destinationId": "japan"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-people-review-07",
+      "priority": "MEDIUM_IMPACT",
+      "type": "PERSON_UNKNOWN",
+      "subjectIds": [
+        "photo-0351"
+      ],
+      "title": "People review: P1260248.jpg",
+      "question": "Is this a known person, travel companion, meaningful encounter, anonymous subject, crowd/street photograph, or incidental human presence? What privacy state should apply?",
+      "context": {
+        "captureDate": "2025-06-21T10:41:12.000Z",
+        "destinationId": "japan"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-story-candidate-01",
+      "priority": "MEDIUM_IMPACT",
+      "type": "STORY_CONTEXT_NEEDED",
+      "subjectIds": [
+        "photo-0403",
+        "photo-0404",
+        "photo-0405",
+        "photo-0406",
+        "photo-0407",
+        "photo-0408",
+        "photo-0409",
+        "photo-0410",
+        "photo-0411",
+        "photo-0412",
+        "photo-0413",
+        "photo-0414",
+        "photo-0415",
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0419",
+        "photo-0420",
+        "photo-0421",
+        "photo-0422",
+        "photo-0423",
+        "photo-0424",
+        "photo-0425",
+        "photo-0426",
+        "photo-0427",
+        "photo-0428",
+        "photo-0429",
+        "photo-0430",
+        "photo-0431",
+        "photo-0432",
+        "photo-0433",
+        "photo-0434",
+        "photo-0435",
+        "photo-0436",
+        "photo-0437",
+        "photo-0438",
+        "photo-0439"
+      ],
+      "title": "37-frame sequence",
+      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "context": {
+        "candidateId": "story-candidate-01",
+        "captureDateStart": "2025-07-23T18:50:27.000Z",
+        "captureDateEnd": "2025-07-23T18:52:21.000Z"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-story-candidate-02",
+      "priority": "MEDIUM_IMPACT",
+      "type": "STORY_CONTEXT_NEEDED",
+      "subjectIds": [
+        "photo-0114",
+        "photo-0115",
+        "photo-0116",
+        "photo-0117",
+        "photo-0118",
+        "photo-0119",
+        "photo-0120",
+        "photo-0121",
+        "photo-0122",
+        "photo-0123",
+        "photo-0124",
+        "photo-0125",
+        "photo-0126",
+        "photo-0127",
+        "photo-0128",
+        "photo-0129",
+        "photo-0130",
+        "photo-0131",
+        "photo-0132",
+        "photo-0133",
+        "photo-0134",
+        "photo-0135"
+      ],
+      "title": "22-frame sequence",
+      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "context": {
+        "candidateId": "story-candidate-02",
+        "captureDateStart": "2025-04-30T08:21:59.000Z",
+        "captureDateEnd": "2025-04-30T09:04:05.000Z"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-story-candidate-03",
+      "priority": "MEDIUM_IMPACT",
+      "type": "STORY_CONTEXT_NEEDED",
+      "subjectIds": [
+        "photo-0278",
+        "photo-0279",
+        "photo-0280",
+        "photo-0281",
+        "photo-0282",
+        "photo-0283",
+        "photo-0284",
+        "photo-0285",
+        "photo-0286",
+        "photo-0287",
+        "photo-0288",
+        "photo-0289",
+        "photo-0290",
+        "photo-0291",
+        "photo-0292",
+        "photo-0293",
+        "photo-0294",
+        "photo-0295",
+        "photo-0296",
+        "photo-0297",
+        "photo-0298",
+        "photo-0299"
+      ],
+      "title": "22-frame sequence",
+      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "context": {
+        "candidateId": "story-candidate-03",
+        "captureDateStart": "2025-06-08T06:36:44.000Z",
+        "captureDateEnd": "2025-06-08T08:34:55.000Z"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-story-candidate-04",
+      "priority": "MEDIUM_IMPACT",
+      "type": "STORY_CONTEXT_NEEDED",
+      "subjectIds": [
+        "photo-0136",
+        "photo-0137",
+        "photo-0138",
+        "photo-0139",
+        "photo-0140",
+        "photo-0141",
+        "photo-0142",
+        "photo-0143",
+        "photo-0144",
+        "photo-0145",
+        "photo-0146",
+        "photo-0147",
+        "photo-0148",
+        "photo-0149",
+        "photo-0150",
+        "photo-0151",
+        "photo-0152",
+        "photo-0153",
+        "photo-0154",
+        "photo-0155",
+        "photo-0156"
+      ],
+      "title": "21-frame sequence",
+      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "context": {
+        "candidateId": "story-candidate-04",
+        "captureDateStart": "2025-04-30T14:42:17.000Z",
+        "captureDateEnd": "2025-04-30T15:04:06.000Z"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-story-candidate-05",
+      "priority": "MEDIUM_IMPACT",
+      "type": "STORY_CONTEXT_NEEDED",
+      "subjectIds": [
+        "photo-0210",
+        "photo-0211",
+        "photo-0212",
+        "photo-0213",
+        "photo-0214",
+        "photo-0215",
+        "photo-0216",
+        "photo-0217",
+        "photo-0218",
+        "photo-0219",
+        "photo-0220",
+        "photo-0221",
+        "photo-0222",
+        "photo-0223",
+        "photo-0224"
+      ],
+      "title": "15-frame sequence",
+      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "context": {
+        "candidateId": "story-candidate-05",
+        "captureDateStart": "2025-05-22T08:36:34.000Z",
+        "captureDateEnd": "2025-05-22T10:11:33.000Z"
+      },
+      "status": "OPEN"
+    }
+  ]
+}

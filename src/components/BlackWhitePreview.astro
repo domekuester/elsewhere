@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  reflection: ImageMetadata;
+  artisan: ImageMetadata;
+  horizon: ImageMetadata;
+}
+const { reflection, artisan, horizon } = Astro.props;
+---
+
+<section class="monochrome-room" id="black-and-white" aria-labelledby="monochrome-title">
+  <header class="monochrome-copy">
+    <span class="memory-mark" aria-hidden="true"></span>
+    <h2 id="monochrome-title">Black<br />&amp; White</h2>
+    <p>A quieter room in the archive. Gesture, weather, work, and distance—without colour to explain them.</p>
+    <a class="editorial-link" href="/collections/black-and-white/">Enter the collection <span aria-hidden="true">→</span></a>
+  </header>
+  <figure class="monochrome-image monochrome-image-main" data-photo-reveal>
+    <Image src={reflection} alt="A woman seen through a mirror as she adjusts her hair" widths={[480, 768, 1200]} sizes="(min-width: 901px) 51vw, 88vw" loading="lazy" />
+  </figure>
+  <figure class="monochrome-image monochrome-image-small" data-photo-reveal>
+    <Image src={artisan} alt="A seated artisan working beside an open window" widths={[480, 768, 1000]} sizes="(min-width: 901px) 24vw, 62vw" loading="lazy" />
+  </figure>
+  <figure class="monochrome-image monochrome-image-wide" data-photo-reveal>
+    <Image src={horizon} alt="A solitary figure at the edge of a grey sea" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 55vw, 100vw" loading="lazy" />
+  </figure>
+</section>

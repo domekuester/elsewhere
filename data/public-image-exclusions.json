@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-09",
+  "policy": "Public presentation exclusions only. Master files and factual source metadata remain untouched.",
+  "ownerRejected": [
+    {
+      "photoId": "photo-0105",
+      "filename": "P1210572.jpg",
+      "reason": "Explicit owner rejection. Do not publish or select again."
+    }
+  ],
+  "duplicateFamilies": [
+    { "keepId": "photo-0016", "keepFilename": "1200794-2.jpg", "excludeIds": ["photo-0017"] },
+    { "keepId": "photo-0024", "keepFilename": "1210412-2.jpg", "excludeIds": ["photo-0025"] },
+    { "keepId": "photo-0026", "keepFilename": "1210415-2.jpg", "excludeIds": ["photo-0027", "photo-0028", "photo-0029"] },
+    { "keepId": "photo-0052", "keepFilename": "IMG_9830-2.jpg", "excludeIds": ["photo-0053"] },
+    { "keepId": "photo-0078", "keepFilename": "P1210177 Kopie.jpg", "excludeIds": ["photo-0077"] },
+    { "keepId": "photo-0088", "keepFilename": "P1210297.jpg", "excludeIds": ["photo-0087"] },
+    { "keepId": "photo-0108", "keepFilename": "P1210660-2.jpg", "excludeIds": ["photo-0109"] },
+    { "keepId": "photo-0112", "keepFilename": "P1210692.jpg", "excludeIds": ["photo-0111"] },
+    { "keepId": "photo-0168", "keepFilename": "P1230352.jpg", "excludeIds": ["photo-0167"] },
+    { "keepId": "photo-0174", "keepFilename": "P1230472-2.jpg", "excludeIds": ["photo-0175"] },
+    { "keepId": "photo-0191", "keepFilename": "P1230819-2.jpg", "excludeIds": ["photo-0192"] },
+    { "keepId": "photo-0203", "keepFilename": "P1230935-2.jpg", "excludeIds": ["photo-0204"] },
+    { "keepId": "photo-0212", "keepFilename": "P1240278.jpg", "excludeIds": ["photo-0211"] },
+    { "keepId": "photo-0227", "keepFilename": "P1240451-Enhanced-NR-2.jpg", "excludeIds": ["photo-0228"] },
+    { "keepId": "photo-0247", "keepFilename": "P1240750.jpg", "excludeIds": ["photo-0245", "photo-0246"] },
+    { "keepId": "photo-0327", "keepFilename": "P1260071.jpg", "excludeIds": ["photo-0326"] },
+    { "keepId": "photo-0329", "keepFilename": "P1260105-2.jpg", "excludeIds": ["photo-0330"] },
+    { "keepId": "photo-0364", "keepFilename": "P1260453-2.jpg", "excludeIds": ["photo-0365"] },
+    { "keepId": "photo-0368", "keepFilename": "P1260473-2.jpg", "excludeIds": ["photo-0369"] },
+    { "keepId": "photo-0403", "keepFilename": "P1270020-2.jpg", "excludeIds": ["photo-0404", "photo-0405", "photo-0406", "photo-0407"] },
+    { "keepId": "photo-0408", "keepFilename": "P1270024-2.jpg", "excludeIds": ["photo-0409", "photo-0410"] },
+    { "keepId": "photo-0413", "keepFilename": "P1270031-4.jpg", "excludeIds": ["photo-0411", "photo-0412", "photo-0414", "photo-0415"] },
+    { "keepId": "photo-0416", "keepFilename": "P1270034-2.jpg", "excludeIds": ["photo-0417", "photo-0418", "photo-0419", "photo-0420"] },
+    { "keepId": "photo-0421", "keepFilename": "P1270038-2.jpg", "excludeIds": ["photo-0422", "photo-0423"] },
+    { "keepId": "photo-0424", "keepFilename": "P1270040-2.jpg", "excludeIds": ["photo-0425", "photo-0426"] },
+    { "keepId": "photo-0427", "keepFilename": "P1270045-2.jpg", "excludeIds": ["photo-0428", "photo-0429", "photo-0430", "photo-0431"] },
+    { "keepId": "photo-0432", "keepFilename": "P1270057-2.jpg", "excludeIds": ["photo-0433", "photo-0434"] },
+    { "keepId": "photo-0435", "keepFilename": "P1270058-2.jpg", "excludeIds": ["photo-0436", "photo-0437", "photo-0438"] },
+    { "keepId": "photo-0449", "keepFilename": "P1270257.jpg", "excludeIds": ["photo-0448"] },
+    { "keepId": "photo-0457", "keepFilename": "P1270449-2.jpg", "excludeIds": ["photo-0458"] },
+    { "keepId": "photo-0461", "keepFilename": "P1270514-2.jpg", "excludeIds": ["photo-0462"] },
+    { "keepId": "photo-0486", "keepFilename": "P1280330.jpg", "excludeIds": ["photo-0485"] },
+    { "keepId": "photo-0525", "keepFilename": "P1300824.jpg", "excludeIds": ["photo-0524"] },
+    { "keepId": "photo-0131", "keepFilename": "P1210804.jpg", "excludeIds": ["photo-0130"], "reason": "Near-duplicate sequence: stronger human gesture and more resolved full-scene composition." },
+    { "keepId": "photo-0317", "keepFilename": "P1250930.jpg", "excludeIds": ["photo-0316"], "reason": "Near-duplicate sequence: cleaner hand/sun alignment and stronger tonal separation." },
+    { "keepId": "photo-0256", "keepFilename": "P1240866.jpg", "excludeIds": ["photo-0255"], "reason": "Near-duplicate sequence: clearer subject separation, color, and web-scale legibility." }
+  ]
+}

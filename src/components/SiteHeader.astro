@@ -1,0 +1,15 @@
+---
+import { site } from '../config/site';
+const path = Astro.url.pathname;
+---
+
+<header class="site-header" data-header>
+  <a class="wordmark" href="/" aria-label={`${site.name}, home`}>{site.name}</a>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-button>
+    <span class="menu-label">Index</span><span class="menu-glyph" aria-hidden="true"></span>
+  </button>
+  <nav id="primary-nav" class="primary-nav" aria-label="Primary" data-nav>
+    <p aria-hidden="true">A visual archive<br />of places, people<br />and moments.</p>
+    <div>{site.navigation.map((item) => <a href={item.href} aria-current={item.href !== '/#story' && item.href !== '/#about' && path.startsWith(item.href) ? 'page' : undefined} data-analytics-event="navigation_open" data-analytics-context={item.label.toLowerCase()}>{item.label}<span aria-hidden="true">↗</span></a>)}</div>
+  </nav>
+</header>

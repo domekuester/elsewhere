@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Astro build/cache
+.astro/
+dist/
+
+# macOS
+.DS_Store
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# ORIGINAL PHOTOGRAPHY — NEVER COMMIT
+assets-source/photos/
+assets-source/photos-organized/
+assets-source/raw-reference/
+
+# Local photo analysis caches
+.photo-geo-cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Local build / QA artifacts
+.build/
+.photo-inventory-cache/
+.playwright-mcp/
+
+# Local visual QA screenshots
+elsewhere-archive-*.png
+elsewhere-viewer-*.png
+elsewhere-curation-*.png
+
+# Old nested project copy preserved during runtime repair
+shaky-saturn/

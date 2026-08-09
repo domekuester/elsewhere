@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import catalogData from '../../public/data/photo-catalog.json';
+import curationData from '../../data/photo-curation.json';
+import journeyData from '../../data/journeys.json';
+import questionData from '../../data/owner-questions.json';
+import peopleData from '../../data/people-review.json';
+
+const enabled = import.meta.env.DEV;
+const catalog = enabled ? catalogData.photos : [];
+const journeys = enabled ? journeyData.journeys : [];
+const questions = enabled ? questionData.questions : [];
+const people = enabled ? peopleData.entries : [];
+const assignments = enabled ? curationData.assignments : {};
+const confirmedDestinationCount = enabled ? Object.values(assignments).filter((item) => item.locationConfidence === 'CONFIRMED_OWNER_RANGE').length : 0;
+const transitionCount = enabled ? Object.values(assignments).filter((item) => item.locationConfidence === 'TRANSITION_DAY_REVIEW').length : 0;
+---
+
+<BaseLayout title="Curation Studio — Elsewhere" description="Local editorial classification workspace." robots="noindex, nofollow, noarchive" motion={false}>
+  {enabled ? (
+    <main id="main" class="curation-studio" data-curation-root data-count={catalog.length}>
+      <header class="curation-header">
+        <div><a href="/">ELSEWHERE</a><span>Local curation studio</span></div>
+        <p>Changes stay in this browser until exported. Masters and JPEG metadata are never modified.</p>
+        <button type="button" data-export-curation>Export JSON</button>
+      </header>
+      <nav class="curation-sections" aria-label="Curation Studio sections"><a href="#photos">Photos</a><a href="#timeline">Timeline</a><a href="#people-review">People</a><a href="#owner-questions">Owner questions</a></nav>
+      <section class="curation-summary" aria-label="Current curation summary">
+        <p><strong>{catalog.length}</strong><span>photographs</span></p>
+        <p><strong>{confirmedDestinationCount}</strong><span>destination confirmed</span></p>
+        <p><strong>{transitionCount}</strong><span>transition review</span></p>
+        <p><strong>{people.length}</strong><span>People candidates</span></p>
+        <p><strong>{questions.length}</strong><span>owner questions</span></p>
+      </section>
+      <section class="curation-tools" id="photos" aria-label="Curation filters">
+        <label>Review <select data-curation-filter><option value="all">All frames</option><option value="unassigned">Unassigned</option><option value="selected">Selected</option></select></label>
+        <label>World <select data-curation-world><option value="all">All worlds</option><option value="people">People</option><option value="beaches">Beaches</option><option value="urban">Urban</option><option value="jungle">Jungle</option><option value="ocean">Ocean</option><option value="black-and-white">Black & White</option></select></label>
+        <label>Destination <select data-curation-destination-filter><option value="all">All destinations</option><option value="unassigned">Unassigned</option><option value="japan">Japan</option><option value="malaysia">Malaysia</option><option value="thailand">Thailand</option><option value="laos">Laos</option><option value="phu-quoc">Phu Quoc</option><option value="la-reunion">La Réunion</option></select></label>
+        <label>Journey <select data-curation-journey-filter><option value="all">All journeys</option>{journeys.map((journey) => <option value={journey.id}>{journey.workingTitle}</option>)}</select></label>
+        <label>Filename <input type="search" data-curation-search placeholder="P126…" /></label>
+        <button type="button" data-batch-toggle aria-pressed="false">Batch select</button>
+        <span><b data-curation-visible>{catalog.length}</b> / {catalog.length}</span>
+      </section>
+      <section class="curation-batch" data-curation-batch hidden>
+        <p><strong data-batch-count>0</strong> selected</p>
+        <label>Assign destination<select data-batch-destination><option value="">Choose destination</option><option value="malaysia">Malaysia</option><option value="thailand">Thailand</option><option value="laos">Laos</option><option value="phu-quoc">Phu Quoc / Vietnam</option><option value="japan">Japan</option><option value="la-reunion">La Réunion</option><option value="unknown">Mark unknown</option></select></label>
+        <button type="button" data-batch-apply>Apply to selection</button><button type="button" data-batch-clear>Clear selection</button>
+      </section>
+      <section class="curation-workspace">
+        <div class="curation-grid" data-curation-grid>
+          {catalog.map((photo) => (
+            <button type="button" data-curation-photo={photo.id} data-worlds={photo.visualWorlds.join(',')} data-selected={String(photo.featured)} data-capture-date={photo.captureDate} data-destination={photo.destinationId ?? ''} data-journey={photo.journeyId ?? ''} aria-label={`Edit ${photo.filename}`}>
+              <img src={photo.thumbnail} width={photo.width} height={photo.height} loading="lazy" decoding="async" alt="" />
+              <span>{String(photo.index).padStart(3, '0')} · {photo.filename}</span>
+            </button>
+          ))}
+        </div>
+        <aside class="curation-editor" data-curation-editor aria-live="polite">
+          <p class="curation-empty">Select a photograph to classify it.</p>
+          <div class="curation-active" hidden>
+            <img data-curation-preview alt="Selected archive frame" />
+            <div class="curation-file"><strong data-curation-filename></strong><span data-curation-position></span></div>
+            <fieldset><legend>Visual world</legend>
+              {['people','beaches','urban','jungle','ocean','black-and-white'].map((world, index) => <label><input type="checkbox" value={world} data-edit-world /> {index + 1} · {world.replaceAll('-', ' ')}</label>)}
+            </fieldset>
+            <label>Destination<select data-edit-destination><option value="">Unassigned</option><option value="japan">Japan</option><option value="malaysia">Malaysia</option><option value="thailand">Thailand</option><option value="laos">Laos</option><option value="phu-quoc">Phu Quoc / Vietnam</option><option value="la-reunion">La Réunion</option></select></label>
+            <label>Role<select data-edit-role><option value="archive">Archive</option><option value="hero">Hero</option><option value="anchor">Anchor</option><option value="editorial">Editorial</option><option value="support">Support</option><option value="detail">Detail</option></select></label>
+            <label>Visibility<select data-edit-visibility><option value="hold">Hold</option><option value="public">Public</option><option value="private">Private</option></select></label>
+            <label>Publish state<select data-edit-publication><option value="UNREVIEWED">Unreviewed</option><option value="CURATED">Curated</option><option value="NEEDS_INFO">Needs info</option><option value="READY">Ready</option><option value="PUBLISHED">Published</option><option value="HOLD">Hold</option><option value="PRIVATE">Private</option></select></label>
+            <label>People class<select data-edit-people-class><option value="">Not reviewed</option><option value="PORTRAIT_SUBJECT">Portrait subject</option><option value="ENCOUNTER">Encounter</option><option value="TRAVEL_COMPANION">Travel companion</option><option value="KNOWN_PERSON">Known person</option><option value="ANONYMOUS_PERSON">Anonymous person</option><option value="CROWD_STREET">Crowd / street</option><option value="INCIDENTAL_HUMAN_PRESENCE">Incidental human presence</option></select></label>
+            <label>Privacy<select data-edit-privacy><option value="UNKNOWN">Unknown</option><option value="PUBLIC">Public</option><option value="REVIEW">Review</option><option value="PRIVATE">Private</option><option value="DO_NOT_PUBLISH">Do not publish</option></select></label>
+            <label class="curation-textarea">Public caption<textarea rows="2" data-edit-caption placeholder="Optional; do not invent"></textarea></label>
+            <label class="curation-textarea">Owner notes<textarea rows="3" data-edit-notes placeholder="Internal only"></textarea></label>
+            <div class="curation-flags"><label><input type="checkbox" data-edit-featured /> Featured</label><label><input type="checkbox" data-edit-story /> Story candidate</label><label><input type="checkbox" data-edit-people /> People candidate</label><label><input type="checkbox" data-edit-print /> Print candidate</label></div>
+            <div class="curation-navigation"><button type="button" data-curation-previous>← Previous</button><button type="button" data-curation-next>Next →</button></div>
+          </div>
+        </aside>
+      </section>
+      <section class="curation-timeline" id="timeline">
+        <header><h2>Travel timeline</h2><p>Owner-confirmed ranges. Boundary-day photographs remain unassigned until reviewed.</p></header>
+        <ol>{journeys.map((journey) => <li><span>{journey.startDate}<br />{journey.endDate}</span><strong>{journey.workingTitle}</strong><b>{journey.photoIds.length}</b><button type="button" data-filter-journey={journey.id}>Review frames</button></li>)}</ol>
+      </section>
+      <section class="curation-people-review" id="people-review">
+        <header><h2>People review</h2><p>Identity, relationship and privacy remain unknown until the owner reviews them.</p></header>
+        <ol>{people.map((entry) => <li><button type="button" data-open-photo={entry.photoId}><span>{entry.filename}</span><b>{entry.destinationId ?? 'Transition / unassigned'}</b><small>{entry.privacyStatus}</small></button></li>)}</ol>
+      </section>
+      <section class="curation-questions" id="owner-questions">
+        <header><h2>Owner questions</h2><div><p>High-impact questions come first. One answer may resolve several photographs.</p><button type="button" data-export-answers>Export answers</button></div></header>
+        <ol>{questions.map((question) => <li data-priority={question.priority} data-question-id={question.id}><span>{question.priority.replace('_', ' ')}</span><strong>{question.title}</strong><div><p>{question.question}</p><textarea rows="2" data-question-answer placeholder="Owner answer — stored locally"></textarea></div><div><small>{question.subjectIds.length} photograph{question.subjectIds.length === 1 ? '' : 's'}</small><select data-question-status><option value="OPEN">Open</option><option value="ANSWERED">Answered</option><option value="DEFERRED">Deferred</option></select></div></li>)}</ol>
+      </section>
+      <script type="application/json" id="curation-catalog" set:html={JSON.stringify(catalog)} />
+      <script type="application/json" id="curation-baseline" set:html={JSON.stringify(assignments)} />
+    </main>
+  ) : (
+    <main id="main" class="curation-disabled"><p>Not found.</p><a href="/">Return to Elsewhere</a></main>
+  )}
+  {enabled && <script>import '../scripts/curation';</script>}
+</BaseLayout>

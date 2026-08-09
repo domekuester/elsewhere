@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import PhotoViewer from '../../components/PhotoViewer.astro';
+import catalogData from '../../../public/data/photo-catalog.json';
+
+const catalog = catalogData.photos;
+const selectedIds = new Set(catalog.filter((photo) => photo.featured).map((photo) => photo.id));
+const selected = catalog.filter((photo) => selectedIds.has(photo.id)).sort((a, b) => Number(a.editorialOrder) - Number(b.editorialOrder));
+const opening = [...selected, ...catalog.filter((photo) => !selectedIds.has(photo.id))].slice(0, 24);
+const years = [...new Set(catalog.map((photo) => photo.year).filter(Boolean))].sort((a, b) => Number(b) - Number(a));
+const coreWorlds = ['people', 'beaches', 'urban', 'jungle', 'ocean', 'black-and-white'];
+const availableWorlds = coreWorlds.filter((world) => catalog.some((photo) => photo.visualWorlds.includes(world)));
+const availableDestinations = [...new Map(catalog.filter((photo) => photo.destinationId).map((photo) => [photo.destinationId, { id: photo.destinationId, name: photo.destination }])).values()];
+---
+
+<BaseLayout title="Archive — Elsewhere" description="A living photographic index of 472 public frames, encountered slowly." image="/social/archive.jpg" imageAlt="Small human figures beside forceful moving water" motion={false}>
+  <SiteHeader />
+  <main id="main" class="archive-page" data-archive-root>
+    <header class="archive-intro">
+      <p class="archive-kicker"><span></span> Photographic index</p>
+      <h1>Archive</h1>
+      <div class="archive-intro-meta">
+        <p>A deeper way through the work. Classification remains incomplete by design; only confirmed editorial assignments are shown.</p>
+        <p><strong>{catalog.length}</strong> frames<br /><span data-visible-count>{opening.length} in view</span></p>
+      </div>
+    </header>
+
+    <section class="archive-controls" aria-label="Archive filters">
+      <div class="archive-filter-group" data-world-filters>
+        <button class="is-active" type="button" data-filter-world="all" aria-pressed="true">All</button>
+        {availableWorlds.map((world) => <button type="button" data-filter-world={world} aria-pressed="false">{world.replaceAll('-', ' ')}</button>)}
+      </div>
+      <label>Year
+        <select data-filter-year>
+          <option value="all">All years</option>
+          {years.map((year) => <option value={year}>{year}</option>)}
+        </select>
+      </label>
+      <label>Frame
+        <select data-filter-orientation>
+          <option value="all">Any format</option>
+          <option value="portrait">Portrait</option>
+          <option value="landscape">Landscape</option>
+        </select>
+      </label>
+      <label>Place
+        <select data-filter-destination>
+          <option value="all">All destinations</option>
+          {availableDestinations.map((destination) => <option value={destination.id}>{destination.name}</option>)}
+        </select>
+      </label>
+      <button class="another-frame" type="button" data-random-frame>Another frame <span aria-hidden="true">↗</span></button>
+    </section>
+
+    <section class="archive-field" data-archive-field aria-label="Photographic archive">
+      {opening.map((photo) => (
+        <button class:list={['archive-frame', `is-${photo.orientation}`, photo.featured && 'is-selected']} type="button" data-photo-id={photo.id} aria-label={`Open frame ${photo.index}`}>
+          <span class="archive-image"><img src={photo.thumbnail} width={photo.width} height={photo.height} loading="lazy" decoding="async" alt={photo.altText} /></span>
+          <span class="archive-label"><b>{String(photo.index).padStart(3, '0')}</b><span>{photo.year ?? 'Undated'}</span></span>
+        </button>
+      ))}
+    </section>
+
+    <div class="archive-progress">
+      <p><span data-progress-start>001</span> — <span data-progress-end>{String(opening.length).padStart(3, '0')}</span> / <span data-progress-total>{String(catalog.length).padStart(3, '0')}</span></p>
+      <button type="button" data-load-more>Continue through the archive <span aria-hidden="true">↓</span></button>
+    </div>
+
+    <noscript><p class="archive-noscript">JavaScript is required for incremental archive loading and the immersive viewer. The opening edit remains available above.</p></noscript>
+  </main>
+  <PhotoViewer />
+  <SiteFooter />
+  <script>
+    import '../../scripts/archive';
+  </script>
+</BaseLayout>

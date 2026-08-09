@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+import { site } from '../config/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  robots?: string;
+  motion?: boolean;
+  imageAlt?: string;
+  pageType?: 'website' | 'article';
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const {
+  title = site.title,
+  description = site.description,
+  image = site.defaultShareImage,
+  robots = 'index, follow, max-image-preview:large',
+  motion = true,
+  imageAlt = site.defaultShareImageAlt,
+  pageType = 'website',
+  schema,
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(image, Astro.site);
+const isHome = Astro.url.pathname === '/';
+const defaultSchema = [
+  ...(isHome ? [{ '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, description: site.description, url: Astro.site.href }] : []),
+  { '@context': 'https://schema.org', '@type': 'WebPage', name: title, description, url: canonical.href, isPartOf: { '@type': 'WebSite', name: site.name, url: Astro.site.href }, primaryImageOfPage: { '@type': 'ImageObject', contentUrl: socialImage.href, caption: imageAlt } },
+];
+const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : defaultSchema;
+---
+
+<!doctype html>
+<html lang={site.locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <meta name="theme-color" content="#0B0C0D" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta property="og:type" content={pageType} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content={imageAlt} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    {schemas.map((item) => <script type="application/ld+json" set:html={JSON.stringify(item)} />)}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to the journal</a>
+    <slot />
+    <script>
+      import '../scripts/navigation';
+      import '../scripts/analytics';
+    </script>
+    {motion && <script>import '../scripts/motion-loader';</script>}
+  </body>
+</html>

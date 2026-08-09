@@ -1,0 +1,15 @@
+---
+import { site } from '../config/site';
+---
+
+<footer class="site-footer" id="about">
+  <a class="footer-continuation" href="/archive/" data-analytics-event="archive_open" data-analytics-context="footer">
+    <span>Enter the archive</span><b aria-hidden="true">→</b>
+  </a>
+  <div class="footer-base">
+    <a class="footer-wordmark" href="/#main">{site.name}</a>
+    <p>A visual archive of the world as experienced by one person.</p>
+    <nav aria-label="Footer">{site.navigation.map((item) => <a href={item.href} data-analytics-event="navigation_open" data-analytics-context={`footer:${item.label.toLowerCase()}`}>{item.label}</a>)}</nav>
+    <small>Original photography throughout. Working title.</small>
+  </div>
+</footer>

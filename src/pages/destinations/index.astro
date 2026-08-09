@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import destinationData from '../../../data/destinations.json';
+const order = ['japan', 'la-reunion', 'malaysia', 'thailand', 'phu-quoc', 'laos'];
+const destinations = order.map((id) => destinationData.destinations.find((destination) => destination.id === id)).filter(Boolean);
+---
+
+<BaseLayout title="Travel photography destinations — Elsewhere" description="An owner-confirmed geographic index connecting Malaysia, Thailand, Laos, Phu Quoc, Japan and La Réunion to the Elsewhere archive." image="/social/japan.jpg" imageAlt="A gull approaches a row of outstretched hands above the water">
+  <SiteHeader />
+  <main id="main" class="index-page">
+    <header class="index-intro">
+      <span class="memory-mark" aria-hidden="true"></span>
+      <p>Place index · owner-confirmed timeline</p>
+      <h1>Destinations</h1>
+      <div>
+        <p>These country-level assignments come from the owner’s travel timeline. Cities and precise places remain unassigned unless separately confirmed.</p>
+        <a class="editorial-link" href="/archive/">Explore the photographic index <span aria-hidden="true">→</span></a>
+      </div>
+    </header>
+    <ol class="index-list">
+      {destinations.map((destination, index) => <li><span>{String(index + 1).padStart(2, '0')}</span>{destination.publicationStatus === 'published' ? <a href={`/destinations/${destination.slug}/`}><strong>{destination.name}</strong></a> : <strong>{destination.name}</strong>}<small>{destination.confirmedPhotoCount} confirmed frames · {destination.publicationStatus === 'published' ? 'chapter open' : 'editorial review'}</small></li>)}
+    </ol>
+  </main>
+  <SiteFooter />
+</BaseLayout>

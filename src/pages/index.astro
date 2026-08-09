@@ -1,0 +1,100 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import CategoryIndex from '../components/CategoryIndex.astro';
+import DestinationBrowser from '../components/DestinationBrowser.astro';
+import EditorialFigure from '../components/EditorialFigure.astro';
+import PhotoSequence from '../components/PhotoSequence.astro';
+import BlackWhitePreview from '../components/BlackWhitePreview.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+import islandClouds from '../assets/photos/island-of-clouds.jpg';
+import peopleWorker from '../assets/photos/people-worker.jpg';
+import beachStorm from '../assets/photos/beach-storm.jpg';
+import tokyoStreet from '../assets/photos/tokyo-street.jpg';
+import jungleRoots from '../assets/photos/jungle-roots.jpg';
+import oceanSilhouettes from '../assets/photos/ocean-silhouettes.jpg';
+import oceanCurrent from '../assets/photos/ocean-current.jpg';
+import handShell from '../assets/photos/hand-shell.jpg';
+import cirquePortrait from '../assets/photos/cirque-portrait.jpg';
+import lagoonSunset from '../assets/photos/lagoon-sunset.jpg';
+import waterPortrait from '../assets/photos/water-portrait.jpg';
+import fernSpiral from '../assets/photos/fern-spiral.jpg';
+import bwReflection from '../assets/photos/bw-reflection.jpg';
+import bwArtisan from '../assets/photos/bw-artisan.jpg';
+import bwHorizon from '../assets/photos/bw-horizon.jpg';
+import yellowBird from '../assets/photos/yellow-bird.jpg';
+import boxingGloves from '../assets/photos/boxing-gloves.jpg';
+
+const worlds = [
+  { name: 'People', feeling: 'Gesture. Presence. Chance encounters.', href: '#people', image: peopleWorker, alt: 'A worker looks across a counter during a conversation', position: '45% 40%' },
+  { name: 'Beaches', feeling: 'Space. Weather. The line of the horizon.', href: '#story', image: beachStorm, alt: 'An empty beach and small yellow boat beneath an approaching storm', position: '48% 55%' },
+  { name: 'Urban', feeling: 'Density. Movement. Life between buildings.', href: '#archive', image: tokyoStreet, alt: 'Pedestrians moving through a lantern-lined street', position: '50% 43%' },
+  { name: 'Jungle', feeling: 'Depth. Shadow. The living interior.', href: '#environment', image: jungleRoots, alt: 'A weathered human figure held inside the roots of an old tree', position: '50% 48%' },
+  { name: 'Ocean', feeling: 'Scale. Distance. Perpetual motion.', href: '#ocean', image: oceanCurrent, alt: 'A cobalt wake folding back into open water', position: '50% 50%' },
+];
+
+const closingPhotos = [
+  { image: yellowBird, alt: 'A small yellow bird poised above moving water', note: 'A bright interruption', position: '50% 50%' },
+  { image: fernSpiral, alt: 'The tight spiral of a fern against saturated colour', note: 'A small form in the living world' },
+  { image: boxingGloves, alt: 'A boxer holds marked white gloves close to her face', note: 'Gesture before movement', position: '50% 44%' },
+];
+---
+
+<BaseLayout image="/social/home.jpg" imageAlt="Volcanic ridges rising beneath immense sunlit clouds">
+  <SiteHeader />
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media"><Image src={islandClouds} alt="Volcanic ridges rising beneath immense sunlit clouds" widths={[768, 1280, 1920, 2400]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
+      <span class="hero-mark memory-mark" aria-hidden="true"></span>
+      <h1 id="hero-title" class="hero-title"><span>The world,</span><span>as I remember it.</span></h1>
+      <p class="hero-meta">Visual archive<br />2024—ongoing</p>
+      <a class="hero-scroll" href="#premise"><span>Scroll</span><i aria-hidden="true">↓</i></a>
+    </section>
+
+    <section class="premise" id="premise" aria-label="Publication premise">
+      <p>A visual archive of the world<br />experienced by one person.</p>
+      <p>Not a guide. Not a list.<br />Just places that stayed.</p>
+    </section>
+
+    <CategoryIndex worlds={worlds} />
+
+    <section class="people-memory" id="people" aria-labelledby="people-title">
+      <EditorialFigure src={waterPortrait} alt="A man bends toward falling water" class="people-memory-photo" sizes="(min-width: 901px) 58vw, 100vw" position="50% 38%" />
+      <div class="people-memory-copy">
+        <span class="memory-mark" aria-hidden="true"></span>
+        <h2 id="people-title">People I met<br />along the way.</h2>
+        <p>Some encounters remain without becoming stories. A gesture, a task, a face held for a fraction of a second.</p>
+        <a class="editorial-link" href="/people/" data-analytics-event="people_open" data-analytics-context="home">Enter the people archive <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="detail-pause" aria-label="An intimate archive detail">
+      <EditorialFigure src={handShell} alt="A small spiral shell resting in an open hand" class="detail-photo" sizes="(min-width: 901px) 22vw, 66vw" />
+      <div><span class="memory-mark" aria-hidden="true"></span><p>A small thing.<br />It stayed.</p><small>Place unconfirmed</small></div>
+    </section>
+
+    <section class="environment" id="environment" aria-labelledby="environment-title">
+      <Image src={cirquePortrait} alt="Deep green ridges beneath a gathering field of clouds" widths={[768, 1280, 1920, 2400]} sizes="100vw" loading="lazy" />
+      <div><span class="memory-mark" aria-hidden="true"></span><h2 id="environment-title">Some places<br />resist categories.</h2><p>They alter scale, weather, and the way a photograph is read.</p></div>
+    </section>
+
+    <BlackWhitePreview reflection={bwReflection} artisan={bwArtisan} horizon={bwHorizon} />
+
+    <DestinationBrowser />
+
+    <article class="story-feature" id="story" aria-labelledby="story-title">
+      <EditorialFigure src={lagoonSunset} alt="A lone figure in shallow water beneath a saturated sunset" class="story-image" sizes="(min-width: 901px) 56vw, 100vw" position="50% 52%" />
+      <div class="story-copy"><span class="memory-mark" aria-hidden="true"></span><p>Visual journal · editorial preview</p><h2 id="story-title">The last photograph before dark.</h2><p>Story context is still being written. The photograph remains here as a marker for the future journal format.</p><a class="editorial-link" href="#archive" data-analytics-event="related_content_click" data-analytics-context="home:story-to-archive">Continue into the archive <span aria-hidden="true">→</span></a></div>
+    </article>
+
+    <section class="ocean-chapter" id="ocean" aria-labelledby="ocean-title">
+      <Image src={oceanSilhouettes} alt="Silhouetted passengers look down at turbulent cobalt water" widths={[768, 1280, 1920]} sizes="100vw" loading="lazy" />
+      <div class="ocean-copy"><span class="memory-mark" aria-hidden="true"></span><h2 id="ocean-title">Ocean</h2><p>Scale, movement, distance.</p></div>
+    </section>
+
+    <PhotoSequence photos={closingPhotos} />
+  </main>
+  <SiteFooter />
+</BaseLayout>

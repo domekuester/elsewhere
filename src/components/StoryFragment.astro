@@ -1,0 +1,14 @@
+---
+interface Props {
+  photo: { src: string; width: number; height: number; altText: string };
+  text?: string | null;
+  captureDate?: string | null;
+  destination?: string | null;
+}
+const { photo, text = null, captureDate = null, destination = null } = Astro.props;
+const metadata = [destination, captureDate?.slice(0, 4)].filter(Boolean).join(' · ');
+---
+<figure class="story-fragment">
+  <img src={photo.src} width={photo.width} height={photo.height} alt={photo.altText} loading="lazy" decoding="async" />
+  {(text || metadata) && <figcaption>{text && <p>{text}</p>}{metadata && <small>{metadata}</small>}</figcaption>}
+</figure>

@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import water from '../../assets/photos/water-portrait.jpg';
+import reflection from '../../assets/photos/bw-reflection.jpg';
+import artisan from '../../assets/photos/bw-artisan.jpg';
+import stall from '../../assets/photos/bw-stall.jpg';
+import horizon from '../../assets/photos/bw-horizon.jpg';
+import sculpture from '../../assets/photos/bw-sculpture.jpg';
+---
+
+<BaseLayout title="Black & White photography — Elsewhere" description="A monochrome collection of gesture, work, weather, and distance from the Elsewhere archive." image="/social/black-and-white.jpg" imageAlt="A solitary figure at the edge of a grey sea">
+  <SiteHeader />
+  <main id="main" class="bw-page">
+    <header class="bw-hero">
+      <span class="memory-mark" aria-hidden="true"></span>
+      <h1>Black<br />&amp; White</h1>
+      <p>A quieter room in the archive.</p>
+      <Image src={horizon} alt="A solitary figure at the edge of a grey sea" widths={[768, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" />
+    </header>
+
+    <section class="bw-sequence" aria-label="Selected black and white photographs">
+      <figure class="bw-frame bw-frame-water" data-photo-reveal><Image src={water} alt="A man bends toward falling water" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 48vw, 100vw" loading="lazy" /><figcaption>Gesture</figcaption></figure>
+      <blockquote>Colour leaves.<br />Attention remains.</blockquote>
+      <figure class="bw-frame bw-frame-reflection" data-photo-reveal><Image src={reflection} alt="A woman seen through a mirror as she adjusts her hair" widths={[480, 768, 1200]} sizes="(min-width: 901px) 34vw, 86vw" loading="lazy" /><figcaption>Reflection</figcaption></figure>
+      <figure class="bw-frame bw-frame-artisan" data-photo-reveal><Image src={artisan} alt="A seated artisan working beside an open window" widths={[480, 768, 1200]} sizes="(min-width: 901px) 36vw, 86vw" loading="lazy" /><figcaption>Work</figcaption></figure>
+      <figure class="bw-frame bw-frame-stall" data-photo-reveal><Image src={stall} alt="An empty street-food stall at night" widths={[480, 768, 1200]} sizes="(min-width: 901px) 32vw, 82vw" loading="lazy" /><figcaption>After closing</figcaption></figure>
+      <figure class="bw-frame bw-frame-sculpture" data-photo-reveal><Image src={sculpture} alt="A weathered human sculpture against a mountain" widths={[480, 768, 1200]} sizes="(min-width: 901px) 30vw, 76vw" loading="lazy" /><figcaption>Figure and ground</figcaption></figure>
+    </section>
+
+    <aside class="bw-next"><p>Continue through the photographic index.</p><a href="/archive/"><span>Archive</span><b aria-hidden="true">→</b></a></aside>
+  </main>
+  <SiteFooter />
+</BaseLayout>

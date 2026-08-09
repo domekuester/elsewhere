@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+---
+
+<BaseLayout title="Not found — Elsewhere" description="This page has moved elsewhere." robots="noindex, nofollow, noarchive">
+  <SiteHeader />
+  <main id="main" class="not-found">
+    <span class="memory-mark" aria-hidden="true"></span>
+    <p>404 · Outside the archive</p>
+    <h1>This path went<br />somewhere else.</h1>
+    <a class="editorial-link" href="/">Return to the visual journal <span aria-hidden="true">→</span></a>
+  </main>
+</BaseLayout>
