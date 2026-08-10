@@ -711,5 +711,575 @@
       ],
       "reason": "Burst pair of the same rider seconds apart; the trotting frame carries the movement."
     }
-  ]
+  ],
+  "editorialHold": [
+    {
+      "photoId": "photo-0010",
+      "filename": "1200381.jpg",
+      "index": 10,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0011",
+      "filename": "1200388.jpg",
+      "index": 11,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0071",
+      "filename": "P1190894 Kopie.jpg",
+      "index": 71,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0100",
+      "filename": "P1210525.jpg",
+      "index": 100,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0102",
+      "filename": "P1210527.jpg",
+      "index": 102,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0106",
+      "filename": "P1210622.jpg",
+      "index": 106,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0114",
+      "filename": "P1210734.jpg",
+      "index": 114,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0115",
+      "filename": "P1210737.jpg",
+      "index": 115,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0117",
+      "filename": "P1210742.jpg",
+      "index": 117,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0118",
+      "filename": "P1210743.jpg",
+      "index": 118,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0119",
+      "filename": "P1210744.jpg",
+      "index": 119,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0120",
+      "filename": "P1210746.jpg",
+      "index": 120,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0123",
+      "filename": "P1210750.jpg",
+      "index": 123,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0124",
+      "filename": "P1210752.jpg",
+      "index": 124,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0125",
+      "filename": "P1210754.jpg",
+      "index": 125,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0126",
+      "filename": "P1210756.jpg",
+      "index": 126,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0127",
+      "filename": "P1210764.jpg",
+      "index": 127,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0128",
+      "filename": "P1210787.jpg",
+      "index": 128,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0129",
+      "filename": "P1210792.jpg",
+      "index": 129,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0131",
+      "filename": "P1210804.jpg",
+      "index": 131,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0133",
+      "filename": "P1210807.jpg",
+      "index": 133,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0135",
+      "filename": "P1210822.jpg",
+      "index": 135,
+      "code": "accommodation-record",
+      "reason": "Record of a place of stay — signage, dormitory, lounge and grounds. Documentation of a trip, not a photograph of a place.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0136",
+      "filename": "P1210833.jpg",
+      "index": 136,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0137",
+      "filename": "P1210840.jpg",
+      "index": 137,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0138",
+      "filename": "P1210842.jpg",
+      "index": 138,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0139",
+      "filename": "P1210843.jpg",
+      "index": 139,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0140",
+      "filename": "P1210848.jpg",
+      "index": 140,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0146",
+      "filename": "P1210862.jpg",
+      "index": 146,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0147",
+      "filename": "P1210877.jpg",
+      "index": 147,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0148",
+      "filename": "P1210878.jpg",
+      "index": 148,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0150",
+      "filename": "P1210882.jpg",
+      "index": 150,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0151",
+      "filename": "P1210889.jpg",
+      "index": 151,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0153",
+      "filename": "P1210901.jpg",
+      "index": 153,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0154",
+      "filename": "P1210903.jpg",
+      "index": 154,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0156",
+      "filename": "P1210910.jpg",
+      "index": 156,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0157",
+      "filename": "P1210917.jpg",
+      "index": 157,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0158",
+      "filename": "P1210921.jpg",
+      "index": 158,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0159",
+      "filename": "P1210922.jpg",
+      "index": 159,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0282",
+      "filename": "P1250395.jpg",
+      "index": 282,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0290",
+      "filename": "P1250557.jpg",
+      "index": 290,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0291",
+      "filename": "P1250561.jpg",
+      "index": 291,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0292",
+      "filename": "P1250571.jpg",
+      "index": 292,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0296",
+      "filename": "P1250619.jpg",
+      "index": 296,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0299",
+      "filename": "P1250663.jpg",
+      "index": 299,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0302",
+      "filename": "P1250703.jpg",
+      "index": 302,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0309",
+      "filename": "P1250802.jpg",
+      "index": 309,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0314",
+      "filename": "P1250891.jpg",
+      "index": 314,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0317",
+      "filename": "P1250930.jpg",
+      "index": 317,
+      "code": "near-duplicate",
+      "reason": "Near-identical to a stronger frame already public. Held so the archive reads as an edit rather than a camera roll.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0318",
+      "filename": "P1250932.jpg",
+      "index": 318,
+      "code": "near-duplicate",
+      "reason": "Near-identical to a stronger frame already public. Held so the archive reads as an edit rather than a camera roll.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0321",
+      "filename": "P1260001.jpg",
+      "index": 321,
+      "code": "near-duplicate",
+      "reason": "Near-identical to a stronger frame already public. Held so the archive reads as an edit rather than a camera roll.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0403",
+      "filename": "P1270020-2.jpg",
+      "index": 403,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0408",
+      "filename": "P1270024-2.jpg",
+      "index": 408,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0413",
+      "filename": "P1270031-4.jpg",
+      "index": 413,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0416",
+      "filename": "P1270034-2.jpg",
+      "index": 416,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0421",
+      "filename": "P1270038-2.jpg",
+      "index": 421,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0424",
+      "filename": "P1270040-2.jpg",
+      "index": 424,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0427",
+      "filename": "P1270045-2.jpg",
+      "index": 427,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0435",
+      "filename": "P1270058-2.jpg",
+      "index": 435,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0446",
+      "filename": "P1270241.jpg",
+      "index": 446,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0466",
+      "filename": "P1270618.jpg",
+      "index": 466,
+      "code": "near-duplicate",
+      "reason": "Near-identical to a stronger frame already public. Held so the archive reads as an edit rather than a camera roll.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0491",
+      "filename": "P1280520.jpg",
+      "index": 491,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0498",
+      "filename": "P1280749.jpg",
+      "index": 498,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0500",
+      "filename": "P1280772.jpg",
+      "index": 500,
+      "code": "private-social",
+      "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
+      "addedIn": "phase-9.2",
+      "reversible": true
+    }
+  ],
+  "editorialHoldNote": "Agent editorial holds from Phase 9.2, awaiting owner confirmation. Separate from ownerRejected, which only the owner may write to. Reversible: remove an entry and rebuild."
 }

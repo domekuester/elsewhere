@@ -27,7 +27,11 @@ const sameYear = range && range.start.slice(0, 4) === range.end.slice(0, 4);
 const journey = range ? {
   dates: range.start === range.end ? formatDate(range.start) : `${formatDate(range.start, !sameYear)} — ${formatDate(range.end)}`,
   note: range.source === 'OWNER_TRAVEL_TIMELINE'
-    ? 'Country confirmed by the owner’s travel timeline. Cities and regions remain intentionally unassigned.'
+    // A region-level chapter has its place confirmed by definition, so the country-only caveat
+    // would be untrue there.
+    ? (destination.parentDestination
+      ? 'Place confirmed by the photographer’s travel record. Individual towns within it remain intentionally unassigned.'
+      : 'Country confirmed by the owner’s travel timeline. Cities and regions remain intentionally unassigned.')
     // Span and month are computed from the photographs, so the line stays true for any chapter.
     : `Photographed over ${Math.round((Date.parse(range.end) - Date.parse(range.start)) / 86400000) + 1} days in ${new Date(range.start).toLocaleDateString('en-GB', { month: 'long' })}. Place confirmed by the photographer; the dates are taken from the photographs themselves.`,
 } : null;
@@ -51,6 +55,35 @@ const altByFilename = {
   'P1240747.jpg': 'Bands of warm light fall through a dark wooden interior.',
   'P1240787.jpg': 'An orange torii gate stands above a narrow stone stair.',
   'P1260122.jpg': 'A breakwater lighthouse beneath a long grey sky.',
+  // Japan, Phase 9.2 re-cut.
+  'P1260493.jpg': 'Illuminated signs crowd the front of a canal-side street.',
+  'P1260490.jpg': 'Signs and buildings press in along a canal in the last light.',
+  'P1260442.jpg': 'A cyclist passes a wall of stickers and spray paint in a narrow lane.',
+  'P1240278.jpg': 'A wet stone lane runs between old wooden walls into green.',
+  'P1240723.jpg': 'A long wooden corridor opens onto light at its far end.',
+  'P1260213.jpg': 'Bamboo stems rise close together in low light.',
+  'P1230806.jpg': 'Three people cross still water in a small round boat.',
+  'P1230855.jpg': 'A man in white stands on black rock above the shore.',
+  'P1240051.jpg': 'A performer in a dark hat waits beneath festival ropes.',
+  'P1240950-Enhanced-NR.jpg': 'A lighthouse stands above a field of orange flowers.',
+  'P1230935-2.jpg': 'A stone shrine stands on a shingle shore beneath heavy cloud.',
+  'P1250819.jpg': 'A tall sea stack rises beyond a shore of pale boulders.',
+  'P1250632.jpg': 'A footpath runs along a green ridge above the sea.',
+  // La Réunion, Phase 9.2 chapter.
+  'P1270181.jpg': 'Cloud gathers over the ridges and rock spires of an eroded volcanic cirque.',
+  'P1270145.jpg': 'Steep green ridges fall away beneath a bank of low cloud.',
+  'P1270434.jpg': 'A dark ravine drops between two forested walls beneath heavy cloud.',
+  'P1300247.jpg': 'A stone stairway with a wooden rail climbs into rising mist.',
+  'P1280368.jpg': 'Buttressed trunks stand in a dim forest with sea light behind them.',
+  'P1280317.jpg': 'A shallow river runs over dark rock between dense green banks.',
+  'P1300531.jpg': 'A white dormer window set into a red tile roof above a palm.',
+  'P1280794.jpg': 'A pale church spire and its clock face against a bank of cloud.',
+  'P1270530.jpg': 'An abandoned house stands with mountains behind it in low cloud.',
+  'P1260765.jpg': 'A wave breaks against the breakwater below a lighthouse tower.',
+  'P1280067.jpg': 'A wave folds over itself against black volcanic rock.',
+  'P1260926.jpg': 'Small figures stand on concrete blocks in a green sea.',
+  'P1300638.jpg': 'A surfer carries a board along the shoreline against a pale sky.',
+  'P1280221.jpg': 'The moon stands above a breaking wave in the last light.',
 };
 const canonicalPath = `/destinations/${destination.slug}/`;
 const destinationSchema = {

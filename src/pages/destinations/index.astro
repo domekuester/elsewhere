@@ -20,7 +20,7 @@ const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
 
 <BaseLayout
   title="Travel photography destinations — Elsewhere"
-  description="Photographic chapters from Japan and Essaouira, Morocco, with Malaysia, Thailand, Laos, Phu Quoc and La Réunion held in the archive."
+  description="Photographic chapters from Japan, La Réunion and Essaouira, Morocco, with Malaysia, Thailand, Phu Quoc and Laos held in the archive."
   image="/social/japan.jpg"
   imageAlt="A gull approaches a row of outstretched hands above the water"
 >
@@ -71,7 +71,9 @@ const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
         {inProgress.map((destination, index) => (
           <li>
             <span>{String(index + 1).padStart(2, '0')}</span>
-            <strong>{destination.name}</strong>
+            {/* A named place with a real photograph count must lead somewhere. Without a chapter,
+                that somewhere is the archive filtered to it — not a dead row of text. */}
+            <a href={`/archive/?destination=${destination.slug}`} data-analytics-event="archive_open" data-analytics-context={`destinations:${destination.slug}`}><strong>{destination.name}</strong></a>
             <small>{destination.confirmedPhotoCount} photographs</small>
           </li>
         ))}

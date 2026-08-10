@@ -76,12 +76,28 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .hero-media { position: absolute; z-index: -2; inset: 0; overflow: hidden; }
 .hero-media img { object-position: 50% 48%; }
 .hero::after { content: ""; position: absolute; z-index: -1; inset: auto 0 0; height: 42%; background: linear-gradient(to bottom, transparent, rgba(5, 6, 6, .68)); pointer-events: none; }
+/* The header is difference-blended, so it inverts against whatever the photograph puts behind it.
+   That fails on a hero that is pale at the top: near-white ink over bright cloud resolves to a
+   mid-tone, and a wordmark spanning both cloud and sky splits into two colours and reads as damage.
+   Holding the header's own band at a constant darkness — a graduated sky, not a UI bar — makes the
+   inversion resolve to light on every hero regardless of that photograph's tonality. The band ends
+   well above the title, so nothing in the composition below it changes. */
+.hero::before, .destination-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: calc((var(--header-safe-top) + var(--header-row) + var(--header-bottom)) * 2.1);
+  background: linear-gradient(to bottom, rgba(3, 5, 7, .72) 0, rgba(3, 5, 7, .68) 46%, transparent 100%);
+  pointer-events: none;
+}
+.hero::before { z-index: -1; }
+.destination-hero::before { z-index: 1; }
 .hero-mark { margin-bottom: 1.2rem; }
 .hero-title { font-family: var(--display); font-size: clamp(3.7rem, 6vw, 5.5rem); font-weight: 400; line-height: .9; letter-spacing: -.035em; text-transform: uppercase; }
 .hero-title span { display: block; overflow: hidden; white-space: nowrap; }
 .hero-title span:last-child { font-family: var(--editorial); font-size: 1.06em; font-style: italic; letter-spacing: -.025em; text-transform: none; }
 .hero-meta { position: absolute; right: var(--gutter); bottom: clamp(2.5rem, 5vw, 4.75rem); color: #e0e2df; font-size: .68rem; line-height: 1.5; }
-.hero-scroll { position: absolute; right: var(--gutter); bottom: 50%; display: flex; flex-direction: column; align-items: center; gap: .7rem; font-size: .68rem; }
+.hero-scroll { position: absolute; right: calc(var(--gutter) - .45rem); bottom: 50%; display: flex; flex-direction: column; align-items: center; gap: .7rem; min-width: 1.5rem; padding-inline: .45rem; font-size: .68rem; }
 .hero-scroll span { writing-mode: vertical-rl; }
 .hero-scroll i { color: var(--ultramarine); font-size: 1rem; font-style: normal; line-height: 1; }
 
@@ -122,7 +138,10 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .people-memory-copy { align-self: center; padding: clamp(4rem, 8vw, 9rem) var(--gutter); }
 .people-memory-copy h2 { margin-top: 1.5rem; font-family: var(--display); font-size: clamp(4rem, 6.5vw, 6rem); font-weight: 400; line-height: .84; letter-spacing: -.035em; text-transform: uppercase; }
 .people-memory-copy > p { max-width: 30rem; margin-top: 2rem; font-family: var(--editorial); font-size: clamp(1.1rem, 1.6vw, 1.45rem); line-height: 1.5; }
-.editorial-link { display: inline-flex; align-items: center; gap: .9rem; margin-top: 2rem; color: var(--ultramarine); font-size: .78rem; font-weight: 600; }
+/* WCAG 2.2 target size, bought without changing a single visible measurement: the same padding
+   plus equal negative margin the header links already use, so the hit area reaches 24px while the
+   type sits exactly where it did. */
+.editorial-link { display: inline-flex; align-items: center; gap: .9rem; min-height: 1.5rem; margin-top: calc(2rem - .3rem); margin-bottom: -.3rem; padding-block: .3rem; color: var(--ultramarine); font-size: .78rem; font-weight: 600; }
 .editorial-link span { transition: transform .4s var(--ease-out); }
 .editorial-link:hover span, .editorial-link:focus-visible span { transform: translateX(.3rem); }
 .editorial-figure { overflow: visible; }
@@ -153,6 +172,8 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .destination-index li { display: grid; grid-template-columns: 2.5rem 1fr auto; gap: 1rem; align-items: baseline; padding: 1.35rem 0; border-bottom: 1px solid var(--line-light); }
 .destination-number { color: var(--ultramarine); font-size: .64rem; }
 .destination-index strong { font-family: var(--editorial); font-size: clamp(2rem, 4vw, 4.3rem); font-weight: 400; line-height: 1; }
+.destination-index li > a, .index-list li > a { color: inherit; text-decoration: none; transition: color .4s var(--ease-out); }
+.destination-index li > a:hover, .index-list li > a:hover { color: var(--ultramarine); }
 .destination-index small { color: #505451; font-size: .68rem; }
 
 /* Reflection */
@@ -218,6 +239,18 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .encounter-vendor img { aspect-ratio: 3 / 4; }
 .encounter-motorcycle { grid-column: 6 / 13; margin-top: 10rem; }
 .encounter-motorcycle img { aspect-ratio: 16 / 10; }
+.people-deeper { padding: clamp(8rem, 12vw, 13rem) var(--gutter) clamp(5rem, 8vw, 8rem); color: var(--obsidian); background: var(--ivory); }
+.people-deeper > header { display: grid; grid-template-columns: auto minmax(0, 24rem); justify-content: space-between; align-items: end; gap: clamp(2rem, 6vw, 6rem); }
+.people-deeper h2 { font-family: var(--display); font-size: clamp(3.2rem, 5.5vw, 5.4rem); font-weight: 400; line-height: .84; letter-spacing: -.035em; text-transform: uppercase; }
+.people-deeper header p { color: #4d514e; font-family: var(--editorial); line-height: 1.7; }
+.people-deeper-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 3vw, 3rem) clamp(1rem, 2vw, 2.5rem); margin: clamp(3.5rem, 7vw, 7rem) 0 clamp(3rem, 5vw, 5rem); }
+.people-deeper figure { margin: 0; }
+.people-deeper img { aspect-ratio: 3 / 4; }
+.people-deeper figcaption { padding-top: .75rem; color: #656a66; font-size: .74rem; }
+/* The rhythm of the grid: the middle column sits lower so six frames read as a sequence
+   rather than a product listing. */
+.people-deeper-grid figure:nth-child(3n + 2) { margin-top: clamp(2rem, 5vw, 5rem); }
+
 .people-next, .bw-next { padding: clamp(6rem, 10vw, 10rem) var(--gutter); }
 .people-next { color: var(--obsidian); background: var(--ivory); }
 .people-next > p, .bw-next > p { margin-bottom: 2rem; font-family: var(--editorial); font-size: 1.1rem; }
@@ -291,6 +324,7 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .not-found { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 1.5rem; padding: 8rem var(--gutter); }
 .not-found > p { color: var(--ink-soft); font-size: .72rem; }
 .not-found h1 { font-family: var(--display); font-size: clamp(4rem, 10vw, 9rem); font-weight: 400; line-height: .84; letter-spacing: -.04em; text-transform: uppercase; }
+.not-found .editorial-link + .editorial-link { margin-top: -.7rem; }
 
 @media (max-width: 900px) {
   :root { --header-safe-top: max(1rem, calc(env(safe-area-inset-top, 0px) + .6rem)); --header-bottom: 1rem; }
@@ -353,6 +387,10 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
   .encounter-worker { grid-column: 5 / 13; }
   .encounter-vendor { grid-column: 1 / 6; margin-top: 5rem; }
   .encounter-motorcycle { grid-column: 3 / 13; }
+  .people-deeper > header { grid-template-columns: 1fr; }
+  .people-deeper-grid { grid-template-columns: repeat(2, 1fr); }
+  .people-deeper-grid figure:nth-child(3n + 2) { margin-top: 0; }
+  .people-deeper-grid figure:nth-child(2n) { margin-top: clamp(2rem, 6vw, 4rem); }
   .collections-intro { grid-template-columns: 1fr; }
   .collection-entry { grid-template-columns: 1fr; }
   .collection-entry > img { min-height: 70svh; }
@@ -414,6 +452,12 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
   .encounter-vendor { width: 68%; }
   .encounter-motorcycle { width: calc(100% + var(--gutter) * 2); align-self: center; }
   .people-next a span, .bw-next a span { font-size: clamp(3.5rem, 16vw, 5rem); }
+  /* Mobile is authored, not stacked: alternating widths keep six portraits from reading as a feed. */
+  .people-deeper h2 { font-size: clamp(3.2rem, 15vw, 4.6rem); }
+  .people-deeper-grid { display: flex; flex-direction: column; gap: 3.5rem; }
+  .people-deeper-grid figure { width: 82%; margin-top: 0 !important; }
+  .people-deeper-grid figure:nth-child(even) { align-self: flex-end; width: 68%; }
+  .people-deeper-grid figure:nth-child(4) { width: calc(100% + var(--gutter) * 2); align-self: center; }
   .bw-hero h1 { font-size: clamp(4.6rem, 23vw, 7rem); }
   .bw-sequence { display: flex; flex-direction: column; gap: 6rem; }
   .bw-sequence blockquote { order: 1; font-size: clamp(2.8rem, 13vw, 4rem); }
@@ -569,14 +613,14 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .archive-controls { position: sticky; z-index: 8; top: 0; display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2.5rem); padding: 1rem var(--gutter); border-block: 1px solid var(--line-light); background: rgba(242, 240, 234, .94); backdrop-filter: blur(12px); }
 .archive-filter-group { display: flex; align-items: center; gap: 1.2rem; margin-right: auto; }
 .archive-controls button, .archive-controls select { border: 0; border-radius: 0; color: inherit; background: transparent; cursor: pointer; }
-.archive-filter-group button, .archive-filter-group a { position: relative; flex: 0 0 auto; padding: .5rem 0; font-size: .72rem; white-space: nowrap; }
+.archive-filter-group button, .archive-filter-group a { position: relative; flex: 0 0 auto; min-width: 1.5rem; padding: .5rem .35rem; margin-inline: -.35rem; font-size: .72rem; white-space: nowrap; }
 .archive-filter-group button::after, .archive-filter-group a::after { content: ""; position: absolute; inset: auto 0 .15rem; height: 1px; background: var(--ultramarine); transform: scaleX(0); transition: transform .35s var(--ease-out); }
 .archive-filter-group button.is-active::after { transform: scaleX(1); }
 .archive-filter-group a:hover::after, .archive-filter-group a:focus-visible::after { transform: scaleX(1); }
 .archive-context { color: #626562; font-family: var(--display); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
 .archive-controls label { display: flex; align-items: center; gap: .55rem; color: #5a5d5a; font-size: .65rem; text-transform: uppercase; }
 .archive-controls select { padding: .45rem 1.1rem .45rem .25rem; font-size: .72rem; text-transform: none; }
-.another-frame { display: flex; gap: .6rem; align-items: center; color: var(--ultramarine) !important; font-size: .7rem; }
+.another-frame { display: flex; gap: .6rem; align-items: center; min-height: 1.5rem; padding-block: .35rem; margin-block: -.35rem; color: var(--ultramarine) !important; font-size: .7rem; }
 .archive-field { display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; gap: clamp(2.7rem, 5vw, 6rem) clamp(.7rem, 1.4vw, 1.6rem); padding: clamp(4rem, 7vw, 8rem) var(--gutter); }
 .archive-frame { grid-column: span 3; display: block; min-width: 0; border: 0; padding: 0; color: inherit; text-align: left; background: transparent; cursor: zoom-in; content-visibility: auto; contain-intrinsic-size: 320px 420px; }
 .archive-frame.is-landscape { grid-column: span 4; }
@@ -658,13 +702,13 @@ html[data-viewer-open] body { overflow: hidden; }
 .destination-frame.is-seq-closing { --seq-offset: clamp(1rem, 3vw, 4rem); }
 
 .destination-frame.is-seq-wide.is-landscape { grid-column: 2 / 9; }
-.destination-frame.is-seq-wide.is-portrait { grid-column: 2 / 7; }
+.destination-frame.is-seq-wide.is-portrait { grid-column: 2 / 8; }
 .destination-frame.is-seq-portrait.is-landscape { grid-column: 7 / 13; }
 .destination-frame.is-seq-portrait.is-portrait { grid-column: 8 / 13; }
 .destination-frame.is-seq-quiet.is-landscape { grid-column: 1 / 7; }
-.destination-frame.is-seq-quiet.is-portrait { grid-column: 1 / 6; }
+.destination-frame.is-seq-quiet.is-portrait { grid-column: 1 / 5; }
 .destination-frame.is-seq-anchor.is-landscape { grid-column: 5 / 13; }
-.destination-frame.is-seq-anchor.is-portrait { grid-column: 6 / 12; }
+.destination-frame.is-seq-anchor.is-portrait { grid-column: 5 / 12; }
 .destination-frame.is-seq-offset.is-landscape { grid-column: 2 / 8; }
 .destination-frame.is-seq-offset.is-portrait { grid-column: 2 / 7; }
 .destination-frame.is-seq-closing.is-landscape { grid-column: 6 / 13; }
@@ -689,11 +733,19 @@ html[data-viewer-open] body { overflow: hidden; }
 .destination-continuation > p { max-width: 26rem; line-height: 1.7; }
 .destination-continuation > a:first-of-type { display: flex; align-items: center; justify-content: space-between; margin-top: 3rem; padding-block: 1.5rem; border-block: 1px solid var(--line-light); }
 .destination-continuation > a:first-of-type span { font-family: var(--display); font-size: clamp(3rem, 7vw, 6rem); line-height: .85; text-transform: uppercase; }
-.destination-continuation > a:last-child { display: inline-block; margin-top: 2rem; color: var(--ultramarine); font-size: .78rem; }
+.destination-continuation > a:last-child { display: inline-flex; align-items: center; min-height: 1.5rem; margin-top: calc(2rem - .3rem); margin-bottom: -.3rem; padding-block: .3rem; color: var(--ultramarine); font-size: .78rem; }
+
+/* Six world filters no longer fit beside the three selects on a laptop: at 980–1100px the row ran
+   past the gutter and the last control lost its right margin. The filter group takes its own line
+   from here down, which is the same behaviour the narrow layout already used. */
+@media (max-width: 1140px) {
+  .archive-controls { flex-wrap: wrap; row-gap: .35rem; }
+  .archive-filter-group { width: 100%; margin-right: 0; overflow-x: auto; scrollbar-width: none; }
+  .archive-filter-group::-webkit-scrollbar { display: none; }
+  .another-frame { margin-left: auto; }
+}
 
 @media (max-width: 900px) {
-  .archive-controls { flex-wrap: wrap; }
-  .archive-filter-group { width: 100%; overflow-x: auto; }
   .archive-frame, .archive-frame.is-landscape { grid-column: span 6; }
   .archive-frame.is-selected { grid-column: span 7; }
   .destination-provenance { grid-template-columns: 1fr; }
@@ -862,6 +914,9 @@ html[data-viewer-open] body { overflow: hidden; }
 
 .footer-secondary { display: flex; flex-wrap: wrap; gap: 1.2rem 1.8rem; }
 .footer-secondary a { color: var(--ink-soft); font-size: .72rem; letter-spacing: .04em; }
+/* Footer links sat at 20px tall. Padding plus equal negative margin lifts every one of them past
+   the 24px minimum without moving the rows they sit in. */
+.site-footer nav a, .footer-wordmark { display: inline-flex; align-items: center; min-height: 1.5rem; padding-block: .3rem; margin-block: -.3rem; }
 .footer-secondary a:hover, .footer-secondary a:focus-visible { color: var(--ultramarine); }
 
 @media (max-width: 900px) {

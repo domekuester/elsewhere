@@ -8,6 +8,7 @@ import EditorialFigure from '../components/EditorialFigure.astro';
 import PhotoSequence from '../components/PhotoSequence.astro';
 import BlackWhitePreview from '../components/BlackWhitePreview.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import catalogData from '../../public/data/photo-catalog.json';
 
 import islandClouds from '../assets/photos/island-of-clouds.jpg';
 import peopleWorker from '../assets/photos/people-worker.jpg';
@@ -27,13 +28,22 @@ import bwHorizon from '../assets/photos/bw-horizon.jpg';
 import yellowBird from '../assets/photos/yellow-bird.jpg';
 import boxingGloves from '../assets/photos/boxing-gloves.jpg';
 
+// A world card promised "a way into an archive" and delivered a scroll to another part of Home —
+// twice to a section about something else entirely. Each now opens the archive filtered to that
+// world, which is what the heading has always claimed. The build fails if a promised world is not
+// actually reachable there, so the two can never drift apart again.
+const archiveWorldMinimum = 8;
 const worlds = [
-  { name: 'People', feeling: 'Gesture. Presence. Chance encounters.', href: '#people', image: peopleWorker, alt: 'A worker looks across a counter during a conversation', position: '45% 40%' },
-  { name: 'Beaches', feeling: 'Space. Weather. The line of the horizon.', href: '#story', image: beachStorm, alt: 'An empty beach and small yellow boat beneath an approaching storm', position: '48% 55%' },
-  { name: 'Urban', feeling: 'Density. Movement. Life between buildings.', href: '#archive', image: tokyoStreet, alt: 'Pedestrians moving through a lantern-lined street', position: '50% 43%' },
-  { name: 'Jungle', feeling: 'Depth. Shadow. The living interior.', href: '#environment', image: jungleRoots, alt: 'A weathered human figure held inside the roots of an old tree', position: '50% 48%' },
-  { name: 'Ocean', feeling: 'Scale. Distance. Perpetual motion.', href: '#ocean', image: oceanCurrent, alt: 'A cobalt wake folding back into open water', position: '50% 50%' },
-];
+  { name: 'People', feeling: 'Gesture. Presence. Chance encounters.', world: 'people', image: peopleWorker, alt: 'A worker looks across a counter during a conversation', position: '45% 40%' },
+  { name: 'Beaches', feeling: 'Space. Weather. The line of the horizon.', world: 'beaches', image: beachStorm, alt: 'An empty beach and small yellow boat beneath an approaching storm', position: '48% 55%' },
+  { name: 'Urban', feeling: 'Density. Movement. Life between buildings.', world: 'urban', image: tokyoStreet, alt: 'Pedestrians moving through a lantern-lined street', position: '50% 43%' },
+  { name: 'Jungle', feeling: 'Depth. Shadow. The living interior.', world: 'jungle', image: jungleRoots, alt: 'A weathered human figure held inside the roots of an old tree', position: '50% 48%' },
+  { name: 'Ocean', feeling: 'Scale. Distance. Perpetual motion.', world: 'ocean', image: oceanCurrent, alt: 'A cobalt wake folding back into open water', position: '50% 50%' },
+].map((world) => {
+  const count = catalogData.photos.filter((photo) => photo.visualWorlds.includes(world.world)).length;
+  if (count < archiveWorldMinimum) throw new Error(`Home offers the world "${world.world}" but the archive holds only ${count} frames in it, below the ${archiveWorldMinimum}-frame threshold that publishes a filter.`);
+  return { ...world, href: `/archive/?world=${world.world}` };
+});
 
 const closingPhotos = [
   { image: yellowBird, alt: 'A small yellow bird poised above moving water', note: 'A bright interruption', position: '50% 50%' },
@@ -86,7 +96,7 @@ const closingPhotos = [
 
     <article class="story-feature" id="story" aria-labelledby="story-title">
       <EditorialFigure src={lagoonSunset} alt="A lone figure in shallow water beneath a saturated sunset" class="story-image" sizes="(min-width: 901px) 56vw, 100vw" position="50% 52%" />
-      <div class="story-copy"><span class="memory-mark" aria-hidden="true"></span><p>Visual journal</p><h2 id="story-title">The last photograph before dark.</h2><a class="editorial-link" href="/archive/" data-analytics-event="related_content_click" data-analytics-context="home:story-to-archive">Continue into the archive <span aria-hidden="true">→</span></a></div>
+      <div class="story-copy">{/* The kicker read "Visual journal" — a section of the publication that does not exist. */}<span class="memory-mark" aria-hidden="true"></span><p>From the archive</p><h2 id="story-title">The last photograph before dark.</h2><a class="editorial-link" href="/archive/" data-analytics-event="related_content_click" data-analytics-context="home:story-to-archive">Continue into the archive <span aria-hidden="true">→</span></a></div>
     </article>
 
     <section class="ocean-chapter" id="ocean" aria-labelledby="ocean-title">

@@ -1,22 +1,26 @@
 ---
 import destinationData from '../../data/destinations.json';
-const order = ['japan', 'la-reunion', 'malaysia', 'thailand', 'phu-quoc', 'laos'];
-const destinations = order.map((id) => destinationData.destinations.find((destination) => destination.id === id)).filter(Boolean);
+// Ordered by archive depth, and derived rather than hardcoded: a hardcoded list silently omitted
+// Essaouira from Home for the whole of Phase 9.1, so the newest open chapter never appeared here.
+const destinations = destinationData.destinations
+  .filter((destination) => destination.confirmedPhotoCount > 0)
+  .sort((a, b) => b.confirmedPhotoCount - a.confirmedPhotoCount);
+const isOpen = (destination) => destination.publicationStatus === 'published';
 ---
 
 <section class="destination-index" id="destinations" aria-labelledby="destination-title">
   <header>
     <span class="memory-mark" aria-hidden="true"></span>
     <h2 id="destination-title">Destinations</h2>
-    <p>Place is now a second way through the archive. Assignments come from the owner’s travel timeline; transition days remain outside the destination edit until reviewed.</p>
+    <p>Place is the second way through the archive. Three chapters are open; the rest of the work is there to be found by place and year.</p>
     <a class="editorial-link" href="/destinations/">Enter the place index <span aria-hidden="true">→</span></a>
   </header>
   <ol>
     {destinations.map((destination, index) => (
       <li>
         <span class="destination-number">{String(index + 1).padStart(2, '0')}</span>
-        {destination.publicationStatus === 'published' ? <a href={`/destinations/${destination.slug}/`}><strong>{destination.name}</strong></a> : <strong>{destination.name}</strong>}
-        <small>{destination.confirmedPhotoCount} photographs{destination.publicationStatus === 'published' ? ' · chapter open' : ''}</small>
+        <a href={isOpen(destination) ? `/destinations/${destination.slug}/` : `/archive/?destination=${destination.slug}`}><strong>{destination.name}</strong></a>
+        <small>{destination.confirmedPhotoCount} photographs{isOpen(destination) ? ' · chapter open' : ' · in the archive'}</small>
       </li>
     ))}
   </ol>

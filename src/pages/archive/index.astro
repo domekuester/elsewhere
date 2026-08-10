@@ -40,7 +40,7 @@ const archiveSizes = (photo) => ['hero', 'anchor'].includes(photo.role) ? '(min-
       <h1>{isBlackAndWhite ? <><em>Black &amp; White</em><span>Archive</span></> : 'Archive'}</h1>
       <div class="archive-intro-meta">
         <p>{isBlackAndWhite ? 'The deeper monochrome body of work. Gesture, weather, distance, and form encountered beyond the selected edit.' : 'A deeper way through the work. Place, year, and form open different paths through the photographs.'}</p>
-        <p><strong>{catalog.length}</strong> frames<br /><span data-visible-count>{opening.length} in view</span></p>
+        <p><strong data-total-count>{catalog.length}</strong> frames<br /><span data-visible-count>{opening.length} in view</span></p>
       </div>
     </header>
 

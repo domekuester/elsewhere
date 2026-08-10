@@ -51,7 +51,10 @@ const catalog = inventory.photos.map((photo, index) => {
   const reviewedMonochrome = photo.editorial?.categories?.includes('black-and-white-candidate')
     && photo.editorial?.notes?.includes('visually reviewed in Phase 7');
   const assignedMonochrome = assignment.visualWorlds?.includes('black-and-white');
-  const publicAllowed = !publicExclusions.has(photo.id) && !['private', 'do-not-publish'].includes(assignment.visibility ?? 'hold');
+  // `editorial-hold` is an agent-proposed withholding awaiting owner confirmation, recorded in
+  // data/public-image-exclusions.json under `editorialHold`. It is deliberately a separate state
+  // from `do-not-publish`, which only the owner sets, so that reversing one never touches the other.
+  const publicAllowed = !publicExclusions.has(photo.id) && !['private', 'do-not-publish', 'editorial-hold'].includes(assignment.visibility ?? 'hold');
   const archiveName = `${String(index + 1).padStart(4, '0')}-${path.parse(photo.filename).name}.jpg`;
   const targetArchive = path.join(root, 'public/assets-derived/archive', archiveName);
   const targetViewer = path.join(root, 'public/assets-derived/viewer', archiveName);
@@ -62,9 +65,13 @@ const catalog = inventory.photos.map((photo, index) => {
     if (fs.existsSync(targetViewer)) fs.unlinkSync(targetViewer);
   }
   const destination = destinations.get(assignment.destinationId ?? assignment.destination);
-  const visualWorlds = assignment.visualWorlds?.length
-    ? assignment.visualWorlds
-    : (manual?.worlds ?? (reviewedMonochrome ? ['black-and-white'] : []));
+  // Worlds from the three sources are merged, never substituted. A curation assignment that adds
+  // 'people' to a Phase 7 monochrome frame must not silently evict it from the monochrome archive.
+  const visualWorlds = [...new Set([
+    ...(assignment.visualWorlds ?? []),
+    ...(manual?.worlds ?? []),
+    ...(reviewedMonochrome ? ['black-and-white'] : []),
+  ])];
   const year = photo.capture?.date ? Number(photo.capture.date.slice(0, 4)) : null;
   const reviewedAlt = (typeof assignment.altText === 'string' ? assignment.altText.trim() : '') || confirmedAltByFilename.get(photo.filename.toLowerCase()) || '';
   const temporaryFacts = [destination?.name, photo.orientation, Number.isFinite(year) ? String(year) : null].filter(Boolean);
@@ -73,9 +80,12 @@ const catalog = inventory.photos.map((photo, index) => {
     id: photo.id,
     index: index + 1,
     filename: photo.filename,
-    thumbnail: `/assets-derived/thumbnails/${thumbName}`,
-    archiveImage: `/assets-derived/archive/${archiveName}`,
-    viewerImage: `/assets-derived/viewer/${archiveName}`,
+    // Percent-encoded because some masters carry a space in their filename, and a raw space in a
+    // srcset candidate is a parse error: the browser silently drops the high-resolution entries and
+    // renders those frames at thumbnail size on every surface. Disk names are untouched.
+    thumbnail: `/assets-derived/thumbnails/${encodeURIComponent(thumbName)}`,
+    archiveImage: `/assets-derived/archive/${encodeURIComponent(archiveName)}`,
+    viewerImage: `/assets-derived/viewer/${encodeURIComponent(archiveName)}`,
     width: photo.dimensions?.width ?? null,
     height: photo.dimensions?.height ?? null,
     aspectRatio: photo.aspectRatio ?? null,
@@ -146,5 +156,26 @@ if (!fs.existsSync(curationPath)) {
   }]));
   fs.writeFileSync(curationPath, `${JSON.stringify({ schemaVersion: 1, updatedAt: null, assignments }, null, 2)}\n`);
 }
+
+// Destination counts appear beside links into the archive filtered to that destination, so they are
+// derived from the published catalog rather than stored independently: an exclusion or a hold must
+// never leave a page stating a number that the next page contradicts.
+const publicByDestination = new Map();
+for (const photo of publicCatalog) {
+  if (!photo.destinationId) continue;
+  if (!publicByDestination.has(photo.destinationId)) publicByDestination.set(photo.destinationId, []);
+  publicByDestination.get(photo.destinationId).push(photo.id);
+}
+let countsChanged = false;
+for (const destination of destinationData.destinations) {
+  const photoIds = publicByDestination.get(destination.id) ?? [];
+  const orphaned = (destination.manualOrder ?? []).filter((id) => !photoIds.includes(id));
+  if (orphaned.length) throw new Error(`${destination.id} sequences photographs that are no longer public: ${orphaned.join(', ')}`);
+  if (destination.confirmedPhotoCount !== photoIds.length) countsChanged = true;
+  destination.photoIds = photoIds;
+  destination.photoCount = photoIds.length;
+  destination.confirmedPhotoCount = photoIds.length;
+}
+if (countsChanged) fs.writeFileSync(destinationPath, `${JSON.stringify(destinationData, null, 2)}\n`);
 
 console.log(`Indexed ${catalog.length} photographs; published ${publicCatalog.length} after ${publicExclusions.size} editorial exclusions.`);

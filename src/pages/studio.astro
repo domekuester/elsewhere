@@ -1,14 +1,28 @@
 ---
-import { Image } from 'astro:assets';
+
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import EnquiryAction from '../components/EnquiryAction.astro';
 import { business, site } from '../config/site';
-import cirquePortrait from '../assets/photos/cirque-portrait.jpg';
-import peopleVendor from '../assets/photos/people-vendor.jpg';
-import tokyoStreet from '../assets/photos/tokyo-street.jpg';
-import beachStorm from '../assets/photos/beach-storm.jpg';
+import catalogData from '../../public/data/photo-catalog.json';
+
+// Studio was built entirely from Home's photographs, so a professional who scrolled the homepage
+// and then opened Studio met the same four pictures again — the weakest possible argument from a
+// page whose claim is "this site is the portfolio". These four appear nowhere else on the site.
+const studioFrames = new Map([
+  ['photo-0249', 'A coastal road curves around a green headland above the sea.'],
+  ['photo-0001', 'Two people work behind the counter of a small, warmly lit kitchen.'],
+  ['photo-0339', 'Low evening light crosses a tatami room with dark seating.'],
+  ['photo-0347', 'An empty street corner beneath a pale morning sky.'],
+]);
+const frame = (id) => {
+  const photo = catalogData.photos.find((item) => item.id === id);
+  if (!photo?.public) throw new Error(`Studio references ${id}, which is not a public photograph.`);
+  return { ...photo, alt: studioFrames.get(id) };
+};
+const [studioHero, studioOffer, studioProofA, studioProofB] = [...studioFrames.keys()].map(frame);
+const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
 
 // Three offerings, no more. Every claim on this page is about capability, never about
 // clients, awards, or projects that do not exist.
@@ -59,7 +73,7 @@ const studioSchema = {
   <main id="main" class="studio-page">
     <header class="studio-hero">
       <div class="studio-hero-media">
-        <Image src={cirquePortrait} alt="" widths={[768, 1280, 1920, 2400]} sizes="100vw" loading="eager" fetchpriority="high" />
+        <img src={studioHero.archiveImage} srcset={`${studioHero.archiveImage} ${derivativeWidth(studioHero, 1800)}w, ${studioHero.viewerImage} ${derivativeWidth(studioHero, 3200)}w`} sizes="100vw" width={studioHero.width} height={studioHero.height} alt="" loading="eager" fetchpriority="high" decoding="async" />
       </div>
       <span class="memory-mark" aria-hidden="true"></span>
       <p class="studio-kicker">Elsewhere Studio</p>
@@ -91,7 +105,7 @@ const studioSchema = {
 
     <section class="studio-offer" aria-labelledby="studio-offer-title">
       <figure data-photo-reveal>
-        <Image src={peopleVendor} alt="A food vendor works behind a small counter" widths={[768, 1200, 1800]} sizes="(min-width: 901px) 52vw, 100vw" loading="lazy" />
+        <img src={studioOffer.thumbnail} srcset={`${studioOffer.thumbnail} ${derivativeWidth(studioOffer, 960)}w, ${studioOffer.archiveImage} ${derivativeWidth(studioOffer, 1800)}w`} sizes="(min-width: 901px) 52vw, 100vw" width={studioOffer.width} height={studioOffer.height} alt={studioOffer.alt} loading="lazy" decoding="async" />
       </figure>
       <div>
         <span class="memory-mark" aria-hidden="true"></span>
@@ -115,8 +129,9 @@ const studioSchema = {
         </p>
       </div>
       <div class="studio-proof-grid">
-        <figure data-photo-reveal><Image src={tokyoStreet} alt="Pedestrians moving through a lantern-lined street" widths={[480, 768, 1200]} sizes="(min-width: 901px) 26vw, 46vw" loading="lazy" /></figure>
-        <figure data-photo-reveal><Image src={beachStorm} alt="An empty beach and small yellow boat beneath an approaching storm" widths={[480, 768, 1200]} sizes="(min-width: 901px) 26vw, 46vw" loading="lazy" /></figure>
+        {[studioProofA, studioProofB].map((photo) => (
+          <figure data-photo-reveal><img src={photo.thumbnail} srcset={`${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w`} sizes="(min-width: 901px) 26vw, 46vw" width={photo.width} height={photo.height} alt={photo.alt} loading="lazy" decoding="async" /></figure>
+        ))}
       </div>
     </section>
 

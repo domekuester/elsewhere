@@ -5,6 +5,31 @@ you can supply.
 
 ---
 
+## New in Phase 9.2 — one photographic decision
+
+### 0. Confirm or reverse 63 editorial holds
+**Blocks:** nothing technical. It is the only judgement call in this phase that is genuinely yours.
+
+A frame-by-frame review of the whole public archive withheld 63 photographs. They are **not
+deleted**: masters are untouched and every hold is one deleted line away from being restored.
+
+| Reason | Count | What they are |
+| --- | --- | --- |
+| Posed or social photographs of companions | 43 | Recognisable private people, no releases, holiday photographs rather than observed encounters |
+| One hostel, documented | 16 | Dorm signage, lounge, grounds — a record of a stay |
+| Near-duplicates | 4 | A stronger version of each is still public |
+
+The register, with a reason on every frame, is `editorialHold[]` in
+[data/public-image-exclusions.json](../data/public-image-exclusions.json).
+
+**To restore any of them:** delete its entry from `editorialHold[]`, set that photo's `visibility`
+back to `public` in `data/photo-curation.json`, run `npm run images:derive`, then `npm run build`.
+
+If you disagree with any of these, say so and they come straight back. If you agree, nothing needs
+doing — this is already how the site builds.
+
+---
+
 ## Required before public launch
 
 ### 1. Public enquiry email address
@@ -41,6 +66,14 @@ written until those are decided.
 
 ---
 
+### 4b. Five questions about Essaouira — still open from Phase 9.1
+The Essaouira chapter is carried entirely by photographs because no owner text exists for it.
+A few honest sentences would give it a voice. See
+[PHASE-9.1-ESSAOUIRA-OWNER-STORY-QUESTIONS.md](PHASE-9.1-ESSAOUIRA-OWNER-STORY-QUESTIONS.md).
+The same is now true of La Réunion, which became a chapter in Phase 9.2 with no written voice.
+
+---
+
 ## Recommended before launch
 
 ### 5. Public creator name
@@ -58,10 +91,10 @@ unset ships no tracking at all, which is a legitimate launch position.
 ## Required before licensing revenue
 
 ### 7. Rights review of frames people ask about
-All 485 published photographs are currently `ENQUIRY_ONLY` — copyright yours, third-party rights not
+All 469 published photographs are currently `ENQUIRY_ONLY` — copyright yours, third-party rights not
 yet assessed. Nothing claims commercial clearance, which is correct.
 
-You do not need to review 485 photographs. Review the ones people actually enquire about, and set:
+You do not need to review 469 photographs. Review the ones people actually enquire about, and set:
 - `EDITORIAL_AVAILABLE` — fine for magazines, books, journalism
 - `COMMERCIAL_CLEARED` — only when you hold the releases; validation rejects this while a release
   status is still `UNKNOWN`

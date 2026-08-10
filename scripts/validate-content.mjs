@@ -43,15 +43,23 @@ for (const journey of journeys) for (const id of journey.photoIds) if (!photoIds
 for (const story of stories) for (const id of story.photoIds) if (!photoIds.has(id)) errors.push(`${story.id} references missing photo ${id}`);
 for (const person of people) if (!photoIds.has(person.photoId)) errors.push(`${person.id} references missing photo ${person.photoId}`);
 
+// Three states withhold a photograph from the public catalog, and they are deliberately distinct.
+// `do-not-publish` is the owner's word and only the owner may set or clear it; `private` predates
+// this phase; `editorial-hold` is an agent proposal recorded in data/public-image-exclusions.json
+// under `editorialHold`, awaiting owner confirmation and reversible without touching the other two.
+const WITHHELD_VISIBILITY = ['private', 'do-not-publish', 'editorial-hold'];
+
 const forbiddenPublicKeys = ['privateLocation', 'privateMetadata', 'internalNotes', 'ownerNotes', 'sourcePath', 'latitude', 'longitude', 'gps'];
 for (const photo of publicCatalog) {
   for (const key of forbiddenPublicKeys) if (key in photo) errors.push(`Public photo ${photo.id} exposes ${key}`);
   const assignment = curation.assignments[photo.id];
-  if (assignment && ['private', 'do-not-publish'].includes(assignment.visibility)) errors.push(`Private photo ${photo.id} appears in public catalog`);
+  if (assignment && WITHHELD_VISIBILITY.includes(assignment.visibility)) errors.push(`Withheld photo ${photo.id} (${assignment.visibility}) appears in public catalog`);
   if (excludedIds.has(photo.id)) errors.push(`Editorially excluded photo ${photo.id} appears in public catalog`);
   for (const [role, asset] of Object.entries({ thumbnail: photo.thumbnail, archive: photo.archiveImage, viewer: photo.viewerImage })) {
     if (!asset) { errors.push(`Public photo ${photo.id} has no ${role} derivative`); continue; }
-    const localPath = path.join('public', asset);
+    // Catalog URLs are percent-encoded so that a master filename containing a space cannot break a
+    // srcset candidate. The filesystem wants the decoded name back.
+    const localPath = path.join('public', decodeURIComponent(asset));
     if (!fs.existsSync(localPath)) { errors.push(`Public photo ${photo.id} references missing ${role} derivative ${asset}`); continue; }
     const metadata = await sharp(localPath).metadata();
     const actualMax = Math.max(metadata.width ?? 0, metadata.height ?? 0);
@@ -69,7 +77,22 @@ for (const rejected of exclusions.ownerRejected) {
     for (const role of ['thumbnails', 'archive', 'viewer']) if (fs.existsSync(path.join('public/assets-derived', role, derivativeName))) errors.push(`Owner-rejected ${rejected.photoId} retains public ${role} derivative`);
   }
 }
-const privateIds = new Set(Object.entries(curation.assignments).filter(([, item]) => ['private', 'do-not-publish'].includes(item.visibility)).map(([id]) => id));
+// The editorial-hold register and the curation layer must agree in both directions, and a held
+// frame must retain no publicly fetchable derivative — the same guarantee owner rejections get.
+const heldRegister = exclusions.editorialHold ?? [];
+const heldInCuration = new Set(Object.entries(curation.assignments).filter(([, item]) => item.visibility === 'editorial-hold').map(([id]) => id));
+for (const held of heldRegister) {
+  if (!heldInCuration.has(held.photoId)) errors.push(`Editorial hold ${held.photoId} is registered but not held in curation`);
+  if (exclusions.ownerRejected.some((item) => item.photoId === held.photoId)) errors.push(`Editorial hold ${held.photoId} duplicates an owner rejection; the owner register is authoritative`);
+  const index = inventory.photos.findIndex((photo) => photo.id === held.photoId);
+  if (index >= 0) {
+    const derivativeName = `${String(index + 1).padStart(4, '0')}-${path.parse(inventory.photos[index].filename).name}.jpg`;
+    for (const role of ['thumbnails', 'archive', 'viewer']) if (fs.existsSync(path.join('public/assets-derived', role, derivativeName))) errors.push(`Editorially held ${held.photoId} retains public ${role} derivative`);
+  }
+}
+for (const id of heldInCuration) if (!heldRegister.some((held) => held.photoId === id)) errors.push(`${id} is held in curation with no entry in the editorial hold register`);
+
+const privateIds = new Set(Object.entries(curation.assignments).filter(([, item]) => WITHHELD_VISIBILITY.includes(item.visibility)).map(([id]) => id));
 const expectedPublicCount = inventory.photos.length - new Set([...privateIds, ...excludedIds]).size;
 if (publicCatalog.length !== expectedPublicCount) errors.push(`Public catalog count ${publicCatalog.length} does not match visibility policy ${expectedPublicCount}`);
 for (const family of exclusions.duplicateFamilies) {

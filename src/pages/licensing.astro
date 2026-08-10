@@ -1,12 +1,18 @@
 ---
-import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import EnquiryAction from '../components/EnquiryAction.astro';
 import { business } from '../config/site';
 import catalogData from '../../public/data/photo-catalog.json';
-import tokyoStreet from '../assets/photos/tokyo-street.jpg';
+// Licensing shared its only photograph with Home and Studio. A rights desk that illustrates itself
+// with a picture the visitor has already seen twice argues against its own claim of depth.
+const licensingFrame = (() => {
+  const photo = catalogData.photos.find((item) => item.id === 'photo-0333');
+  if (!photo?.public) throw new Error('Licensing references photo-0333, which is not a public photograph.');
+  return photo;
+})();
+const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
 
 // Availability is never asserted in aggregate. The only honest public statement is that
 // enquiries are answered per photograph, because rights differ frame by frame.
@@ -51,7 +57,7 @@ const licensingSchema = {
 
     <section class="licensing-rights" aria-labelledby="licensing-rights-title">
       <figure data-photo-reveal>
-        <Image src={tokyoStreet} alt="Pedestrians moving through a lantern-lined street" widths={[480, 768, 1200]} sizes="(min-width: 901px) 36vw, 84vw" loading="lazy" />
+        <img src={licensingFrame.thumbnail} srcset={`${licensingFrame.thumbnail} ${derivativeWidth(licensingFrame, 960)}w, ${licensingFrame.archiveImage} ${derivativeWidth(licensingFrame, 1800)}w`} sizes="(min-width: 901px) 36vw, 84vw" width={licensingFrame.width} height={licensingFrame.height} alt="A red lighthouse stands at the end of a breakwater under a pale sky." loading="lazy" decoding="async" />
       </figure>
       <div>
         <h2 id="licensing-rights-title">How rights are handled</h2>

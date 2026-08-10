@@ -12,6 +12,7 @@ if (root) {
   const field = root.querySelector<HTMLElement>('[data-archive-field]')!;
   const loadMore = root.querySelector<HTMLButtonElement>('[data-load-more]')!;
   const visibleCount = root.querySelector<HTMLElement>('[data-visible-count]')!;
+  const totalCount = root.querySelector<HTMLElement>('[data-total-count]')!;
   const progressEnd = root.querySelector<HTMLElement>('[data-progress-end]')!;
   const progressTotal = root.querySelector<HTMLElement>('[data-progress-total]')!;
   const yearSelect = root.querySelector<HTMLSelectElement>('[data-filter-year]')!;
@@ -70,6 +71,9 @@ if (root) {
     const visible = filtered.slice(0, shown);
     field.innerHTML = visible.map(frameMarkup).join('');
     visibleCount.textContent = `${visible.length} in view`;
+    // The masthead count and the progress row must never disagree: a filtered archive that still
+    // claims the full total is telling the visitor something untrue about what they are looking at.
+    totalCount.textContent = String(filtered.length);
     progressEnd.textContent = String(visible.length).padStart(3, '0');
     progressTotal.textContent = String(filtered.length).padStart(3, '0');
     loadMore.hidden = visible.length >= filtered.length;
@@ -159,11 +163,25 @@ if (root) {
     const depth = source.filter((photo) => !photo.featured);
     catalog = Array.from({ length: Math.max(selected.length, depth.length) }, (_, index) => [selected[index], depth[index]]).flat().filter(Boolean) as CatalogPhoto[];
     filtered = activeWorld === 'all' ? catalog : catalog.filter((photo) => photo.visualWorlds.includes(activeWorld));
-    const requestedDestination = new URLSearchParams(location.search).get('destination');
+    // Home's world cards and the destination index both arrive here with an intent in the URL.
+    // Whatever is requested must also be visible in the controls, or the page would filter itself
+    // without ever telling the visitor why.
+    const params = new URLSearchParams(location.search);
+    let requested = false;
+    const requestedWorld = params.get('world');
+    const worldButton = requestedWorld && worldButtons.find((button) => button.dataset.filterWorld === requestedWorld);
+    if (worldButton) {
+      activeWorld = requestedWorld!;
+      worldButtons.forEach((item) => { item.classList.toggle('is-active', item === worldButton); item.setAttribute('aria-pressed', String(item === worldButton)); });
+      requested = true;
+    }
+    const requestedDestination = params.get('destination');
     if (requestedDestination && [...destinationSelect.options].some((option) => option.value === requestedDestination)) {
       destinationSelect.value = requestedDestination;
-      applyFilters();
-    } else render();
+      requested = true;
+    }
+    if (requested) applyFilters();
+    else render();
   });
 
   field.addEventListener('click', (event) => {

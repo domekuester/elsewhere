@@ -7,7 +7,14 @@ import EnquiryAction from '../components/EnquiryAction.astro';
 import { business } from '../config/site';
 import catalogData from '../../public/data/photo-catalog.json';
 import destinationData from '../../data/destinations.json';
-import cirquePortrait from '../assets/photos/cirque-portrait.jpg';
+// About shared its lead photograph with Home's environment section and, until this phase, with the
+// Studio hero as well.
+const aboutFrame = (() => {
+  const photo = catalogData.photos.find((item) => item.id === 'photo-0305');
+  if (!photo?.public) throw new Error('About references photo-0305, which is not a public photograph.');
+  return photo;
+})();
+const aboutDerivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
 import handShell from '../assets/photos/hand-shell.jpg';
 
 // Every number on this page is read from the archive rather than written by hand.
@@ -47,7 +54,7 @@ const span = `${years[0]}—${years.at(-1) === new Date().getFullYear() ? 'ongoi
       </div>
 
       <figure class="prose-figure" data-photo-reveal>
-        <Image src={cirquePortrait} alt="Deep green ridges beneath a gathering field of clouds" widths={[480, 768, 1200]} sizes="(min-width: 901px) 34vw, 84vw" loading="lazy" />
+        <img src={aboutFrame.thumbnail} srcset={`${aboutFrame.thumbnail} ${aboutDerivativeWidth(aboutFrame, 960)}w, ${aboutFrame.archiveImage} ${aboutDerivativeWidth(aboutFrame, 1800)}w`} sizes="(min-width: 901px) 34vw, 84vw" width={aboutFrame.width} height={aboutFrame.height} alt="A stack of balanced stones on a shore of pale boulders." loading="lazy" decoding="async" />
         <figcaption>Some places resist categories</figcaption>
       </figure>
     </section>
