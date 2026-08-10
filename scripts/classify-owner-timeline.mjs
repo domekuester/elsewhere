@@ -10,6 +10,7 @@ const editorialExcludedIds = new Set([
   ...exclusions.ownerRejected.map((item) => item.photoId),
   ...exclusions.duplicateFamilies.flatMap((family) => family.excludeIds)
 ]);
+const ownerRejectedIds = new Set(exclusions.ownerRejected.map((item) => item.photoId));
 const migrateExistingArchiveVisibility = (curation.schemaVersion ?? 1) < 3;
 const catalog = read('public/data/photo-catalog.json');
 const publicByFilename = new Map(catalog.photos.map((photo) => [photo.filename.toLowerCase(), photo]));
@@ -33,11 +34,25 @@ for (const photo of inventory.photos) {
   const result = classify(photo.capture?.date ?? null);
   const assignment = curation.assignments[photo.id] ?? {};
   if (migrateExistingArchiveVisibility && assignment.visibility === 'hold') assignment.visibility = 'public';
-  const hasStrongerLocation = ['GPS', 'APPLE_PHOTOS'].includes(assignment.locationSource);
+  // Explicit owner confirmation outranks timeline inference and must survive every regeneration.
+  const hasStrongerLocation = ['GPS', 'APPLE_PHOTOS', 'OWNER_CONFIRMATION'].includes(assignment.locationSource);
   assignment.captureDate = photo.capture?.date ?? null;
   assignment.originalFilename = photo.filename;
-  assignment.destinationConfidence = result.confidence;
-  assignment.locationConfidence = result.confidence;
+  if (!hasStrongerLocation) {
+    assignment.destinationConfidence = result.confidence;
+    assignment.locationConfidence = result.confidence;
+  }
+  // Owner photo exclusions are authoritative. Automated curation never re-enables a rejected frame.
+  if (ownerRejectedIds.has(photo.id)) {
+    assignment.visibility = 'do-not-publish';
+    assignment.publicationStatus = 'PRIVATE';
+    assignment.ownerDecision = 'OWNER_REJECTED';
+    assignment.ownerDecisionSource = 'OWNER_CONFIRMATION';
+    assignment.featured = false;
+    assignment.storyCandidate = false;
+    assignment.peopleCandidate = false;
+    assignment.printCandidate = false;
+  }
   if (result.status === 'assigned' && !hasStrongerLocation) {
     assignment.destination = result.period.destinationId;
     assignment.destinationId = result.period.destinationId;

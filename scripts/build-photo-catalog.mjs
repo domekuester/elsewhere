@@ -14,6 +14,7 @@ const publicExclusions = new Set([
   ...exclusions.ownerRejected.map((item) => item.photoId),
   ...exclusions.duplicateFamilies.flatMap((family) => family.excludeIds)
 ]);
+const ownerRejectedFilenames = new Set(exclusions.ownerRejected.map((item) => item.filename.toLowerCase()));
 const selectionSource = fs.readFileSync(path.join(root, 'src/data/editorial-selection.ts'), 'utf8');
 const curated = new Map();
 const confirmedAltByFilename = new Map([
@@ -23,6 +24,10 @@ let editorialOrder = 0;
 for (const match of selectionSource.matchAll(/\{ filename: '([^']+)', derivative: '([^']+)', role: '([^']+)', world: '([^']+)'[^}]+monochrome: (true|false), peoplePresent: (true|false)/g)) {
   curated.set(match[1].toLowerCase(), { derivative: match[2], role: match[3], worlds: [match[4]], colorMode: match[5] === 'true' ? 'black-and-white' : 'color', peoplePresent: match[6] === 'true', editorialOrder: ++editorialOrder });
 }
+
+// Owner rejections are authoritative: an editorial selection may never reintroduce one.
+const reselected = [...curated.keys()].filter((filename) => ownerRejectedFilenames.has(filename));
+if (reselected.length) throw new Error(`Owner-rejected photographs present in editorial selection: ${reselected.join(', ')}`);
 
 const publicThumbDir = path.join(root, 'public/assets-derived/thumbnails');
 fs.mkdirSync(publicThumbDir, { recursive: true });

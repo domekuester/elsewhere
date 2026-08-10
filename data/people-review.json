@@ -3,23 +3,6 @@
   "entries": [
     {
       "id": "people-review-01",
-      "photoId": "photo-0016",
-      "filename": "1200794-2.jpg",
-      "captureDate": "2025-04-07T17:34:43.000Z",
-      "destinationId": "phu-quoc",
-      "journeyId": "vietnam-phu-quoc-2025",
-      "classification": null,
-      "identityStatus": "UNKNOWN",
-      "displayName": null,
-      "privacyStatus": "UNKNOWN",
-      "peoplePageCandidate": true,
-      "storyCandidate": false,
-      "ownerNotes": null,
-      "shortMemory": null,
-      "publicationStatus": "NEEDS_OWNER_INPUT"
-    },
-    {
-      "id": "people-review-02",
       "photoId": "photo-0045",
       "filename": "IMG_8992.jpg",
       "captureDate": "2024-10-28T10:45:04.000Z",
@@ -36,7 +19,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-03",
+      "id": "people-review-02",
       "photoId": "photo-0145",
       "filename": "P1210859.jpg",
       "captureDate": "2025-04-30T14:45:10.000Z",
@@ -53,7 +36,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-04",
+      "id": "people-review-03",
       "photoId": "photo-0176",
       "filename": "P1230481.jpg",
       "captureDate": "2025-05-13T11:28:17.000Z",
@@ -70,7 +53,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-05",
+      "id": "people-review-04",
       "photoId": "photo-0183",
       "filename": "P1230676.jpg",
       "captureDate": "2025-05-15T05:58:04.000Z",
@@ -87,7 +70,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-06",
+      "id": "people-review-05",
       "photoId": "photo-0207",
       "filename": "P1230972.jpg",
       "captureDate": "2025-05-20T08:18:14.000Z",
@@ -104,7 +87,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-07",
+      "id": "people-review-06",
       "photoId": "photo-0331",
       "filename": "P1260122.jpg",
       "captureDate": "2025-06-16T08:50:40.000Z",
@@ -121,7 +104,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-08",
+      "id": "people-review-07",
       "photoId": "photo-0381",
       "filename": "P1260635.jpg",
       "captureDate": "2025-07-13T18:03:36.000Z",
@@ -138,7 +121,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-09",
+      "id": "people-review-08",
       "photoId": "photo-0529",
       "filename": "P1310083.jpg",
       "captureDate": "2025-08-28T19:30:20.000Z",
@@ -155,7 +138,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-10",
+      "id": "people-review-09",
       "photoId": "photo-0533",
       "filename": "1200794-3.jpg",
       "captureDate": "2025-04-07T17:34:43.000Z",
@@ -172,7 +155,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-11",
+      "id": "people-review-10",
       "photoId": "photo-0537",
       "filename": "IMG_0442.jpg",
       "captureDate": "2024-12-13T16:06:50.000Z",
@@ -189,7 +172,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-12",
+      "id": "people-review-11",
       "photoId": "photo-0559",
       "filename": "P1240171.jpg",
       "captureDate": "2025-05-22T08:20:57.000Z",
@@ -206,7 +189,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-13",
+      "id": "people-review-12",
       "photoId": "photo-0565",
       "filename": "P1240815.jpg",
       "captureDate": "2025-05-29T06:41:25.000Z",
@@ -223,7 +206,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-14",
+      "id": "people-review-13",
       "photoId": "photo-0574",
       "filename": "P1250928.jpg",
       "captureDate": "2025-06-08T14:17:25.000Z",
@@ -240,7 +223,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-15",
+      "id": "people-review-14",
       "photoId": "photo-0585",
       "filename": "P1260472-2.jpg",
       "captureDate": "2025-06-26T14:01:20.000Z",

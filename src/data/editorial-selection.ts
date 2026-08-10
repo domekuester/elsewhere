@@ -39,4 +39,5 @@ export const editorialSelection: EditorialSelection[] = [
   { filename: 'P1040004.jpg', derivative: 'fern-spiral.jpg', role: 'detail', world: 'jungle', destination: null, monochrome: false, peoplePresent: false, emotionalIntensity: 2, heroPotential: 1, visualRhythmUse: 'pause', surfaces: ['home'] },
   { filename: 'P1280352.jpg', derivative: 'yellow-bird.jpg', role: 'detail', world: 'jungle', destination: null, monochrome: false, peoplePresent: false, emotionalIntensity: 3, heroPotential: 2, visualRhythmUse: 'pause', surfaces: ['home'] },
   { filename: 'P1210859.jpg', derivative: 'boxing-gloves.jpg', role: 'editorial', world: 'people', destination: null, monochrome: false, peoplePresent: true, emotionalIntensity: 4, heroPotential: 3, visualRhythmUse: 'continuity', surfaces: ['home'] },
+  { filename: 'P1270057-2.jpg', derivative: 'golden-portrait.jpg', role: 'editorial', world: 'people', destination: null, monochrome: false, peoplePresent: true, emotionalIntensity: 4, heroPotential: 3, visualRhythmUse: 'intimacy', surfaces: ['people'] },
 ];

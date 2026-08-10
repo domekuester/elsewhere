@@ -6,7 +6,7 @@ const navigation = site.navigation.map((item) => item.href === '/archive/' ? { .
 ---
 
 <header class="site-header" data-header>
-  <a class="wordmark" href="/" aria-label={`${site.name}, home`}>{site.name}</a>
+  <a class="wordmark" href="/" aria-label={`${site.name}, home`} data-home-link>{site.name}</a>
   <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-button>
     <span class="menu-label">Index</span><span class="menu-glyph" aria-hidden="true"></span>
   </button>

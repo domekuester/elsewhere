@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "updatedAt": "2026-08-09T22:08:55.047Z",
+  "updatedAt": "2026-08-10T10:48:20.667Z",
   "assignments": {
     "photo-0001": {
       "destination": "thailand",
@@ -744,9 +744,11 @@
       "visualWorldConfidence": "UNKNOWN",
       "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Excluded from every public surface.",
+      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0025": {
       "destination": "malaysia",
@@ -775,9 +777,11 @@
       "visualWorldConfidence": "UNKNOWN",
       "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Excluded from every public surface.",
+      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0026": {
       "destination": "malaysia",
@@ -806,9 +810,11 @@
       "visualWorldConfidence": "UNKNOWN",
       "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Excluded from every public surface.",
+      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0027": {
       "destination": "malaysia",
@@ -837,9 +843,11 @@
       "visualWorldConfidence": "UNKNOWN",
       "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Excluded from every public surface.",
+      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0028": {
       "destination": "malaysia",
@@ -868,9 +876,11 @@
       "visualWorldConfidence": "UNKNOWN",
       "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Excluded from every public surface.",
+      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0029": {
       "destination": "malaysia",
@@ -899,9 +909,11 @@
       "visualWorldConfidence": "UNKNOWN",
       "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Excluded from every public surface.",
+      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0030": {
       "destination": "malaysia",
@@ -930,9 +942,11 @@
       "visualWorldConfidence": "UNKNOWN",
       "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Excluded from every public surface.",
+      "internalNotes": "Owner-rejected FAST & YUMMY SHAWARMA business photograph. Do not publish or select again.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0031": {
       "destination": null,
@@ -1249,10 +1263,10 @@
       "altTextStatus": "NEEDS_OWNER_INPUT"
     },
     "photo-0041": {
-      "destination": "malaysia",
+      "destination": "thailand",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -1263,27 +1277,29 @@
       "mobileFocalY": 50,
       "captureDate": "2024-10-09T08:17:06.000Z",
       "originalFilename": "IMG_8166.jpg",
-      "destinationConfidence": "CONFIRMED_OWNER_RANGE",
-      "locationConfidence": "CONFIRMED_OWNER_RANGE",
-      "destinationId": "malaysia",
-      "country": "Malaysia",
-      "countryCode": "MY",
+      "destinationConfidence": "OWNER_CONFIRMED",
+      "locationConfidence": "OWNER_CONFIRMED",
+      "destinationId": "thailand",
+      "country": "Thailand",
+      "countryCode": "TH",
       "region": null,
-      "journeyId": "malaysia-2024",
-      "locationSource": "OWNER_TRAVEL_TIMELINE",
+      "journeyId": "thailand-2024",
+      "locationSource": "OWNER_CONFIRMATION",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Temple architecture frame withdrawn from publication. Location corrected to Thailand by explicit owner confirmation (phase 8.45); supersedes the malaysia-2024 timeline inference at the 2024-10-09/10 transition boundary.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0042": {
-      "destination": "malaysia",
+      "destination": "thailand",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -1294,21 +1310,23 @@
       "mobileFocalY": 50,
       "captureDate": "2024-10-09T08:14:06.000Z",
       "originalFilename": "IMG_8172.jpg",
-      "destinationConfidence": "CONFIRMED_OWNER_RANGE",
-      "locationConfidence": "CONFIRMED_OWNER_RANGE",
-      "destinationId": "malaysia",
-      "country": "Malaysia",
-      "countryCode": "MY",
+      "destinationConfidence": "OWNER_CONFIRMED",
+      "locationConfidence": "OWNER_CONFIRMED",
+      "destinationId": "thailand",
+      "country": "Thailand",
+      "countryCode": "TH",
       "region": null,
-      "journeyId": "malaysia-2024",
-      "locationSource": "OWNER_TRAVEL_TIMELINE",
+      "journeyId": "thailand-2024",
+      "locationSource": "OWNER_CONFIRMATION",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Temple architecture frame withdrawn from publication. Location corrected to Thailand by explicit owner confirmation (phase 8.45); supersedes the malaysia-2024 timeline inference at the 2024-10-09/10 transition boundary.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0043": {
       "destination": "thailand",
@@ -1781,7 +1799,7 @@
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -1802,11 +1820,13 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Urban architectural frame withdrawn from publication.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0059": {
       "destination": "malaysia",
@@ -2998,7 +3018,7 @@
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -3019,17 +3039,19 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Posed group photograph.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0098": {
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -3050,17 +3072,19 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Posed group photograph.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0099": {
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -3081,11 +3105,13 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Posed group photograph.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0100": {
       "destination": "malaysia",
@@ -3122,7 +3148,7 @@
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -3143,11 +3169,13 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Posed group photograph.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0102": {
       "destination": "malaysia",
@@ -3269,9 +3297,11 @@
       "visualWorldConfidence": "UNKNOWN",
       "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": "Owner rejected for all public and launch-ready editorial surfaces in Phase 5.5.",
+      "internalNotes": "Explicit owner rejection. Do not publish or select again.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0106": {
       "destination": "malaysia",
@@ -3308,7 +3338,7 @@
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -3329,11 +3359,13 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Beach frame withdrawn from publication.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0108": {
       "destination": "malaysia",
@@ -4362,7 +4394,7 @@
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -4383,17 +4415,19 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Beach sparring sequence.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0142": {
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -4414,17 +4448,19 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Beach sparring sequence.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0143": {
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -4445,17 +4481,19 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Beach sparring sequence.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0144": {
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -4476,11 +4514,13 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Beach sparring sequence.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0145": {
       "destination": "malaysia",
@@ -4610,7 +4650,7 @@
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -4631,11 +4671,13 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Beach frame withdrawn from publication.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0150": {
       "destination": "malaysia",
@@ -4703,7 +4745,7 @@
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -4724,11 +4766,13 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Beach frame withdrawn from publication.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0153": {
       "destination": "malaysia",
@@ -4796,7 +4840,7 @@
       "destination": "malaysia",
       "visualWorlds": [],
       "role": "archive",
-      "visibility": "public",
+      "visibility": "do-not-publish",
       "featured": false,
       "storyCandidate": false,
       "peopleCandidate": false,
@@ -4817,11 +4861,13 @@
       "locationSource": "OWNER_TRAVEL_TIMELINE",
       "locationSourceAttribution": "OWNER",
       "visualWorldConfidence": "UNKNOWN",
-      "publicationStatus": "UNREVIEWED",
+      "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": null,
+      "internalNotes": "Owner editorial rejection. Beach frame withdrawn from publication.",
       "altTextCandidate": "An unclassified photograph from the Elsewhere archive.",
-      "altTextStatus": "NEEDS_OWNER_INPUT"
+      "altTextStatus": "NEEDS_OWNER_INPUT",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0156": {
       "destination": "malaysia",
@@ -10899,9 +10945,11 @@
       "visualWorldConfidence": "CURATORIAL_ASSIGNMENT",
       "publicationStatus": "PRIVATE",
       "publicCaption": null,
-      "internalNotes": "Explicit owner rejection in Phase 7. Excluded from every public and editorial surface.",
+      "internalNotes": "Explicit Phase 7 owner rejection. Do not publish or select again.",
       "altTextCandidate": null,
-      "altTextStatus": "NOT_PUBLIC"
+      "altTextStatus": "NOT_PUBLIC",
+      "ownerDecision": "OWNER_REJECTED",
+      "ownerDecisionSource": "OWNER_CONFIRMATION"
     },
     "photo-0352": {
       "destination": "japan",

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
-    "build": "npm run validate:content && ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/finalize-production-build.mjs",
+    "build": "npm run validate:content && npm run validate:exclusions && ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/finalize-production-build.mjs && node scripts/verify-owner-photo-exclusions.mjs --built",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
     "content:classify": "node scripts/classify-owner-timeline.mjs && node scripts/build-photo-catalog.mjs",
     "audit:images": "python3 scripts/audit-image-duplicates.py",
@@ -17,6 +17,7 @@
     "images:derive": "node scripts/generate-archive-derivatives.mjs && node scripts/build-photo-catalog.mjs",
     "images:repair-inventory": "node scripts/repair-inventory-dimensions.mjs && node scripts/build-photo-catalog.mjs",
     "validate:content": "node scripts/validate-content.mjs",
+    "validate:exclusions": "node scripts/verify-owner-photo-exclusions.mjs",
     "validate:launch": "node scripts/validate-launch.mjs",
     "astro": "astro"
   },

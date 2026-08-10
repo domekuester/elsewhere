@@ -121,21 +121,6 @@
       "priority": "MEDIUM_IMPACT",
       "type": "PERSON_UNKNOWN",
       "subjectIds": [
-        "photo-0016"
-      ],
-      "title": "People review: 1200794-2.jpg",
-      "question": "Is this a known person, travel companion, meaningful encounter, anonymous subject, crowd/street photograph, or incidental human presence? What privacy state should apply?",
-      "context": {
-        "captureDate": "2025-04-07T17:34:43.000Z",
-        "destinationId": "phu-quoc"
-      },
-      "status": "OPEN"
-    },
-    {
-      "id": "owner-question-people-review-02",
-      "priority": "MEDIUM_IMPACT",
-      "type": "PERSON_UNKNOWN",
-      "subjectIds": [
         "photo-0045"
       ],
       "title": "People review: IMG_8992.jpg",
@@ -147,7 +132,7 @@
       "status": "OPEN"
     },
     {
-      "id": "owner-question-people-review-07",
+      "id": "owner-question-people-review-06",
       "priority": "MEDIUM_IMPACT",
       "type": "PERSON_UNKNOWN",
       "subjectIds": [
@@ -162,7 +147,7 @@
       "status": "OPEN"
     },
     {
-      "id": "owner-question-people-review-08",
+      "id": "owner-question-people-review-07",
       "priority": "MEDIUM_IMPACT",
       "type": "PERSON_UNKNOWN",
       "subjectIds": [
@@ -254,42 +239,6 @@
       "priority": "MEDIUM_IMPACT",
       "type": "STORY_CONTEXT_NEEDED",
       "subjectIds": [
-        "photo-0136",
-        "photo-0137",
-        "photo-0138",
-        "photo-0139",
-        "photo-0140",
-        "photo-0141",
-        "photo-0142",
-        "photo-0143",
-        "photo-0144",
-        "photo-0145",
-        "photo-0146",
-        "photo-0147",
-        "photo-0148",
-        "photo-0149",
-        "photo-0150",
-        "photo-0151",
-        "photo-0152",
-        "photo-0153",
-        "photo-0154",
-        "photo-0155",
-        "photo-0156"
-      ],
-      "title": "21-frame sequence",
-      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
-      "context": {
-        "candidateId": "story-candidate-03",
-        "captureDateStart": "2025-04-30T14:42:17.000Z",
-        "captureDateEnd": "2025-04-30T15:04:06.000Z"
-      },
-      "status": "OPEN"
-    },
-    {
-      "id": "owner-question-story-candidate-04",
-      "priority": "MEDIUM_IMPACT",
-      "type": "STORY_CONTEXT_NEEDED",
-      "subjectIds": [
         "photo-0300",
         "photo-0301",
         "photo-0302",
@@ -311,14 +260,14 @@
       "title": "17-frame sequence",
       "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
       "context": {
-        "candidateId": "story-candidate-04",
+        "candidateId": "story-candidate-03",
         "captureDateStart": "2025-06-08T09:28:17.000Z",
         "captureDateEnd": "2025-06-08T10:30:21.000Z"
       },
       "status": "OPEN"
     },
     {
-      "id": "owner-question-story-candidate-05",
+      "id": "owner-question-story-candidate-04",
       "priority": "MEDIUM_IMPACT",
       "type": "STORY_CONTEXT_NEEDED",
       "subjectIds": [
@@ -341,9 +290,38 @@
       "title": "15-frame sequence",
       "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
       "context": {
-        "candidateId": "story-candidate-05",
+        "candidateId": "story-candidate-04",
         "captureDateStart": "2025-05-22T08:20:57.000Z",
         "captureDateEnd": "2025-05-22T10:11:33.000Z"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-story-candidate-05",
+      "priority": "MEDIUM_IMPACT",
+      "type": "STORY_CONTEXT_NEEDED",
+      "subjectIds": [
+        "photo-0136",
+        "photo-0137",
+        "photo-0138",
+        "photo-0139",
+        "photo-0140",
+        "photo-0145",
+        "photo-0146",
+        "photo-0147",
+        "photo-0148",
+        "photo-0150",
+        "photo-0151",
+        "photo-0153",
+        "photo-0154",
+        "photo-0156"
+      ],
+      "title": "14-frame sequence",
+      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "context": {
+        "candidateId": "story-candidate-05",
+        "captureDateStart": "2025-04-30T14:42:17.000Z",
+        "captureDateEnd": "2025-04-30T15:04:06.000Z"
       },
       "status": "OPEN"
     }

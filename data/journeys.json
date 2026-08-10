@@ -20,11 +20,8 @@
         "photo-0038",
         "photo-0039",
         "photo-0040",
-        "photo-0041",
-        "photo-0042",
         "photo-0056",
         "photo-0057",
-        "photo-0058",
         "photo-0059",
         "photo-0060",
         "photo-0061",
@@ -43,8 +40,8 @@
         "photo-0036",
         "photo-0061"
       ],
-      "createdAt": "2026-08-09T22:08:55.051Z",
-      "updatedAt": "2026-08-09T22:08:55.051Z"
+      "createdAt": "2026-08-10T10:48:20.675Z",
+      "updatedAt": "2026-08-10T10:48:20.675Z"
     },
     {
       "id": "thailand-2024",
@@ -83,8 +80,8 @@
       "ownerNotes": null,
       "publicationStatus": "needs-owner-input",
       "manualPhotoOrder": [],
-      "createdAt": "2026-08-09T22:08:55.051Z",
-      "updatedAt": "2026-08-09T22:08:55.051Z"
+      "createdAt": "2026-08-10T10:48:20.675Z",
+      "updatedAt": "2026-08-10T10:48:20.675Z"
     },
     {
       "id": "laos-2024-2025",
@@ -113,8 +110,8 @@
       "manualPhotoOrder": [
         "photo-0537"
       ],
-      "createdAt": "2026-08-09T22:08:55.051Z",
-      "updatedAt": "2026-08-09T22:08:55.051Z"
+      "createdAt": "2026-08-10T10:48:20.675Z",
+      "updatedAt": "2026-08-10T10:48:20.675Z"
     },
     {
       "id": "thailand-2025-part-1",
@@ -154,8 +151,8 @@
       "manualPhotoOrder": [
         "photo-0002"
       ],
-      "createdAt": "2026-08-09T22:08:55.051Z",
-      "updatedAt": "2026-08-09T22:08:55.051Z"
+      "createdAt": "2026-08-10T10:48:20.675Z",
+      "updatedAt": "2026-08-10T10:48:20.675Z"
     },
     {
       "id": "vietnam-phu-quoc-2025",
@@ -202,8 +199,8 @@
       "manualPhotoOrder": [
         "photo-0533"
       ],
-      "createdAt": "2026-08-09T22:08:55.051Z",
-      "updatedAt": "2026-08-09T22:08:55.051Z"
+      "createdAt": "2026-08-10T10:48:20.675Z",
+      "updatedAt": "2026-08-10T10:48:20.675Z"
     },
     {
       "id": "malaysia-2025-part-1",
@@ -241,16 +238,11 @@
         "photo-0094",
         "photo-0095",
         "photo-0096",
-        "photo-0097",
-        "photo-0098",
-        "photo-0099",
         "photo-0100",
-        "photo-0101",
         "photo-0102",
         "photo-0103",
         "photo-0104",
         "photo-0106",
-        "photo-0107",
         "photo-0108",
         "photo-0110",
         "photo-0112",
@@ -281,21 +273,14 @@
         "photo-0138",
         "photo-0139",
         "photo-0140",
-        "photo-0141",
-        "photo-0142",
-        "photo-0143",
-        "photo-0144",
         "photo-0145",
         "photo-0146",
         "photo-0147",
         "photo-0148",
-        "photo-0149",
         "photo-0150",
         "photo-0151",
-        "photo-0152",
         "photo-0153",
         "photo-0154",
-        "photo-0155",
         "photo-0156",
         "photo-0157",
         "photo-0158",
@@ -316,8 +301,8 @@
       "manualPhotoOrder": [
         "photo-0145"
       ],
-      "createdAt": "2026-08-09T22:08:55.051Z",
-      "updatedAt": "2026-08-09T22:08:55.051Z"
+      "createdAt": "2026-08-10T10:48:20.675Z",
+      "updatedAt": "2026-08-10T10:48:20.675Z"
     },
     {
       "id": "japan-2025",
@@ -569,8 +554,8 @@
         "photo-0581",
         "photo-0585"
       ],
-      "createdAt": "2026-08-09T22:08:55.053Z",
-      "updatedAt": "2026-08-09T22:08:55.053Z"
+      "createdAt": "2026-08-10T10:48:20.676Z",
+      "updatedAt": "2026-08-10T10:48:20.676Z"
     },
     {
       "id": "thailand-2025-part-2",
@@ -597,8 +582,8 @@
       "ownerNotes": null,
       "publicationStatus": "needs-owner-input",
       "manualPhotoOrder": [],
-      "createdAt": "2026-08-09T22:08:55.053Z",
-      "updatedAt": "2026-08-09T22:08:55.053Z"
+      "createdAt": "2026-08-10T10:48:20.676Z",
+      "updatedAt": "2026-08-10T10:48:20.676Z"
     },
     {
       "id": "malaysia-2025-part-2",
@@ -621,8 +606,8 @@
       "ownerNotes": null,
       "publicationStatus": "needs-owner-input",
       "manualPhotoOrder": [],
-      "createdAt": "2026-08-09T22:08:55.053Z",
-      "updatedAt": "2026-08-09T22:08:55.053Z"
+      "createdAt": "2026-08-10T10:48:20.676Z",
+      "updatedAt": "2026-08-10T10:48:20.676Z"
     },
     {
       "id": "la-reunion-2025",
@@ -765,8 +750,8 @@
         "photo-0529",
         "photo-0487"
       ],
-      "createdAt": "2026-08-09T22:08:55.054Z",
-      "updatedAt": "2026-08-09T22:08:55.054Z"
+      "createdAt": "2026-08-10T10:48:20.678Z",
+      "updatedAt": "2026-08-10T10:48:20.678Z"
     }
   ],
   "transitionPhotos": [
