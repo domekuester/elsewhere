@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-09T21:26:42.305Z",
+  "generatedAt": "2026-08-10T14:48:44.129Z",
   "sourcePolicy": "Master source files. Never modify, move, rename, or serve directly in production.",
   "sourceRoot": "assets-source/photos",
-  "photoCount": 588,
+  "photoCount": 636,
   "photos": [
     {
       "id": "photo-0001",
@@ -28277,6 +28277,2118 @@
       "technical": {
         "metadataReadError": null,
         "thumbnailPath": ".photo-inventory-cache/thumbs/0588-P1260635-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0589",
+      "filename": "P1330174.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330174.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11893517,
+        "megabytes": 11.34,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2026-01-08T17:20:23.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 107.9,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.002
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0589-P1330174.jpg"
+      }
+    },
+    {
+      "id": "photo-0590",
+      "filename": "P1330186.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330186.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 10218832,
+        "megabytes": 9.75,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2761,
+        "height": 3681
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.7501,
+      "capture": {
+        "date": "2026-01-08T17:23:19.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 7.4,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.002
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0590-P1330186.jpg"
+      }
+    },
+    {
+      "id": "photo-0591",
+      "filename": "P1330200.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330200.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11031889,
+        "megabytes": 10.52,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2026-01-08T17:29:34.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.002
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0591-P1330200.jpg"
+      }
+    },
+    {
+      "id": "photo-0592",
+      "filename": "P1330250.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330250.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11738457,
+        "megabytes": 11.19,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-08T17:58:39.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0592-P1330250.jpg"
+      }
+    },
+    {
+      "id": "photo-0593",
+      "filename": "P1330338.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330338.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 9062853,
+        "megabytes": 8.64,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-08T19:58:03.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 99.5,
+        "aperture": 5.6,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0593-P1330338.jpg"
+      }
+    },
+    {
+      "id": "photo-0594",
+      "filename": "P1330356.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330356.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 9237147,
+        "megabytes": 8.81,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-08T20:00:34.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 30.6,
+        "aperture": 5.6,
+        "iso": 100,
+        "exposureSeconds": 0.0025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0594-P1330356.jpg"
+      }
+    },
+    {
+      "id": "photo-0595",
+      "filename": "P1330393.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330393.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 12460309,
+        "megabytes": 11.88,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2026-01-08T20:15:43.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 8,
+        "iso": 100,
+        "exposureSeconds": 0.00125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0595-P1330393.jpg"
+      }
+    },
+    {
+      "id": "photo-0596",
+      "filename": "P1330475.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330475.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 9026373,
+        "megabytes": 8.61,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2571,
+        "height": 3849
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-09T18:06:39.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 46.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0596-P1330475.jpg"
+      }
+    },
+    {
+      "id": "photo-0597",
+      "filename": "P1330584.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330584.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 10453034,
+        "megabytes": 9.97,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-10T17:55:40.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 3.5,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0597-P1330584.jpg"
+      }
+    },
+    {
+      "id": "photo-0598",
+      "filename": "P1330650.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330650.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 8440614,
+        "megabytes": 8.05,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2362,
+        "height": 3543
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6667,
+      "capture": {
+        "date": "2026-01-10T18:20:21.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 9.9,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0598-P1330650.jpg"
+      }
+    },
+    {
+      "id": "photo-0599",
+      "filename": "P1330652.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330652.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11956813,
+        "megabytes": 11.4,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-10T18:24:53.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0599-P1330652.jpg"
+      }
+    },
+    {
+      "id": "photo-0600",
+      "filename": "P1330742.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330742.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 4778952,
+        "megabytes": 4.56,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2670,
+        "height": 3997
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-10T21:31:33.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 5.6,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0600-P1330742.jpg"
+      }
+    },
+    {
+      "id": "photo-0601",
+      "filename": "P1330780.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330780.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 12042387,
+        "megabytes": 11.48,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-10T21:37:23.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0601-P1330780.jpg"
+      }
+    },
+    {
+      "id": "photo-0602",
+      "filename": "P1330794.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330794.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 9964744,
+        "megabytes": 9.5,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3829,
+        "height": 2558
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.4969,
+      "capture": {
+        "date": "2026-01-10T21:39:19.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 103,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0602-P1330794.jpg"
+      }
+    },
+    {
+      "id": "photo-0603",
+      "filename": "P1330795.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330795.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 9566701,
+        "megabytes": 9.12,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3779,
+        "height": 2524
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.4972,
+      "capture": {
+        "date": "2026-01-10T21:39:22.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 103,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0603-P1330795.jpg"
+      }
+    },
+    {
+      "id": "photo-0604",
+      "filename": "P1330816.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330816.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 7666540,
+        "megabytes": 7.31,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2433,
+        "height": 3650
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6666,
+      "capture": {
+        "date": "2026-01-10T21:40:29.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0604-P1330816.jpg"
+      }
+    },
+    {
+      "id": "photo-0605",
+      "filename": "P1330900.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330900.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11563264,
+        "megabytes": 11.03,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3995,
+        "height": 2669
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.4968,
+      "capture": {
+        "date": "2026-01-10T21:49:25.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0605-P1330900.jpg"
+      }
+    },
+    {
+      "id": "photo-0606",
+      "filename": "P1330928.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330928.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 7415930,
+        "megabytes": 7.07,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2589,
+        "height": 3876
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-10T22:07:25.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 12.5,
+        "aperture": 8,
+        "iso": 100,
+        "exposureSeconds": 0.00025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0606-P1330928.jpg"
+      }
+    },
+    {
+      "id": "photo-0607",
+      "filename": "P1330959.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330959.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 9672201,
+        "megabytes": 9.22,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3992,
+        "height": 2667
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.4968,
+      "capture": {
+        "date": "2026-01-10T22:37:09.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 27,
+        "aperture": 7.1,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0607-P1330959.jpg"
+      }
+    },
+    {
+      "id": "photo-0608",
+      "filename": "P1330968.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330968.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 10493365,
+        "megabytes": 10.01,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-10T22:51:29.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 20.1,
+        "aperture": 8,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0608-P1330968.jpg"
+      }
+    },
+    {
+      "id": "photo-0609",
+      "filename": "P1330989.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1330989.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 9738319,
+        "megabytes": 9.29,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3883,
+        "height": 2594
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.4969,
+      "capture": {
+        "date": "2026-01-10T23:21:50.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 40.4,
+        "aperture": 3.2,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0609-P1330989.jpg"
+      }
+    },
+    {
+      "id": "photo-0610",
+      "filename": "P1340012.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340012.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11188222,
+        "megabytes": 10.67,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-10T23:42:19.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 21.8,
+        "aperture": 3.2,
+        "iso": 100,
+        "exposureSeconds": 0.0015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0610-P1340012.jpg"
+      }
+    },
+    {
+      "id": "photo-0611",
+      "filename": "P1340151.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340151.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 6219075,
+        "megabytes": 5.93,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2249,
+        "height": 3373
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6668,
+      "capture": {
+        "date": "2026-01-11T18:03:19.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 5.6,
+        "iso": 100,
+        "exposureSeconds": 0.005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0611-P1340151.jpg"
+      }
+    },
+    {
+      "id": "photo-0612",
+      "filename": "P1340187.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340187.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 10014971,
+        "megabytes": 9.55,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2623,
+        "height": 3927
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6679,
+      "capture": {
+        "date": "2026-01-11T18:32:41.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 9.8,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.004
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0612-P1340187.jpg"
+      }
+    },
+    {
+      "id": "photo-0613",
+      "filename": "P1340347.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340347.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 8453670,
+        "megabytes": 8.06,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-11T19:08:38.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 27,
+        "aperture": 5,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0613-P1340347.jpg"
+      }
+    },
+    {
+      "id": "photo-0614",
+      "filename": "P1340453.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340453.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 9377991,
+        "megabytes": 8.94,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-11T19:27:54.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 37.9,
+        "aperture": 6.3,
+        "iso": 100,
+        "exposureSeconds": 0.00125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0614-P1340453.jpg"
+      }
+    },
+    {
+      "id": "photo-0615",
+      "filename": "P1340602.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340602.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 7874875,
+        "megabytes": 7.51,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-11T21:02:58.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 2.8,
+        "iso": 800,
+        "exposureSeconds": 0.016666666666666666
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0615-P1340602.jpg"
+      }
+    },
+    {
+      "id": "photo-0616",
+      "filename": "P1340622.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340622.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 7974466,
+        "megabytes": 7.61,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2660,
+        "height": 3982
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-11T21:23:03.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 85.8,
+        "aperture": 6.3,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0616-P1340622.jpg"
+      }
+    },
+    {
+      "id": "photo-0617",
+      "filename": "P1340662.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340662.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 9770277,
+        "megabytes": 9.32,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-11T21:41:39.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 44,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.00125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0617-P1340662.jpg"
+      }
+    },
+    {
+      "id": "photo-0618",
+      "filename": "P1340697.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340697.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 9434448,
+        "megabytes": 9,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2651,
+        "height": 3969
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6679,
+      "capture": {
+        "date": "2026-01-11T21:57:40.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0618-P1340697.jpg"
+      }
+    },
+    {
+      "id": "photo-0619",
+      "filename": "P1340727.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340727.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 10009413,
+        "megabytes": 9.55,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3894,
+        "height": 2601
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.4971,
+      "capture": {
+        "date": "2026-01-11T22:03:42.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 7.4,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.002
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0619-P1340727.jpg"
+      }
+    },
+    {
+      "id": "photo-0620",
+      "filename": "P1340820.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340820.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11944851,
+        "megabytes": 11.39,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-11T23:58:50.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 105.6,
+        "aperture": 8,
+        "iso": 100,
+        "exposureSeconds": 0.0025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0620-P1340820.jpg"
+      }
+    },
+    {
+      "id": "photo-0621",
+      "filename": "P1340866.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340866.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 7114290,
+        "megabytes": 6.78,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-12T00:02:12.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 2.8,
+        "iso": 400,
+        "exposureSeconds": 0.0015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0621-P1340866.jpg"
+      }
+    },
+    {
+      "id": "photo-0622",
+      "filename": "P1340981.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340981.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 3823280,
+        "megabytes": 3.65,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-12T13:54:03.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 5.1,
+        "aperture": 3.2,
+        "iso": 100,
+        "exposureSeconds": 0.0015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0622-P1340981.jpg"
+      }
+    },
+    {
+      "id": "photo-0623",
+      "filename": "P1340992.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1340992.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11870121,
+        "megabytes": 11.32,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-12T13:54:30.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 24.4,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0623-P1340992.jpg"
+      }
+    },
+    {
+      "id": "photo-0624",
+      "filename": "P1350041.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350041.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 4902418,
+        "megabytes": 4.68,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-12T14:00:47.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 3.5,
+        "iso": 100,
+        "exposureSeconds": 0.0025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0624-P1350041.jpg"
+      }
+    },
+    {
+      "id": "photo-0625",
+      "filename": "P1350086.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350086.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 10249053,
+        "megabytes": 9.77,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-12T23:54:36.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 10.5,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0625-P1350086.jpg"
+      }
+    },
+    {
+      "id": "photo-0626",
+      "filename": "P1350104.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350104.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 9775044,
+        "megabytes": 9.32,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-12T23:58:01.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 46.5,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0626-P1350104.jpg"
+      }
+    },
+    {
+      "id": "photo-0627",
+      "filename": "P1350144.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350144.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 4242383,
+        "megabytes": 4.05,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3978,
+        "height": 2657
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.4972,
+      "capture": {
+        "date": "2026-01-13T00:09:38.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 18.7,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.01
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0627-P1350144.jpg"
+      }
+    },
+    {
+      "id": "photo-0628",
+      "filename": "P1350244.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350244.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11617775,
+        "megabytes": 11.08,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-13T17:11:31.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 5.6,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0628-P1350244.jpg"
+      }
+    },
+    {
+      "id": "photo-0629",
+      "filename": "P1350292.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350292.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11522331,
+        "megabytes": 10.99,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-13T17:42:51.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 42.5,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.003125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0629-P1350292.jpg"
+      }
+    },
+    {
+      "id": "photo-0630",
+      "filename": "P1350375.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350375.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11186629,
+        "megabytes": 10.67,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-14T16:54:14.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0630-P1350375.jpg"
+      }
+    },
+    {
+      "id": "photo-0631",
+      "filename": "P1350409.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350409.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 12593445,
+        "megabytes": 12.01,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-14T17:00:02.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 33,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0631-P1350409.jpg"
+      }
+    },
+    {
+      "id": "photo-0632",
+      "filename": "P1350414.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350414.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 11193246,
+        "megabytes": 10.67,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-14T17:01:00.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 7.1,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0632-P1350414.jpg"
+      }
+    },
+    {
+      "id": "photo-0633",
+      "filename": "P1350420.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350420.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 10646814,
+        "megabytes": 10.15,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-14T17:04:02.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0633-P1350420.jpg"
+      }
+    },
+    {
+      "id": "photo-0634",
+      "filename": "P1350507.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350507.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 6709337,
+        "megabytes": 6.4,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-14T17:47:06.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 12.5,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0634-P1350507.jpg"
+      }
+    },
+    {
+      "id": "photo-0635",
+      "filename": "P1350644.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350644.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 10352217,
+        "megabytes": 9.87,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2026-01-14T19:13:35.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.003125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0635-P1350644.jpg"
+      }
+    },
+    {
+      "id": "photo-0636",
+      "filename": "P1350669.jpg",
+      "sourcePath": "assets-source/photos/Marocco 2/P1350669.jpg",
+      "sourceSet": "Marocco 2",
+      "file": {
+        "bytes": 7356205,
+        "megabytes": 7.02,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2026-01-14T19:31:55.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 19.2,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0636-P1350669.jpg"
       }
     }
   ]

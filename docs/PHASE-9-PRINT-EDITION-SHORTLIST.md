@@ -34,6 +34,21 @@ Twelve frames. Enough for a coherent first edition, small enough to actually pro
 
 Balance: 6 colour / 6 monochrome, 6 landscape / 6 portrait, four destinations.
 
+## Added in Phase 9.1 — Essaouira
+
+Four frames from the recovered Essaouira archive. All four contain **no identifiable people**, so
+none carries a release question — unusually clean for print.
+
+| # | File | Format | Pixels | Why |
+| --- | --- | --- | --- | --- |
+| 628 | P1350244.jpg | Landscape | 4000×2672 | A courtyard light well open to cloud, one bird crossing. The most unusual photograph in the archive and the one most likely to stop someone in a room. |
+| 609 | P1330989.jpg | Landscape | 3883×2594 | Gulls on an ochre parapet with one hard shadow thrown on the wall. Graphic, warm, reads from across a room. |
+| 631 | P1350409.jpg | Portrait | 2672×4000 | A cat on a white wall, a bird overhead, deep blue. Minimal and witty — the kind of frame people live with. |
+| 610 | P1340012.jpg | Landscape | 4000×2672 | Razor wire along an orange wall. A hard edge for a set that could otherwise turn decorative. |
+
+Adding these would make Edition 01 sixteen frames, which is probably two too many. If you want to
+hold at twelve, the weakest of the original list against these are 036 (lowest resolution) and 487.
+
 ## Hold for a later edition
 
 Strong photographs whose main subject is an identifiable person: **145**, **176**, **183**, **381**,

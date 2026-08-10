@@ -93,6 +93,13 @@ curation.updatedAt = new Date().toISOString();
 curation.metadataSources = ['EXISTING_MANIFEST', 'OWNER_TRAVEL_TIMELINE', 'CURATION_STUDIO'];
 write('data/photo-curation.json', curation);
 
+// Geography states that carry real owner authority. A photograph reaches a destination through
+// a confirmed timeline range or through explicit owner confirmation, never through inference.
+const trustedGeography = new Set(['CONFIRMED_OWNER_RANGE', 'OWNER_CONFIRMED']);
+// Publishing a destination chapter is an editorial decision made by a person. Destinations are
+// listed here deliberately; a chapter never publishes itself by crossing a photo count.
+const publishedDestinations = new Set(['japan', 'essaouira']);
+
 const destinationDefinitions = [
   { id: 'malaysia', slug: 'malaysia', name: 'Malaysia', displayName: 'Malaysia', country: 'Malaysia', countryCode: 'MY', region: null, parentDestination: null },
   { id: 'thailand', slug: 'thailand', name: 'Thailand', displayName: 'Thailand', country: 'Thailand', countryCode: 'TH', region: null, parentDestination: null },
@@ -100,17 +107,28 @@ const destinationDefinitions = [
   { id: 'vietnam', slug: 'vietnam', name: 'Vietnam', displayName: 'Vietnam', country: 'Vietnam', countryCode: 'VN', region: null, parentDestination: null },
   { id: 'phu-quoc', slug: 'phu-quoc', name: 'Phu Quoc', displayName: 'Phu Quoc\nVietnam', country: 'Vietnam', countryCode: 'VN', region: 'Phu Quoc', parentDestination: 'vietnam' },
   { id: 'japan', slug: 'japan', name: 'Japan', displayName: 'Japan', country: 'Japan', countryCode: 'JP', region: null, parentDestination: null },
+  { id: 'morocco', slug: 'morocco', name: 'Morocco', displayName: 'Morocco', country: 'Morocco', countryCode: 'MA', region: null, parentDestination: null },
+  { id: 'essaouira', slug: 'essaouira', name: 'Essaouira', displayName: 'Essaouira\nMorocco', country: 'Morocco', countryCode: 'MA', region: 'Essaouira', parentDestination: 'morocco' },
   { id: 'france', slug: 'france', name: 'France', displayName: 'France', country: 'France', countryCode: 'FR', region: null, parentDestination: null },
   { id: 'la-reunion', slug: 'la-reunion', name: 'La Réunion', displayName: 'La Réunion', country: 'France', countryCode: 'FR', region: 'La Réunion', parentDestination: 'france' }
 ];
 
 const assignments = Object.entries(curation.assignments);
 const destinations = destinationDefinitions.map((destination) => {
-  const photoIds = assignments.filter(([id, value]) => value.destinationId === destination.id && value.locationConfidence === 'CONFIRMED_OWNER_RANGE' && !editorialExcludedIds.has(id) && !['private', 'do-not-publish'].includes(value.visibility)).map(([id]) => id);
+  const photoIds = assignments.filter(([id, value]) => value.destinationId === destination.id && trustedGeography.has(value.locationConfidence) && !editorialExcludedIds.has(id) && !['private', 'do-not-publish'].includes(value.visibility)).map(([id]) => id);
   const journeyIds = timeline.periods.filter((period) => period.destinationId === destination.id).map((period) => period.journeyId);
   const featured = catalog.photos.filter((photo) => photoIds.includes(photo.id) && photo.featured).sort((a, b) => Number(a.editorialOrder) - Number(b.editorialOrder));
-  const publicationStatus = destination.id === 'japan' && featured.length >= 5 ? 'published' : photoIds.length ? 'in-edit' : 'planned';
-  return { ...destination, shortIntroduction: null, editorialStatus: featured.length ? 'CURATED' : 'NEEDS_INFO', heroPhotoId: featured.find((photo) => ['hero', 'anchor'].includes(photo.role))?.id ?? null, featuredPhotoIds: featured.map((photo) => photo.id), journeyIds, storyIds: [], peopleIds: [], collectionIds: [], relatedDestinations: [], photoCount: photoIds.length, confirmedPhotoCount: photoIds.length, photoIds, manualOrder: featured.map((photo) => photo.id), seoTitle: publicationStatus === 'published' ? `${destination.name} photographs — Elsewhere` : null, seoDescription: null, publicationStatus };
+  const publicationStatus = publishedDestinations.has(destination.id) && featured.length >= 5 ? 'published' : photoIds.length ? 'in-edit' : 'planned';
+  // Dates are reported, never invented. An owner-supplied travel period is authoritative; where no
+  // period exists the observed capture range is used and labelled as such.
+  const period = timeline.periods.find((item) => item.destinationId === destination.id);
+  const captureDates = photoIds.map((id) => curation.assignments[id]?.captureDate).filter(Boolean).sort();
+  const dateRange = period
+    ? { start: period.ownerStart, end: period.ownerEnd, source: 'OWNER_TRAVEL_TIMELINE' }
+    : captureDates.length
+      ? { start: captureDates[0].slice(0, 10), end: captureDates.at(-1).slice(0, 10), source: 'CAPTURE_METADATA' }
+      : null;
+  return { ...destination, dateRange, shortIntroduction: null, editorialStatus: featured.length ? 'CURATED' : 'NEEDS_INFO', heroPhotoId: featured.find((photo) => ['hero', 'anchor'].includes(photo.role))?.id ?? null, featuredPhotoIds: featured.map((photo) => photo.id), journeyIds, storyIds: [], peopleIds: [], collectionIds: [], relatedDestinations: [], photoCount: photoIds.length, confirmedPhotoCount: photoIds.length, photoIds, manualOrder: featured.map((photo) => photo.id), seoTitle: publicationStatus === 'published' ? `${destination.name} photographs — Elsewhere` : null, seoDescription: null, publicationStatus };
 });
 write('data/destinations.json', { schemaVersion: 1, source: 'OWNER_TRAVEL_TIMELINE', destinations });
 

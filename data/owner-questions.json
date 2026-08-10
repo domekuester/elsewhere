@@ -162,6 +162,21 @@
       "status": "OPEN"
     },
     {
+      "id": "owner-question-people-review-16",
+      "priority": "MEDIUM_IMPACT",
+      "type": "PERSON_UNKNOWN",
+      "subjectIds": [
+        "photo-0589"
+      ],
+      "title": "People review: P1330174.jpg",
+      "question": "Is this a known person, travel companion, meaningful encounter, anonymous subject, crowd/street photograph, or incidental human presence? What privacy state should apply?",
+      "context": {
+        "captureDate": "2026-01-08T17:20:23.000Z",
+        "destinationId": "essaouira"
+      },
+      "status": "OPEN"
+    },
+    {
       "id": "owner-question-story-candidate-01",
       "priority": "MEDIUM_IMPACT",
       "type": "STORY_CONTEXT_NEEDED",

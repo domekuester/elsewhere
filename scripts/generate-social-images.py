@@ -18,6 +18,8 @@ IMAGES = {
     "studio.jpg": ("public/assets-derived/archive/0443-P1270203.jpg", (0.50, 0.42)),
     "licensing.jpg": ("public/assets-derived/archive/0176-P1230481.jpg", (0.50, 0.45)),
     "contact.jpg": ("public/assets-derived/archive/0182-P1230662.jpg", (0.50, 0.50)),
+    # Essaouira: the chapter hero crops cleanly to a wide card, keeping the gull and its shadow.
+    "essaouira.jpg": ("public/assets-derived/archive/0609-P1330989.jpg", (0.50, 0.55)),
 }
 
 for filename, (source, centering) in IMAGES.items():

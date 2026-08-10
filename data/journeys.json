@@ -40,8 +40,8 @@
         "photo-0036",
         "photo-0061"
       ],
-      "createdAt": "2026-08-10T10:48:20.675Z",
-      "updatedAt": "2026-08-10T10:48:20.675Z"
+      "createdAt": "2026-08-10T16:09:59.206Z",
+      "updatedAt": "2026-08-10T16:09:59.206Z"
     },
     {
       "id": "thailand-2024",
@@ -80,8 +80,8 @@
       "ownerNotes": null,
       "publicationStatus": "needs-owner-input",
       "manualPhotoOrder": [],
-      "createdAt": "2026-08-10T10:48:20.675Z",
-      "updatedAt": "2026-08-10T10:48:20.675Z"
+      "createdAt": "2026-08-10T16:09:59.207Z",
+      "updatedAt": "2026-08-10T16:09:59.207Z"
     },
     {
       "id": "laos-2024-2025",
@@ -110,8 +110,8 @@
       "manualPhotoOrder": [
         "photo-0537"
       ],
-      "createdAt": "2026-08-10T10:48:20.675Z",
-      "updatedAt": "2026-08-10T10:48:20.675Z"
+      "createdAt": "2026-08-10T16:09:59.207Z",
+      "updatedAt": "2026-08-10T16:09:59.207Z"
     },
     {
       "id": "thailand-2025-part-1",
@@ -151,8 +151,8 @@
       "manualPhotoOrder": [
         "photo-0002"
       ],
-      "createdAt": "2026-08-10T10:48:20.675Z",
-      "updatedAt": "2026-08-10T10:48:20.675Z"
+      "createdAt": "2026-08-10T16:09:59.207Z",
+      "updatedAt": "2026-08-10T16:09:59.207Z"
     },
     {
       "id": "vietnam-phu-quoc-2025",
@@ -199,8 +199,8 @@
       "manualPhotoOrder": [
         "photo-0533"
       ],
-      "createdAt": "2026-08-10T10:48:20.675Z",
-      "updatedAt": "2026-08-10T10:48:20.675Z"
+      "createdAt": "2026-08-10T16:09:59.207Z",
+      "updatedAt": "2026-08-10T16:09:59.207Z"
     },
     {
       "id": "malaysia-2025-part-1",
@@ -301,8 +301,8 @@
       "manualPhotoOrder": [
         "photo-0145"
       ],
-      "createdAt": "2026-08-10T10:48:20.675Z",
-      "updatedAt": "2026-08-10T10:48:20.675Z"
+      "createdAt": "2026-08-10T16:09:59.208Z",
+      "updatedAt": "2026-08-10T16:09:59.208Z"
     },
     {
       "id": "japan-2025",
@@ -554,8 +554,8 @@
         "photo-0581",
         "photo-0585"
       ],
-      "createdAt": "2026-08-10T10:48:20.676Z",
-      "updatedAt": "2026-08-10T10:48:20.676Z"
+      "createdAt": "2026-08-10T16:09:59.210Z",
+      "updatedAt": "2026-08-10T16:09:59.210Z"
     },
     {
       "id": "thailand-2025-part-2",
@@ -582,8 +582,8 @@
       "ownerNotes": null,
       "publicationStatus": "needs-owner-input",
       "manualPhotoOrder": [],
-      "createdAt": "2026-08-10T10:48:20.676Z",
-      "updatedAt": "2026-08-10T10:48:20.676Z"
+      "createdAt": "2026-08-10T16:09:59.210Z",
+      "updatedAt": "2026-08-10T16:09:59.210Z"
     },
     {
       "id": "malaysia-2025-part-2",
@@ -606,8 +606,8 @@
       "ownerNotes": null,
       "publicationStatus": "needs-owner-input",
       "manualPhotoOrder": [],
-      "createdAt": "2026-08-10T10:48:20.676Z",
-      "updatedAt": "2026-08-10T10:48:20.676Z"
+      "createdAt": "2026-08-10T16:09:59.210Z",
+      "updatedAt": "2026-08-10T16:09:59.210Z"
     },
     {
       "id": "la-reunion-2025",
@@ -748,10 +748,11 @@
         "photo-0507",
         "photo-0443",
         "photo-0529",
-        "photo-0487"
+        "photo-0487",
+        "photo-0432"
       ],
-      "createdAt": "2026-08-10T10:48:20.678Z",
-      "updatedAt": "2026-08-10T10:48:20.678Z"
+      "createdAt": "2026-08-10T16:09:59.211Z",
+      "updatedAt": "2026-08-10T16:09:59.211Z"
     }
   ],
   "transitionPhotos": [
@@ -863,5 +864,246 @@
       ]
     }
   ],
-  "outsidePhotos": []
+  "outsidePhotos": [
+    {
+      "photoId": "photo-0589",
+      "filename": "P1330174.jpg",
+      "captureDate": "2026-01-08T17:20:23.000Z"
+    },
+    {
+      "photoId": "photo-0590",
+      "filename": "P1330186.jpg",
+      "captureDate": "2026-01-08T17:23:19.000Z"
+    },
+    {
+      "photoId": "photo-0591",
+      "filename": "P1330200.jpg",
+      "captureDate": "2026-01-08T17:29:34.000Z"
+    },
+    {
+      "photoId": "photo-0592",
+      "filename": "P1330250.jpg",
+      "captureDate": "2026-01-08T17:58:39.000Z"
+    },
+    {
+      "photoId": "photo-0593",
+      "filename": "P1330338.jpg",
+      "captureDate": "2026-01-08T19:58:03.000Z"
+    },
+    {
+      "photoId": "photo-0594",
+      "filename": "P1330356.jpg",
+      "captureDate": "2026-01-08T20:00:34.000Z"
+    },
+    {
+      "photoId": "photo-0595",
+      "filename": "P1330393.jpg",
+      "captureDate": "2026-01-08T20:15:43.000Z"
+    },
+    {
+      "photoId": "photo-0596",
+      "filename": "P1330475.jpg",
+      "captureDate": "2026-01-09T18:06:39.000Z"
+    },
+    {
+      "photoId": "photo-0597",
+      "filename": "P1330584.jpg",
+      "captureDate": "2026-01-10T17:55:40.000Z"
+    },
+    {
+      "photoId": "photo-0598",
+      "filename": "P1330650.jpg",
+      "captureDate": "2026-01-10T18:20:21.000Z"
+    },
+    {
+      "photoId": "photo-0599",
+      "filename": "P1330652.jpg",
+      "captureDate": "2026-01-10T18:24:53.000Z"
+    },
+    {
+      "photoId": "photo-0600",
+      "filename": "P1330742.jpg",
+      "captureDate": "2026-01-10T21:31:33.000Z"
+    },
+    {
+      "photoId": "photo-0601",
+      "filename": "P1330780.jpg",
+      "captureDate": "2026-01-10T21:37:23.000Z"
+    },
+    {
+      "photoId": "photo-0602",
+      "filename": "P1330794.jpg",
+      "captureDate": "2026-01-10T21:39:19.000Z"
+    },
+    {
+      "photoId": "photo-0603",
+      "filename": "P1330795.jpg",
+      "captureDate": "2026-01-10T21:39:22.000Z"
+    },
+    {
+      "photoId": "photo-0604",
+      "filename": "P1330816.jpg",
+      "captureDate": "2026-01-10T21:40:29.000Z"
+    },
+    {
+      "photoId": "photo-0605",
+      "filename": "P1330900.jpg",
+      "captureDate": "2026-01-10T21:49:25.000Z"
+    },
+    {
+      "photoId": "photo-0606",
+      "filename": "P1330928.jpg",
+      "captureDate": "2026-01-10T22:07:25.000Z"
+    },
+    {
+      "photoId": "photo-0607",
+      "filename": "P1330959.jpg",
+      "captureDate": "2026-01-10T22:37:09.000Z"
+    },
+    {
+      "photoId": "photo-0608",
+      "filename": "P1330968.jpg",
+      "captureDate": "2026-01-10T22:51:29.000Z"
+    },
+    {
+      "photoId": "photo-0609",
+      "filename": "P1330989.jpg",
+      "captureDate": "2026-01-10T23:21:50.000Z"
+    },
+    {
+      "photoId": "photo-0610",
+      "filename": "P1340012.jpg",
+      "captureDate": "2026-01-10T23:42:19.000Z"
+    },
+    {
+      "photoId": "photo-0611",
+      "filename": "P1340151.jpg",
+      "captureDate": "2026-01-11T18:03:19.000Z"
+    },
+    {
+      "photoId": "photo-0612",
+      "filename": "P1340187.jpg",
+      "captureDate": "2026-01-11T18:32:41.000Z"
+    },
+    {
+      "photoId": "photo-0613",
+      "filename": "P1340347.jpg",
+      "captureDate": "2026-01-11T19:08:38.000Z"
+    },
+    {
+      "photoId": "photo-0614",
+      "filename": "P1340453.jpg",
+      "captureDate": "2026-01-11T19:27:54.000Z"
+    },
+    {
+      "photoId": "photo-0615",
+      "filename": "P1340602.jpg",
+      "captureDate": "2026-01-11T21:02:58.000Z"
+    },
+    {
+      "photoId": "photo-0616",
+      "filename": "P1340622.jpg",
+      "captureDate": "2026-01-11T21:23:03.000Z"
+    },
+    {
+      "photoId": "photo-0617",
+      "filename": "P1340662.jpg",
+      "captureDate": "2026-01-11T21:41:39.000Z"
+    },
+    {
+      "photoId": "photo-0618",
+      "filename": "P1340697.jpg",
+      "captureDate": "2026-01-11T21:57:40.000Z"
+    },
+    {
+      "photoId": "photo-0619",
+      "filename": "P1340727.jpg",
+      "captureDate": "2026-01-11T22:03:42.000Z"
+    },
+    {
+      "photoId": "photo-0620",
+      "filename": "P1340820.jpg",
+      "captureDate": "2026-01-11T23:58:50.000Z"
+    },
+    {
+      "photoId": "photo-0621",
+      "filename": "P1340866.jpg",
+      "captureDate": "2026-01-12T00:02:12.000Z"
+    },
+    {
+      "photoId": "photo-0622",
+      "filename": "P1340981.jpg",
+      "captureDate": "2026-01-12T13:54:03.000Z"
+    },
+    {
+      "photoId": "photo-0623",
+      "filename": "P1340992.jpg",
+      "captureDate": "2026-01-12T13:54:30.000Z"
+    },
+    {
+      "photoId": "photo-0624",
+      "filename": "P1350041.jpg",
+      "captureDate": "2026-01-12T14:00:47.000Z"
+    },
+    {
+      "photoId": "photo-0625",
+      "filename": "P1350086.jpg",
+      "captureDate": "2026-01-12T23:54:36.000Z"
+    },
+    {
+      "photoId": "photo-0626",
+      "filename": "P1350104.jpg",
+      "captureDate": "2026-01-12T23:58:01.000Z"
+    },
+    {
+      "photoId": "photo-0627",
+      "filename": "P1350144.jpg",
+      "captureDate": "2026-01-13T00:09:38.000Z"
+    },
+    {
+      "photoId": "photo-0628",
+      "filename": "P1350244.jpg",
+      "captureDate": "2026-01-13T17:11:31.000Z"
+    },
+    {
+      "photoId": "photo-0629",
+      "filename": "P1350292.jpg",
+      "captureDate": "2026-01-13T17:42:51.000Z"
+    },
+    {
+      "photoId": "photo-0630",
+      "filename": "P1350375.jpg",
+      "captureDate": "2026-01-14T16:54:14.000Z"
+    },
+    {
+      "photoId": "photo-0631",
+      "filename": "P1350409.jpg",
+      "captureDate": "2026-01-14T17:00:02.000Z"
+    },
+    {
+      "photoId": "photo-0632",
+      "filename": "P1350414.jpg",
+      "captureDate": "2026-01-14T17:01:00.000Z"
+    },
+    {
+      "photoId": "photo-0633",
+      "filename": "P1350420.jpg",
+      "captureDate": "2026-01-14T17:04:02.000Z"
+    },
+    {
+      "photoId": "photo-0634",
+      "filename": "P1350507.jpg",
+      "captureDate": "2026-01-14T17:47:06.000Z"
+    },
+    {
+      "photoId": "photo-0635",
+      "filename": "P1350644.jpg",
+      "captureDate": "2026-01-14T19:13:35.000Z"
+    },
+    {
+      "photoId": "photo-0636",
+      "filename": "P1350669.jpg",
+      "captureDate": "2026-01-14T19:31:55.000Z"
+    }
+  ]
 }

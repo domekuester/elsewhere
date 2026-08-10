@@ -702,6 +702,14 @@
         "photo-0588"
       ],
       "reason": "Same-frame color/monochrome export family; retain one public archive representative."
+    },
+    {
+      "keepId": "photo-0603",
+      "keepFilename": "P1330795.jpg",
+      "excludeIds": [
+        "photo-0602"
+      ],
+      "reason": "Burst pair of the same rider seconds apart; the trotting frame carries the movement."
     }
   ]
 }

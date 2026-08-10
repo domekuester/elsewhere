@@ -122,6 +122,23 @@
     },
     {
       "id": "people-review-08",
+      "photoId": "photo-0432",
+      "filename": "P1270057-2.jpg",
+      "captureDate": "2025-07-23T18:51:45.000Z",
+      "destinationId": "la-reunion",
+      "journeyId": "la-reunion-2025",
+      "classification": null,
+      "identityStatus": "UNKNOWN",
+      "displayName": null,
+      "privacyStatus": "UNKNOWN",
+      "peoplePageCandidate": false,
+      "storyCandidate": false,
+      "ownerNotes": null,
+      "shortMemory": null,
+      "publicationStatus": "NEEDS_OWNER_INPUT"
+    },
+    {
+      "id": "people-review-09",
       "photoId": "photo-0529",
       "filename": "P1310083.jpg",
       "captureDate": "2025-08-28T19:30:20.000Z",
@@ -138,7 +155,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-09",
+      "id": "people-review-10",
       "photoId": "photo-0533",
       "filename": "1200794-3.jpg",
       "captureDate": "2025-04-07T17:34:43.000Z",
@@ -155,7 +172,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-10",
+      "id": "people-review-11",
       "photoId": "photo-0537",
       "filename": "IMG_0442.jpg",
       "captureDate": "2024-12-13T16:06:50.000Z",
@@ -172,7 +189,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-11",
+      "id": "people-review-12",
       "photoId": "photo-0559",
       "filename": "P1240171.jpg",
       "captureDate": "2025-05-22T08:20:57.000Z",
@@ -189,7 +206,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-12",
+      "id": "people-review-13",
       "photoId": "photo-0565",
       "filename": "P1240815.jpg",
       "captureDate": "2025-05-29T06:41:25.000Z",
@@ -206,7 +223,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-13",
+      "id": "people-review-14",
       "photoId": "photo-0574",
       "filename": "P1250928.jpg",
       "captureDate": "2025-06-08T14:17:25.000Z",
@@ -223,12 +240,80 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-14",
+      "id": "people-review-15",
       "photoId": "photo-0585",
       "filename": "P1260472-2.jpg",
       "captureDate": "2025-06-26T14:01:20.000Z",
       "destinationId": "japan",
       "journeyId": "japan-2025",
+      "classification": null,
+      "identityStatus": "UNKNOWN",
+      "displayName": null,
+      "privacyStatus": "UNKNOWN",
+      "peoplePageCandidate": false,
+      "storyCandidate": false,
+      "ownerNotes": null,
+      "shortMemory": null,
+      "publicationStatus": "NEEDS_OWNER_INPUT"
+    },
+    {
+      "id": "people-review-16",
+      "photoId": "photo-0589",
+      "filename": "P1330174.jpg",
+      "captureDate": "2026-01-08T17:20:23.000Z",
+      "destinationId": "essaouira",
+      "journeyId": null,
+      "classification": null,
+      "identityStatus": "UNKNOWN",
+      "displayName": null,
+      "privacyStatus": "UNKNOWN",
+      "peoplePageCandidate": true,
+      "storyCandidate": false,
+      "ownerNotes": null,
+      "shortMemory": null,
+      "publicationStatus": "NEEDS_OWNER_INPUT"
+    },
+    {
+      "id": "people-review-17",
+      "photoId": "photo-0604",
+      "filename": "P1330816.jpg",
+      "captureDate": "2026-01-10T21:40:29.000Z",
+      "destinationId": "essaouira",
+      "journeyId": null,
+      "classification": null,
+      "identityStatus": "UNKNOWN",
+      "displayName": null,
+      "privacyStatus": "UNKNOWN",
+      "peoplePageCandidate": true,
+      "storyCandidate": false,
+      "ownerNotes": null,
+      "shortMemory": null,
+      "publicationStatus": "NEEDS_OWNER_INPUT"
+    },
+    {
+      "id": "people-review-18",
+      "photoId": "photo-0607",
+      "filename": "P1330959.jpg",
+      "captureDate": "2026-01-10T22:37:09.000Z",
+      "destinationId": "essaouira",
+      "journeyId": null,
+      "classification": null,
+      "identityStatus": "UNKNOWN",
+      "displayName": null,
+      "privacyStatus": "UNKNOWN",
+      "peoplePageCandidate": true,
+      "storyCandidate": false,
+      "ownerNotes": null,
+      "shortMemory": null,
+      "publicationStatus": "NEEDS_OWNER_INPUT"
+    },
+    {
+      "id": "people-review-19",
+      "photoId": "photo-0617",
+      "filename": "P1340662.jpg",
+      "captureDate": "2026-01-11T21:41:39.000Z",
+      "destinationId": "essaouira",
+      "journeyId": null,
       "classification": null,
       "identityStatus": "UNKNOWN",
       "displayName": null,

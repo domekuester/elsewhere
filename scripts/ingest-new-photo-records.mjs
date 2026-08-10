@@ -77,9 +77,12 @@ for (const file of files) {
       exposureSeconds: numeric(metadata.ExposureTime),
     },
     gps: metadata.latitude != null && metadata.longitude != null ? { latitude: metadata.latitude, longitude: metadata.longitude, altitudeMeters: numeric(metadata.GPSAltitude) } : null,
+    // Ingestion records what the file is, never what the photograph means. Editorial state stays
+    // empty until a human reviews it: a category or colour claimed here would flow straight into
+    // the public catalog and, in the case of 'black-and-white-candidate', into the monochrome archive.
     editorial: {
-      status: 'needs-human-review', visualSubject: null, probableDestination: null, categories: ['black-and-white-candidate'], humansVisible: null,
-      heroPotential: null, supportingPotential: null, mood: [], dominantColors: ['black', 'white', 'grey'], notes: 'New monochrome archive addition; visually reviewed in Phase 7.',
+      status: 'needs-human-review', visualSubject: null, probableDestination: null, categories: [], humansVisible: null,
+      heroPotential: null, supportingPotential: null, mood: [], dominantColors: [], notes: null,
     },
     technical: { metadataReadError: metadata._readError ?? null, thumbnailPath: relative(root, thumbPath) },
   });

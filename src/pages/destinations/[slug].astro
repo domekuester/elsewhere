@@ -15,9 +15,22 @@ const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]))
 const orderedIds = [destination.heroPhotoId, ...destination.manualOrder.filter((id) => id !== destination.heroPhotoId)].filter(Boolean);
 const sequence = orderedIds.map((id) => photosById.get(id)).filter(Boolean);
 const [hero, ...rest] = sequence;
-const sequenceRoles = ['wide', 'portrait', 'quiet', 'anchor', 'offset', 'closing'];
+// Sequence roles are namespaced: an unprefixed 'portrait' role would collide with the
+// 'is-portrait' orientation class and silently override the layout of every portrait photograph.
+const sequenceRoles = ['seq-wide', 'seq-portrait', 'seq-quiet', 'seq-anchor', 'seq-offset', 'seq-closing'];
 const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
-const journey = destination.id === 'japan' ? { dates: '12 May — 27 June 2025', note: 'Country confirmed by the owner’s travel timeline. Cities and regions remain intentionally unassigned.' } : null;
+// Dates and provenance come from the data, never from the template. A destination sourced from the
+// owner's travel timeline says so; one dated from capture metadata says that instead.
+const formatDate = (value, withYear = true) => new Date(value).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', ...(withYear ? { year: 'numeric' } : {}) });
+const range = destination.dateRange;
+const sameYear = range && range.start.slice(0, 4) === range.end.slice(0, 4);
+const journey = range ? {
+  dates: range.start === range.end ? formatDate(range.start) : `${formatDate(range.start, !sameYear)} — ${formatDate(range.end)}`,
+  note: range.source === 'OWNER_TRAVEL_TIMELINE'
+    ? 'Country confirmed by the owner’s travel timeline. Cities and regions remain intentionally unassigned.'
+    // Span and month are computed from the photographs, so the line stays true for any chapter.
+    : `Photographed over ${Math.round((Date.parse(range.end) - Date.parse(range.start)) / 86400000) + 1} days in ${new Date(range.start).toLocaleDateString('en-GB', { month: 'long' })}. Place confirmed by the photographer; the dates are taken from the photographs themselves.`,
+} : null;
 const altByFilename = {
   'P1230620.jpg': 'A gull approaches a row of outstretched hands above the water.',
   'P1230638.jpg': 'A hand extends beside a rope with churning water below.',
@@ -56,16 +69,16 @@ const destinationSchema = {
 };
 ---
 
-<BaseLayout title={`${destination.name} travel photography — Elsewhere`} description={`A confirmed photographic chapter from ${destination.name}, edited from the Elsewhere archive.`} image={destination.slug === 'japan' ? '/social/japan.jpg' : hero.archiveImage} imageAlt={altByFilename[hero.filename] ?? hero.altText} schema={destinationSchema}>
+<BaseLayout title={`${destination.name} travel photography — Elsewhere`} description={`A confirmed photographic chapter from ${destination.name}, edited from the Elsewhere archive.`} image={['japan', 'essaouira'].includes(destination.slug) ? `/social/${destination.slug}.jpg` : hero.archiveImage} imageAlt={altByFilename[hero.filename] ?? hero.altText} schema={destinationSchema}>
   <SiteHeader />
   <main id="main" class="destination-chapter">
     <header class="destination-hero">
       <img src={hero.viewerImage} width={hero.width} height={hero.height} alt={altByFilename[hero.filename] ?? hero.altText} loading="eager" fetchpriority="high" />
-      <div class="destination-hero-title"><span class="memory-mark"></span><h1>{destination.name}</h1><p>{journey?.dates}</p></div>
+      <div class="destination-hero-title"><span class="memory-mark"></span><h1>{destination.name}</h1>{destination.parentDestination && <p class="destination-country">{destination.country}</p>}<p>{journey?.dates}</p></div>
     </header>
     <section class="destination-provenance">
       <p>{journey?.note}</p>
-      <p>{destination.confirmedPhotoCount} photographs belong to this destination period. This chapter is a curated passage through them.</p>
+      <p>{destination.confirmedPhotoCount} photographs belong to this {destination.parentDestination ? 'place' : 'destination period'}. This chapter is a curated passage through them.</p>
     </section>
     <section class="destination-sequence" aria-label={`Selected photographs from ${destination.name}`}>
       {rest.map((photo, index) => (

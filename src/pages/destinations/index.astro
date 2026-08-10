@@ -3,25 +3,81 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import destinationData from '../../../data/destinations.json';
-const order = ['japan', 'la-reunion', 'malaysia', 'thailand', 'phu-quoc', 'laos'];
-const destinations = order.map((id) => destinationData.destinations.find((destination) => destination.id === id)).filter(Boolean);
+import catalogData from '../../../public/data/photo-catalog.json';
+
+// Ordered by archive depth rather than alphabetically, which is how the index has always read.
+// Open chapters are lifted out of the list into a photographic layer: with more than one of them,
+// a row of text no longer does the work of an entrance.
+const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]));
+const ranked = destinationData.destinations
+  .filter((destination) => destination.confirmedPhotoCount > 0)
+  .sort((a, b) => b.confirmedPhotoCount - a.confirmedPhotoCount);
+const chapters = ranked.filter((destination) => destination.publicationStatus === 'published');
+const inProgress = ranked.filter((destination) => destination.publicationStatus !== 'published');
+const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
+const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
 ---
 
-<BaseLayout title="Travel photography destinations — Elsewhere" description="An owner-confirmed geographic index connecting Malaysia, Thailand, Laos, Phu Quoc, Japan and La Réunion to the Elsewhere archive." image="/social/japan.jpg" imageAlt="A gull approaches a row of outstretched hands above the water">
+<BaseLayout
+  title="Travel photography destinations — Elsewhere"
+  description="Photographic chapters from Japan and Essaouira, Morocco, with Malaysia, Thailand, Laos, Phu Quoc and La Réunion held in the archive."
+  image="/social/japan.jpg"
+  imageAlt="A gull approaches a row of outstretched hands above the water"
+>
   <SiteHeader />
   <main id="main" class="index-page">
     <header class="index-intro">
       <span class="memory-mark" aria-hidden="true"></span>
-      <p>Place index · owner-confirmed timeline</p>
+      <p>Place index · owner-confirmed</p>
       <h1>Destinations</h1>
       <div>
-        <p>These country-level assignments come from the owner’s travel timeline. Cities and precise places remain unassigned unless separately confirmed.</p>
+        <p>Places are named only where the photographer has confirmed them. Everything else stays in the archive, unassigned, until it is known.</p>
         <a class="editorial-link" href="/archive/">Explore the photographic index <span aria-hidden="true">→</span></a>
       </div>
     </header>
-    <ol class="index-list">
-      {destinations.map((destination, index) => <li><span>{String(index + 1).padStart(2, '0')}</span>{destination.publicationStatus === 'published' ? <a href={`/destinations/${destination.slug}/`}><strong>{destination.name}</strong></a> : <strong>{destination.name}</strong>}<small>{destination.confirmedPhotoCount} photographs{destination.publicationStatus === 'published' ? ' · chapter open' : ''}</small></li>)}
-    </ol>
+
+    <section class="chapter-entries" aria-label="Open chapters">
+      {chapters.map((destination) => {
+        const hero = photosById.get(destination.heroPhotoId);
+        return (
+          <a class="chapter-entry" href={`/destinations/${destination.slug}/`} data-analytics-event="destination_open" data-analytics-context={`index:${destination.slug}`}>
+            <span class="chapter-entry-image">
+              {hero && (
+                <img
+                  src={hero.thumbnail}
+                  srcset={`${hero.thumbnail} ${derivativeWidth(hero, 960)}w, ${hero.archiveImage} ${derivativeWidth(hero, 1800)}w`}
+                  sizes="(min-width: 901px) 48vw, 100vw"
+                  width={hero.width}
+                  height={hero.height}
+                  alt={hero.altText}
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
+            </span>
+            <span class="chapter-entry-copy">
+              <b>{destination.name}</b>
+              {destination.parentDestination && <em>{destination.country}</em>}
+              <small>{destination.confirmedPhotoCount} photographs{year(destination) ? ` · ${year(destination)}` : ''}</small>
+            </span>
+          </a>
+        );
+      })}
+    </section>
+
+    <section class="index-rest" aria-labelledby="index-rest-title">
+      <h2 id="index-rest-title">In the archive</h2>
+      <ol class="index-list">
+        {inProgress.map((destination, index) => (
+          <li>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <strong>{destination.name}</strong>
+            <small>{destination.confirmedPhotoCount} photographs</small>
+          </li>
+        ))}
+      </ol>
+      <a class="editorial-link" href="/archive/" data-analytics-event="archive_open" data-analytics-context="destinations">Every photograph, by place and year <span aria-hidden="true">→</span></a>
+    </section>
   </main>
   <SiteFooter />
 </BaseLayout>
