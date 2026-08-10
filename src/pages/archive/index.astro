@@ -4,6 +4,7 @@ import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import PhotoViewer from '../../components/PhotoViewer.astro';
 import catalogData from '../../../public/data/photo-catalog.json';
+import { imageObject, breadcrumbs } from '../../data/image-schema';
 
 const { initialWorld = 'all' } = Astro.props;
 const isBlackAndWhite = initialWorld === 'black-and-white';
@@ -21,10 +22,17 @@ const worldCounts = new Map(coreWorlds.map((world) => [world, catalog.filter((ph
 const availableWorlds = coreWorlds.filter((world) => (worldCounts.get(world) ?? 0) >= editorialWorldMinimum);
 const availableDestinations = [...new Map(catalog.filter((photo) => photo.destinationId).map((photo) => [photo.destinationId, { id: photo.destinationId, name: photo.destination }])).values()];
 const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
+// The server-rendered opening is what a crawler sees without executing the archive script,
+// so those frames carry ImageObject markup. Every photograph is additionally declared in
+// /sitemap-images.xml, which is how the deeper archive becomes discoverable.
+const archiveSchema = [
+  breadcrumbs([{ name: 'Elsewhere', path: '/' }, { name: isBlackAndWhite ? 'Black & White Archive' : 'Archive', path: isBlackAndWhite ? '/archive/black-and-white/' : '/archive/' }], Astro.site),
+  ...opening.map((photo, index) => imageObject(photo, Astro.site, new URL(Astro.url.pathname, Astro.site).href, index === 0)),
+];
 const archiveSizes = (photo) => ['hero', 'anchor'].includes(photo.role) ? '(min-width: 901px) 42vw, (min-width: 561px) 58vw, 88vw' : photo.orientation === 'landscape' ? '(min-width: 901px) 34vw, (min-width: 561px) 50vw, 100vw' : '(min-width: 901px) 25vw, (min-width: 561px) 50vw, 88vw';
 ---
 
-<BaseLayout title={isBlackAndWhite ? 'Black & White Archive — Elsewhere' : 'Archive — Elsewhere'} description={isBlackAndWhite ? `${catalog.length} publicly approved monochrome photographs from the Elsewhere archive.` : `A living photographic index of ${catalog.length} public frames, encountered slowly.`} image={isBlackAndWhite ? '/social/black-and-white.jpg' : '/social/archive.jpg'} imageAlt={isBlackAndWhite ? 'A breakwater lighthouse beneath a long grey sky' : 'Small human figures beside forceful moving water'} motion={false}>
+<BaseLayout title={isBlackAndWhite ? 'Black & White Archive — Elsewhere' : 'Archive — Elsewhere'} description={isBlackAndWhite ? `${catalog.length} publicly approved monochrome photographs from the Elsewhere archive.` : `A living photographic index of ${catalog.length} public frames, encountered slowly.`} image={isBlackAndWhite ? '/social/black-and-white.jpg' : '/social/archive.jpg'} imageAlt={isBlackAndWhite ? 'A breakwater lighthouse beneath a long grey sky' : 'Small human figures beside forceful moving water'} motion={false} schema={archiveSchema}>
   <SiteHeader archiveHref={isBlackAndWhite ? '/archive/black-and-white/' : '/archive/'} />
   <main id="main" class:list={['archive-page', isBlackAndWhite && 'archive-page-monochrome']} data-archive-root data-initial-world={initialWorld}>
     <header class="archive-intro">

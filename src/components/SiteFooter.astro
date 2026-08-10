@@ -1,7 +1,9 @@
 ---
-import { site } from '../config/site';
+import { site, business } from '../config/site';
 const { archiveHref = '/archive/' } = Astro.props;
 const navigation = site.navigation.map((item) => item.href === '/archive/' ? { ...item, href: archiveHref } : item);
+// Commercial routes sit below the editorial navigation, never inside it.
+const secondary = site.secondaryNavigation.filter((item) => item.href !== business.contactPage || business.enquiriesEnabled);
 ---
 
 <footer class="site-footer" id="about">
@@ -12,6 +14,7 @@ const navigation = site.navigation.map((item) => item.href === '/archive/' ? { .
     <a class="footer-wordmark" href="/#main">{site.name}</a>
     <p>A visual archive of the world as experienced by one person.</p>
     <nav aria-label="Footer">{navigation.map((item) => <a href={item.href} data-analytics-event="navigation_open" data-analytics-context={`footer:${item.label.toLowerCase()}`}>{item.label}</a>)}</nav>
-    <small>Original photography throughout.</small>
+    <nav class="footer-secondary" aria-label="Studio and licensing">{secondary.map((item) => <a href={item.href} data-analytics-event="navigation_open" data-analytics-context={`footer:${item.label.toLowerCase()}`}>{item.label}</a>)}</nav>
+    <small>{business.copyrightNotice} Original photography throughout.</small>
   </div>
 </footer>

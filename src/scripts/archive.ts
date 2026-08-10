@@ -2,6 +2,8 @@ interface CatalogPhoto {
   id: string; index: number; thumbnail: string; archiveImage: string; viewerImage: string; width: number; height: number;
   orientation: string | null; year: number | null; visualWorlds: string[]; destination: string | null; destinationId: string | null; destinationSlug: string | null; destinationPublished: boolean;
   featured: boolean; editorialOrder: number | null; role: string; altText: string; accessibleLabel: string; caption: string | null;
+  /** Public-safe rights projection. 'unavailable' means never offer an enquiry for this frame. */
+  licensing: 'enquiry' | 'editorial' | 'commercial' | 'unavailable';
 }
 
 const root = document.querySelector<HTMLElement>('[data-archive-root]');
@@ -24,6 +26,7 @@ if (root) {
   const viewerTotal = viewer.querySelector<HTMLElement>('[data-viewer-total]')!;
   const viewerMeta = viewer.querySelector<HTMLElement>('[data-viewer-meta]')!;
   const viewerDestination = viewer.querySelector<HTMLAnchorElement>('[data-viewer-destination]')!;
+  const viewerLicensing = viewer.querySelector<HTMLAnchorElement>('[data-viewer-licensing]');
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const pageSize = 24;
   let catalog: CatalogPhoto[] = [];
@@ -120,6 +123,13 @@ if (root) {
     if (photo.destinationPublished && photo.destinationSlug) {
       viewerDestination.href = `/destinations/${photo.destinationSlug}/`;
       viewerDestination.firstChild!.textContent = `Open ${photo.destination} `;
+    }
+    if (viewerLicensing) {
+      // A licensing enquiry must name the exact photograph, so the public archive reference travels with it.
+      const reference = String(photo.index).padStart(3, '0');
+      viewerLicensing.hidden = photo.licensing === 'unavailable';
+      viewerLicensing.href = `/contact/?type=licensing&photo=${reference}`;
+      viewerLicensing.dataset.analyticsContext = reference;
     }
     if (!viewer.open) {
       viewerFocusOrigin = focusOrigin ?? null;

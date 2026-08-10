@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
-    "build": "npm run validate:content && npm run validate:exclusions && ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/finalize-production-build.mjs && node scripts/verify-owner-photo-exclusions.mjs --built",
+    "build": "npm run validate:content && npm run validate:exclusions && ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/finalize-production-build.mjs && node scripts/verify-owner-photo-exclusions.mjs --built && npm run validate:launch",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
     "content:classify": "node scripts/classify-owner-timeline.mjs && node scripts/build-photo-catalog.mjs",
     "audit:images": "python3 scripts/audit-image-duplicates.py",

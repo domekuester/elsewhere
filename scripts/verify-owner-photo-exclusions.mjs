@@ -3,6 +3,7 @@
 // references across data, source surfaces, generated output, and the built site.
 import fs from 'node:fs';
 import path from 'node:path';
+import sharp from 'sharp';
 
 const root = process.cwd();
 const read = (relative) => JSON.parse(fs.readFileSync(path.join(root, relative), 'utf8'));
@@ -87,6 +88,43 @@ for (const destination of destinations.destinations) {
   }).length;
   if (destination.confirmedPhotoCount !== publishable) {
     failures.push(`${destination.id}: confirmedPhotoCount ${destination.confirmedPhotoCount} does not match ${publishable} publishable photographs`);
+  }
+}
+
+// Editorial derivatives in src/assets/photos/ are renamed by hand, so a rejected photograph can
+// hide there under a filename that matches nothing. Compare by image content instead of by name.
+const signature = async (file) => {
+  const raw = await sharp(file).greyscale().resize(16, 16, { fit: 'fill' }).raw().toBuffer();
+  const values = [...raw];
+  const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+  const deviation = Math.sqrt(values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length) || 1;
+  return values.map((value) => (value - mean) / deviation);
+};
+const distance = (a, b) => Math.sqrt(a.reduce((sum, value, index) => sum + (value - b[index]) ** 2, 0));
+
+const masterFiles = new Map();
+const collectMasters = (directory) => {
+  if (!fs.existsSync(directory)) return;
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    const absolute = path.join(directory, entry.name);
+    if (entry.isDirectory()) collectMasters(absolute);
+    else if (/\.jpe?g$/i.test(entry.name) && !masterFiles.has(entry.name)) masterFiles.set(entry.name, absolute);
+  }
+};
+collectMasters(path.join(root, 'assets-source/photos'));
+
+const editorialDirectory = path.join(root, 'src/assets/photos');
+if (fs.existsSync(editorialDirectory)) {
+  const editorial = fs.readdirSync(editorialDirectory).filter((file) => /\.jpe?g$/i.test(file));
+  const editorialSignatures = await Promise.all(editorial.map(async (file) => [file, await signature(path.join(editorialDirectory, file))]));
+  for (const item of rejected) {
+    const master = masterFiles.get(item.filename);
+    if (!master) continue;
+    const rejectedSignature = await signature(master);
+    for (const [file, candidate] of editorialSignatures) {
+      // Same frame at a different size/crop stays far below 1; unrelated photographs sit above 5.
+      if (distance(rejectedSignature, candidate) < 2) fail(item.photoId, `owner-rejected photograph present as editorial derivative src/assets/photos/${file}`);
+    }
   }
 }
 

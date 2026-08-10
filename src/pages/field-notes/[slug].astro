@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import AffiliateNote from '../../components/AffiliateNote.astro';
+import { publishedFieldNotes, renderableRecommendations, requiresAffiliateDisclosure } from '../../data/field-notes';
+import { business, site } from '../../config/site';
+import catalogData from '../../../public/data/photo-catalog.json';
+import destinationData from '../../../data/destinations.json';
+
+// Only published notes become routes. Drafts and owner-review notes build nothing at all,
+// so there is no draft URL to leak and nothing for a crawler to find.
+export function getStaticPaths() {
+  return publishedFieldNotes().map((note) => ({ params: { slug: note.slug }, props: { note } }));
+}
+
+const { note } = Astro.props;
+const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]));
+const hero = note.heroPhotoId ? photosById.get(note.heroPhotoId) : null;
+const sequence = note.photoIds.map((id) => photosById.get(id)).filter(Boolean);
+const destination = destinationData.destinations.find((item) => item.id === note.destinationId);
+const recommendations = renderableRecommendations(note);
+const canonical = new URL(`/field-notes/${note.slug}/`, Astro.site).href;
+const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
+
+const noteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: note.title,
+  description: note.seoDescription ?? note.summary,
+  url: canonical,
+  datePublished: note.publishedAt,
+  dateModified: note.updatedAt ?? note.publishedAt,
+  author: { '@type': business.creatorIsPerson ? 'Person' : 'Organization', name: business.creator },
+  publisher: { '@type': 'Organization', name: site.name, url: Astro.site.href },
+  ...(hero ? { image: new URL(hero.viewerImage, Astro.site).href } : {}),
+  ...(destination ? { contentLocation: { '@type': 'Place', name: destination.name } } : {}),
+};
+---
+
+<BaseLayout
+  title={note.seoTitle ?? `${note.title} — Elsewhere`}
+  description={note.seoDescription ?? note.summary}
+  image={note.socialImage ?? hero?.archiveImage ?? site.defaultShareImage}
+  imageAlt={hero?.altText ?? site.defaultShareImageAlt}
+  pageType="article"
+  schema={noteSchema}
+>
+  <SiteHeader />
+  <main id="main" class="field-note">
+    <header class="field-note-hero">
+      {hero && <img src={hero.viewerImage} width={hero.width} height={hero.height} alt={hero.altText} loading="eager" fetchpriority="high" />}
+      <div>
+        <span class="memory-mark" aria-hidden="true"></span>
+        <p class="prose-kicker">Field note{destination ? ` · ${destination.name}` : ''}</p>
+        <h1>{note.title}</h1>
+        {note.publishedAt && <p class="field-note-date"><time datetime={note.publishedAt}>{new Date(note.publishedAt).toLocaleDateString('en-GB', { year: 'numeric', month: 'long' })}</time></p>}
+      </div>
+    </header>
+
+    <article class="field-note-body">
+      <p class="prose-lede">{note.summary}</p>
+      {note.body.map((paragraph) => <p>{paragraph}</p>)}
+    </article>
+
+    {sequence.length > 0 && (
+      <section class="field-note-sequence" aria-label="Photographs">
+        {sequence.map((photo) => (
+          <figure data-photo-reveal>
+            <img
+              src={photo.thumbnail}
+              srcset={`${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w`}
+              sizes="(min-width: 901px) 62vw, 92vw"
+              width={photo.width}
+              height={photo.height}
+              loading="lazy"
+              decoding="async"
+              alt={photo.altText}
+            />
+            <figcaption>{[photo.destination, photo.year].filter(Boolean).join(' · ')}</figcaption>
+          </figure>
+        ))}
+      </section>
+    )}
+
+    {note.practicalNotes.length > 0 && (
+      <section class="field-note-practical" aria-labelledby="field-note-practical-title">
+        <h2 id="field-note-practical-title">Practical</h2>
+        <ul>{note.practicalNotes.map((item) => <li>{item}</li>)}</ul>
+      </section>
+    )}
+
+    <AffiliateNote recommendations={recommendations} disclose={requiresAffiliateDisclosure(note)} />
+
+    <aside class="field-note-next">
+      {destination?.publicationStatus === 'published' && (
+        <a href={`/destinations/${destination.slug}/`} data-analytics-event="destination_open" data-analytics-context={`field-note:${note.slug}`}>
+          <span>{destination.name}</span><b aria-hidden="true">→</b>
+        </a>
+      )}
+      <a class="editorial-link" href="/field-notes/" data-analytics-event="field_note_open" data-analytics-context="index">All field notes <span aria-hidden="true">→</span></a>
+    </aside>
+  </main>
+  <SiteFooter />
+</BaseLayout>

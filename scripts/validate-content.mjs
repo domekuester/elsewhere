@@ -11,8 +11,9 @@ const stories = read('data/story-candidates.json').candidates;
 const people = read('data/people-review.json').entries;
 const publicCatalog = read('public/data/photo-catalog.json').photos;
 const exclusions = read('data/public-image-exclusions.json');
+const ownerRejectedIds = new Set(exclusions.ownerRejected.map((item) => item.photoId));
 const excludedIds = new Set([
-  ...exclusions.ownerRejected.map((item) => item.photoId),
+  ...ownerRejectedIds,
   ...exclusions.duplicateFamilies.flatMap((family) => family.excludeIds)
 ]);
 const photoIds = new Set(inventory.photos.map((photo) => photo.id));
@@ -76,6 +77,30 @@ for (const family of exclusions.duplicateFamilies) {
   for (const id of family.excludeIds) if (!photoIds.has(id)) errors.push(`Duplicate family excludes missing photo ${id}`);
 }
 if (stories.length > 20) warnings.push('Story candidate queue exceeds 20; prioritize before adding more.');
+
+// Rights integrity. Licensing permission is separate from publication permission, and
+// uncertainty must never resolve into a commercial claim.
+const rightsStates = new Set(['ENQUIRY_ONLY', 'EDITORIAL_AVAILABLE', 'RELEASE_REQUIRED', 'COMMERCIAL_CLEARED', 'NOT_FOR_LICENSE']);
+const releaseStates = new Set(['UNKNOWN', 'NOT_REQUIRED', 'REQUIRED', 'HELD']);
+const publicLicensingByRights = { ENQUIRY_ONLY: 'enquiry', EDITORIAL_AVAILABLE: 'editorial', RELEASE_REQUIRED: 'enquiry', COMMERCIAL_CLEARED: 'commercial', NOT_FOR_LICENSE: 'unavailable' };
+for (const [photoId, assignment] of Object.entries(curation.assignments)) {
+  if (!rightsStates.has(assignment.rightsStatus)) errors.push(`${photoId} has invalid rightsStatus ${assignment.rightsStatus}`);
+  if (!releaseStates.has(assignment.modelReleaseStatus)) errors.push(`${photoId} has invalid modelReleaseStatus ${assignment.modelReleaseStatus}`);
+  if (!releaseStates.has(assignment.propertyReleaseStatus)) errors.push(`${photoId} has invalid propertyReleaseStatus ${assignment.propertyReleaseStatus}`);
+  if (assignment.rightsStatus === 'COMMERCIAL_CLEARED' && (assignment.modelReleaseStatus === 'UNKNOWN' || assignment.propertyReleaseStatus === 'UNKNOWN')) {
+    errors.push(`${photoId} claims COMMERCIAL_CLEARED while a release status is still UNKNOWN`);
+  }
+  // Owner rejection is an editorial decision about the photograph itself, so it also ends licensing.
+  // Duplicate-family exclusions are only about which export represents a frame; they carry no rights meaning.
+  if (ownerRejectedIds.has(photoId) && assignment.rightsStatus !== 'NOT_FOR_LICENSE') errors.push(`Owner-rejected ${photoId} must be NOT_FOR_LICENSE, found ${assignment.rightsStatus}`);
+}
+const forbiddenRightsKeys = ['rightsStatus', 'rightsNotesInternal', 'modelReleaseStatus', 'propertyReleaseStatus'];
+for (const photo of publicCatalog) {
+  for (const key of forbiddenRightsKeys) if (key in photo) errors.push(`Public photo ${photo.id} exposes private rights field ${key}`);
+  const expected = publicLicensingByRights[curation.assignments[photo.id]?.rightsStatus];
+  if (photo.licensing !== expected) errors.push(`Public photo ${photo.id} licensing "${photo.licensing}" contradicts rights state (expected "${expected}")`);
+  if (photo.licensing === 'unavailable') errors.push(`Public photo ${photo.id} is NOT_FOR_LICENSE but publicly listed`);
+}
 
 if (errors.length) {
   console.error(`Content validation failed with ${errors.length} error(s):\n${errors.map((error) => `- ${error}`).join('\n')}`);

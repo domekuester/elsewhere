@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-10T10:48:20.740Z",
+  "generatedAt": "2026-08-10T13:37:21.528Z",
   "count": 485,
   "privacy": "Public-safe catalog. Exact coordinates, private notes, source paths, and private photographs are intentionally excluded.",
   "photos": [
@@ -42,6 +42,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 001 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -85,6 +86,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 002 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -126,6 +128,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 003 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -167,6 +170,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 004 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -208,6 +212,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 005 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -249,6 +254,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 006 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -290,6 +296,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 007 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -331,6 +338,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 008 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -372,6 +380,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 009 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -413,6 +422,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 010 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -454,6 +464,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 011 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -495,6 +506,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 012 · Phu Quoc · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -536,6 +548,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 013 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -577,6 +590,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 014 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -618,6 +632,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 015 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -659,6 +674,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 018 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -700,6 +716,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 019 · Phu Quoc · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -741,6 +758,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 020 · Phu Quoc · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -782,6 +800,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 021 · Phu Quoc · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -823,6 +842,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 022 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -864,6 +884,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 023 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -905,6 +926,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 031 · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "unassigned"
     },
@@ -946,6 +968,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 032 · Laos · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -987,6 +1010,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 033 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1028,6 +1052,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 034 · Phu Quoc · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1069,6 +1094,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 035 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1112,6 +1138,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 036 · Malaysia · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -1153,6 +1180,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 037 · Malaysia · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1194,6 +1222,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 038 · Malaysia · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1235,6 +1264,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 039 · Malaysia · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1276,6 +1306,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 040 · Malaysia · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1317,6 +1348,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 043 · Thailand · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1358,6 +1390,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 044 · Thailand · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1401,6 +1434,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 045 · Thailand · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "curatorially-assigned"
     },
@@ -1442,6 +1476,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 046 · Thailand · square · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1483,6 +1518,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 047 · Thailand · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1524,6 +1560,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 048 · Thailand · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1565,6 +1602,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 049 · Thailand · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1606,6 +1644,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 050 · Thailand · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1647,6 +1686,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 051 · Thailand · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1688,6 +1728,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 052 · Thailand · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1729,6 +1770,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 054 · Thailand · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1770,6 +1812,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 055 · Thailand · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1811,6 +1854,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 056 · Malaysia · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1852,6 +1896,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 057 · Malaysia · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1893,6 +1938,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 059 · Malaysia · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1934,6 +1980,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 060 · Malaysia · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -1977,6 +2024,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 061 · Malaysia · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -2018,6 +2066,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 062 · Thailand · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2059,6 +2108,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 063 · Thailand · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2100,6 +2150,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 064 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2141,6 +2192,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 065 · Thailand · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2182,6 +2234,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 066 · Thailand · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2223,6 +2276,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 067 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2264,6 +2318,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 068 · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "unassigned"
     },
@@ -2305,6 +2360,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 069 · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "unassigned"
     },
@@ -2346,6 +2402,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 070 · Phu Quoc · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2387,6 +2444,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 071 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2428,6 +2486,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 072 · Phu Quoc · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2469,6 +2528,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 073 · Phu Quoc · square · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2510,6 +2570,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 074 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2551,6 +2612,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 075 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2592,6 +2654,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 076 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2633,6 +2696,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 078 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2674,6 +2738,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 079 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2715,6 +2780,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 080 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2756,6 +2822,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 081 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2797,6 +2864,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 082 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2838,6 +2906,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 083 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2879,6 +2948,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 084 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2920,6 +2990,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 085 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -2961,6 +3032,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 086 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3002,6 +3074,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 088 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3043,6 +3116,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 089 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3084,6 +3158,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 090 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3125,6 +3200,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 091 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3166,6 +3242,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 092 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3207,6 +3284,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 093 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3248,6 +3326,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 094 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3289,6 +3368,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 095 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3330,6 +3410,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 096 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3371,6 +3452,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 100 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3412,6 +3494,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 102 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3453,6 +3536,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 103 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3494,6 +3578,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 104 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3535,6 +3620,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 106 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3576,6 +3662,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 108 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3617,6 +3704,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 110 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3658,6 +3746,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 112 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3699,6 +3788,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 113 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3740,6 +3830,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 114 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3781,6 +3872,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 115 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3822,6 +3914,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 116 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3863,6 +3956,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 117 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3904,6 +3998,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 118 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3945,6 +4040,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 119 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -3986,6 +4082,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 120 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4027,6 +4124,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 121 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4068,6 +4166,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 122 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4109,6 +4208,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 123 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4150,6 +4250,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 124 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4191,6 +4292,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 125 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4232,6 +4334,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 126 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4273,6 +4376,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 127 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4314,6 +4418,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 128 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4355,6 +4460,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 129 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4396,6 +4502,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 131 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4437,6 +4544,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 132 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4478,6 +4586,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 133 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4519,6 +4628,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 134 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4560,6 +4670,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 135 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4601,6 +4712,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 136 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4642,6 +4754,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 137 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4683,6 +4796,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 138 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4724,6 +4838,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 139 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4765,6 +4880,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 140 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4808,6 +4924,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 145 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -4849,6 +4966,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 146 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4890,6 +5008,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 147 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4931,6 +5050,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 148 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -4972,6 +5092,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 150 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5013,6 +5134,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 151 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5054,6 +5176,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 153 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5095,6 +5218,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 154 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5136,6 +5260,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 156 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5177,6 +5302,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 157 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5218,6 +5344,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 158 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5259,6 +5386,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 159 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5300,6 +5428,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 160 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5341,6 +5470,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 161 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5382,6 +5512,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 162 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5423,6 +5554,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 163 · Malaysia · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5464,6 +5596,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 164 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5505,6 +5638,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 165 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5546,6 +5680,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 166 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5587,6 +5722,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 168 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5628,6 +5764,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 169 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5669,6 +5806,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 170 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5710,6 +5848,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 171 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5751,6 +5890,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 172 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5792,6 +5932,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 173 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5833,6 +5974,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 174 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5876,6 +6018,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 176 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -5917,6 +6060,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 177 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5958,6 +6102,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 178 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -5999,6 +6144,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 179 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6040,6 +6186,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 180 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6081,6 +6228,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 181 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6124,6 +6272,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 182 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -6167,6 +6316,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 183 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -6208,6 +6358,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 184 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6249,6 +6400,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 185 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6290,6 +6442,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 186 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6331,6 +6484,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 187 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6372,6 +6526,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 188 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6413,6 +6568,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 189 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6454,6 +6610,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 190 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6495,6 +6652,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 191 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6536,6 +6694,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 193 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6577,6 +6736,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 194 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6618,6 +6778,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 195 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6659,6 +6820,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 196 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6700,6 +6862,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 197 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6741,6 +6904,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 198 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6782,6 +6946,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 199 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6823,6 +6988,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 200 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6864,6 +7030,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 201 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6905,6 +7072,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 202 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6946,6 +7114,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 203 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -6987,6 +7156,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 205 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7028,6 +7198,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 206 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7071,6 +7242,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 207 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -7112,6 +7284,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 208 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7153,6 +7326,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 209 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7194,6 +7368,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 210 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7235,6 +7410,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 212 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7276,6 +7452,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 213 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7317,6 +7494,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 214 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7358,6 +7536,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 215 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7399,6 +7578,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 216 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7440,6 +7620,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 217 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7481,6 +7662,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 218 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7522,6 +7704,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 219 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7563,6 +7746,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 220 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7604,6 +7788,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 221 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7645,6 +7830,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 222 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7686,6 +7872,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 223 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7727,6 +7914,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 224 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7768,6 +7956,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 225 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7809,6 +7998,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 226 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7850,6 +8040,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 227 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7891,6 +8082,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 229 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7932,6 +8124,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 230 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -7973,6 +8166,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 231 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8014,6 +8208,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 232 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8055,6 +8250,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 233 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8096,6 +8292,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 234 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8137,6 +8334,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 235 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8178,6 +8376,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 236 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8219,6 +8418,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 237 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8260,6 +8460,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 238 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8301,6 +8502,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 239 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8342,6 +8544,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 240 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8383,6 +8586,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 241 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8424,6 +8628,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 242 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8465,6 +8670,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 243 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8506,6 +8712,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 244 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8547,6 +8754,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 247 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8588,6 +8796,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 248 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8629,6 +8838,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 249 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8670,6 +8880,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 250 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8711,6 +8922,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 251 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8752,6 +8964,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 252 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8793,6 +9006,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 253 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8834,6 +9048,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 254 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8875,6 +9090,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 256 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8916,6 +9132,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 257 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8957,6 +9174,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 258 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -8998,6 +9216,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 259 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9039,6 +9258,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 260 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9080,6 +9300,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 261 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9121,6 +9342,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 262 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9162,6 +9384,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 263 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9203,6 +9426,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 264 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9244,6 +9468,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 265 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9285,6 +9510,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 266 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9326,6 +9552,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 267 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9367,6 +9594,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 268 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9408,6 +9636,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 269 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9449,6 +9678,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 270 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9490,6 +9720,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 271 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9531,6 +9762,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 272 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9572,6 +9804,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 273 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9613,6 +9846,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 274 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9654,6 +9888,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 275 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9695,6 +9930,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 276 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9736,6 +9972,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 277 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9777,6 +10014,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 278 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9818,6 +10056,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 279 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9859,6 +10098,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 280 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9900,6 +10140,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 281 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9941,6 +10182,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 282 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -9982,6 +10224,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 283 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10023,6 +10266,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 284 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10064,6 +10308,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 285 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10105,6 +10350,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 286 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10146,6 +10392,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 287 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10187,6 +10434,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 288 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10228,6 +10476,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 289 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10269,6 +10518,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 290 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10310,6 +10560,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 291 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10351,6 +10602,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 292 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10392,6 +10644,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 293 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10433,6 +10686,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 294 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10474,6 +10728,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 295 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10515,6 +10770,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 296 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10556,6 +10812,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 297 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10597,6 +10854,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 298 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10638,6 +10896,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 299 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10679,6 +10938,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 300 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10720,6 +10980,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 301 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10761,6 +11022,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 302 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10802,6 +11064,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 303 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10843,6 +11106,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 304 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10884,6 +11148,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 305 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10925,6 +11190,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 306 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -10966,6 +11232,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 307 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11007,6 +11274,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 308 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11048,6 +11316,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 309 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11089,6 +11358,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 310 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11130,6 +11400,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 311 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11171,6 +11442,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 312 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11212,6 +11484,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 313 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11253,6 +11526,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 314 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11294,6 +11568,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 315 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11335,6 +11610,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 317 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11376,6 +11652,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 318 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11417,6 +11694,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 319 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11458,6 +11736,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 320 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11499,6 +11778,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 321 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11540,6 +11820,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 322 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11581,6 +11862,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 323 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11622,6 +11904,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 324 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11663,6 +11946,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 325 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11704,6 +11988,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 327 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11745,6 +12030,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 328 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11786,6 +12072,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 329 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11829,6 +12116,7 @@
       "altReviewStatus": "owner-reviewed",
       "accessibleLabel": "Open frame 331: A breakwater lighthouse beneath a long grey sky.",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -11870,6 +12158,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 332 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11911,6 +12200,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 333 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11952,6 +12242,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 334 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -11993,6 +12284,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 335 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12034,6 +12326,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 336 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12075,6 +12368,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 337 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12116,6 +12410,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 338 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12157,6 +12452,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 339 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12198,6 +12494,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 340 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12239,6 +12536,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 341 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12280,6 +12578,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 342 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12321,6 +12620,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 343 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12362,6 +12662,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 344 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12403,6 +12704,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 345 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12444,6 +12746,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 346 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12485,6 +12788,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 347 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12526,6 +12830,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 348 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12567,6 +12872,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 349 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12608,6 +12914,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 350 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12649,6 +12956,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 352 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12690,6 +12998,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 353 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12731,6 +13040,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 354 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12772,6 +13082,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 355 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12813,6 +13124,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 356 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12854,6 +13166,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 357 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12895,6 +13208,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 358 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12936,6 +13250,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 359 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -12977,6 +13292,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 360 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13018,6 +13334,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 361 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13059,6 +13376,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 362 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13100,6 +13418,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 363 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13141,6 +13460,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 364 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13182,6 +13502,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 366 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13223,6 +13544,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 368 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13264,6 +13586,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 370 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13305,6 +13628,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 371 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13346,6 +13670,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 372 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13387,6 +13712,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 373 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13428,6 +13754,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 374 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13469,6 +13796,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 375 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13510,6 +13838,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 376 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13551,6 +13880,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 377 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13592,6 +13922,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 378 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13633,6 +13964,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 379 · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "unassigned"
     },
@@ -13674,6 +14006,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 380 · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "unassigned"
     },
@@ -13717,6 +14050,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 381 · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -13758,6 +14092,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 382 · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "unassigned"
     },
@@ -13799,6 +14134,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 383 · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "unassigned"
     },
@@ -13840,6 +14176,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 384 · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "unassigned"
     },
@@ -13881,6 +14218,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 385 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13922,6 +14260,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 386 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -13963,6 +14302,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 387 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14004,6 +14344,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 388 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14045,6 +14386,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 389 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14086,6 +14428,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 390 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14127,6 +14470,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 391 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14168,6 +14512,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 392 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14209,6 +14554,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 393 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14250,6 +14596,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 394 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14291,6 +14638,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 395 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14332,6 +14680,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 396 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14373,6 +14722,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 397 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14414,6 +14764,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 398 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14455,6 +14806,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 399 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14496,6 +14848,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 400 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14537,6 +14890,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 401 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14578,6 +14932,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 402 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14619,6 +14974,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 403 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14660,6 +15016,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 408 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14701,6 +15058,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 413 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14742,6 +15100,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 416 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14783,6 +15142,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 421 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14824,6 +15184,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 424 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14865,6 +15226,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 427 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14908,6 +15270,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 432 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -14949,6 +15312,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 435 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -14990,6 +15354,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 439 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15031,6 +15396,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 440 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15072,6 +15438,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 441 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15113,6 +15480,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 442 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15156,6 +15524,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 443 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -15197,6 +15566,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 444 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15238,6 +15608,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 445 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15279,6 +15650,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 446 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15320,6 +15692,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 447 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15361,6 +15734,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 449 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15402,6 +15776,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 450 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15443,6 +15818,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 451 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15484,6 +15860,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 452 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15525,6 +15902,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 453 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15566,6 +15944,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 454 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15607,6 +15986,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 455 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15648,6 +16028,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 456 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15689,6 +16070,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 457 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15730,6 +16112,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 459 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15771,6 +16154,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 460 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15812,6 +16196,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 461 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15853,6 +16238,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 463 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15894,6 +16280,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 464 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15935,6 +16322,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 465 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -15976,6 +16364,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 466 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16017,6 +16406,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 467 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16058,6 +16448,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 468 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16099,6 +16490,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 469 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16140,6 +16532,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 470 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16181,6 +16574,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 471 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16222,6 +16616,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 472 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16263,6 +16658,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 473 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16304,6 +16700,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 474 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16345,6 +16742,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 475 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16386,6 +16784,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 476 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16427,6 +16826,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 477 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16468,6 +16868,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 478 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16509,6 +16910,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 479 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16550,6 +16952,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 480 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16591,6 +16994,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 481 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16632,6 +17036,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 482 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16673,6 +17078,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 483 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16714,6 +17120,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 484 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16755,6 +17162,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 486 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16798,6 +17206,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 487 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -16839,6 +17248,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 488 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16880,6 +17290,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 489 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16921,6 +17332,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 490 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -16962,6 +17374,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 491 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17003,6 +17416,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 492 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17044,6 +17458,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 493 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17085,6 +17500,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 494 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17126,6 +17542,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 495 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17167,6 +17584,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 496 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17208,6 +17626,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 497 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17249,6 +17668,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 498 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17290,6 +17710,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 499 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17331,6 +17752,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 500 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17372,6 +17794,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 501 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17413,6 +17836,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 502 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17454,6 +17878,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 503 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17495,6 +17920,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 504 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17536,6 +17962,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 505 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17577,6 +18004,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 506 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17620,6 +18048,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 507 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -17661,6 +18090,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 508 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17702,6 +18132,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 509 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17743,6 +18174,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 510 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17784,6 +18216,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 511 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17825,6 +18258,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 512 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17866,6 +18300,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 513 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17907,6 +18342,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 514 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17948,6 +18384,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 515 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -17989,6 +18426,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 516 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18030,6 +18468,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 517 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18071,6 +18510,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 518 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18112,6 +18552,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 519 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18153,6 +18594,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 520 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18194,6 +18636,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 521 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18235,6 +18678,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 522 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18276,6 +18720,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 523 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18317,6 +18762,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 525 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18358,6 +18804,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 526 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18399,6 +18846,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 527 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18440,6 +18888,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 528 · La Réunion · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18483,6 +18932,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 529 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -18524,6 +18974,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 530 · La Réunion · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "owner-timeline-assigned"
     },
@@ -18567,6 +19018,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 531 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -18610,6 +19062,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 532 · Thailand · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -18653,6 +19106,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 533 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -18696,6 +19150,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 534 · Malaysia · landscape · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -18739,6 +19194,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 535 · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -18782,6 +19238,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 536 · Laos · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -18825,6 +19282,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 537 · Laos · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -18868,6 +19326,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 538 · Thailand · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -18911,6 +19370,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 539 · Phu Quoc · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -18954,6 +19414,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 540 · Malaysia · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -18997,6 +19458,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 541 · Malaysia · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19040,6 +19502,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 542 · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19083,6 +19546,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 544 · Thailand · portrait · 2024",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19126,6 +19590,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 547 · Malaysia · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19169,6 +19634,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 549 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19212,6 +19678,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 550 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19255,6 +19722,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 557 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19298,6 +19766,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 558 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19341,6 +19810,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 559 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -19384,6 +19854,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 562 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19427,6 +19898,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 563 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19470,6 +19942,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 564 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19513,6 +19986,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 565 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -19556,6 +20030,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 566 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19599,6 +20074,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 569 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19642,6 +20118,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 572 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19685,6 +20162,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 573 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19728,6 +20206,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 574 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -19771,6 +20250,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 576 · Japan · landscape · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19814,6 +20294,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 578 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -19857,6 +20338,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 581 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     },
@@ -19900,6 +20382,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 583 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19943,6 +20426,7 @@
       "altReviewStatus": "needs-review",
       "accessibleLabel": "Open frame 584 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "phase7-monochrome-reviewed"
     },
@@ -19986,6 +20470,7 @@
       "altReviewStatus": "editorial-candidate",
       "accessibleLabel": "Open frame 585 · Japan · portrait · 2025",
       "caption": null,
+      "licensing": "enquiry",
       "publicationStatus": "UNREVIEWED",
       "approvalStatus": "editorially-selected"
     }

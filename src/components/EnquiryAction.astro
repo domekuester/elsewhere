@@ -1,0 +1,27 @@
+---
+import { business } from '../config/site';
+
+interface Props {
+  type: string;
+  label: string;
+  /** Stable photo reference carried into a licensing enquiry. */
+  photo?: string | null;
+  context: string;
+  class?: string;
+}
+
+const { type, label, photo = null, context, class: className } = Astro.props;
+const query = new URLSearchParams({ type, ...(photo ? { photo } : {}) });
+const href = `${business.contactPage}?${query.toString()}`;
+---
+
+{business.enquiriesEnabled && (
+  <a
+    class:list={['enquiry-action', className]}
+    href={href}
+    data-analytics-event={`${type}_inquiry_click`}
+    data-analytics-context={photo ? `${context}:${photo}` : context}
+  >
+    <span>{label}</span><b aria-hidden="true">→</b>
+  </a>
+)}

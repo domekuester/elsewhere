@@ -1,3 +1,10 @@
+---
+import { business } from '../config/site';
+// The licensing action lives in the secondary caption row, never over the photograph.
+// It is only present at all when a verified enquiry address exists; the archive script
+// then reveals it per photograph according to that frame's rights state.
+---
+
 <dialog class="photo-viewer" data-photo-viewer aria-label="Immersive photograph viewer" tabindex="-1">
   <div class="viewer-stage" data-viewer-stage aria-busy="false">
     <img class="viewer-preview" data-viewer-preview alt="" aria-hidden="true" />
@@ -14,6 +21,7 @@
       <i aria-hidden="true"></i>
       <p data-viewer-meta>Archive frame</p>
       <a data-viewer-destination hidden>Open destination <span aria-hidden="true">↗</span></a>
+      {business.enquiriesEnabled && <a class="viewer-licensing" data-viewer-licensing hidden data-analytics-event="licensing_inquiry_click">Licensing enquiry <span aria-hidden="true">↗</span></a>}
     </div>
   </div>
 </dialog>

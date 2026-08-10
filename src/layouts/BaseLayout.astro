@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { site } from '../config/site';
+import { site, business } from '../config/site';
 
 interface Props {
   title?: string;
@@ -43,6 +43,8 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : defaultSc
     <meta name="theme-color" content="#0B0C0D" />
     <meta name="color-scheme" content="dark light" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="author" content={business.creator} />
+    <meta name="copyright" content={business.copyrightNotice} />
     <meta property="og:type" content={pageType} />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content={site.name} />

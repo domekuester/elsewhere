@@ -1,0 +1,45 @@
+---
+import type { AffiliateRecommendation } from '../data/field-notes';
+
+interface Props {
+  recommendations: AffiliateRecommendation[];
+  /** Rendered only when at least one shown recommendation carries a commission. */
+  disclose: boolean;
+}
+
+const { recommendations, disclose } = Astro.props;
+// Commercial relationships are never hidden and never inferred. This component refuses to
+// render anything the owner has not verified, and it never appears inside the viewer,
+// People, Black & White, or the general archive.
+const shown = recommendations.filter((item) => item.ownerVerified && /^https?:\/\/\S+\.\S+/.test(item.url));
+---
+
+{shown.length > 0 && (
+  <aside class="recommendations" aria-labelledby="recommendations-title">
+    <h2 id="recommendations-title">Where this was</h2>
+    <ul>
+      {shown.map((item) => (
+        <li>
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer nofollow sponsored"
+            data-affiliate={String(item.affiliate)}
+            data-analytics-event={item.affiliate ? 'affiliate_click' : 'outbound_click'}
+            data-analytics-context={item.partner}
+          >
+            <b>{item.title}</b><span aria-hidden="true">↗</span>
+          </a>
+          <p>{item.description}</p>
+          {item.affiliate && <span class="recommendation-flag">Commission link</span>}
+        </li>
+      ))}
+    </ul>
+    {disclose && (
+      <p class="recommendation-disclosure">
+        Some links above earn a commission if you book or buy through them, at no extra cost to you.
+        Nothing is recommended that was not used and would not be recommended anyway.
+      </p>
+    )}
+  </aside>
+)}

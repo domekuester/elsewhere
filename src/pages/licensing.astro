@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import EnquiryAction from '../components/EnquiryAction.astro';
+import { business } from '../config/site';
+import catalogData from '../../public/data/photo-catalog.json';
+import tokyoStreet from '../assets/photos/tokyo-street.jpg';
+
+// Availability is never asserted in aggregate. The only honest public statement is that
+// enquiries are answered per photograph, because rights differ frame by frame.
+const enquirable = catalogData.photos.filter((photo) => photo.licensing !== 'unavailable').length;
+
+const licensingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Photography licensing — Elsewhere',
+  description: 'How photographs from the Elsewhere archive may be licensed for editorial and commercial use.',
+  url: new URL('/licensing/', Astro.site).href,
+  significantLink: new URL('/archive/', Astro.site).href,
+};
+---
+
+<BaseLayout
+  title="Photography licensing — Elsewhere"
+  description="Selected photographs from the Elsewhere archive may be licensed for editorial and commercial use. Availability is confirmed per photograph."
+  image="/social/licensing.jpg"
+  imageAlt="Pedestrians moving through a lantern-lined street"
+  schema={licensingSchema}
+>
+  <SiteHeader />
+  <main id="main" class="prose-page licensing-page">
+    <header class="prose-hero">
+      <span class="memory-mark" aria-hidden="true"></span>
+      <p class="prose-kicker">Licensing</p>
+      <h1>Using a<br />photograph.</h1>
+      <p class="prose-lede">Photographs from this archive can be licensed for editorial and commercial use. What is available depends on the rights held for each individual frame, so every enquiry is answered per photograph.</p>
+    </header>
+
+    <section class="licensing-uses" aria-labelledby="licensing-uses-title">
+      <h2 id="licensing-uses-title">Typical uses</h2>
+      <ul class="licensing-list">
+        <li><b>Editorial</b><span>Magazines, newspapers, books, documentary and journalistic contexts.</span></li>
+        <li><b>Hospitality</b><span>Hotels, restaurants and venues, in print and on their own sites.</span></li>
+        <li><b>Commercial</b><span>Campaigns, brand and product contexts, where the necessary releases exist.</span></li>
+        <li><b>Digital</b><span>Websites, applications, and screen-based environments.</span></li>
+        <li><b>Print and exhibition</b><span>Interiors, exhibitions, and published photographic work.</span></li>
+      </ul>
+    </section>
+
+    <section class="licensing-rights" aria-labelledby="licensing-rights-title">
+      <figure data-photo-reveal>
+        <Image src={tokyoStreet} alt="Pedestrians moving through a lantern-lined street" widths={[480, 768, 1200]} sizes="(min-width: 901px) 36vw, 84vw" loading="lazy" />
+      </figure>
+      <div>
+        <h2 id="licensing-rights-title">How rights are handled</h2>
+        <p>Copyright in every photograph stays with the photographer. A licence grants a defined use for a defined time — it does not transfer ownership of the image.</p>
+        <p>Photographs containing identifiable people, private property, artwork or trademarks carry third-party rights beyond the photographer's copyright. Where the necessary releases are not held, a frame can still be licensed for editorial use but not for commercial use. This is assessed frame by frame, never assumed.</p>
+        <p>If a photograph cannot be cleared for the use you have in mind, you will be told so directly. Nothing here is offered as pre-cleared stock.</p>
+      </div>
+    </section>
+
+    <section class="licensing-process" aria-labelledby="licensing-process-title">
+      <h2 id="licensing-process-title">How an enquiry works</h2>
+      <ol class="licensing-steps">
+        <li><b>01</b><span>Identify the photograph. Every frame in the archive carries a reference number — the three digits shown beneath it. Opening a photograph and choosing <i>Licensing enquiry</i> carries that reference across for you.</span></li>
+        <li><b>02</b><span>Describe the use: where it will appear, in which territory, for how long, and roughly at what scale.</span></li>
+        <li><b>03</b><span>Rights are checked for that specific frame and that specific use.</span></li>
+        <li><b>04</b><span>You receive a clear answer, a fee, and a licence — or an honest no.</span></li>
+      </ol>
+      <p class="licensing-scope">All {enquirable} published photographs can be asked about. Availability is confirmed individually.</p>
+    </section>
+
+    {business.enquiriesEnabled && (
+      <section class="prose-contact" aria-labelledby="licensing-cta-title">
+        <h2 id="licensing-cta-title">Licensing enquiry</h2>
+        <p>If you already know the frame, bring its reference number. If you do not, describe what you need and it can be found.</p>
+        <EnquiryAction type="licensing" label="Make an enquiry" context="licensing" class="is-large" />
+        <p class="licensing-alt"><a class="editorial-link" href="/archive/" data-analytics-event="archive_open" data-analytics-context="licensing">Browse the archive first <span aria-hidden="true">→</span></a></p>
+      </section>
+    )}
+  </main>
+  <SiteFooter />
+</BaseLayout>

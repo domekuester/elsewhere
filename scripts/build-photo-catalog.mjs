@@ -15,6 +15,16 @@ const publicExclusions = new Set([
   ...exclusions.duplicateFamilies.flatMap((family) => family.excludeIds)
 ]);
 const ownerRejectedFilenames = new Set(exclusions.ownerRejected.map((item) => item.filename.toLowerCase()));
+// Mirrors PUBLIC_LICENSING in src/data/rights.ts. Publication permission and licensing
+// permission are separate: only an owner-confirmed state may describe real availability,
+// and an unassessed photograph may be asked about without anything being offered.
+const publicLicensing = {
+  ENQUIRY_ONLY: 'enquiry',
+  EDITORIAL_AVAILABLE: 'editorial',
+  RELEASE_REQUIRED: 'enquiry',
+  COMMERCIAL_CLEARED: 'commercial',
+  NOT_FOR_LICENSE: 'unavailable'
+};
 const selectionSource = fs.readFileSync(path.join(root, 'src/data/editorial-selection.ts'), 'utf8');
 const curated = new Map();
 const confirmedAltByFilename = new Map([
@@ -97,6 +107,8 @@ const catalog = inventory.photos.map((photo, index) => {
     altReviewStatus: reviewedAlt ? 'owner-reviewed' : (manual ? 'editorial-candidate' : 'needs-review'),
     accessibleLabel: `Open frame ${String(index + 1).padStart(3, '0')}${reviewedAlt ? `: ${reviewedAlt}` : (temporaryFacts.length ? ` · ${temporaryFacts.join(' · ')}` : '')}`,
     caption: assignment.publicCaption ?? null,
+    // Public-safe rights projection only. Release status and internal rights notes never leave the private layer.
+    licensing: publicLicensing[assignment.rightsStatus] ?? 'enquiry',
     publicationStatus: assignment.publicationStatus ?? 'UNREVIEWED',
     approvalStatus: manual ? 'editorially-selected' : (reviewedMonochrome ? 'phase7-monochrome-reviewed' : (assignedMonochrome ? 'curatorially-assigned' : (assignment.destinationId ? 'owner-timeline-assigned' : 'unassigned')))
   };

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { publishedFieldNotes } from '../../data/field-notes';
+import catalogData from '../../../public/data/photo-catalog.json';
+
+// The index exists only once there is something to index. A plain index.astro would build
+// unconditionally and ship an empty section, so this is a catch-all whose only path is the
+// bare route — and it emits nothing at all while no note is published.
+export function getStaticPaths() {
+  return publishedFieldNotes().length > 0 ? [{ params: { page: undefined } }] : [];
+}
+
+const notes = publishedFieldNotes();
+const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]));
+---
+
+<BaseLayout
+  title="Field Notes — Elsewhere"
+  description="Written from the road: real places, practical detail, and the photographs made there."
+>
+  <SiteHeader />
+  <main id="main" class="prose-page">
+    <header class="prose-hero">
+      <span class="memory-mark" aria-hidden="true"></span>
+      <p class="prose-kicker">Field Notes</p>
+      <h1>Written on<br />the way.</h1>
+      <p class="prose-lede">Places actually visited, described honestly, with the photographs made while standing there.</p>
+    </header>
+
+    <section class="field-note-index" aria-label="Field notes">
+      {notes.map((note) => {
+        const hero = note.heroPhotoId ? photosById.get(note.heroPhotoId) : null;
+        return (
+          <a href={`/field-notes/${note.slug}/`} data-analytics-event="field_note_open" data-analytics-context={note.slug}>
+            {hero && <img src={hero.thumbnail} width={hero.width} height={hero.height} alt={hero.altText} loading="lazy" decoding="async" />}
+            <div>
+              <h2>{note.title}</h2>
+              <p>{note.summary}</p>
+            </div>
+          </a>
+        );
+      })}
+    </section>
+  </main>
+  <SiteFooter />
+</BaseLayout>

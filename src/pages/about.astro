@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import EnquiryAction from '../components/EnquiryAction.astro';
+import { business } from '../config/site';
+import catalogData from '../../public/data/photo-catalog.json';
+import destinationData from '../../data/destinations.json';
+import cirquePortrait from '../assets/photos/cirque-portrait.jpg';
+import handShell from '../assets/photos/hand-shell.jpg';
+
+// Every number on this page is read from the archive rather than written by hand.
+const publicPhotographs = catalogData.count;
+const countries = [...new Set(destinationData.destinations.filter((destination) => destination.confirmedPhotoCount > 0).map((destination) => destination.country))];
+const years = [...new Set(catalogData.photos.map((photo) => photo.year).filter(Boolean))].sort();
+const span = `${years[0]}—${years.at(-1) === new Date().getFullYear() ? 'ongoing' : years.at(-1)}`;
+---
+
+<BaseLayout
+  title="About Elsewhere"
+  description="Why this archive exists, how it is edited, and how to work with the photographer behind it."
+  image="/social/about.jpg"
+  imageAlt="Deep green ridges beneath a gathering field of clouds"
+>
+  <SiteHeader />
+  <main id="main" class="prose-page">
+    <header class="prose-hero">
+      <span class="memory-mark" aria-hidden="true"></span>
+      <p class="prose-kicker">About</p>
+      <h1>A record of<br />attention.</h1>
+      <p class="prose-lede">ELSEWHERE is an independent visual publication. One person, one camera, one continuous journey — edited slowly, and published only when a photograph earns it.</p>
+    </header>
+
+    <section class="prose-body" aria-label="About the publication">
+      <div class="prose-column">
+        <h2>Why it exists</h2>
+        <p>Most travel photography disappears into feeds. It is compressed, captioned, ranked, and forgotten within a day. This archive was built to do the opposite: to hold photographs still long enough to be looked at.</p>
+        <p>It is not a guide and not a portfolio. It is a record of what a place actually felt like to move through — weather, distance, gesture, the light at the end of an ordinary afternoon.</p>
+
+        <h2>How it is edited</h2>
+        <p>The archive and the edit are two different things. The Archive is depth: every photograph considered worth keeping. Home, Destinations and the collections are the edit: a much smaller sequence, ordered by hand.</p>
+        <p>Places are only named when they are actually known. Where the record is uncertain, it stays unassigned rather than guessed. Photographs the photographer has withdrawn stay withdrawn permanently.</p>
+
+        <h2>What is here</h2>
+        <p><strong>{publicPhotographs}</strong> published photographs, {span}, across {countries.length} countries. The archive behind it is larger and continues to be reviewed.</p>
+      </div>
+
+      <figure class="prose-figure" data-photo-reveal>
+        <Image src={cirquePortrait} alt="Deep green ridges beneath a gathering field of clouds" widths={[480, 768, 1200]} sizes="(min-width: 901px) 34vw, 84vw" loading="lazy" />
+        <figcaption>Some places resist categories</figcaption>
+      </figure>
+    </section>
+
+    <section class="prose-aside" aria-labelledby="about-work-title">
+      <figure data-photo-reveal>
+        <Image src={handShell} alt="A small spiral shell resting in an open hand" widths={[480, 768, 1200]} sizes="(min-width: 901px) 40vw, 88vw" loading="lazy" />
+      </figure>
+      <div>
+        <span class="memory-mark" aria-hidden="true"></span>
+        <h2 id="about-work-title">Working<br />together.</h2>
+        <p>The same eye that made this archive is available for commissioned work — photography, visual storytelling, and image-led digital experiences. That side of the practice lives in the Studio.</p>
+        <p>Individual photographs from the archive may also be licensed. Availability depends on the rights held for each frame and is confirmed on request.</p>
+        <p class="prose-links">
+          <a class="editorial-link" href="/studio/" data-analytics-event="studio_open" data-analytics-context="about">Elsewhere Studio <span aria-hidden="true">→</span></a>
+          <a class="editorial-link" href="/licensing/" data-analytics-event="licensing_open" data-analytics-context="about">Licensing <span aria-hidden="true">→</span></a>
+        </p>
+      </div>
+    </section>
+
+    {business.enquiriesEnabled && (
+      <section class="prose-contact" aria-labelledby="about-contact-title">
+        <h2 id="about-contact-title">Get in touch</h2>
+        <p>Project enquiries, licensing questions, editorial requests, and print interest all arrive in the same place.</p>
+        <EnquiryAction type="studio" label="Start a conversation" context="about" class="is-large" />
+      </section>
+    )}
+  </main>
+  <SiteFooter />
+</BaseLayout>

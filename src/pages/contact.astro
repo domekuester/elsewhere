@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { business } from '../config/site';
+
+// One form, several intents. There is no server endpoint: the form composes a message to a
+// verified address, so there is no request handler to attack and no data held in transit.
+// The upgrade path to a hosted form provider is documented in docs/PHASE-9-BUSINESS-ARCHITECTURE.md.
+const enabled = business.enquiriesEnabled;
+---
+
+<BaseLayout
+  title="Contact — Elsewhere"
+  description="Project enquiries, photography licensing, editorial requests and print interest."
+  image="/social/contact.jpg"
+  imageAlt="A cobalt wake folding back into open water"
+  robots={enabled ? 'index, follow, max-image-preview:large' : 'noindex, nofollow'}
+>
+  <SiteHeader />
+  <main id="main" class="prose-page contact-page">
+    <header class="prose-hero">
+      <span class="memory-mark" aria-hidden="true"></span>
+      <p class="prose-kicker">Contact</p>
+      <h1>Start a<br />conversation.</h1>
+      <p class="prose-lede">Commissions, licensing, editorial requests and print interest all arrive here. A few sentences are enough — the details can follow.</p>
+    </header>
+
+    {enabled ? (
+      <section class="contact-body" aria-labelledby="contact-form-title">
+        <form class="contact-form" data-enquiry-form novalidate>
+          <h2 id="contact-form-title" class="visually-hidden">Enquiry</h2>
+
+          <p class="contact-field">
+            <label for="enquiry-type">What is this about?</label>
+            <select id="enquiry-type" name="type" required>
+              {business.enquiryTypes.map((item) => <option value={item.id}>{item.label}</option>)}
+            </select>
+          </p>
+
+          <p class="contact-field">
+            <label for="enquiry-name">Your name</label>
+            <input id="enquiry-name" name="name" type="text" autocomplete="name" required />
+            <span class="contact-error" data-error-for="enquiry-name" hidden>Please add a name so I know who I am replying to.</span>
+          </p>
+
+          <p class="contact-field">
+            <label for="enquiry-email">Email</label>
+            <input id="enquiry-email" name="email" type="email" autocomplete="email" required />
+            <span class="contact-error" data-error-for="enquiry-email" hidden>Please check this email address.</span>
+          </p>
+
+          <p class="contact-field">
+            <label for="enquiry-organisation">Organisation <em>optional</em></label>
+            <input id="enquiry-organisation" name="organisation" type="text" autocomplete="organization" />
+          </p>
+
+          <p class="contact-field" data-photo-field hidden>
+            <label for="enquiry-photo">Photograph reference</label>
+            <input id="enquiry-photo" name="photo" type="text" readonly />
+            <span class="contact-hint">Carried across from the photograph you opened.</span>
+          </p>
+
+          <p class="contact-field contact-field-message">
+            <label for="enquiry-message">Message</label>
+            <textarea id="enquiry-message" name="message" rows="6" required></textarea>
+            <span class="contact-hint" data-message-hint>For licensing, it helps to include where the photograph will appear, in which territory, and for how long.</span>
+            <span class="contact-error" data-error-for="enquiry-message" hidden>Please add a short message.</span>
+          </p>
+
+          <button class="contact-submit" type="submit"><span>Send enquiry</span><b aria-hidden="true">→</b></button>
+
+          <p class="contact-fallback">
+            This opens your own email application. You can also write directly to
+            <a href={`mailto:${business.contactEmail}`} data-analytics-event="contact_email_click" data-analytics-context="contact">{business.contactEmail}</a>.
+          </p>
+        </form>
+
+        <aside class="contact-aside">
+          <h2>Before you write</h2>
+          <p><b>Licensing.</b> Bring the photograph's three-digit reference if you have it. Rights are checked per frame, so the more specific the use, the faster the answer.</p>
+          <p><b>Commissions.</b> Location, rough dates and what the photographs are for is enough to start.</p>
+          <p><b>Prints.</b> Print editions are not yet released. Note which photograph interests you and you will hear when they are.</p>
+          <p class="prose-links">
+            <a class="editorial-link" href="/studio/" data-analytics-event="studio_open" data-analytics-context="contact">Elsewhere Studio <span aria-hidden="true">→</span></a>
+            <a class="editorial-link" href="/licensing/" data-analytics-event="licensing_open" data-analytics-context="contact">How licensing works <span aria-hidden="true">→</span></a>
+          </p>
+        </aside>
+      </section>
+    ) : (
+      <section class="contact-body" aria-label="Enquiries">
+        <div class="contact-aside">
+          <p>Enquiries are handled by email. The published address is being confirmed and this page will carry it.</p>
+        </div>
+      </section>
+    )}
+  </main>
+  <SiteFooter />
+  <script>
+    import '../scripts/enquiry';
+  </script>
+</BaseLayout>

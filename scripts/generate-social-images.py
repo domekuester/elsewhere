@@ -14,6 +14,10 @@ IMAGES = {
     "people.jpg": ("src/assets/photos/people-vendor.jpg", (0.50, 0.17)),
     "black-and-white.jpg": ("public/assets-derived/archive/0331-P1260122.jpg", (0.50, 0.48)),
     "japan.jpg": ("public/assets-derived/archive/0177-P1230482.jpg", (0.50, 0.58)),
+    "about.jpg": ("src/assets/photos/cirque-portrait.jpg", (0.50, 0.42)),
+    "studio.jpg": ("public/assets-derived/archive/0443-P1270203.jpg", (0.50, 0.42)),
+    "licensing.jpg": ("public/assets-derived/archive/0176-P1230481.jpg", (0.50, 0.45)),
+    "contact.jpg": ("public/assets-derived/archive/0182-P1230662.jpg", (0.50, 0.50)),
 }
 
 for filename, (source, centering) in IMAGES.items():
