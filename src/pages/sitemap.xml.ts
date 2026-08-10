@@ -3,6 +3,7 @@ import type { APIRoute } from 'astro';
 const publicRoutes = [
   '/',
   '/archive/',
+  '/archive/black-and-white/',
   '/people/',
   '/destinations/',
   '/destinations/japan/',

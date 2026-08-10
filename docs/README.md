@@ -30,6 +30,10 @@
 - [Phase 7 scroll feel](PHASE-7-SCROLL-FEEL-REPORT.md)
 - [Phase 7 homepage re-cut](PHASE-7-HOMEPAGE-RE-CUT.md)
 - [Phase 7.5 final master QA](PHASE-7.5-FINAL-MASTER-QA.md)
+- [Phase 8.3 typography finalization](PHASE-8.3-TYPOGRAPHY-FINALIZATION-REPORT.md)
+- [Phase 8.3 visual master pass](PHASE-8.3-FINAL-VISUAL-MASTER-PASS.md)
+- [Phase 8.3 final launch QA](PHASE-8.3-FINAL-LAUNCH-QA.md)
+- [Phase 8.3 before / after](PHASE-8.3-BEFORE-AFTER.md)
 
 ## Earlier creative direction
 

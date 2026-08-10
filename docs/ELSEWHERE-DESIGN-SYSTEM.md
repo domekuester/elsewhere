@@ -16,13 +16,13 @@ Colors are not distributed evenly. Dark and light chapters control pacing; photo
 
 ## Typography
 
-The preview uses a deliberately dependency-free system stack while final font licensing is unresolved:
+The production system uses self-hosted Barlow Condensed Regular and Literata Regular/Italic under the SIL Open Font License 1.1:
 
-- Display: condensed modern sans for architectural chapter language.
-- Editorial: old-style serif for memory, story, and destination names.
-- UI: modern humanist sans for navigation, metadata, captions, and explanatory copy.
+- Display: Barlow Condensed for architectural chapter language.
+- Editorial: Literata for memory, story, wordmarks, and destination names.
+- UI: a cross-platform native sans stack for navigation, metadata, captions, and explanatory copy.
 
-Display type is uppercase with tight leading and careful line breaks. Editorial text carries warmth. UI text never drops below readable caption size. A production font decision should preserve these roles rather than merely replace names.
+Display type is uppercase with tight leading and careful line breaks. Literata carries warmth without becoming decorative. Only the used 400 weight and true italic are shipped; the display face and hero italic are preloaded, while regular Literata loads when needed.
 
 ## Spacing and composition
 

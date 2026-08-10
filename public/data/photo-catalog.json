@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-10T07:37:34.115Z",
+  "generatedAt": "2026-08-10T09:19:50.810Z",
   "count": 500,
   "privacy": "Public-safe catalog. Exact coordinates, private notes, source paths, and private photographs are intentionally excluded.",
   "photos": [
@@ -1458,7 +1458,7 @@
       "year": 2024,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "stone grey",
       "visualWorlds": [
         "black-and-white"
@@ -1484,7 +1484,7 @@
       "accessibleLabel": "Open frame 045 · Thailand · portrait · 2024",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "curatorially-assigned"
     },
     {
       "id": "photo-0046",
@@ -19155,9 +19155,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Thailand",
       "destinationId": "thailand",
@@ -19179,7 +19181,7 @@
       "accessibleLabel": "Open frame 531 · Thailand · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0532",
@@ -19196,9 +19198,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Thailand",
       "destinationId": "thailand",
@@ -19220,7 +19224,7 @@
       "accessibleLabel": "Open frame 532 · Thailand · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0533",
@@ -19280,9 +19284,11 @@
       "year": 2024,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Malaysia",
       "destinationId": "malaysia",
@@ -19304,7 +19310,7 @@
       "accessibleLabel": "Open frame 534 · Malaysia · landscape · 2024",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0535",
@@ -19321,9 +19327,11 @@
       "year": 2024,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": null,
       "destinationId": null,
@@ -19345,7 +19353,7 @@
       "accessibleLabel": "Open frame 535 · portrait · 2024",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "unassigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0536",
@@ -19362,9 +19370,11 @@
       "year": 2024,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Laos",
       "destinationId": "laos",
@@ -19386,7 +19396,7 @@
       "accessibleLabel": "Open frame 536 · Laos · portrait · 2024",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0537",
@@ -19446,9 +19456,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Thailand",
       "destinationId": "thailand",
@@ -19470,7 +19482,7 @@
       "accessibleLabel": "Open frame 538 · Thailand · landscape · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0539",
@@ -19487,9 +19499,11 @@
       "year": 2025,
       "camera": null,
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Phu Quoc",
       "destinationId": "phu-quoc",
@@ -19511,7 +19525,7 @@
       "accessibleLabel": "Open frame 539 · Phu Quoc · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0540",
@@ -19528,9 +19542,11 @@
       "year": 2024,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Malaysia",
       "destinationId": "malaysia",
@@ -19552,7 +19568,7 @@
       "accessibleLabel": "Open frame 540 · Malaysia · portrait · 2024",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0541",
@@ -19569,9 +19585,11 @@
       "year": 2024,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Malaysia",
       "destinationId": "malaysia",
@@ -19593,7 +19611,7 @@
       "accessibleLabel": "Open frame 541 · Malaysia · portrait · 2024",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0542",
@@ -19610,9 +19628,11 @@
       "year": 2024,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": null,
       "destinationId": null,
@@ -19634,7 +19654,7 @@
       "accessibleLabel": "Open frame 542 · portrait · 2024",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "unassigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0544",
@@ -19651,9 +19671,11 @@
       "year": 2024,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Thailand",
       "destinationId": "thailand",
@@ -19675,7 +19697,7 @@
       "accessibleLabel": "Open frame 544 · Thailand · portrait · 2024",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0547",
@@ -19692,9 +19714,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Malaysia",
       "destinationId": "malaysia",
@@ -19716,7 +19740,7 @@
       "accessibleLabel": "Open frame 547 · Malaysia · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0549",
@@ -19733,9 +19757,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -19757,7 +19783,7 @@
       "accessibleLabel": "Open frame 549 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0550",
@@ -19774,9 +19800,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -19798,7 +19826,7 @@
       "accessibleLabel": "Open frame 550 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0557",
@@ -19815,9 +19843,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -19839,7 +19869,7 @@
       "accessibleLabel": "Open frame 557 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0558",
@@ -19856,9 +19886,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -19880,7 +19912,7 @@
       "accessibleLabel": "Open frame 558 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0559",
@@ -19940,9 +19972,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -19964,7 +19998,7 @@
       "accessibleLabel": "Open frame 562 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0563",
@@ -19981,9 +20015,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -20005,7 +20041,7 @@
       "accessibleLabel": "Open frame 563 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0564",
@@ -20022,9 +20058,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -20046,7 +20084,7 @@
       "accessibleLabel": "Open frame 564 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0565",
@@ -20106,9 +20144,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -20130,7 +20170,7 @@
       "accessibleLabel": "Open frame 566 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0569",
@@ -20147,9 +20187,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -20171,7 +20213,7 @@
       "accessibleLabel": "Open frame 569 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0572",
@@ -20188,9 +20230,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -20212,7 +20256,7 @@
       "accessibleLabel": "Open frame 572 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0573",
@@ -20229,9 +20273,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -20253,7 +20299,7 @@
       "accessibleLabel": "Open frame 573 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0574",
@@ -20313,9 +20359,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -20337,7 +20385,7 @@
       "accessibleLabel": "Open frame 576 · Japan · landscape · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0578",
@@ -20440,9 +20488,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -20464,7 +20514,7 @@
       "accessibleLabel": "Open frame 583 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0584",
@@ -20481,9 +20531,11 @@
       "year": 2025,
       "camera": "DMC-FZ330",
       "lens": null,
-      "colorMode": null,
+      "colorMode": "black-and-white",
       "dominantColor": "black",
-      "visualWorlds": [],
+      "visualWorlds": [
+        "black-and-white"
+      ],
       "peoplePresent": null,
       "destination": "Japan",
       "destinationId": "japan",
@@ -20505,7 +20557,7 @@
       "accessibleLabel": "Open frame 584 · Japan · portrait · 2025",
       "caption": null,
       "publicationStatus": "UNREVIEWED",
-      "approvalStatus": "owner-timeline-assigned"
+      "approvalStatus": "phase7-monochrome-reviewed"
     },
     {
       "id": "photo-0585",

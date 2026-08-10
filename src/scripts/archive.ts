@@ -1,7 +1,7 @@
 interface CatalogPhoto {
   id: string; index: number; thumbnail: string; archiveImage: string; viewerImage: string; width: number; height: number;
   orientation: string | null; year: number | null; visualWorlds: string[]; destination: string | null; destinationId: string | null; destinationSlug: string | null; destinationPublished: boolean;
-  featured: boolean; editorialOrder: number | null; role: string; altText: string; accessibleLabel: string;
+  featured: boolean; editorialOrder: number | null; role: string; altText: string; accessibleLabel: string; caption: string | null;
 }
 
 const root = document.querySelector<HTMLElement>('[data-archive-root]');
@@ -29,12 +29,14 @@ if (root) {
   let catalog: CatalogPhoto[] = [];
   let filtered: CatalogPhoto[] = [];
   let shown = pageSize;
-  let activeWorld = 'all';
+  let activeWorld = root.dataset.initialWorld ?? 'all';
   let activeIndex = 0;
   let touchStartX = 0;
   let viewerFocusOrigin: HTMLElement | null = null;
   let viewerScrollY = 0;
   let imageRequest = 0;
+  let idleTimer = 0;
+  let closeTimer = 0;
 
   const derivativeWidth = (photo: CatalogPhoto, longEdge: number) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
   const archiveSizes = (photo: CatalogPhoto) => ['hero', 'anchor'].includes(photo.role) ? '(min-width: 901px) 42vw, (min-width: 561px) 58vw, 88vw' : photo.orientation === 'landscape' ? '(min-width: 901px) 34vw, (min-width: 561px) 50vw, 100vw' : '(min-width: 901px) 25vw, (min-width: 561px) 50vw, 88vw';
@@ -42,8 +44,24 @@ if (root) {
   const frameMarkup = (photo: CatalogPhoto) => `
     <button class="archive-frame is-${photo.orientation ?? 'unknown'}${['hero', 'anchor'].includes(photo.role) ? ' is-selected' : ''}" type="button" data-photo-id="${photo.id}" aria-label="${photo.accessibleLabel.replaceAll('"', '&quot;')}">
       <span class="archive-image"><img src="${photo.thumbnail}" srcset="${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w" sizes="${archiveSizes(photo)}" width="${photo.width}" height="${photo.height}" loading="lazy" decoding="async" alt="${photo.altText.replaceAll('"', '&quot;')}"></span>
-      <span class="archive-label"><b>${String(photo.index).padStart(3, '0')}</b><span>${photo.year ?? 'Undated'}</span></span>
+      <span class="archive-label" aria-hidden="true"><b>${String(photo.index).padStart(3, '0')}</b><span>${photo.year ?? 'Undated'}</span></span>
     </button>`;
+
+  const preloadAdjacent = () => {
+    if (filtered.length < 2) return;
+    [-1, 1].forEach((offset) => {
+      const adjacent = filtered[(activeIndex + offset + filtered.length) % filtered.length];
+      if (adjacent) new Image().src = adjacent.viewerImage;
+    });
+  };
+
+  const wakeViewer = () => {
+    viewer.classList.remove('is-idle');
+    window.clearTimeout(idleTimer);
+    if (viewer.open && !matchMedia('(pointer: coarse)').matches) {
+      idleTimer = window.setTimeout(() => viewer.classList.add('is-idle'), 2600);
+    }
+  };
 
   const render = () => {
     const visible = filtered.slice(0, shown);
@@ -95,8 +113,9 @@ if (root) {
     }
     viewerCurrent.textContent = String(activeIndex + 1).padStart(3, '0');
     viewerTotal.textContent = String(filtered.length).padStart(3, '0');
-    const facts = [photo.year, ...photo.visualWorlds.map((world) => world.replaceAll('-', ' ')), photo.destination].filter(Boolean);
-    viewerMeta.textContent = facts.length ? facts.join(' · ') : 'Unclassified archive frame';
+    const facts = [photo.caption, photo.destination, photo.year].filter(Boolean);
+    viewerMeta.textContent = facts.join(' · ');
+    viewerMeta.closest<HTMLElement>('.viewer-caption')!.classList.toggle('has-no-meta', facts.length === 0 && !photo.destinationPublished);
     viewerDestination.hidden = !photo.destinationPublished;
     if (photo.destinationPublished && photo.destinationSlug) {
       viewerDestination.href = `/destinations/${photo.destinationSlug}/`;
@@ -120,6 +139,8 @@ if (root) {
         ], { duration: 420, easing: 'cubic-bezier(.16, 1, .3, 1)' });
       }
     }
+    preloadAdjacent();
+    wakeViewer();
   };
 
   fetch('/data/photo-catalog.json').then((response) => response.json()).then((data) => {
@@ -127,7 +148,7 @@ if (root) {
     const selected = source.filter((photo) => photo.featured).sort((a, b) => Number(a.editorialOrder) - Number(b.editorialOrder));
     const depth = source.filter((photo) => !photo.featured);
     catalog = Array.from({ length: Math.max(selected.length, depth.length) }, (_, index) => [selected[index], depth[index]]).flat().filter(Boolean) as CatalogPhoto[];
-    filtered = catalog;
+    filtered = activeWorld === 'all' ? catalog : catalog.filter((photo) => photo.visualWorlds.includes(activeWorld));
     const requestedDestination = new URLSearchParams(location.search).get('destination');
     if (requestedDestination && [...destinationSelect.options].some((option) => option.value === requestedDestination)) {
       destinationSelect.value = requestedDestination;
@@ -151,10 +172,24 @@ if (root) {
   orientationSelect.addEventListener('change', applyFilters);
   destinationSelect.addEventListener('change', applyFilters);
   root.querySelector('[data-random-frame]')?.addEventListener('click', () => showViewer(Math.floor(Math.random() * filtered.length)));
-  viewer.querySelector('[data-viewer-close]')?.addEventListener('click', () => { track('viewer_close'); viewer.close(); });
+  const closeViewer = () => {
+    if (!viewer.open || viewer.classList.contains('is-closing')) return;
+    track('viewer_close');
+    window.clearTimeout(idleTimer);
+    viewer.classList.remove('is-idle');
+    if (reduceMotion.matches) viewer.close();
+    else {
+      viewer.classList.add('is-closing');
+      closeTimer = window.setTimeout(() => viewer.close(), 160);
+    }
+  };
+  viewer.querySelector('[data-viewer-close]')?.addEventListener('click', closeViewer);
   viewer.querySelector('[data-viewer-previous]')?.addEventListener('click', () => { track('viewer_previous'); showViewer(activeIndex - 1); });
   viewer.querySelector('[data-viewer-next]')?.addEventListener('click', () => { track('viewer_next'); showViewer(activeIndex + 1); });
   viewer.addEventListener('close', () => {
+    window.clearTimeout(closeTimer);
+    window.clearTimeout(idleTimer);
+    viewer.classList.remove('is-closing', 'is-idle');
     delete document.documentElement.dataset.viewerOpen;
     document.body.style.removeProperty('position');
     document.body.style.removeProperty('top');
@@ -166,8 +201,12 @@ if (root) {
     viewerFocusOrigin?.focus({ preventScroll: true });
     viewerFocusOrigin = null;
   });
-  viewer.addEventListener('click', (event) => { if (event.target === viewer) viewer.close(); });
+  viewer.addEventListener('cancel', (event) => { event.preventDefault(); closeViewer(); });
+  viewer.addEventListener('click', (event) => { wakeViewer(); if (event.target === viewer) closeViewer(); });
+  viewer.addEventListener('pointermove', wakeViewer, { passive: true });
   viewer.addEventListener('keydown', (event) => {
+    wakeViewer();
+    if (event.key === 'Escape') { event.preventDefault(); closeViewer(); }
     if (event.key === 'ArrowLeft') showViewer(activeIndex - 1);
     if (event.key === 'ArrowRight') showViewer(activeIndex + 1);
   });

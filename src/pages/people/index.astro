@@ -3,7 +3,6 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
-import worker from '../../assets/photos/people-worker.jpg';
 import vendor from '../../assets/photos/people-vendor.jpg';
 import motorcycle from '../../assets/photos/people-motorcycle.jpg';
 import boxingGuard from '../../assets/photos/boxing-guard.jpg';
@@ -23,7 +22,7 @@ import boxingGuard from '../../assets/photos/boxing-guard.jpg';
 
     <section class="encounter-sequence" aria-labelledby="encounter-title">
       <header><h2 id="encounter-title">Encounters,<br />not profiles.</h2><p>Names and places will appear only when known and appropriate. Until then, the photograph remains without invented biography.</p></header>
-      <figure class="encounter encounter-worker" data-photo-reveal><Image src={worker} alt="A worker looks across a counter during a conversation" widths={[480, 768, 1200]} sizes="(min-width: 901px) 38vw, 88vw" loading="lazy" /><figcaption>Work · place unconfirmed</figcaption></figure>
+      <figure class="encounter encounter-worker" data-photo-reveal><img src="/assets-derived/thumbnails/0045-IMG_8992.jpg" srcset="/assets-derived/thumbnails/0045-IMG_8992.jpg 720w, /assets-derived/archive/0045-IMG_8992.jpg 1350w" sizes="(min-width: 901px) 38vw, 88vw" width="2994" height="3992" alt="A seated craftsperson works beside a window" loading="lazy" decoding="async" /><figcaption>Work · Thailand</figcaption></figure>
       <figure class="encounter encounter-vendor" data-photo-reveal><Image src={boxingGuard} alt="A boxer looks past raised red gloves during practice" widths={[480, 768, 1000]} sizes="(min-width: 901px) 25vw, 68vw" loading="lazy" /><figcaption>Guard · place unconfirmed</figcaption></figure>
       <figure class="encounter encounter-motorcycle" data-photo-reveal><Image src={motorcycle} alt="Two people pause beside a motorcycle on a city street" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 56vw, 100vw" loading="lazy" /><figcaption>Between one place and the next</figcaption></figure>
     </section>

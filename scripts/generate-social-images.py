@@ -13,7 +13,7 @@ IMAGES = {
     "archive.jpg": ("public/assets-derived/archive/0183-P1230676.jpg", (0.50, 0.48)),
     "people.jpg": ("src/assets/photos/people-vendor.jpg", (0.50, 0.17)),
     "black-and-white.jpg": ("public/assets-derived/archive/0331-P1260122.jpg", (0.50, 0.48)),
-    "japan.jpg": ("public/assets-derived/archive/0180-P1230620.jpg", (0.50, 0.46)),
+    "japan.jpg": ("public/assets-derived/archive/0177-P1230482.jpg", (0.50, 0.58)),
 }
 
 for filename, (source, centering) in IMAGES.items():

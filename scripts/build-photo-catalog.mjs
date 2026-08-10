@@ -33,6 +33,9 @@ const catalog = inventory.photos.map((photo, index) => {
   const targetThumb = path.join(publicThumbDir, thumbName);
   const manual = curated.get(photo.filename.toLowerCase());
   const assignment = existingCuration.assignments?.[photo.id] ?? {};
+  const reviewedMonochrome = photo.editorial?.categories?.includes('black-and-white-candidate')
+    && photo.editorial?.notes?.includes('visually reviewed in Phase 7');
+  const assignedMonochrome = assignment.visualWorlds?.includes('black-and-white');
   const publicAllowed = !publicExclusions.has(photo.id) && !['private', 'do-not-publish'].includes(assignment.visibility ?? 'hold');
   const archiveName = `${String(index + 1).padStart(4, '0')}-${path.parse(photo.filename).name}.jpg`;
   const targetArchive = path.join(root, 'public/assets-derived/archive', archiveName);
@@ -44,7 +47,9 @@ const catalog = inventory.photos.map((photo, index) => {
     if (fs.existsSync(targetViewer)) fs.unlinkSync(targetViewer);
   }
   const destination = destinations.get(assignment.destinationId ?? assignment.destination);
-  const visualWorlds = assignment.visualWorlds?.length ? assignment.visualWorlds : (manual?.worlds ?? []);
+  const visualWorlds = assignment.visualWorlds?.length
+    ? assignment.visualWorlds
+    : (manual?.worlds ?? (reviewedMonochrome ? ['black-and-white'] : []));
   const year = photo.capture?.date ? Number(photo.capture.date.slice(0, 4)) : null;
   const reviewedAlt = (typeof assignment.altText === 'string' ? assignment.altText.trim() : '') || confirmedAltByFilename.get(photo.filename.toLowerCase()) || '';
   const temporaryFacts = [destination?.name, photo.orientation, Number.isFinite(year) ? String(year) : null].filter(Boolean);
@@ -64,7 +69,7 @@ const catalog = inventory.photos.map((photo, index) => {
     year: Number.isFinite(year) ? year : null,
     camera: photo.capture?.cameraModel ?? null,
     lens: photo.capture?.lens === 'N/A' ? null : (photo.capture?.lens ?? null),
-    colorMode: manual?.colorMode ?? null,
+    colorMode: manual?.colorMode ?? ((reviewedMonochrome || assignedMonochrome) ? 'black-and-white' : null),
     dominantColor: photo.editorial?.dominantColors?.[0] ?? null,
     visualWorlds,
     peoplePresent: manual?.peoplePresent ?? (assignment.peopleCandidate ? true : null),
@@ -88,7 +93,7 @@ const catalog = inventory.photos.map((photo, index) => {
     accessibleLabel: `Open frame ${String(index + 1).padStart(3, '0')}${reviewedAlt ? `: ${reviewedAlt}` : (temporaryFacts.length ? ` · ${temporaryFacts.join(' · ')}` : '')}`,
     caption: assignment.publicCaption ?? null,
     publicationStatus: assignment.publicationStatus ?? 'UNREVIEWED',
-    approvalStatus: manual ? 'editorially-selected' : (assignment.destinationId ? 'owner-timeline-assigned' : 'unassigned')
+    approvalStatus: manual ? 'editorially-selected' : (reviewedMonochrome ? 'phase7-monochrome-reviewed' : (assignedMonochrome ? 'curatorially-assigned' : (assignment.destinationId ? 'owner-timeline-assigned' : 'unassigned')))
   };
 });
 

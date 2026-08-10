@@ -5,7 +5,10 @@ import SiteFooter from '../../components/SiteFooter.astro';
 import PhotoViewer from '../../components/PhotoViewer.astro';
 import catalogData from '../../../public/data/photo-catalog.json';
 
-const catalog = catalogData.photos;
+const { initialWorld = 'all' } = Astro.props;
+const isBlackAndWhite = initialWorld === 'black-and-white';
+const completeCatalog = catalogData.photos;
+const catalog = isBlackAndWhite ? completeCatalog.filter((photo) => photo.visualWorlds.includes('black-and-white')) : completeCatalog;
 const selectedIds = new Set(catalog.filter((photo) => photo.featured).map((photo) => photo.id));
 const selected = catalog.filter((photo) => selectedIds.has(photo.id)).sort((a, b) => Number(a.editorialOrder) - Number(b.editorialOrder));
 const depth = catalog.filter((photo) => !selectedIds.has(photo.id));
@@ -21,22 +24,25 @@ const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orienta
 const archiveSizes = (photo) => ['hero', 'anchor'].includes(photo.role) ? '(min-width: 901px) 42vw, (min-width: 561px) 58vw, 88vw' : photo.orientation === 'landscape' ? '(min-width: 901px) 34vw, (min-width: 561px) 50vw, 100vw' : '(min-width: 901px) 25vw, (min-width: 561px) 50vw, 88vw';
 ---
 
-<BaseLayout title="Archive — Elsewhere" description={`A living photographic index of ${catalog.length} public frames, encountered slowly.`} image="/social/archive.jpg" imageAlt="Small human figures beside forceful moving water" motion={false}>
-  <SiteHeader />
-  <main id="main" class="archive-page" data-archive-root>
+<BaseLayout title={isBlackAndWhite ? 'Black & White Archive — Elsewhere' : 'Archive — Elsewhere'} description={isBlackAndWhite ? `${catalog.length} publicly approved monochrome photographs from the Elsewhere archive.` : `A living photographic index of ${catalog.length} public frames, encountered slowly.`} image={isBlackAndWhite ? '/social/black-and-white.jpg' : '/social/archive.jpg'} imageAlt={isBlackAndWhite ? 'A breakwater lighthouse beneath a long grey sky' : 'Small human figures beside forceful moving water'} motion={false}>
+  <SiteHeader archiveHref={isBlackAndWhite ? '/archive/black-and-white/' : '/archive/'} />
+  <main id="main" class:list={['archive-page', isBlackAndWhite && 'archive-page-monochrome']} data-archive-root data-initial-world={initialWorld}>
     <header class="archive-intro">
       <p class="archive-kicker"><span></span> Photographic index</p>
-      <h1>Archive</h1>
+      <h1>{isBlackAndWhite ? <><em>Black &amp; White</em><span>Archive</span></> : 'Archive'}</h1>
       <div class="archive-intro-meta">
-        <p>A deeper way through the work. Place, year, and form open different paths through the photographs.</p>
+        <p>{isBlackAndWhite ? 'The deeper monochrome body of work. Gesture, weather, distance, and form encountered beyond the selected edit.' : 'A deeper way through the work. Place, year, and form open different paths through the photographs.'}</p>
         <p><strong>{catalog.length}</strong> frames<br /><span data-visible-count>{opening.length} in view</span></p>
       </div>
     </header>
 
     <section class="archive-controls" aria-label="Archive filters">
       <div class="archive-filter-group" data-world-filters>
-        <button class="is-active" type="button" data-filter-world="all" aria-pressed="true">All</button>
-        {availableWorlds.map((world) => <button type="button" data-filter-world={world} aria-pressed="false">{world.replaceAll('-', ' ')}</button>)}
+        {!isBlackAndWhite && <button class="is-active" type="button" data-filter-world="all" aria-pressed="true">All</button>}
+        {!isBlackAndWhite && availableWorlds.map((world) => world === 'black-and-white'
+          ? <a href="/archive/black-and-white/">black and white</a>
+          : <button type="button" data-filter-world={world} aria-pressed="false">{world.replaceAll('-', ' ')}</button>)}
+        {isBlackAndWhite && <span class="archive-context">Monochrome index</span>}
       </div>
       <label>Year
         <select data-filter-year>
@@ -64,7 +70,7 @@ const archiveSizes = (photo) => ['hero', 'anchor'].includes(photo.role) ? '(min-
       {opening.map((photo) => (
         <button class:list={['archive-frame', `is-${photo.orientation}`, ['hero', 'anchor'].includes(photo.role) && 'is-selected']} type="button" data-photo-id={photo.id} aria-label={photo.accessibleLabel}>
           <span class="archive-image"><img src={photo.thumbnail} srcset={`${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w`} sizes={archiveSizes(photo)} width={photo.width} height={photo.height} loading="lazy" decoding="async" alt={photo.altText} /></span>
-          <span class="archive-label"><b>{String(photo.index).padStart(3, '0')}</b><span>{photo.year ?? 'Undated'}</span></span>
+          <span class="archive-label" aria-hidden="true"><b>{String(photo.index).padStart(3, '0')}</b><span>{photo.year ?? 'Undated'}</span></span>
         </button>
       ))}
     </section>
@@ -77,7 +83,7 @@ const archiveSizes = (photo) => ['hero', 'anchor'].includes(photo.role) ? '(min-
     <noscript><p class="archive-noscript">JavaScript is required for incremental archive loading and the immersive viewer. The opening edit remains available above.</p></noscript>
   </main>
   <PhotoViewer />
-  <SiteFooter />
+  <SiteFooter archiveHref={isBlackAndWhite ? '/archive/black-and-white/' : '/archive/'} />
   <script>
     import '../../scripts/archive';
   </script>
