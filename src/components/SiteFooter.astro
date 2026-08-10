@@ -10,6 +10,6 @@ import { site } from '../config/site';
     <a class="footer-wordmark" href="/#main">{site.name}</a>
     <p>A visual archive of the world as experienced by one person.</p>
     <nav aria-label="Footer">{site.navigation.map((item) => <a href={item.href} data-analytics-event="navigation_open" data-analytics-context={`footer:${item.label.toLowerCase()}`}>{item.label}</a>)}</nav>
-    <small>Original photography throughout. Working title.</small>
+    <small>Original photography throughout.</small>
   </div>
 </footer>

@@ -16,7 +16,7 @@ const destinations = order.map((id) => destinationData.destinations.find((destin
       <li>
         <span class="destination-number">{String(index + 1).padStart(2, '0')}</span>
         {destination.publicationStatus === 'published' ? <a href={`/destinations/${destination.slug}/`}><strong>{destination.name}</strong></a> : <strong>{destination.name}</strong>}
-        <small>{destination.confirmedPhotoCount} confirmed frames · {destination.publicationStatus === 'published' ? 'chapter open' : 'in edit'}</small>
+        <small>{destination.confirmedPhotoCount} photographs{destination.publicationStatus === 'published' ? ' · chapter open' : ''}</small>
       </li>
     ))}
   </ol>

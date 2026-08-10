@@ -1,7 +1,7 @@
 interface CatalogPhoto {
   id: string; index: number; thumbnail: string; archiveImage: string; viewerImage: string; width: number; height: number;
   orientation: string | null; year: number | null; visualWorlds: string[]; destination: string | null; destinationId: string | null; destinationSlug: string | null; destinationPublished: boolean;
-  featured: boolean; editorialOrder: number | null; role: string; altText: string;
+  featured: boolean; editorialOrder: number | null; role: string; altText: string; accessibleLabel: string;
 }
 
 const root = document.querySelector<HTMLElement>('[data-archive-root]');
@@ -32,13 +32,16 @@ if (root) {
   let activeWorld = 'all';
   let activeIndex = 0;
   let touchStartX = 0;
-  let viewerOrigin: HTMLElement | null = null;
+  let viewerFocusOrigin: HTMLElement | null = null;
   let viewerScrollY = 0;
   let imageRequest = 0;
 
+  const derivativeWidth = (photo: CatalogPhoto, longEdge: number) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
+  const archiveSizes = (photo: CatalogPhoto) => ['hero', 'anchor'].includes(photo.role) ? '(min-width: 901px) 42vw, (min-width: 561px) 58vw, 88vw' : photo.orientation === 'landscape' ? '(min-width: 901px) 34vw, (min-width: 561px) 50vw, 100vw' : '(min-width: 901px) 25vw, (min-width: 561px) 50vw, 88vw';
+
   const frameMarkup = (photo: CatalogPhoto) => `
-    <button class="archive-frame is-${photo.orientation ?? 'unknown'}${['hero', 'anchor'].includes(photo.role) ? ' is-selected' : ''}" type="button" data-photo-id="${photo.id}" aria-label="Open frame ${photo.index}">
-      <span class="archive-image"><img src="${photo.thumbnail}" width="${photo.width}" height="${photo.height}" loading="lazy" decoding="async" alt="${photo.altText.replaceAll('"', '&quot;')}"></span>
+    <button class="archive-frame is-${photo.orientation ?? 'unknown'}${['hero', 'anchor'].includes(photo.role) ? ' is-selected' : ''}" type="button" data-photo-id="${photo.id}" aria-label="${photo.accessibleLabel.replaceAll('"', '&quot;')}">
+      <span class="archive-image"><img src="${photo.thumbnail}" srcset="${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w" sizes="${archiveSizes(photo)}" width="${photo.width}" height="${photo.height}" loading="lazy" decoding="async" alt="${photo.altText.replaceAll('"', '&quot;')}"></span>
       <span class="archive-label"><b>${String(photo.index).padStart(3, '0')}</b><span>${photo.year ?? 'Undated'}</span></span>
     </button>`;
 
@@ -65,7 +68,7 @@ if (root) {
     render();
   };
 
-  const showViewer = (index: number, origin?: HTMLElement) => {
+  const showViewer = (index: number, focusOrigin?: HTMLElement, geometryOrigin?: HTMLElement) => {
     activeIndex = (index + filtered.length) % filtered.length;
     const photo = filtered[activeIndex];
     if (!photo) return;
@@ -90,8 +93,8 @@ if (root) {
       viewerImage.addEventListener('load', () => viewerImage.decode().then(revealFullImage).catch(revealFullImage), { once: true });
       viewerImage.addEventListener('error', revealFullImage, { once: true });
     }
-    viewerCurrent.textContent = String(activeIndex + 1).padStart(2, '0');
-    viewerTotal.textContent = String(filtered.length).padStart(2, '0');
+    viewerCurrent.textContent = String(activeIndex + 1).padStart(3, '0');
+    viewerTotal.textContent = String(filtered.length).padStart(3, '0');
     const facts = [photo.year, ...photo.visualWorlds.map((world) => world.replaceAll('-', ' ')), photo.destination].filter(Boolean);
     viewerMeta.textContent = facts.length ? facts.join(' · ') : 'Unclassified archive frame';
     viewerDestination.hidden = !photo.destinationPublished;
@@ -100,7 +103,7 @@ if (root) {
       viewerDestination.firstChild!.textContent = `Open ${photo.destination} `;
     }
     if (!viewer.open) {
-      viewerOrigin = origin ?? null;
+      viewerFocusOrigin = focusOrigin ?? null;
       viewerScrollY = window.scrollY;
       viewer.showModal();
       viewer.focus({ preventScroll: true });
@@ -109,8 +112,8 @@ if (root) {
       document.body.style.top = `-${viewerScrollY}px`;
       document.body.style.width = '100%';
       track('viewer_open', photo.id);
-      if (origin && !reduceMotion.matches) {
-        const rect = origin.getBoundingClientRect();
+      if (geometryOrigin && !reduceMotion.matches) {
+        const rect = geometryOrigin.getBoundingClientRect();
         viewerStage.animate([
           { clipPath: `inset(${rect.top}px ${innerWidth - rect.right}px ${innerHeight - rect.bottom}px ${rect.left}px)`, transform: 'scale(.985)', opacity: .75 },
           { clipPath: 'inset(0)', transform: 'scale(1)', opacity: 1 }
@@ -136,7 +139,7 @@ if (root) {
     const frame = (event.target as HTMLElement).closest<HTMLElement>('[data-photo-id]');
     if (!frame) return;
     const index = filtered.findIndex((photo) => photo.id === frame.dataset.photoId);
-    showViewer(index, frame.querySelector<HTMLElement>('.archive-image') ?? frame);
+    showViewer(index, frame, frame.querySelector<HTMLElement>('.archive-image') ?? frame);
   });
   loadMore.addEventListener('click', () => { shown += pageSize; render(); track('archive_more', String(shown)); });
   worldButtons.forEach((button) => button.addEventListener('click', () => {
@@ -160,8 +163,8 @@ if (root) {
     viewerImage.removeAttribute('src');
     viewerPreview.removeAttribute('src');
     viewerStage.classList.remove('is-ready');
-    viewerOrigin?.focus({ preventScroll: true });
-    viewerOrigin = null;
+    viewerFocusOrigin?.focus({ preventScroll: true });
+    viewerFocusOrigin = null;
   });
   viewer.addEventListener('click', (event) => { if (event.target === viewer) viewer.close(); });
   viewer.addEventListener('keydown', (event) => {

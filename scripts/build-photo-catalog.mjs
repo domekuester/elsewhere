@@ -16,6 +16,9 @@ const publicExclusions = new Set([
 ]);
 const selectionSource = fs.readFileSync(path.join(root, 'src/data/editorial-selection.ts'), 'utf8');
 const curated = new Map();
+const confirmedAltByFilename = new Map([
+  ['p1260122.jpg', 'A breakwater lighthouse beneath a long grey sky.']
+]);
 let editorialOrder = 0;
 for (const match of selectionSource.matchAll(/\{ filename: '([^']+)', derivative: '([^']+)', role: '([^']+)', world: '([^']+)'[^}]+monochrome: (true|false), peoplePresent: (true|false)/g)) {
   curated.set(match[1].toLowerCase(), { derivative: match[2], role: match[3], worlds: [match[4]], colorMode: match[5] === 'true' ? 'black-and-white' : 'color', peoplePresent: match[6] === 'true', editorialOrder: ++editorialOrder });
@@ -43,6 +46,9 @@ const catalog = inventory.photos.map((photo, index) => {
   const destination = destinations.get(assignment.destinationId ?? assignment.destination);
   const visualWorlds = assignment.visualWorlds?.length ? assignment.visualWorlds : (manual?.worlds ?? []);
   const year = photo.capture?.date ? Number(photo.capture.date.slice(0, 4)) : null;
+  const reviewedAlt = (typeof assignment.altText === 'string' ? assignment.altText.trim() : '') || confirmedAltByFilename.get(photo.filename.toLowerCase()) || '';
+  const temporaryFacts = [destination?.name, photo.orientation, Number.isFinite(year) ? String(year) : null].filter(Boolean);
+  const altText = reviewedAlt || (manual ? `A selected ${manual.worlds[0].replaceAll('-', ' ')} photograph from the Elsewhere archive.` : '');
   return {
     id: photo.id,
     index: index + 1,
@@ -77,7 +83,9 @@ const catalog = inventory.photos.map((photo, index) => {
     featured: Boolean(manual),
     editorialOrder: manual?.editorialOrder ?? null,
     public: publicAllowed,
-    altText: manual ? `A selected ${manual.worlds[0].replaceAll('-', ' ')} photograph from the Elsewhere archive.` : 'An unclassified photograph from the Elsewhere archive.',
+    altText,
+    altReviewStatus: reviewedAlt ? 'owner-reviewed' : (manual ? 'editorial-candidate' : 'needs-review'),
+    accessibleLabel: `Open frame ${String(index + 1).padStart(3, '0')}${reviewedAlt ? `: ${reviewedAlt}` : (temporaryFacts.length ? ` · ${temporaryFacts.join(' · ')}` : '')}`,
     caption: assignment.publicCaption ?? null,
     publicationStatus: assignment.publicationStatus ?? 'UNREVIEWED',
     approvalStatus: manual ? 'editorially-selected' : (assignment.destinationId ? 'owner-timeline-assigned' : 'unassigned')

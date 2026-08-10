@@ -13,8 +13,12 @@ const editorialCatalog = Array.from({ length: Math.max(selected.length, depth.le
 const opening = editorialCatalog.slice(0, 24);
 const years = [...new Set(catalog.map((photo) => photo.year).filter(Boolean))].sort((a, b) => Number(b) - Number(a));
 const coreWorlds = ['people', 'beaches', 'urban', 'jungle', 'ocean', 'black-and-white'];
-const availableWorlds = coreWorlds.filter((world) => catalog.some((photo) => photo.visualWorlds.includes(world)));
+const editorialWorldMinimum = 8;
+const worldCounts = new Map(coreWorlds.map((world) => [world, catalog.filter((photo) => photo.visualWorlds.includes(world)).length]));
+const availableWorlds = coreWorlds.filter((world) => (worldCounts.get(world) ?? 0) >= editorialWorldMinimum);
 const availableDestinations = [...new Map(catalog.filter((photo) => photo.destinationId).map((photo) => [photo.destinationId, { id: photo.destinationId, name: photo.destination }])).values()];
+const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
+const archiveSizes = (photo) => ['hero', 'anchor'].includes(photo.role) ? '(min-width: 901px) 42vw, (min-width: 561px) 58vw, 88vw' : photo.orientation === 'landscape' ? '(min-width: 901px) 34vw, (min-width: 561px) 50vw, 100vw' : '(min-width: 901px) 25vw, (min-width: 561px) 50vw, 88vw';
 ---
 
 <BaseLayout title="Archive — Elsewhere" description={`A living photographic index of ${catalog.length} public frames, encountered slowly.`} image="/social/archive.jpg" imageAlt="Small human figures beside forceful moving water" motion={false}>
@@ -24,7 +28,7 @@ const availableDestinations = [...new Map(catalog.filter((photo) => photo.destin
       <p class="archive-kicker"><span></span> Photographic index</p>
       <h1>Archive</h1>
       <div class="archive-intro-meta">
-        <p>A deeper way through the work. Classification remains incomplete by design; only confirmed editorial assignments are shown.</p>
+        <p>A deeper way through the work. Place, year, and form open different paths through the photographs.</p>
         <p><strong>{catalog.length}</strong> frames<br /><span data-visible-count>{opening.length} in view</span></p>
       </div>
     </header>
@@ -58,8 +62,8 @@ const availableDestinations = [...new Map(catalog.filter((photo) => photo.destin
 
     <section class="archive-field" data-archive-field aria-label="Photographic archive">
       {opening.map((photo) => (
-        <button class:list={['archive-frame', `is-${photo.orientation}`, ['hero', 'anchor'].includes(photo.role) && 'is-selected']} type="button" data-photo-id={photo.id} aria-label={`Open frame ${photo.index}`}>
-          <span class="archive-image"><img src={photo.thumbnail} width={photo.width} height={photo.height} loading="lazy" decoding="async" alt={photo.altText} /></span>
+        <button class:list={['archive-frame', `is-${photo.orientation}`, ['hero', 'anchor'].includes(photo.role) && 'is-selected']} type="button" data-photo-id={photo.id} aria-label={photo.accessibleLabel}>
+          <span class="archive-image"><img src={photo.thumbnail} srcset={`${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w`} sizes={archiveSizes(photo)} width={photo.width} height={photo.height} loading="lazy" decoding="async" alt={photo.altText} /></span>
           <span class="archive-label"><b>{String(photo.index).padStart(3, '0')}</b><span>{photo.year ?? 'Undated'}</span></span>
         </button>
       ))}

@@ -14,6 +14,8 @@ const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]))
 const orderedIds = [destination.heroPhotoId, ...destination.manualOrder.filter((id) => id !== destination.heroPhotoId)].filter(Boolean);
 const sequence = orderedIds.map((id) => photosById.get(id)).filter(Boolean);
 const [hero, ...rest] = sequence;
+const sequenceRoles = ['wide', 'portrait', 'quiet', 'anchor', 'offset', 'closing'];
+const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
 const journey = destination.id === 'japan' ? { dates: '12 May — 27 June 2025', note: 'Country confirmed by the owner’s travel timeline. Cities and regions remain intentionally unassigned.' } : null;
 const altByFilename = {
   'P1230620.jpg': 'A gull approaches a row of outstretched hands above the water.',
@@ -24,7 +26,7 @@ const altByFilename = {
   'P1230481.jpg': 'Pedestrians moving through a dense street scene with layered signs.',
   'P1230676.jpg': 'Small human figures beside forceful moving water.',
   'P1230972.jpg': 'A hand holding a shell in a close, quiet frame.',
-  'P1260122.jpg': 'A solitary figure standing against a long grey horizon.',
+  'P1260122.jpg': 'A breakwater lighthouse beneath a long grey sky.',
 };
 const canonicalPath = `/destinations/${destination.slug}/`;
 const destinationSchema = {
@@ -49,18 +51,18 @@ const destinationSchema = {
     </header>
     <section class="destination-provenance">
       <p>{journey?.note}</p>
-      <p>{destination.confirmedPhotoCount} photographs currently belong to this confirmed destination period. This opening chapter shows only the existing editorial selection.</p>
+      <p>{destination.confirmedPhotoCount} photographs belong to this destination period. This chapter is a curated passage through them.</p>
     </section>
     <section class="destination-sequence" aria-label={`Selected photographs from ${destination.name}`}>
       {rest.map((photo, index) => (
-        <figure class:list={['destination-frame', `destination-frame-${index + 1}`]} data-photo-reveal>
-          <img src={photo.archiveImage} width={photo.width} height={photo.height} loading="lazy" decoding="async" alt={altByFilename[photo.filename] ?? photo.altText} />
+        <figure class:list={['destination-frame', `is-${sequenceRoles[index % sequenceRoles.length]}`, `is-${photo.orientation}`]} data-photo-reveal>
+          <img src={photo.thumbnail} srcset={`${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w, ${photo.viewerImage} ${derivativeWidth(photo, 3200)}w`} sizes="(min-width: 1200px) 58vw, (min-width: 561px) 66vw, 88vw" width={photo.width} height={photo.height} loading="lazy" decoding="async" alt={altByFilename[photo.filename] ?? photo.altText} />
           <figcaption><span>{String(index + 2).padStart(2, '0')}</span><p>{photo.year}{photo.visualWorlds.length ? ` · ${photo.visualWorlds.map((world) => world.replaceAll('-', ' ')).join(', ')}` : ''}</p></figcaption>
         </figure>
       ))}
     </section>
     <aside class="destination-continuation">
-      <p>The remaining frames are still being edited.</p>
+      <p>The chapter continues through the deeper archive.</p>
       <a href={`/archive/?destination=${destination.slug}`} data-analytics-event="archive_open" data-analytics-context={`destination:${destination.slug}`}><span>Continue in the archive</span><b aria-hidden="true">→</b></a>
       <a href="/collections/black-and-white/" data-analytics-event="black_white_open" data-analytics-context={`destination:${destination.slug}`}>Enter Black &amp; White</a>
     </aside>
