@@ -34,7 +34,8 @@ and the page rebuilds around it.
 
 ## The block grammar
 
-Seven blocks. Malaysia uses all seven; a shorter story may use three.
+Seven blocks. Malaysia used all seven until the Phase 10.6 recut removed its last `pair`; it now
+uses six, and `pair` stays in the grammar for a story that wants it.
 
 | Block | Renders as |
 | --- | --- |
@@ -91,9 +92,11 @@ event that the owner did not describe. A passage that would need a missing fact 
 left out, and the question goes to the story's owner-questions document.
 
 **A photograph claims no geography it cannot prove.** The narrative may name a city the owner named.
-A caption, an alt text or page metadata may not, unless the photograph's own record carries it. In
-Malaysia's case not one of 57 frames does, which is why George Town is a text-only section rather
-than three plausible-looking pictures under a heading.
+A caption, an alt text or page metadata may not, unless the photograph's own record carries it. When
+Malaysia was first written not one of its frames did, so George Town was a text-only section rather
+than three plausible-looking pictures under a heading. Eight frames now carry an owner-confirmed
+place, and the story captions three of them — one per city, on the frame that establishes it. The
+rest still say nothing.
 
 **The photograph outranks the layout.** Text does not sit beside every frame, captions are optional
 and rare, and some frames are followed by nothing at all.

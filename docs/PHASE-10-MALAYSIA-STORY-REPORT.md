@@ -2,15 +2,17 @@
 
 The first story. Also the first time the publication speaks in the first person.
 
-*Revised by Phase 10.1 (a geographic correction and a George Town ingest) and Phase 10.3 (the Kapas
-memory and a voice pass). Both are documented at the bottom.*
+*Revised by Phase 10.1 (a geographic correction and a George Town ingest), Phase 10.3 (the Kapas
+memory and a voice pass) and Phase 10.4 (the final editorial lock). The last of these produced
+[`PHASE-10.4-MALAYSIA-OWNER-DECISIONS.md`](PHASE-10.4-MALAYSIA-OWNER-DECISIONS.md) and
+[`PHASE-10.4-MALAYSIA-PUBLICATION-PROOF.md`](PHASE-10.4-MALAYSIA-PUBLICATION-PROOF.md).*
 
 | | |
 | --- | --- |
 | URL | `/journey/malaysia/` |
-| Status | `OWNER_REVIEW` — builds, `noindex`, not in the sitemap, linked from nowhere |
+| Status | **`PUBLISHED`** — see [`PHASE-10.5-MALAYSIA-PUBLICATION-REPORT.md`](PHASE-10.5-MALAYSIA-PUBLICATION-REPORT.md) |
 | Title | Malaysia · kicker *The Journey — 01* · *2024 — 2025* |
-| Words | 910 body + 25 standfirst |
+| Words | 896 body + 25 standfirst |
 | Photographs | 22 (1 hero + 21), from a pool of 59 |
 | Opener | `photo-0056` — a covered walkway between columns, sea on both sides |
 | Closer | `photo-0057` — sun through cloud over a bay, a boat on the sand, a jetty running out |
@@ -131,11 +133,12 @@ Japan, Düsseldorf, Essaouira, La Réunion, Thailand, Phu Quoc and Laos heroes �
 sequence (one gated link was added to the existing story-feature block, nothing else) · People ·
 Black & White · the archive grid · navigation · fonts · scroll · the viewer.
 
-## To publish
+## Published
 
-Set `status: 'PUBLISHED'` on the Malaysia story in `src/data/journey.ts`. That one field turns on the
-sitemap entry, the index page, the Home link and the archive link, and switches the page from
-`noindex` to indexable. Verified by building in both states.
+Phase 10.5 set `status: 'PUBLISHED'` on the owner's instruction. The story is live at
+`/journey/malaysia/`, the series index at `/journey/`, and it is linked from Home and from
+`/archive/place/malaysia/`. Full record in
+[`PHASE-10.5-MALAYSIA-PUBLICATION-REPORT.md`](PHASE-10.5-MALAYSIA-PUBLICATION-REPORT.md).
 
 ## Working tree
 
@@ -345,3 +348,61 @@ the block system, the layout, the header work from 10.2, and the publication sta
     IDENTIFIABLE PEOPLE: 0, still enforced by build-time check
     REDUCED MOTION:      0 hidden elements
     STATUS:              OWNER_REVIEW — unchanged, nothing published
+
+---
+
+# Phase 10.4 — final editorial lock
+
+No new material. Three corrections, and proof that publishing is safe.
+
+**A photograph was making a claim by adjacency.** `photo-0059`, placed under *And it rains.
+Properly.* in Phase 10.3, is from 16 September 2024 — a different month and a visibly different
+stretch of water from the nine frames around it, which are one beach photographed between 23 April
+and 2 May 2025. It was not captioned, but position is an argument too. Replaced by `photo-0103`,
+24 April 2025, same block as its neighbours.
+
+**Two of my sentences came out.** *"That sounds like a small thing"* repeated the construction of the
+owner's own *"Sounds simple. It is simple."* three paragraphs later; his stays, mine goes. *"It
+didn't take long"* was cleverness after *"Call it love at first sight"* — a phrase the preceding
+paragraphs had already earned, which now stands alone. Four voice lines remain, all classified as
+consistent with his register and all listed by name in both language documents. Two repeats of *at
+some point* were also thinned to one.
+
+**The city question turned out to be already answered, safely.** All twenty frames from 17–21 April
+2025 are recorded as Malaysia and nothing further, and not one of them is captioned with a city
+anywhere on the site. There is no error to fix — only precision to gain if the owner ever wants it.
+
+**The Kapas question collapsed from nine to one.** The island frames are the same beach across ten
+days: same palms, same sand, same headland, same jetty. If one is Kapas they all are, so the owner
+answers once rather than nine times.
+
+**People stay out**, and three of the nine are proposed rather than all nine. The build still refuses
+to render any of them.
+
+## Owner decisions remaining: 3
+
+In [`PHASE-10.4-MALAYSIA-OWNER-DECISIONS.md`](PHASE-10.4-MALAYSIA-OWNER-DECISIONS.md), written for a
+photographer rather than an engineer. Every one has a safe default already in force, and no answer
+blocks publication.
+
+## Publication proof
+
+The site was built in both states and the output compared —
+[`PHASE-10.4-MALAYSIA-PUBLICATION-PROOF.md`](PHASE-10.4-MALAYSIA-PUBLICATION-PROOF.md). Publishing
+adds one page, two sitemap entries, three links and an indexable robots tag. Canonical, Open Graph
+and schema are identical in both states.
+
+## QA
+
+    BUILD:               PASS   22 pages, 21 public HTML files
+    CONTENT:             PASS   689 photos
+    PRIVACY:             PASS
+    OWNER EXCLUSIONS:    PASS   24 rejected, 0 public references
+    LAUNCH / SEO:        PASS
+    BROKEN ASSETS:       0
+    CONSOLE / NETWORK:   clean at 1600, 1440, 1280, 1024, 768, 430, 390, 320
+    HORIZONTAL OVERFLOW: 0 at every width
+    MISSING ALT:         0 of 22
+    IDENTIFIABLE PEOPLE: 0 in the story, enforced at build time
+    FALSE GEOGRAPHY:     0 — every frame confirmed Malaysia, two confirmed George Town
+    STATUS:              OWNER_REVIEW — unchanged

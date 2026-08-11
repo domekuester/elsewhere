@@ -1,6 +1,6 @@
 # Phase 10 — Malaysia story photo edit
 
-**Revised in Phase 10.1 and 10.3.** 22 photographs from a pool of 59. Roles are internal: they shape
+**Revised in Phase 10.1, 10.3 and 10.4.** 22 photographs from a pool of 59. Roles are internal: they shape
 the order and are never rendered.
 
 Phase 10.1 changed three things:
@@ -17,11 +17,21 @@ Kapas section grew from two paragraphs to eleven, and the picture edit had to an
 - `photo-0108` **removed** — a cloud bank with the sun setting under it. The fourth
   cloud-over-water frame in a chapter that already had three, and the weakest of them.
 - `photo-0059` **added** — a heavy grey cloud bank over dark open water, placed directly after *And
-  it rains. Properly.* The storm paragraph had no photograph; this one is the only frame in the
-  Malaysia pool that reads as weather rather than as good light, and it is the first landscape frame
-  anywhere in the story's reading column, which gives the long Kapas run a beat it did not have.
+  it rains. Properly.* The storm paragraph had no photograph; this was the only frame in the
+  Malaysia pool that read as weather rather than as good light, and the first landscape frame
+  anywhere in the story's reading column.
 
-Net count unchanged.
+Phase 10.4 reversed the second half of that:
+
+- `photo-0059` **removed**, `photo-0103` **in**. 0059 is 16 September 2024 — a different month and
+  visibly a different stretch of water from every other frame in the section, which are one beach
+  between 23 April and 2 May 2025. Sitting under a paragraph about rain on Kapas, it was making a
+  geographic claim by adjacency that nothing supports. 0103 is 24 April 2025, inside the same block
+  as its neighbours, so it carries the same provenance they do — still unconfirmed, but at least
+  unconfirmed about the same place. It is less dramatic. It is honest, and it keeps the landscape
+  beat.
+
+Net count unchanged at 22 across both passes.
 
 ## The sequence
 
@@ -44,7 +54,7 @@ Net count unchanged.
 | 14 | `photo-0121` | 30 Apr 2025 | pause | pair, left | A volleyball net on empty sand. Says *few people* without saying *untouched*. |
 | 15 | `photo-0132` | 30 Apr 2025 | pause | pair, right, dropped | A hammock between palms. Both frames now sit immediately before the description of an ordinary day, which they illustrate without being asked to. |
 | 16 | `photo-0110` | 27 Apr 2025 | pause | inset | Looking up through leaves at a gold cloud. Deliberately small — a held breath between the evening paragraph and the cleanups. |
-| 17 | `photo-0059` | 16 Sep 2024 | place | column | A heavy grey cloud bank over dark open water. **Added in 10.3**, directly after *And it rains. Properly.* The only frame in the pool that reads as weather, and the only landscape frame in the reading column. |
+| 17 | `photo-0103` | 24 Apr 2025 | place | column | Low cloud over flat blue water at dusk. **Replaced `photo-0059` in 10.4**, directly after *And it rains. Properly.* — see below. The only landscape frame in the reading column. |
 | 18 | `photo-0113` | 29 Apr 2025 | pause | full bleed | Palms, two lamps, lights on a far shore. The last of the island. |
 | 19 | `photo-0090` | 18 Apr 2025 | detail | inset | Chrysanthemums, close and saturated. Placed under the camera paragraph: a frame nobody takes while passing through. |
 | 20 | `photo-0163` | 2 May 2025 | place | full bleed | A cloud bank over calm water past a headland. |

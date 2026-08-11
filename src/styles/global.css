@@ -230,6 +230,11 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 .story-copy > p:first-of-type { margin-top: 1.4rem; color: #9da19e; font-size: .72rem; }
 .story-copy h2 { margin-top: 1.5rem; font-family: var(--editorial); font-size: clamp(3rem, 5.4vw, 5.7rem); font-weight: 400; line-height: .94; letter-spacing: -.025em; }
 .story-copy > p:nth-of-type(2) { max-width: 28rem; margin-top: 2rem; color: #c4c8c5; line-height: 1.7; }
+/* Phase 10.5 — this block carries two ways deeper once a story is published. Inline-flex links sit
+   on one line, where the first link's arrow reads as belonging to the second; block-level flex puts
+   each on its own line and the ambiguity goes. `fit-content` keeps the hit area on the words. */
+.story-copy .editorial-link { display: flex; width: fit-content; }
+.story-copy .editorial-link + .editorial-link { margin-top: -.2rem; }
 
 .ocean-chapter { position: relative; height: 105vh; overflow: hidden; background: #061b28; }
 .ocean-chapter > img { object-position: 50% 38%; }
@@ -1165,13 +1170,21 @@ html[data-viewer-open] body { overflow: hidden; }
 .journey-next > a:not(.editorial-link) b { color: var(--ultramarine); font-size: clamp(1.6rem, 3.5vw, 3rem); font-weight: 400; }
 .journey-next > p { max-width: 30rem; margin-top: 1.8rem; font-family: var(--editorial); font-size: .98rem; line-height: 1.7; color: #9a9d99; }
 
-/* The series index. Light, like the other written surfaces, because it is a list rather than a
-   photograph — and it does not exist at all until a story is published. */
-.journey-index { display: grid; gap: clamp(2.5rem, 5vw, 4rem); padding: 0 var(--gutter) clamp(7rem, 12vw, 12rem); }
-.journey-index a { display: grid; grid-template-columns: minmax(0, .45fr) minmax(0, 1fr); align-items: center; gap: clamp(1.5rem, 4vw, 3rem); border-top: 1px solid var(--line-light); padding-top: 1.6rem; }
-.journey-index img { aspect-ratio: 4 / 3; }
-.journey-index h2 { margin-top: .5rem; font-family: var(--display); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 400; line-height: .9; letter-spacing: -.03em; text-transform: uppercase; }
-.journey-index > a > div > p:last-child { margin-top: .9rem; font-family: var(--editorial); line-height: 1.7; }
+/* The series index. Light, like the other written surfaces, because the page is an opening rather
+   than a photograph — but each entry is a chapter, not a row. A thumbnail beside a headline reads
+   as the first line of a list that has more lines coming, which with one published story looks like
+   an unfinished table; a wide frame with the title under it reads as a contents page in a photo
+   book, which is what this is. It stacks without changing when Story 02 arrives. */
+.journey-index { display: grid; gap: clamp(4rem, 8vw, 7rem); padding: 0 var(--gutter) clamp(7rem, 12vw, 12rem); }
+.journey-index a { display: grid; gap: clamp(1.4rem, 3vw, 2.2rem); border-top: 1px solid var(--line-light); padding-top: clamp(1.6rem, 3vw, 2.4rem); }
+.journey-index img { aspect-ratio: 16 / 7; object-position: 50% 46%; }
+.journey-index h2 { margin-top: .4rem; font-family: var(--display); font-size: clamp(3.4rem, 9vw, 7rem); font-weight: 400; line-height: .86; letter-spacing: -.035em; text-transform: uppercase; }
+.journey-index > a > div > p:last-of-type { max-width: 34rem; margin-top: 1rem; font-family: var(--editorial); font-size: clamp(1.02rem, 1.3vw, 1.18rem); line-height: 1.65; }
+.journey-index .editorial-link { pointer-events: none; }
+
+@media (max-width: 560px) {
+  .journey-index img { aspect-ratio: 3 / 2; }
+}
 
 @media (max-width: 900px) {
   .journey-hero > img { object-position: var(--hero-focal-tablet); }

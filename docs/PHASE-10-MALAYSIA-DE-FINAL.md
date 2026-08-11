@@ -29,7 +29,7 @@ Eine Sache ist diesmal anders. Ich habe eine richtige Kamera dabei. Halbprofessi
 Spektakuläres, aber deutlich mehr als ein Telefon.
 
 Ich reise nicht mehr und fotografiere nebenbei. Ich bleibe stehen, wo ich sonst weitergegangen wäre.
-Das klingt nach einer Kleinigkeit. Es verändert den ganzen Tag.
+Es verändert den ganzen Tag.
 
 Angefangen hat es in Malaysia. Wie meistens.
 
@@ -88,7 +88,7 @@ und zu schauen, was das ist.
 Wir sind rübergefahren, haben das LongSha Campsite gefunden und sind die restlichen zwei Wochen dort
 geblieben. Auf die Perhentians sind wir nie gekommen.
 
-Nenn es Liebe auf den ersten Blick. Lange gedauert hat es jedenfalls nicht.
+Nenn es Liebe auf den ersten Blick.
 
 Seitdem ist sie meine Lieblingsinsel. Wenn ich in Malaysia bin, versuche ich, wieder hinzukommen.
 Diesmal war das der größte Teil meiner Wochen im Land. Keine schwere Entscheidung.
@@ -106,8 +106,8 @@ Inzwischen stehen ein paar Gebäude mehr da als beim ersten Mal. Das Gefühl ist
 
 Ein Tag dort läuft ungefähr so.
 
-Man wacht im Zelt auf und hört das Meer. Kaffee. Schwimmen. Hängematte. Irgendwann läuft man los und
-schaut sich die Insel an, und es gibt Buchten, an denen niemand ist.
+Man wacht im Zelt auf und hört das Meer. Kaffee. Schwimmen. Hängematte. Dann läuft man los und schaut
+sich die Insel an, und es gibt Buchten, an denen niemand ist.
 
 Zum Einkaufen fährt man rüber nach Marang. Markt, Supermarkt, günstig. Dann kocht man etwas
 Einfaches.
@@ -123,7 +123,7 @@ effiziente Grabenbaukolonne, damit die Zelte nicht absaufen.
 
 Das ist eigentlich alles. Und genau deswegen komme ich immer wieder.
 
-Kapas macht alles langsamer. Man kommt an, und irgendwann hört man auf, den Tag einzuteilen.
+Kapas macht alles langsamer. Man kommt an, und ziemlich schnell hört man auf, den Tag einzuteilen.
 
 Das Riff sah gut aus. Intakt. Das Meer und das Riff sind ein großer Teil davon, warum diese Insel
 für mich zählt und nicht irgendeine andere.
@@ -161,7 +161,7 @@ lässt sich streichen, ohne dass etwas fehlt.
 - *Das klingt nach einer Kleinigkeit. Es verändert den ganzen Tag.*
 - *Ohne nachzudenken.* (George Town)
 - *Diesmal war das der größte Teil meiner Wochen im Land. Keine schwere Entscheidung.*
-- *Nenn es Liebe auf den ersten Blick. Lange gedauert hat es jedenfalls nicht.*
+- *Nenn es Liebe auf den ersten Blick.*
 
 Dazu zwei Stellen, an denen deine Erzählung leicht zugespitzt wiedergegeben ist, ohne dass ein Fakt
 dazukommt: *„aus einer entspannten Truppe … eine effiziente Grabenbaukolonne"* und *„Niemand hat sie

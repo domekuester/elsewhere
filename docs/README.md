@@ -39,14 +39,18 @@
 
 - [Hero header integration](PHASE-10.2-HERO-HEADER-INTEGRATION.md)
 
-## Phase 10 / 10.1 — THE JOURNEY, story 01: Malaysia
+## Phase 10 → 10.5 — THE JOURNEY, story 01: Malaysia (published)
 
-- [Malaysia story report](PHASE-10-MALAYSIA-STORY-REPORT.md) — includes the 10.1 geographic correction
+- [Malaysia story report](PHASE-10-MALAYSIA-STORY-REPORT.md) — includes the 10.1, 10.3 and 10.4 passes
 - [THE JOURNEY system](PHASE-10-THE-JOURNEY-SYSTEM.md)
 - [Malaysia — German master (final)](PHASE-10-MALAYSIA-DE-FINAL.md)
 - [Malaysia — English publication text (final)](PHASE-10-MALAYSIA-EN-FINAL.md)
 - [Malaysia photo edit](PHASE-10-MALAYSIA-PHOTO-EDIT.md)
 - [Malaysia owner questions](PHASE-10-MALAYSIA-OWNER-QUESTIONS.md)
+- [Owner decisions — the final three](PHASE-10.4-MALAYSIA-OWNER-DECISIONS.md)
+- [Publication proof](PHASE-10.4-MALAYSIA-PUBLICATION-PROOF.md)
+- [Publication report — published 11 Aug 2026](PHASE-10.5-MALAYSIA-PUBLICATION-REPORT.md)
+- [Photographic recut — owner-edited replacements](PHASE-10.6-MALAYSIA-PHOTOGRAPHIC-RECUT.md)
 
 ## Phase 9.30A — Laos hero focal correction
 
@@ -78,7 +82,8 @@
 
 ## THE JOURNEY — owner stories
 
-Editorial development. Not yet wired into any page or route.
+Superseded source layer from before the story was built. Kept for provenance; the live text is in the
+Phase 10 documents above.
 
 - [Story 01 Malaysia — story pack](STORY-01-MALAYSIA-PACK.md)
 - [Story 01 Malaysia — German master (owner truth)](STORY-01-MALAYSIA-DE-MASTER.md)

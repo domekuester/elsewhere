@@ -37,11 +37,24 @@ const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]))
         const photo = hero ? photosById.get(hero.photoId) : null;
         return (
           <a href={`/journey/${story.slug}/`} data-analytics-event="journey_open" data-analytics-context={story.slug}>
-            {photo && <img src={photo.thumbnail} width={photo.width} height={photo.height} alt={story.heroAlt} loading="lazy" decoding="async" />}
+            {photo && (
+              <img
+                src={photo.thumbnail}
+                srcset={`${photo.thumbnail} 960w, ${photo.archiveImage} 1800w`}
+                sizes="(min-width: 901px) 92vw, 100vw"
+                width={photo.width}
+                height={photo.height}
+                alt={story.heroAlt}
+                loading="lazy"
+                decoding="async"
+              />
+            )}
             <div>
               <p class="journey-kicker">{String(story.number).padStart(2, '0')} · {story.dateLabel}</p>
               <h2>{story.title}</h2>
               <p>{story.standfirst}</p>
+              {/* Not a link — the whole entry already is one. This is the affordance, not a second target. */}
+              <span class="editorial-link" aria-hidden="true">Read the story <span>→</span></span>
             </div>
           </a>
         );

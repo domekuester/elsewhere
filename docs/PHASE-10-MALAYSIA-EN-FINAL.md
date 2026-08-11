@@ -9,9 +9,9 @@ page reads from the data, not from this file.
 **Source of truth for meaning:** [`PHASE-10-MALAYSIA-DE-FINAL.md`](PHASE-10-MALAYSIA-DE-FINAL.md).
 The English is a re-creation, not a translation. Where the two differ in wording, the German governs.
 
-**Length:** 910 words of body text plus a 25-word standfirst, up from 640 in Phase 10. The whole
+**Length:** 896 words of body text plus a 25-word standfirst, up from 640 in Phase 10. The whole
 increase is Pulau Kapas: how 2016 actually happened, and what an ordinary day there looks like. Both
-were a single sentence before.
+were a single sentence before. Phase 10.4 removed two sentences of mine rather than adding any.
 
 ---
 
@@ -33,7 +33,7 @@ One thing is different this time. I am carrying a real camera. Semi-professional
 spectacular, but a lot more than a phone.
 
 I am not travelling and taking pictures on the side any more. I stop where I used to keep walking.
-That sounds like a small thing. It changes the whole day.
+It changes the whole day.
 
 It starts in Malaysia. It usually does.
 
@@ -90,7 +90,7 @@ it was.
 We went over, found LongSha Campsite, and stayed for the rest of the two weeks. We never made it to
 the Perhentians.
 
-Call it love at first sight. It didn't take long.
+Call it love at first sight.
 
 It has been my favourite island since. When I am in Malaysia I try to get back. This time that was
 most of my weeks in the country. Not a hard decision.
@@ -108,8 +108,8 @@ There are a few more buildings now than the first time. The feeling has stayed.
 
 A day there goes roughly like this.
 
-You wake up in the tent and hear the sea. Coffee. Swim. Hammock. At some point you walk off and look
-at the island, and there are bays with nobody on them.
+You wake up in the tent and hear the sea. Coffee. Swim. Hammock. Then you walk off and look at the
+island, and there are bays with nobody on them.
 
 For food you go across to Marang. Market, supermarket, cheap. Then you cook something simple.
 
@@ -124,7 +124,7 @@ efficient trench-digging operation, so the tents don't flood.
 
 That is basically it. And that is exactly why I keep going back.
 
-Kapas slows everything down. You arrive, and at some point you stop dividing the day up.
+Kapas slows everything down. You arrive, and pretty soon you stop dividing the day up.
 
 The reef looked good. Intact. The sea and the reef are a large part of why this island counts for me
 and not some other one.
@@ -154,18 +154,21 @@ That is why the journey begins here. And why it carries on from here.
 
 ## Lines that are voice, not testimony
 
-Everything above is the owner's own account. Six beats are phrasing rather than fact — each restates
-something already said, in his register. They are the sentences a reader hears as *him*, so he
-decides whether they stay. Any of them can be cut without leaving a hole.
+Everything above is the owner's own account. **Four** beats are phrasing rather than fact — each
+restates something already said, in his register. They are the sentences a reader hears as *him*, so
+he decides whether they stay. Any of them can be cut without leaving a hole.
 
 | Line | What it extends |
 | --- | --- |
-| *That sounds like a small thing. It changes the whole day.* | Stopping where he used to keep walking. |
 | *Without thinking about it.* | "…I say George Town." |
 | *This time that was most of my weeks in the country. Not a hard decision.* | Most of his Malaysia time was on Kapas, and it is his favourite island. |
-| *Call it love at first sight. It didn't take long.* | He described it as love at first sight. |
 | *a relaxed group of campers turns very quickly into an efficient trench-digging operation* | Storms, and digging trenches so the tents don't flood. |
 | *Nobody asked them to.* | Being invited to eat by people who came over for the weekend. |
+
+Two came out in Phase 10.4. *"That sounds like a small thing"* echoed *"Sounds simple. It is
+simple."* three paragraphs later — a repeated construction, and the George Town one is the owner's
+own. *"It didn't take long"* was a clever addition after *"Call it love at first sight"*, which the
+preceding paragraphs had already earned; the phrase now stands on its own.
 
 ## Forbidden-language check
 
@@ -175,7 +178,7 @@ senses · journey of discovery · timeless · authentic · captured my heart · 
 wanderlust · postcard-perfect · sun-drenched · culinary paradise · beating heart of · every corner
 tells a story · more than just a destination.*
 
-Three em dashes in 910 words. No "not X, but Y" construction. No paragraph closes on a manufactured
+Three em dashes in 896 words. No "not X, but Y" construction. No paragraph closes on a manufactured
 insight. *Rhythm*, *stillness*, *layers*, *texture* and *presence* appear zero times; *memory* zero;
 *pace* once, in the owner's own comparison.
 

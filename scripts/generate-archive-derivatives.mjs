@@ -40,10 +40,18 @@ for (const [index, photo] of inventory.photos.entries()) {
   publicPhotos.push({ photo, baseName });
 }
 
+// Masters live outside git and are read-only to this project, so one can disappear from the source
+// folder between runs — a reorganisation, a rename, a card that was tidied up. When that happened the
+// whole pipeline threw on the missing file and nothing downstream regenerated. A vanished master is
+// worth knowing about, not worth halting on: the frame is skipped, its existing derivatives are left
+// exactly as they are, and it is named loudly at the end.
+const missingMasters = publicPhotos.filter((item) => !fs.existsSync(path.join(root, item.photo.sourcePath)));
+const renderable = publicPhotos.filter((item) => fs.existsSync(path.join(root, item.photo.sourcePath)));
+
 let cursor = 0;
 const workers = Array.from({ length: 4 }, async () => {
-  while (cursor < publicPhotos.length) {
-    const current = publicPhotos[cursor++];
+  while (cursor < renderable.length) {
+    const current = renderable[cursor++];
     const source = path.join(root, current.photo.sourcePath);
     for (const role of roles) {
       const target = path.join(outputRoot, role.name, current.baseName);
@@ -55,7 +63,7 @@ const workers = Array.from({ length: 4 }, async () => {
         .toFile(target);
       generated += 1;
     }
-    if (cursor % 50 === 0) console.log(`Processed ${cursor}/${publicPhotos.length} public photographs…`);
+    if (cursor % 50 === 0) console.log(`Processed ${cursor}/${renderable.length} public photographs…`);
   }
 });
 
@@ -66,4 +74,9 @@ fs.writeFileSync(path.join(outputRoot, 'PIPELINE.json'), `${JSON.stringify({
   colorPolicy: 'Embedded ICC profiles retained; no visual filters or artificial sharpening.',
   roles: Object.fromEntries(roles.map(({ name, max, quality, chromaSubsampling }) => [name, { maxDimension: max, jpegQuality: quality, chromaSubsampling, withoutEnlargement: true }]))
 }, null, 2)}\n`);
-console.log(`Role-correct derivatives ready: ${generated} generated across ${publicPhotos.length} photographs; ${removed} forbidden derivatives removed.`);
+console.log(`Role-correct derivatives ready: ${generated} generated across ${renderable.length} photographs; ${removed} forbidden derivatives removed.`);
+if (missingMasters.length) {
+  console.warn(`\nWARNING — ${missingMasters.length} public photograph(s) have no source master and were skipped.`);
+  console.warn('Existing derivatives were left untouched, so the site still serves them, but they can no longer be regenerated:');
+  for (const item of missingMasters) console.warn(`  ${item.photo.id}  ${item.photo.sourcePath}`);
+}

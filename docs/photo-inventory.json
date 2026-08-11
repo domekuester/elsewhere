@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T15:42:03.992Z",
+  "generatedAt": "2026-08-11T20:42:52.791Z",
   "sourcePolicy": "Master source files. Never modify, move, rename, or serve directly in production.",
   "sourceRoot": "assets-source/photos",
-  "photoCount": 689,
+  "photoCount": 694,
   "photos": [
     {
       "id": "photo-0001",
@@ -32721,6 +32721,226 @@
       "technical": {
         "metadataReadError": null,
         "thumbnailPath": ".photo-inventory-cache/thumbs/0689-Georgtown.jpg"
+      }
+    },
+    {
+      "id": "photo-0690",
+      "filename": "Kapas 01.JPG",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/Kapas 01.JPG",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 2416386,
+        "megabytes": 2.3,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-08-22T09:20:06.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": null,
+        "focalLengthMm": 17.4,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.0015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0690-Kapas-01.JPG"
+      }
+    },
+    {
+      "id": "photo-0691",
+      "filename": "Kapas 02.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/Kapas 02.jpg",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 6393460,
+        "megabytes": 6.1,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3942,
+        "height": 2957
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3331,
+      "capture": {
+        "date": "2024-08-30T18:47:58.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0691-Kapas-02.jpg"
+      }
+    },
+    {
+      "id": "photo-0692",
+      "filename": "Kapas 03.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/Kapas 03.jpg",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 6087988,
+        "megabytes": 5.81,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-08-30T18:44:37.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0692-Kapas-03.jpg"
+      }
+    },
+    {
+      "id": "photo-0693",
+      "filename": "Kapas 04.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/Kapas 04.jpg",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 3787417,
+        "megabytes": 3.61,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-09-16T21:38:03.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 18.3,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0693-Kapas-04.jpg"
+      }
+    },
+    {
+      "id": "photo-0694",
+      "filename": "Kuala-lumpur 01.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/Kuala-lumpur 01.jpg",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 24180129,
+        "megabytes": 23.06,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 5208,
+        "height": 7750
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.672,
+      "capture": {
+        "date": "2024-09-06T04:57:29.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 18.3,
+        "aperture": 2.8,
+        "iso": 2000,
+        "exposureSeconds": 0.0125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0694-Kuala-lumpur-01.jpg"
       }
     }
   ]

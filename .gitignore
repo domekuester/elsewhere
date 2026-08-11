@@ -44,3 +44,6 @@ shaky-saturn/
 
 # Phase scratch directories are working files, never project history.
 .tmp-*/
+
+# Phase 10.4 private owner review sheets — visual confirmation only, never published.
+.tmp-*.jpg

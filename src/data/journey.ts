@@ -21,12 +21,13 @@ import type { Nullable } from './archive';
  *   sequence or swap a photograph by editing this file. Nothing in the page component knows
  *   what the story says.
  * - **A photograph claims no geography it cannot prove.** Location comes from the owner's travel
- *   timeline, which knows countries and not cities: 56 of the 59 Malaysia frames carry `place:
- *   null`. The narrative may name Kuala Lumpur, George Town and Pulau Kapas because the owner
- *   named them; a caption, an alt text or page metadata may not — unless the photograph's own
- *   record carries the city. Three do, as of Phase 10.1: `photo-0687`, `photo-0688` and
- *   `photo-0689` are owner-confirmed to George Town, Penang, and are the only frames on the site
- *   that may be captioned with a city.
+ *   timeline, which knows countries and not cities, so most Malaysia frames carry `place: null`.
+ *   The narrative may name Kuala Lumpur, George Town and Pulau Kapas because the owner named them;
+ *   a caption, an alt text or page metadata may not — unless the photograph's own record carries
+ *   the place. Eight do: `photo-0687`–`0689` (George Town, Penang, Phase 10.1) and
+ *   `photo-0690`–`0694` (Pulau Kapas and Kuala Lumpur, Phase 10.6). They are the only photographs
+ *   on the site that may be captioned with a place, and the story captions exactly three of them —
+ *   one per city, on the frame that establishes it.
  * - **A person is not a prop.** Every Malaysia frame containing an identifiable person is
  *   `storyCandidate: false` / `NEEDS_OWNER_INPUT` in `data/people-review.json`. Public in an
  *   archive grid is not the same permission as featured in a story, so none of them are used
@@ -121,17 +122,22 @@ export const journeyStories: JourneyStory[] = [
     dateLabel: '2024 — 2025',
     provenance: [
       'Malaysia, August 2024 to May 2025. The country appears three times in that stretch of travel; two of the three visits carry photographs.',
-      'The places named below are the photographer’s own account. Two of the photographs carry a confirmed city; the rest are confirmed to Malaysia and no further, and stay unassigned rather than guessed.',
+      'The places named below are the photographer’s own account. Five of the photographs carry a confirmed place; the rest are confirmed to Malaysia and no further, and stay unassigned rather than guessed.',
     ],
     heroSurfaceKey: 'journey-malaysia',
     heroAlt:
       'A covered walkway runs between heavy square columns towards open sea, with a single distant figure at the far end.',
-    status: 'OWNER_REVIEW',
-    publishedAt: null,
+    status: 'PUBLISHED',
+    publishedAt: '2026-08-11',
     seoTitle: 'Malaysia — The Journey — Elsewhere',
+    // Written as a sentence from the story rather than as a list of search terms. It says what the
+    // piece is about and stops; there is no itinerary, no superlative and no place name that the
+    // story does not actually spend time in.
     seoDescription:
-      'A photographic story about returning: Kuala Lumpur as a hub, George Town for the food, and the island the photographer has gone back to since 2016.',
-    socialImage: null,
+      'A fourth long journey that starts in the one country I already knew: Kuala Lumpur, George Town, and an island I found by accident in 2016 and keep going back to.',
+    // A purpose-made 1200×630 card, the same treatment the published chapters get. Without it the
+    // share preview falls back to a 4:3 hero derivative that platforms crop unpredictably.
+    socialImage: '/social/journey-malaysia.jpg',
     previousSlug: null,
     nextSlug: null,
     blocks: [
@@ -141,7 +147,7 @@ export const journeyStories: JourneyStory[] = [
         paragraphs: [
           'Fourth long journey. At some point I stopped explaining it to myself. Life has too much to offer — that is probably the whole reason.',
           'One thing is different this time. I am carrying a real camera. Semi-professional, nothing spectacular, but a lot more than a phone.',
-          'I am not travelling and taking pictures on the side any more. I stop where I used to keep walking. That sounds like a small thing. It changes the whole day.',
+          'I am not travelling and taking pictures on the side any more. I stop where I used to keep walking. It changes the whole day.',
           'It starts in Malaysia. It usually does.',
         ],
       },
@@ -163,20 +169,19 @@ export const journeyStories: JourneyStory[] = [
           'That goes back to 2014. I have met friends here every time since. A few of those have held across years and across separate journeys. You stop arriving as a complete stranger, and you know some of it will still be there when you come back.',
         ],
       },
+      // Phase 10.6 — the owner's own Kuala Lumpur frame, and the first photograph on the site whose
+      // city he has confirmed. It replaces `photo-0083` and `photo-0092`, a pair of sky-against-
+      // concrete portraits that both said *tower* less well than this one does, and it carries the
+      // caption because it is the frame that proves the city.
       {
-        kind: 'pair',
-        photos: [
-          {
-            id: 'photo-0083',
-            role: 'place',
-            alt: 'A tapered skyscraper rises into a bank of cloud lit orange by low sun.',
-          },
-          {
-            id: 'photo-0092',
-            role: 'place',
-            alt: 'A single cumulus cloud stands between two concrete apartment blocks in flat evening light.',
-          },
-        ],
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0694',
+          role: 'place',
+          caption: 'Kuala Lumpur · 2024',
+          alt: 'The upper section and spire of a skyscraper at night, seen from directly below, its stepped tiers lit against a black sky.',
+        },
       },
       {
         kind: 'text',
@@ -294,13 +299,18 @@ export const journeyStories: JourneyStory[] = [
           alt: 'Dark leaves and palm fronds frame a narrow view of pale sand and blue sea.',
         },
       },
+      // Phase 10.6 — replaces `photo-0104`, the jetty pavilion, whose orange sky against cyan water
+      // sits in the same processed family as the two frames the owner rejected. This is his own
+      // edit of the same idea — arriving, by water, at a place with steps and a moored boat — and it
+      // carries the caption because it is the frame that proves the island.
       {
         kind: 'photo',
         display: 'full',
         photo: {
-          id: 'photo-0104',
+          id: 'photo-0691',
           role: 'place',
-          alt: 'A wooden jetty pavilion stands over flat turquoise water with a long boat moored beside it.',
+          caption: 'Pulau Kapas · 2024',
+          alt: 'A balustraded stone stair drops to rocks and a shallow bay, with a moored boat, a small beach and low islands beyond.',
         },
       },
       // Phase 10.3 — the owner supplied how 2016 actually happened and what a day there is. Both
@@ -314,7 +324,7 @@ export const journeyStories: JourneyStory[] = [
           'In 2016 I flew to Malaysia with a friend. The plan was fixed: two weeks on the Perhentians. Kuala Lumpur to Terengganu, and then we had to stay a night there.',
           'You can see Kapas from the coast. It just sits there. I suggested we go over and have a look at what it was.',
           'We went over, found LongSha Campsite, and stayed for the rest of the two weeks. We never made it to the Perhentians.',
-          'Call it love at first sight. It didn’t take long.',
+          'Call it love at first sight.',
         ],
       },
       {
@@ -335,30 +345,11 @@ export const journeyStories: JourneyStory[] = [
         ],
       },
       { kind: 'lines', lines: ['Quiet.', 'Beautiful.', 'Clean.', 'Small.', 'Uncomplicated.'] },
-      {
-        kind: 'pair',
-        photos: [
-          {
-            id: 'photo-0121',
-            role: 'pause',
-            alt: 'A volleyball net stands on empty white sand in front of dense palms.',
-          },
-          {
-            id: 'photo-0132',
-            role: 'pause',
-            alt: 'A white hammock hangs between palm trunks over shaded sand, with turquoise water behind.',
-          },
-        ],
-      },
-      {
-        kind: 'text',
-        paragraphs: [
-          'A day there goes roughly like this.',
-          'You wake up in the tent and hear the sea. Coffee. Swim. Hammock. At some point you walk off and look at the island, and there are bays with nobody on them.',
-          'For food you go across to Marang. Market, supermarket, cheap. Then you cook something simple.',
-          'In the evening it is the fire, or the hammocks, or the kitchen area. At weekends people come over from Terengganu. They invite you to eat with them. Nobody asked them to.',
-        ],
-      },
+      // The pair is gone with both its halves. `photo-0132` went on the owner's instruction, and
+      // `photo-0121` — the volleyball net, same session, same treatment — went for the same reason
+      // once the owner-edited frames arrived to compare it against: blown white sand with a magenta
+      // cast, a hard cyan sky, yellowed greens. He named two; this is a third on his own grounds.
+      // `photo-0110` keeps the quiet slot it always had.
       {
         kind: 'photo',
         display: 'inset',
@@ -371,24 +362,50 @@ export const journeyStories: JourneyStory[] = [
       {
         kind: 'text',
         paragraphs: [
-          'There are beach cleanups. There is a turtle sanctuary. You help around the camp, because it needs doing and you are there anyway.',
-          'And it rains. Properly. When a storm comes in, a relaxed group of campers turns very quickly into an efficient trench-digging operation, so the tents don’t flood.',
-          'That is basically it. And that is exactly why I keep going back.',
+          'A day there goes roughly like this.',
+          'You wake up in the tent and hear the sea. Coffee. Swim. Hammock. Then you walk off and look at the island, and there are bays with nobody on them.',
+          'For food you go across to Marang. Market, supermarket, cheap. Then you cook something simple.',
+          'In the evening it is the fire, or the hammocks, or the kitchen area. At weekends people come over from Terengganu. They invite you to eat with them. Nobody asked them to.',
         ],
       },
+      // The camp, from inside it, under the paragraph about an ordinary day. Nothing else in the
+      // Malaysia pool shows the place you actually sit in rather than the view from it.
       {
         kind: 'photo',
         display: 'wide',
         photo: {
-          id: 'photo-0059',
+          id: 'photo-0690',
           role: 'place',
-          alt: 'A heavy bank of cloud stands over dark open water with low land on the far side.',
+          alt: 'Looking out from the shade of a shelter past hanging floats and palm fronds to bright sand, turquoise water and distant hills.',
         },
       },
       {
         kind: 'text',
         paragraphs: [
-          'Kapas slows everything down. You arrive, and at some point you stop dividing the day up.',
+          'There are beach cleanups. There is a turtle sanctuary. You help around the camp, because it needs doing and you are there anyway.',
+          'And it rains. Properly. When a storm comes in, a relaxed group of campers turns very quickly into an efficient trench-digging operation, so the tents don’t flood.',
+          'That is basically it. And that is exactly why I keep going back.',
+        ],
+      },
+      // Phase 10.6 — the storm paragraph finally has the owner's own weather frame, and it is
+      // confirmed Kapas. It replaces `photo-0103`, which was itself a Phase 10.4 stand-in for
+      // `photo-0059`. Worth recording: 0059 was moved out for being dated 16 September 2024, on the
+      // reasoning that it could not be the same place — and this frame, which the owner confirms is
+      // Kapas, is dated 16 September 2024 too. That reasoning was wrong. 0059 stays out because
+      // this is the better photograph, not because of where it was taken.
+      {
+        kind: 'photo',
+        display: 'full',
+        photo: {
+          id: 'photo-0693',
+          role: 'place',
+          alt: 'A bank of cumulus catches the last light over a dark sea, with mountains low on the far shore under heavy cloud.',
+        },
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'Kapas slows everything down. You arrive, and pretty soon you stop dividing the day up.',
           'The reef looked good. Intact. The sea and the reef are a large part of why this island counts for me and not some other one.',
           'And the people on Kapas are great. I don’t really need to say more than that.',
         ],
@@ -428,31 +445,25 @@ export const journeyStories: JourneyStory[] = [
           'Islands, cities, highlands with tea, jungle, different religions, different communities — and from here the rest of Southeast Asia is right there.',
         ],
       },
-      {
-        kind: 'photo',
-        display: 'full',
-        photo: {
-          id: 'photo-0163',
-          role: 'place',
-          alt: 'A large cloud bank stands over calm water beside a dark headland and a low jetty.',
-        },
-      },
+      // `photo-0163` stood here — a cloud bank over calm water. It was the third big sea-and-cloud
+      // frame in the last five and the most heavily teal of the survivors, and `photo-0693` now
+      // carries weather far better. Taking it out leaves the ending as three short paragraphs and
+      // then one quiet photograph, which is the shape this ending always wanted.
       {
         kind: 'text',
         paragraphs: ['That is why the journey begins here. And why it carries on from here.'],
       },
-      // Phase 10.1 — replaces photo-0040, which the owner confirmed is Thailand. The old frame was
-      // chosen for being the last Malaysia photograph before the journey moved on; that reasoning
-      // died with the correction, so this one is chosen for what it shows: a boat on the sand, a
-      // jetty running out, and the light going. It is from 22 August 2024, the day after the
-      // opener, which makes the story close a few hundred metres from where it began.
+      // Phase 10.6 — `photo-0057` closed the story until the owner rejected it as too processed:
+      // heavy sunbeams, an HDR signature, the treatment louder than the photograph. This is his own
+      // edit of the same beach in flat afternoon light, with a set of steps going up into the trees
+      // at the far end. A quieter ending, and the way out is visible in it.
       {
         kind: 'photo',
         display: 'full',
         photo: {
-          id: 'photo-0057',
+          id: 'photo-0692',
           role: 'closer',
-          alt: 'Sun breaks through heavy cloud over a bay, with a long boat pulled up on the sand and a jetty running out into the water.',
+          alt: 'An empty curve of sand under soft cloud, with jungle and one leaning palm on the right and a flight of steps rising into the trees.',
         },
       },
     ],

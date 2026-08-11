@@ -25,6 +25,11 @@ IMAGES = {
     "la-reunion.jpg": ("public/assets-derived/archive/0442-P1270181.jpg", (0.50, 0.50)),
     # Düsseldorf: the hero crops to a band of pylon, cables and blue that stays legible at card size.
     "dusseldorf.jpg": ("public/assets-derived/archive/0656-P1350974.jpg", (0.50, 0.40)),
+    # THE JOURNEY, story 01. The story opener is a 4:3 corridor of columns with the sea and a small
+    # figure at the far end; a centred 1.91:1 crop keeps the corridor and the figure and loses only
+    # ceiling and floor, which is where that photograph carries nothing. Centred slightly high
+    # because the vanishing point sits just above the middle.
+    "journey-malaysia.jpg": ("public/assets-derived/archive/0056-P1000442.jpg", (0.50, 0.46)),
 }
 
 for filename, (source, centering) in IMAGES.items():
