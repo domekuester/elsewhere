@@ -1,5 +1,6 @@
 import destinationData from '../../data/destinations.json';
 import { publishedFieldNotes } from '../data/field-notes';
+import { publishedJourneyStories } from '../data/journey';
 import { business } from './site';
 
 /**
@@ -40,6 +41,10 @@ export const indexableRoutes = (): IndexableRoute[] => [
   // Drafts build no route, so nothing here can point at an unpublished note.
   ...(publishedFieldNotes().length > 0 ? [{ path: '/field-notes/', priority: 0.8, changefreq: 'weekly' as const }] : []),
   ...publishedFieldNotes().map((note) => ({ path: `/field-notes/${note.slug}/`, priority: 0.7, changefreq: 'monthly' as const })),
+  // A Journey story awaiting the owner's read builds a page so it can be reviewed at its real
+  // address, but it is noindex and absent from here. Only PUBLISHED enters the sitemap.
+  ...(publishedJourneyStories().length > 0 ? [{ path: '/journey/', priority: 0.8, changefreq: 'monthly' as const }] : []),
+  ...publishedJourneyStories().map((story) => ({ path: `/journey/${story.slug}/`, priority: 0.9, changefreq: 'monthly' as const })),
 ];
 
 /**

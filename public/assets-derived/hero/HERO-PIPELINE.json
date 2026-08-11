@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T08:39:15.844Z",
+  "generatedAt": "2026-08-11T15:48:07.406Z",
   "role": "destination-hero",
   "widths": [
     768,
@@ -382,6 +382,46 @@
           "height": 3832,
           "bytes": 1835779,
           "url": "/assets-derived/hero/0182-P1230662-2560.jpg"
+        }
+      ]
+    },
+    "journey-malaysia": {
+      "photoId": "photo-0056",
+      "baseName": "0056-P1000442",
+      "sourceWidth": 4000,
+      "sourceHeight": 3000,
+      "chroma": "4:4:4",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 576,
+          "bytes": 70048,
+          "url": "/assets-derived/hero/0056-P1000442-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 864,
+          "bytes": 126162,
+          "url": "/assets-derived/hero/0056-P1000442-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 1152,
+          "bytes": 199364,
+          "url": "/assets-derived/hero/0056-P1000442-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 1536,
+          "bytes": 305619,
+          "url": "/assets-derived/hero/0056-P1000442-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 1920,
+          "bytes": 428588,
+          "url": "/assets-derived/hero/0056-P1000442-2560.jpg"
         }
       ]
     },

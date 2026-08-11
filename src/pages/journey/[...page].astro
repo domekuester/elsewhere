@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { publishedJourneyStories } from '../../data/journey';
+import catalogData from '../../../public/data/photo-catalog.json';
+import surfaceHeroData from '../../../data/surface-heroes.json';
+
+// One story is not a category, and an index of nothing is a placeholder. Same construction as the
+// Field Notes index: a catch-all whose only path is the bare route, emitting nothing at all until
+// a story is actually published. A story in OWNER_REVIEW is therefore reachable only by its own
+// URL, which is exactly the state the owner should be reviewing from.
+export function getStaticPaths() {
+  return publishedJourneyStories().length > 0 ? [{ params: { page: undefined } }] : [];
+}
+
+const stories = publishedJourneyStories();
+const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]));
+---
+
+<BaseLayout
+  title="The Journey — Elsewhere"
+  description="Photographic stories from the places behind the archive, written by the photographer who was there."
+>
+  <SiteHeader />
+  <main id="main" class="prose-page">
+    <header class="prose-hero">
+      <span class="memory-mark" aria-hidden="true"></span>
+      <p class="prose-kicker">The Journey</p>
+      <h1>Why some places<br />keep coming back.</h1>
+      <p class="prose-lede">The archive shows what was photographed. These are the places that turned out to matter.</p>
+    </header>
+
+    <section class="journey-index" aria-label="Stories">
+      {stories.map((story) => {
+        const hero = surfaceHeroData.surfaces[story.heroSurfaceKey];
+        const photo = hero ? photosById.get(hero.photoId) : null;
+        return (
+          <a href={`/journey/${story.slug}/`} data-analytics-event="journey_open" data-analytics-context={story.slug}>
+            {photo && <img src={photo.thumbnail} width={photo.width} height={photo.height} alt={story.heroAlt} loading="lazy" decoding="async" />}
+            <div>
+              <p class="journey-kicker">{String(story.number).padStart(2, '0')} · {story.dateLabel}</p>
+              <h2>{story.title}</h2>
+              <p>{story.standfirst}</p>
+            </div>
+          </a>
+        );
+      })}
+    </section>
+  </main>
+  <SiteFooter />
+</BaseLayout>

@@ -40,6 +40,15 @@
   --header-safe-top: max(2rem, calc(env(safe-area-inset-top, 0px) + 1rem));
   --header-row: 2.75rem;
   --header-bottom: 1.35rem;
+  /* Phase 10.2 — the readability veil over a photographic opening. Peak density at the very top
+     edge, and a depth chosen precisely because it matches nothing else in the layout. */
+  --header-veil: .46;
+  --header-veil-depth: 24rem;
+  /* Carried by the type rather than by the photograph. A hairline dark edge that hugs the glyph
+     does the legibility work — at 11.8px it reads as slightly denser ink, not as an effect — and a
+     wide, very low pool underneath keeps it from looking outlined. This is what buys the veil the
+     right to be as light as it now is. */
+  --header-ink-shadow: 0 0 1px rgba(3, 5, 7, .85), 0 1px 3px rgba(3, 5, 7, .58), 0 0 16px rgba(3, 5, 7, .42);
 }
 
 * { box-sizing: border-box; }
@@ -59,7 +68,16 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .memory-mark { display: block; width: 1.7rem; height: 2px; background: var(--ultramarine); }
 
 /* Navigation */
-.site-header { position: absolute; z-index: var(--z-header); inset: 0 0 auto; display: flex; align-items: center; justify-content: space-between; min-height: calc(var(--header-safe-top) + var(--header-row) + var(--header-bottom)); padding: var(--header-safe-top) var(--gutter) var(--header-bottom); mix-blend-mode: difference; }
+.site-header { position: absolute; z-index: var(--z-header); inset: 0 0 auto; display: flex; align-items: center; justify-content: space-between; min-height: calc(var(--header-safe-top) + var(--header-row) + var(--header-bottom)); padding: var(--header-safe-top) var(--gutter) var(--header-bottom); mix-blend-mode: difference; transition: background-color .32s ease, text-shadow .32s ease; }
+/* Phase 10.2 — over a photograph the header stops inverting and simply becomes ivory ink with a
+   whisper of shadow. The blend mode remains the default everywhere else, which is what lets the
+   wordmark turn dark by itself on the ivory prose pages; a browser without `:has()` therefore
+   degrades to exactly the behaviour that shipped before this change rather than to invisible type. */
+body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header {
+  mix-blend-mode: normal;
+  color: var(--ivory);
+  text-shadow: var(--header-ink-shadow);
+}
 .wordmark, .footer-wordmark { font-family: var(--editorial); font-size: 1.16rem; font-style: italic; letter-spacing: .13em; line-height: 1; }
 .wordmark { display: inline-flex; align-items: center; min-width: 8.5rem; min-height: var(--header-row); padding: .35rem .4rem; margin: -.35rem -.4rem; }
 .primary-nav { display: block; }
@@ -72,27 +90,55 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .menu-button { display: none; border: 0; padding: 0; background: none; }
 
 /* Opening */
-.hero { position: relative; isolation: isolate; min-height: 100svh; display: grid; align-content: end; padding: 8rem var(--gutter) clamp(2.5rem, 5vw, 4.75rem); overflow: hidden; }
+/* Home is measurably the brightest opening on the site — a near-white cloud bank runs directly
+   under the navigation, where every chapter hero has either sky, architecture or water. It is the
+   one page that needs more than the shared veil, and it says so here rather than everywhere. */
+.hero { --header-veil: .6; position: relative; isolation: isolate; min-height: 100svh; display: grid; align-content: end; padding: 8rem var(--gutter) clamp(2.5rem, 5vw, 4.75rem); overflow: hidden; }
 .hero-media { position: absolute; z-index: -2; inset: 0; overflow: hidden; }
 .hero-media img { object-position: 50% 48%; }
 .hero::after { content: ""; position: absolute; z-index: -1; inset: auto 0 0; height: 42%; background: linear-gradient(to bottom, transparent, rgba(5, 6, 6, .68)); pointer-events: none; }
-/* The header is difference-blended, so it inverts against whatever the photograph puts behind it.
-   That fails on a hero that is pale at the top: near-white ink over bright cloud resolves to a
-   mid-tone, and a wordmark spanning both cloud and sky splits into two colours and reads as damage.
-   Holding the header's own band at a constant darkness — a graduated sky, not a UI bar — makes the
-   inversion resolve to light on every hero regardless of that photograph's tonality. The band ends
-   well above the title, so nothing in the composition below it changes. */
-.hero::before, .destination-hero::before {
+/* Phase 10.2 — one veil, and it is not a header.
+   ------------------------------------------------------------------------------------------
+   What was here before held the top of every hero at a near-constant .72–.68 black for the first
+   46% of a band exactly 2.1 × the header's own height, then ramped linearly to nothing. Three
+   separate things made that visible as a rectangle: the flat region read as a slab, the linear
+   ramp's endpoint was a first-derivative break the eye finds as a Mach band, and the band ended on
+   a UI dimension. Measured on Home, the sky was crushed from luminance 220 to 24 for the top 85px.
+
+   It was that dark because it had to be. `mix-blend-mode: difference` on the header inverts the
+   ink against the photograph, and difference only resolves to *light* type while the backdrop is
+   below roughly 70/255 — over a bright cloud that needs about .70 of black. The slab was not
+   serving contrast; it was serving the blend mode.
+
+   So the blend mode goes (below), and the veil becomes what it should always have been: a soft
+   darkening at the very top edge of a frame, the kind a photographer would burn in by hand. The
+   stops trace alpha = peak × (1 − t)^2.6, which reaches zero with zero slope — there is no endpoint
+   to find — over a depth that is deliberately not any header, nav or safe-area measurement. */
+.hero::before,
+.destination-hero::before,
+.journey-hero::before,
+.archive-opening::before {
   content: "";
   position: absolute;
   inset: 0 0 auto;
-  height: calc((var(--header-safe-top) + var(--header-row) + var(--header-bottom)) * 2.1);
-  background: linear-gradient(to bottom, rgba(3, 5, 7, .72) 0, rgba(3, 5, 7, .68) 46%, transparent 100%);
+  height: var(--header-veil-depth);
+  background: linear-gradient(to bottom,
+    rgba(3, 5, 7, var(--header-veil)) 0%,
+    rgba(3, 5, 7, calc(var(--header-veil) * .805)) 8%,
+    rgba(3, 5, 7, calc(var(--header-veil) * .597)) 18%,
+    rgba(3, 5, 7, calc(var(--header-veil) * .396)) 30%,
+    rgba(3, 5, 7, calc(var(--header-veil) * .211)) 45%,
+    rgba(3, 5, 7, calc(var(--header-veil) * .081)) 62%,
+    rgba(3, 5, 7, calc(var(--header-veil) * .015)) 80%,
+    rgba(3, 5, 7, 0) 100%);
   pointer-events: none;
 }
 .hero::before { z-index: -1; }
-/* The destination heroes tune the same header band per chapter; Home keeps the shared value above. */
-.destination-hero::before { z-index: 1; background: linear-gradient(to bottom, rgba(3, 5, 7, var(--hero-scrim-top)) 0, rgba(3, 5, 7, calc(var(--hero-scrim-top) * .945)) 46%, transparent 100%); }
+.destination-hero::before, .journey-hero::before, .archive-opening::before { z-index: 1; }
+/* Every opening that already carried a per-chapter `--hero-scrim-top` keeps its art direction:
+   the same relative order, at a little over half the density. Home has no per-page value and
+   takes the root default. */
+.destination-hero, .journey-hero, .archive-opening { --header-veil: calc(var(--hero-scrim-top) * .62); }
 .hero-mark { margin-bottom: 1.2rem; }
 .hero-title { font-family: var(--display); font-size: clamp(3.7rem, 6vw, 5.5rem); font-weight: 400; line-height: .9; letter-spacing: -.035em; text-transform: uppercase; }
 .hero-title span { display: block; overflow: hidden; white-space: nowrap; }
@@ -329,7 +375,17 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 
 @media (max-width: 900px) {
   :root { --header-safe-top: max(1rem, calc(env(safe-area-inset-top, 0px) + .6rem)); --header-bottom: 1rem; }
+  :root { --header-veil-depth: 19rem; }
   .site-header { position: fixed; background: rgba(11, 12, 13, .94); mix-blend-mode: normal; }
+  /* The mobile header is fixed, so it has to be solid once arbitrary content is passing underneath
+     it — but not while it is still sitting on the opening photograph. `data-over-opening` is set by
+     an IntersectionObserver on the opening itself (see scripts/navigation.ts), so nothing runs on
+     the scroll thread. The menu forces it solid regardless, because the panel needs a lid. */
+  html[data-over-opening]:not([data-menu-open]) body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header {
+    background: transparent;
+    color: var(--ivory);
+    text-shadow: var(--header-ink-shadow);
+  }
   .menu-button { display: flex; align-items: center; gap: .8rem; min-height: 2.75rem; }
   .menu-glyph { width: 1.25rem; height: 1px; background: currentColor; box-shadow: 0 5px currentColor; transition: transform .4s var(--ease-out), box-shadow .4s; }
   .menu-button[aria-expanded="true"] .menu-glyph { transform: translateY(2px) rotate(45deg); box-shadow: 0 0 currentColor; }
@@ -616,12 +672,7 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
   --hero-title-scale: 1;
   position: relative; height: 72svh; min-height: 30rem; overflow: hidden; background: #101213;
 }
-.archive-opening::before {
-  content: ""; position: absolute; z-index: 1; inset: 0 0 auto;
-  height: calc((var(--header-safe-top) + var(--header-row) + var(--header-bottom)) * 2.1);
-  background: linear-gradient(to bottom, rgba(3, 5, 7, var(--hero-scrim-top)) 0, rgba(3, 5, 7, calc(var(--hero-scrim-top) * .945)) 46%, transparent 100%);
-  pointer-events: none;
-}
+/* The header veil is shared with every other photographic opening — see the Phase 10.2 block. */
 .archive-opening::after { content: ""; position: absolute; inset: var(--hero-scrim-start) 0 0; background: linear-gradient(to bottom, transparent, rgba(5, 6, 6, var(--hero-scrim-bottom))); pointer-events: none; }
 .archive-opening > img { object-position: var(--hero-focal); }
 .archive-opening-title { position: absolute; z-index: 1; right: var(--gutter); bottom: clamp(2.2rem, 5vw, 4.5rem); left: var(--gutter); color: var(--ivory); }
@@ -640,6 +691,7 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .archive-opening + .archive-intro .archive-intro-meta { margin-top: 1.6rem; }
 
 .archive-intro { padding: clamp(3rem, 7vw, 7rem) var(--gutter) clamp(4rem, 8vw, 8rem); }
+.archive-story-link { margin-top: 1.6rem; }
 .archive-kicker { display: flex; align-items: center; gap: .8rem; font-size: .67rem; letter-spacing: .08em; text-transform: uppercase; }
 .archive-kicker span { width: 1.7rem; height: 2px; background: var(--ultramarine); }
 .archive-intro h1 { margin-top: 1.5rem; font-family: var(--editorial); font-size: clamp(5rem, 12vw, 12rem); font-style: italic; font-weight: 400; line-height: .82; letter-spacing: -.035em; }
@@ -1035,6 +1087,107 @@ html[data-viewer-open] body { overflow: hidden; }
 
 @media (max-width: 700px) {
   .field-note-index a { grid-template-columns: 1fr; }
+}
+
+/* Phase 10 — THE JOURNEY.
+   A reading surface inside a photographic publication, so it keeps the dark ground of the chapters
+   rather than the ivory of Field Notes: every frame here is meant to be looked at, and an ivory page
+   would put a bright mount around each one. The cost is that long-form body text has to be tuned
+   for a dark ground — a slightly softened ink instead of full ivory, a longer line-height, and a
+   measure held at 36rem — because ivory-on-obsidian at reading size glares.
+
+   The whole page is assembled from seven block types in src/data/journey.ts. Nothing below knows
+   what the story says; the owner can rewrite a paragraph, cut a joke or swap a photograph without
+   any of this changing. */
+.journey { color: var(--ivory); background: var(--obsidian); }
+.journey-hero {
+  --hero-focal: 50% 50%;
+  --hero-focal-tablet: var(--hero-focal);
+  --hero-focal-mobile: 50% 50%;
+  --hero-scrim-top: .62;
+  --hero-scrim-bottom: .78;
+  --hero-scrim-start: 42%;
+  --hero-title-scale: 1;
+  position: relative; isolation: isolate; overflow: hidden;
+  min-height: 92svh;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-content: end; align-items: end;
+  gap: 1.5rem;
+  padding: calc(var(--header-safe-top) + 7rem) var(--gutter) clamp(2.8rem, 6vw, 5.5rem);
+  background: #101213;
+}
+/* A hero that carries a standfirst as well as a title cannot be a fixed 100svh box: on a narrow
+   phone the copy would either overflow or force the title into the header. It grows instead. */
+.journey-hero > img { position: absolute; z-index: -2; inset: 0; object-position: var(--hero-focal); }
+.journey-hero::after { content: ""; position: absolute; z-index: -1; inset: var(--hero-scrim-start) 0 0; background: linear-gradient(to bottom, transparent, rgba(5, 6, 6, var(--hero-scrim-bottom))); pointer-events: none; }
+.journey-hero-title { max-width: 34rem; }
+.journey-hero-title h1 { margin-top: .5rem; font-family: var(--display); font-size: calc(clamp(4.2rem, 9vw, 6rem) * var(--hero-title-scale)); font-weight: 400; line-height: .84; letter-spacing: -.035em; text-transform: uppercase; }
+.journey-kicker { font-family: var(--display); font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; opacity: .72; }
+.journey-hero-title .journey-kicker { margin-top: 1.1rem; }
+.journey-standfirst { margin-top: 1.3rem; font-family: var(--editorial); font-size: clamp(1.02rem, 1.35vw, 1.24rem); line-height: 1.58; color: rgba(242, 240, 234, .88); }
+.journey-hero-meta { padding-bottom: .4rem; font-size: .72rem; white-space: nowrap; }
+
+/* What is confirmed, and what deliberately is not. The same disclosure a destination chapter
+   makes about its dates, made here about its places. */
+.journey-provenance { display: grid; gap: .9rem; max-width: 46rem; margin-inline: auto; padding: clamp(4rem, 8vw, 7rem) var(--gutter) 0; }
+.journey-provenance p { color: #9a9d99; font-size: .84rem; line-height: 1.75; }
+
+.journey-body { display: grid; justify-items: center; gap: clamp(3.2rem, 7vw, 7rem); padding-block: clamp(4.5rem, 9vw, 8rem) clamp(5rem, 9vw, 9rem); }
+.journey-body > * { width: min(36rem, calc(100% - var(--gutter) * 2)); }
+.journey-lede { font-family: var(--editorial); font-size: clamp(1.5rem, 3vw, 2.15rem); line-height: 1.28; letter-spacing: -.02em; }
+.journey-text p { font-family: var(--editorial); font-size: clamp(1.04rem, 1.2vw, 1.16rem); line-height: 1.78; color: #d6d7d2; }
+.journey-text p + p { margin-top: 1.35rem; }
+/* Chapter markers name a place the photographer named. They are narrative, never a caption:
+   no photograph on this page claims a city, because not one of them can prove it. */
+.journey-chapter { display: grid; gap: 1.1rem; font-family: var(--display); font-size: clamp(1.45rem, 2.2vw, 1.9rem); font-weight: 400; letter-spacing: .14em; line-height: 1; text-transform: uppercase; }
+.journey-chapter::before { content: ""; width: 1.7rem; height: 2px; background: var(--ultramarine); }
+.journey-lines { display: grid; gap: .3rem; font-family: var(--editorial); font-size: clamp(1.7rem, 3.6vw, 2.6rem); line-height: 1.14; letter-spacing: -.025em; }
+.journey-pause { height: clamp(1rem, 4vw, 4rem); }
+
+/* Portrait frames are sized by the height they will end up occupying, not by the column width:
+   a 3:4 frame at the landscape column width would run past two screens. */
+.journey-frame img { height: auto; object-fit: contain; }
+.journey-frame.is-wide.is-landscape { width: min(64rem, calc(100% - var(--gutter) * 2)); }
+.journey-frame.is-wide.is-portrait { width: min(40rem, calc(100% - var(--gutter) * 2)); }
+.journey-frame.is-inset { width: min(23rem, calc(100% - var(--gutter) * 2)); }
+.journey-frame.is-full { width: 100%; }
+.journey-frame.is-full img { max-height: 92svh; object-fit: cover; }
+.journey-frame figcaption { padding-top: .8rem; color: #8d908c; font-size: .74rem; }
+
+/* The asymmetric pair. The second frame drops, so two portraits side by side read as an edit
+   rather than as a grid. */
+.journey-pair { width: min(68rem, calc(100% - var(--gutter) * 2)); display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: clamp(1rem, 2.2vw, 2rem); }
+.journey-pair > :last-child { margin-top: clamp(1.5rem, 6vw, 5.5rem); }
+.journey-pair .journey-frame { width: 100%; }
+
+.journey-next { border-top: 1px solid var(--line-dark); padding: clamp(4.5rem, 9vw, 8rem) var(--gutter) clamp(3rem, 6vw, 5rem); }
+.journey-next > a:not(.editorial-link) { display: flex; align-items: center; justify-content: space-between; border-block: 1px solid var(--line-dark); margin-top: 1.6rem; padding-block: 1.5rem; }
+.journey-next > a:not(.editorial-link) span { font-family: var(--display); font-size: clamp(2.6rem, 6vw, 5rem); line-height: .85; text-transform: uppercase; }
+.journey-next > a:not(.editorial-link) b { color: var(--ultramarine); font-size: clamp(1.6rem, 3.5vw, 3rem); font-weight: 400; }
+.journey-next > p { max-width: 30rem; margin-top: 1.8rem; font-family: var(--editorial); font-size: .98rem; line-height: 1.7; color: #9a9d99; }
+
+/* The series index. Light, like the other written surfaces, because it is a list rather than a
+   photograph — and it does not exist at all until a story is published. */
+.journey-index { display: grid; gap: clamp(2.5rem, 5vw, 4rem); padding: 0 var(--gutter) clamp(7rem, 12vw, 12rem); }
+.journey-index a { display: grid; grid-template-columns: minmax(0, .45fr) minmax(0, 1fr); align-items: center; gap: clamp(1.5rem, 4vw, 3rem); border-top: 1px solid var(--line-light); padding-top: 1.6rem; }
+.journey-index img { aspect-ratio: 4 / 3; }
+.journey-index h2 { margin-top: .5rem; font-family: var(--display); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 400; line-height: .9; letter-spacing: -.03em; text-transform: uppercase; }
+.journey-index > a > div > p:last-child { margin-top: .9rem; font-family: var(--editorial); line-height: 1.7; }
+
+@media (max-width: 900px) {
+  .journey-hero > img { object-position: var(--hero-focal-tablet); }
+}
+
+@media (max-width: 700px) {
+  .journey-index a { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .journey-hero { grid-template-columns: 1fr; min-height: 88svh; gap: 1.2rem; }
+  .journey-hero > img { object-position: var(--hero-focal-mobile); }
+  .journey-hero-meta { padding-bottom: 0; }
+  .journey-pair { grid-template-columns: 1fr; gap: clamp(2rem, 6vw, 3rem); }
+  .journey-pair > :last-child { margin-top: 0; }
+  .journey-frame.is-inset { width: min(17rem, calc(100% - var(--gutter) * 2)); }
 }
 
 /* Phase 9.1 — Destinations index. Open chapters become photographic entrances; everything still

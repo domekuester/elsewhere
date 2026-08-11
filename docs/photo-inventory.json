@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-10T23:16:12.196Z",
+  "generatedAt": "2026-08-11T15:42:03.992Z",
   "sourcePolicy": "Master source files. Never modify, move, rename, or serve directly in production.",
   "sourceRoot": "assets-source/photos",
-  "photoCount": 686,
+  "photoCount": 689,
   "photos": [
     {
       "id": "photo-0001",
@@ -32589,6 +32589,138 @@
       "technical": {
         "metadataReadError": null,
         "thumbnailPath": ".photo-inventory-cache/thumbs/0686-P1160394-Kopie.jpg"
+      }
+    },
+    {
+      "id": "photo-0687",
+      "filename": "Georgtown 01.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/Georgtown 01.jpg",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 12991650,
+        "megabytes": 12.39,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-10-04T09:26:44.000Z",
+        "cameraMake": "Apple",
+        "cameraModel": "iPhone 12 mini",
+        "lens": "iPhone 12 mini back camera 4.2mm f/1.6",
+        "focalLengthMm": 4.2,
+        "aperture": 1.6,
+        "iso": 64,
+        "exposureSeconds": 0.01
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0687-Georgtown-01.jpg"
+      }
+    },
+    {
+      "id": "photo-0688",
+      "filename": "Georgtown 02.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/Georgtown 02.jpg",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 6672895,
+        "megabytes": 6.36,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-10-04T08:06:08.000Z",
+        "cameraMake": "Apple",
+        "cameraModel": "iPhone 12 mini",
+        "lens": "iPhone 12 mini back camera 4.2mm f/1.6",
+        "focalLengthMm": 4.2,
+        "aperture": 1.6,
+        "iso": 32,
+        "exposureSeconds": 0.00022222222222222223
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0688-Georgtown-02.jpg"
+      }
+    },
+    {
+      "id": "photo-0689",
+      "filename": "Georgtown.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/Georgtown.jpg",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 8873903,
+        "megabytes": 8.46,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-10-04T07:41:57.000Z",
+        "cameraMake": "Apple",
+        "cameraModel": "iPhone 12 mini",
+        "lens": "iPhone 12 mini back camera 4.2mm f/1.6",
+        "focalLengthMm": 4.2,
+        "aperture": 1.6,
+        "iso": 32,
+        "exposureSeconds": 0.0004166666666666667
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0689-Georgtown.jpg"
       }
     }
   ]

@@ -9,6 +9,7 @@ import PhotoSequence from '../components/PhotoSequence.astro';
 import BlackWhitePreview from '../components/BlackWhitePreview.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import catalogData from '../../public/data/photo-catalog.json';
+import { publishedJourneyStories } from '../data/journey';
 
 import islandClouds from '../assets/photos/island-of-clouds.jpg';
 import peopleWorker from '../assets/photos/people-worker.jpg';
@@ -96,7 +97,12 @@ const closingPhotos = [
 
     <article class="story-feature" id="story" aria-labelledby="story-title">
       <EditorialFigure src={lagoonSunset} alt="A lone figure in shallow water beneath a saturated sunset" class="story-image" sizes="(min-width: 901px) 56vw, 100vw" position="50% 52%" />
-      <div class="story-copy">{/* The kicker read "Visual journal" — a section of the publication that does not exist. */}<span class="memory-mark" aria-hidden="true"></span><p>From the archive</p><h2 id="story-title">The last photograph before dark.</h2><a class="editorial-link" href="/archive/" data-analytics-event="related_content_click" data-analytics-context="home:story-to-archive">Continue into the archive <span aria-hidden="true">→</span></a></div>
+      <div class="story-copy">{/* The kicker read "Visual journal" — a section of the publication that does not exist. */}<span class="memory-mark" aria-hidden="true"></span><p>From the archive</p><h2 id="story-title">The last photograph before dark.</h2><a class="editorial-link" href="/archive/" data-analytics-event="related_content_click" data-analytics-context="home:story-to-archive">Continue into the archive <span aria-hidden="true">→</span></a>{/* Phase 10 — the only entry point THE JOURNEY gets on Home, and only once a story is
+       actually published. One story is not a navigation category, so nothing was added to the
+       header and this block keeps the photograph and the copy it already had. */}
+      {publishedJourneyStories().slice(0, 1).map((story) => (
+        <a class="editorial-link" href={`/journey/${story.slug}/`} data-analytics-event="journey_open" data-analytics-context="home:story-feature">Read the {story.title} story <span aria-hidden="true">→</span></a>
+      ))}</div>
     </article>
 
     <section class="ocean-chapter" id="ocean" aria-labelledby="ocean-title">

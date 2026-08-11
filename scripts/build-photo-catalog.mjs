@@ -105,7 +105,11 @@ const catalog = inventory.photos.map((photo, index) => {
     country: assignment.country ?? destination?.country ?? null,
     countryCode: assignment.countryCode ?? destination?.countryCode ?? null,
     region: assignment.region ?? destination?.region ?? null,
-    place: null,
+    // Phase 10.1 — a city reaches the public catalog only when the owner has confirmed it, which
+    // is why this reads an explicit assignment rather than deriving anything. It stayed hardcoded
+    // to null for as long as no photograph had a confirmed city; the George Town frames are the
+    // first that do. Everything else still resolves to null, by absence rather than by rule.
+    place: assignment.place ?? null,
     journeyId: assignment.journeyId ?? null,
     locationSource: assignment.locationSource ?? null,
     locationConfidence: assignment.locationConfidence ?? null,

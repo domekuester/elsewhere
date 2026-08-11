@@ -3,6 +3,21 @@ const nav = document.querySelector<HTMLElement>('[data-nav]');
 const mobile = matchMedia('(max-width: 900px)');
 const homeLink = document.querySelector<HTMLAnchorElement>('[data-home-link]');
 
+// Phase 10.2 — the mobile header is `position: fixed`, so it needs a solid background once page
+// content is passing beneath it, and no background at all while it is still sitting on the opening
+// photograph. This watches the opening itself rather than listening to scroll: nothing runs on the
+// scroll thread, and native scrolling is untouched.
+const opening = document.querySelector('.hero, .destination-hero, .journey-hero, .archive-opening');
+if (opening) {
+  const header = document.querySelector<HTMLElement>('[data-header]');
+  const root = document.documentElement;
+  root.setAttribute('data-over-opening', '');
+  new IntersectionObserver(
+    ([entry]) => root.toggleAttribute('data-over-opening', entry.isIntersecting),
+    { rootMargin: `-${Math.round(header?.offsetHeight ?? 76)}px 0px 0px 0px` },
+  ).observe(opening);
+}
+
 const syncMenuAvailability = () => {
   if (!nav) return;
   nav.inert = mobile.matches && menuButton?.getAttribute('aria-expanded') !== 'true';

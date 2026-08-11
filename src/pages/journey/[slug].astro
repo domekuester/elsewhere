@@ -1,0 +1,236 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { publishedJourneyStories, routableJourneyStories, storyPhotos } from '../../data/journey';
+import { business, site } from '../../config/site';
+import catalogData from '../../../public/data/photo-catalog.json';
+import destinationData from '../../../data/destinations.json';
+import surfaceHeroData from '../../../data/surface-heroes.json';
+import heroPipeline from '../../../public/assets-derived/hero/HERO-PIPELINE.json';
+import peopleReview from '../../../data/people-review.json';
+import exclusions from '../../../data/public-image-exclusions.json';
+import { imageObject } from '../../data/image-schema';
+
+// Drafts build no route at all, so there is no draft URL to leak. A story in OWNER_REVIEW does
+// build — the owner has to be able to read it at full size, in a browser, at its real address —
+// but it is noindex, absent from the sitemap, and linked from nowhere on the site. Only
+// PUBLISHED turns on the index entry, the archive link and the Home feature.
+export function getStaticPaths() {
+  return routableJourneyStories().map((story) => ({ params: { slug: story.slug }, props: { story } }));
+}
+
+const { story } = Astro.props;
+const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]));
+const destination = destinationData.destinations.find((item) => item.id === story.destinationId);
+const canonicalPath = `/journey/${story.slug}/`;
+const canonical = new URL(canonicalPath, Astro.site).href;
+const isPublished = story.status === 'PUBLISHED';
+
+// Two registers decide what a story is allowed to show, and both of them fail the build rather
+// than degrade quietly.
+//
+// The exclusion register is the owner's permanent no. The people register is subtler and matters
+// more here: a frame with an identifiable person in it is `storyCandidate: false` until the owner
+// says otherwise, because appearing in an archive grid and being featured in a story are not the
+// same permission. Every Malaysia frame with a person in it is currently in that state, which is
+// why this story has no portraits in it. Flipping one entry to `storyCandidate: true` is all it
+// takes to make one usable.
+const forbiddenIds = new Set<string>([
+  ...exclusions.ownerRejected.map((item) => item.photoId),
+  ...exclusions.duplicateFamilies.flatMap((family) => family.excludeIds),
+  ...exclusions.editorialHold.map((item) => item.photoId),
+]);
+const peopleHold = new Set<string>(
+  peopleReview.entries.filter((entry) => !entry.storyCandidate).map((entry) => entry.photoId),
+);
+
+// Every frame the story renders, in order, resolved against the public catalog. A photograph the
+// catalog does not carry as public cannot appear: the build fails rather than rendering a gap.
+const sequence = storyPhotos(story).map((ref) => {
+  const photo = photosById.get(ref.id);
+  if (!photo) throw new Error(`Journey story ${story.slug} references unknown photograph ${ref.id}.`);
+  if (!photo.public) throw new Error(`Journey story ${story.slug} references non-public photograph ${ref.id}.`);
+  if (forbiddenIds.has(ref.id)) throw new Error(`Journey story ${story.slug} references excluded photograph ${ref.id}.`);
+  if (peopleHold.has(ref.id)) throw new Error(`Journey story ${story.slug} features ${ref.id}, which is not cleared as a story candidate in data/people-review.json.`);
+  return { ...ref, photo };
+});
+const resolve = (id: string) => sequence.find((item) => item.id === id)!;
+
+const hero = surfaceHeroData.surfaces[story.heroSurfaceKey];
+const heroPhoto = hero ? photosById.get(hero.photoId) : null;
+const heroSources = heroPipeline.heroes?.[story.heroSurfaceKey] ?? null;
+const heroFocal = { desktop: '50% 50%', tablet: '50% 50%', mobile: '50% 50%', ...(hero?.focal ?? {}) };
+const heroScrim = { top: 0.62, bottom: 0.78, bottomStart: 42, ...(hero?.overlay ?? {}) };
+const heroStyle = [
+  `--hero-focal:${heroFocal.desktop}`,
+  `--hero-focal-tablet:${heroFocal.tablet}`,
+  `--hero-focal-mobile:${heroFocal.mobile}`,
+  `--hero-scrim-top:${heroScrim.top}`,
+  `--hero-scrim-bottom:${heroScrim.bottom}`,
+  `--hero-scrim-start:${heroScrim.bottomStart}%`,
+  `--hero-title-scale:${hero?.titleScale ?? 1}`,
+].join(';');
+
+// Same reasoning as the destination hero: a full-bleed cover box paints wider than the viewport,
+// so `sizes` describes the painted width rather than the layout width.
+const heroSizes = '(max-width: 560px) 165vw, (max-width: 900px) 150vw, 100vw';
+// Body frames are laid out in a column, never full-bleed at desktop except where the block asks
+// for it, so they can request far less than the hero. `inset` frames are small by design and get
+// the thumbnail ladder only.
+const derivativeWidth = (photo, longEdge: number) =>
+  Math.min(photo.width, photo.orientation === 'portrait' ? Math.round((longEdge * photo.width) / photo.height) : longEdge);
+const srcsetFor = (photo, display: string) =>
+  display === 'inset'
+    ? `${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w`
+    : `${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w, ${photo.viewerImage} ${derivativeWidth(photo, 3200)}w`;
+const sizesFor = (display: string) =>
+  display === 'full'
+    ? '100vw'
+    : display === 'inset'
+      ? '(min-width: 901px) 26rem, 66vw'
+      : display === 'pair'
+        ? '(min-width: 901px) 42vw, 88vw'
+        : '(min-width: 1200px) 62vw, (min-width: 561px) 74vw, 88vw';
+
+const storySchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: `${story.title} — The Journey`,
+      description: story.seoDescription ?? story.standfirst,
+      url: canonical,
+      ...(story.publishedAt ? { datePublished: story.publishedAt } : {}),
+      author: { '@type': business.creatorIsPerson ? 'Person' : 'Organization', name: business.creator },
+      publisher: { '@type': 'Organization', name: site.name, url: Astro.site.href },
+      ...(heroPhoto ? { image: new URL(heroPhoto.viewerImage, Astro.site).href } : {}),
+      ...(destination ? { contentLocation: { '@type': 'Place', name: destination.name } } : {}),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Elsewhere', item: new URL('/', Astro.site).href },
+        { '@type': 'ListItem', position: 2, name: 'The Journey', item: new URL('/journey/', Astro.site).href },
+        { '@type': 'ListItem', position: 3, name: story.title, item: canonical },
+      ],
+    },
+    // The catalog carries no alt text for these frames; the story does, and it is the only
+    // written description of them that exists. It travels into the schema as the caption.
+    ...sequence.map((item, index) => imageObject({ ...item.photo, altText: item.alt }, Astro.site, canonical, index === 0)),
+  ],
+};
+const kicker = `The Journey — ${String(story.number).padStart(2, '0')}`;
+---
+
+<BaseLayout
+  title={story.seoTitle ?? `${story.title} — The Journey — Elsewhere`}
+  description={story.seoDescription ?? story.standfirst}
+  image={story.socialImage ?? heroSources?.sources.at(-1).url ?? heroPhoto?.archiveImage ?? site.defaultShareImage}
+  imageAlt={story.heroAlt}
+  pageType="article"
+  robots={isPublished ? 'index, follow, max-image-preview:large' : 'noindex, nofollow'}
+  schema={storySchema}
+>
+  <SiteHeader />
+  <main id="main" class="journey">
+    <header class="journey-hero" style={heroStyle}>
+      {heroPhoto && heroSources && (
+        <img
+          src={heroSources.sources.at(-1).url}
+          srcset={heroSources.sources.map((source) => `${source.url} ${source.width}w`).join(', ')}
+          sizes={heroSizes}
+          width={heroPhoto.width}
+          height={heroPhoto.height}
+          alt={story.heroAlt}
+          loading="eager"
+          fetchpriority="high"
+        />
+      )}
+      <div class="journey-hero-title">
+        <span class="memory-mark" aria-hidden="true"></span>
+        <p class="journey-kicker">{kicker}</p>
+        <h1>{story.title}</h1>
+        <p class="journey-standfirst">{story.standfirst}</p>
+      </div>
+      <p class="journey-hero-meta">{story.dateLabel}</p>
+    </header>
+
+    <section class="journey-provenance" aria-label="How this story is sourced">
+      {story.provenance.map((line) => <p>{line}</p>)}
+    </section>
+
+    <article class="journey-body">
+      {story.blocks.map((block) => {
+        if (block.kind === 'lede') return <p class="journey-lede">{block.text}</p>;
+        if (block.kind === 'text') return <div class="journey-text">{block.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</div>;
+        if (block.kind === 'chapter') return <h2 class="journey-chapter">{block.label}</h2>;
+        if (block.kind === 'lines') return <p class="journey-lines">{block.lines.map((line) => <span>{line}</span>)}</p>;
+        if (block.kind === 'pause') return <div class="journey-pause" aria-hidden="true"></div>;
+        if (block.kind === 'pair') {
+          return (
+            <div class="journey-pair">
+              {block.photos.map((ref) => {
+                const item = resolve(ref.id);
+                return (
+                  <figure class:list={['journey-frame', `is-${item.photo.orientation}`]} data-photo-reveal>
+                    <img
+                      src={item.photo.thumbnail}
+                      srcset={srcsetFor(item.photo, 'pair')}
+                      sizes={sizesFor('pair')}
+                      width={item.photo.width}
+                      height={item.photo.height}
+                      alt={ref.alt}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    {ref.caption && <figcaption>{ref.caption}</figcaption>}
+                  </figure>
+                );
+              })}
+            </div>
+          );
+        }
+        const item = resolve(block.photo.id);
+        return (
+          <figure
+            class:list={['journey-frame', `is-${block.display}`, `is-${item.photo.orientation}`]}
+            data-photo-reveal
+          >
+            <img
+              src={block.display === 'full' ? item.photo.archiveImage : item.photo.thumbnail}
+              srcset={srcsetFor(item.photo, block.display)}
+              sizes={sizesFor(block.display)}
+              width={item.photo.width}
+              height={item.photo.height}
+              alt={block.photo.alt}
+              loading="lazy"
+              decoding="async"
+            />
+            {block.photo.caption && <figcaption>{block.photo.caption}</figcaption>}
+          </figure>
+        );
+      })}
+    </article>
+
+    <aside class="journey-next">
+      <p class="journey-kicker">{sequence.length + 1} photographs</p>
+      {destination?.publicationStatus === 'published' ? (
+        <a href={`/destinations/${destination.slug}/`} data-analytics-event="destination_open" data-analytics-context={`journey:${story.slug}`}>
+          <span>{destination.name}</span><b aria-hidden="true">→</b>
+        </a>
+      ) : destination ? (
+        <a href={`/archive/place/${destination.slug}/`} data-analytics-event="archive_open" data-analytics-context={`journey:${story.slug}`}>
+          <span>{destination.name}</span><b aria-hidden="true">→</b>
+        </a>
+      ) : null}
+      <p>The photographs in this story are part of a larger archive. Everything from this country sits there, in the order it was taken.</p>
+      {/* The index only exists once a story is published, so a story still in review must not
+          link to it: the route would be a 404. */}
+      {publishedJourneyStories().length > 0 && (
+        <a class="editorial-link" href="/journey/" data-analytics-event="journey_open" data-analytics-context={`story:${story.slug}`}>The Journey <span aria-hidden="true">→</span></a>
+      )}
+    </aside>
+  </main>
+  <SiteFooter />
+</BaseLayout>

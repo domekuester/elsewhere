@@ -10,6 +10,9 @@ interface CatalogPhoto {
   altText: string;
   caption: string | null;
   destination: string | null;
+  /** Owner-confirmed city. Null on all but a handful of frames, and never inferred. */
+  place?: string | null;
+  region?: string | null;
   year: number | null;
   licensing: 'enquiry' | 'editorial' | 'commercial' | 'unavailable';
 }
@@ -26,6 +29,10 @@ interface CatalogPhoto {
 export const imageObject = (photo: CatalogPhoto, siteUrl: URL, pageUrl: string, representative = false) => {
   const canEnquire = photo.licensing !== 'unavailable' && business.enquiriesEnabled;
   const caption = photo.caption ?? photo.altText ?? null;
+  const contentLocation = [photo.place, photo.region, photo.destination]
+    .filter(Boolean)
+    .filter((value, index, all) => all.indexOf(value) === index)
+    .join(', ') || null;
   return {
     '@context': 'https://schema.org',
     '@type': 'ImageObject',
@@ -33,7 +40,10 @@ export const imageObject = (photo: CatalogPhoto, siteUrl: URL, pageUrl: string, 
     ...(photo.width ? { width: photo.width } : {}),
     ...(photo.height ? { height: photo.height } : {}),
     ...(caption ? { caption } : {}),
-    ...(photo.destination ? { contentLocation: { '@type': 'Place', name: photo.destination } } : {}),
+    // Phase 10.1 — as precise as the photograph's own record, and no more. Most frames know only a
+    // country and say only that. The dedupe matters because a region-level destination (Essaouira,
+    // Phu Quoc, La Réunion) carries the same name twice and must not print it twice.
+    ...(contentLocation ? { contentLocation: { '@type': 'Place', name: contentLocation } } : {}),
     creator: { '@type': business.creatorIsPerson ? 'Person' : 'Organization', name: business.creator },
     creditText: business.creditText,
     copyrightNotice: business.copyrightNotice,

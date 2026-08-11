@@ -8,6 +8,7 @@ import surfaceHeroData from '../../../data/surface-heroes.json';
 import destinationData from '../../../data/destinations.json';
 import heroPipeline from '../../../public/assets-derived/hero/HERO-PIPELINE.json';
 import { imageObject, breadcrumbs } from '../../data/image-schema';
+import { journeyStoryForDestination } from '../../data/journey';
 
 const { initialWorld = 'all', initialDestination = null } = Astro.props;
 const isBlackAndWhite = initialWorld === 'black-and-white';
@@ -56,6 +57,10 @@ const openingStyle = [
   `--hero-scrim-start:${openingScrim.bottomStart}%`,
   `--hero-title-scale:${surfaceHero?.titleScale ?? 1}`,
 ].join(';');
+// Phase 10 — a place that has a published Journey story says so here. This is the layered route
+// the story is meant to be found by: photographs first, then the option of going deeper. It
+// appears only for the place the story belongs to, and only once that story is published.
+const placeStory = place ? journeyStoryForDestination(place.id) : undefined;
 const placeAlt = {
   malaysia: 'A city skyline of towers rising beyond a dense tree canopy.',
   thailand: 'Limestone cliffs standing over a calm bay beneath heavy cloud.',
@@ -117,6 +122,11 @@ const placeDates = !place?.dateRange
         <p>{isBlackAndWhite ? 'The deeper monochrome body of work. Gesture, weather, distance, and form encountered beyond the selected edit.' : 'A deeper way through the work. Place, year, and form open different paths through the photographs.'}</p>
         <p>{!(openingPhoto && openingSources) && <><strong data-total-count>{catalog.length}</strong> frames<br /></>}<span data-visible-count>{opening.length} in view</span></p>
       </div>
+      {placeStory && (
+        <a class="editorial-link archive-story-link" href={`/journey/${placeStory.slug}/`} data-analytics-event="journey_open" data-analytics-context={`archive-place:${place.slug}`}>
+          Read the story <span aria-hidden="true">→</span>
+        </a>
+      )}
     </header>
 
     <section class="archive-controls" aria-label="Archive filters">

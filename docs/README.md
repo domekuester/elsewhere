@@ -35,6 +35,23 @@
 - [Phase 8.3 final launch QA](PHASE-8.3-FINAL-LAUNCH-QA.md)
 - [Phase 8.3 before / after](PHASE-8.3-BEFORE-AFTER.md)
 
+## Phase 10.2 — hero / header optical integration
+
+- [Hero header integration](PHASE-10.2-HERO-HEADER-INTEGRATION.md)
+
+## Phase 10 / 10.1 — THE JOURNEY, story 01: Malaysia
+
+- [Malaysia story report](PHASE-10-MALAYSIA-STORY-REPORT.md) — includes the 10.1 geographic correction
+- [THE JOURNEY system](PHASE-10-THE-JOURNEY-SYSTEM.md)
+- [Malaysia — German master (final)](PHASE-10-MALAYSIA-DE-FINAL.md)
+- [Malaysia — English publication text (final)](PHASE-10-MALAYSIA-EN-FINAL.md)
+- [Malaysia photo edit](PHASE-10-MALAYSIA-PHOTO-EDIT.md)
+- [Malaysia owner questions](PHASE-10-MALAYSIA-OWNER-QUESTIONS.md)
+
+## Phase 9.30A — Laos hero focal correction
+
+- [Laos hero crop](PHASE-9.30A-LAOS-HERO-CROP.md)
+
 ## Phase 9.30 — destination hero power match
 
 - [Hero power match](PHASE-9.30-HERO-POWER-MATCH.md)

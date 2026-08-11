@@ -33,8 +33,8 @@
       "peopleIds": [],
       "collectionIds": [],
       "relatedDestinations": [],
-      "photoCount": 57,
-      "confirmedPhotoCount": 57,
+      "photoCount": 59,
+      "confirmedPhotoCount": 59,
       "photoIds": [
         "photo-0022",
         "photo-0023",
@@ -42,7 +42,6 @@
         "photo-0037",
         "photo-0038",
         "photo-0039",
-        "photo-0040",
         "photo-0056",
         "photo-0057",
         "photo-0059",
@@ -92,7 +91,10 @@
         "photo-0664",
         "photo-0665",
         "photo-0666",
-        "photo-0667"
+        "photo-0667",
+        "photo-0687",
+        "photo-0688",
+        "photo-0689"
       ],
       "manualOrder": [
         "photo-0036",
@@ -156,8 +158,8 @@
       "peopleIds": [],
       "collectionIds": [],
       "relatedDestinations": [],
-      "photoCount": 47,
-      "confirmedPhotoCount": 47,
+      "photoCount": 48,
+      "confirmedPhotoCount": 48,
       "photoIds": [
         "photo-0001",
         "photo-0002",
@@ -166,6 +168,7 @@
         "photo-0005",
         "photo-0006",
         "photo-0007",
+        "photo-0040",
         "photo-0043",
         "photo-0044",
         "photo-0045",
@@ -287,17 +290,17 @@
         "photoId": "photo-0663",
         "status": "AUTO_SELECTED",
         "focal": {
-          "desktop": "50% 62%",
-          "tablet": "50% 60%",
-          "mobile": "52% 58%"
+          "desktop": "50% 50%",
+          "tablet": "50% 54%",
+          "mobile": "52% 52%"
         },
         "overlay": {
           "top": 0.62,
-          "bottom": 0.76,
-          "bottomStart": 46
+          "bottom": 0.62,
+          "bottomStart": 54
         },
         "titleScale": 1,
-        "note": "Two monks walking away past a black Mercedes in late light. Replaces photo-0659 (the river bend), which is truthful but hazy and subject-less at full bleed: measured against the benchmark heroes, the river frame sat at 0.19 saturation where Japan, Düsseldorf and Essaouira average 0.57, and its subject — a village — is a few hundred pixels wide. This frame has the colour identity and the single clear subject the benchmark set has. The crop takes the tops of their heads; they are walking away and unidentifiable either way, and the robes and the car carry the frame."
+        "note": "Two monks walking away past a black Mercedes in late light. Replaces photo-0659 (the river bend), which is truthful but hazy and subject-less at full bleed: measured against the benchmark heroes, the river frame sat at 0.19 saturation where Japan, Düsseldorf and Essaouira average 0.57, and its subject — a village — is a few hundred pixels wide. This frame has the colour identity and the single clear subject the benchmark set has. Phase 9.30A re-art-directs the crop the owner asked to keep: a 2306×3074 portrait in a 100svh band shows only a third to a half of the frame, so the desktop focal decides which third. The monks' heads sit at 38.5% of the frame and the number plate at 65.7%; at the previous 62% the window opened below the heads on any viewport shorter than about 850px and beheaded them. 50% opens the window at 22–34% at every desktop size tested from 1920×800 to 1024×768 — heads with 13–30% of the hero height above them, the car from roofline to plate, and the temple roofs and wires that place the street. It is the highest value that never crowds the heads; the trade is the lower bumper valance and the sandals, which carry nothing."
       }
     },
     {

@@ -28,6 +28,27 @@
         "reason": "Dense water texture with no saturated fine colour detail; 4:2:0 is invisible here and roughly halves the file."
       }
     },
+    "journey-malaysia": {
+      "photoId": "photo-0056",
+      "status": "AUTO_SELECTED",
+      "focal": {
+        "desktop": "50% 52%",
+        "tablet": "50% 52%",
+        "mobile": "50% 50%"
+      },
+      "overlay": {
+        "top": 0.6,
+        "bottom": 0.78,
+        "bottomStart": 40
+      },
+      "titleScale": 1,
+      "note": "A covered walkway between heavy columns, sea on both sides, one small figure at the far end. Chosen over the Malaysia destination hero (photo-0060, the skyline) and over photo-0036 (storm light on a beach, which is already the Home opening and would spend the island in the first frame). The story opens on return and crossing rather than on arrival in a country, and this is the only frame in the set that is about movement without claiming a place. The bottom scrim is heavier and starts higher than a chapter hero's because this hero carries a standfirst as well as a title.",
+      "alternatives": [
+        "photo-0104",
+        "photo-0094",
+        "photo-0122"
+      ]
+    },
     "black-and-white-archive": {
       "photoId": "photo-0574",
       "status": "AUTO_SELECTED",
