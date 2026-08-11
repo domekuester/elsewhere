@@ -9,10 +9,14 @@
 sich beide widersprechen, gilt diese hier. Wenn du unten einen Satz änderst, ändert sich der Sinn —
 dann muss der englische nachgezogen werden.
 
+**Stand Phase 10.3:** Der Kapas-Teil ist neu und deutlich länger, weil du erzählt hast, wie 2016
+tatsächlich abgelaufen ist und wie ein Tag dort aussieht. Vorher stand für beides je ein Satz da.
+Das waren die zwei schwächsten Stellen im ganzen Text.
+
 **Quelle:** gesprochene Erinnerung des Owners, redigiert. Keine erfundenen Fakten, Namen, Szenen,
-Gerichte, Begegnungen oder Zitate. Ersetzt
-[`STORY-01-MALAYSIA-DE-MASTER.md`](STORY-01-MALAYSIA-DE-MASTER.md) §2 als Publikationsschnitt; §1
-dort (die lange Fassung, ca. 820 Wörter) bleibt als Quellmaterial gültig.
+Gerichte, Begegnungen oder Zitate. Schreibweisen von *Pulau Kapas*, *LongSha Campsite*, *Marang*,
+*Terengganu*, *Perhentians*, *George Town* und *Penang* wurden gegen öffentliche Quellen geprüft und
+stimmen — mehr wurde aus der Recherche nicht übernommen.
 
 ---
 
@@ -52,8 +56,8 @@ begegnen mir malaiische, chinesische und indische Einflüsse, und zwar nicht als
 in den Straßen, in den Vierteln, an den Menschen. Eine Moschee, ein chinesischer Tempel, ein
 Hindu-Tempel, eine Kirche, alles nicht weit auseinander.
 
-Malaysia ist mehr als diese drei. Aber das sind die, die ich sehe. Dass das alles nebeneinander
-funktioniert, beeindruckt mich bis heute.
+Malaysia ist mehr als diese drei. Aber das sind die, die ich sehe. Und dass das alles nebeneinander
+funktioniert, daran habe ich mich bis heute nicht gewöhnt.
 
 Daraus entsteht das Essen. Aus dieser Mischung kommt eine Bandbreite, die ich so nirgendwo anders
 kenne. Für mich ist die Küche eine der größten Stärken des Landes.
@@ -73,8 +77,18 @@ Klingt simpel. Ist auch simpel.
 
 ### Pulau Kapas
 
-Pulau Kapas habe ich 2016 durch Zufall gefunden. Nicht, weil die Insel auf irgendeiner Liste stand.
-Ich bin einfach dort gelandet und habe mich verliebt.
+Kapas war ein Zufall.
+
+2016 bin ich mit einem Freund nach Malaysia geflogen. Der Plan stand: zwei Wochen Perhentians. Von
+Kuala Lumpur weiter nach Terengganu, und dort mussten wir eine Nacht bleiben.
+
+Von der Küste aus sieht man Kapas. Die Insel liegt da einfach. Ich habe vorgeschlagen, rüberzufahren
+und zu schauen, was das ist.
+
+Wir sind rübergefahren, haben das LongSha Campsite gefunden und sind die restlichen zwei Wochen dort
+geblieben. Auf die Perhentians sind wir nie gekommen.
+
+Nenn es Liebe auf den ersten Blick. Lange gedauert hat es jedenfalls nicht.
 
 Seitdem ist sie meine Lieblingsinsel. Wenn ich in Malaysia bin, versuche ich, wieder hinzukommen.
 Diesmal war das der größte Teil meiner Wochen im Land. Keine schwere Entscheidung.
@@ -90,18 +104,43 @@ Inzwischen stehen ein paar Gebäude mehr da als beim ersten Mal. Das Gefühl ist
 > Klein.
 > Unkompliziert.
 
+Ein Tag dort läuft ungefähr so.
+
+Man wacht im Zelt auf und hört das Meer. Kaffee. Schwimmen. Hängematte. Irgendwann läuft man los und
+schaut sich die Insel an, und es gibt Buchten, an denen niemand ist.
+
+Zum Einkaufen fährt man rüber nach Marang. Markt, Supermarkt, günstig. Dann kocht man etwas
+Einfaches.
+
+Abends ist es das Feuer, oder die Hängematten, oder der Küchenbereich. Am Wochenende kommen Leute
+aus Terengganu rüber. Sie laden dich zum Essen ein. Niemand hat sie darum gebeten.
+
+Es gibt Beach Cleanups. Es gibt eine Turtle Sanctuary. Man hilft im Camp mit, weil es gemacht werden
+muss und man sowieso da ist.
+
+Und es regnet. Richtig. Wenn ein Sturm kommt, wird aus einer entspannten Truppe sehr schnell eine
+effiziente Grabenbaukolonne, damit die Zelte nicht absaufen.
+
+Das ist eigentlich alles. Und genau deswegen komme ich immer wieder.
+
+Kapas macht alles langsamer. Man kommt an, und irgendwann hört man auf, den Tag einzuteilen.
+
 Das Riff sah gut aus. Intakt. Das Meer und das Riff sind ein großer Teil davon, warum diese Insel
 für mich zählt und nicht irgendeine andere.
 
 Und die Leute auf Kapas sind großartig. Mehr muss ich dazu eigentlich nicht sagen.
 
+---
+
 Ich kenne das Land seit 2014, aber mit der Kamera sehe ich Dinge, an denen ich vorher hundertmal
 vorbeigelaufen bin.
 
 In der Stadt ist es Beton, Dichte, Menschen, Wetter. Auf Kapas ist es das Gegenteil. Platz, Wasser,
-Licht, ein langsamerer Takt.
+Licht, ein langsameres Tempo.
 
 Kein Plan, kein Konzept. Nur genauer hinschauen. Das ist eigentlich schon die ganze Veränderung.
+
+---
 
 Malaysia ist für mich kein Land, das ich einmal besucht habe. Es ist ein Ausgangspunkt.
 
@@ -112,23 +151,31 @@ Deswegen fängt die Reise hier an. Und deswegen geht sie von hier aus weiter.
 
 ---
 
-## Drei Sätze, die Ton sind und keine Aussage
+## Sätze, die Ton sind und keine Aussage
 
-Alles oben ist deine eigene Schilderung. Drei Stellen sind Formulierung, nicht Inhalt: sie fügen
+Alles oben ist deine eigene Schilderung. Vier Stellen sind Formulierung, nicht Inhalt: sie fügen
 keinen Fakt hinzu, sondern sagen etwas bereits Gesagtes in deinem Tonfall noch einmal. Genau die
 Sätze klingen am meisten nach dir — deswegen solltest du entscheiden, ob sie bleiben. Jeder einzelne
 lässt sich streichen, ohne dass etwas fehlt.
 
 - *Das klingt nach einer Kleinigkeit. Es verändert den ganzen Tag.*
-- *Ohne nachzudenken.*
+- *Ohne nachzudenken.* (George Town)
 - *Diesmal war das der größte Teil meiner Wochen im Land. Keine schwere Entscheidung.*
+- *Nenn es Liebe auf den ersten Blick. Lange gedauert hat es jedenfalls nicht.*
+
+Dazu zwei Stellen, an denen deine Erzählung leicht zugespitzt wiedergegeben ist, ohne dass ein Fakt
+dazukommt: *„aus einer entspannten Truppe … eine effiziente Grabenbaukolonne"* und *„Niemand hat sie
+darum gebeten."* Wenn dir das zu viel ist, sag es.
 
 ## Was bewusst **nicht** drinsteht
 
-- Keine Namen, keine Begegnungen, keine Dialoge, kein beschriebener Freund.
-- Kein Gericht, kein Restaurant, kein Markt — du hast nie eines genannt.
-- Kein „zweite Heimat", kein „hat mein Leben verändert", kein „hier gehöre ich hin".
-- Keine ökologische Aussage über das Riff, die über deinen eigenen Eindruck hinausgeht.
+- Kein Name deines Freundes von 2016, keine Dialoge, keine einzelne Begegnung.
+- Kein Gericht, kein Restaurant, kein Markt beim Namen — du hast nie eines genannt.
+- Keine Preise, keine Fährzeiten, keine Entfernungen, keine Ausstattung des Camps. Die Recherche hat
+  nur Schreibweisen bestätigt, sonst nichts.
+- Kein „zweite Heimat", kein „hat mein Leben verändert", kein „hier gehöre ich hin". Kapas trägt sich
+  dadurch, dass der Tag Sinn ergibt und Weiterfahren blöd gewesen wäre.
+- Keine ökologische Aussage über das Riff, die über deinen eigenen Eindruck hinausgeht. Beach Cleanup
+  und Turtle Sanctuary stehen als das da, was du gemacht hast — nicht als Umweltbotschaft.
 - Cameron Highlands, Langkawi, Redang, Tioman und Singapur kommen **nicht** als Reisestationen vor.
-  Teeanbau im Hochland steht einmal, in einer Aufzählung dessen, was das Land enthält.
 - Keine praktischen Tipps. Das wäre eine Field Note, und das hier ist keine.

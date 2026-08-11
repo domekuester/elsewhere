@@ -199,7 +199,7 @@ export const journeyStories: JourneyStory[] = [
         kind: 'text',
         paragraphs: [
           'What gets me every time is how visible the different communities are. Malay, Chinese and Indian influences are the ones I notice most, and not as a statistic: in the food, in the streets, in the neighbourhoods, in people. A mosque, a Chinese temple, a Hindu temple, a church, none of it far apart.',
-          'Malaysia is more than those three. But those are the ones I see. It still impresses me that it all works side by side.',
+          'Malaysia is more than those three. But those are the ones I see. And it all works side by side, which I have never quite got used to.',
         ],
       },
       {
@@ -303,11 +303,18 @@ export const journeyStories: JourneyStory[] = [
           alt: 'A wooden jetty pavilion stands over flat turquoise water with a long boat moored beside it.',
         },
       },
+      // Phase 10.3 — the owner supplied how 2016 actually happened and what a day there is. Both
+      // were one line each before, and they were the two weakest points in the piece. Every detail
+      // below is his: the Perhentian plan, the night in Terengganu, LongSha, the two weeks, the
+      // coffee, Marang, the fire, the weekend visitors, the cleanups, the turtles, the trenches.
       {
         kind: 'text',
         paragraphs: [
-          'I found Pulau Kapas by accident in 2016. Not because it was on anybody’s list. I just ended up there and fell in love with it.',
-          'It has been my favourite island since. When I am in Malaysia I try to get back. This time that was most of my weeks in the country. Not a hard decision.',
+          'Kapas was an accident.',
+          'In 2016 I flew to Malaysia with a friend. The plan was fixed: two weeks on the Perhentians. Kuala Lumpur to Terengganu, and then we had to stay a night there.',
+          'You can see Kapas from the coast. It just sits there. I suggested we go over and have a look at what it was.',
+          'We went over, found LongSha Campsite, and stayed for the rest of the two weeks. We never made it to the Perhentians.',
+          'Call it love at first sight. It didn’t take long.',
         ],
       },
       {
@@ -322,6 +329,7 @@ export const journeyStories: JourneyStory[] = [
       {
         kind: 'text',
         paragraphs: [
+          'It has been my favourite island since. When I am in Malaysia I try to get back. This time that was most of my weeks in the country. Not a hard decision.',
           'What makes it is mostly what it doesn’t have. Almost no infrastructure. Nothing built that takes over. Beach, sea, vegetation, a few places to stay, people. Not much more.',
           'There are a few more buildings now than the first time. The feeling has stayed.',
         ],
@@ -343,6 +351,15 @@ export const journeyStories: JourneyStory[] = [
         ],
       },
       {
+        kind: 'text',
+        paragraphs: [
+          'A day there goes roughly like this.',
+          'You wake up in the tent and hear the sea. Coffee. Swim. Hammock. At some point you walk off and look at the island, and there are bays with nobody on them.',
+          'For food you go across to Marang. Market, supermarket, cheap. Then you cook something simple.',
+          'In the evening it is the fire, or the hammocks, or the kitchen area. At weekends people come over from Terengganu. They invite you to eat with them. Nobody asked them to.',
+        ],
+      },
+      {
         kind: 'photo',
         display: 'inset',
         photo: {
@@ -354,21 +371,27 @@ export const journeyStories: JourneyStory[] = [
       {
         kind: 'text',
         paragraphs: [
-          'The reef looked good. Intact. The sea and the reef are a large part of why this island counts for me and not some other one.',
+          'There are beach cleanups. There is a turtle sanctuary. You help around the camp, because it needs doing and you are there anyway.',
+          'And it rains. Properly. When a storm comes in, a relaxed group of campers turns very quickly into an efficient trench-digging operation, so the tents don’t flood.',
+          'That is basically it. And that is exactly why I keep going back.',
         ],
       },
       {
         kind: 'photo',
         display: 'wide',
         photo: {
-          id: 'photo-0108',
+          id: 'photo-0059',
           role: 'place',
-          alt: 'A tall cloud bank stands over the sea with the sun setting beneath it, seen from an empty beach.',
+          alt: 'A heavy bank of cloud stands over dark open water with low land on the far side.',
         },
       },
       {
         kind: 'text',
-        paragraphs: ['And the people on Kapas are great. I don’t really need to say more than that.'],
+        paragraphs: [
+          'Kapas slows everything down. You arrive, and at some point you stop dividing the day up.',
+          'The reef looked good. Intact. The sea and the reef are a large part of why this island counts for me and not some other one.',
+          'And the people on Kapas are great. I don’t really need to say more than that.',
+        ],
       },
       {
         kind: 'photo',

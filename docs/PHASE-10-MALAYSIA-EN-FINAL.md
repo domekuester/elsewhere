@@ -9,10 +9,9 @@ page reads from the data, not from this file.
 **Source of truth for meaning:** [`PHASE-10-MALAYSIA-DE-FINAL.md`](PHASE-10-MALAYSIA-DE-FINAL.md).
 The English is a re-creation, not a translation. Where the two differ in wording, the German governs.
 
-**Length:** 640 words of body text plus a 25-word standfirst. The pack targeted 600–900 and the
-owner's account honestly carries the lower end of that. The missing 200 words are not missing style,
-they are the three unanswered questions in
-[`PHASE-10-MALAYSIA-OWNER-QUESTIONS.md`](PHASE-10-MALAYSIA-OWNER-QUESTIONS.md).
+**Length:** 910 words of body text plus a 25-word standfirst, up from 640 in Phase 10. The whole
+increase is Pulau Kapas: how 2016 actually happened, and what an ordinary day there looks like. Both
+were a single sentence before.
 
 ---
 
@@ -60,8 +59,8 @@ influences are the ones I notice most, and not as a statistic: in the food, in t
 neighbourhoods, in people. A mosque, a Chinese temple, a Hindu temple, a church, none of it far
 apart.
 
-Malaysia is more than those three. But those are the ones I see. It still impresses me that it all
-works side by side.
+Malaysia is more than those three. But those are the ones I see. And it all works side by side,
+which I have never quite got used to.
 
 The food comes out of that. The mixture produces a range I don't know from anywhere else. For me the
 cooking is one of the real strengths of this country.
@@ -80,8 +79,18 @@ Sounds simple. It is simple.
 
 ### Pulau Kapas
 
-I found Pulau Kapas by accident in 2016. Not because it was on anybody's list. I just ended up there
-and fell in love with it.
+Kapas was an accident.
+
+In 2016 I flew to Malaysia with a friend. The plan was fixed: two weeks on the Perhentians. Kuala
+Lumpur to Terengganu, and then we had to stay a night there.
+
+You can see Kapas from the coast. It just sits there. I suggested we go over and have a look at what
+it was.
+
+We went over, found LongSha Campsite, and stayed for the rest of the two weeks. We never made it to
+the Perhentians.
+
+Call it love at first sight. It didn't take long.
 
 It has been my favourite island since. When I am in Malaysia I try to get back. This time that was
 most of my weeks in the country. Not a hard decision.
@@ -97,10 +106,32 @@ There are a few more buildings now than the first time. The feeling has stayed.
 > Small.
 > Uncomplicated.
 
+A day there goes roughly like this.
+
+You wake up in the tent and hear the sea. Coffee. Swim. Hammock. At some point you walk off and look
+at the island, and there are bays with nobody on them.
+
+For food you go across to Marang. Market, supermarket, cheap. Then you cook something simple.
+
+In the evening it is the fire, or the hammocks, or the kitchen area. At weekends people come over
+from Terengganu. They invite you to eat with them. Nobody asked them to.
+
+There are beach cleanups. There is a turtle sanctuary. You help around the camp, because it needs
+doing and you are there anyway.
+
+And it rains. Properly. When a storm comes in, a relaxed group of campers turns very quickly into an
+efficient trench-digging operation, so the tents don't flood.
+
+That is basically it. And that is exactly why I keep going back.
+
+Kapas slows everything down. You arrive, and at some point you stop dividing the day up.
+
 The reef looked good. Intact. The sea and the reef are a large part of why this island counts for me
 and not some other one.
 
 And the people on Kapas are great. I don't really need to say more than that.
+
+---
 
 I have known this country since 2014, but with the camera I see things I have walked past a hundred
 times.
@@ -109,6 +140,8 @@ In the city it is concrete, density, people, weather. On Kapas it is the opposit
 light, a slower pace.
 
 No plan, no concept. Just looking more carefully. That is the whole change.
+
+---
 
 Malaysia isn't a country I visited once. It is a starting point.
 
@@ -119,37 +152,50 @@ That is why the journey begins here. And why it carries on from here.
 
 ---
 
-## Three sentences that are voice, not testimony
+## Lines that are voice, not testimony
 
-Everything above is the owner's own account except the phrasing of three beats. They add no fact —
-each one restates something already said, in his register — but they are the sentences a reader
-would hear as *him* rather than as reporting, so he should be the one who decides whether they stay.
-Cutting any of them costs the piece nothing structural.
+Everything above is the owner's own account. Six beats are phrasing rather than fact — each restates
+something already said, in his register. They are the sentences a reader hears as *him*, so he
+decides whether they stay. Any of them can be cut without leaving a hole.
 
 | Line | What it extends |
 | --- | --- |
-| *That sounds like a small thing. It changes the whole day.* | "Ich bleibe stehen, wo ich sonst weitergegangen wäre." |
-| *Without thinking about it.* | "…sage ich George Town." |
-| *This time that was most of my weeks in the country. Not a hard decision.* | He spent most of his Malaysia time on Kapas, and it is his favourite island. |
-
-## What is deliberately not here
-
-- No names, no encounters, no dialogue, no friend described.
-- No dish, restaurant, market or hawker stall — he has never named one.
-- No "second home", no "changed my life", no "this is where I belong".
-- No ecological claim about the reef beyond *it looked good to me*.
-- Cameron Highlands, Langkawi, Redang, Tioman and Singapore appear nowhere as places visited. Tea in
-  the highlands appears once, in a list describing what the country contains.
-- No practical advice of any kind. That is a Field Note, and this is not one.
+| *That sounds like a small thing. It changes the whole day.* | Stopping where he used to keep walking. |
+| *Without thinking about it.* | "…I say George Town." |
+| *This time that was most of my weeks in the country. Not a hard decision.* | Most of his Malaysia time was on Kapas, and it is his favourite island. |
+| *Call it love at first sight. It didn't take long.* | He described it as love at first sight. |
+| *a relaxed group of campers turns very quickly into an efficient trench-digging operation* | Storms, and digging trenches so the tents don't flood. |
+| *Nobody asked them to.* | Being invited to eat by people who came over for the weekend. |
 
 ## Forbidden-language check
 
 None of the following appear: *hidden gem · vibrant tapestry · melting pot · bustling · where
 tradition meets modernity · off the beaten path · paradise · crystal-clear · nestled · feast for the
 senses · journey of discovery · timeless · authentic · captured my heart · must-see · bucket list ·
-wanderlust · postcard-perfect · beating heart of · every corner tells a story · more than just a
-destination.*
+wanderlust · postcard-perfect · sun-drenched · culinary paradise · beating heart of · every corner
+tells a story · more than just a destination.*
 
-Three em dashes in 640 words. No paragraph closes on a manufactured insight. The four blunt lines
-the last pack asked to protect all survived: *the city smells* · *Not pretty. Impressive.* · *The
-reef looked good. Intact.* · *the people on Kapas are great.*
+Three em dashes in 910 words. No "not X, but Y" construction. No paragraph closes on a manufactured
+insight. *Rhythm*, *stillness*, *layers*, *texture* and *presence* appear zero times; *memory* zero;
+*pace* once, in the owner's own comparison.
+
+The blunt lines that have been protected since the first draft all survived: *the city smells* ·
+*Not pretty. Impressive.* · *The reef looked good. Intact.* · *the people on Kapas are great.* Phase
+10.3 adds four more that should get the same protection: *Kapas was an accident.* · *We never made
+it to the Perhentians.* · *Nobody asked them to.* · *That is basically it. And that is exactly why I
+keep going back.*
+
+## What is deliberately not here
+
+- No name for the friend he travelled with in 2016. No dialogue, no single encounter.
+- No dish, restaurant or market named — he has never named one.
+- **Nothing from research except spelling.** *Pulau Kapas*, *LongSha Campsite*, *Marang*,
+  *Terengganu*, *Perhentians*, *George Town* and *Penang* were checked against public sources and
+  are correct. Prices, boat times, distances and camp facilities are all publicly available and none
+  of them are in the story.
+- No "second home", no "changed my life", no "found myself". Kapas carries itself on the day making
+  sense and leaving sounding stupid.
+- No ecological claim beyond *the reef looked good to me*. The beach cleanups and the turtle
+  sanctuary appear as things he did, not as a message.
+- Cameron Highlands, Langkawi, Redang, Tioman and Singapore appear nowhere as places visited.
+- No practical advice of any kind. That is a Field Note, and this is not one.

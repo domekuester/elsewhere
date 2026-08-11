@@ -2,15 +2,15 @@
 
 The first story. Also the first time the publication speaks in the first person.
 
-*Revised by Phase 10.1 — a geographic correction and a George Town ingest. See the section at the
-bottom.*
+*Revised by Phase 10.1 (a geographic correction and a George Town ingest) and Phase 10.3 (the Kapas
+memory and a voice pass). Both are documented at the bottom.*
 
 | | |
 | --- | --- |
 | URL | `/journey/malaysia/` |
 | Status | `OWNER_REVIEW` — builds, `noindex`, not in the sitemap, linked from nowhere |
 | Title | Malaysia · kicker *The Journey — 01* · *2024 — 2025* |
-| Words | 640 body + 25 standfirst |
+| Words | 910 body + 25 standfirst |
 | Photographs | 22 (1 hero + 21), from a pool of 59 |
 | Opener | `photo-0056` — a covered walkway between columns, sea on both sides |
 | Closer | `photo-0057` — sun through cloud over a bay, a boat on the sand, a jetty running out |
@@ -23,8 +23,8 @@ bottom.*
 | --- | --- |
 | [`PHASE-10-MALAYSIA-DE-FINAL.md`](PHASE-10-MALAYSIA-DE-FINAL.md) | German master — the truth layer |
 | [`PHASE-10-MALAYSIA-EN-FINAL.md`](PHASE-10-MALAYSIA-EN-FINAL.md) | The English text that is on the page |
-| [`PHASE-10-MALAYSIA-PHOTO-EDIT.md`](PHASE-10-MALAYSIA-PHOTO-EDIT.md) | The 20 frames, their roles, and what was left out |
-| [`PHASE-10-MALAYSIA-OWNER-QUESTIONS.md`](PHASE-10-MALAYSIA-OWNER-QUESTIONS.md) | Four questions and one decision |
+| [`PHASE-10-MALAYSIA-PHOTO-EDIT.md`](PHASE-10-MALAYSIA-PHOTO-EDIT.md) | The 22 frames, their roles, and what was left out |
+| [`PHASE-10-MALAYSIA-OWNER-QUESTIONS.md`](PHASE-10-MALAYSIA-OWNER-QUESTIONS.md) | Two questions and one decision |
 | [`PHASE-10-THE-JOURNEY-SYSTEM.md`](PHASE-10-THE-JOURNEY-SYSTEM.md) | The reusable system |
 
 ## What was built
@@ -57,29 +57,32 @@ render them — a check, not a convention. It cost the edit the street-food stal
 frame in the city, and the whole list is one yes away from going back in.
 
 **The story is dark.** Field Notes are ivory because they are reading surfaces. This is a reading
-surface inside a photographic publication, and an ivory page would put a bright mount around all
-twenty frames. The cost is that long-form body text had to be tuned for a dark ground: a softened
+surface inside a photographic publication, and an ivory page would put a bright mount around every
+frame. The cost is that long-form body text had to be tuned for a dark ground: a softened
 ink (#d6d7d2, 13.4:1), a 1.78 line-height, and the measure held at 36rem — 576px, about 66
 characters, at every width above 700px.
 
 ## The writing
 
-640 words. The pack targeted 600–900 and the owner's account honestly carries the lower end. The
-missing 200 words are not missing style; they are questions 3 and 4 — how he actually ended up on
-Kapas in 2016, and what an ordinary day there looks like. Both are the emotional centre of the
-chapter and both currently get one sentence each.
+910 words. It was 640 until Phase 10.3, when the owner answered the two questions the piece was
+built around a gap in — how he ended up on Kapas in 2016, and what an ordinary day there is. Every
+one of the added words is his.
 
 Nothing was invented. No dish, restaurant, friend, encounter, dialogue, route or weather event that
-the owner did not describe. Three sentences are *voice* rather than testimony — they add no fact,
-they restate something already said in his register — and all three are listed by name in the German
-and English documents so they can be struck individually.
+the owner did not describe. Six beats are *voice* rather than testimony — they add no fact, they
+restate something already said in his register — and all six are listed by name in the German and
+English documents so they can be struck individually.
 
-The four blunt lines the previous pack asked to protect all survived: *the city smells* · *Not
-pretty. Impressive.* · *The reef looked good. Intact.* · *the people on Kapas are great.*
+The blunt lines the earlier packs asked to protect all survived: *the city smells* · *Not pretty.
+Impressive.* · *The reef looked good. Intact.* · *the people on Kapas are great.* Phase 10.3 adds
+four that deserve the same protection: *Kapas was an accident.* · *We never made it to the
+Perhentians.* · *Nobody asked them to.* · *That is basically it. And that is exactly why I keep going
+back.*
 
-Three em dashes in 640 words. No *hidden gem*, *vibrant tapestry*, *melting pot*, *bustling*, *where
+Three em dashes in 910 words. No *hidden gem*, *vibrant tapestry*, *melting pot*, *bustling*, *where
 tradition meets modernity*, *off the beaten path*, *timeless*, *authentic*, *journey of discovery*,
-*postcard-perfect*. No paragraph closes on a manufactured insight.
+*postcard-perfect*, *sun-drenched*, *culinary paradise*. *Rhythm*, *stillness*, *layers*, *texture*,
+*presence* and *memory* appear zero times. No paragraph closes on a manufactured insight.
 
 ## Chronology
 
@@ -95,32 +98,32 @@ times across two years and never claims to be one continuous trip.
 - **No new motion.** The existing `data-photo-reveal` clip-path reveal, nothing else. Native scroll
   untouched — no smooth-scroll, no scroll-jacking, no pinning.
 - **No practical content.** No where to stay, what to eat, how to get there. That is a Field Note.
-- **No captions.** Twenty frames, no captions, because none of them carries a fact worth stating that
-  the text does not already carry. The caption slot exists in the model for when one does.
+- **One caption in twenty-two frames.** Only `photo-0689` carries one, because it is the only frame
+  whose city can be proved. Everything else states nothing the text does not already carry.
 
 ## QA
 
     BUILD:                  PASS   22 pages, 21 public HTML files
-    CONTENT:                PASS   686 photos, 12 destinations, 88 People candidates
+    CONTENT:                PASS   689 photos, 12 destinations, 88 People candidates
     OWNER EXCLUSIONS:       PASS   24 rejected, 0 public references, 32 built files audited
     PRIVACY:                PASS   no place/GPS/private note on any story surface
     LAUNCH / SEO:           PASS   unique canonicals, complete social metadata, sitemap consistent
     BROKEN ASSETS:          0
     CONSOLE / NETWORK:      clean at every width tested
     HORIZONTAL OVERFLOW:    0 at every width tested
-    MISSING ALT:            0 of 20
+    MISSING ALT:            0 of 22
     REDUCED MOTION:         0 hidden elements — the whole page is present
     KEYBOARD:               every stop has a visible 2px focus ring; skip link first
     HEADINGS:               h1 → h2 ×3, no level skipped
 
-Rendered and read at **1600, 1440, 1280, 1024, 768, 430, 390 and 320**. The reading column measures
+Rendered and read end to end at **1600, 1440, 1280, 1024, 768, 430, 390 and 320**. The reading column measures
 576px (≈66 characters) at every width above 700px and 280–390px below it. Screenshots are local only
 and were not added to the repository.
 
 Performance: the hero is the LCP element and is served from the hero ladder — 195 KB at 1440, 298 KB
 at 390/DPR 3, the same treatment every chapter hero gets. Initial load is 136 KB of markup, CSS and
-fonts plus two images; the other 18 frames are lazy. The page is 22,800 px tall at 1440 and pays for
-it a screen at a time.
+fonts plus two images; the rest are lazy. The page is 25,700 px tall at 1440 and pays for it a
+screen at a time.
 
 ## Not touched
 
@@ -252,3 +255,93 @@ touched — no sentence depended on George Town being unillustrated.
 Re-rendered end to end at 1600, 1440, 1280, 1024, 768, 430, 390 and 320.
 
 The story remains `OWNER_REVIEW`. Nothing was published.
+
+---
+
+# Phase 10.3 — the Kapas memory, and the voice pass
+
+The owner told the story of 2016 and described an ordinary day on the island. Those were the two
+questions the piece had been built around a gap in. This is what they changed.
+
+## The story went from 640 words to 910, and all 270 are his
+
+**How it happened.** 2016, a flight to Malaysia with a friend, and a fixed plan: two weeks on the
+Perhentians. Kuala Lumpur to Terengganu, a night on the mainland, and Kapas sitting there off the
+coast. He suggested going over to look. They found LongSha Campsite and stayed the whole two weeks.
+They never made it to the Perhentians.
+
+That last sentence is the chapter. A story about a country he returns to now contains the moment the
+returning started, and it started by a plan falling apart in the first twenty-four hours.
+
+**What a day is.** Waking in the tent to the sea, coffee, a swim, a hammock, bays with nobody on
+them. The boat across to Marang for the market and the supermarket, and cooking something cheap. The
+fire, the hammocks or the kitchen area in the evening. People coming over from Terengganu at
+weekends and inviting you to eat. Beach cleanups, the turtle sanctuary, helping around the camp. And
+the rain — properly — and digging trenches so the tents don't flood.
+
+Kapas grew from two paragraphs to eleven. It is now the longest section in the story, which is
+correct: it is the part that explains why any of the rest is happening.
+
+## What this fixed, structurally
+
+Before, the island was asserted rather than shown. *I found Pulau Kapas by accident in 2016* and *the
+people on Kapas are great* asked the reader to take two large claims on trust. Now the accident is a
+sequence of events and the people are a specific thing they do — they invite you to eat, and nobody
+asked them to. The affection is earned by concrete detail rather than announced.
+
+It also gave the section a shape it did not have: **how it happened → what it is → what a day is →
+why it holds.**
+
+## Research
+
+Only spellings. *Pulau Kapas*, *LongSha Campsite*, *Marang*, *Terengganu*, *Perhentians*, *George
+Town* and *Penang* were checked against public sources and the owner's spelling was correct in every
+case. Prices, boat times, distances and camp facilities are all publicly available; none of them are
+in the story, because none of them came from him.
+
+Sources consulted for spelling only:
+[longshacampingandboatservices.com](https://longshacampingandboatservices.com/) ·
+[Tripadvisor](https://www.tripadvisor.com/Hotel_Review-g304001-d10021922-Reviews-LongSha_Campsite-Pulau_Kapas_Terengganu.html)
+
+## The voice pass
+
+Four lines were rewritten after reading the whole thing aloud:
+
+| Was | Now | Why |
+| --- | --- | --- |
+| *It still impresses me that it all works side by side.* | *And it all works side by side, which I have never quite got used to.* | *Impressive/impresses* twice in three paragraphs blunted *Not pretty. Impressive.* |
+| *Call it love at first sight. It did not take long, anyway.* | *Call it love at first sight. It didn't take long.* | The trailing *anyway* was hedging a line that should land. |
+| *You help around the camp because it is there to be done and you are there anyway.* | *You help around the camp, because it needs doing and you are there anyway.* | Written, not spoken. |
+| *the day stops being divided up* | *you stop dividing the day up* | Passive, and it made him a bystander in his own sentence. |
+
+## Photographs
+
+One out, one in, count unchanged at 22. `photo-0108` (a fourth cloud-over-water frame) left;
+`photo-0059` — a heavy grey bank over dark open water — arrived directly under *And it rains.
+Properly.* The storm paragraph had no picture, and this is the only frame in the Malaysia pool that
+reads as weather rather than as good light. It is also the first landscape frame anywhere in the
+story's reading column, which breaks up a long portrait run.
+
+`photo-0122`, the cove, now lands immediately after the sentence about seeing the island from the
+coast — the thing he saw, right after he says he saw it.
+
+## What did not change
+
+The opening (*Not the first time. That is more or less the point.*), the standfirst, the closing two
+lines, the Kuala Lumpur section, the George Town section and its two frames, the hero, the closer,
+the block system, the layout, the header work from 10.2, and the publication state.
+
+## QA
+
+    BUILD:               PASS   22 pages, 21 public HTML files
+    CONTENT:             PASS   689 photos
+    PRIVACY:             PASS
+    OWNER EXCLUSIONS:    PASS   24 rejected, 0 public references
+    LAUNCH / SEO:        PASS
+    BROKEN ASSETS:       0
+    CONSOLE / NETWORK:   clean
+    HORIZONTAL OVERFLOW: 0
+    MISSING ALT:         0 of 22
+    IDENTIFIABLE PEOPLE: 0, still enforced by build-time check
+    REDUCED MOTION:      0 hidden elements
+    STATUS:              OWNER_REVIEW — unchanged, nothing published

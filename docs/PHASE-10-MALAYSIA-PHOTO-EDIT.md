@@ -1,15 +1,27 @@
 # Phase 10 — Malaysia story photo edit
 
-**Revised in Phase 10.1.** 22 photographs from a pool of 59. Roles are internal: they shape the
-order and are never rendered.
+**Revised in Phase 10.1 and 10.3.** 22 photographs from a pool of 59. Roles are internal: they shape
+the order and are never rendered.
 
-Phase 10.1 changed three things and left the rest of the edit alone:
+Phase 10.1 changed three things:
 
 - `photo-0040` **removed** — the owner confirmed the frame is Thailand, not Malaysia. It was the
   closer.
 - `photo-0057` **added** as the new closer.
 - `photo-0688` and `photo-0689` **added** — two of three newly ingested, owner-confirmed George
   Town frames. The George Town section is no longer text only.
+
+Phase 10.3 changed one thing, and it was caused by the writing rather than by the photographs. The
+Kapas section grew from two paragraphs to eleven, and the picture edit had to answer that:
+
+- `photo-0108` **removed** — a cloud bank with the sun setting under it. The fourth
+  cloud-over-water frame in a chapter that already had three, and the weakest of them.
+- `photo-0059` **added** — a heavy grey cloud bank over dark open water, placed directly after *And
+  it rains. Properly.* The storm paragraph had no photograph; this one is the only frame in the
+  Malaysia pool that reads as weather rather than as good light, and it is the first landscape frame
+  anywhere in the story's reading column, which gives the long Kapas run a beat it did not have.
+
+Net count unchanged.
 
 ## The sequence
 
@@ -28,11 +40,11 @@ Phase 10.1 changed three things and left the rest of the edit alone:
 | 10 | `photo-0689` | 4 Oct 2024 | place | column | **George Town.** A Chinese temple roof from below — dragons along the ridge, a carved pillar, a red lantern, hard daylight. Closes the section. Carries the only caption in the story. |
 | 11 | `photo-0094` | 23 Apr 2025 | transition | column | Dark foliage opening onto sand and sea. The hinge out of the city. |
 | 12 | `photo-0104` | 24 Apr 2025 | place | full bleed | A jetty pavilion over flat turquoise water, one long boat. Arrival by water. |
-| 13 | `photo-0122` | 30 Apr 2025 | **turning point** | full bleed | The cove. This is the frame that explains why he goes back, and it is the largest thing on the page after the hero. |
+| 13 | `photo-0122` | 30 Apr 2025 | **turning point** | full bleed | The cove. It now lands directly after *We went over, found LongSha Campsite, and stayed* — the thing he saw, immediately after the sentence about seeing it. Largest frame on the page after the hero. |
 | 14 | `photo-0121` | 30 Apr 2025 | pause | pair, left | A volleyball net on empty sand. Says *few people* without saying *untouched*. |
-| 15 | `photo-0132` | 30 Apr 2025 | pause | pair, right, dropped | A hammock between palms. |
-| 16 | `photo-0110` | 27 Apr 2025 | pause | inset | Looking up through leaves at a gold cloud. Deliberately small — a held breath between the blunt lines and the reef sentence. |
-| 17 | `photo-0108` | 25 Apr 2025 | place | column | A cloud bank with the sun going down under it. |
+| 15 | `photo-0132` | 30 Apr 2025 | pause | pair, right, dropped | A hammock between palms. Both frames now sit immediately before the description of an ordinary day, which they illustrate without being asked to. |
+| 16 | `photo-0110` | 27 Apr 2025 | pause | inset | Looking up through leaves at a gold cloud. Deliberately small — a held breath between the evening paragraph and the cleanups. |
+| 17 | `photo-0059` | 16 Sep 2024 | place | column | A heavy grey cloud bank over dark open water. **Added in 10.3**, directly after *And it rains. Properly.* The only frame in the pool that reads as weather, and the only landscape frame in the reading column. |
 | 18 | `photo-0113` | 29 Apr 2025 | pause | full bleed | Palms, two lamps, lights on a far shore. The last of the island. |
 | 19 | `photo-0090` | 18 Apr 2025 | detail | inset | Chrysanthemums, close and saturated. Placed under the camera paragraph: a frame nobody takes while passing through. |
 | 20 | `photo-0163` | 2 May 2025 | place | full bleed | A cloud bank over calm water past a headland. |
@@ -108,8 +120,8 @@ everything else.
 camera paragraph instead), `photo-0687` (the third George Town frame), `photo-0022`, `photo-0074`,
 `photo-0081`, `photo-0082`, `photo-0089`, `photo-0093`, `photo-0088`, `photo-0075`, `photo-0103`,
 `photo-0112`, `photo-0116`, `photo-0134`, `photo-0160`, `photo-0161`, `photo-0162`, `photo-0534`,
-`photo-0541`, `photo-0059`, `photo-0037`, `photo-0038`, `photo-0664`, `photo-0666`, `photo-0667`,
-`photo-0095`, `photo-0096`.
+`photo-0541`, `photo-0108` (dropped in 10.3), `photo-0037`, `photo-0038`, `photo-0664`,
+`photo-0666`, `photo-0667`, `photo-0095`, `photo-0096`.
 
 Nothing here is rejected. They are in the archive, which is where the remaining 37 belong.
 

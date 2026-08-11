@@ -1,14 +1,19 @@
 # Malaysia — what only you can answer
 
-*Updated after Phase 10.1.*
+*Updated after Phase 10.3.*
 
 The story is finished and it works as it stands. Nothing below was invented in the meantime, and
-nothing below is needed to publish. Each item either unlocks something the page currently cannot do,
-or would make the next draft better.
+nothing below is needed to publish.
 
-Four questions and one decision. That is the whole list.
+**Two questions and one decision.** The list has got shorter twice, because you answered things.
 
 ## Answered by you already
+
+**How you ended up on Kapas in 2016, and what a day there is.** These were the two biggest holes in
+the piece and they are now the best part of it: the Perhentian plan, the night in Terengganu, seeing
+the island from the coast, LongSha, the two weeks that were supposed to be somewhere else. Then the
+tent, the coffee, Marang, the fire, the weekend visitors, the cleanups, the turtles, and the
+trenches. Kapas went from two paragraphs to eleven. Nothing was added that you did not say.
 
 **The dramatic cloud-and-market frame is Thailand.** Removed from the Malaysia story, corrected in
 the data, kept as Thailand photography. It is not rejected and not deleted — it is now one of
@@ -63,31 +68,30 @@ confirmed photographs of its own in the story.
 Two island blocks: 20–30 Aug 2024, and 23 Apr – 2 May 2025. Both, one, or neither? The story says
 Pulau Kapas because you said it, and no photograph claims it.
 
-## 3. How did you actually end up on Kapas in 2016?
-
-You said by accident. That word is carrying the emotional centre of the whole chapter on its own,
-and right now it gets one sentence. Two or three sentences about how it actually happened would
-almost certainly become the best passage in the piece.
-
-## 4. What does an ordinary day there look like?
-
-Not the highlights. When you wake up, what you do with the day, when the light changes, how loud it
-is or isn't. The photographs already show hammocks, an empty volleyball net, a cloud at four times
-of day. They are missing the day they belong to. This is the other 200 words the story doesn't have.
+This one got slightly more interesting in 10.3. The story now describes tents, a fire, a kitchen
+area, hammocks and LongSha by name. The photographs sitting around that text show hammocks, an empty
+volleyball net and evening lights — but none of them is *confirmed* to be that camp, so none of them
+is captioned. If the April–May 2025 island block is Kapas, the whole section could carry real
+captions and the piece would tighten again.
 
 ---
 
-## Two smaller things you could just tell me
+## Three smaller things you could just tell me
 
 **Your friends.** The story says only that you have met friends here since 2014 and that you stop
 arriving as a stranger. No names are needed, ever. But if there is a habit — the same place, the
 same first evening, the same thing you always do first — that would carry *return* better than any
 sentence about returning.
 
-**Three sentences that are mine, not yours.** They add no fact; they say something you already said,
-in your register. They are listed in
-[`PHASE-10-MALAYSIA-DE-FINAL.md`](PHASE-10-MALAYSIA-DE-FINAL.md). If any of them is too much, say
-which and it goes.
+**Six sentences that are mine, not yours.** They add no fact; they say something you already said,
+in your register. They are listed in both
+[`PHASE-10-MALAYSIA-DE-FINAL.md`](PHASE-10-MALAYSIA-DE-FINAL.md) and
+[`PHASE-10-MALAYSIA-EN-FINAL.md`](PHASE-10-MALAYSIA-EN-FINAL.md). The two newest are the
+trench-digging line and *Nobody asked them to.* If any of them is too much, say which and it goes.
+
+**The friend you travelled with in 2016.** He is in the story as "a friend" and nothing more. That
+is deliberate — no name goes in without you saying so. Tell me if you would rather he were not
+mentioned at all.
 
 ---
 
