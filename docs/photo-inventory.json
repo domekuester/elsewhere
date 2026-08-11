@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-10T14:48:44.129Z",
+  "generatedAt": "2026-08-10T23:16:12.196Z",
   "sourcePolicy": "Master source files. Never modify, move, rename, or serve directly in production.",
   "sourceRoot": "assets-source/photos",
-  "photoCount": 636,
+  "photoCount": 686,
   "photos": [
     {
       "id": "photo-0001",
@@ -30389,6 +30389,2206 @@
       "technical": {
         "metadataReadError": null,
         "thumbnailPath": ".photo-inventory-cache/thumbs/0636-P1350669.jpg"
+      }
+    },
+    {
+      "id": "photo-0637",
+      "filename": "P1310249.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1310249.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 10052327,
+        "megabytes": 9.59,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-09-22T13:17:53.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 74.3,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0637-P1310249.jpg"
+      }
+    },
+    {
+      "id": "photo-0638",
+      "filename": "P1310263.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1310263.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 14030317,
+        "megabytes": 13.38,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2025-09-22T13:19:28.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 28.3,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0638-P1310263.jpg"
+      }
+    },
+    {
+      "id": "photo-0639",
+      "filename": "P1310315.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1310315.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 16990513,
+        "megabytes": 16.2,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2025-09-22T13:54:12.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0639-P1310315.jpg"
+      }
+    },
+    {
+      "id": "photo-0640",
+      "filename": "P1310529.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1310529.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 7158342,
+        "megabytes": 6.83,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2025-10-19T15:22:09.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 20.9,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0640-P1310529.jpg"
+      }
+    },
+    {
+      "id": "photo-0641",
+      "filename": "P1310559-2.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1310559-2.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 10103262,
+        "megabytes": 9.64,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3194,
+        "height": 2396
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3331,
+      "capture": {
+        "date": "2025-10-19T15:31:11.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 79.8,
+        "aperture": 7.1,
+        "iso": 100,
+        "exposureSeconds": 0.0008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0641-P1310559-2.jpg"
+      }
+    },
+    {
+      "id": "photo-0642",
+      "filename": "P1310772.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1310772.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 6448185,
+        "megabytes": 6.15,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2631,
+        "height": 3938
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6681,
+      "capture": {
+        "date": "2025-11-07T15:37:07.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 16.9,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.002
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0642-P1310772.jpg"
+      }
+    },
+    {
+      "id": "photo-0643",
+      "filename": "P1320094.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320094.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 3480282,
+        "megabytes": 3.32,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2249,
+        "height": 3374
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6666,
+      "capture": {
+        "date": "2025-12-09T13:31:59.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 56.9,
+        "aperture": 2.8,
+        "iso": 800,
+        "exposureSeconds": 0.004
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0643-P1320094.jpg"
+      }
+    },
+    {
+      "id": "photo-0644",
+      "filename": "P1320146.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320146.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 9861026,
+        "megabytes": 9.4,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2025-12-09T14:00:40.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 39.1,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0644-P1320146.jpg"
+      }
+    },
+    {
+      "id": "photo-0645",
+      "filename": "P1320241.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320241.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 24549992,
+        "megabytes": 23.41,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2025-12-11T20:36:45.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 9.1,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0645-P1320241.jpg"
+      }
+    },
+    {
+      "id": "photo-0646",
+      "filename": "P1320253.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320253.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 15851719,
+        "megabytes": 15.12,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2663,
+        "height": 3986
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6681,
+      "capture": {
+        "date": "2025-12-11T21:00:39.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 10.1,
+        "aperture": 8,
+        "iso": 100,
+        "exposureSeconds": 0.00025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0646-P1320253.jpg"
+      }
+    },
+    {
+      "id": "photo-0647",
+      "filename": "P1320271.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320271.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 21530507,
+        "megabytes": 20.53,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-12-11T21:05:35.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 7.4,
+        "aperture": 8,
+        "iso": 100,
+        "exposureSeconds": 0.003125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0647-P1320271.jpg"
+      }
+    },
+    {
+      "id": "photo-0648",
+      "filename": "P1320333.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320333.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 12674409,
+        "megabytes": 12.09,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2025-12-18T15:45:12.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 45.7,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0648-P1320333.jpg"
+      }
+    },
+    {
+      "id": "photo-0649",
+      "filename": "P1320465.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320465.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 6215264,
+        "megabytes": 5.93,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-12-28T17:22:31.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 6.3,
+        "aperture": 6.3,
+        "iso": 100,
+        "exposureSeconds": 0.003125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0649-P1320465.jpg"
+      }
+    },
+    {
+      "id": "photo-0650",
+      "filename": "P1320477.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320477.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 13924585,
+        "megabytes": 13.28,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-12-28T17:24:05.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 6.4,
+        "aperture": 6.3,
+        "iso": 100,
+        "exposureSeconds": 0.003125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0650-P1320477.jpg"
+      }
+    },
+    {
+      "id": "photo-0651",
+      "filename": "P1320543.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320543.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 8191035,
+        "megabytes": 7.81,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-12-28T19:30:09.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 13,
+        "aperture": 3.5,
+        "iso": 100,
+        "exposureSeconds": 0.0025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0651-P1320543.jpg"
+      }
+    },
+    {
+      "id": "photo-0652",
+      "filename": "P1320572.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320572.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 3890624,
+        "megabytes": 3.71,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-12-28T20:03:20.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 10.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.0025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0652-P1320572.jpg"
+      }
+    },
+    {
+      "id": "photo-0653",
+      "filename": "P1320707.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320707.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 6632170,
+        "megabytes": 6.32,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2493,
+        "height": 3739
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6668,
+      "capture": {
+        "date": "2025-12-30T20:18:59.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 32,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.00125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0653-P1320707.jpg"
+      }
+    },
+    {
+      "id": "photo-0654",
+      "filename": "P1320755.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320755.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 11152675,
+        "megabytes": 10.64,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2633,
+        "height": 3949
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6668,
+      "capture": {
+        "date": "2025-12-30T20:22:53.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 14.5,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.0015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0654-P1320755.jpg"
+      }
+    },
+    {
+      "id": "photo-0655",
+      "filename": "P1320762.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1320762.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 3093527,
+        "megabytes": 2.95,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-12-30T20:23:25.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 16.9,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.0015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0655-P1320762.jpg"
+      }
+    },
+    {
+      "id": "photo-0656",
+      "filename": "P1350974.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1350974.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 13044014,
+        "megabytes": 12.44,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2026-03-23T16:10:52.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 25.6,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0656-P1350974.jpg"
+      }
+    },
+    {
+      "id": "photo-0657",
+      "filename": "P1360018.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1360018.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 4807598,
+        "megabytes": 4.58,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2960,
+        "height": 3946
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.7501,
+      "capture": {
+        "date": "2026-03-23T16:53:54.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.00125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0657-P1360018.jpg"
+      }
+    },
+    {
+      "id": "photo-0658",
+      "filename": "P1370435.jpg",
+      "sourcePath": "assets-source/photos/Düsseldorf/P1370435.jpg",
+      "sourceSet": "Düsseldorf",
+      "file": {
+        "bytes": 2189098,
+        "megabytes": 2.09,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 1939,
+        "height": 2909
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6666,
+      "capture": {
+        "date": "2026-06-24T00:46:24.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.00125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0658-P1370435.jpg"
+      }
+    },
+    {
+      "id": "photo-0659",
+      "filename": "IMG_0180.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Laos/IMG_0180.jpg",
+      "sourceSet": "Mobile Fotos Laos",
+      "file": {
+        "bytes": 4482636,
+        "megabytes": 4.27,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-12-09T09:45:18.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 3.2,
+        "iso": 100,
+        "exposureSeconds": 0.0008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0659-IMG-0180.jpg"
+      }
+    },
+    {
+      "id": "photo-0660",
+      "filename": "IMG_0644.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Laos/IMG_0644.jpg",
+      "sourceSet": "Mobile Fotos Laos",
+      "file": {
+        "bytes": 6565029,
+        "megabytes": 6.26,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2024-12-31T16:39:51.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 400,
+        "exposureSeconds": 0.016666666666666666
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0660-IMG-0644.jpg"
+      }
+    },
+    {
+      "id": "photo-0661",
+      "filename": "IMG_0746.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Laos/IMG_0746.jpg",
+      "sourceSet": "Mobile Fotos Laos",
+      "file": {
+        "bytes": 1486460,
+        "megabytes": 1.42,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2025-01-06T16:26:47.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 5.6,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0661-IMG-0746.jpg"
+      }
+    },
+    {
+      "id": "photo-0662",
+      "filename": "IMG_0917.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Laos/IMG_0917.jpg",
+      "sourceSet": "Mobile Fotos Laos",
+      "file": {
+        "bytes": 3280772,
+        "megabytes": 3.13,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-01-13T15:53:32.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.00125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0662-IMG-0917.jpg"
+      }
+    },
+    {
+      "id": "photo-0663",
+      "filename": "P1110394 Kopie.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Laos/P1110394 Kopie.jpg",
+      "sourceSet": "Mobile Fotos Laos",
+      "file": {
+        "bytes": 4301995,
+        "megabytes": 4.1,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2306,
+        "height": 3074
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.7502,
+      "capture": {
+        "date": "2024-12-05T15:02:38.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 9.4,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0663-P1110394-Kopie.jpg"
+      }
+    },
+    {
+      "id": "photo-0664",
+      "filename": "IMG_6706.JPG",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/IMG_6706.JPG",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 2416386,
+        "megabytes": 2.3,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-08-22T09:20:06.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": null,
+        "focalLengthMm": 17.4,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.0015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0664-IMG-6706.JPG"
+      }
+    },
+    {
+      "id": "photo-0665",
+      "filename": "IMG_6778.JPG",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/IMG_6778.JPG",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 4715494,
+        "megabytes": 4.5,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-08-24T07:43:42.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": null,
+        "focalLengthMm": 108,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0665-IMG-6778.JPG"
+      }
+    },
+    {
+      "id": "photo-0666",
+      "filename": "IMG_6781.JPG",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/IMG_6781.JPG",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 2357641,
+        "megabytes": 2.25,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-08-23T10:13:04.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": null,
+        "focalLengthMm": 17.4,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.00625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0666-IMG-6781.JPG"
+      }
+    },
+    {
+      "id": "photo-0667",
+      "filename": "IMG_7049.JPG",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/IMG_7049.JPG",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 2532203,
+        "megabytes": 2.41,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-08-30T18:58:46.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": null,
+        "focalLengthMm": 5.2,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0667-IMG-7049.JPG"
+      }
+    },
+    {
+      "id": "photo-0668",
+      "filename": "IMG_7191.JPG",
+      "sourcePath": "assets-source/photos/Mobile Fotos Malaysia/IMG_7191.JPG",
+      "sourceSet": "Mobile Fotos Malaysia",
+      "file": {
+        "bytes": 4766701,
+        "megabytes": 4.55,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-09-05T21:51:37.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": null,
+        "focalLengthMm": 106.1,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0668-IMG-7191.JPG"
+      }
+    },
+    {
+      "id": "photo-0669",
+      "filename": "IMG_9319.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos People/IMG_9319.jpg",
+      "sourceSet": "Mobile Fotos People",
+      "file": {
+        "bytes": 2112101,
+        "megabytes": 2.01,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-11-05T12:52:28.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 101.4,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.02
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0669-IMG-9319.jpg"
+      }
+    },
+    {
+      "id": "photo-0670",
+      "filename": "IMG_9583.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos People/IMG_9583.jpg",
+      "sourceSet": "Mobile Fotos People",
+      "file": {
+        "bytes": 3797585,
+        "megabytes": 3.62,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 1949,
+        "height": 3206
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6079,
+      "capture": {
+        "date": "2024-11-16T16:00:33.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0670-IMG-9583.jpg"
+      }
+    },
+    {
+      "id": "photo-0671",
+      "filename": "P1210843.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos People/P1210843.jpg",
+      "sourceSet": "Mobile Fotos People",
+      "file": {
+        "bytes": 8544540,
+        "megabytes": 8.15,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-04-30T14:43:27.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 8.1,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.003125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0671-P1210843.jpg"
+      }
+    },
+    {
+      "id": "photo-0672",
+      "filename": "1200528.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Phu Quoc/1200528.jpg",
+      "sourceSet": "Mobile Fotos Phu Quoc",
+      "file": {
+        "bytes": 3230340,
+        "megabytes": 3.08,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-04-04T16:10:23.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 56.9,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0672-1200528.jpg"
+      }
+    },
+    {
+      "id": "photo-0673",
+      "filename": "1200747.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Phu Quoc/1200747.jpg",
+      "sourceSet": "Mobile Fotos Phu Quoc",
+      "file": {
+        "bytes": 2704486,
+        "megabytes": 2.58,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-04-06T18:15:56.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 9.8,
+        "aperture": 2.8,
+        "iso": 400,
+        "exposureSeconds": 0.02
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0673-1200747.jpg"
+      }
+    },
+    {
+      "id": "photo-0674",
+      "filename": "1160190.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/1160190.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 6676295,
+        "megabytes": 6.37,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-02-16T17:01:14.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.00125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0674-1160190.jpg"
+      }
+    },
+    {
+      "id": "photo-0675",
+      "filename": "1170962.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/1170962.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 8623598,
+        "megabytes": 8.22,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-02-26T12:24:32.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 3.2,
+        "iso": 100,
+        "exposureSeconds": 0.0003125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0675-1170962.jpg"
+      }
+    },
+    {
+      "id": "photo-0676",
+      "filename": "1180076.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/1180076.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 6141996,
+        "megabytes": 5.86,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-02-27T10:33:30.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 58.2,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0003125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0676-1180076.jpg"
+      }
+    },
+    {
+      "id": "photo-0677",
+      "filename": "IMG_1699.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/IMG_1699.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 2993456,
+        "megabytes": 2.85,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-02-14T12:11:02.000Z",
+        "cameraMake": null,
+        "cameraModel": null,
+        "lens": null,
+        "focalLengthMm": null,
+        "aperture": null,
+        "iso": null,
+        "exposureSeconds": null
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0677-IMG-1699.jpg"
+      }
+    },
+    {
+      "id": "photo-0678",
+      "filename": "IMG_8634.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/IMG_8634.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 4720866,
+        "megabytes": 4.5,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-10-17T13:21:13.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 64.6,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.01
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0678-IMG-8634.jpg"
+      }
+    },
+    {
+      "id": "photo-0679",
+      "filename": "IMG_8656.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/IMG_8656.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 5225500,
+        "megabytes": 4.98,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-10-18T06:42:41.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.002
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0679-IMG-8656.jpg"
+      }
+    },
+    {
+      "id": "photo-0680",
+      "filename": "IMG_8674.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/IMG_8674.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 5839770,
+        "megabytes": 5.57,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 3000
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3333,
+      "capture": {
+        "date": "2024-10-18T08:32:06.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 5,
+        "iso": 100,
+        "exposureSeconds": 0.0008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0680-IMG-8674.jpg"
+      }
+    },
+    {
+      "id": "photo-0681",
+      "filename": "IMG_8718.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/IMG_8718.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 3781656,
+        "megabytes": 3.61,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-10-19T14:59:14.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 50.2,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0681-IMG-8718.jpg"
+      }
+    },
+    {
+      "id": "photo-0682",
+      "filename": "IMG_9174.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/IMG_9174.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 5759699,
+        "megabytes": 5.49,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-10-31T15:21:30.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 33.5,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.06666666666666667
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0682-IMG-9174.jpg"
+      }
+    },
+    {
+      "id": "photo-0683",
+      "filename": "IMG_9419.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/IMG_9419.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 2288007,
+        "megabytes": 2.18,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-11-14T13:33:59.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 84.3,
+        "aperture": 3.2,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0683-IMG-9419.jpg"
+      }
+    },
+    {
+      "id": "photo-0684",
+      "filename": "IMG_9501.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/IMG_9501.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 2361704,
+        "megabytes": 2.25,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2221,
+        "height": 2962
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.7498,
+      "capture": {
+        "date": "2024-11-15T13:57:40.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.00125
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0684-IMG-9501.jpg"
+      }
+    },
+    {
+      "id": "photo-0685",
+      "filename": "IMG_9752.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/IMG_9752.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 2961693,
+        "megabytes": 2.82,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-11-27T18:17:23.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 44.9,
+        "aperture": 2.8,
+        "iso": 800,
+        "exposureSeconds": 0.025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0685-IMG-9752.jpg"
+      }
+    },
+    {
+      "id": "photo-0686",
+      "filename": "P1160394 Kopie.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Thailand/P1160394 Kopie.jpg",
+      "sourceSet": "Mobile Fotos Thailand",
+      "file": {
+        "bytes": 1864890,
+        "megabytes": 1.78,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-02-17T17:07:48.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 59.5,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.00015625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0686-P1160394-Kopie.jpg"
       }
     }
   ]

@@ -24,6 +24,11 @@ export const indexableRoutes = (): IndexableRoute[] => [
   { path: '/people/', priority: 0.7, changefreq: 'monthly' },
   { path: '/destinations/', priority: 0.8, changefreq: 'monthly' },
   // Only destinations that passed the publication threshold have a page to index.
+  // Places with photographs but no chapter are addressable through the archive, and each opens on
+  // its own photography, so they are real indexable pages rather than a query string.
+  ...destinationData.destinations
+    .filter((destination) => destination.publicationStatus !== 'published' && destination.photoCount > 0 && destination.hero?.photoId)
+    .map((destination) => ({ path: `/archive/place/${destination.slug}/`, priority: 0.6, changefreq: 'monthly' as const })),
   ...destinationData.destinations
     .filter((destination) => destination.publicationStatus === 'published')
     .map((destination) => ({ path: `/destinations/${destination.slug}/`, priority: 0.9, changefreq: 'monthly' as const })),

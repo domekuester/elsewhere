@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-11T08:39:15.844Z",
+  "role": "destination-hero",
+  "widths": [
+    768,
+    1152,
+    1536,
+    2048,
+    2560
+  ],
+  "jpegQualityByWidth": {
+    "768": 86,
+    "1152": 85,
+    "1536": 83,
+    "2048": 80,
+    "2560": 77
+  },
+  "chromaSubsampling": "4:4:4",
+  "colorPolicy": "Embedded ICC profiles retained; no visual filters or artificial sharpening.",
+  "heroes": {
+    "malaysia": {
+      "photoId": "photo-0060",
+      "baseName": "0060-P1030627",
+      "sourceWidth": 4000,
+      "sourceHeight": 3000,
+      "chroma": "4:4:4",
+      "grade": {
+        "linear": [
+          1.13,
+          -13
+        ],
+        "saturation": 1.05
+      },
+      "sources": [
+        {
+          "width": 768,
+          "height": 576,
+          "bytes": 132597,
+          "url": "/assets-derived/hero/0060-P1030627-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 864,
+          "bytes": 257264,
+          "url": "/assets-derived/hero/0060-P1030627-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 1152,
+          "bytes": 406945,
+          "url": "/assets-derived/hero/0060-P1030627-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 1536,
+          "bytes": 614790,
+          "url": "/assets-derived/hero/0060-P1030627-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 1920,
+          "bytes": 831713,
+          "url": "/assets-derived/hero/0060-P1030627-2560.jpg"
+        }
+      ]
+    },
+    "thailand": {
+      "photoId": "photo-0680",
+      "baseName": "0680-IMG_8674",
+      "sourceWidth": 4000,
+      "sourceHeight": 3000,
+      "chroma": "4:4:4",
+      "grade": {
+        "linear": [
+          1.08,
+          -8
+        ],
+        "saturation": 1.04
+      },
+      "sources": [
+        {
+          "width": 768,
+          "height": 576,
+          "bytes": 69981,
+          "url": "/assets-derived/hero/0680-IMG_8674-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 864,
+          "bytes": 132592,
+          "url": "/assets-derived/hero/0680-IMG_8674-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 1152,
+          "bytes": 208719,
+          "url": "/assets-derived/hero/0680-IMG_8674-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 1536,
+          "bytes": 304423,
+          "url": "/assets-derived/hero/0680-IMG_8674-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 1920,
+          "bytes": 399664,
+          "url": "/assets-derived/hero/0680-IMG_8674-2560.jpg"
+        }
+      ]
+    },
+    "laos": {
+      "photoId": "photo-0663",
+      "baseName": "0663-P1110394-Kopie",
+      "sourceWidth": 2306,
+      "sourceHeight": 3074,
+      "chroma": "4:4:4",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 1024,
+          "bytes": 179623,
+          "url": "/assets-derived/hero/0663-P1110394-Kopie-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 1536,
+          "bytes": 337548,
+          "url": "/assets-derived/hero/0663-P1110394-Kopie-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 2048,
+          "bytes": 507059,
+          "url": "/assets-derived/hero/0663-P1110394-Kopie-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 2730,
+          "bytes": 718236,
+          "url": "/assets-derived/hero/0663-P1110394-Kopie-2048.jpg"
+        }
+      ]
+    },
+    "phu-quoc": {
+      "photoId": "photo-0072",
+      "baseName": "0072-P1200152-Kopie",
+      "sourceWidth": 4000,
+      "sourceHeight": 2672,
+      "chroma": "4:4:4",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 513,
+          "bytes": 74401,
+          "url": "/assets-derived/hero/0072-P1200152-Kopie-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 770,
+          "bytes": 133963,
+          "url": "/assets-derived/hero/0072-P1200152-Kopie-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 1026,
+          "bytes": 200579,
+          "url": "/assets-derived/hero/0072-P1200152-Kopie-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 1368,
+          "bytes": 283631,
+          "url": "/assets-derived/hero/0072-P1200152-Kopie-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 1710,
+          "bytes": 367204,
+          "url": "/assets-derived/hero/0072-P1200152-Kopie-2560.jpg"
+        }
+      ]
+    },
+    "japan": {
+      "photoId": "photo-0372",
+      "baseName": "0372-P1260490",
+      "sourceWidth": 3000,
+      "sourceHeight": 4000,
+      "chroma": "4:4:4",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 1024,
+          "bytes": 192788,
+          "url": "/assets-derived/hero/0372-P1260490-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 1536,
+          "bytes": 352230,
+          "url": "/assets-derived/hero/0372-P1260490-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 2048,
+          "bytes": 516326,
+          "url": "/assets-derived/hero/0372-P1260490-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 2731,
+          "bytes": 715759,
+          "url": "/assets-derived/hero/0372-P1260490-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 3413,
+          "bytes": 898711,
+          "url": "/assets-derived/hero/0372-P1260490-2560.jpg"
+        }
+      ]
+    },
+    "essaouira": {
+      "photoId": "photo-0609",
+      "baseName": "0609-P1330989",
+      "sourceWidth": 3883,
+      "sourceHeight": 2594,
+      "chroma": "4:4:4",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 513,
+          "bytes": 73685,
+          "url": "/assets-derived/hero/0609-P1330989-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 770,
+          "bytes": 159448,
+          "url": "/assets-derived/hero/0609-P1330989-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 1026,
+          "bytes": 272409,
+          "url": "/assets-derived/hero/0609-P1330989-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 1368,
+          "bytes": 436169,
+          "url": "/assets-derived/hero/0609-P1330989-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 1710,
+          "bytes": 617526,
+          "url": "/assets-derived/hero/0609-P1330989-2560.jpg"
+        }
+      ]
+    },
+    "la-reunion": {
+      "photoId": "photo-0442",
+      "baseName": "0442-P1270181",
+      "sourceWidth": 4000,
+      "sourceHeight": 2672,
+      "chroma": "4:4:4",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 513,
+          "bytes": 108625,
+          "url": "/assets-derived/hero/0442-P1270181-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 770,
+          "bytes": 204796,
+          "url": "/assets-derived/hero/0442-P1270181-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 1026,
+          "bytes": 311700,
+          "url": "/assets-derived/hero/0442-P1270181-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 1368,
+          "bytes": 441088,
+          "url": "/assets-derived/hero/0442-P1270181-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 1710,
+          "bytes": 568875,
+          "url": "/assets-derived/hero/0442-P1270181-2560.jpg"
+        }
+      ]
+    },
+    "dusseldorf": {
+      "photoId": "photo-0656",
+      "baseName": "0656-P1350974",
+      "sourceWidth": 3000,
+      "sourceHeight": 4000,
+      "chroma": "4:4:4",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 1024,
+          "bytes": 199879,
+          "url": "/assets-derived/hero/0656-P1350974-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 1536,
+          "bytes": 385501,
+          "url": "/assets-derived/hero/0656-P1350974-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 2048,
+          "bytes": 607333,
+          "url": "/assets-derived/hero/0656-P1350974-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 2731,
+          "bytes": 962152,
+          "url": "/assets-derived/hero/0656-P1350974-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 3413,
+          "bytes": 1372112,
+          "url": "/assets-derived/hero/0656-P1350974-2560.jpg"
+        }
+      ]
+    },
+    "archive": {
+      "photoId": "photo-0182",
+      "baseName": "0182-P1230662",
+      "sourceWidth": 2672,
+      "sourceHeight": 4000,
+      "chroma": "4:2:0",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 1150,
+          "bytes": 271978,
+          "url": "/assets-derived/hero/0182-P1230662-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 1725,
+          "bytes": 563671,
+          "url": "/assets-derived/hero/0182-P1230662-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 2299,
+          "bytes": 879784,
+          "url": "/assets-derived/hero/0182-P1230662-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 3066,
+          "bytes": 1343433,
+          "url": "/assets-derived/hero/0182-P1230662-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 3832,
+          "bytes": 1835779,
+          "url": "/assets-derived/hero/0182-P1230662-2560.jpg"
+        }
+      ]
+    },
+    "black-and-white-archive": {
+      "photoId": "photo-0574",
+      "baseName": "0574-P1250928",
+      "sourceWidth": 2672,
+      "sourceHeight": 4000,
+      "chroma": "4:4:4",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 1150,
+          "bytes": 71161,
+          "url": "/assets-derived/hero/0574-P1250928-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 1725,
+          "bytes": 191478,
+          "url": "/assets-derived/hero/0574-P1250928-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 2299,
+          "bytes": 374567,
+          "url": "/assets-derived/hero/0574-P1250928-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 3066,
+          "bytes": 705568,
+          "url": "/assets-derived/hero/0574-P1250928-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 3832,
+          "bytes": 1084093,
+          "url": "/assets-derived/hero/0574-P1250928-2560.jpg"
+        }
+      ]
+    }
+  }
+}

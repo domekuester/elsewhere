@@ -35,6 +35,39 @@
 - [Phase 8.3 final launch QA](PHASE-8.3-FINAL-LAUNCH-QA.md)
 - [Phase 8.3 before / after](PHASE-8.3-BEFORE-AFTER.md)
 
+## Phase 9.30 — destination hero power match
+
+- [Hero power match](PHASE-9.30-HERO-POWER-MATCH.md)
+
+## Phase 9.29 — destination hero correction
+
+- [Destination hero correction](PHASE-9.29-DESTINATION-HERO-CORRECTION.md)
+
+## Phase 9.28A — archive & collection heroes, new folder ingestion
+
+- [Phase 9.28A report](PHASE-9.28A-REPORT.md)
+- [New photo folder map](PHASE-9.28A-NEW-PHOTO-FOLDER-MAP.md)
+- [Global hero audit](PHASE-9.28A-GLOBAL-HERO-AUDIT.md)
+- [Global hero shortlist](PHASE-9.28A-GLOBAL-HERO-SHORTLIST.md)
+- [Publication readiness](PHASE-9.28A-PUBLICATION-READINESS.md)
+
+## Phase 9.27 — destination heroes
+
+- [Phase 9.27 report](PHASE-9.27-REPORT.md)
+- [Destination hero audit](PHASE-9.27-DESTINATION-HERO-AUDIT.md)
+- [Destination hero shortlist](PHASE-9.27-DESTINATION-HERO-SHORTLIST.md)
+- [Hero responsive QA](PHASE-9.27-HERO-RESPONSIVE-QA.md)
+- [Hero performance QA](PHASE-9.27-HERO-PERFORMANCE-QA.md)
+
+## THE JOURNEY — owner stories
+
+Editorial development. Not yet wired into any page or route.
+
+- [Story 01 Malaysia — story pack](STORY-01-MALAYSIA-PACK.md)
+- [Story 01 Malaysia — German master (owner truth)](STORY-01-MALAYSIA-DE-MASTER.md)
+- [Story 01 Malaysia — English publication adaptation](STORY-01-MALAYSIA-EN-PUBLICATION.md)
+- [Story 01 Malaysia — owner questions](STORY-01-MALAYSIA-OWNER-QUESTIONS.md)
+
 ## Earlier creative direction
 
 - `ELSEWHERE-DESIGN-SYSTEM.md`

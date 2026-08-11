@@ -121,58 +121,58 @@
       "priority": "MEDIUM_IMPACT",
       "type": "PERSON_UNKNOWN",
       "subjectIds": [
-        "photo-0045"
+        "photo-0001"
       ],
-      "title": "People review: IMG_8992.jpg",
+      "title": "People review: 1170457.jpg",
       "question": "Is this a known person, travel companion, meaningful encounter, anonymous subject, crowd/street photograph, or incidental human presence? What privacy state should apply?",
       "context": {
-        "captureDate": "2024-10-28T10:45:04.000Z",
+        "captureDate": "2025-02-22T12:50:56.000Z",
         "destinationId": "thailand"
       },
       "status": "OPEN"
     },
     {
-      "id": "owner-question-people-review-06",
+      "id": "owner-question-people-review-02",
       "priority": "MEDIUM_IMPACT",
       "type": "PERSON_UNKNOWN",
       "subjectIds": [
-        "photo-0331"
+        "photo-0009"
       ],
-      "title": "People review: P1260122.jpg",
+      "title": "People review: 1200164.jpg",
       "question": "Is this a known person, travel companion, meaningful encounter, anonymous subject, crowd/street photograph, or incidental human presence? What privacy state should apply?",
       "context": {
-        "captureDate": "2025-06-16T08:50:40.000Z",
-        "destinationId": "japan"
+        "captureDate": "2025-03-23T15:04:31.000Z",
+        "destinationId": "phu-quoc"
       },
       "status": "OPEN"
     },
     {
-      "id": "owner-question-people-review-07",
+      "id": "owner-question-people-review-03",
       "priority": "MEDIUM_IMPACT",
       "type": "PERSON_UNKNOWN",
       "subjectIds": [
-        "photo-0381"
+        "photo-0018"
       ],
-      "title": "People review: P1260635.jpg",
+      "title": "People review: 1200831.jpg",
       "question": "Is this a known person, travel companion, meaningful encounter, anonymous subject, crowd/street photograph, or incidental human presence? What privacy state should apply?",
       "context": {
-        "captureDate": "2025-07-13T18:03:36.000Z",
-        "destinationId": null
+        "captureDate": "2025-04-07T17:58:44.000Z",
+        "destinationId": "phu-quoc"
       },
       "status": "OPEN"
     },
     {
-      "id": "owner-question-people-review-16",
+      "id": "owner-question-people-review-04",
       "priority": "MEDIUM_IMPACT",
       "type": "PERSON_UNKNOWN",
       "subjectIds": [
-        "photo-0589"
+        "photo-0032"
       ],
-      "title": "People review: P1330174.jpg",
+      "title": "People review: IMG_0290.jpg",
       "question": "Is this a known person, travel companion, meaningful encounter, anonymous subject, crowd/street photograph, or incidental human presence? What privacy state should apply?",
       "context": {
-        "captureDate": "2026-01-08T17:20:23.000Z",
-        "destinationId": "essaouira"
+        "captureDate": "2024-12-10T09:30:37.000Z",
+        "destinationId": "laos"
       },
       "status": "OPEN"
     },
@@ -185,7 +185,6 @@
         "photo-0279",
         "photo-0280",
         "photo-0281",
-        "photo-0282",
         "photo-0283",
         "photo-0284",
         "photo-0285",
@@ -193,96 +192,23 @@
         "photo-0287",
         "photo-0288",
         "photo-0289",
-        "photo-0290",
-        "photo-0291",
-        "photo-0292",
         "photo-0293",
         "photo-0294",
         "photo-0295",
-        "photo-0296",
         "photo-0297",
-        "photo-0298",
-        "photo-0299"
+        "photo-0298"
       ],
-      "title": "22-frame sequence",
+      "title": "16-frame sequence",
       "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
       "context": {
         "candidateId": "story-candidate-01",
         "captureDateStart": "2025-06-08T06:36:44.000Z",
-        "captureDateEnd": "2025-06-08T08:34:55.000Z"
+        "captureDateEnd": "2025-06-08T08:29:23.000Z"
       },
       "status": "OPEN"
     },
     {
       "id": "owner-question-story-candidate-02",
-      "priority": "MEDIUM_IMPACT",
-      "type": "STORY_CONTEXT_NEEDED",
-      "subjectIds": [
-        "photo-0114",
-        "photo-0115",
-        "photo-0116",
-        "photo-0117",
-        "photo-0118",
-        "photo-0119",
-        "photo-0120",
-        "photo-0121",
-        "photo-0122",
-        "photo-0123",
-        "photo-0124",
-        "photo-0125",
-        "photo-0126",
-        "photo-0127",
-        "photo-0128",
-        "photo-0129",
-        "photo-0131",
-        "photo-0132",
-        "photo-0133",
-        "photo-0134",
-        "photo-0135"
-      ],
-      "title": "21-frame sequence",
-      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
-      "context": {
-        "candidateId": "story-candidate-02",
-        "captureDateStart": "2025-04-30T08:21:59.000Z",
-        "captureDateEnd": "2025-04-30T09:04:05.000Z"
-      },
-      "status": "OPEN"
-    },
-    {
-      "id": "owner-question-story-candidate-03",
-      "priority": "MEDIUM_IMPACT",
-      "type": "STORY_CONTEXT_NEEDED",
-      "subjectIds": [
-        "photo-0300",
-        "photo-0301",
-        "photo-0302",
-        "photo-0303",
-        "photo-0304",
-        "photo-0305",
-        "photo-0306",
-        "photo-0307",
-        "photo-0569",
-        "photo-0308",
-        "photo-0309",
-        "photo-0310",
-        "photo-0311",
-        "photo-0312",
-        "photo-0572",
-        "photo-0573",
-        "photo-0313"
-      ],
-      "title": "17-frame sequence",
-      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
-      "context": {
-        "candidateId": "story-candidate-03",
-        "captureDateStart": "2025-06-08T09:28:17.000Z",
-        "captureDateEnd": "2025-06-08T10:30:21.000Z"
-      },
-      "status": "OPEN"
-    },
-    {
-      "id": "owner-question-story-candidate-04",
       "priority": "MEDIUM_IMPACT",
       "type": "STORY_CONTEXT_NEEDED",
       "subjectIds": [
@@ -305,9 +231,67 @@
       "title": "15-frame sequence",
       "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
       "context": {
-        "candidateId": "story-candidate-04",
+        "candidateId": "story-candidate-02",
         "captureDateStart": "2025-05-22T08:20:57.000Z",
         "captureDateEnd": "2025-05-22T10:11:33.000Z"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-story-candidate-03",
+      "priority": "MEDIUM_IMPACT",
+      "type": "STORY_CONTEXT_NEEDED",
+      "subjectIds": [
+        "photo-0300",
+        "photo-0301",
+        "photo-0303",
+        "photo-0304",
+        "photo-0305",
+        "photo-0306",
+        "photo-0307",
+        "photo-0569",
+        "photo-0308",
+        "photo-0310",
+        "photo-0311",
+        "photo-0312",
+        "photo-0572",
+        "photo-0573",
+        "photo-0313"
+      ],
+      "title": "15-frame sequence",
+      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "context": {
+        "candidateId": "story-candidate-03",
+        "captureDateStart": "2025-06-08T09:28:17.000Z",
+        "captureDateEnd": "2025-06-08T10:30:21.000Z"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-story-candidate-04",
+      "priority": "MEDIUM_IMPACT",
+      "type": "STORY_CONTEXT_NEEDED",
+      "subjectIds": [
+        "photo-0238",
+        "photo-0239",
+        "photo-0240",
+        "photo-0241",
+        "photo-0242",
+        "photo-0243",
+        "photo-0244",
+        "photo-0247",
+        "photo-0248",
+        "photo-0249",
+        "photo-0250",
+        "photo-0251",
+        "photo-0252"
+      ],
+      "title": "13-frame sequence",
+      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "context": {
+        "candidateId": "story-candidate-04",
+        "captureDateStart": "2025-05-28T10:36:44.000Z",
+        "captureDateEnd": "2025-05-28T11:36:44.000Z"
       },
       "status": "OPEN"
     },
@@ -316,27 +300,24 @@
       "priority": "MEDIUM_IMPACT",
       "type": "STORY_CONTEXT_NEEDED",
       "subjectIds": [
-        "photo-0136",
-        "photo-0137",
-        "photo-0138",
-        "photo-0139",
-        "photo-0140",
-        "photo-0145",
-        "photo-0146",
-        "photo-0147",
-        "photo-0148",
-        "photo-0150",
-        "photo-0151",
-        "photo-0153",
-        "photo-0154",
-        "photo-0156"
+        "photo-0225",
+        "photo-0226",
+        "photo-0227",
+        "photo-0229",
+        "photo-0230",
+        "photo-0231",
+        "photo-0232",
+        "photo-0233",
+        "photo-0234",
+        "photo-0235",
+        "photo-0236"
       ],
-      "title": "14-frame sequence",
+      "title": "11-frame sequence",
       "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
       "context": {
         "candidateId": "story-candidate-05",
-        "captureDateStart": "2025-04-30T14:42:17.000Z",
-        "captureDateEnd": "2025-04-30T15:04:06.000Z"
+        "captureDateStart": "2025-05-23T06:26:12.000Z",
+        "captureDateEnd": "2025-05-23T07:29:36.000Z"
       },
       "status": "OPEN"
     }

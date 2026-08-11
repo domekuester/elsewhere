@@ -41,7 +41,10 @@ const distFiles = auditBuiltOutput && fs.existsSync(distDirectory)
   : [];
 const distText = new Map(distFiles.map((file) => [path.relative(root, file), fs.readFileSync(file, 'utf8')]));
 
-const derivativeDirectories = ['thumbnails', 'archive', 'viewer'].map((role) => path.join(root, 'public/assets-derived', role));
+// `hero` joined the public derivative roles in Phase 9.27. A role that renders straight into the
+// first viewport is exactly the one an audit must not forget, and its filenames carry the same stem
+// with a width suffix, so the substring match below still catches a leak.
+const derivativeDirectories = ['thumbnails', 'archive', 'viewer', 'hero'].map((role) => path.join(root, 'public/assets-derived', role));
 
 for (const item of rejected) {
   const { photoId, filename } = item;
@@ -75,6 +78,7 @@ for (const item of rejected) {
 
   for (const destination of destinations.destinations) {
     if (destination.heroPhotoId === photoId) fail(photoId, `used as ${destination.id} hero`);
+    if (destination.hero?.photoId === photoId) fail(photoId, `selected as ${destination.id} art-directed hero`);
     if ((destination.manualOrder ?? []).includes(photoId)) fail(photoId, `present in ${destination.id} manualOrder`);
     if ((destination.featuredPhotoIds ?? []).includes(photoId)) fail(photoId, `present in ${destination.id} featuredPhotoIds`);
   }

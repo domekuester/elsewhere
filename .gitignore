@@ -41,3 +41,6 @@ elsewhere-curation-*.png
 
 # Old nested project copy preserved during runtime repair
 shaky-saturn/
+
+# Phase scratch directories are working files, never project history.
+.tmp-*/

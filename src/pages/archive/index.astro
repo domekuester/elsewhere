@@ -4,12 +4,18 @@ import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import PhotoViewer from '../../components/PhotoViewer.astro';
 import catalogData from '../../../public/data/photo-catalog.json';
+import surfaceHeroData from '../../../data/surface-heroes.json';
+import destinationData from '../../../data/destinations.json';
+import heroPipeline from '../../../public/assets-derived/hero/HERO-PIPELINE.json';
 import { imageObject, breadcrumbs } from '../../data/image-schema';
 
-const { initialWorld = 'all' } = Astro.props;
+const { initialWorld = 'all', initialDestination = null } = Astro.props;
 const isBlackAndWhite = initialWorld === 'black-and-white';
+const place = initialDestination ? destinationData.destinations.find((item) => item.slug === initialDestination) ?? null : null;
 const completeCatalog = catalogData.photos;
-const catalog = isBlackAndWhite ? completeCatalog.filter((photo) => photo.visualWorlds.includes('black-and-white')) : completeCatalog;
+const catalog = place
+  ? completeCatalog.filter((photo) => photo.destinationSlug === place.slug)
+  : isBlackAndWhite ? completeCatalog.filter((photo) => photo.visualWorlds.includes('black-and-white')) : completeCatalog;
 const selectedIds = new Set(catalog.filter((photo) => photo.featured).map((photo) => photo.id));
 const selected = catalog.filter((photo) => selectedIds.has(photo.id)).sort((a, b) => Number(a.editorialOrder) - Number(b.editorialOrder));
 const depth = catalog.filter((photo) => !selectedIds.has(photo.id));
@@ -30,17 +36,86 @@ const archiveSchema = [
   ...opening.map((photo, index) => imageObject(photo, Astro.site, new URL(Astro.url.pathname, Astro.site).href, index === 0)),
 ];
 const archiveSizes = (photo) => ['hero', 'anchor'].includes(photo.role) ? '(min-width: 901px) 42vw, (min-width: 561px) 58vw, 88vw' : photo.orientation === 'landscape' ? '(min-width: 901px) 34vw, (min-width: 561px) 50vw, 100vw' : '(min-width: 901px) 25vw, (min-width: 561px) 50vw, 88vw';
+
+// Phase 9.28A — the archive opens on a photograph rather than on type. The band is deliberately
+// shorter than a destination chapter's 100svh hero: this is a discovery surface, and the filter bar
+// has to stay within reach rather than a full screen away. Everything else follows the Phase 9.27
+// hero grammar, including the art-direction properties and the dedicated derivative ladder.
+const surfaceKey = place ? place.slug : isBlackAndWhite ? 'black-and-white-archive' : 'archive';
+const surfaceHero = place ? place.hero : surfaceHeroData.surfaces[surfaceKey] ?? null;
+const openingPhoto = surfaceHero ? completeCatalog.find((photo) => photo.id === surfaceHero.photoId) : null;
+const openingSources = heroPipeline.heroes?.[surfaceKey] ?? null;
+const openingFocal = { desktop: '50% 50%', tablet: '50% 50%', mobile: '50% 50%', ...(surfaceHero?.focal ?? {}) };
+const openingScrim = { top: 0.62, bottom: 0.72, bottomStart: 48, ...(surfaceHero?.overlay ?? {}) };
+const openingStyle = [
+  `--hero-focal:${openingFocal.desktop}`,
+  `--hero-focal-tablet:${openingFocal.tablet}`,
+  `--hero-focal-mobile:${openingFocal.mobile}`,
+  `--hero-scrim-top:${openingScrim.top}`,
+  `--hero-scrim-bottom:${openingScrim.bottom}`,
+  `--hero-scrim-start:${openingScrim.bottomStart}%`,
+  `--hero-title-scale:${surfaceHero?.titleScale ?? 1}`,
+].join(';');
+const placeAlt = {
+  malaysia: 'A city skyline of towers rising beyond a dense tree canopy.',
+  thailand: 'Limestone cliffs standing over a calm bay beneath heavy cloud.',
+  laos: 'A river bends through steep mountains past a village on its bank.',
+  'phu-quoc': 'A wooden jetty runs out into flat yellow light over still water.',
+};
+const openingAlt = place
+  ? (placeAlt[place.slug] ?? `A photograph from ${place.name}.`)
+  : isBlackAndWhite ? 'A raised hand silhouetted against the sun above the sea.' : 'A field of churning blue-white water filling the frame.';
+// Dates come from the destination record, which sources them from the owner's travel timeline. A place
+// without a trusted range simply shows no date rather than an invented one.
+const formatDate = (value, withYear = true) => new Date(value).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', ...(withYear ? { year: 'numeric' } : {}) });
+const placeYears = place?.dateRange
+  ? [...new Set([String(place.dateRange.start).replace('approximately ', '').slice(0, 4), String(place.dateRange.end).replace('approximately ', '').slice(0, 4)])]
+  : [];
+// An owner range recorded as "approximately" is not precise enough to print as a day, so it prints as
+// a year or a span of years. A precise range prints in full, exactly as a chapter does.
+const placeDates = !place?.dateRange
+  ? null
+  : String(place.dateRange.start).startsWith('approximately') || String(place.dateRange.end).startsWith('approximately')
+    ? placeYears.join('—')
+    : `${formatDate(place.dateRange.start, place.dateRange.start.slice(0, 4) !== place.dateRange.end.slice(0, 4))} — ${formatDate(place.dateRange.end)}`;
 ---
 
-<BaseLayout title={isBlackAndWhite ? 'Black & White Archive — Elsewhere' : 'Archive — Elsewhere'} description={isBlackAndWhite ? `${catalog.length} publicly approved monochrome photographs from the Elsewhere archive.` : `A living photographic index of ${catalog.length} public frames, encountered slowly.`} image={isBlackAndWhite ? '/social/black-and-white.jpg' : '/social/archive.jpg'} imageAlt={isBlackAndWhite ? 'A breakwater lighthouse beneath a long grey sky' : 'Small human figures beside forceful moving water'} motion={false} schema={archiveSchema}>
+<BaseLayout
+  title={place ? `${place.name} photographs — Elsewhere` : isBlackAndWhite ? 'Black & White Archive — Elsewhere' : 'Archive — Elsewhere'}
+  description={place ? `${catalog.length} public photographs from ${place.name} in the Elsewhere archive.` : isBlackAndWhite ? `${catalog.length} publicly approved monochrome photographs from the Elsewhere archive.` : `A living photographic index of ${catalog.length} public frames, encountered slowly.`}
+  image={place ? (openingSources?.sources.at(-1).url ?? '/social/archive.jpg') : isBlackAndWhite ? '/social/black-and-white.jpg' : '/social/archive.jpg'}
+  imageAlt={place ? openingAlt : isBlackAndWhite ? 'A breakwater lighthouse beneath a long grey sky' : 'Small human figures beside forceful moving water'}
+  motion={false} schema={archiveSchema}
+>
   <SiteHeader archiveHref={isBlackAndWhite ? '/archive/black-and-white/' : '/archive/'} />
-  <main id="main" class:list={['archive-page', isBlackAndWhite && 'archive-page-monochrome']} data-archive-root data-initial-world={initialWorld}>
+  <main id="main" class:list={['archive-page', isBlackAndWhite && 'archive-page-monochrome']} data-archive-root data-initial-world={initialWorld} data-initial-destination={place?.slug}>
+    {openingPhoto && openingSources && (
+      <header class="archive-opening" style={openingStyle}>
+        <img
+          src={openingSources.sources.at(-1).url}
+          srcset={openingSources.sources.map((source) => `${source.url} ${source.width}w`).join(', ')}
+          sizes="(max-width: 560px) 120vw, (max-width: 900px) 130vw, 100vw"
+          width={openingPhoto.width}
+          height={openingPhoto.height}
+          alt={openingAlt}
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="archive-opening-title">
+          <span class="memory-mark" aria-hidden="true"></span>
+          <h1>{place ? place.name : isBlackAndWhite ? <><em>Black &amp; White</em><span>Archive</span></> : 'Archive'}</h1>
+          <p><strong data-total-count>{catalog.length}</strong> frames</p>
+        </div>
+        {place && placeDates && <p class="archive-opening-meta">{place.country !== place.name && <span>{place.country}</span>}{placeDates}</p>}
+      </header>
+    )}
+
     <header class="archive-intro">
       <p class="archive-kicker"><span></span> Photographic index</p>
-      <h1>{isBlackAndWhite ? <><em>Black &amp; White</em><span>Archive</span></> : 'Archive'}</h1>
+      {!(openingPhoto && openingSources) && <h1>{isBlackAndWhite ? <><em>Black &amp; White</em><span>Archive</span></> : 'Archive'}</h1>}
       <div class="archive-intro-meta">
         <p>{isBlackAndWhite ? 'The deeper monochrome body of work. Gesture, weather, distance, and form encountered beyond the selected edit.' : 'A deeper way through the work. Place, year, and form open different paths through the photographs.'}</p>
-        <p><strong data-total-count>{catalog.length}</strong> frames<br /><span data-visible-count>{opening.length} in view</span></p>
+        <p>{!(openingPhoto && openingSources) && <><strong data-total-count>{catalog.length}</strong> frames<br /></>}<span data-visible-count>{opening.length} in view</span></p>
       </div>
     </header>
 

@@ -91,7 +91,8 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
   pointer-events: none;
 }
 .hero::before { z-index: -1; }
-.destination-hero::before { z-index: 1; }
+/* The destination heroes tune the same header band per chapter; Home keeps the shared value above. */
+.destination-hero::before { z-index: 1; background: linear-gradient(to bottom, rgba(3, 5, 7, var(--hero-scrim-top)) 0, rgba(3, 5, 7, calc(var(--hero-scrim-top) * .945)) 46%, transparent 100%); }
 .hero-mark { margin-bottom: 1.2rem; }
 .hero-title { font-family: var(--display); font-size: clamp(3.7rem, 6vw, 5.5rem); font-weight: 400; line-height: .9; letter-spacing: -.035em; text-transform: uppercase; }
 .hero-title span { display: block; overflow: hidden; white-space: nowrap; }
@@ -598,6 +599,46 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 /* Archive — a contemporary contact sheet, not a gallery grid. */
 .archive-page { min-height: 100vh; padding-top: 9rem; color: var(--obsidian); background: var(--ivory); }
 .archive-page + .site-footer { margin-top: 0; }
+
+/* Phase 9.28A — photographic opening for the index surfaces.
+   Deliberately not 100svh. The archive is where people come to find photographs, so the band opens
+   with one and then gets out of the way: at 72svh the filter bar is already visible on a laptop and
+   one short scroll away on a phone. It reuses the destination hero's art-direction properties, so a
+   focal point or scrim tuned here behaves exactly as it does on a chapter. */
+.archive-page:has(.archive-opening) { padding-top: 0; }
+.archive-opening {
+  --hero-focal: 50% 50%;
+  --hero-focal-tablet: var(--hero-focal);
+  --hero-focal-mobile: 50% 50%;
+  --hero-scrim-top: .62;
+  --hero-scrim-bottom: .72;
+  --hero-scrim-start: 48%;
+  --hero-title-scale: 1;
+  position: relative; height: 72svh; min-height: 30rem; overflow: hidden; background: #101213;
+}
+.archive-opening::before {
+  content: ""; position: absolute; z-index: 1; inset: 0 0 auto;
+  height: calc((var(--header-safe-top) + var(--header-row) + var(--header-bottom)) * 2.1);
+  background: linear-gradient(to bottom, rgba(3, 5, 7, var(--hero-scrim-top)) 0, rgba(3, 5, 7, calc(var(--hero-scrim-top) * .945)) 46%, transparent 100%);
+  pointer-events: none;
+}
+.archive-opening::after { content: ""; position: absolute; inset: var(--hero-scrim-start) 0 0; background: linear-gradient(to bottom, transparent, rgba(5, 6, 6, var(--hero-scrim-bottom))); pointer-events: none; }
+.archive-opening > img { object-position: var(--hero-focal); }
+.archive-opening-title { position: absolute; z-index: 1; right: var(--gutter); bottom: clamp(2.2rem, 5vw, 4.5rem); left: var(--gutter); color: var(--ivory); }
+.archive-opening-title .memory-mark { margin-bottom: 1rem; }
+.archive-opening-title h1 { font-family: var(--editorial); font-size: calc(clamp(4.2rem, 11vw, 10rem) * var(--hero-title-scale)); font-style: italic; font-weight: 400; line-height: .84; letter-spacing: -.035em; }
+.archive-page-monochrome .archive-opening-title h1 { display: flex; flex-direction: column; align-items: flex-start; gap: .16em; }
+.archive-page-monochrome .archive-opening-title h1 em { font: inherit; }
+.archive-page-monochrome .archive-opening-title h1 span { font-family: var(--display); font-size: .34em; font-style: normal; font-weight: 400; letter-spacing: .08em; line-height: .85; text-transform: uppercase; }
+.archive-opening-title p { margin-top: .9rem; font-size: .74rem; }
+/* Place metadata sits lower-right, opposite the title — the same grammar the destination chapters use. */
+.archive-opening-meta { position: absolute; z-index: 1; right: var(--gutter); bottom: clamp(2.4rem, 5vw, 4.8rem); display: flex; gap: 1.4rem; color: var(--ivory); font-size: .72rem; }
+.archive-opening-title strong { font-family: var(--editorial); font-size: 1.5rem; font-weight: 400; }
+/* With the title carried by the photograph above, the lede becomes a short bridge into the filters
+   rather than a second opening. */
+.archive-opening + .archive-intro { padding-block: clamp(3rem, 6vw, 5.5rem) clamp(3rem, 6vw, 5.5rem); }
+.archive-opening + .archive-intro .archive-intro-meta { margin-top: 1.6rem; }
+
 .archive-intro { padding: clamp(3rem, 7vw, 7rem) var(--gutter) clamp(4rem, 8vw, 8rem); }
 .archive-kicker { display: flex; align-items: center; gap: .8rem; font-size: .67rem; letter-spacing: .08em; text-transform: uppercase; }
 .archive-kicker span { width: 1.7rem; height: 2px; background: var(--ultramarine); }
@@ -677,11 +718,25 @@ html[data-viewer-open] body { overflow: hidden; }
 
 /* Confirmed destination chapter */
 .destination-chapter { background: var(--obsidian); }
-.destination-hero { position: relative; height: 100svh; overflow: hidden; background: #101213; }
-.destination-hero::after { content: ""; position: absolute; inset: 50% 0 0; background: linear-gradient(to bottom, transparent, rgba(5, 6, 6, .74)); pointer-events: none; }
-.destination-hero > img { object-position: 50% 56%; }
+/* Phase 9.27 — one hero grammar, art-directed per chapter. Every value below is a default that the
+   destination's `hero` block may override inline: the focal point at each breakpoint, how far up the
+   bottom scrim starts and how dark it gets, and a title correction for long names. A single
+   `object-position` and a single scrim strength cannot serve a sunlit wall and a night canal at once
+   without either losing the subject or flattening the photograph. */
+.destination-hero {
+  --hero-focal: 50% 56%;
+  --hero-focal-tablet: var(--hero-focal);
+  --hero-focal-mobile: 48% 50%;
+  --hero-scrim-top: .72;
+  --hero-scrim-bottom: .74;
+  --hero-scrim-start: 50%;
+  --hero-title-scale: 1;
+  position: relative; height: 100svh; overflow: hidden; background: #101213;
+}
+.destination-hero::after { content: ""; position: absolute; inset: var(--hero-scrim-start) 0 0; background: linear-gradient(to bottom, transparent, rgba(5, 6, 6, var(--hero-scrim-bottom))); pointer-events: none; }
+.destination-hero > img { object-position: var(--hero-focal); }
 .destination-hero-title { position: absolute; z-index: 1; right: var(--gutter); bottom: clamp(2.5rem, 6vw, 6rem); left: var(--gutter); display: flex; align-items: end; gap: 1.5rem; }
-.destination-hero-title h1 { margin-right: auto; font-family: var(--display); font-size: clamp(4.2rem, 9vw, 6rem); font-weight: 400; line-height: .84; letter-spacing: -.035em; text-transform: uppercase; }
+.destination-hero-title h1 { margin-right: auto; font-family: var(--display); font-size: calc(clamp(4.2rem, 9vw, 6rem) * var(--hero-title-scale)); font-weight: 400; line-height: .84; letter-spacing: -.035em; text-transform: uppercase; }
 .destination-hero-title p { padding-bottom: .3rem; font-size: .72rem; }
 .destination-provenance { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 8vw, 10rem); padding: clamp(7rem, 13vw, 14rem) var(--gutter); color: var(--obsidian); background: var(--ivory); }
 .destination-provenance p { max-width: 34rem; font-family: var(--editorial); font-size: clamp(1.45rem, 2.6vw, 2.6rem); line-height: 1.25; }
@@ -749,6 +804,7 @@ html[data-viewer-open] body { overflow: hidden; }
   .archive-frame, .archive-frame.is-landscape { grid-column: span 6; }
   .archive-frame.is-selected { grid-column: span 7; }
   .destination-provenance { grid-template-columns: 1fr; }
+  .destination-hero > img, .archive-opening > img { object-position: var(--hero-focal-tablet); }
 }
 
 @media (max-width: 560px) {
@@ -778,10 +834,13 @@ html[data-viewer-open] body { overflow: hidden; }
   .viewer-caption { right: auto; max-width: calc(100% - 8.75rem); }
   .viewer-caption a { display: none; }
   .photo-viewer.is-idle .viewer-wordmark, .photo-viewer.is-idle .viewer-count, .photo-viewer.is-idle .viewer-nav, .photo-viewer.is-idle .viewer-caption, .photo-viewer.is-idle .viewer-close { opacity: 1; }
-  .destination-hero > img { object-position: 48% 50%; }
+  .destination-hero > img, .archive-opening > img { object-position: var(--hero-focal-mobile); }
+  /* "Black & White" is the longest opening title on the site and reached the gutter exactly at 390px.
+     Corrected on phones only; the desktop band has room to spare and keeps its scale. */
+  .archive-opening-title h1 { font-size: calc(clamp(3.6rem, 11vw, 5.6rem) * var(--hero-title-scale)); }
   .destination-hero-title { display: block; }
   .destination-hero-title .memory-mark { margin-bottom: 1rem; }
-  .destination-hero-title h1 { font-size: clamp(4rem, 22vw, 5.8rem); }
+  .destination-hero-title h1 { font-size: calc(clamp(4rem, 22vw, 5.8rem) * var(--hero-title-scale)); }
   .destination-hero-title p { margin-top: 1rem; }
   .destination-provenance { padding-block: 7rem; }
   .destination-sequence { display: flex; flex-direction: column; gap: 6rem; padding-block: 7rem; }
@@ -980,12 +1039,19 @@ html[data-viewer-open] body { overflow: hidden; }
 
 /* Phase 9.1 — Destinations index. Open chapters become photographic entrances; everything still
    being edited stays a quiet typographic list beneath them. */
-.chapter-entries { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr)); gap: clamp(1.5rem, 3vw, 2.5rem); padding-bottom: clamp(5rem, 9vw, 9rem); }
+/* Two columns rather than auto-fit. With a fourth chapter, auto-fit produced three cards and an
+   orphan, and the markup's own `sizes="(min-width: 901px) 48vw"` had always described a two-column
+   layout the CSS was not building. Two columns fills every row for an even count, makes the
+   responsive contract honest, and gives each chapter roughly twice the photograph. */
+.chapter-entries { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 2.5rem); padding-bottom: clamp(5rem, 9vw, 9rem); }
+/* An odd final chapter takes the full width instead of sitting alone beside empty space. */
+.chapter-entries > .chapter-entry:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.chapter-entries > .chapter-entry:last-child:nth-child(odd) .chapter-entry-image img { aspect-ratio: 21 / 9; }
 .chapter-entry { display: grid; gap: 1.4rem; }
 .chapter-entry-image { display: block; overflow: hidden; background: #e6e4de; }
 /* A square plate holds both portrait and landscape heroes without destroying either. The crop
    favours the lower middle, where the subject sits in both current chapter heroes. */
-.chapter-entry-image img { aspect-ratio: 1 / 1; object-position: 50% 62%; transition: transform .7s var(--ease-out); }
+.chapter-entry-image img { aspect-ratio: 4 / 3; object-position: 50% 62%; transition: transform .7s var(--ease-out); }
 .chapter-entry:hover .chapter-entry-image img, .chapter-entry:focus-visible .chapter-entry-image img { transform: scale(1.018); }
 .chapter-entry-copy { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: .3rem 1rem; border-top: 1px solid var(--line-light); padding-top: 1rem; }
 .chapter-entry b { font-family: var(--display); font-size: clamp(2.4rem, 4.4vw, 3.6rem); font-weight: 400; line-height: .86; letter-spacing: -.03em; text-transform: uppercase; }

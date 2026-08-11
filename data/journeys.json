@@ -27,7 +27,11 @@
         "photo-0061",
         "photo-0534",
         "photo-0540",
-        "photo-0541"
+        "photo-0541",
+        "photo-0664",
+        "photo-0665",
+        "photo-0666",
+        "photo-0667"
       ],
       "storyIds": [],
       "peopleIds": [],
@@ -40,8 +44,8 @@
         "photo-0036",
         "photo-0061"
       ],
-      "createdAt": "2026-08-10T16:09:59.206Z",
-      "updatedAt": "2026-08-10T16:09:59.206Z"
+      "createdAt": "2026-08-11T05:13:04.989Z",
+      "updatedAt": "2026-08-11T05:13:04.989Z"
     },
     {
       "id": "thailand-2024",
@@ -70,7 +74,17 @@
         "photo-0055",
         "photo-0062",
         "photo-0063",
-        "photo-0544"
+        "photo-0544",
+        "photo-0669",
+        "photo-0670",
+        "photo-0678",
+        "photo-0679",
+        "photo-0680",
+        "photo-0681",
+        "photo-0682",
+        "photo-0683",
+        "photo-0684",
+        "photo-0685"
       ],
       "storyIds": [],
       "peopleIds": [],
@@ -80,8 +94,8 @@
       "ownerNotes": null,
       "publicationStatus": "needs-owner-input",
       "manualPhotoOrder": [],
-      "createdAt": "2026-08-10T16:09:59.207Z",
-      "updatedAt": "2026-08-10T16:09:59.207Z"
+      "createdAt": "2026-08-11T05:13:04.990Z",
+      "updatedAt": "2026-08-11T05:13:04.990Z"
     },
     {
       "id": "laos-2024-2025",
@@ -98,7 +112,11 @@
       "photoIds": [
         "photo-0032",
         "photo-0536",
-        "photo-0537"
+        "photo-0537",
+        "photo-0659",
+        "photo-0660",
+        "photo-0661",
+        "photo-0662"
       ],
       "storyIds": [],
       "peopleIds": [],
@@ -110,8 +128,8 @@
       "manualPhotoOrder": [
         "photo-0537"
       ],
-      "createdAt": "2026-08-10T16:09:59.207Z",
-      "updatedAt": "2026-08-10T16:09:59.207Z"
+      "createdAt": "2026-08-11T05:13:04.990Z",
+      "updatedAt": "2026-08-11T05:13:04.990Z"
     },
     {
       "id": "thailand-2025-part-1",
@@ -139,7 +157,12 @@
         "photo-0067",
         "photo-0531",
         "photo-0532",
-        "photo-0538"
+        "photo-0538",
+        "photo-0674",
+        "photo-0675",
+        "photo-0676",
+        "photo-0677",
+        "photo-0686"
       ],
       "storyIds": [],
       "peopleIds": [],
@@ -151,8 +174,8 @@
       "manualPhotoOrder": [
         "photo-0002"
       ],
-      "createdAt": "2026-08-10T16:09:59.207Z",
-      "updatedAt": "2026-08-10T16:09:59.207Z"
+      "createdAt": "2026-08-11T05:13:04.990Z",
+      "updatedAt": "2026-08-11T05:13:04.990Z"
     },
     {
       "id": "vietnam-phu-quoc-2025",
@@ -169,8 +192,6 @@
       "photoIds": [
         "photo-0008",
         "photo-0009",
-        "photo-0010",
-        "photo-0011",
         "photo-0012",
         "photo-0013",
         "photo-0014",
@@ -183,11 +204,12 @@
         "photo-0034",
         "photo-0035",
         "photo-0070",
-        "photo-0071",
         "photo-0072",
         "photo-0073",
         "photo-0533",
-        "photo-0539"
+        "photo-0539",
+        "photo-0672",
+        "photo-0673"
       ],
       "storyIds": [],
       "peopleIds": [],
@@ -199,8 +221,8 @@
       "manualPhotoOrder": [
         "photo-0533"
       ],
-      "createdAt": "2026-08-10T16:09:59.207Z",
-      "updatedAt": "2026-08-10T16:09:59.207Z"
+      "createdAt": "2026-08-11T05:13:04.990Z",
+      "updatedAt": "2026-08-11T05:13:04.990Z"
     },
     {
       "id": "malaysia-2025-part-1",
@@ -238,53 +260,18 @@
         "photo-0094",
         "photo-0095",
         "photo-0096",
-        "photo-0100",
-        "photo-0102",
         "photo-0103",
         "photo-0104",
-        "photo-0106",
         "photo-0108",
         "photo-0110",
         "photo-0112",
         "photo-0113",
-        "photo-0114",
-        "photo-0115",
         "photo-0116",
-        "photo-0117",
-        "photo-0118",
-        "photo-0119",
-        "photo-0120",
         "photo-0121",
         "photo-0122",
-        "photo-0123",
-        "photo-0124",
-        "photo-0125",
-        "photo-0126",
-        "photo-0127",
-        "photo-0128",
-        "photo-0129",
-        "photo-0131",
         "photo-0132",
-        "photo-0133",
         "photo-0134",
-        "photo-0135",
-        "photo-0136",
-        "photo-0137",
-        "photo-0138",
-        "photo-0139",
-        "photo-0140",
         "photo-0145",
-        "photo-0146",
-        "photo-0147",
-        "photo-0148",
-        "photo-0150",
-        "photo-0151",
-        "photo-0153",
-        "photo-0154",
-        "photo-0156",
-        "photo-0157",
-        "photo-0158",
-        "photo-0159",
         "photo-0160",
         "photo-0161",
         "photo-0162",
@@ -301,8 +288,8 @@
       "manualPhotoOrder": [
         "photo-0145"
       ],
-      "createdAt": "2026-08-10T16:09:59.208Z",
-      "updatedAt": "2026-08-10T16:09:59.208Z"
+      "createdAt": "2026-08-11T05:13:04.990Z",
+      "updatedAt": "2026-08-11T05:13:04.990Z"
     },
     {
       "id": "japan-2025",
@@ -426,7 +413,6 @@
         "photo-0279",
         "photo-0280",
         "photo-0281",
-        "photo-0282",
         "photo-0283",
         "photo-0284",
         "photo-0285",
@@ -434,37 +420,26 @@
         "photo-0287",
         "photo-0288",
         "photo-0289",
-        "photo-0290",
-        "photo-0291",
-        "photo-0292",
         "photo-0293",
         "photo-0294",
         "photo-0295",
-        "photo-0296",
         "photo-0297",
         "photo-0298",
-        "photo-0299",
         "photo-0300",
         "photo-0301",
-        "photo-0302",
         "photo-0303",
         "photo-0304",
         "photo-0305",
         "photo-0306",
         "photo-0307",
         "photo-0308",
-        "photo-0309",
         "photo-0310",
         "photo-0311",
         "photo-0312",
         "photo-0313",
-        "photo-0314",
         "photo-0315",
-        "photo-0317",
-        "photo-0318",
         "photo-0319",
         "photo-0320",
-        "photo-0321",
         "photo-0322",
         "photo-0323",
         "photo-0324",
@@ -554,8 +529,8 @@
         "photo-0581",
         "photo-0585"
       ],
-      "createdAt": "2026-08-10T16:09:59.210Z",
-      "updatedAt": "2026-08-10T16:09:59.210Z"
+      "createdAt": "2026-08-11T05:13:04.992Z",
+      "updatedAt": "2026-08-11T05:13:04.992Z"
     },
     {
       "id": "thailand-2025-part-2",
@@ -582,8 +557,8 @@
       "ownerNotes": null,
       "publicationStatus": "needs-owner-input",
       "manualPhotoOrder": [],
-      "createdAt": "2026-08-10T16:09:59.210Z",
-      "updatedAt": "2026-08-10T16:09:59.210Z"
+      "createdAt": "2026-08-11T05:13:04.992Z",
+      "updatedAt": "2026-08-11T05:13:04.992Z"
     },
     {
       "id": "malaysia-2025-part-2",
@@ -606,8 +581,8 @@
       "ownerNotes": null,
       "publicationStatus": "needs-owner-input",
       "manualPhotoOrder": [],
-      "createdAt": "2026-08-10T16:09:59.210Z",
-      "updatedAt": "2026-08-10T16:09:59.210Z"
+      "createdAt": "2026-08-11T05:13:04.992Z",
+      "updatedAt": "2026-08-11T05:13:04.992Z"
     },
     {
       "id": "la-reunion-2025",
@@ -640,15 +615,7 @@
         "photo-0400",
         "photo-0401",
         "photo-0402",
-        "photo-0403",
-        "photo-0408",
-        "photo-0413",
-        "photo-0416",
-        "photo-0421",
-        "photo-0424",
-        "photo-0427",
         "photo-0432",
-        "photo-0435",
         "photo-0439",
         "photo-0440",
         "photo-0441",
@@ -656,7 +623,6 @@
         "photo-0443",
         "photo-0444",
         "photo-0445",
-        "photo-0446",
         "photo-0447",
         "photo-0449",
         "photo-0450",
@@ -673,7 +639,6 @@
         "photo-0463",
         "photo-0464",
         "photo-0465",
-        "photo-0466",
         "photo-0467",
         "photo-0468",
         "photo-0469",
@@ -697,16 +662,13 @@
         "photo-0488",
         "photo-0489",
         "photo-0490",
-        "photo-0491",
         "photo-0492",
         "photo-0493",
         "photo-0494",
         "photo-0495",
         "photo-0496",
         "photo-0497",
-        "photo-0498",
         "photo-0499",
-        "photo-0500",
         "photo-0501",
         "photo-0502",
         "photo-0503",
@@ -751,8 +713,8 @@
         "photo-0487",
         "photo-0432"
       ],
-      "createdAt": "2026-08-10T16:09:59.211Z",
-      "updatedAt": "2026-08-10T16:09:59.211Z"
+      "createdAt": "2026-08-11T05:13:04.993Z",
+      "updatedAt": "2026-08-11T05:13:04.993Z"
     }
   ],
   "transitionPhotos": [
@@ -1104,6 +1066,116 @@
       "photoId": "photo-0636",
       "filename": "P1350669.jpg",
       "captureDate": "2026-01-14T19:31:55.000Z"
+    },
+    {
+      "photoId": "photo-0637",
+      "filename": "P1310249.jpg",
+      "captureDate": "2025-09-22T13:17:53.000Z"
+    },
+    {
+      "photoId": "photo-0638",
+      "filename": "P1310263.jpg",
+      "captureDate": "2025-09-22T13:19:28.000Z"
+    },
+    {
+      "photoId": "photo-0639",
+      "filename": "P1310315.jpg",
+      "captureDate": "2025-09-22T13:54:12.000Z"
+    },
+    {
+      "photoId": "photo-0640",
+      "filename": "P1310529.jpg",
+      "captureDate": "2025-10-19T15:22:09.000Z"
+    },
+    {
+      "photoId": "photo-0641",
+      "filename": "P1310559-2.jpg",
+      "captureDate": "2025-10-19T15:31:11.000Z"
+    },
+    {
+      "photoId": "photo-0642",
+      "filename": "P1310772.jpg",
+      "captureDate": "2025-11-07T15:37:07.000Z"
+    },
+    {
+      "photoId": "photo-0643",
+      "filename": "P1320094.jpg",
+      "captureDate": "2025-12-09T13:31:59.000Z"
+    },
+    {
+      "photoId": "photo-0644",
+      "filename": "P1320146.jpg",
+      "captureDate": "2025-12-09T14:00:40.000Z"
+    },
+    {
+      "photoId": "photo-0645",
+      "filename": "P1320241.jpg",
+      "captureDate": "2025-12-11T20:36:45.000Z"
+    },
+    {
+      "photoId": "photo-0646",
+      "filename": "P1320253.jpg",
+      "captureDate": "2025-12-11T21:00:39.000Z"
+    },
+    {
+      "photoId": "photo-0647",
+      "filename": "P1320271.jpg",
+      "captureDate": "2025-12-11T21:05:35.000Z"
+    },
+    {
+      "photoId": "photo-0648",
+      "filename": "P1320333.jpg",
+      "captureDate": "2025-12-18T15:45:12.000Z"
+    },
+    {
+      "photoId": "photo-0649",
+      "filename": "P1320465.jpg",
+      "captureDate": "2025-12-28T17:22:31.000Z"
+    },
+    {
+      "photoId": "photo-0650",
+      "filename": "P1320477.jpg",
+      "captureDate": "2025-12-28T17:24:05.000Z"
+    },
+    {
+      "photoId": "photo-0651",
+      "filename": "P1320543.jpg",
+      "captureDate": "2025-12-28T19:30:09.000Z"
+    },
+    {
+      "photoId": "photo-0652",
+      "filename": "P1320572.jpg",
+      "captureDate": "2025-12-28T20:03:20.000Z"
+    },
+    {
+      "photoId": "photo-0653",
+      "filename": "P1320707.jpg",
+      "captureDate": "2025-12-30T20:18:59.000Z"
+    },
+    {
+      "photoId": "photo-0654",
+      "filename": "P1320755.jpg",
+      "captureDate": "2025-12-30T20:22:53.000Z"
+    },
+    {
+      "photoId": "photo-0655",
+      "filename": "P1320762.jpg",
+      "captureDate": "2025-12-30T20:23:25.000Z"
+    },
+    {
+      "photoId": "photo-0656",
+      "filename": "P1350974.jpg",
+      "captureDate": "2026-03-23T16:10:52.000Z"
+    },
+    {
+      "photoId": "photo-0657",
+      "filename": "P1360018.jpg",
+      "captureDate": "2026-03-23T16:53:54.000Z"
+    },
+    {
+      "photoId": "photo-0658",
+      "filename": "P1370435.jpg",
+      "captureDate": "2026-06-24T00:46:24.000Z"
     }
   ]
 }

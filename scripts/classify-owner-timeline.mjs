@@ -6,9 +6,14 @@ const inventory = read('docs/photo-inventory.json');
 const timeline = read('data/owner-travel-timeline.json');
 const curation = read('data/photo-curation.json');
 const exclusions = read('data/public-image-exclusions.json');
+// `editorialHold` belongs here with the other two. A held frame is withheld from publication, so
+// counting it into a destination's photoIds overstates the public body of work on the chapter page
+// ("N photographs belong to this destination") and offers the archive a photograph it will not serve.
+// The catalog build and the derivative generators already honour the hold; this one did not.
 const editorialExcludedIds = new Set([
   ...exclusions.ownerRejected.map((item) => item.photoId),
-  ...exclusions.duplicateFamilies.flatMap((family) => family.excludeIds)
+  ...exclusions.duplicateFamilies.flatMap((family) => family.excludeIds),
+  ...exclusions.editorialHold.map((item) => item.photoId)
 ]);
 const ownerRejectedIds = new Set(exclusions.ownerRejected.map((item) => item.photoId));
 const migrateExistingArchiveVisibility = (curation.schemaVersion ?? 1) < 3;
@@ -113,6 +118,15 @@ const destinationDefinitions = [
   { id: 'la-reunion', slug: 'la-reunion', name: 'La Réunion', displayName: 'La Réunion', country: 'France', countryCode: 'FR', region: 'La Réunion', parentDestination: 'france' }
 ];
 
+// Phase 9.28A. This script used to rebuild data/destinations.json from the list above and nothing
+// else, which silently deleted every editorial decision later phases had written by hand: a chapter
+// created after this list (Düsseldorf), a chapter published after this list (La Réunion), the chosen
+// hero of an open chapter, its manual sequence, and the Phase 9.27 `hero` art-direction block. The
+// file is co-owned — this script owns geography and counts, people own the edit — so it now merges
+// instead of overwriting. Derived fields below are recomputed; everything else is carried forward.
+const existingDestinations = new Map((read('data/destinations.json').destinations ?? []).map((item) => [item.id, item]));
+const editorialKeys = ['shortIntroduction', 'editorialStatus', 'heroPhotoId', 'hero', 'featuredPhotoIds', 'manualOrder', 'storyIds', 'peopleIds', 'collectionIds', 'relatedDestinations', 'seoTitle', 'seoDescription', 'publicationStatus'];
+
 const assignments = Object.entries(curation.assignments);
 const destinations = destinationDefinitions.map((destination) => {
   const photoIds = assignments.filter(([id, value]) => value.destinationId === destination.id && trustedGeography.has(value.locationConfidence) && !editorialExcludedIds.has(id) && !['private', 'do-not-publish'].includes(value.visibility)).map(([id]) => id);
@@ -128,7 +142,31 @@ const destinations = destinationDefinitions.map((destination) => {
     : captureDates.length
       ? { start: captureDates[0].slice(0, 10), end: captureDates.at(-1).slice(0, 10), source: 'CAPTURE_METADATA' }
       : null;
-  return { ...destination, dateRange, shortIntroduction: null, editorialStatus: featured.length ? 'CURATED' : 'NEEDS_INFO', heroPhotoId: featured.find((photo) => ['hero', 'anchor'].includes(photo.role))?.id ?? null, featuredPhotoIds: featured.map((photo) => photo.id), journeyIds, storyIds: [], peopleIds: [], collectionIds: [], relatedDestinations: [], photoCount: photoIds.length, confirmedPhotoCount: photoIds.length, photoIds, manualOrder: featured.map((photo) => photo.id), seoTitle: publicationStatus === 'published' ? `${destination.name} photographs — Elsewhere` : null, seoDescription: null, publicationStatus };
+  // What this script may decide on its own, for a destination it is meeting for the first time.
+  const generated = {
+    ...destination, dateRange, shortIntroduction: null,
+    editorialStatus: featured.length ? 'CURATED' : 'NEEDS_INFO',
+    heroPhotoId: featured.find((photo) => ['hero', 'anchor'].includes(photo.role))?.id ?? null,
+    featuredPhotoIds: featured.map((photo) => photo.id), journeyIds, storyIds: [], peopleIds: [], collectionIds: [], relatedDestinations: [],
+    photoCount: photoIds.length, confirmedPhotoCount: photoIds.length, photoIds,
+    manualOrder: featured.map((photo) => photo.id),
+    seoTitle: publicationStatus === 'published' ? `${destination.name} photographs — Elsewhere` : null,
+    seoDescription: null, publicationStatus,
+  };
+  const previous = existingDestinations.get(destination.id);
+  if (!previous) return generated;
+  // Geography, counts and dates are this script's to recompute. The edit is not.
+  const merged = { ...generated };
+  for (const key of editorialKeys) if (previous[key] !== undefined) merged[key] = previous[key];
+  return merged;
+});
+// A destination this script has no definition for was created by hand in a later phase. Keep it
+// exactly as it is rather than deleting it, and keep the file in its established order.
+for (const [id, item] of existingDestinations) if (!destinations.some((entry) => entry.id === id)) destinations.push(item);
+const definedOrder = destinationDefinitions.map((item) => item.id);
+destinations.sort((a, b) => {
+  const ai = definedOrder.indexOf(a.id); const bi = definedOrder.indexOf(b.id);
+  return (ai === -1 ? Number.MAX_SAFE_INTEGER : ai) - (bi === -1 ? Number.MAX_SAFE_INTEGER : bi);
 });
 write('data/destinations.json', { schemaVersion: 1, source: 'OWNER_TRAVEL_TIMELINE', destinations });
 

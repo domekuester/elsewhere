@@ -5,13 +5,20 @@
     {
       "id": "date-cluster-01",
       "startDate": "2024-08-20T14:09:49.000Z",
-      "endDate": "2024-08-22T10:02:11.000Z",
-      "photoCount": 4,
+      "endDate": "2024-09-06T16:11:31.000Z",
+      "photoCount": 11,
       "photoIds": [
         "photo-0036",
         "photo-0037",
         "photo-0056",
-        "photo-0057"
+        "photo-0664",
+        "photo-0057",
+        "photo-0666",
+        "photo-0665",
+        "photo-0038",
+        "photo-0534",
+        "photo-0667",
+        "photo-0540"
       ],
       "cameraModels": [
         "iPhone 12 mini",
@@ -25,25 +32,6 @@
     },
     {
       "id": "date-cluster-02",
-      "startDate": "2024-08-29T21:04:24.000Z",
-      "endDate": "2024-09-06T16:11:31.000Z",
-      "photoCount": 3,
-      "photoIds": [
-        "photo-0038",
-        "photo-0534",
-        "photo-0540"
-      ],
-      "cameraModels": [
-        "DMC-FZ330"
-      ],
-      "destinationIds": [
-        "malaysia"
-      ],
-      "purpose": "REVIEW_ASSIST",
-      "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
-    },
-    {
-      "id": "date-cluster-03",
       "startDate": "2024-09-16T21:38:03.000Z",
       "endDate": "2024-09-16T21:38:03.000Z",
       "photoCount": 1,
@@ -60,10 +48,10 @@
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
     },
     {
-      "id": "date-cluster-04",
+      "id": "date-cluster-03",
       "startDate": "2024-09-29T23:10:02.000Z",
-      "endDate": "2024-10-16T16:52:36.000Z",
-      "photoCount": 10,
+      "endDate": "2024-10-19T14:59:14.000Z",
+      "photoCount": 14,
       "photoIds": [
         "photo-0060",
         "photo-0039",
@@ -74,7 +62,11 @@
         "photo-0062",
         "photo-0043",
         "photo-0044",
-        "photo-0063"
+        "photo-0063",
+        "photo-0678",
+        "photo-0679",
+        "photo-0680",
+        "photo-0681"
       ],
       "cameraModels": [
         "DMC-FZ330",
@@ -88,18 +80,23 @@
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
     },
     {
-      "id": "date-cluster-05",
+      "id": "date-cluster-04",
       "startDate": "2024-10-28T10:45:04.000Z",
-      "endDate": "2024-11-10T17:09:33.000Z",
-      "photoCount": 7,
+      "endDate": "2024-11-16T16:00:33.000Z",
+      "photoCount": 12,
       "photoIds": [
         "photo-0045",
         "photo-0046",
+        "photo-0682",
         "photo-0047",
         "photo-0048",
         "photo-0050",
+        "photo-0669",
         "photo-0049",
-        "photo-0051"
+        "photo-0051",
+        "photo-0683",
+        "photo-0684",
+        "photo-0670"
       ],
       "cameraModels": [
         "DMC-FZ330"
@@ -111,17 +108,20 @@
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
     },
     {
-      "id": "date-cluster-06",
+      "id": "date-cluster-05",
       "startDate": "2024-11-27T15:04:10.000Z",
       "endDate": "2024-12-13T16:06:50.000Z",
-      "photoCount": 9,
+      "photoCount": 12,
       "photoIds": [
         "photo-0054",
         "photo-0544",
         "photo-0052",
+        "photo-0685",
         "photo-0055",
         "photo-0535",
         "photo-0031",
+        "photo-0663",
+        "photo-0659",
         "photo-0032",
         "photo-0536",
         "photo-0537"
@@ -137,34 +137,43 @@
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
     },
     {
-      "id": "date-cluster-07",
-      "startDate": "2025-01-19T17:01:09.000Z",
+      "id": "date-cluster-06",
+      "startDate": "2024-12-31T16:39:51.000Z",
       "endDate": "2025-01-19T17:01:09.000Z",
-      "photoCount": 1,
+      "photoCount": 4,
       "photoIds": [
+        "photo-0660",
+        "photo-0661",
+        "photo-0662",
         "photo-0538"
       ],
       "cameraModels": [
         "DMC-FZ330"
       ],
       "destinationIds": [
+        "laos",
         "thailand"
       ],
       "purpose": "REVIEW_ASSIST",
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
     },
     {
-      "id": "date-cluster-08",
-      "startDate": "2025-02-17T17:07:48.000Z",
+      "id": "date-cluster-07",
+      "startDate": "2025-02-14T12:11:02.000Z",
       "endDate": "2025-03-05T20:28:18.000Z",
-      "photoCount": 13,
+      "photoCount": 18,
       "photoIds": [
+        "photo-0677",
+        "photo-0674",
         "photo-0064",
+        "photo-0686",
         "photo-0001",
         "photo-0002",
         "photo-0003",
         "photo-0004",
         "photo-0531",
+        "photo-0675",
+        "photo-0676",
         "photo-0065",
         "photo-0066",
         "photo-0532",
@@ -183,15 +192,14 @@
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
     },
     {
-      "id": "date-cluster-09",
+      "id": "date-cluster-08",
       "startDate": "2025-03-14T12:53:24.000Z",
-      "endDate": "2025-03-31T15:53:17.000Z",
-      "photoCount": 14,
+      "endDate": "2025-05-02T15:40:16.000Z",
+      "photoCount": 62,
       "photoIds": [
         "photo-0068",
         "photo-0069",
         "photo-0070",
-        "photo-0071",
         "photo-0008",
         "photo-0072",
         "photo-0009",
@@ -199,25 +207,9 @@
         "photo-0034",
         "photo-0539",
         "photo-0035",
-        "photo-0010",
-        "photo-0011",
-        "photo-0073"
-      ],
-      "cameraModels": [
-        "DMC-FZ330"
-      ],
-      "destinationIds": [
-        "phu-quoc"
-      ],
-      "purpose": "REVIEW_ASSIST",
-      "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
-    },
-    {
-      "id": "date-cluster-10",
-      "startDate": "2025-04-07T17:04:49.000Z",
-      "endDate": "2025-05-02T15:40:16.000Z",
-      "photoCount": 84,
-      "photoIds": [
+        "photo-0073",
+        "photo-0672",
+        "photo-0673",
         "photo-0012",
         "photo-0013",
         "photo-0014",
@@ -250,54 +242,19 @@
         "photo-0094",
         "photo-0095",
         "photo-0096",
-        "photo-0100",
-        "photo-0102",
         "photo-0103",
         "photo-0104",
         "photo-0547",
-        "photo-0106",
         "photo-0108",
         "photo-0110",
         "photo-0112",
         "photo-0113",
-        "photo-0114",
-        "photo-0115",
         "photo-0116",
-        "photo-0117",
-        "photo-0118",
-        "photo-0119",
-        "photo-0120",
         "photo-0121",
         "photo-0122",
-        "photo-0123",
-        "photo-0124",
-        "photo-0125",
-        "photo-0126",
-        "photo-0127",
-        "photo-0128",
-        "photo-0129",
-        "photo-0131",
         "photo-0132",
-        "photo-0133",
         "photo-0134",
-        "photo-0135",
-        "photo-0136",
-        "photo-0137",
-        "photo-0138",
-        "photo-0139",
-        "photo-0140",
         "photo-0145",
-        "photo-0146",
-        "photo-0147",
-        "photo-0148",
-        "photo-0150",
-        "photo-0151",
-        "photo-0153",
-        "photo-0154",
-        "photo-0156",
-        "photo-0157",
-        "photo-0158",
-        "photo-0159",
         "photo-0160",
         "photo-0161",
         "photo-0162",
@@ -314,10 +271,10 @@
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
     },
     {
-      "id": "date-cluster-11",
+      "id": "date-cluster-09",
       "startDate": "2025-05-13T07:38:21.000Z",
       "endDate": "2025-06-26T14:04:52.000Z",
-      "photoCount": 216,
+      "photoCount": 204,
       "photoIds": [
         "photo-0549",
         "photo-0164",
@@ -438,7 +395,6 @@
         "photo-0279",
         "photo-0280",
         "photo-0281",
-        "photo-0282",
         "photo-0283",
         "photo-0284",
         "photo-0285",
@@ -446,19 +402,13 @@
         "photo-0287",
         "photo-0288",
         "photo-0289",
-        "photo-0290",
-        "photo-0291",
-        "photo-0292",
         "photo-0293",
         "photo-0294",
         "photo-0295",
-        "photo-0296",
         "photo-0297",
         "photo-0298",
-        "photo-0299",
         "photo-0300",
         "photo-0301",
-        "photo-0302",
         "photo-0303",
         "photo-0304",
         "photo-0305",
@@ -466,21 +416,16 @@
         "photo-0307",
         "photo-0569",
         "photo-0308",
-        "photo-0309",
         "photo-0310",
         "photo-0311",
         "photo-0312",
         "photo-0572",
         "photo-0573",
         "photo-0313",
-        "photo-0314",
         "photo-0315",
         "photo-0574",
-        "photo-0317",
-        "photo-0318",
         "photo-0319",
         "photo-0320",
-        "photo-0321",
         "photo-0322",
         "photo-0323",
         "photo-0324",
@@ -546,7 +491,7 @@
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
     },
     {
-      "id": "date-cluster-12",
+      "id": "date-cluster-10",
       "startDate": "2025-07-04T16:25:39.000Z",
       "endDate": "2025-07-06T16:33:35.000Z",
       "photoCount": 3,
@@ -565,7 +510,7 @@
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
     },
     {
-      "id": "date-cluster-13",
+      "id": "date-cluster-11",
       "startDate": "2025-07-13T17:30:22.000Z",
       "endDate": "2025-07-13T18:33:12.000Z",
       "photoCount": 6,
@@ -585,10 +530,10 @@
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
     },
     {
-      "id": "date-cluster-14",
+      "id": "date-cluster-12",
       "startDate": "2025-07-22T12:39:46.000Z",
       "endDate": "2025-08-28T20:15:15.000Z",
-      "photoCount": 114,
+      "photoCount": 101,
       "photoIds": [
         "photo-0385",
         "photo-0386",
@@ -608,15 +553,7 @@
         "photo-0400",
         "photo-0401",
         "photo-0402",
-        "photo-0403",
-        "photo-0408",
-        "photo-0413",
-        "photo-0416",
-        "photo-0421",
-        "photo-0424",
-        "photo-0427",
         "photo-0432",
-        "photo-0435",
         "photo-0439",
         "photo-0440",
         "photo-0441",
@@ -624,7 +561,6 @@
         "photo-0443",
         "photo-0444",
         "photo-0445",
-        "photo-0446",
         "photo-0447",
         "photo-0449",
         "photo-0450",
@@ -641,7 +577,6 @@
         "photo-0463",
         "photo-0464",
         "photo-0465",
-        "photo-0466",
         "photo-0467",
         "photo-0468",
         "photo-0469",
@@ -665,16 +600,13 @@
         "photo-0488",
         "photo-0489",
         "photo-0490",
-        "photo-0491",
         "photo-0492",
         "photo-0493",
         "photo-0494",
         "photo-0495",
         "photo-0496",
         "photo-0497",
-        "photo-0498",
         "photo-0499",
-        "photo-0500",
         "photo-0501",
         "photo-0502",
         "photo-0503",
@@ -715,7 +647,106 @@
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
     },
     {
+      "id": "date-cluster-13",
+      "startDate": "2025-09-22T13:17:53.000Z",
+      "endDate": "2025-09-22T13:54:12.000Z",
+      "photoCount": 3,
+      "photoIds": [
+        "photo-0637",
+        "photo-0638",
+        "photo-0639"
+      ],
+      "cameraModels": [
+        "DMC-FZ330"
+      ],
+      "destinationIds": [
+        "dusseldorf"
+      ],
+      "purpose": "REVIEW_ASSIST",
+      "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
+    },
+    {
+      "id": "date-cluster-14",
+      "startDate": "2025-10-19T15:22:09.000Z",
+      "endDate": "2025-10-19T15:31:11.000Z",
+      "photoCount": 2,
+      "photoIds": [
+        "photo-0640",
+        "photo-0641"
+      ],
+      "cameraModels": [
+        "DMC-FZ330"
+      ],
+      "destinationIds": [
+        "dusseldorf"
+      ],
+      "purpose": "REVIEW_ASSIST",
+      "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
+    },
+    {
       "id": "date-cluster-15",
+      "startDate": "2025-11-07T15:37:07.000Z",
+      "endDate": "2025-11-07T15:37:07.000Z",
+      "photoCount": 1,
+      "photoIds": [
+        "photo-0642"
+      ],
+      "cameraModels": [
+        "DMC-FZ330"
+      ],
+      "destinationIds": [
+        "dusseldorf"
+      ],
+      "purpose": "REVIEW_ASSIST",
+      "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
+    },
+    {
+      "id": "date-cluster-16",
+      "startDate": "2025-12-09T13:31:59.000Z",
+      "endDate": "2025-12-18T15:45:12.000Z",
+      "photoCount": 6,
+      "photoIds": [
+        "photo-0643",
+        "photo-0644",
+        "photo-0645",
+        "photo-0646",
+        "photo-0647",
+        "photo-0648"
+      ],
+      "cameraModels": [
+        "DMC-FZ330"
+      ],
+      "destinationIds": [
+        "dusseldorf"
+      ],
+      "purpose": "REVIEW_ASSIST",
+      "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
+    },
+    {
+      "id": "date-cluster-17",
+      "startDate": "2025-12-28T17:22:31.000Z",
+      "endDate": "2025-12-30T20:23:25.000Z",
+      "photoCount": 7,
+      "photoIds": [
+        "photo-0649",
+        "photo-0650",
+        "photo-0651",
+        "photo-0652",
+        "photo-0653",
+        "photo-0654",
+        "photo-0655"
+      ],
+      "cameraModels": [
+        "DMC-FZ330"
+      ],
+      "destinationIds": [
+        "dusseldorf"
+      ],
+      "purpose": "REVIEW_ASSIST",
+      "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
+    },
+    {
+      "id": "date-cluster-18",
       "startDate": "2026-01-08T17:20:23.000Z",
       "endDate": "2026-01-14T19:31:55.000Z",
       "photoCount": 47,
@@ -773,6 +804,41 @@
       ],
       "destinationIds": [
         "essaouira"
+      ],
+      "purpose": "REVIEW_ASSIST",
+      "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
+    },
+    {
+      "id": "date-cluster-19",
+      "startDate": "2026-03-23T16:10:52.000Z",
+      "endDate": "2026-03-23T16:53:54.000Z",
+      "photoCount": 2,
+      "photoIds": [
+        "photo-0656",
+        "photo-0657"
+      ],
+      "cameraModels": [
+        "DMC-FZ330"
+      ],
+      "destinationIds": [
+        "dusseldorf"
+      ],
+      "purpose": "REVIEW_ASSIST",
+      "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"
+    },
+    {
+      "id": "date-cluster-20",
+      "startDate": "2026-06-24T00:46:24.000Z",
+      "endDate": "2026-06-24T00:46:24.000Z",
+      "photoCount": 1,
+      "photoIds": [
+        "photo-0658"
+      ],
+      "cameraModels": [
+        "DMC-FZ330"
+      ],
+      "destinationIds": [
+        "dusseldorf"
       ],
       "purpose": "REVIEW_ASSIST",
       "geographicConfidence": "NOT_A_GEOGRAPHIC_SOURCE"

@@ -4,6 +4,7 @@ import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import destinationData from '../../../data/destinations.json';
 import catalogData from '../../../public/data/photo-catalog.json';
+import heroPipeline from '../../../public/assets-derived/hero/HERO-PIPELINE.json';
 import { imageObject } from '../../data/image-schema';
 
 export function getStaticPaths() {
@@ -32,8 +33,17 @@ const journey = range ? {
     ? (destination.parentDestination
       ? 'Place confirmed by the photographer’s travel record. Individual towns within it remain intentionally unassigned.'
       : 'Country confirmed by the owner’s travel timeline. Cities and regions remain intentionally unassigned.')
-    // Span and month are computed from the photographs, so the line stays true for any chapter.
-    : `Photographed over ${Math.round((Date.parse(range.end) - Date.parse(range.start)) / 86400000) + 1} days in ${new Date(range.start).toLocaleDateString('en-GB', { month: 'long' })}. Place confirmed by the photographer; the dates are taken from the photographs themselves.`,
+    // Span is computed from the photographs, so the line stays true for any chapter. A short visit
+    // is counted in days and named by its month; a place returned to over a long period is counted
+    // in months and named by none, because "276 days in September" would be both absurd and a claim
+    // of continuous presence that the photographs do not support.
+    : (() => {
+      const days = Math.round((Date.parse(range.end) - Date.parse(range.start)) / 86400000) + 1;
+      const span = days <= 60
+        ? `over ${days} days in ${new Date(range.start).toLocaleDateString('en-GB', { month: 'long' })}`
+        : `across ${Math.round(days / 30.44)} months`;
+      return `Photographed ${span}. Place confirmed by the photographer; the dates are taken from the photographs themselves.`;
+    })(),
 } : null;
 const altByFilename = {
   'P1230620.jpg': 'A gull approaches a row of outstretched hands above the water.',
@@ -84,7 +94,63 @@ const altByFilename = {
   'P1260926.jpg': 'Small figures stand on concrete blocks in a green sea.',
   'P1300638.jpg': 'A surfer carries a board along the shoreline against a pale sky.',
   'P1280221.jpg': 'The moon stands above a breaking wave in the last light.',
+  // Düsseldorf, Phase 9.25. No district, street or landmark is named: the owner confirmed the city
+  // and nothing more, and a facade is not evidence of an address.
+  'P1350974.jpg': 'Red cables run down from the white pylon of a bridge into deep blue sky.',
+  'P1310249.jpg': 'A dirt path runs between two rows of old plane trees in autumn.',
+  'P1310263.jpg': 'A line of plane trees leans over grass scattered with fallen leaves.',
+  'P1310529.jpg': 'Blue-green spruce needles fill the frame.',
+  'P1320465.jpg': 'A traffic light hangs in front of an ornate nineteenth-century facade.',
+  'P1320543.jpg': 'Church domes and a spire against a hard teal sky.',
+  'P1320572.jpg': 'A glass rotunda meets a curved dark facade, with a bird and a small moon above.',
+  'P1310315.jpg': 'A concrete tower shaft rises into a deep teal sky.',
+  'P1320146.jpg': 'A single lit window in the observation deck of a tower at dusk.',
+  'P1370435.jpg': 'A cable-stayed bridge crosses the river under a pink evening sky.',
+  'P1320707.jpg': 'Two pale curved walls step against an empty teal sky.',
+  'P1320755.jpg': 'A pale curved wall cuts a long arc across cloud.',
+  'P1310559-2.jpg': 'A loose formation of geese crosses a bright, clouded sky.',
 };
+// Chapters with a purpose-made 1200×630 card in public/social use it; anything else falls back to
+// its hero derivative, which is a photograph rather than a social card. Keep in step with
+// scripts/generate-social-images.py.
+const socialCardSlugs = new Set(['japan', 'essaouira', 'la-reunion', 'dusseldorf']);
+// Phase 9.27 — the hero is art-directed from the data, never from the template. `hero` carries the
+// chosen frame plus its focal point per breakpoint, its scrim strengths and any title correction, so
+// the owner can re-crop or re-tune an opening without touching CSS. Absent config falls back to the
+// values every chapter used before, which keeps a new destination correct on the day it is created.
+const heroArt = destination.hero ?? {};
+const heroFocal = { desktop: '50% 56%', tablet: '50% 56%', mobile: '48% 50%', ...(heroArt.focal ?? {}) };
+const heroScrim = { top: 0.72, bottom: 0.74, bottomStart: 50, ...(heroArt.overlay ?? {}) };
+const heroStyle = [
+  `--hero-focal:${heroFocal.desktop}`,
+  `--hero-focal-tablet:${heroFocal.tablet}`,
+  `--hero-focal-mobile:${heroFocal.mobile}`,
+  `--hero-scrim-top:${heroScrim.top}`,
+  `--hero-scrim-bottom:${heroScrim.bottom}`,
+  `--hero-scrim-start:${heroScrim.bottomStart}%`,
+  `--hero-title-scale:${heroArt.titleScale ?? 1}`,
+].join(';');
+// A full-bleed `object-fit: cover` box renders the photograph wider than the viewport whenever the
+// image is less tall than the screen: a landscape frame on a tall phone paints roughly three times
+// the screen width, a portrait frame about 1.6 times. `sizes` therefore describes that painted width,
+// not the layout width — 100vw would under-request by a factor of three and deliver a soft hero.
+//
+// The values are deliberately below the widest case. Matching a 3× phone exactly would mean shipping
+// the 2560px file (0.9 MB) to paint a backdrop that is cropped and half-covered by a scrim; these
+// land a 2× phone on 1536 and a 3× phone on 2048, which is sharp in the hand and roughly a quarter of
+// the 2.1–2.4 MB viewer file this replaced.
+const heroSources = heroPipeline.heroes?.[destination.slug] ?? null;
+const heroSrcset = heroSources?.sources.map((source) => `${source.url} ${source.width}w`).join(', ');
+const heroSizes = '(max-width: 560px) 165vw, (max-width: 900px) 150vw, 100vw';
+const heroLargest = heroSources?.sources.at(-1);
+// A week somewhere is travel. Nine months of returning to the same city is not, and calling it
+// "travel photography" would be untrue. The discriminator is the span the photographs themselves
+// describe — the same signal the provenance line uses — not the journey register, which predates
+// some genuine trips.
+const spanDays = range ? Math.round((Date.parse(range.end) - Date.parse(range.start)) / 86400000) + 1 : 0;
+const chapterTitle = spanDays > 60 && !destination.journeyIds?.length
+  ? (destination.seoTitle ?? `${destination.name} photographs — Elsewhere`)
+  : `${destination.name} travel photography — Elsewhere`;
 const canonicalPath = `/destinations/${destination.slug}/`;
 const destinationSchema = {
   '@context': 'https://schema.org',
@@ -102,11 +168,11 @@ const destinationSchema = {
 };
 ---
 
-<BaseLayout title={`${destination.name} travel photography — Elsewhere`} description={`A confirmed photographic chapter from ${destination.name}, edited from the Elsewhere archive.`} image={['japan', 'essaouira'].includes(destination.slug) ? `/social/${destination.slug}.jpg` : hero.archiveImage} imageAlt={altByFilename[hero.filename] ?? hero.altText} schema={destinationSchema}>
+<BaseLayout title={chapterTitle} description={`A confirmed photographic chapter from ${destination.name}, edited from the Elsewhere archive.`} image={socialCardSlugs.has(destination.slug) ? `/social/${destination.slug}.jpg` : hero.archiveImage} imageAlt={altByFilename[hero.filename] ?? hero.altText} schema={destinationSchema}>
   <SiteHeader />
   <main id="main" class="destination-chapter">
-    <header class="destination-hero">
-      <img src={hero.viewerImage} width={hero.width} height={hero.height} alt={altByFilename[hero.filename] ?? hero.altText} loading="eager" fetchpriority="high" />
+    <header class="destination-hero" style={heroStyle}>
+      <img src={heroLargest?.url ?? hero.viewerImage} srcset={heroSrcset} sizes={heroSrcset ? heroSizes : undefined} width={hero.width} height={hero.height} alt={altByFilename[hero.filename] ?? hero.altText} loading="eager" fetchpriority="high" />
       <div class="destination-hero-title"><span class="memory-mark"></span><h1>{destination.name}</h1>{destination.parentDestination && <p class="destination-country">{destination.country}</p>}<p>{journey?.dates}</p></div>
     </header>
     <section class="destination-provenance">

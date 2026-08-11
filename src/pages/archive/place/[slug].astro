@@ -1,0 +1,24 @@
+---
+// Phase 9.29 — the archive, addressed by place.
+//
+// The destinations index lists places that have photographs but no chapter yet, and those rows have
+// to lead somewhere. They used to point at /archive/?destination=<slug>, which meant four different
+// places all opened on the Archive's own generic photograph — one image standing in for Malaysia,
+// Thailand, Phu Quoc and Laos at once. That is the defect this route removes: each place now opens on
+// a photograph from its own body of work, under its own name, at a real URL.
+//
+// This is not a chapter. A chapter is a curated sequence with authored alt text, and these places do
+// not have one yet. This is the archive, filtered, with an honest opening.
+import Archive from '../index.astro';
+import destinationData from '../../../../data/destinations.json';
+
+export function getStaticPaths() {
+  return destinationData.destinations
+    .filter((destination) => destination.publicationStatus !== 'published' && destination.photoCount > 0 && destination.hero?.photoId)
+    .map((destination) => ({ params: { slug: destination.slug }, props: { destination } }));
+}
+
+const { destination } = Astro.props;
+---
+
+<Archive initialDestination={destination.slug} />

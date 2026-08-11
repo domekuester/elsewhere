@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-10",
+  "updatedAt": "2026-08-10T23:18:16.340092Z",
   "policy": "Public presentation exclusions only. Master files and factual source metadata remain untouched. Owner rejections are authoritative and permanent: automated curation must never re-enable them.",
   "ownerRejected": [
     {
@@ -1278,6 +1278,25 @@
       "code": "private-social",
       "reason": "Posed or social photograph of a travelling companion rather than an observed encounter. Recognisable private individual, no model release.",
       "addedIn": "phase-9.2",
+      "reversible": true
+    },
+    {
+      "photoId": "photo-0671",
+      "filename": "P1210843.jpg",
+      "index": 671,
+      "code": "private-social",
+      "reason": "Re-graded export of photo-0139, which is already on private-social hold: the same frame of a recognisable private individual, no model release. Confirmed by perceptual comparison (distance 16/256) and an identical 2025-04-30 capture. The owner placed this copy in a folder named People, which records intent but is not the explicit reversal that AGENTS.md requires to re-enable a withheld photograph.",
+      "addedIn": "phase-9.28a",
+      "reversible": true,
+      "relatedPhotoId": "photo-0139"
+    },
+    {
+      "photoId": "photo-0668",
+      "filename": "IMG_7191.JPG",
+      "index": 668,
+      "code": "identifiable-individual",
+      "reason": "Close street photograph in which a recognisable individual is the dominant subject at short range and appears to look toward the camera. No model release. Held for owner review rather than published; the archive loses nothing by waiting.",
+      "addedIn": "phase-9.28a",
       "reversible": true
     }
   ],

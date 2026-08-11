@@ -26,7 +26,10 @@ const publicPhotos = [];
 for (const [index, photo] of inventory.photos.entries()) {
   const baseName = `${String(index + 1).padStart(4, '0')}-${path.parse(photo.filename).name}.jpg`;
   const visibility = curation.assignments?.[photo.id]?.visibility ?? 'hold';
-  const publicAllowed = !publicExclusions.has(photo.id) && !['private', 'do-not-publish'].includes(visibility);
+  // Must stay identical to the withheld set in scripts/build-photo-catalog.mjs and
+  // scripts/validate-content.mjs. Regeneration is exactly the moment a withheld photograph could
+  // silently return, so `editorial-hold` has to be honoured here too — not only in the catalog.
+  const publicAllowed = !publicExclusions.has(photo.id) && !['private', 'do-not-publish', 'editorial-hold'].includes(visibility);
   if (!publicAllowed) {
     for (const role of roles) {
       const target = path.join(outputRoot, role.name, baseName);

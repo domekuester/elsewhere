@@ -18,7 +18,7 @@
       },
       "shortIntroduction": null,
       "editorialStatus": "CURATED",
-      "heroPhotoId": "photo-0036",
+      "heroPhotoId": "photo-0060",
       "featuredPhotoIds": [
         "photo-0036",
         "photo-0061",
@@ -33,8 +33,8 @@
       "peopleIds": [],
       "collectionIds": [],
       "relatedDestinations": [],
-      "photoCount": 53,
-      "confirmedPhotoCount": 53,
+      "photoCount": 57,
+      "confirmedPhotoCount": 57,
       "photoIds": [
         "photo-0022",
         "photo-0023",
@@ -88,7 +88,11 @@
         "photo-0534",
         "photo-0540",
         "photo-0541",
-        "photo-0547"
+        "photo-0547",
+        "photo-0664",
+        "photo-0665",
+        "photo-0666",
+        "photo-0667"
       ],
       "manualOrder": [
         "photo-0036",
@@ -97,7 +101,31 @@
       ],
       "seoTitle": null,
       "seoDescription": null,
-      "publicationStatus": "in-edit"
+      "publicationStatus": "in-edit",
+      "hero": {
+        "photoId": "photo-0060",
+        "status": "AUTO_SELECTED",
+        "focal": {
+          "desktop": "50% 58%",
+          "tablet": "50% 56%",
+          "mobile": "46% 54%"
+        },
+        "overlay": {
+          "top": 0.72,
+          "bottom": 0.78,
+          "bottomStart": 48
+        },
+        "titleScale": 1,
+        "note": "The city above the tree canopy: the frame in the Malaysia body of work that reads as Kuala Lumpur and still holds a wide, quiet lower band for the title. Replaces photo-0036 (2048px phone file, below the fidelity floor) and photo-0122 (the Kapas cove), on the owner instruction that Malaysia should open on Kuala Lumpur. The chapter title stays \"Malaysia\": no photograph in this destination carries a confirmed city, so the frame may open the chapter but must not yet be captioned as Kuala Lumpur.",
+        "grade": {
+          "linear": [
+            1.13,
+            -13
+          ],
+          "saturation": 1.05
+        },
+        "gradeNote": "Haze correction. The frame is a long lens across humid city air, and the veil that flattens it is atmosphere between camera and subject, not the photograph. Lifting the black point and adding 5% colour restores the separation the lens lost. Tested against a local-contrast (CLAHE) variant and a stronger colour variant; both started showing an HDR signature in the cloud edges, so neither was used."
+      }
     },
     {
       "id": "thailand",
@@ -115,7 +143,7 @@
       },
       "shortIntroduction": null,
       "editorialStatus": "CURATED",
-      "heroPhotoId": "photo-0002",
+      "heroPhotoId": "photo-0680",
       "featuredPhotoIds": [
         "photo-0002"
       ],
@@ -128,8 +156,8 @@
       "peopleIds": [],
       "collectionIds": [],
       "relatedDestinations": [],
-      "photoCount": 32,
-      "confirmedPhotoCount": 32,
+      "photoCount": 47,
+      "confirmedPhotoCount": 47,
       "photoIds": [
         "photo-0001",
         "photo-0002",
@@ -162,14 +190,53 @@
         "photo-0531",
         "photo-0532",
         "photo-0538",
-        "photo-0544"
+        "photo-0544",
+        "photo-0669",
+        "photo-0670",
+        "photo-0674",
+        "photo-0675",
+        "photo-0676",
+        "photo-0677",
+        "photo-0678",
+        "photo-0679",
+        "photo-0680",
+        "photo-0681",
+        "photo-0682",
+        "photo-0683",
+        "photo-0684",
+        "photo-0685",
+        "photo-0686"
       ],
       "manualOrder": [
         "photo-0002"
       ],
       "seoTitle": null,
       "seoDescription": null,
-      "publicationStatus": "in-edit"
+      "publicationStatus": "in-edit",
+      "hero": {
+        "photoId": "photo-0680",
+        "status": "AUTO_SELECTED",
+        "focal": {
+          "desktop": "50% 54%",
+          "tablet": "50% 52%",
+          "mobile": "52% 50%"
+        },
+        "overlay": {
+          "top": 0.66,
+          "bottom": 0.76,
+          "bottomStart": 48
+        },
+        "titleScale": 1,
+        "note": "Limestone karsts standing over a calm bay under heavy cloud, from the new Thailand folder. 4000px, unmistakably Thailand, with an empty foreground of water for the title. Beats photo-0005 (the red pier), which is a stronger photograph but a portrait frame that crops hard at desktop width.",
+        "grade": {
+          "linear": [
+            1.08,
+            -8
+          ],
+          "saturation": 1.04
+        },
+        "gradeNote": "The same correction at about half strength. The scene is genuinely monochromatic teal and is left that way; only the haze sitting in front of the karsts is taken back."
+      }
     },
     {
       "id": "laos",
@@ -187,7 +254,7 @@
       },
       "shortIntroduction": null,
       "editorialStatus": "CURATED",
-      "heroPhotoId": "photo-0537",
+      "heroPhotoId": "photo-0663",
       "featuredPhotoIds": [
         "photo-0537"
       ],
@@ -198,19 +265,40 @@
       "peopleIds": [],
       "collectionIds": [],
       "relatedDestinations": [],
-      "photoCount": 3,
-      "confirmedPhotoCount": 3,
+      "photoCount": 8,
+      "confirmedPhotoCount": 8,
       "photoIds": [
         "photo-0032",
         "photo-0536",
-        "photo-0537"
+        "photo-0537",
+        "photo-0659",
+        "photo-0660",
+        "photo-0661",
+        "photo-0662",
+        "photo-0663"
       ],
       "manualOrder": [
         "photo-0537"
       ],
       "seoTitle": null,
       "seoDescription": null,
-      "publicationStatus": "in-edit"
+      "publicationStatus": "in-edit",
+      "hero": {
+        "photoId": "photo-0663",
+        "status": "AUTO_SELECTED",
+        "focal": {
+          "desktop": "50% 62%",
+          "tablet": "50% 60%",
+          "mobile": "52% 58%"
+        },
+        "overlay": {
+          "top": 0.62,
+          "bottom": 0.76,
+          "bottomStart": 46
+        },
+        "titleScale": 1,
+        "note": "Two monks walking away past a black Mercedes in late light. Replaces photo-0659 (the river bend), which is truthful but hazy and subject-less at full bleed: measured against the benchmark heroes, the river frame sat at 0.19 saturation where Japan, Düsseldorf and Essaouira average 0.57, and its subject — a village — is a few hundred pixels wide. This frame has the colour identity and the single clear subject the benchmark set has. The crop takes the tops of their heads; they are walking away and unidentifiable either way, and the robes and the car carry the frame."
+      }
     },
     {
       "id": "vietnam",
@@ -255,7 +343,7 @@
       },
       "shortIntroduction": null,
       "editorialStatus": "CURATED",
-      "heroPhotoId": null,
+      "heroPhotoId": "photo-0072",
       "featuredPhotoIds": [
         "photo-0533"
       ],
@@ -266,8 +354,8 @@
       "peopleIds": [],
       "collectionIds": [],
       "relatedDestinations": [],
-      "photoCount": 18,
-      "confirmedPhotoCount": 18,
+      "photoCount": 20,
+      "confirmedPhotoCount": 20,
       "photoIds": [
         "photo-0008",
         "photo-0009",
@@ -286,14 +374,32 @@
         "photo-0072",
         "photo-0073",
         "photo-0533",
-        "photo-0539"
+        "photo-0539",
+        "photo-0672",
+        "photo-0673"
       ],
       "manualOrder": [
         "photo-0533"
       ],
       "seoTitle": null,
       "seoDescription": null,
-      "publicationStatus": "in-edit"
+      "publicationStatus": "in-edit",
+      "hero": {
+        "photoId": "photo-0072",
+        "status": "AUTO_SELECTED",
+        "focal": {
+          "desktop": "50% 56%",
+          "tablet": "50% 54%",
+          "mobile": "50% 52%"
+        },
+        "overlay": {
+          "top": 0.6,
+          "bottom": 0.74,
+          "bottomStart": 48
+        },
+        "titleScale": 1,
+        "note": "A jetty running out into flat yellow light, 4000px landscape. Replaces a null heroPhotoId — this destination had no hero record at all. Beats photo-0009 (the rower), which is the better photograph but a high-key portrait that leaves the title nowhere dark to sit."
+      }
     },
     {
       "id": "japan",
@@ -567,7 +673,23 @@
       ],
       "seoTitle": "Japan photographs — Elsewhere",
       "seoDescription": null,
-      "publicationStatus": "published"
+      "publicationStatus": "published",
+      "hero": {
+        "photoId": "photo-0372",
+        "status": "AUTO_SELECTED",
+        "focal": {
+          "desktop": "50% 56%",
+          "tablet": "50% 56%",
+          "mobile": "48% 50%"
+        },
+        "overlay": {
+          "top": 0.72,
+          "bottom": 0.74,
+          "bottomStart": 50
+        },
+        "titleScale": 1,
+        "note": "Kept from the previous edit. Nothing in the 204-frame chapter opens the country better at full viewport."
+      }
     },
     {
       "id": "morocco",
@@ -703,7 +825,23 @@
       ],
       "seoTitle": "Essaouira photographs — Elsewhere",
       "seoDescription": null,
-      "publicationStatus": "published"
+      "publicationStatus": "published",
+      "hero": {
+        "photoId": "photo-0609",
+        "status": "AUTO_SELECTED",
+        "focal": {
+          "desktop": "50% 56%",
+          "tablet": "50% 54%",
+          "mobile": "36% 50%"
+        },
+        "overlay": {
+          "top": 0.72,
+          "bottom": 0.8,
+          "bottomStart": 52
+        },
+        "titleScale": 1,
+        "note": "Kept. Mobile focal moved left so the roofline gulls stay in a vertical crop; the bottom scrim is heavier because the title sits on a sunlit wall."
+      }
     },
     {
       "id": "france",
@@ -736,7 +874,7 @@
       "id": "la-reunion",
       "slug": "la-reunion",
       "name": "La Réunion",
-      "displayName": "La Réunion\nFrance",
+      "displayName": "La Réunion",
       "country": "France",
       "countryCode": "FR",
       "region": "La Réunion",
@@ -893,7 +1031,144 @@
         "photo-0475",
         "photo-0520"
       ],
-      "seoTitle": "La Réunion photographs — Elsewhere",
+      "seoTitle": "La Réunion travel photography — Elsewhere",
+      "seoDescription": null,
+      "publicationStatus": "published",
+      "hero": {
+        "photoId": "photo-0442",
+        "status": "AUTO_SELECTED",
+        "focal": {
+          "desktop": "50% 56%",
+          "tablet": "50% 54%",
+          "mobile": "46% 46%"
+        },
+        "overlay": {
+          "top": 0.72,
+          "bottom": 0.74,
+          "bottomStart": 50
+        },
+        "titleScale": 1,
+        "note": "Kept. Mobile focal raised so the cirque keeps its horizon above the title band."
+      }
+    },
+    {
+      "id": "germany",
+      "slug": "germany",
+      "name": "Germany",
+      "displayName": "Germany",
+      "country": "Germany",
+      "countryCode": "DE",
+      "region": null,
+      "parentDestination": null,
+      "dateRange": null,
+      "shortIntroduction": null,
+      "editorialStatus": "NEEDS_INFO",
+      "heroPhotoId": null,
+      "featuredPhotoIds": [],
+      "journeyIds": [],
+      "storyIds": [],
+      "peopleIds": [],
+      "collectionIds": [],
+      "relatedDestinations": [],
+      "photoCount": 0,
+      "confirmedPhotoCount": 0,
+      "photoIds": [],
+      "manualOrder": [],
+      "seoTitle": null,
+      "seoDescription": null,
+      "publicationStatus": "planned"
+    },
+    {
+      "id": "dusseldorf",
+      "slug": "dusseldorf",
+      "name": "Düsseldorf",
+      "displayName": "Düsseldorf\nGermany",
+      "country": "Germany",
+      "countryCode": "DE",
+      "region": "Düsseldorf",
+      "parentDestination": "germany",
+      "dateRange": {
+        "start": "2025-09-22",
+        "end": "2026-06-24",
+        "source": "CAPTURE_METADATA"
+      },
+      "shortIntroduction": null,
+      "editorialStatus": "CURATED",
+      "heroPhotoId": "photo-0656",
+      "hero": {
+        "photoId": "photo-0656",
+        "status": "AUTO_SELECTED",
+        "focal": {
+          "desktop": "50% 56%",
+          "tablet": "50% 52%",
+          "mobile": "48% 50%"
+        },
+        "titleScale": 0.94,
+        "overlay": {
+          "top": 0.72,
+          "bottom": 0.78,
+          "bottomStart": 48
+        },
+        "note": "Kept. The longest destination name on the site gets a slightly smaller title so it does not run into the gutter, and a heavier bottom scrim because the title falls on open sky."
+      },
+      "featuredPhotoIds": [
+        "photo-0656",
+        "photo-0637",
+        "photo-0649",
+        "photo-0644",
+        "photo-0654",
+        "photo-0651",
+        "photo-0652",
+        "photo-0639",
+        "photo-0658",
+        "photo-0653",
+        "photo-0641"
+      ],
+      "journeyIds": [],
+      "storyIds": [],
+      "peopleIds": [],
+      "collectionIds": [],
+      "relatedDestinations": [],
+      "photoCount": 22,
+      "confirmedPhotoCount": 22,
+      "photoIds": [
+        "photo-0637",
+        "photo-0638",
+        "photo-0639",
+        "photo-0640",
+        "photo-0641",
+        "photo-0642",
+        "photo-0643",
+        "photo-0644",
+        "photo-0645",
+        "photo-0646",
+        "photo-0647",
+        "photo-0648",
+        "photo-0649",
+        "photo-0650",
+        "photo-0651",
+        "photo-0652",
+        "photo-0653",
+        "photo-0654",
+        "photo-0655",
+        "photo-0656",
+        "photo-0657",
+        "photo-0658"
+      ],
+      "manualOrder": [
+        "photo-0656",
+        "photo-0637",
+        "photo-0649",
+        "photo-0644",
+        "photo-0654",
+        "photo-0651",
+        "photo-0652",
+        "photo-0639",
+        "photo-0658",
+        "photo-0653",
+        "photo-0641"
+      ],
+      "seoTitle": "Düsseldorf photographs — Elsewhere",
       "seoDescription": null,
       "publicationStatus": "published"
     }

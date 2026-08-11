@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "source": "PHASE_9.28A",
+  "note": "Photographic openings for surfaces that are not destination chapters. Same shape as the `hero` block in data/destinations.json so the owner changes one photo ID and re-runs `npm run images:heroes`. `surface` matches the key the page asks for.",
+  "surfaces": {
+    "archive": {
+      "photoId": "photo-0182",
+      "status": "AUTO_SELECTED",
+      "focal": {
+        "desktop": "50% 50%",
+        "tablet": "50% 50%",
+        "mobile": "50% 50%"
+      },
+      "overlay": {
+        "top": 0.62,
+        "bottom": 0.72,
+        "bottomStart": 46
+      },
+      "titleScale": 1,
+      "note": "A field of moving water, edge to edge. Chosen after rendering: photo-0183 is the same water with two watching figures, and it was the first pick, but a 72svh band either crops the figures out entirely (making the reason for choosing it disappear) or blows them up until the title sits on someone's head. This frame is the composition the band actually shows, so the hero and the photograph agree. It names no place, holds vast negative space for the title, and repeats neither a chapter hero nor the Home opening.",
+      "alternatives": [
+        "photo-0183",
+        "photo-0677",
+        "photo-0600"
+      ],
+      "encode": {
+        "chroma": "4:2:0",
+        "reason": "Dense water texture with no saturated fine colour detail; 4:2:0 is invisible here and roughly halves the file."
+      }
+    },
+    "black-and-white-archive": {
+      "photoId": "photo-0574",
+      "status": "AUTO_SELECTED",
+      "focal": {
+        "desktop": "50% 48%",
+        "tablet": "50% 48%",
+        "mobile": "50% 46%"
+      },
+      "overlay": {
+        "top": 0.58,
+        "bottom": 0.74,
+        "bottomStart": 48
+      },
+      "titleScale": 1,
+      "note": "A raised hand against the sun over the sea. A true monochrome frame from the Phase 7 black-and-white edit, graphic enough to carry a full viewport, and deliberately not another seascape — the curated Black & White page already opens on a breakwater.",
+      "alternatives": [
+        "photo-0578",
+        "photo-0559",
+        "photo-0581"
+      ]
+    }
+  }
+}

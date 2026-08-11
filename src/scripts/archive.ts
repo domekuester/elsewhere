@@ -34,6 +34,9 @@ if (root) {
   let filtered: CatalogPhoto[] = [];
   let shown = pageSize;
   let activeWorld = root.dataset.initialWorld ?? 'all';
+  // A /archive/place/<slug>/ page is served already filtered to that place; the control has to agree
+  // with what the page is showing, or the first interaction would silently widen the view.
+  const initialDestination = root.dataset.initialDestination ?? null;
   let activeIndex = 0;
   let touchStartX = 0;
   let viewerFocusOrigin: HTMLElement | null = null;
@@ -173,6 +176,10 @@ if (root) {
     if (worldButton) {
       activeWorld = requestedWorld!;
       worldButtons.forEach((item) => { item.classList.toggle('is-active', item === worldButton); item.setAttribute('aria-pressed', String(item === worldButton)); });
+      requested = true;
+    }
+    if (initialDestination && [...destinationSelect.options].some((option) => option.value === initialDestination)) {
+      destinationSelect.value = initialDestination;
       requested = true;
     }
     const requestedDestination = params.get('destination');

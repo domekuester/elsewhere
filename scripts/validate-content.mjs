@@ -38,6 +38,21 @@ for (const destination of destinations) {
   for (const id of [...destination.photoIds, ...destination.featuredPhotoIds, ...destination.manualOrder]) if (excludedIds.has(id)) errors.push(`${destination.id} includes editorially excluded photo ${id}`);
   if (destination.publicationStatus === 'published' && (!destination.heroPhotoId || destination.confirmedPhotoCount < 5)) errors.push(`Published destination ${destination.id} fails content threshold`);
   if (destination.confirmedPhotoCount === 0 && destination.publicationStatus !== 'planned') errors.push(`Destination ${destination.id} has zero photos but is ${destination.publicationStatus}`);
+  // Phase 9.27 hero art direction. The hero is the loudest surface on the site, so its frame has to
+  // belong to this destination, has to be publishable, and — once the chapter is open — has to be the
+  // same frame the rest of the system already points at.
+  const hero = destination.hero;
+  if (hero) {
+    if (!photoIds.has(hero.photoId)) errors.push(`${destination.id} hero references missing photo ${hero.photoId}`);
+    if (excludedIds.has(hero.photoId)) errors.push(`${destination.id} hero uses editorially excluded photo ${hero.photoId}`);
+    if (!destination.photoIds.includes(hero.photoId)) errors.push(`${destination.id} hero ${hero.photoId} does not belong to that destination`);
+    if (!['AUTO_SELECTED', 'OWNER_APPROVED', 'OWNER_REPLACED', 'PROVISIONAL_NOT_PUBLISHED'].includes(hero.status)) errors.push(`${destination.id} hero has unknown status ${hero.status}`);
+    if (destination.publicationStatus === 'published' && hero.photoId !== destination.heroPhotoId) errors.push(`${destination.id} hero ${hero.photoId} disagrees with heroPhotoId ${destination.heroPhotoId}`);
+    if (destination.publicationStatus === 'published' && hero.status === 'PROVISIONAL_NOT_PUBLISHED') errors.push(`${destination.id} is published but its hero is still marked provisional`);
+    for (const [breakpoint, value] of Object.entries(hero.focal ?? {})) {
+      if (!/^\d{1,3}% \d{1,3}%$/.test(value)) errors.push(`${destination.id} hero focal ${breakpoint} is not an "x% y%" pair: ${value}`);
+    }
+  }
 }
 for (const journey of journeys) for (const id of journey.photoIds) if (!photoIds.has(id)) errors.push(`${journey.id} references missing photo ${id}`);
 for (const story of stories) for (const id of story.photoIds) if (!photoIds.has(id)) errors.push(`${story.id} references missing photo ${id}`);
