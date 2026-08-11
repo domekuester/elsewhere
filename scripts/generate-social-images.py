@@ -30,6 +30,9 @@ IMAGES = {
     # ceiling and floor, which is where that photograph carries nothing. Centred slightly high
     # because the vanishing point sits just above the middle.
     "journey-malaysia.jpg": ("public/assets-derived/archive/0056-P1000442.jpg", (0.50, 0.46)),
+    # THE JOURNEY, story 02. The scaffolded pagoda spire remains on the right while the wide crop
+    # keeps the gold cloud as the subject. This is a technical social crop of the approved hero.
+    "journey-thailand.jpg": ("public/assets-derived/archive/0043-IMG_8541.jpg", (0.50, 0.45)),
 }
 
 for filename, (source, centering) in IMAGES.items():

@@ -69,6 +69,27 @@
         "photo-0559",
         "photo-0581"
       ]
+    },
+    "journey-thailand": {
+      "photoId": "photo-0043",
+      "status": "AUTO_SELECTED",
+      "focal": {
+        "desktop": "50% 54%",
+        "tablet": "50% 52%",
+        "mobile": "52% 50%"
+      },
+      "overlay": {
+        "top": 0.5,
+        "bottom": 0.74,
+        "bottomStart": 42
+      },
+      "titleScale": 1,
+      "note": "A gold-lit cloud standing over a pagoda spire in scaffolding, 13 October 2024 — his first week back. Chosen over photo-0680 (the karst bay, already the Thailand chapter hero) and over every beach in the set, because this story is about a changed opinion rather than a good holiday: the scaffolding keeps it honest, and the light is real rather than graded. The top veil is lighter than usual because the frame is already dark at the top.",
+      "alternatives": [
+        "photo-0680",
+        "photo-0697",
+        "photo-0044"
+      ]
     }
   }
 }

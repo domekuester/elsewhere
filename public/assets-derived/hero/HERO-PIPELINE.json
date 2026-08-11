@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T21:01:25.557Z",
+  "generatedAt": "2026-08-11T23:00:31.677Z",
   "role": "destination-hero",
   "widths": [
     768,
@@ -462,6 +462,46 @@
           "height": 3832,
           "bytes": 1084093,
           "url": "/assets-derived/hero/0574-P1250928-2560.jpg"
+        }
+      ]
+    },
+    "journey-thailand": {
+      "photoId": "photo-0043",
+      "baseName": "0043-IMG_8541",
+      "sourceWidth": 4000,
+      "sourceHeight": 3000,
+      "chroma": "4:4:4",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 576,
+          "bytes": 59094,
+          "url": "/assets-derived/hero/0043-IMG_8541-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 864,
+          "bytes": 96463,
+          "url": "/assets-derived/hero/0043-IMG_8541-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 1152,
+          "bytes": 138943,
+          "url": "/assets-derived/hero/0043-IMG_8541-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 1536,
+          "bytes": 186923,
+          "url": "/assets-derived/hero/0043-IMG_8541-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 1920,
+          "bytes": 232200,
+          "url": "/assets-derived/hero/0043-IMG_8541-2560.jpg"
         }
       ]
     }

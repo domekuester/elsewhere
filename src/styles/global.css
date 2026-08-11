@@ -1169,6 +1169,11 @@ html[data-viewer-open] body { overflow: hidden; }
 .journey-next > a:not(.editorial-link) span { font-family: var(--display); font-size: clamp(2.6rem, 6vw, 5rem); line-height: .85; text-transform: uppercase; }
 .journey-next > a:not(.editorial-link) b { color: var(--ultramarine); font-size: clamp(1.6rem, 3.5vw, 3rem); font-weight: 400; }
 .journey-next > p { max-width: 30rem; margin-top: 1.8rem; font-family: var(--editorial); font-size: .98rem; line-height: 1.7; color: #9a9d99; }
+.journey-story-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr)); gap: 1px; margin-top: 1.6rem; background: var(--line-dark); border-block: 1px solid var(--line-dark); }
+.journey-story-nav a { display: grid; gap: .65rem; padding: clamp(1.35rem, 3vw, 2rem) 0; background: var(--obsidian); }
+.journey-story-nav a + a { padding-left: clamp(1.25rem, 3vw, 2.5rem); }
+.journey-story-nav small { color: #8d908c; font-size: .7rem; letter-spacing: .11em; text-transform: uppercase; }
+.journey-story-nav span { font-family: var(--display); font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: .85; text-transform: uppercase; }
 
 /* The series index. Light, like the other written surfaces, because the page is an opening rather
    than a photograph — but each entry is a chapter, not a row. A thumbnail beside a headline reads
@@ -1201,6 +1206,7 @@ html[data-viewer-open] body { overflow: hidden; }
   .journey-pair { grid-template-columns: 1fr; gap: clamp(2rem, 6vw, 3rem); }
   .journey-pair > :last-child { margin-top: 0; }
   .journey-frame.is-inset { width: min(17rem, calc(100% - var(--gutter) * 2)); }
+  .journey-story-nav a + a { padding-left: 0; }
 }
 
 /* Phase 9.1 — Destinations index. Open chapters become photographic entrances; everything still

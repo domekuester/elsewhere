@@ -47,6 +47,7 @@ export type PhotoRole =
   | 'detail'
   | 'transition'
   | 'pause'
+  | 'daily-life'
   | 'turning-point'
   | 'closer';
 
@@ -139,7 +140,7 @@ export const journeyStories: JourneyStory[] = [
     // share preview falls back to a 4:3 hero derivative that platforms crop unpredictably.
     socialImage: '/social/journey-malaysia.jpg',
     previousSlug: null,
-    nextSlug: null,
+    nextSlug: 'thailand',
     blocks: [
       { kind: 'lede', text: 'Not the first time. That is more or less the point.' },
       {
@@ -464,6 +465,315 @@ export const journeyStories: JourneyStory[] = [
           id: 'photo-0692',
           role: 'closer',
           alt: 'An empty curve of sand under soft cloud, with jungle and one leaning palm on the right and a flight of steps rising into the trees.',
+        },
+      },
+    ],
+  },
+  {
+    slug: 'thailand',
+    number: 2,
+    title: 'Thailand',
+    standfirst:
+      'I came back to Thailand not expecting much. I had been before and it had never really worked. Then Krabi happened, and a reception desk at Tonsai, and by the end that opinion was hard to defend.',
+    destinationId: 'thailand',
+    dateLabel: '2024 — 2025',
+    provenance: [
+      'Thailand, October 2024 to March 2025. The journey passes through the country twice in that stretch, with Laos in between. This is one story because it is one change of mind, and it says so rather than pretending the trip ran straight through.',
+      'Five of the photographs carry a confirmed place, because the photographer named them. The rest are confirmed to Thailand and no further. The people in this story are named with his permission; none of them appears in a photograph.',
+    ],
+    heroSurfaceKey: 'journey-thailand',
+    heroAlt:
+      'A bank of cloud lit gold by low sun stands behind the tiered spire of a temple wrapped in bamboo scaffolding.',
+    status: 'PUBLISHED',
+    publishedAt: '2026-08-12',
+    seoTitle: 'Thailand — The Journey — Elsewhere',
+    seoDescription:
+      'I had been to Thailand before and never much liked it. This is the journey that changed that: Krabi, a month working reception at Tonsai, an island near Ranong, and the people who did it.',
+    socialImage: '/social/journey-thailand.jpg',
+    previousSlug: 'malaysia',
+    nextSlug: null,
+    blocks: [
+      { kind: 'lede', text: 'Thailand and I had never really got on.' },
+      {
+        kind: 'text',
+        paragraphs: [
+          'I had been before, more than once, and it had never worked. Too crowded. Too much of everything for sale. In some places I had the feeling that before I was anything else, I was a wallet.',
+          'There was a side of the tourism I saw on those trips that I did not like either. I will leave it at that.',
+          'So I was not in a hurry to go back.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0063',
+          role: 'opener',
+          alt: 'A brightly lit shopfront at night advertising gelato beside a neon cannabis-leaf sign.',
+        },
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'What I did not think about at the time is that I had mostly been in the places where exactly that happens, and sometimes with the wrong people. It took me years to consider that the problem might not have been the country.',
+          'I was still on Kapas when I started looking for what came next. I found a Workaway placement on Tonsai Beach, near Krabi, working reception. That was the reason to move on.',
+          'From Penang it is a bus. Six hours or so. And then Thailand again, with the expectations set very low.',
+        ],
+      },
+
+      { kind: 'chapter', label: 'Krabi' },
+      {
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0697',
+          role: 'place',
+          caption: 'Krabi · 2024',
+          alt: 'Four gilded seated Buddha figures in profile against a dark blue sky and a bank of cloud lit pink.',
+        },
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'Krabi did not cooperate with the low expectations.',
+          'The room was simple. There was not much to it. But it had a small balcony, and from the balcony I could see a couple of pagodas and a lot of sky. That matters to me more than the room does.',
+          'Round the corner was Arty Momma Rasta Bar. Arty is one of those people who make you feel welcome without making anything of it, and I kept going back. At some point during my stay she started cooking again. The food was very good.',
+          'There was a café nearby with proper coffee, a few places to eat, and, this being Thailand, a 7-Eleven roughly every ninety seconds.',
+          'And it was calm. That was the part I had not expected at all. This was not the Thailand that had worn me out.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0062',
+          role: 'place',
+          alt: 'A full rainbow stands over flat water at dusk, with a low dark shoreline and one small boat.',
+        },
+      },
+      {
+        kind: 'photo',
+        display: 'inset',
+        photo: {
+          id: 'photo-0046',
+          role: 'detail',
+          alt: 'A dense cluster of small pink flowers against dark leaves.',
+        },
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'I went up to the Tiger Cave Temple. More than 1,200 steps to the top. On paper that already sounds unnecessary. Halfway up it sounds considerably more unnecessary.',
+          'It is worth it.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'full',
+        photo: {
+          id: 'photo-0044',
+          role: 'place',
+          alt: 'Palms lean over a beach at low tide with a long boat drawn up on the sand under warm cloud.',
+        },
+      },
+
+      { kind: 'chapter', label: 'Tonsai' },
+      {
+        kind: 'photo',
+        display: 'full',
+        photo: {
+          id: 'photo-0680',
+          role: 'establishing',
+          alt: 'Limestone cliffs stand over a calm bay under heavy cloud, with a pale beach in the foreground.',
+        },
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'Then Ao Nang, then a boat, then Tonsai.',
+          'I worked reception for about a month. Written down like that it sounds like a job. It was not really a job.',
+          'Dori ran everything. A check-in that went wrong, a question, anything at all that needed solving. She was there, at almost any hour. I still do not know when she slept.',
+          'Pinong was the boss, and we got on immediately, because you could say what you thought. No theatre, no hierarchy games. That suited me.',
+        ],
+      },
+      {
+        kind: 'pair',
+        photos: [
+          {
+            id: 'photo-0679',
+            role: 'detail',
+            alt: 'Two dusky langurs sit close together in a palm, one leaning against the other.',
+          },
+          {
+            id: 'photo-0684',
+            role: 'detail',
+            alt: 'Backlit leaves in a dense tangle of jungle, most of the frame in shadow.',
+          },
+        ],
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'Max teaches climbing and runs the climbing business there. He kept offering to take me out and show me things. That was simply very generous of him.',
+          'Jam works with Max, and I did a climbing course with him. He is a warm, grounded guy and very easy to talk to.',
+          'A ran the bar and does tattoos. Sakai was simply one of the good ones.',
+          'And Wilmer, from Colombia, worked reception with me. I had evenings with Wilmer where at some point I was no longer sure what we were still laughing about. It had been a long time since I laughed like that.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0678',
+          role: 'detail',
+          alt: 'A long-legged golden orb spider sits at the centre of its web, the light behind it breaking into colour.',
+        },
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'We covered for each other. If somebody was late back from a trip, somebody else took the desk. We put Halloween together. Things that went wrong got dealt with, without anybody making a drama of it.',
+          'It was a family. A temporary one, but that is what it was.',
+          'Four weeks went very fast.',
+          'That is the difference, I think. On the earlier trips I had been a customer. This time I was just there.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0047',
+          role: 'pause',
+          alt: 'A low sun goes down behind a dark treeline, its light lying in a long band across still water.',
+        },
+      },
+      {
+        kind: 'photo',
+        display: 'inset',
+        photo: {
+          id: 'photo-0051',
+          role: 'pause',
+          alt: 'A half moon, sharp against a black sky.',
+        },
+      },
+
+      { kind: 'chapter', label: 'Koh Phayam' },
+      {
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0698',
+          role: 'turning-point',
+          caption: 'Koh Phayam · 2025',
+          alt: 'A large red sun stands low over the sea, with one small figure sitting on a board in the water beneath it.',
+        },
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'After Tonsai I met an old friend, and we went to Koh Phayam, up near Ranong.',
+          'It reminded me a little of Kapas. Not because the islands are alike. Phayam has far more on it, more places to stay, more people, more of everything. But the days go the same way.',
+          'It was off-season, so we found a bungalow on the beach for almost nothing.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'inset',
+        photo: {
+          id: 'photo-0700',
+          role: 'place',
+          alt: 'The beach and sea seen through a narrow opening between the dark walls and roof of a simple bungalow on Koh Phayam.',
+        },
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'There was a place we kept going back to called Sweet Kitchen. Good food, and they kept giving us fruit for free. There was a dog who greeted us every time.',
+          'The days were: swim, look around a bit, take photographs, get on the scooter, ride somewhere for the sunset, have a beer on the beach. Done.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0701',
+          role: 'daily-life',
+          alt: 'A person carries a pale blue surfboard across a beach on Koh Phayam while two people walk behind in the late light.',
+        },
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'You genuinely do not need more than that there.',
+        ],
+      },
+      { kind: 'pause' },
+
+      { kind: 'chapter', label: 'And the rest of it' },
+      {
+        kind: 'text',
+        paragraphs: [
+          'There was more after that.',
+          'Bangkok, which is fast and loud and hard work, and worth it every time for the food alone.',
+          'Koh Chang, more touristy than Phayam, but a good island to take a scooter around. Jungle, beaches, and roads that keep going up and down.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0007',
+          role: 'place',
+          alt: 'A dense skyline at dusk above a wide road full of traffic, one tall stepped tower standing over the rest.',
+        },
+      },
+      {
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0695',
+          role: 'transition',
+          caption: 'Koh Chang · 2025',
+          alt: 'A road rises and falls through jungle with two scooters riding away into the distance.',
+        },
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'Ayutthaya and its temples, which I liked a lot. I also saw tourists riding elephants there. I photographed it, and then decided I did not want those pictures in this.',
+          'Kanchanaburi, where I read a lot and learned a lot, and stood on the bridge over the River Khwae. And where there were also markets and food and a town you could slow down in. Both of those at once.',
+          'And Khao Soi, which I had also underestimated.',
+        ],
+      },
+      {
+        kind: 'pair',
+        photos: [
+          {
+            id: 'photo-0002',
+            role: 'place',
+            alt: 'A weathered stone Buddha head held in the roots of a fig tree at ground level.',
+          },
+          {
+            id: 'photo-0003',
+            role: 'place',
+            alt: 'A window in a ruined brick wall frames the spire of a distant temple.',
+          },
+        ],
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'I came to Thailand fairly sure I already knew what I thought about it.',
+          'By the time I left, that was hard to defend. It was the first time I actually loved being there, which surprised me more than it probably should have.',
+          'Apparently I just had to come back.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'full',
+        photo: {
+          id: 'photo-0065',
+          role: 'closer',
+          alt: 'A single pink-lit cloud stands in a violet sky behind the dark silhouette of a palm frond.',
         },
       },
     ],

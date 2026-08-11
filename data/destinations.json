@@ -163,8 +163,8 @@
       "peopleIds": [],
       "collectionIds": [],
       "relatedDestinations": [],
-      "photoCount": 48,
-      "confirmedPhotoCount": 48,
+      "photoCount": 55,
+      "confirmedPhotoCount": 55,
       "photoIds": [
         "photo-0001",
         "photo-0002",
@@ -213,7 +213,14 @@
         "photo-0683",
         "photo-0684",
         "photo-0685",
-        "photo-0686"
+        "photo-0686",
+        "photo-0695",
+        "photo-0696",
+        "photo-0697",
+        "photo-0698",
+        "photo-0699",
+        "photo-0700",
+        "photo-0701"
       ],
       "manualOrder": [
         "photo-0002"

@@ -21,6 +21,9 @@ export function getStaticPaths() {
 }
 
 const { story } = Astro.props;
+const publishedStories = publishedJourneyStories();
+const previousStory = story.previousSlug ? publishedStories.find((item) => item.slug === story.previousSlug) : null;
+const nextStory = story.nextSlug ? publishedStories.find((item) => item.slug === story.nextSlug) : null;
 const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]));
 const destination = destinationData.destinations.find((item) => item.id === story.destinationId);
 const canonicalPath = `/journey/${story.slug}/`;
@@ -215,6 +218,22 @@ const kicker = `The Journey — ${String(story.number).padStart(2, '0')}`;
 
     <aside class="journey-next">
       <p class="journey-kicker">{sequence.length + 1} photographs</p>
+      {(previousStory || nextStory) && (
+        <nav class="journey-story-nav" aria-label="The Journey stories">
+          {previousStory && (
+            <a href={`/journey/${previousStory.slug}/`} rel="prev" data-analytics-event="journey_open" data-analytics-context={`story:${story.slug}:previous`}>
+              <small>Previous · The Journey — {String(previousStory.number).padStart(2, '0')}</small>
+              <span>{previousStory.title}</span>
+            </a>
+          )}
+          {nextStory && (
+            <a href={`/journey/${nextStory.slug}/`} rel="next" data-analytics-event="journey_open" data-analytics-context={`story:${story.slug}:next`}>
+              <small>Next · The Journey — {String(nextStory.number).padStart(2, '0')}</small>
+              <span>{nextStory.title}</span>
+            </a>
+          )}
+        </nav>
+      )}
       {destination?.publicationStatus === 'published' ? (
         <a href={`/destinations/${destination.slug}/`} data-analytics-event="destination_open" data-analytics-context={`journey:${story.slug}`}>
           <span>{destination.name}</span><b aria-hidden="true">→</b>
