@@ -51,6 +51,7 @@
 - [Laos — English publication adaptation](STORY-03-LAOS-EN-PUBLICATION.md)
 - [Laos photo edit](STORY-03-LAOS-PHOTO-EDIT.md)
 - [Laos owner questions](STORY-03-LAOS-OWNER-QUESTIONS.md)
+- [Phase 12.2 — Laos publication report](PHASE-12.2-LAOS-PUBLICATION-REPORT.md)
 
 ## Phase 10.2 — hero / header optical integration
 

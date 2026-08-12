@@ -491,7 +491,7 @@ export const journeyStories: JourneyStory[] = [
       'I had been to Thailand before and never much liked it. This is the journey that changed that: Krabi, a month working reception at Tonsai, an island near Ranong, and the people who did it.',
     socialImage: '/social/journey-thailand.jpg',
     previousSlug: 'malaysia',
-    nextSlug: null,
+    nextSlug: 'laos',
     blocks: [
       { kind: 'lede', text: 'Thailand and I had never really got on.' },
       {
@@ -793,12 +793,12 @@ export const journeyStories: JourneyStory[] = [
     heroSurfaceKey: 'journey-laos',
     heroAlt:
       'Two monks in orange robes walk along a Luang Prabang street past a black vintage Mercedes in low afternoon light.',
-    status: 'OWNER_REVIEW',
-    publishedAt: null,
+    status: 'PUBLISHED',
+    publishedAt: '2026-08-12',
     seoTitle: 'Laos — The Journey — Elsewhere',
     seoDescription:
       'Five or six weeks in Luang Prabang: returning to Icon Klub, working at Laos Buffalo Dairy, and staying until travel became ordinary life.',
-    socialImage: null,
+    socialImage: '/social/journey-laos.jpg',
     previousSlug: 'thailand',
     nextSlug: null,
     blocks: [

@@ -33,6 +33,9 @@ IMAGES = {
     # THE JOURNEY, story 02. The scaffolded pagoda spire remains on the right while the wide crop
     # keeps the gold cloud as the subject. This is a technical social crop of the approved hero.
     "journey-thailand.jpg": ("public/assets-derived/archive/0043-IMG_8541.jpg", (0.50, 0.45)),
+    # THE JOURNEY, story 03. The approved monks-and-Mercedes hero is a portrait frame; this wide
+    # crop keeps both monks' heads, the robes and the car, matching the protected Story focal logic.
+    "journey-laos.jpg": ("public/assets-derived/archive/0663-P1110394 Kopie.jpg", (0.50, 0.48)),
 }
 
 for filename, (source, centering) in IMAGES.items():
