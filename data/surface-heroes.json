@@ -90,6 +90,25 @@
         "photo-0697",
         "photo-0044"
       ]
+    },
+    "journey-laos": {
+      "photoId": "photo-0663",
+      "status": "OWNER_SELECTED",
+      "focal": {
+        "desktop": "50% 50%",
+        "tablet": "50% 50%",
+        "mobile": "50% 50%"
+      },
+      "overlay": {
+        "top": 0.52,
+        "bottom": 0.76,
+        "bottomStart": 42
+      },
+      "titleScale": 1,
+      "note": "The established Laos hero: two monks walking past a black vintage Mercedes in late light. Story 03 reuses it because the frame introduces precisely the chapter's subject — Buddhist street life becoming ordinary observation — and the trusted Laos pool contains no equally strong alternative. The Phase 9.30A 50% focal correction is preserved so neither monk is cropped at the head and the Mercedes remains legible.",
+      "alternatives": [
+        "photo-0659"
+      ]
     }
   }
 }

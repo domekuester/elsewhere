@@ -1547,6 +1547,23 @@
       "ownerNotes": "Owner explicitly selected this owner-edited surfer frame for the Koh Phayam Story passage in Phase 11.2.",
       "shortMemory": null,
       "publicationStatus": "READY"
+    },
+    {
+      "id": "people-review-92",
+      "photoId": "photo-0702",
+      "filename": "d1092673-4e58-4569-9bcc-c90f58537568.jpg",
+      "captureDate": "2024-12-24T12:37:02.000Z",
+      "destinationId": "laos",
+      "journeyId": "laos-2024-2025",
+      "classification": "OWNER_SELF",
+      "identityStatus": "KNOWN",
+      "displayName": null,
+      "privacyStatus": "OWNER_APPROVED",
+      "peoplePageCandidate": false,
+      "storyCandidate": true,
+      "ownerNotes": "Phase 12.1: the owner explicitly selected this self-portrait-with-buffaloes frame for Story 03.",
+      "shortMemory": null,
+      "publicationStatus": "READY"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T22:54:27.633Z",
+  "generatedAt": "2026-08-12T00:07:18.447Z",
   "sourcePolicy": "Master source files. Never modify, move, rename, or serve directly in production.",
   "sourceRoot": "assets-source/photos",
-  "photoCount": 701,
+  "photoCount": 703,
   "photos": [
     {
       "id": "photo-0001",
@@ -1440,8 +1440,8 @@
     {
       "id": "photo-0031",
       "filename": "IMG_0031.jpg",
-      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_0031.jpg",
-      "sourceSet": "Foto Set 1.0",
+      "sourcePath": "assets-source/photos/Mobile Fotos Laos/IMG_0031.jpg",
+      "sourceSet": "Mobile Fotos Laos",
       "file": {
         "bytes": 8746812,
         "megabytes": 8.34,
@@ -25582,8 +25582,8 @@
     {
       "id": "photo-0535",
       "filename": "IMG_0034.jpg",
-      "sourcePath": "assets-source/photos/Foto Set 1.0/IMG_0034.jpg",
-      "sourceSet": "Foto Set 1.0",
+      "sourcePath": "assets-source/photos/Mobile Fotos Laos/IMG_0034.jpg",
+      "sourceSet": "Mobile Fotos Laos",
       "file": {
         "bytes": 2194310,
         "megabytes": 2.09,
@@ -33249,6 +33249,94 @@
       "technical": {
         "metadataReadError": null,
         "thumbnailPath": ".photo-inventory-cache/thumbs/0701-Phayam-03.jpg"
+      }
+    },
+    {
+      "id": "photo-0702",
+      "filename": "d1092673-4e58-4569-9bcc-c90f58537568.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Laos/d1092673-4e58-4569-9bcc-c90f58537568.jpg",
+      "sourceSet": "Mobile Fotos Laos",
+      "file": {
+        "bytes": 1813131,
+        "megabytes": 1.73,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 960,
+        "height": 1280
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.75,
+      "capture": {
+        "date": "2024-12-24T12:37:02.000Z",
+        "cameraMake": null,
+        "cameraModel": null,
+        "lens": null,
+        "focalLengthMm": null,
+        "aperture": null,
+        "iso": null,
+        "exposureSeconds": null
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0702-d1092673-4e58-4569-9bcc-c90f58537568.jpg"
+      }
+    },
+    {
+      "id": "photo-0703",
+      "filename": "IMG_0379.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Laos/IMG_0379.jpg",
+      "sourceSet": "Mobile Fotos Laos",
+      "file": {
+        "bytes": 4800120,
+        "megabytes": 4.58,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2322,
+        "height": 3483
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6667,
+      "capture": {
+        "date": "2024-12-12T19:07:36.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 18.3,
+        "aperture": 2.8,
+        "iso": 1600,
+        "exposureSeconds": 0.04
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0703-IMG-0379.jpg"
       }
     }
   ]

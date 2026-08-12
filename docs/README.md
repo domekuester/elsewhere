@@ -44,6 +44,14 @@
 - [Thailand photo edit](STORY-02-THAILAND-PHOTO-EDIT.md)
 - [Thailand owner questions](STORY-02-THAILAND-OWNER-QUESTIONS.md)
 
+## Phase 12 — THE JOURNEY, story 03: Laos
+
+- [Laos story pack](STORY-03-LAOS-PACK.md)
+- [Laos — German master](STORY-03-LAOS-DE-MASTER.md)
+- [Laos — English publication adaptation](STORY-03-LAOS-EN-PUBLICATION.md)
+- [Laos photo edit](STORY-03-LAOS-PHOTO-EDIT.md)
+- [Laos owner questions](STORY-03-LAOS-OWNER-QUESTIONS.md)
+
 ## Phase 10.2 — hero / header optical integration
 
 - [Hero header integration](PHASE-10.2-HERO-HEADER-INTEGRATION.md)
