@@ -53,6 +53,15 @@
 - [Laos owner questions](STORY-03-LAOS-OWNER-QUESTIONS.md)
 - [Phase 12.2 — Laos publication report](PHASE-12.2-LAOS-PUBLICATION-REPORT.md)
 
+## Phase 13 — THE JOURNEY, story 04: Phu Quoc
+
+- [Phu Quoc story pack](STORY-04-PHU-QUOC-PACK.md)
+- [Phu Quoc — German master](STORY-04-PHU-QUOC-DE-MASTER.md)
+- [Phu Quoc — English publication adaptation](STORY-04-PHU-QUOC-EN-PUBLICATION.md)
+- [Phu Quoc photo edit](STORY-04-PHU-QUOC-PHOTO-EDIT.md)
+- [Phu Quoc owner questions](STORY-04-PHU-QUOC-OWNER-QUESTIONS.md)
+- [Phase 13.1 — Phu Quoc publication report](PHASE-13.1-PHU-QUOC-PUBLICATION-REPORT.md)
+
 ## Phase 10.2 — hero / header optical integration
 
 - [Hero header integration](PHASE-10.2-HERO-HEADER-INTEGRATION.md)

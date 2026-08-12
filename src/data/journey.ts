@@ -800,7 +800,7 @@ export const journeyStories: JourneyStory[] = [
       'Five or six weeks in Luang Prabang: returning to Icon Klub, working at Laos Buffalo Dairy, and staying until travel became ordinary life.',
     socialImage: '/social/journey-laos.jpg',
     previousSlug: 'thailand',
-    nextSlug: null,
+    nextSlug: 'phu-quoc',
     blocks: [
       {
         kind: 'lede',
@@ -923,6 +923,150 @@ export const journeyStories: JourneyStory[] = [
           'Afterwards, I took the train back towards Bangkok.',
           'It was especially hard to leave Lana, my favourite buffalo, and Lao, my tiny cat.',
           'I hope they are both doing well.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'phu-quoc',
+    number: 4,
+    title: 'Phu Quoc',
+    standfirst:
+      'Four weeks in an apartment, coffee first, the gym downstairs, and the same fireworks every evening. Phu Quoc was okay. The time there mattered for other reasons.',
+    destinationId: 'phu-quoc',
+    dateLabel: '2025',
+    provenance: [
+      'Phu Quoc, approximately mid-March to mid-April 2025. Exact arrival and departure days remain broad in line with the owner travel timeline.',
+      'The observations describe the developed area where the photographer stayed, not the whole island. Pauline is named by first-name permission only; no private relationship detail or identifiable private-person photograph is published.',
+    ],
+    heroSurfaceKey: 'journey-phu-quoc',
+    heroAlt:
+      'A tall, symmetrical building facade rises out of deep shadow against a black night sky.',
+    status: 'PUBLISHED',
+    publishedAt: '2026-08-12',
+    seoTitle: 'Phu Quoc — The Journey — Elsewhere',
+    seoDescription:
+      'Four weeks in an apartment on Phu Quoc: daily routines, staged surroundings, the same nightly fireworks, and a stay that mattered more than the place.',
+    socialImage: '/social/journey-phu-quoc.jpg',
+    previousSlug: 'laos',
+    nextSlug: null,
+    blocks: [
+      {
+        kind: 'lede',
+        text: 'Every morning I made coffee and went straight downstairs to the gym. That was more or less how my days on Phu Quoc began for four weeks.',
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'Pauline and I had an apartment there. Coffee first, gym downstairs, then outside without much of a plan. It was less a holiday routine than simply the routine we had for that month.',
+          'Four weeks is long enough for that sequence to stop feeling like travel. You get up, make coffee, find your training clothes, and already know which button to press in the lift. Nothing remarkable about it. That was exactly why I liked it.',
+          'Outside, things felt stranger. The part of the island where we stayed looked as if it had been designed all at once for far more people than were actually there. New-looking buildings, large public spaces, Mediterranean-looking streets, and shops arranged into a very polished little world. Some places were busy. Others felt oddly empty.',
+          'I could not know why every quiet building was quiet. The disruption after Covid, the amount of new development, the season — there could have been several reasons. I only knew how it felt from the pavement: constructed rather than lived in.',
+          'It was not unpleasant all the time. It was clean, modern, and in places quite impressive. I just rarely forgot that the surroundings had been designed to produce an effect. I missed things that did not look planned in advance.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'inset',
+        photo: {
+          id: 'photo-0008',
+          role: 'establishing',
+          alt: 'A long, narrow pedestrian street runs between matching ochre facades and rows of black wall lamps.',
+        },
+      },
+      { kind: 'chapter', label: 'Designed all at once' },
+      {
+        kind: 'text',
+        paragraphs: [
+          'Even ordinary things sometimes looked as if somebody had polished them for the set. The Bánh mì stand was almost too fancy. Not bad. Just very considered for something I had expected to buy without thinking about the surroundings.',
+          'There was also a kebab stand. I never tried it. Not for cultural reasons; it simply did not look good. Some decisions are less complicated than the internet would like them to be.',
+          'The whole area mixed Mediterranean architecture, Vietnamese food, Takoyaki, kebab, tropical heat, and carefully staged market spaces. Everything at once. Somehow very little of it felt rooted. That says something about the bubble I stayed in, not about the whole island, and certainly not about Vietnam as a whole.',
+        ],
+      },
+      {
+        kind: 'pair',
+        photos: [
+          {
+            id: 'photo-0013',
+            role: 'architecture',
+            alt: 'A brightly lit arched window and empty bench sit within a large grey facade at night.',
+          },
+          {
+            id: 'photo-0015',
+            role: 'detail',
+            alt: 'A monumental black hand sculpture stands in front of an illuminated commercial building at night.',
+          },
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0704',
+          role: 'architecture-context',
+          alt: 'Illuminated Mediterranean-style buildings and a clock tower surround a quiet courtyard beneath a dark evening sky.',
+        },
+      },
+      { kind: 'chapter', label: 'Every evening at seven' },
+      {
+        kind: 'text',
+        paragraphs: [
+          'The sunsets came every day and were often very good. Then, at about seven, the fireworks started. The same fireworks. With the same song. Every evening.',
+          'The first time, fine. The second time, also fine. After that it became less of an event and more of a very loud clock. You never had to wonder what time it was.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'full',
+        photo: {
+          id: 'photo-0672',
+          role: 'pause',
+          alt: 'A red sun hangs over the sea while small figures and their reflections line the dark shore.',
+        },
+      },
+      { kind: 'chapter', label: 'The things that worked' },
+      {
+        kind: 'text',
+        paragraphs: [
+          'The people I met were very friendly. That matters, because my problem was never with them. It was the environment around us that kept feeling slightly unreal.',
+          'I walked through the market and food-stall area regularly. Most of the food was okay. The Takoyaki was better than okay. I went to the same stand almost every day and became something close to a regular. My eating sessions were tolerated with impressive patience.',
+          'That quickly felt more familiar than the grand surroundings. I knew where I wanted to go, and the people there had a fair idea of what was coming. Mainly a lot of hunger.',
+          'The beaches I visited were okay too. They did not blow me away, and in a few places there was unfortunately quite a lot of rubbish. Still, there was the sea, a cold drink, and a sunset waiting to be interrupted at seven sharp.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'wide',
+        photo: {
+          id: 'photo-0070',
+          role: 'place-reality',
+          alt: 'Dozens of fishing boats gather across a sheltered bay beneath a muted evening sky.',
+        },
+      },
+      { kind: 'pause' },
+      {
+        kind: 'text',
+        paragraphs: [
+          'Those four weeks probably told me more about us than about Phu Quoc. That is all that really needs to go on the internet.',
+          'At the end I left a few days before Pauline. I had found a ridiculously cheap flight. And unfortunately I still have not worked out how to shit money.',
+          'The logic lasted until I had actually left. Then I felt terrible. I regretted the decision completely.',
+          'Pauline was only staying a few days longer. It was not a catastrophe or a grand drama. It was simply a decision that looked perfectly sensible on a booking screen and felt completely wrong afterwards.',
+        ],
+      },
+      {
+        kind: 'photo',
+        display: 'inset',
+        photo: {
+          id: 'photo-0673',
+          role: 'departure',
+          alt: 'A clock tower glows orange against the dark night sky, seen at a steep angle from below.',
+        },
+      },
+      {
+        kind: 'text',
+        paragraphs: [
+          'I do not particularly want to go back to Phu Quoc. It was okay. Really.',
+          'I still would not give those four weeks back.',
         ],
       },
     ],

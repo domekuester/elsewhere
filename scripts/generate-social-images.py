@@ -36,6 +36,9 @@ IMAGES = {
     # THE JOURNEY, story 03. The approved monks-and-Mercedes hero is a portrait frame; this wide
     # crop keeps both monks' heads, the robes and the car, matching the protected Story focal logic.
     "journey-laos.jpg": ("public/assets-derived/archive/0663-P1110394 Kopie.jpg", (0.50, 0.48)),
+    # THE JOURNEY, story 04. The approved architectural hero is naturally wide; the social crop
+    # preserves its centred facade and the black negative space that carries the Story's tension.
+    "journey-phu-quoc.jpg": ("public/assets-derived/archive/0012-1200750.jpg", (0.50, 0.52)),
 }
 
 for filename, (source, centering) in IMAGES.items():

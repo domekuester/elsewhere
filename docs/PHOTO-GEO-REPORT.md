@@ -68,9 +68,9 @@ Every image is listed because each remains uncertain.
 | `1210417.jpg` | `assets-source/photos/Foto Set 1.0/1210417.jpg` | No embedded GPS coordinates. No GPS-confirmed adjacent sequence exists, so SUPPORTED status cannot be established. |
 | `IMG_0031.jpg` | `assets-source/photos/Foto Set 1.0/IMG_0031.jpg` | No embedded GPS coordinates. No GPS-confirmed adjacent sequence exists, so SUPPORTED status cannot be established. |
 | `IMG_0290.jpg` | `assets-source/photos/Foto Set 1.0/IMG_0290.jpg` | No embedded GPS coordinates. No GPS-confirmed adjacent sequence exists, so SUPPORTED status cannot be established. |
-| `IMG_1255.jpg` | `assets-source/photos/Foto Set 1.0/IMG_1255.jpg` | No embedded GPS coordinates. No GPS-confirmed adjacent sequence exists, so SUPPORTED status cannot be established. |
-| `IMG_1269.jpg` | `assets-source/photos/Foto Set 1.0/IMG_1269.jpg` | No embedded GPS coordinates. No GPS-confirmed adjacent sequence exists, so SUPPORTED status cannot be established. |
-| `IMG_1386.jpg` | `assets-source/photos/Foto Set 1.0/IMG_1386.jpg` | No embedded GPS coordinates. No GPS-confirmed adjacent sequence exists, so SUPPORTED status cannot be established. |
+| `IMG_1255.jpg` | `assets-source/photos/Foto Set 1.0/IMG_1255.jpg` | Phase 13.2: location review required. Captured within 80 seconds of two owner-confirmed Thailand frames; removed from Phu Quoc assignment without guessing its country. |
+| `IMG_1269.jpg` | `assets-source/photos/Foto Set 1.0/IMG_1269.jpg` | Phase 13.2 owner confirmation: Thailand. Exact Thai place remains unassigned. Stable ID `photo-0034` preserved. |
+| `IMG_1386.jpg` | `assets-source/photos/Foto Set 1.0/IMG_1386.jpg` | Phase 13.2 owner confirmation: Thailand. Exact Thai place remains unassigned. Stable ID `photo-0035` preserved. |
 | `IMG_6647.jpg` | `assets-source/photos/Foto Set 1.0/IMG_6647.jpg` | No embedded GPS coordinates. No GPS-confirmed adjacent sequence exists, so SUPPORTED status cannot be established. |
 | `IMG_6658.jpg` | `assets-source/photos/Foto Set 1.0/IMG_6658.jpg` | No embedded GPS coordinates. No GPS-confirmed adjacent sequence exists, so SUPPORTED status cannot be established. |
 | `IMG_7002.jpg` | `assets-source/photos/Foto Set 1.0/IMG_7002.jpg` | No embedded GPS coordinates. No GPS-confirmed adjacent sequence exists, so SUPPORTED status cannot be established. |

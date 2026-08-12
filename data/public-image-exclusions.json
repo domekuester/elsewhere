@@ -1298,6 +1298,15 @@
       "reason": "Close street photograph in which a recognisable individual is the dominant subject at short range and appears to look toward the camera. No model release. Held for owner review rather than published; the archive loses nothing by waiting.",
       "addedIn": "phase-9.28a",
       "reversible": true
+    },
+    {
+      "photoId": "photo-0706",
+      "filename": "1200794.jpg",
+      "index": 706,
+      "code": "identifiable-private-people",
+      "reason": "Phase 13.3 owner-added Phu Quoc frame with identifiable private people. First-name permission in Story copy does not grant image consent; held from public derivatives and Story use pending explicit owner approval for this photograph.",
+      "addedIn": "phase-13.3",
+      "reversible": true
     }
   ],
   "editorialHoldNote": "Agent editorial holds from Phase 9.2, awaiting owner confirmation. Separate from ownerRejected, which only the owner may write to. Reversible: remove an entry and rebuild."

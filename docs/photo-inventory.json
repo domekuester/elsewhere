@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T00:07:18.447Z",
+  "generatedAt": "2026-08-12T09:57:19.405Z",
   "sourcePolicy": "Master source files. Never modify, move, rename, or serve directly in production.",
   "sourceRoot": "assets-source/photos",
-  "photoCount": 703,
+  "photoCount": 706,
   "photos": [
     {
       "id": "photo-0001",
@@ -33337,6 +33337,138 @@
       "technical": {
         "metadataReadError": null,
         "thumbnailPath": ".photo-inventory-cache/thumbs/0703-IMG-0379.jpg"
+      }
+    },
+    {
+      "id": "photo-0704",
+      "filename": "1200361.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Phu Quoc/1200361.jpg",
+      "sourceSet": "Mobile Fotos Phu Quoc",
+      "file": {
+        "bytes": 5743262,
+        "megabytes": 5.48,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2672
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.497,
+      "capture": {
+        "date": "2025-03-29T17:26:57.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.03333333333333333
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0704-1200361.jpg"
+      }
+    },
+    {
+      "id": "photo-0705",
+      "filename": "1200377.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Phu Quoc/1200377.jpg",
+      "sourceSet": "Mobile Fotos Phu Quoc",
+      "file": {
+        "bytes": 3518745,
+        "megabytes": 3.36,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-03-30T15:48:48.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0025
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0705-1200377.jpg"
+      }
+    },
+    {
+      "id": "photo-0706",
+      "filename": "1200794.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Phu Quoc/1200794.jpg",
+      "sourceSet": "Mobile Fotos Phu Quoc",
+      "file": {
+        "bytes": 10851763,
+        "megabytes": 10.35,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2523,
+        "height": 3235
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.7799,
+      "capture": {
+        "date": "2025-04-07T17:34:43.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 800,
+        "exposureSeconds": 0.02
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0706-1200794.jpg"
       }
     }
   ]

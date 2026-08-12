@@ -40,7 +40,7 @@ for (const photo of inventory.photos) {
   const assignment = curation.assignments[photo.id] ?? {};
   if (migrateExistingArchiveVisibility && assignment.visibility === 'hold') assignment.visibility = 'public';
   // Explicit owner confirmation outranks timeline inference and must survive every regeneration.
-  const hasStrongerLocation = ['GPS', 'APPLE_PHOTOS', 'OWNER_CONFIRMATION'].includes(assignment.locationSource);
+  const hasStrongerLocation = ['GPS', 'APPLE_PHOTOS', 'OWNER_CONFIRMATION', 'OWNER_CORRECTION_REVIEW'].includes(assignment.locationSource);
   assignment.captureDate = photo.capture?.date ?? null;
   assignment.originalFilename = photo.filename;
   if (!hasStrongerLocation) {

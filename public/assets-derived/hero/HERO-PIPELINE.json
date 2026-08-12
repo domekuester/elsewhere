@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T00:14:44.314Z",
+  "generatedAt": "2026-08-12T10:04:36.657Z",
   "role": "destination-hero",
   "widths": [
     768,
@@ -536,6 +536,46 @@
           "height": 2730,
           "bytes": 718236,
           "url": "/assets-derived/hero/0663-P1110394-Kopie-2048.jpg"
+        }
+      ]
+    },
+    "journey-phu-quoc": {
+      "photoId": "photo-0012",
+      "baseName": "0012-1200750",
+      "sourceWidth": 3995,
+      "sourceHeight": 2669,
+      "chroma": "4:4:4",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 513,
+          "bytes": 40339,
+          "url": "/assets-derived/hero/0012-1200750-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 770,
+          "bytes": 72093,
+          "url": "/assets-derived/hero/0012-1200750-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 1026,
+          "bytes": 109237,
+          "url": "/assets-derived/hero/0012-1200750-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 1368,
+          "bytes": 156076,
+          "url": "/assets-derived/hero/0012-1200750-2048.jpg"
+        },
+        {
+          "width": 2560,
+          "height": 1710,
+          "bytes": 203291,
+          "url": "/assets-derived/hero/0012-1200750-2560.jpg"
         }
       ]
     }

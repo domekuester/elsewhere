@@ -163,8 +163,8 @@
       "peopleIds": [],
       "collectionIds": [],
       "relatedDestinations": [],
-      "photoCount": 55,
-      "confirmedPhotoCount": 55,
+      "photoCount": 57,
+      "confirmedPhotoCount": 57,
       "photoIds": [
         "photo-0001",
         "photo-0002",
@@ -173,6 +173,8 @@
         "photo-0005",
         "photo-0006",
         "photo-0007",
+        "photo-0034",
+        "photo-0035",
         "photo-0040",
         "photo-0043",
         "photo-0044",
@@ -373,8 +375,8 @@
       "peopleIds": [],
       "collectionIds": [],
       "relatedDestinations": [],
-      "photoCount": 20,
-      "confirmedPhotoCount": 20,
+      "photoCount": 19,
+      "confirmedPhotoCount": 19,
       "photoIds": [
         "photo-0008",
         "photo-0009",
@@ -386,16 +388,15 @@
         "photo-0019",
         "photo-0020",
         "photo-0021",
-        "photo-0033",
-        "photo-0034",
-        "photo-0035",
         "photo-0070",
         "photo-0072",
         "photo-0073",
         "photo-0533",
         "photo-0539",
         "photo-0672",
-        "photo-0673"
+        "photo-0673",
+        "photo-0704",
+        "photo-0705"
       ],
       "manualOrder": [
         "photo-0533"

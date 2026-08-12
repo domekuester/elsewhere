@@ -109,6 +109,27 @@
       "alternatives": [
         "photo-0659"
       ]
+    },
+    "journey-phu-quoc": {
+      "photoId": "photo-0012",
+      "status": "AUTO_SELECTED",
+      "focal": {
+        "desktop": "50% 52%",
+        "tablet": "50% 52%",
+        "mobile": "50% 50%"
+      },
+      "overlay": {
+        "top": 0.54,
+        "bottom": 0.76,
+        "bottomStart": 42
+      },
+      "titleScale": 0.9,
+      "note": "A monumental facade isolated against black. It introduces the scale, polish and slight unreality of Story 04 without pretending the island was a perfect beach. It is Story-specific and avoids repeating the Phu Quoc archive hero, photo-0072.",
+      "alternatives": [
+        "photo-0008",
+        "photo-0015",
+        "photo-0704"
+      ]
     }
   }
 }
