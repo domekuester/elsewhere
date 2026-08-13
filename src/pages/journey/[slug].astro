@@ -159,9 +159,11 @@ const kicker = `The Journey — ${String(story.number).padStart(2, '0')}`;
       <p class="journey-hero-meta">{story.dateLabel}</p>
     </header>
 
-    <section class="journey-provenance" aria-label="How this story is sourced">
-      {story.provenance.map((line) => <p>{line}</p>)}
-    </section>
+    {/* `story.provenance` is deliberately NOT rendered. It records how the chapter was sourced —
+        which places the photographer confirmed, which names carry permission, what was checked
+        against public sources — and that is editorial method, not the story. A reader came for the
+        photographs and the account; publishing the working notes beside them turned the page into a
+        record about itself. The field stays in the data as the internal audit trail it always was. */}
 
     <article class="journey-body">
       {story.blocks.map((block) => {
@@ -195,9 +197,16 @@ const kicker = `The Journey — ${String(story.number).padStart(2, '0')}`;
           );
         }
         const item = resolve(block.photo.id);
+        // Only `full` crops (object-fit: cover). Where a frame carries a subject that a centred
+        // crop would cut — a cyclist, a boat, a face near an edge — the block names the focus and
+        // it is applied at desktop and, separately, at mobile where the crop is tightest.
+        const frameStyle = block.display === 'full' && block.photo.focal
+          ? `--frame-focal:${block.photo.focal.desktop ?? '50% 50%'};--frame-focal-mobile:${block.photo.focal.mobile ?? block.photo.focal.desktop ?? '50% 50%'}`
+          : undefined;
         return (
           <figure
             class:list={['journey-frame', `is-${block.display}`, `is-${item.photo.orientation}`]}
+            style={frameStyle}
             data-photo-reveal
           >
             <img

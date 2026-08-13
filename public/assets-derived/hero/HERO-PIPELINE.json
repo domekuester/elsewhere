@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T10:04:36.657Z",
+  "generatedAt": "2026-08-13T18:58:03.064Z",
   "role": "destination-hero",
   "widths": [
     768,
@@ -576,6 +576,40 @@
           "height": 1710,
           "bytes": 203291,
           "url": "/assets-derived/hero/0012-1200750-2560.jpg"
+        }
+      ]
+    },
+    "journey-japan": {
+      "photoId": "photo-0198",
+      "baseName": "0198-P1230869",
+      "sourceWidth": 2507,
+      "sourceHeight": 3760,
+      "chroma": "4:4:4",
+      "grade": null,
+      "sources": [
+        {
+          "width": 768,
+          "height": 1152,
+          "bytes": 86921,
+          "url": "/assets-derived/hero/0198-P1230869-768.jpg"
+        },
+        {
+          "width": 1152,
+          "height": 1728,
+          "bytes": 165495,
+          "url": "/assets-derived/hero/0198-P1230869-1152.jpg"
+        },
+        {
+          "width": 1536,
+          "height": 2304,
+          "bytes": 271218,
+          "url": "/assets-derived/hero/0198-P1230869-1536.jpg"
+        },
+        {
+          "width": 2048,
+          "height": 3072,
+          "bytes": 438084,
+          "url": "/assets-derived/hero/0198-P1230869-2048.jpg"
         }
       ]
     }

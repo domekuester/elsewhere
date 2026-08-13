@@ -39,6 +39,10 @@ IMAGES = {
     # THE JOURNEY, story 04. The approved architectural hero is naturally wide; the social crop
     # preserves its centred facade and the black negative space that carries the Story's tension.
     "journey-phu-quoc.jpg": ("public/assets-derived/archive/0012-1200750.jpg", (0.50, 0.52)),
+    # THE JOURNEY, story 05. The approved hero is a portrait frame in which the three tub boats and
+    # the quay occupy the lower half; a low-centred 1.91:1 band keeps all three boats and the rocks
+    # across the water, and loses only empty sky, which is where that photograph carries nothing.
+    "journey-japan.jpg": ("public/assets-derived/archive/0198-P1230869.jpg", (0.50, 0.66)),
 }
 
 for filename, (source, centering) in IMAGES.items():

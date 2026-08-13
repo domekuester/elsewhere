@@ -6,32 +6,6 @@
       "priority": "HIGH_IMPACT",
       "type": "DESTINATION_UNKNOWN",
       "subjectIds": [
-        "photo-0031",
-        "photo-0535"
-      ],
-      "title": "2 photographs on a travel boundary",
-      "question": "Which side of the thailand-2024 → laos-2024-2025 transition do these photographs belong to?",
-      "context": {
-        "filenames": [
-          "IMG_0031.jpg",
-          "IMG_0034.jpg"
-        ],
-        "captureDates": [
-          "2024-12-04T15:33:36.000Z",
-          "2024-12-04T15:32:53.000Z"
-        ],
-        "candidateJourneyIds": [
-          "thailand-2024",
-          "laos-2024-2025"
-        ]
-      },
-      "status": "OPEN"
-    },
-    {
-      "id": "owner-question-boundary-02",
-      "priority": "HIGH_IMPACT",
-      "type": "DESTINATION_UNKNOWN",
-      "subjectIds": [
         "photo-0068",
         "photo-0069"
       ],
@@ -54,7 +28,7 @@
       "status": "OPEN"
     },
     {
-      "id": "owner-question-boundary-03",
+      "id": "owner-question-boundary-02",
       "priority": "HIGH_IMPACT",
       "type": "DESTINATION_UNKNOWN",
       "subjectIds": [
@@ -95,7 +69,7 @@
       "status": "OPEN"
     },
     {
-      "id": "owner-question-boundary-04",
+      "id": "owner-question-boundary-03",
       "priority": "HIGH_IMPACT",
       "type": "DESTINATION_UNKNOWN",
       "subjectIds": [
@@ -181,67 +155,6 @@
       "priority": "MEDIUM_IMPACT",
       "type": "STORY_CONTEXT_NEEDED",
       "subjectIds": [
-        "photo-0278",
-        "photo-0279",
-        "photo-0280",
-        "photo-0281",
-        "photo-0283",
-        "photo-0284",
-        "photo-0285",
-        "photo-0286",
-        "photo-0287",
-        "photo-0288",
-        "photo-0289",
-        "photo-0293",
-        "photo-0294",
-        "photo-0295",
-        "photo-0297",
-        "photo-0298"
-      ],
-      "title": "16-frame sequence",
-      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
-      "context": {
-        "candidateId": "story-candidate-01",
-        "captureDateStart": "2025-06-08T06:36:44.000Z",
-        "captureDateEnd": "2025-06-08T08:29:23.000Z"
-      },
-      "status": "OPEN"
-    },
-    {
-      "id": "owner-question-story-candidate-02",
-      "priority": "MEDIUM_IMPACT",
-      "type": "STORY_CONTEXT_NEEDED",
-      "subjectIds": [
-        "photo-0559",
-        "photo-0210",
-        "photo-0212",
-        "photo-0213",
-        "photo-0214",
-        "photo-0215",
-        "photo-0216",
-        "photo-0217",
-        "photo-0218",
-        "photo-0219",
-        "photo-0220",
-        "photo-0221",
-        "photo-0222",
-        "photo-0223",
-        "photo-0224"
-      ],
-      "title": "15-frame sequence",
-      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
-      "context": {
-        "candidateId": "story-candidate-02",
-        "captureDateStart": "2025-05-22T08:20:57.000Z",
-        "captureDateEnd": "2025-05-22T10:11:33.000Z"
-      },
-      "status": "OPEN"
-    },
-    {
-      "id": "owner-question-story-candidate-03",
-      "priority": "MEDIUM_IMPACT",
-      "type": "STORY_CONTEXT_NEEDED",
-      "subjectIds": [
         "photo-0300",
         "photo-0301",
         "photo-0303",
@@ -261,14 +174,43 @@
       "title": "15-frame sequence",
       "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
       "context": {
-        "candidateId": "story-candidate-03",
+        "candidateId": "story-candidate-01",
         "captureDateStart": "2025-06-08T09:28:17.000Z",
         "captureDateEnd": "2025-06-08T10:30:21.000Z"
       },
       "status": "OPEN"
     },
     {
-      "id": "owner-question-story-candidate-04",
+      "id": "owner-question-story-candidate-02",
+      "priority": "MEDIUM_IMPACT",
+      "type": "STORY_CONTEXT_NEEDED",
+      "subjectIds": [
+        "photo-0559",
+        "photo-0210",
+        "photo-0213",
+        "photo-0214",
+        "photo-0215",
+        "photo-0216",
+        "photo-0217",
+        "photo-0218",
+        "photo-0219",
+        "photo-0220",
+        "photo-0221",
+        "photo-0222",
+        "photo-0223",
+        "photo-0224"
+      ],
+      "title": "14-frame sequence",
+      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "context": {
+        "candidateId": "story-candidate-02",
+        "captureDateStart": "2025-05-22T08:20:57.000Z",
+        "captureDateEnd": "2025-05-22T10:11:33.000Z"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-story-candidate-03",
       "priority": "MEDIUM_IMPACT",
       "type": "STORY_CONTEXT_NEEDED",
       "subjectIds": [
@@ -289,9 +231,34 @@
       "title": "13-frame sequence",
       "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
       "context": {
-        "candidateId": "story-candidate-04",
+        "candidateId": "story-candidate-03",
         "captureDateStart": "2025-05-28T10:36:44.000Z",
         "captureDateEnd": "2025-05-28T11:36:44.000Z"
+      },
+      "status": "OPEN"
+    },
+    {
+      "id": "owner-question-story-candidate-04",
+      "priority": "MEDIUM_IMPACT",
+      "type": "STORY_CONTEXT_NEEDED",
+      "subjectIds": [
+        "photo-0278",
+        "photo-0279",
+        "photo-0280",
+        "photo-0281",
+        "photo-0283",
+        "photo-0284",
+        "photo-0285",
+        "photo-0286",
+        "photo-0287",
+        "photo-0288"
+      ],
+      "title": "10-frame sequence",
+      "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "context": {
+        "candidateId": "story-candidate-04",
+        "captureDateStart": "2025-06-08T06:36:44.000Z",
+        "captureDateEnd": "2025-06-08T07:42:23.000Z"
       },
       "status": "OPEN"
     },
@@ -300,24 +267,23 @@
       "priority": "MEDIUM_IMPACT",
       "type": "STORY_CONTEXT_NEEDED",
       "subjectIds": [
-        "photo-0225",
-        "photo-0226",
-        "photo-0227",
-        "photo-0229",
-        "photo-0230",
-        "photo-0231",
-        "photo-0232",
-        "photo-0233",
-        "photo-0234",
-        "photo-0235",
-        "photo-0236"
+        "photo-0337",
+        "photo-0338",
+        "photo-0339",
+        "photo-0340",
+        "photo-0341",
+        "photo-0342",
+        "photo-0343",
+        "photo-0344",
+        "photo-0578",
+        "photo-0345"
       ],
-      "title": "11-frame sequence",
+      "title": "10-frame sequence",
       "question": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
       "context": {
         "candidateId": "story-candidate-05",
-        "captureDateStart": "2025-05-23T06:26:12.000Z",
-        "captureDateEnd": "2025-05-23T07:29:36.000Z"
+        "captureDateStart": "2025-06-17T12:56:14.000Z",
+        "captureDateEnd": "2025-06-17T13:10:34.000Z"
       },
       "status": "OPEN"
     }

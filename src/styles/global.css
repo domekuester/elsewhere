@@ -795,9 +795,7 @@ html[data-viewer-open] body { overflow: hidden; }
 .destination-hero-title { position: absolute; z-index: 1; right: var(--gutter); bottom: clamp(2.5rem, 6vw, 6rem); left: var(--gutter); display: flex; align-items: end; gap: 1.5rem; }
 .destination-hero-title h1 { margin-right: auto; font-family: var(--display); font-size: calc(clamp(4.2rem, 9vw, 6rem) * var(--hero-title-scale)); font-weight: 400; line-height: .84; letter-spacing: -.035em; text-transform: uppercase; }
 .destination-hero-title p { padding-bottom: .3rem; font-size: .72rem; }
-.destination-provenance { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 8vw, 10rem); padding: clamp(7rem, 13vw, 14rem) var(--gutter); color: var(--obsidian); background: var(--ivory); }
-.destination-provenance p { max-width: 34rem; font-family: var(--editorial); font-size: clamp(1.45rem, 2.6vw, 2.6rem); line-height: 1.25; }
-.destination-provenance p:last-child { align-self: end; font-family: var(--ui); font-size: .88rem; line-height: 1.75; }
+.destination-chapter-link { padding: clamp(3.5rem, 7vw, 6rem) var(--gutter); color: var(--obsidian); background: var(--ivory); }
 .destination-sequence { display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; gap: clamp(2rem, 5vw, 6rem) clamp(1rem, 2vw, 2.5rem); padding: clamp(8rem, 12vw, 13rem) var(--gutter); }
 .destination-frame { margin: 0; }
 .destination-frame img { height: auto; }
@@ -860,7 +858,6 @@ html[data-viewer-open] body { overflow: hidden; }
 @media (max-width: 900px) {
   .archive-frame, .archive-frame.is-landscape { grid-column: span 6; }
   .archive-frame.is-selected { grid-column: span 7; }
-  .destination-provenance { grid-template-columns: 1fr; }
   .destination-hero > img, .archive-opening > img { object-position: var(--hero-focal-tablet); }
 }
 
@@ -899,7 +896,6 @@ html[data-viewer-open] body { overflow: hidden; }
   .destination-hero-title .memory-mark { margin-bottom: 1rem; }
   .destination-hero-title h1 { font-size: calc(clamp(4rem, 22vw, 5.8rem) * var(--hero-title-scale)); }
   .destination-hero-title p { margin-top: 1rem; }
-  .destination-provenance { padding-block: 7rem; }
   .destination-sequence { display: flex; flex-direction: column; gap: 6rem; padding-block: 7rem; }
   .destination-frame { width: 88%; margin: 0; }
   .destination-frame:nth-child(even) { align-self: flex-end; }
@@ -1133,8 +1129,6 @@ html[data-viewer-open] body { overflow: hidden; }
 
 /* What is confirmed, and what deliberately is not. The same disclosure a destination chapter
    makes about its dates, made here about its places. */
-.journey-provenance { display: grid; gap: .9rem; max-width: 46rem; margin-inline: auto; padding: clamp(4rem, 8vw, 7rem) var(--gutter) 0; }
-.journey-provenance p { color: #9a9d99; font-size: .84rem; line-height: 1.75; }
 
 .journey-body { display: grid; justify-items: center; gap: clamp(3.2rem, 7vw, 7rem); padding-block: clamp(4.5rem, 9vw, 8rem) clamp(5rem, 9vw, 9rem); }
 .journey-body > * { width: min(36rem, calc(100% - var(--gutter) * 2)); }
@@ -1155,7 +1149,7 @@ html[data-viewer-open] body { overflow: hidden; }
 .journey-frame.is-wide.is-portrait { width: min(40rem, calc(100% - var(--gutter) * 2)); }
 .journey-frame.is-inset { width: min(23rem, calc(100% - var(--gutter) * 2)); }
 .journey-frame.is-full { width: 100%; }
-.journey-frame.is-full img { max-height: 92svh; object-fit: cover; }
+.journey-frame.is-full img { max-height: 92svh; object-fit: cover; object-position: var(--frame-focal, 50% 50%); }
 .journey-frame figcaption { padding-top: .8rem; color: #8d908c; font-size: .74rem; }
 
 /* The asymmetric pair. The second frame drops, so two portraits side by side read as an edit
@@ -1206,6 +1200,8 @@ html[data-viewer-open] body { overflow: hidden; }
   .journey-pair { grid-template-columns: 1fr; gap: clamp(2rem, 6vw, 3rem); }
   .journey-pair > :last-child { margin-top: 0; }
   .journey-frame.is-inset { width: min(17rem, calc(100% - var(--gutter) * 2)); }
+  /* Phase 14.2: the mobile crop is the tightest one, so it gets its own focus. */
+  .journey-frame.is-full img { object-position: var(--frame-focal-mobile, var(--frame-focal, 50% 50%)); }
   .journey-story-nav a + a { padding-left: 0; }
 }
 

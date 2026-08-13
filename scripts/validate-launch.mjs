@@ -109,6 +109,12 @@ if (fs.existsSync(catalogFile)) {
 }
 
 if (!process.env.PUBLIC_CONTACT_EMAIL) ownerActions.push('PUBLIC_CONTACT_EMAIL is unset: Studio, Licensing, Contact and viewer enquiry actions are hidden and /contact/ is noindexed.');
+// An unset address hides the enquiry path, which is safe. A *placeholder* address is worse than
+// unset: every enquiry affordance renders and invites a message that can never arrive. RFC 2606
+// and RFC 6761 reserve these names precisely so they can be detected rather than shipped.
+else if (/@([^@]*\.)?(example|test|invalid|localhost)$/i.test(process.env.PUBLIC_CONTACT_EMAIL.trim())) {
+  ownerActions.push(`PUBLIC_CONTACT_EMAIL is a reserved placeholder address (${process.env.PUBLIC_CONTACT_EMAIL.trim()}): enquiry actions render publicly but mail to it is undeliverable. Set a real address or clear the variable to hide the enquiry path.`);
+}
 if (!process.env.PUBLIC_CREATOR_NAME) ownerActions.push('PUBLIC_CREATOR_NAME is unset: credit and copyright fall back to "ELSEWHERE" rather than a named creator.');
 if (!process.env.SITE_URL || process.env.SITE_URL.includes('localhost')) ownerActions.push('SITE_URL is unset or local: canonical URLs, Open Graph URLs and both sitemaps are not production values.');
 

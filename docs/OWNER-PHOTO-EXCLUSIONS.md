@@ -79,3 +79,64 @@ unpublished — correct geography does not grant publication.
 4. Add the row to the register above.
 
 Never implement an exclusion with CSS, `display: none`, or by removing a single component reference.
+
+## Phase 14.1A — global owner rejection of eleven edited exports
+
+Eleven photographs were rejected by the owner during the Japan Story 05 photo re-cut. They were
+first recorded as a Story-only editorial exclusion; the owner then corrected the scope: they are
+**global public rejections**. They are now in `ownerRejected[]`, taking the register from 24 to 35.
+
+| Archive # | Photo id | Export filename | Capture |
+| --- | --- | --- | --- |
+| 195 | photo-0195 | P1230834.jpg | 16 May 2025 |
+| 212 | photo-0212 | P1240278.jpg | 22 May 2025 |
+| 229 | photo-0229 | P1240454.jpg | 23 May 2025 |
+| 230 | photo-0230 | P1240460-Enhanced-NR.jpg | 23 May 2025 |
+| 231 | photo-0231 | P1240551.jpg | 23 May 2025 |
+| 232 | photo-0232 | P1240557.jpg | 23 May 2025 |
+| 233 | photo-0233 | P1240560.jpg | 23 May 2025 |
+| 260 | photo-0260 | P1240900.jpg | 29 May 2025 |
+| 264 | photo-0264 | P1240944-Enhanced-NR.jpg | 29 May 2025 |
+| 277 | photo-0277 | P1250207.jpg | 7 Jun 2025 |
+| 289 | photo-0289 | P1250536.jpg | 8 Jun 2025 |
+
+### The rejection is version-scoped, not capture-scoped
+
+This is the first rejection set the owner intends to **re-edit later**. The register therefore
+records *which version* was rejected: each entry carries `scope: "EXPORT_VERSION"` and a
+`rejectedExport` block with the sha256, byte size, dimensions and source path of the exact file.
+The private original is preserved untouched — nothing was deleted, moved, renamed, re-encoded, or
+had metadata rewritten.
+
+| Layer | Effect |
+| --- | --- |
+| private original capture | preserved, unmodified, never publicly served |
+| the rejected edited export | globally blocked on every public surface |
+| derivatives of that export | deleted and blocked from regeneration |
+| a renamed copy of that export | blocked — exact filename, stable id and the perceptual sweep over `src/assets/photos/` all still apply |
+| an alternate export of the same rejected edit | blocked — `photo-0211` (`P1240278-2.jpg`) stays in its duplicate family so it cannot become a substitute |
+| a future owner re-edit | **allowed** — a new file, new id, new sha256; it enters the inventory and OWNER_REVIEW and is judged on its own |
+
+### Verifier change that made the last row true
+
+`scripts/verify-owner-photo-exclusions.mjs` matched rejected photographs by bare filename stem.
+Rejecting `P1240278.jpg` therefore also matched `P1240278-2.jpg`, and would have matched a future
+`P1240278-4.jpg` — so the owner's re-edit would have failed the build the moment it appeared. Two
+narrow rules replaced that:
+
+1. **Derivatives are matched by index prefix**, not substring: a file belongs to a photograph only
+   when its four-digit prefix is that photograph's own inventory index. `0212-P1240278.jpg` is
+   caught; `0999-P1240278-4.jpg` is not.
+2. **The stem safety net masks known sibling exports** before matching, so a reference to a
+   genuinely different registered version is invisible while an unregistered or hand-written
+   reference is still caught.
+
+A third rule was added: if the file under a rejected filename stops matching its recorded sha256,
+the export was replaced in place. Blocking stays on — publishing an unreviewed file is the worse
+failure — and the mismatch is printed as a notice so the owner can register the new version
+deliberately instead of inheriting a decision made about a different one.
+
+The perceptual-signature sweep over `src/assets/photos/` remains capture-level by design. That
+folder holds hand-renamed derivatives for Home, People and Black & White; a near-identical re-edit
+appearing there without review is exactly what it should catch. It does not gate the OWNER_REVIEW
+path.

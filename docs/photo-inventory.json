@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T09:57:19.405Z",
+  "generatedAt": "2026-08-13T18:53:12.143Z",
   "sourcePolicy": "Master source files. Never modify, move, rename, or serve directly in production.",
   "sourceRoot": "assets-source/photos",
-  "photoCount": 706,
+  "photoCount": 716,
   "photos": [
     {
       "id": "photo-0001",
@@ -33469,6 +33469,446 @@
       "technical": {
         "metadataReadError": null,
         "thumbnailPath": ".photo-inventory-cache/thumbs/0706-1200794.jpg"
+      }
+    },
+    {
+      "id": "photo-0707",
+      "filename": "Journey 01.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Japan/Journey 01.jpg",
+      "sourceSet": "Mobile Fotos Japan",
+      "file": {
+        "bytes": 13395913,
+        "megabytes": 12.78,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2615,
+        "height": 3923
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6666,
+      "capture": {
+        "date": "2025-05-13T07:38:24.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0707-Journey-01.jpg"
+      }
+    },
+    {
+      "id": "photo-0708",
+      "filename": "Journey 02.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Japan/Journey 02.jpg",
+      "sourceSet": "Mobile Fotos Japan",
+      "file": {
+        "bytes": 6309609,
+        "megabytes": 6.02,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2627,
+        "height": 3933
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6679,
+      "capture": {
+        "date": "2025-05-13T11:28:17.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.002
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0708-Journey-02.jpg"
+      }
+    },
+    {
+      "id": "photo-0709",
+      "filename": "Journey 03.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Japan/Journey 03.jpg",
+      "sourceSet": "Mobile Fotos Japan",
+      "file": {
+        "bytes": 18887704,
+        "megabytes": 18.01,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-05-15T07:21:20.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.0005
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0709-Journey-03.jpg"
+      }
+    },
+    {
+      "id": "photo-0710",
+      "filename": "journey 04.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Japan/journey 04.jpg",
+      "sourceSet": "Mobile Fotos Japan",
+      "file": {
+        "bytes": 13046928,
+        "megabytes": 12.44,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2132,
+        "height": 3198
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6667,
+      "capture": {
+        "date": "2025-06-08T06:55:35.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 69.3,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0710-journey-04.jpg"
+      }
+    },
+    {
+      "id": "photo-0711",
+      "filename": "Journey 05.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Japan/Journey 05.jpg",
+      "sourceSet": "Mobile Fotos Japan",
+      "file": {
+        "bytes": 18890373,
+        "megabytes": 18.02,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3729,
+        "height": 2797
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.3332,
+      "capture": {
+        "date": "2025-06-08T06:36:44.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 55.7,
+        "aperture": 4.5,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0711-Journey-05.jpg"
+      }
+    },
+    {
+      "id": "photo-0712",
+      "filename": "journey 06.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Japan/journey 06.jpg",
+      "sourceSet": "Mobile Fotos Japan",
+      "file": {
+        "bytes": 9647879,
+        "megabytes": 9.2,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2672,
+        "height": 4000
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.668,
+      "capture": {
+        "date": "2025-06-08T08:10:01.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 27.4,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.0008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0712-journey-06.jpg"
+      }
+    },
+    {
+      "id": "photo-0713",
+      "filename": "journey 07.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Japan/journey 07.jpg",
+      "sourceSet": "Mobile Fotos Japan",
+      "file": {
+        "bytes": 7347106,
+        "megabytes": 7.01,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 3904,
+        "height": 2608
+      },
+      "orientation": "landscape",
+      "aspectRatio": 1.4969,
+      "capture": {
+        "date": "2025-06-08T09:43:42.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 4.5,
+        "aperture": 2.8,
+        "iso": 100,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0713-journey-07.jpg"
+      }
+    },
+    {
+      "id": "photo-0714",
+      "filename": "journey 08.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Japan/journey 08.jpg",
+      "sourceSet": "Mobile Fotos Japan",
+      "file": {
+        "bytes": 3321431,
+        "megabytes": 3.17,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2927,
+        "height": 3903
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.7499,
+      "capture": {
+        "date": "2025-06-21T11:09:56.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 13,
+        "aperture": 4,
+        "iso": 100,
+        "exposureSeconds": 0.0008
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0714-journey-08.jpg"
+      }
+    },
+    {
+      "id": "photo-0715",
+      "filename": "journey 09.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Japan/journey 09.jpg",
+      "sourceSet": "Mobile Fotos Japan",
+      "file": {
+        "bytes": 4073301,
+        "megabytes": 3.88,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2603,
+        "height": 3905
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6666,
+      "capture": {
+        "date": "2025-06-26T14:01:20.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 87.3,
+        "aperture": 2.8,
+        "iso": 200,
+        "exposureSeconds": 0.001
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0715-journey-09.jpg"
+      }
+    },
+    {
+      "id": "photo-0716",
+      "filename": "journey 10.jpg",
+      "sourcePath": "assets-source/photos/Mobile Fotos Japan/journey 10.jpg",
+      "sourceSet": "Mobile Fotos Japan",
+      "file": {
+        "bytes": 7039747,
+        "megabytes": 6.71,
+        "format": "JPG"
+      },
+      "dimensions": {
+        "width": 2315,
+        "height": 3472
+      },
+      "orientation": "portrait",
+      "aspectRatio": 0.6668,
+      "capture": {
+        "date": "2025-05-16T07:36:00.000Z",
+        "cameraMake": "Panasonic",
+        "cameraModel": "DMC-FZ330",
+        "lens": "N/A",
+        "focalLengthMm": 108,
+        "aperture": 3.5,
+        "iso": 100,
+        "exposureSeconds": 0.000625
+      },
+      "gps": null,
+      "editorial": {
+        "status": "needs-human-review",
+        "visualSubject": null,
+        "probableDestination": null,
+        "categories": [],
+        "humansVisible": null,
+        "heroPotential": null,
+        "supportingPotential": null,
+        "mood": [],
+        "dominantColors": [],
+        "notes": null
+      },
+      "technical": {
+        "metadataReadError": null,
+        "thumbnailPath": ".photo-inventory-cache/thumbs/0716-journey-10.jpg"
       }
     }
   ]

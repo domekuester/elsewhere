@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-10T23:18:16.340092Z",
-  "policy": "Public presentation exclusions only. Master files and factual source metadata remain untouched. Owner rejections are authoritative and permanent: automated curation must never re-enable them.",
+  "updatedAt": "2026-08-12T19:41:45.016930Z",
+  "policy": "Public presentation exclusions only. Master files and factual source metadata remain untouched. Owner rejections are authoritative and permanent for the rejected export version: automated curation must never re-enable them. An owner rejection blocks a specific edited export (filename + sha256), together with its derivatives and any renamed copy of it — not the underlying capture. A future owner re-edit of the same capture is a new version and may be reviewed independently.",
   "ownerRejected": [
     {
       "photoId": "photo-0105",
@@ -266,6 +266,226 @@
       "reason": "Owner editorial rejection. Beach frame withdrawn from publication.",
       "visibility": "do-not-publish",
       "ownerDecision": "OWNER_REJECTED"
+    },
+    {
+      "photoId": "photo-0195",
+      "archiveIndex": 195,
+      "filename": "P1230834.jpg",
+      "publicationStatus": "PRIVATE",
+      "reasonCategory": "owner-edit-rejected",
+      "phase": "phase-14.1a",
+      "reason": "Owner rejected this edited export globally, not only for Journey Story 05. The private original capture is preserved unchanged for a future manual re-edit; only this exported version is blocked.",
+      "visibility": "do-not-publish",
+      "ownerDecision": "OWNER_REJECTED",
+      "scope": "EXPORT_VERSION",
+      "rejectedExport": {
+        "sha256": "0c92faaba54090e4033baab5eaab8b0673240a3a2998a4f2c39a0a47f8131b27",
+        "bytes": 8981110,
+        "dimensions": "2311x3467",
+        "sourcePath": "assets-source/photos/Foto Set 1.0/P1230834.jpg",
+        "captureDate": "2025-05-16"
+      },
+      "reeditPolicy": "A genuinely new owner export of this capture is a different version: it enters the inventory as a new photo id with a different filename and sha256, and is not covered by this entry. It may enter OWNER_REVIEW and be judged on its own."
+    },
+    {
+      "photoId": "photo-0212",
+      "archiveIndex": 212,
+      "filename": "P1240278.jpg",
+      "publicationStatus": "PRIVATE",
+      "reasonCategory": "owner-edit-rejected",
+      "phase": "phase-14.1a",
+      "reason": "Owner rejected this edited export globally, not only for Journey Story 05. The private original capture is preserved unchanged for a future manual re-edit; only this exported version is blocked.",
+      "visibility": "do-not-publish",
+      "ownerDecision": "OWNER_REJECTED",
+      "scope": "EXPORT_VERSION",
+      "rejectedExport": {
+        "sha256": "181183815631e5c1c8b15a9158e58d8a310cccf9d7785a6b7876ed11c8242e73",
+        "bytes": 19222064,
+        "dimensions": "2263x3395",
+        "sourcePath": "assets-source/photos/Foto Set 1.0/P1240278.jpg",
+        "captureDate": "2025-05-22"
+      },
+      "reeditPolicy": "A genuinely new owner export of this capture is a different version: it enters the inventory as a new photo id with a different filename and sha256, and is not covered by this entry. It may enter OWNER_REVIEW and be judged on its own."
+    },
+    {
+      "photoId": "photo-0229",
+      "archiveIndex": 229,
+      "filename": "P1240454.jpg",
+      "publicationStatus": "PRIVATE",
+      "reasonCategory": "owner-edit-rejected",
+      "phase": "phase-14.1a",
+      "reason": "Owner rejected this edited export globally, not only for Journey Story 05. The private original capture is preserved unchanged for a future manual re-edit; only this exported version is blocked.",
+      "visibility": "do-not-publish",
+      "ownerDecision": "OWNER_REJECTED",
+      "scope": "EXPORT_VERSION",
+      "rejectedExport": {
+        "sha256": "6c68447f1eb9fd52f872778e92c5f594f882ab073e8838dc9b835eaf6fdd9bcd",
+        "bytes": 16146305,
+        "dimensions": "2615x3923",
+        "sourcePath": "assets-source/photos/Foto Set 1.0/P1240454.jpg",
+        "captureDate": "2025-05-23"
+      },
+      "reeditPolicy": "A genuinely new owner export of this capture is a different version: it enters the inventory as a new photo id with a different filename and sha256, and is not covered by this entry. It may enter OWNER_REVIEW and be judged on its own."
+    },
+    {
+      "photoId": "photo-0230",
+      "archiveIndex": 230,
+      "filename": "P1240460-Enhanced-NR.jpg",
+      "publicationStatus": "PRIVATE",
+      "reasonCategory": "owner-edit-rejected",
+      "phase": "phase-14.1a",
+      "reason": "Owner rejected this edited export globally, not only for Journey Story 05. The private original capture is preserved unchanged for a future manual re-edit; only this exported version is blocked.",
+      "visibility": "do-not-publish",
+      "ownerDecision": "OWNER_REJECTED",
+      "scope": "EXPORT_VERSION",
+      "rejectedExport": {
+        "sha256": "b8051b38f85612c7dabac138d5f92be75d4049a2697e1f5863c7d006b0c926ab",
+        "bytes": 7624547,
+        "dimensions": "1801x2401",
+        "sourcePath": "assets-source/photos/Foto Set 1.0/P1240460-Enhanced-NR.jpg",
+        "captureDate": "2025-05-23"
+      },
+      "reeditPolicy": "A genuinely new owner export of this capture is a different version: it enters the inventory as a new photo id with a different filename and sha256, and is not covered by this entry. It may enter OWNER_REVIEW and be judged on its own."
+    },
+    {
+      "photoId": "photo-0231",
+      "archiveIndex": 231,
+      "filename": "P1240551.jpg",
+      "publicationStatus": "PRIVATE",
+      "reasonCategory": "owner-edit-rejected",
+      "phase": "phase-14.1a",
+      "reason": "Owner rejected this edited export globally, not only for Journey Story 05. The private original capture is preserved unchanged for a future manual re-edit; only this exported version is blocked.",
+      "visibility": "do-not-publish",
+      "ownerDecision": "OWNER_REJECTED",
+      "scope": "EXPORT_VERSION",
+      "rejectedExport": {
+        "sha256": "c96918219c936a17767d0c3bb26da2bd18c8da7c4e71ba37f6a64751fa2c13b6",
+        "bytes": 22864847,
+        "dimensions": "2465x3698",
+        "sourcePath": "assets-source/photos/Foto Set 1.0/P1240551.jpg",
+        "captureDate": "2025-05-23"
+      },
+      "reeditPolicy": "A genuinely new owner export of this capture is a different version: it enters the inventory as a new photo id with a different filename and sha256, and is not covered by this entry. It may enter OWNER_REVIEW and be judged on its own."
+    },
+    {
+      "photoId": "photo-0232",
+      "archiveIndex": 232,
+      "filename": "P1240557.jpg",
+      "publicationStatus": "PRIVATE",
+      "reasonCategory": "owner-edit-rejected",
+      "phase": "phase-14.1a",
+      "reason": "Owner rejected this edited export globally, not only for Journey Story 05. The private original capture is preserved unchanged for a future manual re-edit; only this exported version is blocked.",
+      "visibility": "do-not-publish",
+      "ownerDecision": "OWNER_REJECTED",
+      "scope": "EXPORT_VERSION",
+      "rejectedExport": {
+        "sha256": "891b1d6c9c30efdfa9bc0691bde285ee5c5eaa738956b2fce1cdc41808941acb",
+        "bytes": 5629901,
+        "dimensions": "1839x2758",
+        "sourcePath": "assets-source/photos/Foto Set 1.0/P1240557.jpg",
+        "captureDate": "2025-05-23"
+      },
+      "reeditPolicy": "A genuinely new owner export of this capture is a different version: it enters the inventory as a new photo id with a different filename and sha256, and is not covered by this entry. It may enter OWNER_REVIEW and be judged on its own."
+    },
+    {
+      "photoId": "photo-0233",
+      "archiveIndex": 233,
+      "filename": "P1240560.jpg",
+      "publicationStatus": "PRIVATE",
+      "reasonCategory": "owner-edit-rejected",
+      "phase": "phase-14.1a",
+      "reason": "Owner rejected this edited export globally, not only for Journey Story 05. The private original capture is preserved unchanged for a future manual re-edit; only this exported version is blocked.",
+      "visibility": "do-not-publish",
+      "ownerDecision": "OWNER_REJECTED",
+      "scope": "EXPORT_VERSION",
+      "rejectedExport": {
+        "sha256": "991b2df6d6fb343dbb362a6d69f8bd4b92c4cbb8ee566f7222c5b610248a1245",
+        "bytes": 11770366,
+        "dimensions": "2672x4000",
+        "sourcePath": "assets-source/photos/Foto Set 1.0/P1240560.jpg",
+        "captureDate": "2025-05-23"
+      },
+      "reeditPolicy": "A genuinely new owner export of this capture is a different version: it enters the inventory as a new photo id with a different filename and sha256, and is not covered by this entry. It may enter OWNER_REVIEW and be judged on its own."
+    },
+    {
+      "photoId": "photo-0260",
+      "archiveIndex": 260,
+      "filename": "P1240900.jpg",
+      "publicationStatus": "PRIVATE",
+      "reasonCategory": "owner-edit-rejected",
+      "phase": "phase-14.1a",
+      "reason": "Owner rejected this edited export globally, not only for Journey Story 05. The private original capture is preserved unchanged for a future manual re-edit; only this exported version is blocked.",
+      "visibility": "do-not-publish",
+      "ownerDecision": "OWNER_REJECTED",
+      "scope": "EXPORT_VERSION",
+      "rejectedExport": {
+        "sha256": "9e57c0b37387bab062d509098352993eadbaf140147254e61464385dc13aa338",
+        "bytes": 11599062,
+        "dimensions": "2597x3888",
+        "sourcePath": "assets-source/photos/Foto Set 1.0/P1240900.jpg",
+        "captureDate": "2025-05-29"
+      },
+      "reeditPolicy": "A genuinely new owner export of this capture is a different version: it enters the inventory as a new photo id with a different filename and sha256, and is not covered by this entry. It may enter OWNER_REVIEW and be judged on its own."
+    },
+    {
+      "photoId": "photo-0264",
+      "archiveIndex": 264,
+      "filename": "P1240944-Enhanced-NR.jpg",
+      "publicationStatus": "PRIVATE",
+      "reasonCategory": "owner-edit-rejected",
+      "phase": "phase-14.1a",
+      "reason": "Owner rejected this edited export globally, not only for Journey Story 05. The private original capture is preserved unchanged for a future manual re-edit; only this exported version is blocked.",
+      "visibility": "do-not-publish",
+      "ownerDecision": "OWNER_REJECTED",
+      "scope": "EXPORT_VERSION",
+      "rejectedExport": {
+        "sha256": "d09b646ddc87b089253d66f6fdf25db539386b53f3f8517e92a04186df8ce898",
+        "bytes": 20592396,
+        "dimensions": "2667x4000",
+        "sourcePath": "assets-source/photos/Foto Set 1.0/P1240944-Enhanced-NR.jpg",
+        "captureDate": "2025-05-29"
+      },
+      "reeditPolicy": "A genuinely new owner export of this capture is a different version: it enters the inventory as a new photo id with a different filename and sha256, and is not covered by this entry. It may enter OWNER_REVIEW and be judged on its own."
+    },
+    {
+      "photoId": "photo-0277",
+      "archiveIndex": 277,
+      "filename": "P1250207.jpg",
+      "publicationStatus": "PRIVATE",
+      "reasonCategory": "owner-edit-rejected",
+      "phase": "phase-14.1a",
+      "reason": "Owner rejected this edited export globally, not only for Journey Story 05. The private original capture is preserved unchanged for a future manual re-edit; only this exported version is blocked.",
+      "visibility": "do-not-publish",
+      "ownerDecision": "OWNER_REJECTED",
+      "scope": "EXPORT_VERSION",
+      "rejectedExport": {
+        "sha256": "fcc58664e9305fd5d94df41c7c4a362dd07ea04290e64e9b581515fe3efbbec8",
+        "bytes": 6855137,
+        "dimensions": "2623x3926",
+        "sourcePath": "assets-source/photos/Foto Set 1.0/P1250207.jpg",
+        "captureDate": "2025-06-07"
+      },
+      "reeditPolicy": "A genuinely new owner export of this capture is a different version: it enters the inventory as a new photo id with a different filename and sha256, and is not covered by this entry. It may enter OWNER_REVIEW and be judged on its own."
+    },
+    {
+      "photoId": "photo-0289",
+      "archiveIndex": 289,
+      "filename": "P1250536.jpg",
+      "publicationStatus": "PRIVATE",
+      "reasonCategory": "owner-edit-rejected",
+      "phase": "phase-14.1a",
+      "reason": "Owner rejected this edited export globally, not only for Journey Story 05. The private original capture is preserved unchanged for a future manual re-edit; only this exported version is blocked.",
+      "visibility": "do-not-publish",
+      "ownerDecision": "OWNER_REJECTED",
+      "scope": "EXPORT_VERSION",
+      "rejectedExport": {
+        "sha256": "def954078e89180c7aaa91bb30b2f3f4faf7ef7b14b436ae6d0dca0c8592d7aa",
+        "bytes": 11682901,
+        "dimensions": "2789x1863",
+        "sourcePath": "assets-source/photos/Foto Set 1.0/P1250536.jpg",
+        "captureDate": "2025-06-08"
+      },
+      "reeditPolicy": "A genuinely new owner export of this capture is a different version: it enters the inventory as a new photo id with a different filename and sha256, and is not covered by this entry. It may enter OWNER_REVIEW and be judged on its own."
     }
   ],
   "duplicateFamilies": [
@@ -348,7 +568,8 @@
       "keepFilename": "P1240278.jpg",
       "excludeIds": [
         "photo-0211"
-      ]
+      ],
+      "reason": "Same-frame export family. The kept export photo-0212 was globally owner-rejected in phase 14.1a; photo-0211 is an alternate derivative of that same rejected edit and stays excluded so it cannot become a substitute."
     },
     {
       "keepId": "photo-0227",

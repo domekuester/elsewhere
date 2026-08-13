@@ -6,6 +6,7 @@ import destinationData from '../../../data/destinations.json';
 import catalogData from '../../../public/data/photo-catalog.json';
 import heroPipeline from '../../../public/assets-derived/hero/HERO-PIPELINE.json';
 import { imageObject } from '../../data/image-schema';
+import { journeyStoryForDestination } from '../../data/journey';
 
 export function getStaticPaths() {
   return destinationData.destinations.filter((destination) => destination.publicationStatus === 'published').map((destination) => ({ params: { slug: destination.slug }, props: { destination } }));
@@ -23,6 +24,11 @@ const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orienta
 // Dates and provenance come from the data, never from the template. A destination sourced from the
 // owner's travel timeline says so; one dated from capture metadata says that instead.
 const formatDate = (value, withYear = true) => new Date(value).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', ...(withYear ? { year: 'numeric' } : {}) });
+// The published Journey chapter for this destination, if one exists. The same helper already
+// drives the link on /archive/place/<slug>/ for destinations that have no chapter page of their
+// own; Japan is the first destination that is both a published chapter and a published Story, so
+// the relationship has to exist here too rather than only on the archive route.
+const destinationStory = journeyStoryForDestination(destination.id);
 const range = destination.dateRange;
 const sameYear = range && range.start.slice(0, 4) === range.end.slice(0, 4);
 const journey = range ? {
@@ -31,8 +37,8 @@ const journey = range ? {
     // A region-level chapter has its place confirmed by definition, so the country-only caveat
     // would be untrue there.
     ? (destination.parentDestination
-      ? 'Place confirmed by the photographer’s travel record. Individual towns within it remain intentionally unassigned.'
-      : 'Country confirmed by the owner’s travel timeline. Cities and regions remain intentionally unassigned.')
+      ? 'Place confirmed by the photographer’s travel record. Individual towns within it are not named.'
+      : 'Country confirmed by the photographer’s travel record. Individual cities and regions are not named.')
     // Span is computed from the photographs, so the line stays true for any chapter. A short visit
     // is counted in days and named by its month; a place returned to over a long period is counted
     // in months and named by none, because "276 days in September" would be both absurd and a claim
@@ -69,7 +75,6 @@ const altByFilename = {
   'P1260493.jpg': 'Illuminated signs crowd the front of a canal-side street.',
   'P1260490.jpg': 'Signs and buildings press in along a canal in the last light.',
   'P1260442.jpg': 'A cyclist passes a wall of stickers and spray paint in a narrow lane.',
-  'P1240278.jpg': 'A wet stone lane runs between old wooden walls into green.',
   'P1240723.jpg': 'A long wooden corridor opens onto light at its far end.',
   'P1260213.jpg': 'Bamboo stems rise close together in low light.',
   'P1230806.jpg': 'Three people cross still water in a small round boat.',
@@ -175,15 +180,27 @@ const destinationSchema = {
       <img src={heroLargest?.url ?? hero.viewerImage} srcset={heroSrcset} sizes={heroSrcset ? heroSizes : undefined} width={hero.width} height={hero.height} alt={altByFilename[hero.filename] ?? hero.altText} loading="eager" fetchpriority="high" />
       <div class="destination-hero-title"><span class="memory-mark"></span><h1>{destination.name}</h1>{destination.parentDestination && <p class="destination-country">{destination.country}</p>}<p>{journey?.dates}</p></div>
     </header>
-    <section class="destination-provenance">
-      <p>{journey?.note}</p>
-      <p>{destination.confirmedPhotoCount} photographs belong to this {destination.parentDestination ? 'place' : 'destination period'}. This chapter is a curated passage through them.</p>
-    </section>
+    {/* The provenance note and the registered-photograph count are both publication-system copy:
+        one describes how confidently the place is known, the other how many rows the chapter drew
+        from. Neither is something a visitor came to read, so neither is emitted. The band survives
+        only when it has a real destination — the link into the Journey chapter. */}
+    {destinationStory && (
+      <section class="destination-chapter-link">
+        <a class="editorial-link" href={`/journey/${destinationStory.slug}/`} data-analytics-event="journey_open" data-analytics-context={`destination:${destination.slug}`}>
+          Read the story <span aria-hidden="true">→</span>
+        </a>
+      </section>
+    )}
     <section class="destination-sequence" aria-label={`Selected photographs from ${destination.name}`}>
       {rest.map((photo, index) => (
         <figure class:list={['destination-frame', `is-${sequenceRoles[index % sequenceRoles.length]}`, `is-${photo.orientation}`]} data-photo-reveal>
           <img src={photo.thumbnail} srcset={`${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w, ${photo.viewerImage} ${derivativeWidth(photo, 3200)}w`} sizes="(min-width: 1200px) 58vw, (min-width: 561px) 66vw, 88vw" width={photo.width} height={photo.height} loading="lazy" decoding="async" alt={altByFilename[photo.filename] ?? photo.altText} />
-          <figcaption><span>{String(index + 2).padStart(2, '0')}</span><p>{photo.year}{photo.visualWorlds.length ? ` · ${photo.visualWorlds.map((world) => world.replaceAll('-', ' ')).join(', ')}` : ''}</p></figcaption>
+          {/* Sequence number and year only. `visualWorlds` is an internal curatorial facet
+              (`visualWorldConfidence: CURATORIAL_ASSIGNMENT`) that drives archive filtering; printed
+              under a photograph it read as a database record attached to the picture — "2025 · ocean,
+              people" — rather than as a caption anyone wrote. Authored captions live in the Story
+              data, where a human decides them. */}
+          <figcaption><span>{String(index + 2).padStart(2, '0')}</span><p>{photo.year}</p></figcaption>
         </figure>
       ))}
     </section>

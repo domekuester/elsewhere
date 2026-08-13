@@ -130,6 +130,26 @@
         "photo-0015",
         "photo-0704"
       ]
+    },
+    "journey-japan": {
+      "photoId": "photo-0198",
+      "status": "AUTO_SELECTED",
+      "focal": {
+        "desktop": "50% 62%",
+        "tablet": "50% 60%",
+        "mobile": "50% 58%"
+      },
+      "overlay": {
+        "top": 0.5,
+        "bottom": 0.78,
+        "bottomStart": 40
+      },
+      "titleScale": 1,
+      "note": "Three empty tarai-bune moored along the stone quay under a flat grey sky, 16 May 2025 — the owner's first days on Sado. Chosen over the Japan chapter hero (photo-0372, the Osaka canal, which would open a story about an island with a neon skyline) and over the northern-cape frames (photo-0286, photo-0304), which are the most conventionally beautiful photographs in the set and say nothing about why he was there. This frame is the work itself, waiting, with nobody in it — which is also the honest state of the people permissions. The focal sits low so the boats and the quay survive the crop band rather than the empty sky; the bottom scrim is heavy because this hero carries a long standfirst.",
+      "alternatives": [
+        "photo-0224",
+        "photo-0286"
+      ]
     }
   }
 }

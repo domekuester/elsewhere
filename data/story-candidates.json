@@ -6,113 +6,6 @@
       "id": "story-candidate-01",
       "status": "STORY_CANDIDATE",
       "photoIds": [
-        "photo-0278",
-        "photo-0279",
-        "photo-0280",
-        "photo-0281",
-        "photo-0283",
-        "photo-0284",
-        "photo-0285",
-        "photo-0286",
-        "photo-0287",
-        "photo-0288",
-        "photo-0289",
-        "photo-0293",
-        "photo-0294",
-        "photo-0295",
-        "photo-0297",
-        "photo-0298"
-      ],
-      "filenames": [
-        "P1250301.jpg",
-        "P1250325.jpg",
-        "P1250371.jpg",
-        "P1250387.jpg",
-        "P1250400.jpg",
-        "P1250436.jpg",
-        "P1250456.jpg",
-        "P1250468.jpg",
-        "P1250476.jpg",
-        "P1250503.jpg",
-        "P1250536.jpg",
-        "P1250583.jpg",
-        "P1250589.jpg",
-        "P1250605.jpg",
-        "P1250632.jpg",
-        "P1250641.jpg"
-      ],
-      "captureDateStart": "2025-06-08T06:36:44.000Z",
-      "captureDateEnd": "2025-06-08T08:29:23.000Z",
-      "visualReason": "16 consecutive frames captured within 113 minutes. Temporal continuity suggests a sequence worth human review; subject and event are not inferred.",
-      "existingVisualWorlds": [
-        "people",
-        "ocean"
-      ],
-      "destinationIds": [
-        "japan"
-      ],
-      "potentialStoryFormat": "VISUAL_ESSAY",
-      "ownerInformationNeeded": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
-      "editorialStatus": "NEEDS_OWNER_INPUT",
-      "publicationStatus": "UNPUBLISHED"
-    },
-    {
-      "id": "story-candidate-02",
-      "status": "STORY_CANDIDATE",
-      "photoIds": [
-        "photo-0559",
-        "photo-0210",
-        "photo-0212",
-        "photo-0213",
-        "photo-0214",
-        "photo-0215",
-        "photo-0216",
-        "photo-0217",
-        "photo-0218",
-        "photo-0219",
-        "photo-0220",
-        "photo-0221",
-        "photo-0222",
-        "photo-0223",
-        "photo-0224"
-      ],
-      "filenames": [
-        "P1240171.jpg",
-        "P1240241.jpg",
-        "P1240278.jpg",
-        "P1240299.jpg",
-        "P1240306.jpg",
-        "P1240323.jpg",
-        "P1240332.jpg",
-        "P1240338.jpg",
-        "P1240345.jpg",
-        "P1240361.jpg",
-        "P1240363.jpg",
-        "P1240373.jpg",
-        "P1240384.jpg",
-        "P1240385.jpg",
-        "P1240390.jpg"
-      ],
-      "captureDateStart": "2025-05-22T08:20:57.000Z",
-      "captureDateEnd": "2025-05-22T10:11:33.000Z",
-      "visualReason": "15 consecutive frames captured within 111 minutes. Temporal continuity suggests a sequence worth human review; subject and event are not inferred.",
-      "existingVisualWorlds": [
-        "ocean",
-        "urban",
-        "jungle"
-      ],
-      "destinationIds": [
-        "japan"
-      ],
-      "potentialStoryFormat": "VISUAL_ESSAY",
-      "ownerInformationNeeded": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
-      "editorialStatus": "NEEDS_OWNER_INPUT",
-      "publicationStatus": "UNPUBLISHED"
-    },
-    {
-      "id": "story-candidate-03",
-      "status": "STORY_CANDIDATE",
-      "photoIds": [
         "photo-0300",
         "photo-0301",
         "photo-0303",
@@ -162,7 +55,58 @@
       "publicationStatus": "UNPUBLISHED"
     },
     {
-      "id": "story-candidate-04",
+      "id": "story-candidate-02",
+      "status": "STORY_CANDIDATE",
+      "photoIds": [
+        "photo-0559",
+        "photo-0210",
+        "photo-0213",
+        "photo-0214",
+        "photo-0215",
+        "photo-0216",
+        "photo-0217",
+        "photo-0218",
+        "photo-0219",
+        "photo-0220",
+        "photo-0221",
+        "photo-0222",
+        "photo-0223",
+        "photo-0224"
+      ],
+      "filenames": [
+        "P1240171.jpg",
+        "P1240241.jpg",
+        "P1240299.jpg",
+        "P1240306.jpg",
+        "P1240323.jpg",
+        "P1240332.jpg",
+        "P1240338.jpg",
+        "P1240345.jpg",
+        "P1240361.jpg",
+        "P1240363.jpg",
+        "P1240373.jpg",
+        "P1240384.jpg",
+        "P1240385.jpg",
+        "P1240390.jpg"
+      ],
+      "captureDateStart": "2025-05-22T08:20:57.000Z",
+      "captureDateEnd": "2025-05-22T10:11:33.000Z",
+      "visualReason": "14 consecutive frames captured within 111 minutes. Temporal continuity suggests a sequence worth human review; subject and event are not inferred.",
+      "existingVisualWorlds": [
+        "ocean",
+        "jungle",
+        "urban"
+      ],
+      "destinationIds": [
+        "japan"
+      ],
+      "potentialStoryFormat": "VISUAL_ESSAY",
+      "ownerInformationNeeded": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "editorialStatus": "NEEDS_OWNER_INPUT",
+      "publicationStatus": "UNPUBLISHED"
+    },
+    {
+      "id": "story-candidate-03",
       "status": "STORY_CANDIDATE",
       "photoIds": [
         "photo-0238",
@@ -211,42 +155,38 @@
       "publicationStatus": "UNPUBLISHED"
     },
     {
-      "id": "story-candidate-05",
+      "id": "story-candidate-04",
       "status": "STORY_CANDIDATE",
       "photoIds": [
-        "photo-0225",
-        "photo-0226",
-        "photo-0227",
-        "photo-0229",
-        "photo-0230",
-        "photo-0231",
-        "photo-0232",
-        "photo-0233",
-        "photo-0234",
-        "photo-0235",
-        "photo-0236"
+        "photo-0278",
+        "photo-0279",
+        "photo-0280",
+        "photo-0281",
+        "photo-0283",
+        "photo-0284",
+        "photo-0285",
+        "photo-0286",
+        "photo-0287",
+        "photo-0288"
       ],
       "filenames": [
-        "P1240408-Enhanced-NR.jpg",
-        "P1240437.jpg",
-        "P1240451-Enhanced-NR-2.jpg",
-        "P1240454.jpg",
-        "P1240460-Enhanced-NR.jpg",
-        "P1240551.jpg",
-        "P1240557.jpg",
-        "P1240560.jpg",
-        "P1240573.jpg",
-        "P1240575.jpg",
-        "P1240584.jpg"
+        "P1250301.jpg",
+        "P1250325.jpg",
+        "P1250371.jpg",
+        "P1250387.jpg",
+        "P1250400.jpg",
+        "P1250436.jpg",
+        "P1250456.jpg",
+        "P1250468.jpg",
+        "P1250476.jpg",
+        "P1250503.jpg"
       ],
-      "captureDateStart": "2025-05-23T06:26:12.000Z",
-      "captureDateEnd": "2025-05-23T07:29:36.000Z",
-      "visualReason": "11 consecutive frames captured within 63 minutes. Temporal continuity suggests a sequence worth human review; subject and event are not inferred.",
+      "captureDateStart": "2025-06-08T06:36:44.000Z",
+      "captureDateEnd": "2025-06-08T07:42:23.000Z",
+      "visualReason": "10 consecutive frames captured within 66 minutes. Temporal continuity suggests a sequence worth human review; subject and event are not inferred.",
       "existingVisualWorlds": [
-        "jungle",
-        "ocean",
         "people",
-        "black-and-white"
+        "ocean"
       ],
       "destinationIds": [
         "japan"
@@ -257,7 +197,7 @@
       "publicationStatus": "UNPUBLISHED"
     },
     {
-      "id": "story-candidate-06",
+      "id": "story-candidate-05",
       "status": "STORY_CANDIDATE",
       "photoIds": [
         "photo-0337",
@@ -300,7 +240,7 @@
       "publicationStatus": "UNPUBLISHED"
     },
     {
-      "id": "story-candidate-07",
+      "id": "story-candidate-06",
       "status": "STORY_CANDIDATE",
       "photoIds": [
         "photo-0324",
@@ -340,7 +280,7 @@
       "publicationStatus": "UNPUBLISHED"
     },
     {
-      "id": "story-candidate-08",
+      "id": "story-candidate-07",
       "status": "STORY_CANDIDATE",
       "photoIds": [
         "photo-0385",
@@ -381,7 +321,7 @@
       "publicationStatus": "UNPUBLISHED"
     },
     {
-      "id": "story-candidate-09",
+      "id": "story-candidate-08",
       "status": "STORY_CANDIDATE",
       "photoIds": [
         "photo-0165",
@@ -418,7 +358,7 @@
       "publicationStatus": "UNPUBLISHED"
     },
     {
-      "id": "story-candidate-10",
+      "id": "story-candidate-09",
       "status": "STORY_CANDIDATE",
       "photoIds": [
         "photo-0199",
@@ -457,7 +397,7 @@
       "publicationStatus": "UNPUBLISHED"
     },
     {
-      "id": "story-candidate-11",
+      "id": "story-candidate-10",
       "status": "STORY_CANDIDATE",
       "photoIds": [
         "photo-0564",
@@ -495,44 +435,7 @@
       "publicationStatus": "UNPUBLISHED"
     },
     {
-      "id": "story-candidate-12",
-      "status": "STORY_CANDIDATE",
-      "photoIds": [
-        "photo-0259",
-        "photo-0260",
-        "photo-0261",
-        "photo-0262",
-        "photo-0263",
-        "photo-0264",
-        "photo-0265",
-        "photo-0266"
-      ],
-      "filenames": [
-        "P1240896.jpg",
-        "P1240900.jpg",
-        "P1240915.jpg",
-        "P1240921.jpg",
-        "P1240932.jpg",
-        "P1240944-Enhanced-NR.jpg",
-        "P1240950-Enhanced-NR.jpg",
-        "P1240953-Enhanced-NR.jpg"
-      ],
-      "captureDateStart": "2025-05-29T09:01:00.000Z",
-      "captureDateEnd": "2025-05-29T09:12:28.000Z",
-      "visualReason": "8 consecutive frames captured within 11 minutes. Temporal continuity suggests a sequence worth human review; subject and event are not inferred.",
-      "existingVisualWorlds": [
-        "ocean"
-      ],
-      "destinationIds": [
-        "japan"
-      ],
-      "potentialStoryFormat": "VISUAL_ESSAY",
-      "ownerInformationNeeded": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
-      "editorialStatus": "NEEDS_OWNER_INPUT",
-      "publicationStatus": "UNPUBLISHED"
-    },
-    {
-      "id": "story-candidate-13",
+      "id": "story-candidate-11",
       "status": "STORY_CANDIDATE",
       "photoIds": [
         "photo-0349",
@@ -570,7 +473,7 @@
       "publicationStatus": "UNPUBLISHED"
     },
     {
-      "id": "story-candidate-14",
+      "id": "story-candidate-12",
       "status": "STORY_CANDIDATE",
       "photoIds": [
         "photo-0585",
@@ -601,6 +504,83 @@
       ],
       "destinationIds": [
         "japan"
+      ],
+      "potentialStoryFormat": "VISUAL_ESSAY",
+      "ownerInformationNeeded": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "editorialStatus": "NEEDS_OWNER_INPUT",
+      "publicationStatus": "UNPUBLISHED"
+    },
+    {
+      "id": "story-candidate-13",
+      "status": "STORY_CANDIDATE",
+      "photoIds": [
+        "photo-0600",
+        "photo-0601",
+        "photo-0603",
+        "photo-0604",
+        "photo-0605",
+        "photo-0606",
+        "photo-0607",
+        "photo-0608"
+      ],
+      "filenames": [
+        "P1330742.jpg",
+        "P1330780.jpg",
+        "P1330795.jpg",
+        "P1330816.jpg",
+        "P1330900.jpg",
+        "P1330928.jpg",
+        "P1330959.jpg",
+        "P1330968.jpg"
+      ],
+      "captureDateStart": "2026-01-10T21:31:33.000Z",
+      "captureDateEnd": "2026-01-10T22:51:29.000Z",
+      "visualReason": "8 consecutive frames captured within 80 minutes. Temporal continuity suggests a sequence worth human review; subject and event are not inferred.",
+      "existingVisualWorlds": [
+        "ocean",
+        "beaches",
+        "people",
+        "urban"
+      ],
+      "destinationIds": [
+        "essaouira"
+      ],
+      "potentialStoryFormat": "VISUAL_ESSAY",
+      "ownerInformationNeeded": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",
+      "editorialStatus": "NEEDS_OWNER_INPUT",
+      "publicationStatus": "UNPUBLISHED"
+    },
+    {
+      "id": "story-candidate-14",
+      "status": "STORY_CANDIDATE",
+      "photoIds": [
+        "photo-0492",
+        "photo-0493",
+        "photo-0494",
+        "photo-0495",
+        "photo-0496",
+        "photo-0497",
+        "photo-0499"
+      ],
+      "filenames": [
+        "P1280546.jpg",
+        "P1280592.jpg",
+        "P1280608.jpg",
+        "P1280613.jpg",
+        "P1280638.jpg",
+        "P1280682.jpg",
+        "P1280765.jpg"
+      ],
+      "captureDateStart": "2025-08-09T12:03:01.000Z",
+      "captureDateEnd": "2025-08-09T13:36:41.000Z",
+      "visualReason": "7 consecutive frames captured within 94 minutes. Temporal continuity suggests a sequence worth human review; subject and event are not inferred.",
+      "existingVisualWorlds": [
+        "jungle",
+        "urban",
+        "black-and-white"
+      ],
+      "destinationIds": [
+        "la-reunion"
       ],
       "potentialStoryFormat": "VISUAL_ESSAY",
       "ownerInformationNeeded": "Do these frames show one event, subject, place observation, or unrelated moments taken close together?",

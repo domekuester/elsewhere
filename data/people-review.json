@@ -496,23 +496,6 @@
     },
     {
       "id": "people-review-30",
-      "photoId": "photo-0195",
-      "filename": "P1230834.jpg",
-      "captureDate": "2025-05-16T07:40:25.000Z",
-      "destinationId": "japan",
-      "journeyId": "japan-2025",
-      "classification": null,
-      "identityStatus": "UNKNOWN",
-      "displayName": null,
-      "privacyStatus": "UNKNOWN",
-      "peoplePageCandidate": true,
-      "storyCandidate": false,
-      "ownerNotes": null,
-      "shortMemory": null,
-      "publicationStatus": "NEEDS_OWNER_INPUT"
-    },
-    {
-      "id": "people-review-31",
       "photoId": "photo-0196",
       "filename": "P1230855.jpg",
       "captureDate": "2025-05-16T08:49:45.000Z",
@@ -529,7 +512,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-32",
+      "id": "people-review-31",
       "photoId": "photo-0207",
       "filename": "P1230972.jpg",
       "captureDate": "2025-05-20T08:18:14.000Z",
@@ -546,7 +529,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-33",
+      "id": "people-review-32",
       "photoId": "photo-0208",
       "filename": "P1240051.jpg",
       "captureDate": "2025-05-21T09:48:11.000Z",
@@ -563,7 +546,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-34",
+      "id": "people-review-33",
       "photoId": "photo-0209",
       "filename": "P1240091.jpg",
       "captureDate": "2025-05-21T10:09:00.000Z",
@@ -580,7 +563,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-35",
+      "id": "people-review-34",
       "photoId": "photo-0227",
       "filename": "P1240451-Enhanced-NR-2.jpg",
       "captureDate": "2025-05-23T06:39:22.000Z",
@@ -597,7 +580,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-36",
+      "id": "people-review-35",
       "photoId": "photo-0234",
       "filename": "P1240573.jpg",
       "captureDate": "2025-05-23T07:04:32.000Z",
@@ -614,7 +597,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-37",
+      "id": "people-review-36",
       "photoId": "photo-0269",
       "filename": "P1250078.jpg",
       "captureDate": "2025-06-05T11:35:40.000Z",
@@ -631,7 +614,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-38",
+      "id": "people-review-37",
       "photoId": "photo-0278",
       "filename": "P1250301.jpg",
       "captureDate": "2025-06-08T06:36:44.000Z",
@@ -648,7 +631,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-39",
+      "id": "people-review-38",
       "photoId": "photo-0279",
       "filename": "P1250325.jpg",
       "captureDate": "2025-06-08T06:55:35.000Z",
@@ -665,7 +648,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-40",
+      "id": "people-review-39",
       "photoId": "photo-0315",
       "filename": "P1250919.jpg",
       "captureDate": "2025-06-08T14:17:12.000Z",
@@ -682,7 +665,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-41",
+      "id": "people-review-40",
       "photoId": "photo-0319",
       "filename": "P1250957.jpg",
       "captureDate": "2025-06-08T14:30:34.000Z",
@@ -699,7 +682,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-42",
+      "id": "people-review-41",
       "photoId": "photo-0331",
       "filename": "P1260122.jpg",
       "captureDate": "2025-06-16T08:50:40.000Z",
@@ -716,7 +699,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-43",
+      "id": "people-review-42",
       "photoId": "photo-0350",
       "filename": "P1260247.jpg",
       "captureDate": "2025-06-21T10:41:11.000Z",
@@ -733,7 +716,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-44",
+      "id": "people-review-43",
       "photoId": "photo-0364",
       "filename": "P1260453-2.jpg",
       "captureDate": "2025-06-26T13:16:07.000Z",
@@ -750,7 +733,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-45",
+      "id": "people-review-44",
       "photoId": "photo-0366",
       "filename": "P1260454.jpg",
       "captureDate": "2025-06-26T13:16:16.000Z",
@@ -767,7 +750,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-46",
+      "id": "people-review-45",
       "photoId": "photo-0380",
       "filename": "P1260623.jpg",
       "captureDate": "2025-07-13T17:57:34.000Z",
@@ -784,7 +767,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-47",
+      "id": "people-review-46",
       "photoId": "photo-0381",
       "filename": "P1260635.jpg",
       "captureDate": "2025-07-13T18:03:36.000Z",
@@ -801,7 +784,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-48",
+      "id": "people-review-47",
       "photoId": "photo-0383",
       "filename": "P1260667.jpg",
       "captureDate": "2025-07-13T18:23:25.000Z",
@@ -818,7 +801,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-49",
+      "id": "people-review-48",
       "photoId": "photo-0385",
       "filename": "P1260743.jpg",
       "captureDate": "2025-07-22T12:39:46.000Z",
@@ -835,7 +818,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-50",
+      "id": "people-review-49",
       "photoId": "photo-0394",
       "filename": "P1260926.jpg",
       "captureDate": "2025-07-22T14:57:32.000Z",
@@ -852,7 +835,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-51",
+      "id": "people-review-50",
       "photoId": "photo-0396",
       "filename": "P1260968.jpg",
       "captureDate": "2025-07-22T18:24:40.000Z",
@@ -869,7 +852,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-52",
+      "id": "people-review-51",
       "photoId": "photo-0432",
       "filename": "P1270057-2.jpg",
       "captureDate": "2025-07-23T18:51:45.000Z",
@@ -886,7 +869,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-53",
+      "id": "people-review-52",
       "photoId": "photo-0465",
       "filename": "P1270616.jpg",
       "captureDate": "2025-08-01T17:31:28.000Z",
@@ -903,7 +886,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-54",
+      "id": "people-review-53",
       "photoId": "photo-0477",
       "filename": "P1280120.jpg",
       "captureDate": "2025-08-08T18:41:48.000Z",
@@ -920,7 +903,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-55",
+      "id": "people-review-54",
       "photoId": "photo-0520",
       "filename": "P1300638.jpg",
       "captureDate": "2025-08-21T19:03:28.000Z",
@@ -937,7 +920,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-56",
+      "id": "people-review-55",
       "photoId": "photo-0522",
       "filename": "P1300665.jpg",
       "captureDate": "2025-08-21T19:10:02.000Z",
@@ -954,7 +937,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-57",
+      "id": "people-review-56",
       "photoId": "photo-0529",
       "filename": "P1310083.jpg",
       "captureDate": "2025-08-28T19:30:20.000Z",
@@ -971,7 +954,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-58",
+      "id": "people-review-57",
       "photoId": "photo-0533",
       "filename": "1200794-3.jpg",
       "captureDate": "2025-04-07T17:34:43.000Z",
@@ -988,7 +971,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-59",
+      "id": "people-review-58",
       "photoId": "photo-0536",
       "filename": "IMG_0439.jpg",
       "captureDate": "2024-12-13T16:01:10.000Z",
@@ -1005,7 +988,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-60",
+      "id": "people-review-59",
       "photoId": "photo-0537",
       "filename": "IMG_0442.jpg",
       "captureDate": "2024-12-13T16:06:50.000Z",
@@ -1022,7 +1005,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-61",
+      "id": "people-review-60",
       "photoId": "photo-0539",
       "filename": "IMG_1272.jpg",
       "captureDate": "2025-03-26T11:27:06.000Z",
@@ -1039,7 +1022,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-62",
+      "id": "people-review-61",
       "photoId": "photo-0547",
       "filename": "P1210582.jpg",
       "captureDate": "2025-04-24T15:25:41.000Z",
@@ -1056,7 +1039,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-63",
+      "id": "people-review-62",
       "photoId": "photo-0557",
       "filename": "P1230800.jpg",
       "captureDate": "2025-05-16T07:04:32.000Z",
@@ -1073,7 +1056,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-64",
+      "id": "people-review-63",
       "photoId": "photo-0558",
       "filename": "P1240050.jpg",
       "captureDate": "2025-05-21T09:45:25.000Z",
@@ -1090,7 +1073,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-65",
+      "id": "people-review-64",
       "photoId": "photo-0559",
       "filename": "P1240171.jpg",
       "captureDate": "2025-05-22T08:20:57.000Z",
@@ -1107,7 +1090,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-66",
+      "id": "people-review-65",
       "photoId": "photo-0565",
       "filename": "P1240815.jpg",
       "captureDate": "2025-05-29T06:41:25.000Z",
@@ -1124,7 +1107,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-67",
+      "id": "people-review-66",
       "photoId": "photo-0566",
       "filename": "P1240840.jpg",
       "captureDate": "2025-05-29T06:53:10.000Z",
@@ -1141,7 +1124,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-68",
+      "id": "people-review-67",
       "photoId": "photo-0574",
       "filename": "P1250928.jpg",
       "captureDate": "2025-06-08T14:17:25.000Z",
@@ -1158,7 +1141,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-69",
+      "id": "people-review-68",
       "photoId": "photo-0578",
       "filename": "P1260197.jpg",
       "captureDate": "2025-06-17T13:05:47.000Z",
@@ -1175,7 +1158,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-70",
+      "id": "people-review-69",
       "photoId": "photo-0583",
       "filename": "P1260455.jpg",
       "captureDate": "2025-06-26T13:16:20.000Z",
@@ -1192,7 +1175,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-71",
+      "id": "people-review-70",
       "photoId": "photo-0585",
       "filename": "P1260472-2.jpg",
       "captureDate": "2025-06-26T14:01:20.000Z",
@@ -1209,7 +1192,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-72",
+      "id": "people-review-71",
       "photoId": "photo-0589",
       "filename": "P1330174.jpg",
       "captureDate": "2026-01-08T17:20:23.000Z",
@@ -1226,7 +1209,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-73",
+      "id": "people-review-72",
       "photoId": "photo-0592",
       "filename": "P1330250.jpg",
       "captureDate": "2026-01-08T17:58:39.000Z",
@@ -1243,7 +1226,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-74",
+      "id": "people-review-73",
       "photoId": "photo-0597",
       "filename": "P1330584.jpg",
       "captureDate": "2026-01-10T17:55:40.000Z",
@@ -1260,7 +1243,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-75",
+      "id": "people-review-74",
       "photoId": "photo-0601",
       "filename": "P1330780.jpg",
       "captureDate": "2026-01-10T21:37:23.000Z",
@@ -1277,7 +1260,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-76",
+      "id": "people-review-75",
       "photoId": "photo-0603",
       "filename": "P1330795.jpg",
       "captureDate": "2026-01-10T21:39:22.000Z",
@@ -1294,7 +1277,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-77",
+      "id": "people-review-76",
       "photoId": "photo-0604",
       "filename": "P1330816.jpg",
       "captureDate": "2026-01-10T21:40:29.000Z",
@@ -1311,7 +1294,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-78",
+      "id": "people-review-77",
       "photoId": "photo-0607",
       "filename": "P1330959.jpg",
       "captureDate": "2026-01-10T22:37:09.000Z",
@@ -1328,7 +1311,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-79",
+      "id": "people-review-78",
       "photoId": "photo-0616",
       "filename": "P1340622.jpg",
       "captureDate": "2026-01-11T21:23:03.000Z",
@@ -1345,7 +1328,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-80",
+      "id": "people-review-79",
       "photoId": "photo-0617",
       "filename": "P1340662.jpg",
       "captureDate": "2026-01-11T21:41:39.000Z",
@@ -1362,7 +1345,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-81",
+      "id": "people-review-80",
       "photoId": "photo-0618",
       "filename": "P1340697.jpg",
       "captureDate": "2026-01-11T21:57:40.000Z",
@@ -1379,7 +1362,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-82",
+      "id": "people-review-81",
       "photoId": "photo-0636",
       "filename": "P1350669.jpg",
       "captureDate": "2026-01-14T19:31:55.000Z",
@@ -1396,7 +1379,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-83",
+      "id": "people-review-82",
       "photoId": "photo-0663",
       "filename": "P1110394 Kopie.jpg",
       "captureDate": "2024-12-05T15:02:38.000Z",
@@ -1413,7 +1396,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-84",
+      "id": "people-review-83",
       "photoId": "photo-0665",
       "filename": "IMG_6778.JPG",
       "captureDate": "2024-08-24T07:43:42.000Z",
@@ -1430,7 +1413,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-85",
+      "id": "people-review-84",
       "photoId": "photo-0669",
       "filename": "IMG_9319.jpg",
       "captureDate": "2024-11-05T12:52:28.000Z",
@@ -1447,7 +1430,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-86",
+      "id": "people-review-85",
       "photoId": "photo-0670",
       "filename": "IMG_9583.jpg",
       "captureDate": "2024-11-16T16:00:33.000Z",
@@ -1464,7 +1447,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-87",
+      "id": "people-review-86",
       "photoId": "photo-0674",
       "filename": "1160190.jpg",
       "captureDate": "2025-02-16T17:01:14.000Z",
@@ -1481,7 +1464,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-88",
+      "id": "people-review-87",
       "photoId": "photo-0682",
       "filename": "IMG_9174.jpg",
       "captureDate": "2024-10-31T15:21:30.000Z",
@@ -1498,7 +1481,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-89",
+      "id": "people-review-88",
       "photoId": "photo-0696",
       "filename": "Krabi 01.jpg",
       "captureDate": "2024-10-13T11:58:40.000Z",
@@ -1515,7 +1498,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-90",
+      "id": "people-review-89",
       "photoId": "photo-0699",
       "filename": "Sukothai 01.jpg",
       "captureDate": "2024-11-27T14:54:04.000Z",
@@ -1532,7 +1515,7 @@
       "publicationStatus": "NEEDS_OWNER_INPUT"
     },
     {
-      "id": "people-review-91",
+      "id": "people-review-90",
       "photoId": "photo-0701",
       "filename": "Phayam 03.jpg",
       "captureDate": "2024-11-16T16:00:33.000Z",
@@ -1542,14 +1525,14 @@
       "identityStatus": "ANONYMOUS",
       "displayName": null,
       "privacyStatus": "PUBLIC",
-      "peoplePageCandidate": false,
+      "peoplePageCandidate": true,
       "storyCandidate": true,
       "ownerNotes": "Owner explicitly selected this owner-edited surfer frame for the Koh Phayam Story passage in Phase 11.2.",
       "shortMemory": null,
       "publicationStatus": "READY"
     },
     {
-      "id": "people-review-92",
+      "id": "people-review-91",
       "photoId": "photo-0702",
       "filename": "d1092673-4e58-4569-9bcc-c90f58537568.jpg",
       "captureDate": "2024-12-24T12:37:02.000Z",
@@ -1559,11 +1542,113 @@
       "identityStatus": "KNOWN",
       "displayName": null,
       "privacyStatus": "OWNER_APPROVED",
-      "peoplePageCandidate": false,
+      "peoplePageCandidate": true,
       "storyCandidate": true,
       "ownerNotes": "Phase 12.1: the owner explicitly selected this self-portrait-with-buffaloes frame for Story 03.",
       "shortMemory": null,
       "publicationStatus": "READY"
+    },
+    {
+      "id": "people-review-92",
+      "photoId": "photo-0708",
+      "filename": "Journey 02.jpg",
+      "captureDate": "2025-05-13T11:28:17.000Z",
+      "destinationId": "japan",
+      "journeyId": "japan-2025",
+      "classification": "INCIDENTAL_STREET",
+      "identityStatus": "INCIDENTAL_STREET",
+      "displayName": null,
+      "privacyStatus": "PUBLIC_SPACE",
+      "peoplePageCandidate": false,
+      "storyCandidate": true,
+      "ownerNotes": "Asakusa street crowd. Incidental street subjects in a public place; owner selected this frame for Journey Story 05.",
+      "shortMemory": null,
+      "publicationStatus": "OWNER_SELECTED_FOR_STORY"
+    },
+    {
+      "id": "people-review-93",
+      "photoId": "photo-0710",
+      "filename": "journey 04.jpg",
+      "captureDate": "2025-06-08T06:55:35.000Z",
+      "destinationId": "japan",
+      "journeyId": "japan-2025",
+      "classification": "PUBLIC_PERFORMANCE",
+      "identityStatus": "PUBLIC_PERFORMANCE",
+      "displayName": null,
+      "privacyStatus": "PUBLIC_EVENT",
+      "peoplePageCandidate": false,
+      "storyCandidate": true,
+      "ownerNotes": "Festival performer at a public event on Sado; face largely shaded by the hat. Owner selected for Journey Story 05.",
+      "shortMemory": null,
+      "publicationStatus": "OWNER_SELECTED_FOR_STORY"
+    },
+    {
+      "id": "people-review-94",
+      "photoId": "photo-0711",
+      "filename": "Journey 05.jpg",
+      "captureDate": "2025-06-08T06:36:44.000Z",
+      "destinationId": "japan",
+      "journeyId": "japan-2025",
+      "classification": "PUBLIC_PERFORMANCE",
+      "identityStatus": "PUBLIC_PERFORMANCE",
+      "displayName": null,
+      "privacyStatus": "PUBLIC_EVENT",
+      "peoplePageCandidate": false,
+      "storyCandidate": true,
+      "ownerNotes": "Three taiko performers on stage at a public event on Sado. Owner selected for Journey Story 05.",
+      "shortMemory": null,
+      "publicationStatus": "OWNER_SELECTED_FOR_STORY"
+    },
+    {
+      "id": "people-review-95",
+      "photoId": "photo-0712",
+      "filename": "journey 06.jpg",
+      "captureDate": "2025-06-08T08:10:01.000Z",
+      "destinationId": "japan",
+      "journeyId": "japan-2025",
+      "classification": "KNOWN_TO_OWNER",
+      "identityStatus": "KNOWN_TO_OWNER",
+      "displayName": null,
+      "privacyStatus": "OWNER_SELECTED",
+      "peoplePageCandidate": false,
+      "storyCandidate": true,
+      "ownerNotes": "Companions on a day off on Sado; faces visible and people known to the owner. Owner selected this frame for Journey Story 05 — confirm the people in it are content to appear (owner question 9).",
+      "shortMemory": null,
+      "publicationStatus": "OWNER_SELECTED_FOR_STORY"
+    },
+    {
+      "id": "people-review-96",
+      "photoId": "photo-0715",
+      "filename": "journey 09.jpg",
+      "captureDate": "2025-06-26T14:01:20.000Z",
+      "destinationId": "japan",
+      "journeyId": "japan-2025",
+      "classification": "INCIDENTAL_STREET",
+      "identityStatus": "INCIDENTAL_STREET",
+      "displayName": null,
+      "privacyStatus": "PUBLIC_SPACE",
+      "peoplePageCandidate": false,
+      "storyCandidate": true,
+      "ownerNotes": "Shinsaibashi-suji crowd, Osaka. Incidental street subjects in a public place; owner selected for Journey Story 05.",
+      "shortMemory": null,
+      "publicationStatus": "OWNER_SELECTED_FOR_STORY"
+    },
+    {
+      "id": "people-review-97",
+      "photoId": "photo-0716",
+      "filename": "journey 10.jpg",
+      "captureDate": "2025-05-16T07:36:00.000Z",
+      "destinationId": "japan",
+      "journeyId": "japan-2025",
+      "classification": "KNOWN_TO_OWNER",
+      "identityStatus": "KNOWN_TO_OWNER",
+      "displayName": null,
+      "privacyStatus": "OWNER_SELECTED",
+      "peoplePageCandidate": false,
+      "storyCandidate": true,
+      "ownerNotes": "Kotaro in a tarai-bune with a guest. Owner explicitly confirmed the subject and asked for this frame in Journey Story 05. First name appears in the Story text; no further personal detail is published and the photograph carries no caption.",
+      "shortMemory": null,
+      "publicationStatus": "OWNER_APPROVED_FOR_STORY"
     }
   ]
 }
