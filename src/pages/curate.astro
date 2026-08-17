@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import catalogData from '../../public/data/photo-catalog.json';
+import catalogData from '../data/photo-catalog';
 import curationData from '../../data/photo-curation.json';
 import journeyData from '../../data/journeys.json';
 import questionData from '../../data/owner-questions.json';
 import peopleData from '../../data/people-review.json';
+import { homePath } from '../config/paths';
 
 const enabled = import.meta.env.DEV;
 const catalog = enabled ? catalogData.photos : [];
@@ -20,7 +21,7 @@ const transitionCount = enabled ? Object.values(assignments).filter((item) => it
   {enabled ? (
     <main id="main" class="curation-studio" data-curation-root data-count={catalog.length}>
       <header class="curation-header">
-        <div><a href="/">ELSEWHERE</a><span>Local curation studio</span></div>
+        <div><a href={homePath}>ELSEWHERE</a><span>Local curation studio</span></div>
         <p>Changes stay in this browser until exported. Masters and JPEG metadata are never modified.</p>
         <button type="button" data-export-curation>Export JSON</button>
       </header>
@@ -92,7 +93,7 @@ const transitionCount = enabled ? Object.values(assignments).filter((item) => it
       <script type="application/json" id="curation-baseline" set:html={JSON.stringify(assignments)} />
     </main>
   ) : (
-    <main id="main" class="curation-disabled"><p>Not found.</p><a href="/">Return to Elsewhere</a></main>
+    <main id="main" class="curation-disabled"><p>Not found.</p><a href={homePath}>Return to Elsewhere</a></main>
   )}
   {enabled && <script>import '../scripts/curation';</script>}
 </BaseLayout>

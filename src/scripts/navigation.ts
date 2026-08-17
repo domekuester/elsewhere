@@ -1,3 +1,4 @@
+import { homePath } from '../config/paths';
 const menuButton = document.querySelector<HTMLButtonElement>('[data-menu-button]');
 const nav = document.querySelector<HTMLElement>('[data-nav]');
 const mobile = matchMedia('(max-width: 900px)');
@@ -59,7 +60,7 @@ header?.addEventListener('focusin', () => root.removeAttribute('data-header-hidd
 
 menuButton?.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
 homeLink?.addEventListener('click', (event) => {
-  if (location.pathname !== '/') return;
+  if (location.pathname !== homePath) return;
   event.preventDefault();
   window.scrollTo({ top: 0, behavior: 'instant' });
   if (location.hash) history.replaceState(history.state, '', `${location.pathname}${location.search}`);

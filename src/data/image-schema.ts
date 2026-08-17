@@ -1,4 +1,5 @@
 import { business, site } from '../config/site';
+import { absoluteUrl } from '../config/paths';
 
 interface CatalogPhoto {
   id: string;
@@ -48,7 +49,7 @@ export const imageObject = (photo: CatalogPhoto, siteUrl: URL, pageUrl: string, 
     creditText: business.creditText,
     copyrightNotice: business.copyrightNotice,
     ...(photo.year ? { copyrightYear: photo.year } : {}),
-    ...(canEnquire ? { acquireLicensePage: new URL(business.licensingPage, siteUrl).href } : {}),
+    ...(canEnquire ? { acquireLicensePage: absoluteUrl(business.licensingPage, siteUrl) } : {}),
     ...(representative ? { representativeOfPage: true } : {}),
     isPartOf: { '@type': 'WebPage', url: pageUrl, name: site.name },
   };
@@ -62,6 +63,6 @@ export const breadcrumbs = (trail: Array<{ name: string; path: string }>, siteUr
     '@type': 'ListItem',
     position: index + 1,
     name: item.name,
-    item: new URL(item.path, siteUrl).href,
+    item: absoluteUrl(item.path, siteUrl),
   })),
 });

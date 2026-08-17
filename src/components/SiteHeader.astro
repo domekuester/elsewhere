@@ -1,12 +1,17 @@
 ---
 import { site } from '../config/site';
+import { homePath, withBase } from '../config/paths';
 const path = Astro.url.pathname;
 const { archiveHref = '/archive/' } = Astro.props;
-const navigation = site.navigation.map((item) => item.href === '/archive/' ? { ...item, href: archiveHref } : item);
+// The archive swap compares site-relative paths, then the deployment base is applied once on
+// the way into the markup. `path` already carries the base, so `aria-current` still matches.
+const navigation = site.navigation
+  .map((item) => item.href === '/archive/' ? { ...item, href: archiveHref } : item)
+  .map((item) => ({ ...item, href: withBase(item.href) }));
 ---
 
 <header class="site-header" data-header>
-  <a class="wordmark" href="/" aria-label={`${site.name}, home`} data-home-link>{site.name}</a>
+  <a class="wordmark" href={homePath} aria-label={`${site.name}, home`} data-home-link>{site.name}</a>
   <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-button>
     <span class="menu-label">Index</span><span class="menu-glyph" aria-hidden="true"></span>
   </button>

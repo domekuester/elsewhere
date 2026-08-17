@@ -1,3 +1,5 @@
+import { withBase } from '../config/paths';
+
 interface CatalogPhoto {
   id: string; index: number; thumbnail: string; archiveImage: string; viewerImage: string; width: number; height: number;
   orientation: string | null; year: number | null; visualWorlds: string[]; destination: string | null; destinationId: string | null; destinationSlug: string | null; destinationPublished: boolean;
@@ -128,14 +130,14 @@ if (root) {
     viewerMeta.closest<HTMLElement>('.viewer-caption')!.classList.toggle('has-no-meta', facts.length === 0 && !photo.destinationPublished);
     viewerDestination.hidden = !photo.destinationPublished;
     if (photo.destinationPublished && photo.destinationSlug) {
-      viewerDestination.href = `/destinations/${photo.destinationSlug}/`;
+      viewerDestination.href = withBase(`/destinations/${photo.destinationSlug}/`);
       viewerDestination.firstChild!.textContent = `Open ${photo.destination} `;
     }
     if (viewerLicensing) {
       // A licensing enquiry must name the exact photograph, so the public archive reference travels with it.
       const reference = String(photo.index).padStart(3, '0');
       viewerLicensing.hidden = photo.licensing === 'unavailable';
-      viewerLicensing.href = `/contact/?type=licensing&photo=${reference}`;
+      viewerLicensing.href = withBase(`/contact/?type=licensing&photo=${reference}`);
       viewerLicensing.dataset.analyticsContext = reference;
     }
     if (!viewer.open) {
@@ -160,8 +162,15 @@ if (root) {
     wakeViewer();
   };
 
-  fetch('/data/photo-catalog.json').then((response) => response.json()).then((data) => {
-    const source: CatalogPhoto[] = data.photos;
+  // The catalog is served as a static file and stores site-relative derivative paths, so the
+  // deployment base is applied once here rather than at each of the three URLs' render sites.
+  fetch(withBase('/data/photo-catalog.json')).then((response) => response.json()).then((data) => {
+    const source: CatalogPhoto[] = (data.photos as CatalogPhoto[]).map((photo) => ({
+      ...photo,
+      thumbnail: withBase(photo.thumbnail),
+      archiveImage: withBase(photo.archiveImage),
+      viewerImage: withBase(photo.viewerImage),
+    }));
     const selected = source.filter((photo) => photo.featured).sort((a, b) => Number(a.editorialOrder) - Number(b.editorialOrder));
     const depth = source.filter((photo) => !photo.featured);
     catalog = Array.from({ length: Math.max(selected.length, depth.length) }, (_, index) => [selected[index], depth[index]]).flat().filter(Boolean) as CatalogPhoto[];

@@ -1,0 +1,67 @@
+name: Deploy to GitHub Pages
+
+# ELSEWHERE is published at https://domekuester.github.io/elsewhere/ — a project page, so the
+# public site lives under a repository subpath. SITE_URL below carries both the origin and that
+# path; astro.config.mjs splits it into Astro's `site` and `base`, so this workflow is the only
+# place the deployment target is written down.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# A publish should finish rather than be cancelled halfway by the next push.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The photographic derivatives make the history large; the build only needs the tip.
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - run: npm ci
+
+      # `npm run build` is the project's real gate: content validation, owner photo exclusions,
+      # the production boundary that strips /curate/, the built-output exclusion audit, and
+      # launch validation. A failure in any of them must stop the deployment, not warn.
+      - name: Build and validate
+        env:
+          SITE_URL: https://domekuester.github.io/elsewhere
+          # Owner-supplied values. Absent, the site degrades honestly: enquiry actions are not
+          # rendered and /contact/ is noindexed rather than shipping an address nobody reads.
+          PUBLIC_CONTACT_EMAIL: ${{ vars.PUBLIC_CONTACT_EMAIL }}
+          PUBLIC_CREATOR_NAME: ${{ vars.PUBLIC_CREATOR_NAME }}
+          PUBLIC_ANALYTICS_PROVIDER: ${{ vars.PUBLIC_ANALYTICS_PROVIDER }}
+          PUBLIC_ANALYTICS_DOMAIN: ${{ vars.PUBLIC_ANALYTICS_DOMAIN }}
+        run: npm run build
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

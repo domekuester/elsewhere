@@ -5,7 +5,8 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import EnquiryAction from '../components/EnquiryAction.astro';
 import { business, site } from '../config/site';
-import catalogData from '../../public/data/photo-catalog.json';
+import catalogData from '../data/photo-catalog';
+import { absoluteUrl, withBase } from '../config/paths';
 
 // Studio was built entirely from Home's photographs, so a professional who scrolled the homepage
 // and then opened Studio met the same four pictures again — the weakest possible argument from a
@@ -55,8 +56,8 @@ const studioSchema = {
   '@type': 'ProfessionalService',
   name: 'Elsewhere Studio',
   description: 'Photography, visual storytelling and image-led digital experiences for hospitality, travel and creative brands.',
-  url: new URL('/studio/', Astro.site).href,
-  parentOrganization: { '@type': 'Organization', name: site.name, url: Astro.site.href },
+  url: absoluteUrl('/studio/', Astro.site),
+  parentOrganization: { '@type': 'Organization', name: site.name, url: absoluteUrl('/', Astro.site) },
   serviceType: ['Photography', 'Visual storytelling', 'Web design and development'],
   ...(business.enquiriesEnabled ? { email: business.contactEmail } : {}),
 };
@@ -123,9 +124,9 @@ const studioSchema = {
         <h2 id="studio-proof-title">This site is<br />the portfolio.</h2>
         <p>Every photograph here was made on location. Every page was designed and built alongside it. The archive, the immersive viewer, the destination chapters and the monochrome collection are the working sample.</p>
         <p class="prose-links">
-          <a class="editorial-link" href="/archive/" data-analytics-event="archive_open" data-analytics-context="studio">The archive <span aria-hidden="true">→</span></a>
-          <a class="editorial-link" href="/destinations/japan/" data-analytics-event="destination_open" data-analytics-context="studio:japan">A destination chapter <span aria-hidden="true">→</span></a>
-          <a class="editorial-link" href="/collections/black-and-white/" data-analytics-event="black_white_open" data-analytics-context="studio">Black &amp; White <span aria-hidden="true">→</span></a>
+          <a class="editorial-link" href={withBase("/archive/")} data-analytics-event="archive_open" data-analytics-context="studio">The archive <span aria-hidden="true">→</span></a>
+          <a class="editorial-link" href={withBase("/destinations/japan/")} data-analytics-event="destination_open" data-analytics-context="studio:japan">A destination chapter <span aria-hidden="true">→</span></a>
+          <a class="editorial-link" href={withBase("/collections/black-and-white/")} data-analytics-event="black_white_open" data-analytics-context="studio">Black &amp; White <span aria-hidden="true">→</span></a>
         </p>
       </div>
       <div class="studio-proof-grid">

@@ -3,8 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import { publishedJourneyStories } from '../../data/journey';
-import catalogData from '../../../public/data/photo-catalog.json';
+import catalogData from '../../data/photo-catalog';
 import surfaceHeroData from '../../../data/surface-heroes.json';
+import { withBase } from '../../config/paths';
 
 // One story is not a category, and an index of nothing is a placeholder. Same construction as the
 // Field Notes index: a catch-all whose only path is the bare route, emitting nothing at all until
@@ -37,7 +38,7 @@ const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orienta
         const hero = surfaceHeroData.surfaces[story.heroSurfaceKey];
         const photo = hero ? photosById.get(hero.photoId) : null;
         return (
-          <a class:list={['journey-folio', `is-${photo?.orientation ?? 'landscape'}`, `folio-${story.indexFolio ?? 'landscape-right'}`]} href={`/journey/${story.slug}/`} data-analytics-event="journey_open" data-analytics-context={story.slug}>
+          <a class:list={['journey-folio', `is-${photo?.orientation ?? 'landscape'}`, `folio-${story.indexFolio ?? 'landscape-right'}`]} href={withBase(`/journey/${story.slug}/`)} data-analytics-event="journey_open" data-analytics-context={story.slug}>
             {photo && (
               <img
                 src={photo.thumbnail}

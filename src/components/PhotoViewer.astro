@@ -1,5 +1,6 @@
 ---
 import { business } from '../config/site';
+import { homePath } from '../config/paths';
 // The licensing action lives in the secondary caption row, never over the photograph.
 // It is only present at all when a verified enquiry address exists; the archive script
 // then reveals it per photograph according to that frame's rights state.
@@ -12,7 +13,7 @@ import { business } from '../config/site';
     <span class="viewer-loading" data-viewer-loading role="status">Loading full photograph</span>
   </div>
   <div class="viewer-chrome">
-    <a class="viewer-wordmark" href="/">ELSEWHERE</a>
+    <a class="viewer-wordmark" href={homePath}>ELSEWHERE</a>
     <p class="viewer-count" aria-live="polite"><span data-viewer-current>01</span> / <span data-viewer-total>00</span></p>
     <button class="viewer-close" type="button" data-viewer-close aria-label="Close photograph">Close <span aria-hidden="true">×</span></button>
     <button class="viewer-nav viewer-previous" type="button" data-viewer-previous aria-label="Previous photograph"><span aria-hidden="true">←</span></button>

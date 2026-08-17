@@ -12,6 +12,18 @@ if (fs.existsSync('.env')) {
     if (match && !process.env[match[1]]) process.env[match[1]] = match[2].replace(/^["']|["']$/g, '');
   }
 }
+// dist/ is the deployment root, not the domain root. On GitHub Pages project hosting the public
+// site lives under /elsewhere/, so every URL this script reads back out of the build carries a
+// prefix that the filesystem does not. Strip it before touching disk or comparing routes.
+const basePrefix = (() => {
+  try { return new URL(process.env.SITE_URL || 'http://localhost:4321').pathname.replace(/\/+$/, ''); }
+  catch { return ''; }
+})();
+const sitePath = (urlPath) => basePrefix && (urlPath === basePrefix || urlPath.startsWith(`${basePrefix}/`))
+  ? urlPath.slice(basePrefix.length) || '/'
+  : urlPath;
+const distFile = (urlPath) => path.join('dist', sitePath(urlPath));
+
 const exclusions = JSON.parse(read('data/public-image-exclusions.json'));
 const forbiddenTokens = exclusions.ownerRejected.flatMap((item) => [item.photoId, item.filename, path.parse(item.filename).name]);
 const htmlFiles = [];
@@ -49,7 +61,7 @@ for (const file of htmlFiles) {
     titleValues.set(title, file);
   }
   const socialPath = html.match(/<meta property="og:image" content="https?:\/\/[^/]+(\/[^\"]+)">/)?.[1];
-  if (socialPath && !fs.existsSync(path.join('dist', socialPath))) errors.push(`${file} references missing social image ${socialPath}`);
+  if (socialPath && !fs.existsSync(distFile(socialPath))) errors.push(`${file} references missing social image ${socialPath}`);
   if (forbiddenTokens.some((token) => html.includes(token))) errors.push(`${file} contains an owner-rejected photograph reference`);
 }
 
@@ -62,13 +74,15 @@ for (const item of exclusions.ownerRejected) {
 }
 
 const robots = fs.existsSync('dist/robots.txt') ? read('dist/robots.txt') : '';
-if (!robots.includes('Disallow: /curate/')) errors.push('robots.txt does not disallow /curate/');
+if (!robots.includes(`Disallow: ${basePrefix}/curate/`)) errors.push('robots.txt does not disallow /curate/');
 const sitemap = fs.existsSync('dist/sitemap.xml') ? read('dist/sitemap.xml') : '';
 if (sitemap.includes('/curate/')) errors.push('sitemap.xml exposes /curate/');
 
 // Phase 9 — launch surfaces, discovery and the commercial layer.
 const ownerActions = [];
-const sitemapPaths = [...sitemap.matchAll(/<loc>https?:\/\/[^/]+([^<]*)<\/loc>/g)].map((match) => match[1]);
+// Normalised to site-relative so both the on-disk lookup below and the route comparison
+// further down stay valid whether or not the site is mounted on a subpath.
+const sitemapPaths = [...sitemap.matchAll(/<loc>https?:\/\/[^/]+([^<]*)<\/loc>/g)].map((match) => sitePath(match[1]));
 for (const route of sitemapPaths) {
   const file = route === '/' ? 'dist/index.html' : path.join('dist', route, 'index.html');
   if (!fs.existsSync(file)) { errors.push(`sitemap lists ${route} but ${file} was not built`); continue; }
@@ -84,11 +98,71 @@ for (const file of htmlFiles) {
   if (!listed && !noindexed && !file.endsWith('404.html')) errors.push(`${route} is neither in the sitemap nor noindexed`);
 }
 
+// Phase 10.2 — every site-absolute link and asset in the built HTML must carry the deployment
+// base and must resolve to something that was actually built.
+//
+// Serving from a repository subpath makes this the failure mode with the widest blast radius and
+// the quietest symptom: a forgotten prefix still emits valid HTML, and the page simply loads
+// without its photographs. Astro prefixes what it owns — bundled CSS and JS, `astro:assets`
+// output, `url()` inside stylesheets — but a hand-written path in markup is passed through
+// verbatim, so this checks the built result rather than trusting the source.
+const linkErrors = [];
+const assetErrors = [];
+const externalScheme = /^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i;
+const resolvesInBuild = (urlPath) => {
+  const clean = decodeURIComponent(urlPath.split(/[?#]/)[0]);
+  if (clean.endsWith('/')) return fs.existsSync(path.join('dist', sitePath(clean), 'index.html'));
+  const target = distFile(clean);
+  return fs.existsSync(target) && fs.statSync(target).isFile();
+};
+for (const file of htmlFiles) {
+  const html = read(file);
+  const references = new Set();
+  for (const [, value] of html.matchAll(/(?:href|src)="([^"]*)"/g)) references.add(value);
+  // A srcset is a comma-separated list of "url descriptor" pairs; only the url half is a path.
+  for (const [, value] of html.matchAll(/srcset="([^"]*)"/g)) {
+    for (const candidate of value.split(',')) {
+      const url = candidate.trim().split(/\s+/)[0];
+      if (url) references.add(url);
+    }
+  }
+  for (const reference of references) {
+    if (!reference || externalScheme.test(reference) || !reference.startsWith('/')) continue;
+    const isAsset = /\.[a-z0-9]{2,5}$/i.test(reference.split(/[?#]/)[0]);
+    const bucket = isAsset ? assetErrors : linkErrors;
+    if (basePrefix && !(reference === basePrefix || reference.startsWith(`${basePrefix}/`))) {
+      bucket.push(`${file}: ${reference} is missing the ${basePrefix} deployment base`);
+      continue;
+    }
+    if (!resolvesInBuild(reference)) bucket.push(`${file}: ${reference} was not built`);
+  }
+}
+const report = (label, list) => {
+  if (!list.length) return;
+  errors.push(`${list.length} ${label}, first ${Math.min(5, list.length)}:\n    ${list.slice(0, 5).join('\n    ')}`);
+};
+report('broken internal link(s)', linkErrors);
+report('broken public asset reference(s)', assetErrors);
+
+// The same omission can hide inside an absolute URL rather than a path — a canonical, an Open
+// Graph URL, or a schema.org `url` built from the configured origin without the base. The
+// publication owns only its own subpath, so any self-referencing absolute URL must start there.
+if (basePrefix && process.env.SITE_URL) {
+  const origin = new URL(process.env.SITE_URL).origin;
+  const rootScoped = [];
+  for (const file of [...htmlFiles, 'dist/sitemap.xml', 'dist/sitemap-images.xml', 'dist/robots.txt'].filter((entry) => fs.existsSync(entry))) {
+    for (const [url] of read(file).matchAll(new RegExp(`${origin.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[^"'<)\\s]*`, 'g'))) {
+      if (!new URL(url).pathname.startsWith(`${basePrefix}/`)) rootScoped.push(`${file}: ${url}`);
+    }
+  }
+  report(`absolute URL(s) pointing outside ${basePrefix}/`, [...new Set(rootScoped)]);
+}
+
 if (!fs.existsSync('dist/sitemap-images.xml')) errors.push('Missing dist/sitemap-images.xml');
 else {
   const imageSitemap = read('dist/sitemap-images.xml');
   const declared = [...imageSitemap.matchAll(/<image:loc>https?:\/\/[^/]+([^<]*)<\/image:loc>/g)].map((match) => match[1]);
-  const missing = declared.filter((asset) => !fs.existsSync(path.join('dist', decodeURIComponent(asset))));
+  const missing = declared.filter((asset) => !fs.existsSync(distFile(decodeURIComponent(asset))));
   if (missing.length) errors.push(`Image sitemap declares ${missing.length} missing asset(s), first: ${missing[0]}`);
   if (forbiddenTokens.some((token) => imageSitemap.includes(token))) errors.push('Image sitemap contains an owner-rejected photograph reference');
 }
@@ -123,7 +197,7 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Launch validation passed: ${htmlFiles.length} public HTML files, unique canonicals, complete social metadata, private route excluded, sitemap and image sitemap consistent.`);
+console.log(`Launch validation passed: ${htmlFiles.length} public HTML files, unique canonicals, complete social metadata, private route excluded, sitemap and image sitemap consistent, 0 broken internal links and 0 broken public assets under base "${basePrefix || '/'}".`);
 // Owner-supplied values are launch decisions, not software defects: they are reported, never fatal.
 if (ownerActions.length) {
   console.warn(`\n${ownerActions.length} owner action(s) required before production launch:`);

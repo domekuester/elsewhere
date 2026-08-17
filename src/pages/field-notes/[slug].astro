@@ -5,8 +5,9 @@ import SiteFooter from '../../components/SiteFooter.astro';
 import AffiliateNote from '../../components/AffiliateNote.astro';
 import { publishedFieldNotes, renderableRecommendations, requiresAffiliateDisclosure } from '../../data/field-notes';
 import { business, site } from '../../config/site';
-import catalogData from '../../../public/data/photo-catalog.json';
+import catalogData from '../../data/photo-catalog';
 import destinationData from '../../../data/destinations.json';
+import { absoluteUrl, withBase } from '../../config/paths';
 
 // Only published notes become routes. Drafts and owner-review notes build nothing at all,
 // so there is no draft URL to leak and nothing for a crawler to find.
@@ -20,7 +21,7 @@ const hero = note.heroPhotoId ? photosById.get(note.heroPhotoId) : null;
 const sequence = note.photoIds.map((id) => photosById.get(id)).filter(Boolean);
 const destination = destinationData.destinations.find((item) => item.id === note.destinationId);
 const recommendations = renderableRecommendations(note);
-const canonical = new URL(`/field-notes/${note.slug}/`, Astro.site).href;
+const canonical = absoluteUrl(`/field-notes/${note.slug}/`, Astro.site);
 const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
 
 const noteSchema = {
@@ -32,7 +33,7 @@ const noteSchema = {
   datePublished: note.publishedAt,
   dateModified: note.updatedAt ?? note.publishedAt,
   author: { '@type': business.creatorIsPerson ? 'Person' : 'Organization', name: business.creator },
-  publisher: { '@type': 'Organization', name: site.name, url: Astro.site.href },
+  publisher: { '@type': 'Organization', name: site.name, url: absoluteUrl('/', Astro.site) },
   ...(hero ? { image: new URL(hero.viewerImage, Astro.site).href } : {}),
   ...(destination ? { contentLocation: { '@type': 'Place', name: destination.name } } : {}),
 };
@@ -94,11 +95,11 @@ const noteSchema = {
 
     <aside class="field-note-next">
       {destination?.publicationStatus === 'published' && (
-        <a href={`/destinations/${destination.slug}/`} data-analytics-event="destination_open" data-analytics-context={`field-note:${note.slug}`}>
+        <a href={withBase(`/destinations/${destination.slug}/`)} data-analytics-event="destination_open" data-analytics-context={`field-note:${note.slug}`}>
           <span>{destination.name}</span><b aria-hidden="true">→</b>
         </a>
       )}
-      <a class="editorial-link" href="/field-notes/" data-analytics-event="field_note_open" data-analytics-context="index">All field notes <span aria-hidden="true">→</span></a>
+      <a class="editorial-link" href={withBase("/field-notes/")} data-analytics-event="field_note_open" data-analytics-context="index">All field notes <span aria-hidden="true">→</span></a>
     </aside>
   </main>
   <SiteFooter />

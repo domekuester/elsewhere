@@ -4,13 +4,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import cityTaxis from '../../assets/photos/bw-city-taxis.jpg';
+import { withBase } from '../../config/paths';
 ---
 
 <BaseLayout title="Collections — Elsewhere" description="Authored photographic edits from the Elsewhere archive." robots="noindex, follow, max-image-preview:large" image="/social/black-and-white.jpg" imageAlt="A breakwater lighthouse beneath a long grey sky">
   <SiteHeader />
   <main id="main" class="collections-page">
     <header class="collections-intro"><span class="memory-mark" aria-hidden="true"></span><h1>Collections</h1><p>Not filters. Photographic edits built around a visual question, a recurring gesture, or a change in atmosphere.</p></header>
-    <a class="collection-entry" href="/collections/black-and-white/">
+    <a class="collection-entry" href={withBase("/collections/black-and-white/")}>
       <Image src={cityTaxis} alt="Dark taxis cross a dense city street beneath an overcast sky" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 54vw, 100vw" loading="eager" fetchpriority="high" />
       <div><span class="memory-mark" aria-hidden="true"></span><h2>Black<br />&amp; White</h2><p>A quieter room in the archive.</p><b aria-hidden="true">→</b></div>
     </a>

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { site, business } from '../config/site';
+import { homePath, withBase } from '../config/paths';
 
 interface Props {
   title?: string;
@@ -23,12 +24,18 @@ const {
   pageType = 'website',
   schema,
 } = Astro.props;
+// `Astro.url.pathname` already carries the deployment base, so the canonical needs no
+// correction. A share image does: it arrives either as a hand-written `/social/…` literal or
+// as a photograph URL already corrected at the data boundary, and `withBase` is idempotent,
+// so applying it here covers every page without any of them repeating it.
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const socialImage = new URL(image, Astro.site);
-const isHome = Astro.url.pathname === '/';
+const socialImage = new URL(withBase(image), Astro.site);
+// The publication root is '/elsewhere/' once mounted on a subpath, not '/'.
+const siteHome = new URL(homePath, Astro.site).href;
+const isHome = Astro.url.pathname === homePath;
 const defaultSchema = [
-  ...(isHome ? [{ '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, description: site.description, url: Astro.site.href }] : []),
-  { '@context': 'https://schema.org', '@type': 'WebPage', name: title, description, url: canonical.href, isPartOf: { '@type': 'WebSite', name: site.name, url: Astro.site.href }, primaryImageOfPage: { '@type': 'ImageObject', contentUrl: socialImage.href, caption: imageAlt } },
+  ...(isHome ? [{ '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, description: site.description, url: siteHome }] : []),
+  { '@context': 'https://schema.org', '@type': 'WebPage', name: title, description, url: canonical.href, isPartOf: { '@type': 'WebSite', name: site.name, url: siteHome }, primaryImageOfPage: { '@type': 'ImageObject', contentUrl: socialImage.href, caption: imageAlt } },
 ];
 const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : defaultSchema;
 ---
@@ -59,9 +66,9 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : defaultSc
     <meta name="twitter:image" content={socialImage} />
     <meta name="twitter:image:alt" content={imageAlt} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preload" href="/fonts/barlow-condensed-regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/literata-italic.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    <link rel="preload" href={withBase('/fonts/barlow-condensed-regular.woff2')} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={withBase('/fonts/literata-italic.woff2')} as="font" type="font/woff2" crossorigin />
     <title>{title}</title>
     {schemas.map((item) => <script type="application/ld+json" set:html={JSON.stringify(item)} />)}
   </head>

@@ -11,10 +11,21 @@ const publicExclusions = new Set([
   ...exclusions.duplicateFamilies.flatMap((family) => family.excludeIds)
 ]);
 
+// Phase 10.3 — the viewer tier carries 72% of the published payload, and GitHub Pages refuses to
+// publish a site larger than 1 GB. Its quality moved 90 → 86 and nothing else changed: the 3200px
+// long edge is retained, so a viewer on a 1440px retina display still receives more pixels than it
+// can show, and 4:4:4 chroma is retained, which is what actually protects saturated colour edges.
+//
+// Measured on a 14-frame sample chosen from the pixels rather than from tags — the largest files,
+// the darkest frames, the highest-detail frames, portraits, monochrome, foliage, architecture and
+// smooth sky: luma SSIM 0.970 average and 0.937 worst case, 39.4 dB PSNR, mean chroma ΔE 1.17.
+// Side-by-side 1:1 crops and full-frame views at 1440px showed no visible artefacts, banding, or
+// loss of shadow detail. 4:2:0 would have saved more but tripled chroma error (ΔE max 39), which
+// on this archive's saturated frames is a visible cost; it was rejected for that reason.
 const roles = [
   { name: 'thumbnails', max: 960, quality: 84, chromaSubsampling: '4:2:0' },
   { name: 'archive', max: 1800, quality: 86, chromaSubsampling: '4:4:4' },
-  { name: 'viewer', max: 3200, quality: 90, chromaSubsampling: '4:4:4' }
+  { name: 'viewer', max: 3200, quality: 86, chromaSubsampling: '4:4:4' }
 ];
 const outputRoot = path.join(root, 'public/assets-derived');
 for (const role of roles) fs.mkdirSync(path.join(outputRoot, role.name), { recursive: true });

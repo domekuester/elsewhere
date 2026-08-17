@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { business } from '../config/site';
+import { withBase } from '../config/paths';
 
 // One form, several intents. There is no server endpoint: the form composes a message to a
 // verified address, so there is no request handler to attack and no data held in transit.
@@ -82,8 +83,8 @@ const enabled = business.enquiriesEnabled;
           <p><b>Commissions.</b> Location, rough dates and what the photographs are for is enough to start.</p>
           <p><b>Prints.</b> Print editions are not yet released. Note which photograph interests you and you will hear when they are.</p>
           <p class="prose-links">
-            <a class="editorial-link" href="/studio/" data-analytics-event="studio_open" data-analytics-context="contact">Elsewhere Studio <span aria-hidden="true">→</span></a>
-            <a class="editorial-link" href="/licensing/" data-analytics-event="licensing_open" data-analytics-context="contact">How licensing works <span aria-hidden="true">→</span></a>
+            <a class="editorial-link" href={withBase("/studio/")} data-analytics-event="studio_open" data-analytics-context="contact">Elsewhere Studio <span aria-hidden="true">→</span></a>
+            <a class="editorial-link" href={withBase("/licensing/")} data-analytics-event="licensing_open" data-analytics-context="contact">How licensing works <span aria-hidden="true">→</span></a>
           </p>
         </aside>
       </section>

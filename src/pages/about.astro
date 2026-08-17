@@ -5,7 +5,7 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import EnquiryAction from '../components/EnquiryAction.astro';
 import { business } from '../config/site';
-import catalogData from '../../public/data/photo-catalog.json';
+import catalogData from '../data/photo-catalog';
 import destinationData from '../../data/destinations.json';
 // About shared its lead photograph with Home's environment section and, until this phase, with the
 // Studio hero as well.
@@ -16,6 +16,7 @@ const aboutFrame = (() => {
 })();
 const aboutDerivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
 import handShell from '../assets/photos/hand-shell.jpg';
+import { withBase } from '../config/paths';
 
 // Every number on this page is read from the archive rather than written by hand.
 const publicPhotographs = catalogData.count;
@@ -69,8 +70,8 @@ const span = `${years[0]}—${years.at(-1) === new Date().getFullYear() ? 'ongoi
         <p>The same eye that made this archive is available for commissioned work — photography, visual storytelling, and image-led digital experiences. That side of the practice lives in the Studio.</p>
         <p>Individual photographs from the archive may also be licensed. Availability depends on the rights held for each frame and is confirmed on request.</p>
         <p class="prose-links">
-          <a class="editorial-link" href="/studio/" data-analytics-event="studio_open" data-analytics-context="about">Elsewhere Studio <span aria-hidden="true">→</span></a>
-          <a class="editorial-link" href="/licensing/" data-analytics-event="licensing_open" data-analytics-context="about">Licensing <span aria-hidden="true">→</span></a>
+          <a class="editorial-link" href={withBase("/studio/")} data-analytics-event="studio_open" data-analytics-context="about">Elsewhere Studio <span aria-hidden="true">→</span></a>
+          <a class="editorial-link" href={withBase("/licensing/")} data-analytics-event="licensing_open" data-analytics-context="about">Licensing <span aria-hidden="true">→</span></a>
         </p>
       </div>
     </section>

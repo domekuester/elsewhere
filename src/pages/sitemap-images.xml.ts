@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
-import catalogData from '../../public/data/photo-catalog.json';
+import catalogData from '../data/photo-catalog';
 import destinationData from '../../data/destinations.json';
+import { absoluteUrl } from '../config/paths';
 
 /**
  * A dedicated image sitemap earns its place here: the archive loads incrementally through
@@ -42,7 +43,7 @@ export const GET: APIRoute = ({ site }) => {
 
   const urls = entries
     .filter(([, list]) => list.length > 0)
-    .map(([path, list]) => `<url><loc>${new URL(path, site).href}</loc>${list.map(imageTag).join('')}</url>`)
+    .map(([path, list]) => `<url><loc>${absoluteUrl(path, site)}</loc>${list.map(imageTag).join('')}</url>`)
     .join('');
 
   return new Response(

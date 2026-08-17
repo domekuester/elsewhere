@@ -6,7 +6,8 @@ import SiteFooter from '../../components/SiteFooter.astro';
 import vendor from '../../assets/photos/people-vendor.jpg';
 import motorcycle from '../../assets/photos/people-motorcycle.jpg';
 import goldenPortrait from '../../assets/photos/golden-portrait.jpg';
-import catalogData from '../../../public/data/photo-catalog.json';
+import catalogData from '../../data/photo-catalog';
+import { withBase } from '../../config/paths';
 
 // People sat behind a main-navigation entry with three photographs in it. These six are drawn from
 // the frames a full visual review of the archive marked as being *about* a person — not merely
@@ -48,7 +49,7 @@ const deeperSizes = (role) => ['threshold', 'closing'].includes(role)
 
     <section class="encounter-sequence" aria-labelledby="encounter-title">
       <header><h2 id="encounter-title">Encounters,<br />not profiles.</h2><p>Names and places will appear only when known and appropriate. Until then, the photograph remains without invented biography.</p></header>
-      <figure class="encounter encounter-worker" data-photo-reveal><img src="/assets-derived/thumbnails/0045-IMG_8992.jpg" srcset="/assets-derived/thumbnails/0045-IMG_8992.jpg 720w, /assets-derived/archive/0045-IMG_8992.jpg 1350w" sizes="(min-width: 901px) 38vw, 88vw" width="2994" height="3992" alt="A seated craftsperson works beside a window" loading="lazy" decoding="async" /><figcaption>Work · Thailand</figcaption></figure>
+      <figure class="encounter encounter-worker" data-photo-reveal><img src={withBase("/assets-derived/thumbnails/0045-IMG_8992.jpg")} srcset={`${withBase("/assets-derived/thumbnails/0045-IMG_8992.jpg")} 720w, ${withBase("/assets-derived/archive/0045-IMG_8992.jpg")} 1350w`} sizes="(min-width: 901px) 38vw, 88vw" width="2994" height="3992" alt="A seated craftsperson works beside a window" loading="lazy" decoding="async" /><figcaption>Work · Thailand</figcaption></figure>
       <figure class="encounter encounter-vendor" data-photo-reveal><Image src={goldenPortrait} alt="A young woman turns towards low evening light" widths={[480, 768, 1000]} sizes="(min-width: 901px) 32vw, 68vw" loading="lazy" /><figcaption>Last light · La Réunion</figcaption></figure>
       <figure class="encounter encounter-motorcycle" data-photo-reveal><Image src={motorcycle} alt="Two people pause beside a motorcycle on a city street" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 56vw, 100vw" loading="lazy" /><figcaption>Between one place and the next</figcaption></figure>
     </section>
@@ -75,10 +76,10 @@ const deeperSizes = (role) => ['threshold', 'closing'].includes(role)
           </figure>
         ))}
       </div>
-      <a class="editorial-link" href="/archive/?world=people" data-analytics-event="archive_open" data-analytics-context="people:world">All {peopleCount} photographs of people <span aria-hidden="true">→</span></a>
+      <a class="editorial-link" href={withBase("/archive/?world=people")} data-analytics-event="archive_open" data-analytics-context="people:world">All {peopleCount} photographs of people <span aria-hidden="true">→</span></a>
     </section>
 
-    <aside class="people-next"><p>Another way through the same archive.</p><a href="/collections/black-and-white/"><span>Black &amp; White</span><b aria-hidden="true">→</b></a></aside>
+    <aside class="people-next"><p>Another way through the same archive.</p><a href={withBase("/collections/black-and-white/")}><span>Black &amp; White</span><b aria-hidden="true">→</b></a></aside>
   </main>
   <SiteFooter showContinuation={false} />
 </BaseLayout>

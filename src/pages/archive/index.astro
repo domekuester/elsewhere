@@ -3,12 +3,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import PhotoViewer from '../../components/PhotoViewer.astro';
-import catalogData from '../../../public/data/photo-catalog.json';
+import catalogData from '../../data/photo-catalog';
 import surfaceHeroData from '../../../data/surface-heroes.json';
 import destinationData from '../../../data/destinations.json';
-import heroPipeline from '../../../public/assets-derived/hero/HERO-PIPELINE.json';
+import heroPipeline from '../../data/hero-pipeline';
 import { imageObject, breadcrumbs } from '../../data/image-schema';
 import { journeyStoryForDestination } from '../../data/journey';
+import { withBase } from '../../config/paths';
 
 const { initialWorld = 'all', initialDestination = null } = Astro.props;
 const isBlackAndWhite = initialWorld === 'black-and-white';
@@ -128,7 +129,7 @@ const placeDates = !place?.dateRange
         <p>{!(openingPhoto && openingSources) && <><strong data-total-count>{catalog.length}</strong> frames<br /></>}<span data-visible-count>{opening.length} in view</span></p>
       </div>
       {placeStory && (
-        <a class="editorial-link archive-story-link" href={`/journey/${placeStory.slug}/`} data-analytics-event="journey_open" data-analytics-context={`archive-place:${place.slug}`}>
+        <a class="editorial-link archive-story-link" href={withBase(`/journey/${placeStory.slug}/`)} data-analytics-event="journey_open" data-analytics-context={`archive-place:${place.slug}`}>
           Read the story <span aria-hidden="true">→</span>
         </a>
       )}
@@ -138,7 +139,7 @@ const placeDates = !place?.dateRange
       <div class="archive-filter-group" data-world-filters>
         {!isBlackAndWhite && <button class="is-active" type="button" data-filter-world="all" aria-pressed="true">All</button>}
         {!isBlackAndWhite && availableWorlds.map((world) => world === 'black-and-white'
-          ? <a href="/archive/black-and-white/">black and white</a>
+          ? <a href={withBase("/archive/black-and-white/")}>black and white</a>
           : <button type="button" data-filter-world={world} aria-pressed="false">{world.replaceAll('-', ' ')}</button>)}
         {isBlackAndWhite && <span class="archive-context">Monochrome index</span>}
       </div>

@@ -4,7 +4,8 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import EnquiryAction from '../components/EnquiryAction.astro';
 import { business } from '../config/site';
-import catalogData from '../../public/data/photo-catalog.json';
+import catalogData from '../data/photo-catalog';
+import { absoluteUrl, withBase } from '../config/paths';
 // Licensing shared its only photograph with Home and Studio. A rights desk that illustrates itself
 // with a picture the visitor has already seen twice argues against its own claim of depth.
 const licensingFrame = (() => {
@@ -23,8 +24,8 @@ const licensingSchema = {
   '@type': 'WebPage',
   name: 'Photography licensing — Elsewhere',
   description: 'How photographs from the Elsewhere archive may be licensed for editorial and commercial use.',
-  url: new URL('/licensing/', Astro.site).href,
-  significantLink: new URL('/archive/', Astro.site).href,
+  url: absoluteUrl('/licensing/', Astro.site),
+  significantLink: absoluteUrl('/archive/', Astro.site),
 };
 ---
 
@@ -83,7 +84,7 @@ const licensingSchema = {
         <h2 id="licensing-cta-title">Licensing enquiry</h2>
         <p>If you already know the frame, bring its reference number. If you do not, describe what you need and it can be found.</p>
         <EnquiryAction type="licensing" label="Make an enquiry" context="licensing" class="is-large" />
-        <p class="licensing-alt"><a class="editorial-link" href="/archive/" data-analytics-event="archive_open" data-analytics-context="licensing">Browse the archive first <span aria-hidden="true">→</span></a></p>
+        <p class="licensing-alt"><a class="editorial-link" href={withBase("/archive/")} data-analytics-event="archive_open" data-analytics-context="licensing">Browse the archive first <span aria-hidden="true">→</span></a></p>
       </section>
     )}
   </main>

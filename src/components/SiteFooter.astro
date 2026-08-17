@@ -1,5 +1,6 @@
 ---
 import { site, business } from '../config/site';
+import { homePath, withBase } from '../config/paths';
 const { archiveHref = '/archive/', showContinuation = true } = Astro.props;
 const navigation = site.navigation.map((item) => item.href === '/archive/' ? { ...item, href: archiveHref } : item);
 // Commercial routes sit below the editorial navigation, never inside it.
@@ -7,19 +8,22 @@ const primaryHrefs = new Set(navigation.map((item) => item.href));
 const secondary = site.secondaryNavigation.filter((item) =>
   !primaryHrefs.has(item.href) && (item.href !== business.contactPage || business.enquiriesEnabled)
 );
+// Both sets are de-duplicated on site-relative paths above; the base is applied last.
+const primaryLinks = navigation.map((item) => ({ ...item, href: withBase(item.href) }));
+const secondaryLinks = secondary.map((item) => ({ ...item, href: withBase(item.href) }));
 ---
 
 <footer class="site-footer" id="about">
   {showContinuation && (
-    <a class="footer-continuation" href={archiveHref} data-analytics-event="archive_open" data-analytics-context="footer">
+    <a class="footer-continuation" href={withBase(archiveHref)} data-analytics-event="archive_open" data-analytics-context="footer">
       <span>Enter the archive</span><b aria-hidden="true">→</b>
     </a>
   )}
   <div class="footer-base">
-    <a class="footer-wordmark" href="/#main">{site.name}</a>
+    <a class="footer-wordmark" href={`${homePath}#main`}>{site.name}</a>
     <p>A visual archive of the world as experienced by one person.</p>
-    <nav aria-label="Footer">{navigation.map((item) => <a href={item.href} data-analytics-event="navigation_open" data-analytics-context={`footer:${item.label.toLowerCase()}`}>{item.label}</a>)}</nav>
-    <nav class="footer-secondary" aria-label="Studio and licensing">{secondary.map((item) => <a href={item.href} data-analytics-event="navigation_open" data-analytics-context={`footer:${item.label.toLowerCase()}`}>{item.label}</a>)}</nav>
+    <nav aria-label="Footer">{primaryLinks.map((item) => <a href={item.href} data-analytics-event="navigation_open" data-analytics-context={`footer:${item.label.toLowerCase()}`}>{item.label}</a>)}</nav>
+    <nav class="footer-secondary" aria-label="Studio and licensing">{secondaryLinks.map((item) => <a href={item.href} data-analytics-event="navigation_open" data-analytics-context={`footer:${item.label.toLowerCase()}`}>{item.label}</a>)}</nav>
     <small>{business.copyrightNotice} Original photography throughout.</small>
   </div>
 </footer>

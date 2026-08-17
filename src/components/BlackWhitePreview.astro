@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
+import { withBase } from '../config/paths';
 
 interface Props {
   portrait: ImageMetadata;
@@ -15,7 +16,7 @@ const { portrait, distance, horizon } = Astro.props;
     <span class="memory-mark" aria-hidden="true"></span>
     <h2 id="monochrome-title">Black<br />&amp; White</h2>
     <p>A quieter room in the archive. Gesture, weather, work, and distance—without colour to explain them.</p>
-    <a class="editorial-link" href="/collections/black-and-white/">Enter the collection <span aria-hidden="true">→</span></a>
+    <a class="editorial-link" href={withBase("/collections/black-and-white/")}>Enter the collection <span aria-hidden="true">→</span></a>
   </header>
   <figure class="monochrome-image monochrome-image-main" data-photo-reveal>
     <Image src={portrait} alt="A woman smiles at her reflection between foreground silhouettes" widths={[480, 768, 1200]} sizes="(min-width: 901px) 34vw, 88vw" loading="lazy" />

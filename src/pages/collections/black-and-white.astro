@@ -12,6 +12,7 @@ import reachSun from '../../assets/photos/bw-reach-sun.jpg';
 import prayer from '../../assets/photos/bw-prayer.jpg';
 import cityTaxis from '../../assets/photos/bw-city-taxis.jpg';
 import upward from '../../assets/photos/bw-upward.jpg';
+import { withBase } from '../../config/paths';
 ---
 
 <BaseLayout title="Black & White photography — Elsewhere" description="A monochrome collection of gesture, work, weather, and distance from the Elsewhere archive." image="/social/black-and-white.jpg" imageAlt="A breakwater lighthouse beneath a long grey sky">
@@ -36,7 +37,7 @@ import upward from '../../assets/photos/bw-upward.jpg';
       <figure class="bw-frame bw-frame-closing" data-photo-reveal><Image src={prayer} alt="A dark sculpted figure with hands held together in profile" widths={[480, 768, 1200]} sizes="(min-width: 901px) 34vw, 82vw" loading="lazy" /><figcaption>Stillness</figcaption></figure>
     </section>
 
-    <aside class="bw-next"><p>Continue through the deeper monochrome work.</p><a href="/archive/black-and-white/"><span>Archive</span><b aria-hidden="true">→</b></a></aside>
+    <aside class="bw-next"><p>Continue through the deeper monochrome work.</p><a href={withBase("/archive/black-and-white/")}><span>Archive</span><b aria-hidden="true">→</b></a></aside>
   </main>
   <SiteFooter archiveHref="/archive/black-and-white/" showContinuation={false} />
 </BaseLayout>

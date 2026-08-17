@@ -1,5 +1,6 @@
 ---
 import { business } from '../config/site';
+import { withBase } from '../config/paths';
 
 interface Props {
   type: string;
@@ -12,7 +13,7 @@ interface Props {
 
 const { type, label, photo = null, context, class: className } = Astro.props;
 const query = new URLSearchParams({ type, ...(photo ? { photo } : {}) });
-const href = `${business.contactPage}?${query.toString()}`;
+const href = withBase(`${business.contactPage}?${query.toString()}`);
 ---
 
 {business.enquiriesEnabled && (

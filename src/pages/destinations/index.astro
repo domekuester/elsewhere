@@ -3,7 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import destinationData from '../../../data/destinations.json';
-import catalogData from '../../../public/data/photo-catalog.json';
+import catalogData from '../../data/photo-catalog';
+import { withBase } from '../../config/paths';
 
 // Ordered by archive depth rather than alphabetically, which is how the index has always read.
 // Open chapters are lifted out of the list into a photographic layer: with more than one of them,
@@ -32,7 +33,7 @@ const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
       <h1>Destinations</h1>
       <div>
         <p>Places are named only where the photographer has confirmed them. Everything else stays in the archive, unassigned, until it is known.</p>
-        <a class="editorial-link" href="/archive/">Explore the photographic index <span aria-hidden="true">→</span></a>
+        <a class="editorial-link" href={withBase("/archive/")}>Explore the photographic index <span aria-hidden="true">→</span></a>
       </div>
     </header>
 
@@ -40,7 +41,7 @@ const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
       {chapters.map((destination) => {
         const hero = photosById.get(destination.heroPhotoId);
         return (
-          <a class="chapter-entry" href={`/destinations/${destination.slug}/`} data-analytics-event="destination_open" data-analytics-context={`index:${destination.slug}`}>
+          <a class="chapter-entry" href={withBase(`/destinations/${destination.slug}/`)} data-analytics-event="destination_open" data-analytics-context={`index:${destination.slug}`}>
             <span class="chapter-entry-image">
               {hero && (
                 <img
@@ -74,12 +75,12 @@ const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
             {/* A named place with a real photograph count must lead somewhere. Without a chapter,
                 that somewhere is the archive addressed to it: /archive/place/<slug>/, which opens on a
                 photograph from that place rather than on the Archive's own frame. */}
-            <a href={`/archive/place/${destination.slug}/`} data-analytics-event="archive_open" data-analytics-context={`destinations:${destination.slug}`}><strong>{destination.name}</strong></a>
+            <a href={withBase(`/archive/place/${destination.slug}/`)} data-analytics-event="archive_open" data-analytics-context={`destinations:${destination.slug}`}><strong>{destination.name}</strong></a>
             <small>{destination.confirmedPhotoCount} photographs</small>
           </li>
         ))}
       </ol>
-      <a class="editorial-link" href="/archive/" data-analytics-event="archive_open" data-analytics-context="destinations">Every photograph, by place and year <span aria-hidden="true">→</span></a>
+      <a class="editorial-link" href={withBase("/archive/")} data-analytics-event="archive_open" data-analytics-context="destinations">Every photograph, by place and year <span aria-hidden="true">→</span></a>
     </section>
   </main>
   <SiteFooter />
