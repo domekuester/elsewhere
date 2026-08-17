@@ -26,7 +26,7 @@ const { worlds } = Astro.props;
     {worlds.map((world, index) => (
       <a class:list={['world', `world-${index + 1}`]} href={world.href}>
         <div class="world-photo" data-photo-reveal>
-          <Image src={world.image} alt={world.alt} widths={[480, 768, 1200, 1600]} sizes="(min-width: 901px) 45vw, 100vw" loading="lazy" style={`object-position:${world.position ?? '50% 50%'}`} />
+          <Image src={world.image} alt={world.alt} widths={[480, 768, 1200, 1600]} sizes={index === 4 ? '(min-width: 901px) 64vw, 100vw' : '(min-width: 901px) 45vw, 100vw'} loading="lazy" style={`object-position:${world.position ?? '50% 50%'}`} />
         </div>
         <div class="world-label">
           <span>{String(index + 1).padStart(2, '0')}</span>

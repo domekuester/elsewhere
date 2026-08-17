@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Performance"
+  short_description: "Protect speed during visual refinement"
+  default_prompt: "Use $visual-performance to assess the performance cost of this ELSEWHERE visual change."

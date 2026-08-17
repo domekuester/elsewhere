@@ -14,9 +14,10 @@ export const site = {
   defaultShareImage: '/social/home.jpg',
   defaultShareImageAlt: 'Volcanic ridges rising beneath immense sunlit clouds',
   navigation: [
-    { label: 'Explore', href: '/archive/' },
-    { label: 'People', href: '/people/' },
+    { label: 'Journey', href: '/journey/' },
     { label: 'Destinations', href: '/destinations/' },
+    { label: 'People', href: '/people/' },
+    { label: 'Archive', href: '/archive/' },
     { label: 'About', href: '/about/' },
     { label: 'Studio', href: '/studio/' },
   ],

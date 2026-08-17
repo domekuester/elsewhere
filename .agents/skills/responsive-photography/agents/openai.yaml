@@ -1,0 +1,4 @@
+interface:
+  display_name: "Responsive Photography"
+  short_description: "Audit photographic crops across viewports"
+  default_prompt: "Use $responsive-photography to inspect actual rendered crops across ELSEWHERE viewports."

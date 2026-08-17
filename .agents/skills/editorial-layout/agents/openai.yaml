@@ -1,0 +1,4 @@
+interface:
+  display_name: "Editorial Layout"
+  short_description: "Review publication composition and pacing"
+  default_prompt: "Use $editorial-layout to review this ELSEWHERE page as publication design."

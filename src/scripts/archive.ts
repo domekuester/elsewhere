@@ -46,7 +46,7 @@ if (root) {
   let closeTimer = 0;
 
   const derivativeWidth = (photo: CatalogPhoto, longEdge: number) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
-  const archiveSizes = (photo: CatalogPhoto) => ['hero', 'anchor'].includes(photo.role) ? '(min-width: 901px) 42vw, (min-width: 561px) 58vw, 88vw' : photo.orientation === 'landscape' ? '(min-width: 901px) 34vw, (min-width: 561px) 50vw, 100vw' : '(min-width: 901px) 25vw, (min-width: 561px) 50vw, 88vw';
+  const archiveSizes = (photo: CatalogPhoto) => ['hero', 'anchor'].includes(photo.role) ? '(min-width: 901px) 42vw, (min-width: 561px) 58vw, 100vw' : photo.orientation === 'landscape' ? '(min-width: 901px) 34vw, (min-width: 561px) 50vw, 100vw' : '(min-width: 901px) 25vw, (min-width: 561px) 50vw, 44vw';
 
   const frameMarkup = (photo: CatalogPhoto) => `
     <button class="archive-frame is-${photo.orientation ?? 'unknown'}${['hero', 'anchor'].includes(photo.role) ? ' is-selected' : ''}" type="button" data-photo-id="${photo.id}" aria-label="${photo.accessibleLabel.replaceAll('"', '&quot;')}">

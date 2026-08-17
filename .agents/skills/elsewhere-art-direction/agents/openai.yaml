@@ -1,0 +1,4 @@
+interface:
+  display_name: "ELSEWHERE Art Direction"
+  short_description: "Judge ELSEWHERE photographic authority"
+  default_prompt: "Use $elsewhere-art-direction to assess this proposed visual change against ELSEWHERE's photographic and editorial identity."

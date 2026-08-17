@@ -2,6 +2,8 @@ const menuButton = document.querySelector<HTMLButtonElement>('[data-menu-button]
 const nav = document.querySelector<HTMLElement>('[data-nav]');
 const mobile = matchMedia('(max-width: 900px)');
 const homeLink = document.querySelector<HTMLAnchorElement>('[data-home-link]');
+const header = document.querySelector<HTMLElement>('[data-header]');
+const root = document.documentElement;
 
 // Phase 10.2 — the mobile header is `position: fixed`, so it needs a solid background once page
 // content is passing beneath it, and no background at all while it is still sitting on the opening
@@ -9,8 +11,6 @@ const homeLink = document.querySelector<HTMLAnchorElement>('[data-home-link]');
 // scroll thread, and native scrolling is untouched.
 const opening = document.querySelector('.hero, .destination-hero, .journey-hero, .archive-opening');
 if (opening) {
-  const header = document.querySelector<HTMLElement>('[data-header]');
-  const root = document.documentElement;
   root.setAttribute('data-over-opening', '');
   new IntersectionObserver(
     ([entry]) => root.toggleAttribute('data-over-opening', entry.isIntersecting),
@@ -24,6 +24,7 @@ const syncMenuAvailability = () => {
 };
 
 const setMenu = (open: boolean) => {
+  root.removeAttribute('data-header-hidden');
   menuButton?.setAttribute('aria-expanded', String(open));
   nav?.toggleAttribute('data-open', open);
   document.documentElement.toggleAttribute('data-menu-open', open);
@@ -31,6 +32,30 @@ const setMenu = (open: boolean) => {
   menuButton?.setAttribute('aria-label', open ? 'Close index' : 'Open index');
   if (open) window.setTimeout(() => nav?.querySelector<HTMLAnchorElement>('a')?.focus({ preventScroll: true }), 50);
 };
+
+// On a phone the fixed bar is useful for orientation but expensive as a permanent visual layer.
+// It yields while the reader moves down and returns with the first deliberate upward gesture.
+// Native scrolling remains untouched; requestAnimationFrame only batches the class change.
+let lastScrollY = window.scrollY;
+let scrollFrame = 0;
+const syncHeaderVisibility = () => {
+  scrollFrame = 0;
+  const currentScrollY = window.scrollY;
+  const delta = currentScrollY - lastScrollY;
+  const menuOpen = menuButton?.getAttribute('aria-expanded') === 'true';
+  const focusInsideHeader = !!header?.contains(document.activeElement);
+  const beyondOpeningControls = currentScrollY > (header?.offsetHeight ?? 76) * 1.5;
+  if (!mobile.matches || menuOpen || focusInsideHeader || !beyondOpeningControls || delta < -10) {
+    root.removeAttribute('data-header-hidden');
+  } else if (delta > 10) {
+    root.setAttribute('data-header-hidden', '');
+  }
+  lastScrollY = currentScrollY;
+};
+window.addEventListener('scroll', () => {
+  if (!scrollFrame) scrollFrame = window.requestAnimationFrame(syncHeaderVisibility);
+}, { passive: true });
+header?.addEventListener('focusin', () => root.removeAttribute('data-header-hidden'));
 
 menuButton?.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
 homeLink?.addEventListener('click', (event) => {
@@ -54,5 +79,10 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-mobile.addEventListener('change', () => { if (!mobile.matches) setMenu(false); syncMenuAvailability(); });
+mobile.addEventListener('change', () => {
+  root.removeAttribute('data-header-hidden');
+  lastScrollY = window.scrollY;
+  if (!mobile.matches) setMenu(false);
+  syncMenuAvailability();
+});
 syncMenuAvailability();

@@ -1,0 +1,4 @@
+interface:
+  display_name: "ELSEWHERE Brand Guardian"
+  short_description: "Reject generic visual treatments"
+  default_prompt: "Use $elsewhere-brand-guardian to test whether this visual direction is distinctive and true to ELSEWHERE."

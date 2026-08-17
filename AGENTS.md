@@ -30,3 +30,7 @@ The local curation studio is private tooling. It must not enter public navigatio
 ## Start here
 
 Read [docs/README.md](docs/README.md), then the platform, photo-model, archive, image-pipeline, motion, and current flagship report documents it links. Inspect the current rendered site before changing visual work. Preserve unrelated user changes.
+
+## Codex flagship visual work
+
+Before any visual audit or refinement, read [.codex/FLAGSHIP-DESIGN-STUDIO.md](.codex/FLAGSHIP-DESIGN-STUDIO.md). Project skills live in `.agents/skills/`; narrow specialist agents live in `.codex/agents/`. Use the smallest relevant set, map code ownership first, require rendered desktop/mobile evidence for visual verdicts, and run the documented regression gate before completion. Setup checks: `node .codex/scripts/flagship-review.mjs --checks`.

@@ -1,0 +1,652 @@
+{
+  "mobileHeader": {
+    "hiddenAfterDown": true,
+    "visibleAfterUp": true,
+    "scrollBehavior": "auto"
+  },
+  "mobileNav": {
+    "expanded": "true",
+    "navOpen": true,
+    "navInert": false,
+    "focusText": "Journey↗",
+    "bodyOverflow": "clip visible",
+    "navRect": {
+      "x": 0,
+      "y": 76,
+      "width": 390,
+      "height": 768,
+      "top": 76,
+      "right": 390,
+      "bottom": 844,
+      "left": 0
+    }
+  },
+  "mobileNavClose": {
+    "expanded": "false",
+    "focusReturned": true
+  },
+  "archiveState": [
+    {
+      "y": 900,
+      "visibleFrames": [
+        {
+          "id": "photo-0507",
+          "top": 239,
+          "width": 550,
+          "height": 391
+        },
+        {
+          "id": "photo-0001",
+          "top": 239,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0381",
+          "top": 239,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0003",
+          "top": 816,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0036",
+          "top": 816,
+          "width": 550,
+          "height": 436
+        },
+        {
+          "id": "photo-0004",
+          "top": 816,
+          "width": 322,
+          "height": 505
+        }
+      ],
+      "totalFrames": 24
+    },
+    {
+      "y": 2200,
+      "visibleFrames": [
+        {
+          "id": "photo-0003",
+          "top": -484,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0004",
+          "top": -484,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0176",
+          "top": 94,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0005",
+          "top": 94,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0002",
+          "top": 94,
+          "width": 550,
+          "height": 847
+        }
+      ],
+      "totalFrames": 24
+    },
+    {
+      "y": 4000,
+      "visibleFrames": [
+        {
+          "id": "photo-0183",
+          "top": -787,
+          "width": 550,
+          "height": 847
+        },
+        {
+          "id": "photo-0182",
+          "top": 131,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0008",
+          "top": 131,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0207",
+          "top": 131,
+          "width": 436,
+          "height": 315
+        },
+        {
+          "id": "photo-0009",
+          "top": 709,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0443",
+          "top": 709,
+          "width": 550,
+          "height": 847
+        },
+        {
+          "id": "photo-0012",
+          "top": 709,
+          "width": 436,
+          "height": 314
+        }
+      ],
+      "totalFrames": 24
+    }
+  ],
+  "archiveViewer": {
+    "isOpen": true,
+    "focusInside": true,
+    "imageLoaded": true,
+    "imageFit": "contain",
+    "closed": true,
+    "focusReturned": true
+  },
+  "japanScroll": [
+    {
+      "y": 4500,
+      "heading": null,
+      "visibleImages": [
+        {
+          "alt": "A weathered hand reaches out past a ship’s rail, holding som",
+          "rect": [
+            170,
+            255
+          ],
+          "fit": "contain",
+          "position": "50% 50%"
+        },
+        {
+          "alt": "A flag flies from the bow of a ferry over open grey water, a",
+          "rect": [
+            170,
+            254
+          ],
+          "fit": "contain",
+          "position": "50% 50%"
+        }
+      ]
+    },
+    {
+      "y": 11000,
+      "heading": null,
+      "visibleImages": [
+        {
+          "alt": "Heavy dark cloud presses down over a flat sea and low rock o",
+          "rect": [
+            390,
+            260
+          ],
+          "fit": "cover",
+          "position": "50% 50%"
+        },
+        {
+          "alt": "In black and white, a stone lantern and two benches stand on",
+          "rect": [
+            370,
+            247
+          ],
+          "fit": "contain",
+          "position": "50% 50%"
+        },
+        {
+          "alt": "In black and white, a straight seawall path runs to a single",
+          "rect": [
+            272,
+            408
+          ],
+          "fit": "contain",
+          "position": "50% 50%"
+        }
+      ]
+    },
+    {
+      "y": 19000,
+      "heading": "Agui",
+      "visibleImages": [
+        {
+          "alt": "In black and white, the tiered roofs of a castle keep rise a",
+          "rect": [
+            350,
+            467
+          ],
+          "fit": "contain",
+          "position": "50% 50%"
+        }
+      ]
+    }
+  ],
+  "surfaceScroll": {
+    "people": [
+      {
+        "y": 500,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "A food vendor works behind a small counter",
+            "rect": [
+              390,
+              608
+            ],
+            "natural": [
+              390,
+              583
+            ]
+          }
+        ],
+        "visibleText": []
+      },
+      {
+        "y": 1800,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "A seated craftsperson works beside a window",
+            "rect": [
+              308,
+              411
+            ],
+            "natural": [
+              343,
+              457
+            ]
+          },
+          {
+            "alt": "A young woman turns towards low evening light",
+            "rect": [
+              238,
+              317
+            ],
+            "natural": [
+              265,
+              397
+            ]
+          }
+        ],
+        "visibleText": [
+          "Work · Thailand",
+          "Last light · La Réunion"
+        ]
+      },
+      {
+        "y": 3500,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "A dancer in a straw hat turns mid-step in front of oran",
+            "rect": [
+              301,
+              452
+            ],
+            "natural": [
+              335,
+              503
+            ]
+          },
+          {
+            "alt": "Two women in white headscarves work over pans at a food",
+            "rect": [
+              238,
+              356
+            ],
+            "natural": [
+              335,
+              502
+            ]
+          }
+        ],
+        "visibleText": [
+          "Movement · Japan"
+        ]
+      },
+      {
+        "y": 5600,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "A man bends to drink, water falling from his mouth in l",
+            "rect": [
+              238,
+              356
+            ],
+            "natural": [
+              296,
+              443
+            ]
+          },
+          {
+            "alt": "A woman in a cap stands against dark volcanic rock.",
+            "rect": [
+              322,
+              483
+            ],
+            "natural": [
+              390,
+              585
+            ]
+          }
+        ],
+        "visibleText": [
+          "Afternoon · Essaouira",
+          "Thirst · Japan"
+        ]
+      }
+    ],
+    "black-white": [
+      {
+        "y": 700,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "A breakwater lighthouse beneath a long grey sky",
+            "rect": [
+              390,
+              844
+            ],
+            "natural": [
+              390,
+              260
+            ]
+          },
+          {
+            "alt": "A market worker pauses with one hand at her shoulder",
+            "rect": [
+              308,
+              461
+            ],
+            "natural": [
+              390,
+              583
+            ]
+          }
+        ],
+        "visibleText": [
+          "Black& White",
+          "Presence"
+        ]
+      },
+      {
+        "y": 1800,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "A very small boat beneath an immense dark sky",
+            "rect": [
+              252,
+              378
+            ],
+            "natural": [
+              304,
+              456
+            ]
+          },
+          {
+            "alt": "An older man stands at the edge of a dark doorway",
+            "rect": [
+              287,
+              431
+            ],
+            "natural": [
+              319,
+              479
+            ]
+          }
+        ],
+        "visibleText": [
+          "Distance"
+        ]
+      },
+      {
+        "y": 3300,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "Dark taxis cross a dense city street beneath an overcas",
+            "rect": [
+              322,
+              482
+            ],
+            "natural": [
+              390,
+              583
+            ]
+          },
+          {
+            "alt": "A silhouetted hand reaches toward the sun above the sea",
+            "rect": [
+              238,
+              357
+            ],
+            "natural": [
+              265,
+              397
+            ]
+          }
+        ],
+        "visibleText": [
+          "City weather"
+        ]
+      },
+      {
+        "y": 5000,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "A dark sculpted figure with hands held together in prof",
+            "rect": [
+              259,
+              388
+            ],
+            "natural": [
+              319,
+              479
+            ]
+          }
+        ],
+        "visibleText": [
+          "Stillness"
+        ]
+      }
+    ],
+    "archive-mobile": [
+      {
+        "y": 700,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "A selected jungle photograph from the Elsewhere archive",
+            "rect": [
+              350,
+              234
+            ],
+            "natural": [
+              389,
+              260
+            ]
+          },
+          {
+            "alt": "",
+            "rect": [
+              169,
+              252
+            ],
+            "natural": [
+              171,
+              256
+            ]
+          },
+          {
+            "alt": "A selected people photograph from the Elsewhere archive",
+            "rect": [
+              169,
+              253
+            ],
+            "natural": [
+              171,
+              256
+            ]
+          }
+        ],
+        "visibleText": []
+      },
+      {
+        "y": 1800,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "",
+            "rect": [
+              169,
+              252
+            ],
+            "natural": [
+              171,
+              256
+            ]
+          },
+          {
+            "alt": "A selected beaches photograph from the Elsewhere archiv",
+            "rect": [
+              350,
+              263
+            ],
+            "natural": [
+              389,
+              292
+            ]
+          },
+          {
+            "alt": "",
+            "rect": [
+              169,
+              252
+            ],
+            "natural": [
+              171,
+              256
+            ]
+          },
+          {
+            "alt": "A selected urban photograph from the Elsewhere archive.",
+            "rect": [
+              169,
+              253
+            ],
+            "natural": [
+              171,
+              256
+            ]
+          }
+        ],
+        "visibleText": []
+      },
+      {
+        "y": 3600,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "",
+            "rect": [
+              169,
+              239
+            ],
+            "natural": [
+              171,
+              243
+            ]
+          },
+          {
+            "alt": "A selected ocean photograph from the Elsewhere archive.",
+            "rect": [
+              350,
+              524
+            ],
+            "natural": [
+              390,
+              584
+            ]
+          }
+        ],
+        "visibleText": []
+      },
+      {
+        "y": 6543,
+        "headerHidden": true,
+        "visibleImages": [
+          {
+            "alt": "",
+            "rect": [
+              350,
+              234
+            ],
+            "natural": [
+              389,
+              260
+            ]
+          },
+          {
+            "alt": "A breakwater lighthouse beneath a long grey sky.",
+            "rect": [
+              350,
+              234
+            ],
+            "natural": [
+              389,
+              260
+            ]
+          },
+          {
+            "alt": "",
+            "rect": [
+              169,
+              234
+            ],
+            "natural": [
+              171,
+              237
+            ]
+          },
+          {
+            "alt": "A selected black and white photograph from the Elsewher",
+            "rect": [
+              350,
+              524
+            ],
+            "natural": [
+              390,
+              584
+            ]
+          }
+        ],
+        "visibleText": []
+      }
+    ]
+  },
+  "motionState": {
+    "reduced": false,
+    "scrollBehavior": "auto",
+    "gsapScripts": [],
+    "hiddenContent": 0
+  },
+  "consoleProblems": [],
+  "networkProblems": []
+}

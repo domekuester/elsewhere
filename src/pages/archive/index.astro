@@ -36,7 +36,7 @@ const archiveSchema = [
   breadcrumbs([{ name: 'Elsewhere', path: '/' }, { name: isBlackAndWhite ? 'Black & White Archive' : 'Archive', path: isBlackAndWhite ? '/archive/black-and-white/' : '/archive/' }], Astro.site),
   ...opening.map((photo, index) => imageObject(photo, Astro.site, new URL(Astro.url.pathname, Astro.site).href, index === 0)),
 ];
-const archiveSizes = (photo) => ['hero', 'anchor'].includes(photo.role) ? '(min-width: 901px) 42vw, (min-width: 561px) 58vw, 88vw' : photo.orientation === 'landscape' ? '(min-width: 901px) 34vw, (min-width: 561px) 50vw, 100vw' : '(min-width: 901px) 25vw, (min-width: 561px) 50vw, 88vw';
+const archiveSizes = (photo) => ['hero', 'anchor'].includes(photo.role) ? '(min-width: 901px) 42vw, (min-width: 561px) 58vw, 100vw' : photo.orientation === 'landscape' ? '(min-width: 901px) 34vw, (min-width: 561px) 50vw, 100vw' : '(min-width: 901px) 25vw, (min-width: 561px) 50vw, 44vw';
 
 // Phase 9.28A — the archive opens on a photograph rather than on type. The band is deliberately
 // shorter than a destination chapter's 100svh hero: this is a discovery surface, and the filter bar
@@ -119,7 +119,12 @@ const placeDates = !place?.dateRange
       <p class="archive-kicker"><span></span> Photographic index</p>
       {!(openingPhoto && openingSources) && <h1>{isBlackAndWhite ? <><em>Black &amp; White</em><span>Archive</span></> : 'Archive'}</h1>}
       <div class="archive-intro-meta">
-        <p>{isBlackAndWhite ? 'The deeper monochrome body of work. Gesture, weather, distance, and form encountered beyond the selected edit.' : 'A deeper way through the work. Place, year, and form open different paths through the photographs.'}</p>
+        {/* A place archive says something about that place; only the whole-archive view falls back
+            to the general line. `photographicIndex` is editorial copy on the destination record, so
+            one shared component still serves every place. */}
+        <p>{isBlackAndWhite
+          ? 'The deeper monochrome body of work. Gesture, weather, distance, and form encountered beyond the selected edit.'
+          : place?.photographicIndex ?? 'A deeper way through the work. Place, year, and form open different paths through the photographs.'}</p>
         <p>{!(openingPhoto && openingSources) && <><strong data-total-count>{catalog.length}</strong> frames<br /></>}<span data-visible-count>{opening.length} in view</span></p>
       </div>
       {placeStory && (
@@ -176,7 +181,7 @@ const placeDates = !place?.dateRange
     <noscript><p class="archive-noscript">JavaScript is required for incremental archive loading and the immersive viewer. The opening edit remains available above.</p></noscript>
   </main>
   <PhotoViewer />
-  <SiteFooter archiveHref={isBlackAndWhite ? '/archive/black-and-white/' : '/archive/'} />
+  <SiteFooter archiveHref={isBlackAndWhite ? '/archive/black-and-white/' : '/archive/'} showContinuation={false} />
   <script>
     import '../../scripts/archive';
   </script>

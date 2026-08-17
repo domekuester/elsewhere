@@ -89,7 +89,7 @@ export type JourneyBlock =
   | { kind: 'lines'; lines: string[] }
   /** `full` bleeds edge to edge, `wide` sits in the column of the sequence, `inset` is small. */
   | { kind: 'photo'; display: 'full' | 'wide' | 'inset'; photo: JourneyPhoto }
-  | { kind: 'pair'; photos: [JourneyPhoto, JourneyPhoto] }
+  | { kind: 'pair'; photos: [JourneyPhoto, JourneyPhoto]; presentation?: 'compact' | 'dialogue' | 'stacked' | 'closing' }
   /** Deliberate silence. Renders as space and nothing else. */
   | { kind: 'pause' };
 
@@ -112,7 +112,11 @@ export interface JourneyStory {
    */
   heroSurfaceKey: string;
   heroAlt: string;
+  /** The index folio is art direction, not chronology: it changes composition without changing order. */
+  indexFolio?: 'opening' | 'landscape-right' | 'portrait-left' | 'contained' | 'closing';
   blocks: JourneyBlock[];
+  /** Optional art-direction score for chapter movements. It changes presentation, never order. */
+  movementRoles?: Array<'reading' | 'left' | 'right' | 'expansion' | 'encounter' | 'quiet' | 'closing'>;
   status: JourneyStatus;
   publishedAt: Nullable<string>;
   seoTitle: Nullable<string>;
@@ -138,6 +142,7 @@ export const journeyStories: JourneyStory[] = [
     heroSurfaceKey: 'journey-malaysia',
     heroAlt:
       'A covered walkway runs between heavy square columns towards open sea, with a single distant figure at the far end.',
+    indexFolio: 'opening',
     status: 'PUBLISHED',
     publishedAt: '2026-08-11',
     seoTitle: 'Malaysia — The Journey — Elsewhere',
@@ -481,6 +486,7 @@ export const journeyStories: JourneyStory[] = [
   },
   {
     slug: 'thailand',
+    indexFolio: 'landscape-right',
     number: 2,
     title: 'Thailand',
     standfirst:
@@ -790,6 +796,7 @@ export const journeyStories: JourneyStory[] = [
   },
   {
     slug: 'laos',
+    indexFolio: 'portrait-left',
     number: 3,
     title: 'Laos',
     standfirst:
@@ -939,6 +946,7 @@ export const journeyStories: JourneyStory[] = [
   },
   {
     slug: 'phu-quoc',
+    indexFolio: 'contained',
     number: 4,
     title: 'Phu Quoc',
     standfirst:
@@ -1083,6 +1091,7 @@ export const journeyStories: JourneyStory[] = [
   },
   {
     slug: 'japan',
+    indexFolio: 'closing',
     number: 5,
     title: 'Japan',
     standfirst:
@@ -1105,6 +1114,7 @@ export const journeyStories: JourneyStory[] = [
     socialImage: '/social/journey-japan.jpg',
     previousSlug: 'phu-quoc',
     nextSlug: null,
+    movementRoles: ['reading', 'right', 'left', 'expansion', 'encounter', 'quiet', 'right', 'closing'],
     blocks: [
       {
         kind: 'lede',
@@ -1172,6 +1182,7 @@ export const journeyStories: JourneyStory[] = [
       },
       {
         kind: 'pair',
+        presentation: 'compact',
         photos: [
           {
             id: 'photo-0181',
@@ -1362,6 +1373,7 @@ export const journeyStories: JourneyStory[] = [
       },
       {
         kind: 'pair',
+        presentation: 'dialogue',
         photos: [
           {
             id: 'photo-0312',
@@ -1394,6 +1406,7 @@ export const journeyStories: JourneyStory[] = [
       },
       {
         kind: 'pair',
+        presentation: 'dialogue',
         photos: [
           {
             id: 'photo-0711',
@@ -1519,6 +1532,7 @@ export const journeyStories: JourneyStory[] = [
       },
       {
         kind: 'pair',
+        presentation: 'stacked',
         photos: [
           {
             id: 'photo-0344',
@@ -1567,6 +1581,7 @@ export const journeyStories: JourneyStory[] = [
       },
       {
         kind: 'pair',
+        presentation: 'closing',
         photos: [
           {
             id: 'photo-0363',

@@ -20,6 +20,13 @@ const [hero, ...rest] = sequence;
 // Sequence roles are namespaced: an unprefixed 'portrait' role would collide with the
 // 'is-portrait' orientation class and silently override the layout of every portrait photograph.
 const sequenceRoles = ['seq-wide', 'seq-portrait', 'seq-quiet', 'seq-anchor', 'seq-offset', 'seq-closing'];
+const sequenceSizes = (role, photo) => {
+  if (role === 'seq-anchor') return '(min-width: 1200px) 72vw, (min-width: 561px) 76vw, 100vw';
+  if (role === 'seq-wide') return '(min-width: 1200px) 56vw, (min-width: 561px) 68vw, 96vw';
+  if (role === 'seq-closing') return '(min-width: 1200px) 54vw, (min-width: 561px) 64vw, 100vw';
+  if (photo.orientation === 'portrait') return '(min-width: 1200px) 36vw, (min-width: 561px) 48vw, 78vw';
+  return '(min-width: 1200px) 48vw, (min-width: 561px) 58vw, 88vw';
+};
 const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
 // Dates and provenance come from the data, never from the template. A destination sourced from the
 // owner's travel timeline says so; one dated from capture metadata says that instead.
@@ -184,17 +191,22 @@ const destinationSchema = {
         one describes how confidently the place is known, the other how many rows the chapter drew
         from. Neither is something a visitor came to read, so neither is emitted. The band survives
         only when it has a real destination — the link into the Journey chapter. */}
-    {destinationStory && (
-      <section class="destination-chapter-link">
+    {(destination.photographicIndex || destinationStory) && (
+      <section class="destination-chapter-link" aria-label={`${destination.name} photographic body`}>
+        {destination.photographicIndex && <p>{destination.photographicIndex}</p>}
+        {destinationStory && (
         <a class="editorial-link" href={`/journey/${destinationStory.slug}/`} data-analytics-event="journey_open" data-analytics-context={`destination:${destination.slug}`}>
           Read the story <span aria-hidden="true">→</span>
         </a>
+        )}
       </section>
     )}
     <section class="destination-sequence" aria-label={`Selected photographs from ${destination.name}`}>
-      {rest.map((photo, index) => (
-        <figure class:list={['destination-frame', `is-${sequenceRoles[index % sequenceRoles.length]}`, `is-${photo.orientation}`]} data-photo-reveal>
-          <img src={photo.thumbnail} srcset={`${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w, ${photo.viewerImage} ${derivativeWidth(photo, 3200)}w`} sizes="(min-width: 1200px) 58vw, (min-width: 561px) 66vw, 88vw" width={photo.width} height={photo.height} loading="lazy" decoding="async" alt={altByFilename[photo.filename] ?? photo.altText} />
+      {rest.map((photo, index) => {
+        const role = sequenceRoles[index % sequenceRoles.length];
+        return (
+        <figure class:list={['destination-frame', `is-${role}`, `is-${photo.orientation}`]} data-photo-reveal>
+          <img src={photo.thumbnail} srcset={`${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w, ${photo.viewerImage} ${derivativeWidth(photo, 3200)}w`} sizes={index === rest.length - 1 ? '(min-width: 1200px) 72vw, (min-width: 561px) 78vw, 100vw' : sequenceSizes(role, photo)} width={photo.width} height={photo.height} loading="lazy" decoding="async" alt={altByFilename[photo.filename] ?? photo.altText} />
           {/* Sequence number and year only. `visualWorlds` is an internal curatorial facet
               (`visualWorldConfidence: CURATORIAL_ASSIGNMENT`) that drives archive filtering; printed
               under a photograph it read as a database record attached to the picture — "2025 · ocean,
@@ -202,13 +214,14 @@ const destinationSchema = {
               data, where a human decides them. */}
           <figcaption><span>{String(index + 2).padStart(2, '0')}</span><p>{photo.year}</p></figcaption>
         </figure>
-      ))}
+        );
+      })}
     </section>
     <aside class="destination-continuation">
-      <p>The chapter continues through the deeper archive.</p>
-      <a href={`/archive/?destination=${destination.slug}`} data-analytics-event="archive_open" data-analytics-context={`destination:${destination.slug}`}><span>Continue in the archive</span><b aria-hidden="true">→</b></a>
+      <p>The {destination.name} body continues beyond this edit.</p>
+      <a href={`/archive/?destination=${destination.slug}`} data-analytics-event="archive_open" data-analytics-context={`destination:${destination.slug}`}><span>Continue through {destination.name}</span><b aria-hidden="true">→</b></a>
       <a href="/collections/black-and-white/" data-analytics-event="black_white_open" data-analytics-context={`destination:${destination.slug}`}>Enter Black &amp; White</a>
     </aside>
   </main>
-  <SiteFooter />
+  <SiteFooter showContinuation={false} />
 </BaseLayout>

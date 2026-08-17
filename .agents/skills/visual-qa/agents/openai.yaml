@@ -1,0 +1,4 @@
+interface:
+  display_name: "ELSEWHERE Visual QA"
+  short_description: "Run screenshot-driven publication QA"
+  default_prompt: "Use $visual-qa to inspect the rendered ELSEWHERE interface across required viewports."

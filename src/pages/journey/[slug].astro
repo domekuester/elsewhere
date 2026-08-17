@@ -93,8 +93,8 @@ const sizesFor = (display: string) =>
     : display === 'inset'
       ? '(min-width: 901px) 26rem, 66vw'
       : display === 'pair'
-        ? '(min-width: 901px) 42vw, 88vw'
-        : '(min-width: 1200px) 62vw, (min-width: 561px) 74vw, 88vw';
+        ? '(min-width: 901px) 48vw, 88vw'
+        : '(min-width: 1200px) 72vw, (min-width: 561px) 94vw, 92vw';
 
 const storySchema = {
   '@context': 'https://schema.org',
@@ -124,6 +124,14 @@ const storySchema = {
   ],
 };
 const kicker = `The Journey — ${String(story.number).padStart(2, '0')}`;
+// Chapter boundaries become layout boundaries without changing the story itself. The block order,
+// prose, photographs, and captions remain authoritative; the wrapper only gives the shared visual
+// system somewhere to create act-level expansion and release.
+const movements = [];
+for (const block of story.blocks) {
+  if (block.kind === 'chapter' || movements.length === 0) movements.push({ blocks: [] });
+  movements.at(-1).blocks.push(block);
+}
 ---
 
 <BaseLayout
@@ -166,7 +174,9 @@ const kicker = `The Journey — ${String(story.number).padStart(2, '0')}`;
         record about itself. The field stays in the data as the internal audit trail it always was. */}
 
     <article class="journey-body">
-      {story.blocks.map((block) => {
+      {movements.map((movement, movementIndex) => (
+        <div class:list={['journey-movement', `is-${story.movementRoles?.[movementIndex] ?? (movementIndex % 2 ? 'right' : 'left')}`]} data-movement={movementIndex + 1}>
+        {movement.blocks.map((block) => {
         if (block.kind === 'lede') return <p class="journey-lede">{block.text}</p>;
         if (block.kind === 'text') return <div class="journey-text">{block.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</div>;
         if (block.kind === 'chapter') return <h2 class="journey-chapter">{block.label}</h2>;
@@ -174,7 +184,7 @@ const kicker = `The Journey — ${String(story.number).padStart(2, '0')}`;
         if (block.kind === 'pause') return <div class="journey-pause" aria-hidden="true"></div>;
         if (block.kind === 'pair') {
           return (
-            <div class="journey-pair">
+            <div class:list={['journey-pair', `is-${block.presentation ?? 'stacked'}`]}>
               {block.photos.map((ref) => {
                 const item = resolve(ref.id);
                 return (
@@ -222,7 +232,9 @@ const kicker = `The Journey — ${String(story.number).padStart(2, '0')}`;
             {block.photo.caption && <figcaption>{block.photo.caption}</figcaption>}
           </figure>
         );
-      })}
+        })}
+        </div>
+      ))}
     </article>
 
     <aside class="journey-next">
@@ -243,6 +255,7 @@ const kicker = `The Journey — ${String(story.number).padStart(2, '0')}`;
           )}
         </nav>
       )}
+      <p>This story is one edit. The destination holds the wider photographic body.</p>
       {destination?.publicationStatus === 'published' ? (
         <a href={`/destinations/${destination.slug}/`} data-analytics-event="destination_open" data-analytics-context={`journey:${story.slug}`}>
           <span>{destination.name}</span><b aria-hidden="true">→</b>
@@ -252,7 +265,6 @@ const kicker = `The Journey — ${String(story.number).padStart(2, '0')}`;
           <span>{destination.name}</span><b aria-hidden="true">→</b>
         </a>
       ) : null}
-      <p>The photographs in this story are part of a larger archive. Everything from this country sits there, in the order it was taken.</p>
       {/* The index only exists once a story is published, so a story still in review must not
           link to it: the route would be a 404. */}
       {publishedJourneyStories().length > 0 && (
@@ -260,5 +272,5 @@ const kicker = `The Journey — ${String(story.number).padStart(2, '0')}`;
       )}
     </aside>
   </main>
-  <SiteFooter />
+  <SiteFooter showContinuation={false} />
 </BaseLayout>

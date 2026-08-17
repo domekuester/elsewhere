@@ -12,12 +12,12 @@ import catalogData from '../../../public/data/photo-catalog.json';
 // the frames a full visual review of the archive marked as being *about* a person — not merely
 // containing one — and none of them appears anywhere else on the site.
 const deeperCaptions = new Map([
-  ['photo-0279', { alt: 'A dancer in a straw hat turns mid-step in front of orange flowers.', note: 'Movement' }],
-  ['photo-0380', { alt: 'Two women in white headscarves work over pans at a food counter.', note: 'Work' }],
-  ['photo-0566', { alt: 'A man in a cap holds a cigarette at the edge of a doorway.', note: 'Waiting' }],
-  ['photo-0592', { alt: 'A woman sits at a small table outside a shop hung with a red rug.', note: 'Afternoon' }],
-  ['photo-0350', { alt: 'A man bends to drink, water falling from his mouth in low sun.', note: 'Thirst' }],
-  ['photo-0557', { alt: 'A woman in a cap stands against dark volcanic rock.', note: 'Attention' }],
+  ['photo-0279', { alt: 'A dancer in a straw hat turns mid-step in front of orange flowers.', note: 'Movement', role: 'gesture' }],
+  ['photo-0380', { alt: 'Two women in white headscarves work over pans at a food counter.', note: 'Work', role: 'proximity' }],
+  ['photo-0566', { alt: 'A man in a cap holds a cigarette at the edge of a doorway.', note: 'Waiting', role: 'threshold' }],
+  ['photo-0592', { alt: 'A woman sits at a small table outside a shop hung with a red rug.', note: 'Afternoon', role: 'environment' }],
+  ['photo-0350', { alt: 'A man bends to drink, water falling from his mouth in low sun.', note: 'Thirst', role: 'intimate' }],
+  ['photo-0557', { alt: 'A woman in a cap stands against dark volcanic rock.', note: 'Attention', role: 'closing' }],
 ]);
 const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]));
 const deeper = [...deeperCaptions].map(([id, meta]) => {
@@ -27,6 +27,11 @@ const deeper = [...deeperCaptions].map(([id, meta]) => {
 });
 const peopleCount = catalogData.photos.filter((photo) => photo.visualWorlds.includes('people')).length;
 const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
+const deeperSizes = (role) => ['threshold', 'closing'].includes(role)
+  ? '(min-width: 901px) 48vw, (min-width: 561px) 58vw, 100vw'
+  : ['gesture', 'proximity'].includes(role)
+    ? '(min-width: 901px) 40vw, (min-width: 561px) 48vw, 86vw'
+    : '(min-width: 901px) 32vw, (min-width: 561px) 44vw, 76vw';
 ---
 
 <BaseLayout title="People and encounters — Elsewhere" description="Encounters, gestures, work, and human presence from the Elsewhere visual archive." image="/social/people.jpg" imageAlt="A food vendor works behind a small counter">
@@ -44,7 +49,7 @@ const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orienta
     <section class="encounter-sequence" aria-labelledby="encounter-title">
       <header><h2 id="encounter-title">Encounters,<br />not profiles.</h2><p>Names and places will appear only when known and appropriate. Until then, the photograph remains without invented biography.</p></header>
       <figure class="encounter encounter-worker" data-photo-reveal><img src="/assets-derived/thumbnails/0045-IMG_8992.jpg" srcset="/assets-derived/thumbnails/0045-IMG_8992.jpg 720w, /assets-derived/archive/0045-IMG_8992.jpg 1350w" sizes="(min-width: 901px) 38vw, 88vw" width="2994" height="3992" alt="A seated craftsperson works beside a window" loading="lazy" decoding="async" /><figcaption>Work · Thailand</figcaption></figure>
-      <figure class="encounter encounter-vendor" data-photo-reveal><Image src={goldenPortrait} alt="A young woman turns towards low evening light" widths={[480, 768, 1000]} sizes="(min-width: 901px) 25vw, 68vw" loading="lazy" /><figcaption>Last light · La Réunion</figcaption></figure>
+      <figure class="encounter encounter-vendor" data-photo-reveal><Image src={goldenPortrait} alt="A young woman turns towards low evening light" widths={[480, 768, 1000]} sizes="(min-width: 901px) 32vw, 68vw" loading="lazy" /><figcaption>Last light · La Réunion</figcaption></figure>
       <figure class="encounter encounter-motorcycle" data-photo-reveal><Image src={motorcycle} alt="Two people pause beside a motorcycle on a city street" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 56vw, 100vw" loading="lazy" /><figcaption>Between one place and the next</figcaption></figure>
     </section>
 
@@ -55,11 +60,11 @@ const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orienta
       </header>
       <div class="people-deeper-grid">
         {deeper.map((photo) => (
-          <figure data-photo-reveal>
+          <figure class={`is-${photo.role}`} data-photo-reveal>
             <img
               src={photo.thumbnail}
               srcset={`${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w`}
-              sizes="(min-width: 901px) 30vw, (min-width: 561px) 44vw, 82vw"
+              sizes={deeperSizes(photo.role)}
               width={photo.width}
               height={photo.height}
               alt={photo.alt}
@@ -75,5 +80,5 @@ const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orienta
 
     <aside class="people-next"><p>Another way through the same archive.</p><a href="/collections/black-and-white/"><span>Black &amp; White</span><b aria-hidden="true">→</b></a></aside>
   </main>
-  <SiteFooter />
+  <SiteFooter showContinuation={false} />
 </BaseLayout>

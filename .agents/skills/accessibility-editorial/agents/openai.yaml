@@ -1,0 +1,4 @@
+interface:
+  display_name: "Editorial Accessibility"
+  short_description: "Review ambitious accessible editorial UI"
+  default_prompt: "Use $accessibility-editorial to review this ELSEWHERE surface for accessible editorial quality."

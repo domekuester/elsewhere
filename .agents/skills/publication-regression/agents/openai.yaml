@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publication Regression"
+  short_description: "Protect ELSEWHERE publication behavior"
+  default_prompt: "Use $publication-regression to verify this ELSEWHERE change preserves routes, privacy, exclusions, and publication integrity."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photographic Sequencing"
+  short_description: "Review approved image sequence rhythm"
+  default_prompt: "Use $photographic-sequencing to review the pacing and transitions of this approved ELSEWHERE sequence."

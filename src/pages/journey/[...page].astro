@@ -16,6 +16,7 @@ export function getStaticPaths() {
 
 const stories = publishedJourneyStories();
 const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]));
+const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
 ---
 
 <BaseLayout
@@ -36,12 +37,12 @@ const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]))
         const hero = surfaceHeroData.surfaces[story.heroSurfaceKey];
         const photo = hero ? photosById.get(hero.photoId) : null;
         return (
-          <a href={`/journey/${story.slug}/`} data-analytics-event="journey_open" data-analytics-context={story.slug}>
+          <a class:list={['journey-folio', `is-${photo?.orientation ?? 'landscape'}`, `folio-${story.indexFolio ?? 'landscape-right'}`]} href={`/journey/${story.slug}/`} data-analytics-event="journey_open" data-analytics-context={story.slug}>
             {photo && (
               <img
                 src={photo.thumbnail}
-                srcset={`${photo.thumbnail} 960w, ${photo.archiveImage} 1800w`}
-                sizes="(min-width: 901px) 92vw, 100vw"
+                srcset={`${photo.thumbnail} ${derivativeWidth(photo, 960)}w, ${photo.archiveImage} ${derivativeWidth(photo, 1800)}w, ${photo.viewerImage} ${derivativeWidth(photo, 3200)}w`}
+                sizes={photo.orientation === 'portrait' ? '(min-width: 901px) 42vw, 84vw' : '(min-width: 901px) 58vw, 100vw'}
                 width={photo.width}
                 height={photo.height}
                 alt={story.heroAlt}

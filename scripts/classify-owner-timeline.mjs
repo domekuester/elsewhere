@@ -125,7 +125,7 @@ const destinationDefinitions = [
 // file is co-owned — this script owns geography and counts, people own the edit — so it now merges
 // instead of overwriting. Derived fields below are recomputed; everything else is carried forward.
 const existingDestinations = new Map((read('data/destinations.json').destinations ?? []).map((item) => [item.id, item]));
-const editorialKeys = ['shortIntroduction', 'editorialStatus', 'heroPhotoId', 'hero', 'featuredPhotoIds', 'manualOrder', 'storyIds', 'peopleIds', 'collectionIds', 'relatedDestinations', 'seoTitle', 'seoDescription', 'publicationStatus'];
+const editorialKeys = ['shortIntroduction', 'photographicIndex', 'editorialStatus', 'heroPhotoId', 'hero', 'featuredPhotoIds', 'manualOrder', 'storyIds', 'peopleIds', 'collectionIds', 'relatedDestinations', 'seoTitle', 'seoDescription', 'publicationStatus'];
 
 const assignments = Object.entries(curation.assignments);
 const destinations = destinationDefinitions.map((destination) => {

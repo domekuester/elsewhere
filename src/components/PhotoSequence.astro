@@ -16,7 +16,7 @@ const { photos } = Astro.props;
   <div class="closing-photos">
     {photos.map((photo, index) => (
       <figure class={`closing-photo closing-photo-${index + 1}`}>
-        <div data-photo-reveal><Image src={photo.image} alt={photo.alt} widths={[480, 768, 1200]} sizes="(min-width: 901px) 38vw, 86vw" loading="lazy" style={`object-position:${photo.position ?? '50% 50%'}`} /></div>
+        <div data-photo-reveal><Image src={photo.image} alt={photo.alt} widths={[480, 768, 1200]} sizes={index === 2 ? '(min-width: 901px) 48vw, 88vw' : '(min-width: 901px) 38vw, 86vw'} loading="lazy" style={`object-position:${photo.position ?? '50% 50%'}`} /></div>
         <figcaption><span>{String(index + 1).padStart(2, '0')}</span>{photo.note}</figcaption>
       </figure>
     ))}

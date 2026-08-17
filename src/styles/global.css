@@ -295,13 +295,17 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 .people-deeper > header { display: grid; grid-template-columns: auto minmax(0, 24rem); justify-content: space-between; align-items: end; gap: clamp(2rem, 6vw, 6rem); }
 .people-deeper h2 { font-family: var(--display); font-size: clamp(3.2rem, 5.5vw, 5.4rem); font-weight: 400; line-height: .84; letter-spacing: -.035em; text-transform: uppercase; }
 .people-deeper header p { color: #4d514e; font-family: var(--editorial); line-height: 1.7; }
-.people-deeper-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 3vw, 3rem) clamp(1rem, 2vw, 2.5rem); margin: clamp(3.5rem, 7vw, 7rem) 0 clamp(3rem, 5vw, 5rem); }
+.people-deeper-grid { display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; gap: clamp(3rem, 7vw, 8rem) clamp(1rem, 2vw, 2.5rem); margin: clamp(4.5rem, 8vw, 8rem) 0 clamp(3rem, 5vw, 5rem); }
 .people-deeper figure { margin: 0; }
-.people-deeper img { aspect-ratio: 3 / 4; }
-.people-deeper figcaption { padding-top: .75rem; color: #656a66; font-size: .74rem; }
-/* The rhythm of the grid: the middle column sits lower so six frames read as a sequence
-   rather than a product listing. */
-.people-deeper-grid figure:nth-child(3n + 2) { margin-top: clamp(2rem, 5vw, 5rem); }
+.people-deeper img { height: auto; }
+.people-deeper figcaption { padding-top: .8rem; color: #555a56; font-size: .78rem; }
+/* Unequal encounter beats preserve the approved order while refusing the equal-record grid. */
+.people-deeper-grid .is-gesture { grid-column: 1 / 6; }
+.people-deeper-grid .is-proximity { grid-column: 8 / 13; margin-top: clamp(7rem, 13vw, 14rem); }
+.people-deeper-grid .is-threshold { grid-column: 3 / 9; }
+.people-deeper-grid .is-environment { grid-column: 9 / 13; margin-top: clamp(4rem, 9vw, 9rem); }
+.people-deeper-grid .is-intimate { grid-column: 1 / 5; margin-top: clamp(3rem, 7vw, 7rem); }
+.people-deeper-grid .is-closing { grid-column: 6 / 12; }
 
 .people-next, .bw-next { padding: clamp(6rem, 10vw, 10rem) var(--gutter); }
 .people-next { color: var(--obsidian); background: var(--ivory); }
@@ -381,7 +385,8 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 @media (max-width: 900px) {
   :root { --header-safe-top: max(1rem, calc(env(safe-area-inset-top, 0px) + .6rem)); --header-bottom: 1rem; }
   :root { --header-veil-depth: 19rem; }
-  .site-header { position: fixed; background: rgba(11, 12, 13, .94); mix-blend-mode: normal; }
+  .site-header { position: fixed; background: rgba(11, 12, 13, .94); mix-blend-mode: normal; transition: transform .38s var(--ease-out), background-color .32s ease, text-shadow .32s ease; }
+  html[data-header-hidden]:not([data-menu-open]) .site-header { transform: translateY(calc(-100% - env(safe-area-inset-top, 0px))); }
   /* The mobile header is fixed, so it has to be solid once arbitrary content is passing underneath
      it — but not while it is still sitting on the opening photograph. `data-over-opening` is set by
      an IntersectionObserver on the opening itself (see scripts/navigation.ts), so nothing runs on
@@ -403,6 +408,8 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .primary-nav a[aria-current="page"] { color: #cfd1ce; }
   .primary-nav a[aria-current="page"] span { transform: translateX(-.2rem); }
   .primary-nav a span { display: inline; color: var(--ultramarine); font-family: var(--ui); }
+  .editorial-link, .site-footer nav a, .footer-wordmark,
+  .archive-filter-group button, .archive-filter-group a, .another-frame { min-height: 2.75rem; margin-block: 0; padding-block: .65rem; }
   .hero-scroll { display: none; }
   .hero-meta { bottom: 2.2rem; }
   .premise { grid-template-columns: 1fr; min-height: 75vh; gap: 3rem; }
@@ -450,9 +457,7 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .encounter-vendor { grid-column: 1 / 6; margin-top: 5rem; }
   .encounter-motorcycle { grid-column: 3 / 13; }
   .people-deeper > header { grid-template-columns: 1fr; }
-  .people-deeper-grid { grid-template-columns: repeat(2, 1fr); }
-  .people-deeper-grid figure:nth-child(3n + 2) { margin-top: 0; }
-  .people-deeper-grid figure:nth-child(2n) { margin-top: clamp(2rem, 6vw, 4rem); }
+  .people-deeper-grid { grid-template-columns: repeat(12, 1fr); }
   .collections-intro { grid-template-columns: 1fr; }
   .collection-entry { grid-template-columns: 1fr; }
   .collection-entry > img { min-height: 70svh; }
@@ -495,8 +500,9 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .closing-photo { width: 90%; }
   .footer-continuation { align-items: flex-end; }
   .footer-continuation span { font-size: clamp(2.7rem, 13vw, 4rem); }
-  .footer-base { grid-template-columns: 1fr; }
-  .footer-base nav { justify-content: flex-start; }
+  .footer-base { grid-template-columns: 1fr; gap: 1.6rem; padding-block: 2.5rem max(2.5rem, calc(env(safe-area-inset-bottom, 0px) + 1.5rem)); }
+  .footer-base nav { flex-wrap: wrap; justify-content: flex-start; gap: .15rem 1.25rem; }
+  .footer-base nav a { display: inline-flex; align-items: center; }
   .footer-base small { grid-column: 1; justify-self: start; }
   .index-list li { grid-template-columns: 2rem 1fr; }
   .index-list small { grid-column: 2; }
@@ -516,10 +522,12 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .people-next a span, .bw-next a span { font-size: clamp(3.5rem, 16vw, 5rem); }
   /* Mobile is authored, not stacked: alternating widths keep six portraits from reading as a feed. */
   .people-deeper h2 { font-size: clamp(3.2rem, 15vw, 4.6rem); }
-  .people-deeper-grid { display: flex; flex-direction: column; gap: 3.5rem; }
-  .people-deeper-grid figure { width: 82%; margin-top: 0 !important; }
-  .people-deeper-grid figure:nth-child(even) { align-self: flex-end; width: 68%; }
-  .people-deeper-grid figure:nth-child(4) { width: calc(100% + var(--gutter) * 2); align-self: center; }
+  .people-deeper-grid { display: flex; flex-direction: column; gap: clamp(4.5rem, 19vw, 7rem); }
+  .people-deeper-grid figure { width: 86%; margin-top: 0 !important; }
+  .people-deeper-grid .is-proximity, .people-deeper-grid .is-intimate { align-self: flex-end; width: 68%; }
+  .people-deeper-grid .is-threshold { width: calc(100% + var(--gutter) * 2); align-self: center; }
+  .people-deeper-grid .is-environment { width: 76%; }
+  .people-deeper-grid .is-closing { align-self: flex-end; width: 92%; }
   .bw-hero h1 { font-size: clamp(4.6rem, 23vw, 7rem); }
   .bw-sequence { display: flex; flex-direction: column; gap: 6rem; }
   .bw-sequence blockquote { order: 1; font-size: clamp(2.8rem, 13vw, 4rem); }
@@ -795,7 +803,9 @@ html[data-viewer-open] body { overflow: hidden; }
 .destination-hero-title { position: absolute; z-index: 1; right: var(--gutter); bottom: clamp(2.5rem, 6vw, 6rem); left: var(--gutter); display: flex; align-items: end; gap: 1.5rem; }
 .destination-hero-title h1 { margin-right: auto; font-family: var(--display); font-size: calc(clamp(4.2rem, 9vw, 6rem) * var(--hero-title-scale)); font-weight: 400; line-height: .84; letter-spacing: -.035em; text-transform: uppercase; }
 .destination-hero-title p { padding-bottom: .3rem; font-size: .72rem; }
-.destination-chapter-link { padding: clamp(3.5rem, 7vw, 6rem) var(--gutter); color: var(--obsidian); background: var(--ivory); }
+.destination-chapter-link { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 2rem; padding: clamp(5rem, 9vw, 9rem) var(--gutter); color: var(--obsidian); background: var(--ivory); }
+.destination-chapter-link > p { max-width: 32rem; font-family: var(--editorial); font-size: clamp(1.25rem, 2.2vw, 2rem); line-height: 1.4; }
+.destination-chapter-link .editorial-link { margin-top: 0; white-space: nowrap; }
 .destination-sequence { display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; gap: clamp(2rem, 5vw, 6rem) clamp(1rem, 2vw, 2.5rem); padding: clamp(8rem, 12vw, 13rem) var(--gutter); }
 .destination-frame { margin: 0; }
 .destination-frame img { height: auto; }
@@ -872,12 +882,10 @@ html[data-viewer-open] body { overflow: hidden; }
   .archive-filter-group button { flex: 0 0 auto; white-space: nowrap; }
   .archive-controls label { display: none; }
   .another-frame { margin-left: auto; }
-  .archive-field { display: flex; flex-direction: column; gap: 4.5rem; padding-block: 4rem 6rem; }
-  .archive-frame, .archive-frame.is-landscape, .archive-frame.is-selected { width: 88%; }
-  .archive-frame:nth-child(even) { align-self: flex-end; }
-  .archive-frame.is-landscape { width: 100%; }
-  .archive-frame:nth-child(4n + 2):not(.is-landscape):not(.is-selected) { width: 74%; }
-  .archive-frame:nth-child(4n + 3):not(.is-landscape):not(.is-selected) { width: 81%; }
+  .archive-field { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2.5rem, 11vw, 4rem) .8rem; padding-block: 4rem 6rem; }
+  .archive-frame, .archive-frame.is-landscape, .archive-frame.is-selected { width: auto; grid-column: span 1; align-self: start; }
+  .archive-frame.is-landscape, .archive-frame.is-selected { grid-column: 1 / -1; }
+  .archive-frame:nth-child(5n + 2):not(.is-landscape):not(.is-selected) { margin-top: clamp(3rem, 14vw, 5rem); }
   .archive-label { padding-top: .6rem; }
   .archive-progress { align-items: flex-end; gap: 2rem; }
   .archive-progress button { max-width: 11rem; text-align: right; }
@@ -896,11 +904,13 @@ html[data-viewer-open] body { overflow: hidden; }
   .destination-hero-title .memory-mark { margin-bottom: 1rem; }
   .destination-hero-title h1 { font-size: calc(clamp(4rem, 22vw, 5.8rem) * var(--hero-title-scale)); }
   .destination-hero-title p { margin-top: 1rem; }
+  .destination-chapter-link { grid-template-columns: 1fr; align-items: start; }
   .destination-sequence { display: flex; flex-direction: column; gap: 6rem; padding-block: 7rem; }
   .destination-frame { width: 88%; margin: 0; }
   .destination-frame:nth-child(even) { align-self: flex-end; }
   .destination-frame.is-seq-anchor { width: calc(100% + var(--gutter) * 2); align-self: center !important; }
-  .destination-continuation > a:first-of-type span { max-width: 8ch; font-size: clamp(3rem, 15vw, 4.3rem); }
+  .destination-continuation > a:first-of-type { align-items: flex-end; }
+  .destination-continuation > a:first-of-type span { max-width: 10ch; font-size: clamp(3rem, 14vw, 4.1rem); }
 }
 
 /* Phase 9 — business surfaces. Same typographic system as the publication:
@@ -1130,15 +1140,32 @@ html[data-viewer-open] body { overflow: hidden; }
 /* What is confirmed, and what deliberately is not. The same disclosure a destination chapter
    makes about its dates, made here about its places. */
 
-.journey-body { display: grid; justify-items: center; gap: clamp(3.2rem, 7vw, 7rem); padding-block: clamp(4.5rem, 9vw, 8rem) clamp(5rem, 9vw, 9rem); }
-.journey-body > * { width: min(36rem, calc(100% - var(--gutter) * 2)); }
+.journey-body { padding-block: clamp(4.5rem, 9vw, 8rem) clamp(5rem, 9vw, 9rem); }
+.journey-movement { display: grid; justify-items: center; gap: clamp(3.2rem, 7vw, 7rem); padding-block: clamp(3rem, 7vw, 7.5rem); }
+.journey-movement:first-child { padding-top: 0; }
+.journey-movement + .journey-movement { border-top: 1px solid rgba(242, 240, 234, .09); }
+.journey-movement > * { width: min(36rem, calc(100% - var(--gutter) * 2)); }
+/* The chapter alternates its centre of gravity without altering a single editorial block. */
+.journey-movement.is-left > .journey-text,
+.journey-movement.is-left > .journey-lede,
+.journey-movement.is-left > .journey-lines { margin-right: min(15vw, 13rem); }
+.journey-movement.is-right > .journey-text,
+.journey-movement.is-right > .journey-lede,
+.journey-movement.is-right > .journey-lines { margin-left: min(15vw, 13rem); }
+.journey-movement.is-expansion { padding-block: clamp(7rem, 13vw, 14rem); }
+.journey-movement.is-quiet { padding-block: clamp(9rem, 16vw, 17rem); }
+.journey-movement.is-encounter { row-gap: clamp(2.5rem, 5vw, 5rem); }
 .journey-lede { font-family: var(--editorial); font-size: clamp(1.5rem, 3vw, 2.15rem); line-height: 1.28; letter-spacing: -.02em; }
 .journey-text p { font-family: var(--editorial); font-size: clamp(1.04rem, 1.2vw, 1.16rem); line-height: 1.78; color: #d6d7d2; }
 .journey-text p + p { margin-top: 1.35rem; }
 /* Chapter markers name a place the photographer named. They are narrative, never a caption:
    no photograph on this page claims a city, because not one of them can prove it. */
-.journey-chapter { display: grid; gap: 1.1rem; font-family: var(--display); font-size: clamp(1.45rem, 2.2vw, 1.9rem); font-weight: 400; letter-spacing: .14em; line-height: 1; text-transform: uppercase; }
-.journey-chapter::before { content: ""; width: 1.7rem; height: 2px; background: var(--ultramarine); }
+.journey-chapter { display: grid; grid-template-columns: 1.7rem minmax(0, 1fr); align-items: start; gap: 1.1rem clamp(1.2rem, 2vw, 2rem); width: min(72rem, calc(100% - var(--gutter) * 2)); font-family: var(--display); font-size: clamp(2.4rem, 5vw, 5.4rem); font-weight: 400; letter-spacing: .025em; line-height: .84; text-transform: uppercase; }
+.journey-chapter::before { content: ""; width: 1.7rem; height: 2px; margin-top: .24em; background: var(--ultramarine); }
+.journey-movement.is-right .journey-chapter,
+.journey-movement.is-closing .journey-chapter { justify-self: end; grid-template-columns: minmax(0, 1fr) 1.7rem; text-align: right; }
+.journey-movement.is-right .journey-chapter::before,
+.journey-movement.is-closing .journey-chapter::before { grid-column: 2; grid-row: 1; }
 .journey-lines { display: grid; gap: .3rem; font-family: var(--editorial); font-size: clamp(1.7rem, 3.6vw, 2.6rem); line-height: 1.14; letter-spacing: -.025em; }
 .journey-pause { height: clamp(1rem, 4vw, 4rem); }
 
@@ -1148,6 +1175,12 @@ html[data-viewer-open] body { overflow: hidden; }
 .journey-frame.is-wide.is-landscape { width: min(64rem, calc(100% - var(--gutter) * 2)); }
 .journey-frame.is-wide.is-portrait { width: min(40rem, calc(100% - var(--gutter) * 2)); }
 .journey-frame.is-inset { width: min(23rem, calc(100% - var(--gutter) * 2)); }
+.journey-movement.is-left > .journey-frame.is-wide,
+.journey-movement.is-left > .journey-frame.is-inset,
+.journey-movement.is-encounter > .journey-frame.is-wide { justify-self: start; margin-left: var(--gutter); }
+.journey-movement.is-right > .journey-frame.is-wide,
+.journey-movement.is-right > .journey-frame.is-inset,
+.journey-movement.is-closing > .journey-frame.is-wide { justify-self: end; margin-right: var(--gutter); }
 .journey-frame.is-full { width: 100%; }
 .journey-frame.is-full img { max-height: 92svh; object-fit: cover; object-position: var(--frame-focal, 50% 50%); }
 .journey-frame figcaption { padding-top: .8rem; color: #8d908c; font-size: .74rem; }
@@ -1157,6 +1190,11 @@ html[data-viewer-open] body { overflow: hidden; }
 .journey-pair { width: min(68rem, calc(100% - var(--gutter) * 2)); display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: clamp(1rem, 2.2vw, 2rem); }
 .journey-pair > :last-child { margin-top: clamp(1.5rem, 6vw, 5.5rem); }
 .journey-pair .journey-frame { width: 100%; }
+.journey-pair.is-dialogue { grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); }
+.journey-pair.is-dialogue > :last-child { margin-top: clamp(4rem, 9vw, 8rem); }
+.journey-pair.is-stacked { width: min(60rem, calc(100% - var(--gutter) * 2)); grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); }
+.journey-pair.is-closing { width: min(62rem, calc(100% - var(--gutter) * 2)); grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+.journey-pair.is-closing > :last-child { margin-top: clamp(6rem, 12vw, 10rem); }
 
 .journey-next { border-top: 1px solid var(--line-dark); padding: clamp(4.5rem, 9vw, 8rem) var(--gutter) clamp(3rem, 6vw, 5rem); }
 .journey-next > a:not(.editorial-link) { display: flex; align-items: center; justify-content: space-between; border-block: 1px solid var(--line-dark); margin-top: 1.6rem; padding-block: 1.5rem; }
@@ -1174,32 +1212,78 @@ html[data-viewer-open] body { overflow: hidden; }
    as the first line of a list that has more lines coming, which with one published story looks like
    an unfinished table; a wide frame with the title under it reads as a contents page in a photo
    book, which is what this is. It stacks without changing when Story 02 arrives. */
-.journey-index { display: grid; gap: clamp(4rem, 8vw, 7rem); padding: 0 var(--gutter) clamp(7rem, 12vw, 12rem); }
-.journey-index a { display: grid; gap: clamp(1.4rem, 3vw, 2.2rem); border-top: 1px solid var(--line-light); padding-top: clamp(1.6rem, 3vw, 2.4rem); }
-.journey-index img { aspect-ratio: 16 / 7; object-position: 50% 46%; }
+.journey-index { display: grid; gap: clamp(6rem, 12vw, 13rem); padding: 0 var(--gutter) clamp(7rem, 12vw, 12rem); }
+.journey-index a { display: grid; grid-template-columns: minmax(0, 7fr) minmax(18rem, 5fr); align-items: center; gap: clamp(2rem, 6vw, 8rem); border-top: 1px solid var(--line-light); padding-top: clamp(1.6rem, 3vw, 2.4rem); }
+.journey-index .folio-opening { grid-template-columns: minmax(0, 8fr) minmax(18rem, 4fr); align-items: end; }
+.journey-index .folio-opening > img { width: 92%; }
+.journey-index .folio-opening > div { padding-bottom: clamp(1rem, 4vw, 4rem); }
+.journey-index .folio-landscape-right { grid-template-columns: minmax(18rem, 5fr) minmax(0, 7fr); }
+.journey-index .folio-landscape-right > img { grid-column: 2; }
+.journey-index .folio-landscape-right > div { grid-column: 1; grid-row: 1; }
+.journey-index .folio-portrait-left { grid-template-columns: minmax(0, 5fr) minmax(18rem, 7fr); }
+.journey-index .folio-portrait-left > img { justify-self: start; }
+.journey-index .folio-portrait-left > div { max-width: 30rem; justify-self: center; }
+.journey-index .folio-contained { grid-template-columns: 1fr; }
+.journey-index .folio-contained > img { width: 68%; justify-self: end; }
+.journey-index .folio-contained > div { width: min(34rem, 48%); margin-top: clamp(-10rem, -8vw, -6rem); position: relative; }
+.journey-index .folio-closing { grid-template-columns: minmax(18rem, 5fr) minmax(0, 7fr); align-items: end; padding-bottom: clamp(2rem, 5vw, 5rem); }
+.journey-index .folio-closing > img { grid-column: 2; justify-self: end; }
+.journey-index .folio-closing > div { grid-column: 1; grid-row: 1; padding-bottom: clamp(2rem, 8vw, 8rem); }
+.journey-index img { height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 46%; }
+.journey-index .is-portrait img { width: min(100%, 36rem); justify-self: center; aspect-ratio: auto; object-fit: contain; }
 .journey-index h2 { margin-top: .4rem; font-family: var(--display); font-size: clamp(3.4rem, 9vw, 7rem); font-weight: 400; line-height: .86; letter-spacing: -.035em; text-transform: uppercase; }
 .journey-index > a > div > p:last-of-type { max-width: 34rem; margin-top: 1rem; font-family: var(--editorial); font-size: clamp(1.02rem, 1.3vw, 1.18rem); line-height: 1.65; }
 .journey-index .editorial-link { pointer-events: none; }
 
-@media (max-width: 560px) {
-  .journey-index img { aspect-ratio: 3 / 2; }
-}
-
 @media (max-width: 900px) {
   .journey-hero > img { object-position: var(--hero-focal-tablet); }
+  .journey-index a { grid-template-columns: minmax(0, 1.15fr) minmax(16rem, .85fr); }
 }
 
 @media (max-width: 700px) {
-  .journey-index a { grid-template-columns: 1fr; }
+  .journey-index a,
+  .journey-index .journey-folio { grid-template-columns: 1fr; gap: 1.6rem; }
+  .journey-index .journey-folio > img, .journey-index .journey-folio > div { grid-column: 1; grid-row: auto; }
 }
 
 @media (max-width: 560px) {
   .journey-hero { grid-template-columns: 1fr; min-height: 88svh; gap: 1.2rem; }
   .journey-hero > img { object-position: var(--hero-focal-mobile); }
   .journey-hero-meta { padding-bottom: 0; }
-  .journey-pair { grid-template-columns: 1fr; gap: clamp(2rem, 6vw, 3rem); }
-  .journey-pair > :last-child { margin-top: 0; }
+  .journey-movement { gap: clamp(3.5rem, 14vw, 6rem); padding-block: clamp(4rem, 17vw, 7rem); }
+  .journey-movement > .journey-text,
+  .journey-movement > .journey-lede,
+  .journey-movement > .journey-lines { margin-inline: 0; }
+  .journey-chapter, .journey-movement.is-right .journey-chapter, .journey-movement.is-closing .journey-chapter { grid-template-columns: 1.7rem minmax(0, 1fr); text-align: left; font-size: clamp(2.4rem, 12vw, 3.8rem); }
+  .journey-movement.is-right .journey-chapter::before, .journey-movement.is-closing .journey-chapter::before { grid-column: 1; }
+  .journey-movement > .journey-frame.is-wide,
+  .journey-movement > .journey-frame.is-inset { margin-inline: 0; }
+  .journey-movement.is-left > .journey-frame.is-wide,
+  .journey-movement.is-encounter > .journey-frame.is-wide { justify-self: start; width: calc(100% - var(--gutter)); }
+  .journey-movement.is-right > .journey-frame.is-wide,
+  .journey-movement.is-closing > .journey-frame.is-wide { justify-self: end; width: calc(100% - var(--gutter)); }
+  .journey-pair { display: flex; flex-direction: column; gap: 1.25rem; }
+  .journey-pair > .journey-frame { width: 82%; }
+  .journey-pair > :last-child { align-self: flex-end; width: 72%; margin-top: 0; }
+  .journey-pair.is-compact { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: .65rem; }
+  .journey-pair.is-compact > .journey-frame,
+  .journey-pair.is-compact > :last-child { width: 100%; margin-top: 0; }
+  .journey-pair.is-dialogue > .journey-frame:first-child { width: 72%; }
+  .journey-pair.is-dialogue > :last-child { width: 88%; }
+  .journey-pair.is-stacked > .journey-frame:first-child { width: 78%; }
+  .journey-pair.is-stacked > :last-child { width: 84%; }
+  .journey-pair.is-closing > .journey-frame:first-child { width: 88%; }
+  .journey-pair.is-closing > :last-child { width: 92%; }
   .journey-frame.is-inset { width: min(17rem, calc(100% - var(--gutter) * 2)); }
+  .journey-index { gap: clamp(6rem, 24vw, 10rem); }
+  .journey-index img { aspect-ratio: 4 / 3; }
+  .journey-index .is-portrait img { width: 82%; justify-self: start; }
+  .journey-index .folio-landscape-right img { width: 92%; justify-self: end; }
+  .journey-index .folio-portrait-left img { width: 78%; justify-self: start; }
+  .journey-index .folio-contained > img { width: 100%; }
+  .journey-index .folio-contained > div { width: 100%; margin-top: 0; }
+  .journey-index .folio-closing img { width: 82%; justify-self: end; }
+  .journey-index .folio-closing > div { padding-bottom: 0; }
   /* Phase 14.2: the mobile crop is the tightest one, so it gets its own focus. */
   .journey-frame.is-full img { object-position: var(--frame-focal-mobile, var(--frame-focal, 50% 50%)); }
   .journey-story-nav a + a { padding-left: 0; }

@@ -1,15 +1,20 @@
 ---
 import { site, business } from '../config/site';
-const { archiveHref = '/archive/' } = Astro.props;
+const { archiveHref = '/archive/', showContinuation = true } = Astro.props;
 const navigation = site.navigation.map((item) => item.href === '/archive/' ? { ...item, href: archiveHref } : item);
 // Commercial routes sit below the editorial navigation, never inside it.
-const secondary = site.secondaryNavigation.filter((item) => item.href !== business.contactPage || business.enquiriesEnabled);
+const primaryHrefs = new Set(navigation.map((item) => item.href));
+const secondary = site.secondaryNavigation.filter((item) =>
+  !primaryHrefs.has(item.href) && (item.href !== business.contactPage || business.enquiriesEnabled)
+);
 ---
 
 <footer class="site-footer" id="about">
-  <a class="footer-continuation" href={archiveHref} data-analytics-event="archive_open" data-analytics-context="footer">
-    <span>Enter the archive</span><b aria-hidden="true">→</b>
-  </a>
+  {showContinuation && (
+    <a class="footer-continuation" href={archiveHref} data-analytics-event="archive_open" data-analytics-context="footer">
+      <span>Enter the archive</span><b aria-hidden="true">→</b>
+    </a>
+  )}
   <div class="footer-base">
     <a class="footer-wordmark" href="/#main">{site.name}</a>
     <p>A visual archive of the world as experienced by one person.</p>

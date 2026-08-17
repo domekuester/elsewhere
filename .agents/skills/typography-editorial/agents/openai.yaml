@@ -1,0 +1,4 @@
+interface:
+  display_name: "Editorial Typography"
+  short_description: "Review ELSEWHERE editorial typography"
+  default_prompt: "Use $typography-editorial to review the typographic hierarchy and craft of this ELSEWHERE surface."

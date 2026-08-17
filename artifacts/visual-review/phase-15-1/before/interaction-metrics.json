@@ -1,0 +1,232 @@
+{
+  "mobileNav": {
+    "expanded": "true",
+    "navOpen": true,
+    "navInert": false,
+    "focusText": "Explore↗",
+    "bodyOverflow": "clip visible",
+    "navRect": {
+      "x": 0,
+      "y": 76,
+      "width": 390,
+      "height": 768,
+      "top": 76,
+      "right": 390,
+      "bottom": 844,
+      "left": 0
+    }
+  },
+  "mobileNavClose": {
+    "expanded": "false",
+    "focusReturned": true
+  },
+  "archiveState": [
+    {
+      "y": 900,
+      "visibleFrames": [
+        {
+          "id": "photo-0507",
+          "top": 239,
+          "width": 550,
+          "height": 391
+        },
+        {
+          "id": "photo-0001",
+          "top": 239,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0381",
+          "top": 239,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0003",
+          "top": 816,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0036",
+          "top": 816,
+          "width": 550,
+          "height": 436
+        },
+        {
+          "id": "photo-0004",
+          "top": 816,
+          "width": 322,
+          "height": 505
+        }
+      ],
+      "totalFrames": 24
+    },
+    {
+      "y": 2200,
+      "visibleFrames": [
+        {
+          "id": "photo-0003",
+          "top": -484,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0004",
+          "top": -484,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0176",
+          "top": 94,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0005",
+          "top": 94,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0002",
+          "top": 94,
+          "width": 550,
+          "height": 847
+        }
+      ],
+      "totalFrames": 24
+    },
+    {
+      "y": 4000,
+      "visibleFrames": [
+        {
+          "id": "photo-0183",
+          "top": -787,
+          "width": 550,
+          "height": 847
+        },
+        {
+          "id": "photo-0182",
+          "top": 131,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0008",
+          "top": 131,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0207",
+          "top": 131,
+          "width": 436,
+          "height": 315
+        },
+        {
+          "id": "photo-0009",
+          "top": 709,
+          "width": 322,
+          "height": 505
+        },
+        {
+          "id": "photo-0443",
+          "top": 709,
+          "width": 550,
+          "height": 847
+        },
+        {
+          "id": "photo-0012",
+          "top": 709,
+          "width": 436,
+          "height": 314
+        }
+      ],
+      "totalFrames": 24
+    }
+  ],
+  "archiveViewer": {
+    "isOpen": true,
+    "focusInside": true,
+    "imageLoaded": true,
+    "imageFit": "contain",
+    "closed": true,
+    "focusReturned": true
+  },
+  "japanScroll": [
+    {
+      "y": 4500,
+      "heading": null,
+      "visibleImages": [
+        {
+          "alt": "A weathered hand reaches out past a ship’s rail, holding som",
+          "rect": [
+            350,
+            525
+          ],
+          "fit": "contain",
+          "position": "50% 50%"
+        },
+        {
+          "alt": "A flag flies from the bow of a ferry over open grey water, a",
+          "rect": [
+            350,
+            524
+          ],
+          "fit": "contain",
+          "position": "50% 50%"
+        }
+      ]
+    },
+    {
+      "y": 11000,
+      "heading": null,
+      "visibleImages": [
+        {
+          "alt": "Heavy dark cloud presses down over a flat sea and low rock o",
+          "rect": [
+            390,
+            260
+          ],
+          "fit": "cover",
+          "position": "50% 50%"
+        },
+        {
+          "alt": "In black and white, a stone lantern and two benches stand on",
+          "rect": [
+            350,
+            234
+          ],
+          "fit": "contain",
+          "position": "50% 50%"
+        }
+      ]
+    },
+    {
+      "y": 19000,
+      "heading": null,
+      "visibleImages": [
+        {
+          "alt": "In black and white, the tiered roofs of a castle keep rise a",
+          "rect": [
+            350,
+            467
+          ],
+          "fit": "contain",
+          "position": "50% 50%"
+        }
+      ]
+    }
+  ],
+  "motionState": {
+    "reduced": false,
+    "scrollBehavior": "auto",
+    "gsapScripts": [],
+    "hiddenContent": 0
+  },
+  "consoleProblems": [],
+  "networkProblems": []
+}
