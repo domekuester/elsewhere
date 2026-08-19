@@ -38,26 +38,34 @@ const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
     </header>
 
     <section class="chapter-entries" aria-label="Open chapters">
-      {chapters.map((destination) => {
+      {chapters.map((destination, index) => {
         const hero = photosById.get(destination.heroPhotoId);
+        // The chapters arrive sorted by archive depth, so the first is the deepest body of work and
+        // takes the full-width lead plate; the rest hang beneath it as a suite four columns wide.
+        // The lead is drawn at the width of the page and needs the derivative to match, or the one
+        // photograph the index leads on is the one it serves softest.
+        const isLead = index === 0;
         return (
           <a class="chapter-entry" href={withBase(`/destinations/${destination.slug}/`)} data-analytics-event="destination_open" data-analytics-context={`index:${destination.slug}`}>
             <span class="chapter-entry-image">
               {hero && (
                 <img
                   src={hero.thumbnail}
-                  srcset={`${hero.thumbnail} ${derivativeWidth(hero, 960)}w, ${hero.archiveImage} ${derivativeWidth(hero, 1800)}w`}
-                  sizes="(min-width: 901px) 48vw, 100vw"
+                  srcset={isLead
+                    ? `${hero.thumbnail} ${derivativeWidth(hero, 960)}w, ${hero.archiveImage} ${derivativeWidth(hero, 1800)}w, ${hero.viewerImage} ${derivativeWidth(hero, 3200)}w`
+                    : `${hero.thumbnail} ${derivativeWidth(hero, 960)}w, ${hero.archiveImage} ${derivativeWidth(hero, 1800)}w`}
+                  sizes={isLead ? '(min-width: 901px) 94vw, 100vw' : '(min-width: 901px) 30vw, 100vw'}
                   width={hero.width}
                   height={hero.height}
                   alt={hero.altText}
-                  loading="lazy"
+                  loading={isLead ? 'eager' : 'lazy'}
                   decoding="async"
                 />
               )}
             </span>
             <span class="chapter-entry-copy">
               <b>{destination.name}</b>
+              <i aria-hidden="true">↗</i>
               {destination.parentDestination && <em>{destination.country}</em>}
               <small>{destination.confirmedPhotoCount} photographs{year(destination) ? ` · ${year(destination)}` : ''}</small>
             </span>

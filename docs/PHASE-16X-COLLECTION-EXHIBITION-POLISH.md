@@ -177,3 +177,57 @@ the optical relationship holds at every width the heading clamps through.
 - **The monochrome room's sticky text rail.** It looks emptier than the wall in a static full-section
   capture, but the copy travels beside the plates while scrolling. It is deliberately a different
   grammar; making all four Home collection surfaces share one would flatten the publication.
+
+
+---
+
+# Phase 17 — exhibition art direction
+
+Three interventions, all on surfaces the first two passes had not reached.
+
+## The page threshold
+
+`.index-intro` and `.collections-intro` both opened on a three-track header whose middle track
+carried the title. Measured at 1728 that put "DESTINATIONS" at x=260 of a 1617px field: the largest
+type on the page, aligned to nothing, directly above plates flush to both field edges. An exhibition
+names the room at the door, on the same wall the works hang from. Kicker and title now open on the
+left rail and the standfirst closes on the right — the threshold grammar the world wall and
+`.people-deeper` already used, so every entrance to the publication reads the same way.
+
+Both are shared surfaces, so one change fixed `/destinations/` and `/collections/` at once.
+
+## The place index: a room, then a suite
+
+Four chapters in two columns of identical 4:3 plates with identical labels is a card component
+repeated four times. Every chapter claimed the same weight, and a body of 203 photographs sat at
+exactly the size of one of 22.
+
+The chapters arrive already sorted by archive depth, so the index can say so. The deepest body takes
+a full-width 21:9 plate — the room you enter — and the rest hang beneath it as a suite of three
+equal works, rail to rail. Hierarchy comes from the archive itself rather than from a layout
+preference. The trailing count decides the suite (three abreast, a facing pair, or a single work
+inheriting the lead's width) so the wall never ends on an orphan whatever the archive grows into,
+and below 901px every chapter takes the width of the screen.
+
+The lead plate is drawn at the width of the page, so it gets the viewer derivative in its srcset:
+the one photograph the index leads on should not be the one it serves softest.
+
+## The plate label
+
+The entry arrow used to sit on a line of its own beneath each caption — an orphaned glyph that read
+as interface. It now rides the name's cap line, sized off the name, as it does on the world wall.
+The count keeps the right edge of the plate, so a column of chapters carries a column of figures.
+
+## The Journey folios
+
+Three of the five folios touched neither field edge: the portrait plate opened 27px inside the left
+rail and the closing plate floated at 888→1464 of a 1617px field, held by nothing. A 27px miss is
+the kind that reads as a mistake rather than a decision. The five folio types keep their distinct
+shapes — that limited grammar was already right — and each now begins or ends on a rail, so the
+index alternates L/R, R/L, L/R, R/L, R/L down the page.
+
+## Verification
+
+Widths 1728, 1440, 1280, 1024, 768, 430, 390: zero horizontal overflow, zero broken images, zero
+console errors. Build, content, exclusions and launch validation all pass; 0 broken internal links,
+0 broken public assets, 0 metadata leaks, 0 repeated photographs within any single page.

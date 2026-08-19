@@ -493,10 +493,10 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 }
 .bw-next { color: #f1f1ef; background: #080909; }
 .collections-page { min-height: 100vh; padding-top: clamp(9rem, 14vw, 14rem); color: var(--obsidian); background: var(--ivory); }
-.collections-intro { display: grid; grid-template-columns: .7fr 1.3fr .8fr; align-items: end; gap: 2rem; padding: 0 var(--gutter) clamp(7rem, 11vw, 11rem); }
+.collections-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 26rem); align-items: end; gap: 1.4rem clamp(2rem, 6vw, 6rem); padding: 0 var(--gutter) clamp(7rem, 11vw, 11rem); }
 .collections-intro .memory-mark { grid-column: 1 / -1; }
-.collections-intro h1 { font-family: var(--display); font-size: clamp(5rem, 11vw, 11rem); font-weight: 400; line-height: .78; letter-spacing: -.04em; text-transform: uppercase; }
-.collections-intro p { max-width: 28rem; font-family: var(--editorial); font-size: 1.2rem; line-height: 1.55; }
+.collections-intro h1 { grid-column: 1; grid-row: 2; font-family: var(--display); font-size: clamp(5rem, 11vw, 11rem); font-weight: 400; line-height: .78; letter-spacing: -.04em; text-transform: uppercase; }
+.collections-intro p { grid-column: 2; grid-row: 2; max-width: 26rem; justify-self: end; font-family: var(--editorial); font-size: 1.2rem; line-height: 1.55; }
 .collection-entry { display: grid; grid-template-columns: 56% 44%; color: #f1f1ef; background: #080909; }
 .collection-entry > img { min-height: 85svh; }
 .collection-entry > div { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 5rem var(--gutter); }
@@ -522,12 +522,20 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 
 /* Editorial indexes and utility pages */
 .index-page { min-height: 100vh; padding: clamp(9rem, 15vw, 14rem) var(--gutter) clamp(7rem, 12vw, 12rem); color: var(--obsidian); background: var(--ivory); }
-.index-intro { display: grid; grid-template-columns: .45fr 1.15fr .75fr; align-items: end; gap: 2rem; padding-bottom: clamp(5rem, 9vw, 9rem); }
+/* Phase 17 — the page threshold, on the rails it introduces.
+   ------------------------------------------------------------------------------------------
+   Both index pages opened on a three-track header whose middle track carried the title, which
+   put "DESTINATIONS" at x=260 of a 1617px field: the largest type on the page, aligned to nothing,
+   directly above plates flush to the field edges. An exhibition names the room at the door, on the
+   wall the works hang from. Kicker and title open on the left rail, the standfirst closes on the
+   right — the same threshold grammar the world wall and `.people-deeper` already use, so every
+   entrance to the publication now reads the same way. */
+.index-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 26rem); align-items: end; gap: 1.4rem clamp(2rem, 6vw, 6rem); padding-bottom: clamp(5rem, 9vw, 9rem); }
 .index-intro > * { min-width: 0; }
 .index-intro .memory-mark { grid-column: 1 / -1; }
-.index-intro > p { color: #5a5f5b; font-size: .72rem; }
-.index-intro h1 { font-family: var(--display); font-size: clamp(4rem, 7vw, 6rem); font-weight: 400; line-height: .84; letter-spacing: -.04em; text-transform: uppercase; }
-.index-intro > div { max-width: 28rem; justify-self: end; }
+.index-intro > p { grid-column: 1; grid-row: 2; color: #5a5f5b; font-size: .72rem; }
+.index-intro h1 { grid-column: 1; grid-row: 3; font-family: var(--display); font-size: clamp(4rem, 7vw, 6rem); font-weight: 400; line-height: .84; letter-spacing: -.04em; text-transform: uppercase; }
+.index-intro > div { grid-column: 2; grid-row: 3; max-width: 26rem; justify-self: end; }
 .index-intro > div p { margin-bottom: 2rem; line-height: 1.7; }
 .index-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-light); }
 .index-list li { display: grid; grid-template-columns: 4rem 1fr auto; align-items: baseline; gap: 1rem; padding: 1.4rem 0; border-bottom: 1px solid var(--line-light); }
@@ -616,7 +624,11 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .footer-base { grid-template-columns: 1fr 1fr; }
   .footer-base nav { flex-wrap: wrap; }
   .footer-base small { grid-column: 2; }
+  /* The explicit rows are a wide-screen device. A single column has to reset them at matching
+     specificity, or `grid-column: 2` on the standfirst opens an implicit second track and the
+     header stops fitting the screen. */
   .index-intro { grid-template-columns: 1fr; }
+  .index-intro > p, .index-intro h1, .index-intro > div { grid-area: auto; }
   .index-intro > div { justify-self: start; }
   .monochrome-room { min-height: auto; display: flex; flex-direction: column; gap: 4rem; }
   .monochrome-copy { position: static; }
@@ -633,6 +645,7 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .people-deeper > header { grid-template-columns: 1fr; }
   .people-deeper-grid { grid-template-columns: repeat(12, 1fr); }
   .collections-intro { grid-template-columns: 1fr; }
+  .collections-intro h1, .collections-intro p { grid-area: auto; justify-self: start; }
   .collection-entry { grid-template-columns: 1fr; }
   .collection-entry > img { min-height: 70svh; }
   .future-collections { grid-template-columns: 1fr 1fr; }
@@ -1441,17 +1454,25 @@ html[data-viewer-open] body { overflow: hidden; }
 .journey-index .folio-landscape-right { grid-template-columns: minmax(18rem, 5fr) minmax(0, 7fr); }
 .journey-index .folio-landscape-right > img { grid-column: 2; }
 .journey-index .folio-landscape-right > div { grid-column: 1; grid-row: 1; }
+/* Phase 17 — three of the five folios touched neither field edge: the portrait plate opened 27px
+   inside the left rail and the closing plate floated at 888→1464 of a 1617px field, held by nothing.
+   A 27px miss is the kind that reads as a mistake rather than a decision. The five folio types keep
+   their distinct shapes; each now begins or ends on a rail. */
 .journey-index .folio-portrait-left { grid-template-columns: minmax(0, 5fr) minmax(18rem, 7fr); }
 .journey-index .folio-portrait-left > img { justify-self: start; }
-.journey-index .folio-portrait-left > div { max-width: 30rem; justify-self: center; }
+.journey-index .folio-portrait-left > div { max-width: 30rem; justify-self: end; }
 .journey-index .folio-contained { grid-template-columns: 1fr; }
 .journey-index .folio-contained > img { width: 68%; justify-self: end; }
 .journey-index .folio-contained > div { width: min(34rem, 48%); margin-top: clamp(-10rem, -8vw, -6rem); position: relative; }
 .journey-index .folio-closing { grid-template-columns: minmax(18rem, 5fr) minmax(0, 7fr); align-items: end; padding-bottom: clamp(2rem, 5vw, 5rem); }
-.journey-index .folio-closing > img { grid-column: 2; justify-self: end; }
+.journey-index .folio-closing > img { grid-column: 2; justify-self: end; width: 100%; }
 .journey-index .folio-closing > div { grid-column: 1; grid-row: 1; padding-bottom: clamp(2rem, 8vw, 8rem); }
 .journey-index img { height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 46%; }
-.journey-index .is-portrait img { width: min(100%, 36rem); justify-self: center; aspect-ratio: auto; object-fit: contain; }
+.journey-index .is-portrait img { width: min(100%, 36rem); justify-self: start; aspect-ratio: auto; object-fit: contain; }
+/* A portrait plate keeps its own width, so which rail it hangs from is decided by its folio rather
+   than by the orientation rule that sizes it. The closing folio ends the table of contents on the
+   right rail, which is where the eye is already sitting after four alternating spreads. */
+.journey-index .folio-closing.is-portrait > img { justify-self: end; }
 .journey-index h2 { margin-top: .4rem; font-family: var(--display); font-size: clamp(3.4rem, 9vw, 7rem); font-weight: 400; line-height: .86; letter-spacing: -.035em; text-transform: uppercase; }
 .journey-index > a > div > p:last-of-type { max-width: 34rem; margin-top: 1rem; font-family: var(--editorial); font-size: clamp(1.02rem, 1.3vw, 1.18rem); line-height: 1.65; }
 .journey-index .editorial-link { pointer-events: none; }
@@ -1516,22 +1537,53 @@ html[data-viewer-open] body { overflow: hidden; }
    orphan, and the markup's own `sizes="(min-width: 901px) 48vw"` had always described a two-column
    layout the CSS was not building. Two columns fills every row for an even count, makes the
    responsive contract honest, and gives each chapter roughly twice the photograph. */
-.chapter-entries { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 2.5rem); padding-bottom: clamp(5rem, 9vw, 9rem); }
+/* Phase 17 — the place index hangs as a room and a suite, not as four equal tiles.
+   ------------------------------------------------------------------------------------------
+   Two columns of identical 4:3 plates with identical labels is a card component repeated four
+   times: every chapter claimed the same weight, and a body of 203 photographs sat at exactly the
+   size of one of 22. The chapters arrive already sorted by depth, so the index can say so. The
+   deepest body takes a full-width plate — the room you enter — and the rest hang beneath it as a
+   suite of equal works. Hierarchy comes from the archive itself rather than from a layout choice.
+   The trailing count decides the suite: three abreast, two abreast, or a single work that inherits
+   the lead's width, so the wall never ends on an orphan whatever the archive grows into. */
+.chapter-entries { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(3rem, 6vw, 5.5rem) clamp(1.5rem, 3vw, 2.5rem); padding-bottom: clamp(5rem, 9vw, 9rem); }
+/* Below the wide-screen breakpoint every chapter takes the width of the screen. A suite of three is
+   a wide-screen idea — at 390px it would draw each chapter at about 100px, and a two-up tablet row
+   leaves the third facing an empty half. Placement is stated per breakpoint rather than overridden
+   downwards, which also keeps the `:has()` suite rules from having to be out-specified later. */
+.chapter-entries > .chapter-entry { grid-column: 1 / -1; }
+.chapter-entries > .chapter-entry:first-child .chapter-entry-image img { aspect-ratio: 21 / 9; }
+
+
+@media (min-width: 901px) {
+  .chapter-entries > .chapter-entry { grid-column: span 4; }
+  .chapter-entries > .chapter-entry:first-child { grid-column: 1 / -1; }
+  /* Two chapters: the second answers the lead at full width. Three: a facing pair. */
+  .chapter-entries:has(> .chapter-entry:nth-child(2):last-child) > .chapter-entry:not(:first-child) { grid-column: 1 / -1; }
+  .chapter-entries:has(> .chapter-entry:nth-child(3):last-child) > .chapter-entry:not(:first-child) { grid-column: span 6; }
+  /* Five or six chapters: two rows of two rather than a row of three and an orphan. */
+  .chapter-entries:has(> .chapter-entry:nth-child(5):last-child) > .chapter-entry:not(:first-child),
+  .chapter-entries:has(> .chapter-entry:nth-child(6):last-child) > .chapter-entry:not(:first-child) { grid-column: span 6; }
+}
 /* An odd final chapter takes the full width instead of sitting alone beside empty space. */
-.chapter-entries > .chapter-entry:last-child:nth-child(odd) { grid-column: 1 / -1; }
-.chapter-entries > .chapter-entry:last-child:nth-child(odd) .chapter-entry-image img { aspect-ratio: 21 / 9; }
-.chapter-entry { display: grid; gap: 1.4rem; }
+.chapter-entry { display: grid; gap: 1.1rem; }
 .chapter-entry-image { display: block; overflow: hidden; background: #e6e4de; }
 /* A square plate holds both portrait and landscape heroes without destroying either. The crop
    favours the lower middle, where the subject sits in both current chapter heroes. */
 .chapter-entry-image img { aspect-ratio: 4 / 3; object-position: 50% 62%; transition: transform .7s var(--ease-out); }
 .chapter-entry:hover .chapter-entry-image img, .chapter-entry:focus-visible .chapter-entry-image img { transform: scale(1.018); }
-.chapter-entry-copy { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: .3rem 1rem; border-top: 1px solid var(--line-light); padding-top: 1rem; }
-.chapter-entry b { font-family: var(--display); font-size: clamp(2.4rem, 4.4vw, 3.6rem); font-weight: 400; line-height: .86; letter-spacing: -.03em; text-transform: uppercase; }
-.chapter-entry em { grid-row: 2; color: #5f635f; font-family: var(--editorial); font-size: .92rem; font-style: italic; }
-.chapter-entry small { grid-column: 2; grid-row: 1 / 3; align-self: center; color: #5f635f; font-size: .74rem; font-variant-numeric: tabular-nums; text-align: right; }
-.chapter-entry::after { content: "→"; justify-self: start; color: var(--ultramarine); font-size: .9rem; transition: transform .4s var(--ease-out); }
-.chapter-entry:hover::after, .chapter-entry:focus-visible::after { transform: translateX(.35rem); }
+/* The plate label. The entry arrow used to sit on a line of its own beneath the caption, an
+   orphaned glyph that read as interface; it now rides the name's cap line, as it does on the world
+   wall. The count keeps the right edge of the plate, so a column of chapters carries a column of
+   figures. */
+.chapter-entry-copy { --plate: clamp(2.4rem, 4.4vw, 3.6rem); display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: baseline; gap: .3rem .8rem; border-top: 1px solid var(--line-light); padding-top: 1rem; }
+.chapter-entry b { grid-column: 1; grid-row: 1; font-family: var(--display); font-size: var(--plate); font-weight: 400; line-height: .86; letter-spacing: -.03em; text-transform: uppercase; }
+.chapter-entry i { grid-column: 2; grid-row: 1; justify-self: start; position: relative; top: calc(var(--plate) * -.285); color: var(--ultramarine); font-size: calc(var(--plate) * .3); font-style: normal; line-height: 1; transition: transform .4s var(--ease-out); }
+.chapter-entry:hover i, .chapter-entry:focus-visible i { transform: translate(.28rem, -.28rem); }
+.chapter-entry em { grid-column: 1 / 3; grid-row: 2; color: #5f635f; font-family: var(--editorial); font-size: .92rem; font-style: italic; }
+.chapter-entry small { grid-column: 3; grid-row: 1 / 3; align-self: center; color: #5f635f; font-size: .74rem; font-variant-numeric: tabular-nums; text-align: right; }
+/* The lead plate carries the room at a larger size, the way a chapter opening does. */
+.chapter-entries > .chapter-entry:first-child .chapter-entry-copy { --plate: clamp(3rem, 6vw, 5.4rem); }
 
 .index-rest { border-top: 1px solid var(--line-light); padding-top: clamp(2.5rem, 4vw, 4rem); }
 .index-rest h2 { margin-bottom: 1.6rem; color: #5f635f; font-family: var(--ui); font-size: .72rem; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; }
