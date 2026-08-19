@@ -382,3 +382,46 @@ split kept as contrast, graduated close.
 `scrollWidth` alone, zero broken images, zero console errors. Build, content, exclusions and launch
 validation pass; 0 broken links, 0 broken assets, 0 metadata leaks, 0 repeated photographs within a
 page, 0 source masters touched, 0 new dependencies, no new JavaScript.
+
+---
+
+# Phase 17.2B — hero composition correction
+
+The previous pass fixed the crop and created a different fault. Giving the plate the original's own
+proportion stopped the framing drifting with the window, but it left the plate's **width derived
+from whatever height the label had not already taken**. At 1728×1080 the arithmetic was:
+
+    band 106 + label 197 + foot 56 = 359px spent
+    → 721px left for the plate
+    → a 3:2 plate 721px tall is 1080px wide
+    → against a 1617px field: 537px of dead ground, a third of the wall
+
+No adjustment inside that arrangement could close the gap, because the width was a function of the
+leftover. Reducing the band or the title bought back tens of pixels where hundreds were needed.
+
+**The dependency is inverted.** The plate takes the width of the field and derives its height, so the
+hero is as tall as the photograph needs rather than the photograph as wide as the hero allows. At
+16:9 the plate is 1617×910 at 1728 and 1348×758 at 1440 — full field, **no void at all** — and it
+holds 84% of the frame, against the 57–69% the leftover arrangement was giving before any of this
+work began. A declared cinema ratio, not a remainder.
+
+The whole plate still lands above the fold on every common laptop, with the wall label opening
+directly beneath it; the trailing grid track absorbs `min-height` on a window taller than the
+composition, so the plate is never stretched to fill space it did not ask for. The title regained
+the scale it had lost, since the label no longer competes with the plate for height, and `sizes`
+returned to 94vw now that the plate is the width of the page.
+
+Mobile is untouched: the square plate, the tethered label and the ground carrying to the fold all
+remain exactly as the previous pass left them.
+
+## What was traded
+
+100% of the frame at 1080px wide, versus 84% at 1617px wide. The first is a better crop; the second
+is a better composition, and the difference between 84% and the 57–69% that prompted the original
+complaint is where the actual problem lay.
+
+## Verification
+
+1728, 1440, 390: no horizontal overflow measured against the widest painted edge, no broken images,
+no console errors, no metadata leaks, no source masters touched, no new dependencies. Build,
+content, exclusions and launch validation pass; 0 broken links, 0 broken assets.

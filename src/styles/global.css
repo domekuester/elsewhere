@@ -198,8 +198,24 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
    right. `max-width` catches the case where the window is tall enough to ask for more width than
    the field has, and only then does the crop return — mildly, and at the bottom of the range rather
    than in the middle of it. */
-.hero { position: relative; height: 100svh; min-height: 40rem; display: grid; grid-template-rows: clamp(6.6rem, 9vh, 8rem) minmax(0, 1fr) auto; padding: 0 var(--gutter) clamp(2rem, 4vw, 3.5rem); background: var(--obsidian); }
-.hero-media { grid-row: 2; justify-self: start; height: 100%; width: auto; aspect-ratio: 2600 / 1736; max-width: 100%; min-height: 0; overflow: hidden; background: #131617; }
+/* Phase 17.2B — the plate spans the field; the hero's height follows it.
+   ------------------------------------------------------------------------------------------
+   Giving the plate the original's own proportion stopped the crop drifting, but it left the width
+   derived from whatever height the label had not already taken: band 106 + label 197 + foot 56 =
+   359px gone, 721px left, and a 3:2 plate 721px tall is only 1080px wide against a 1617px field.
+   537px of dead ground on the right — a third of the wall — and no setting of that arrangement can
+   close it, because the width is a function of the leftover.
+
+   The dependency is inverted. The plate takes the width of the field and derives its height, so the
+   hero is as tall as the photograph needs rather than the photograph as wide as the hero allows.
+   At 16:9 that is 909px tall at 1728 — the whole plate still lands above the fold on every common
+   laptop, with the wall label opening directly beneath it — and it holds 84% of the frame against
+   the 57–69% the leftover was giving before. A declared cinema ratio, not a remainder.
+
+   The trailing track absorbs `min-height` on a window taller than the composition, so the plate is
+   never stretched to fill space it did not ask for. */
+.hero { position: relative; min-height: 100svh; display: grid; grid-template-rows: clamp(6.6rem, 9vh, 8rem) auto auto minmax(0, 1fr); padding: 0 var(--gutter) clamp(2rem, 4vw, 3.5rem); background: var(--obsidian); }
+.hero-media { grid-row: 2; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #131617; }
 .hero-media img { object-position: 50% 50%; }
 /* The wall label: the mark opens it, the title holds the left rail, the dates close on the right,
    and both sit on the same baseline the plate ends on. */
@@ -245,7 +261,7 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
    takes the root default. */
 .destination-hero, .journey-hero, .archive-opening { --header-veil: calc(var(--hero-scrim-top) * .62); }
 .hero-mark { grid-column: 1 / -1; margin-bottom: 0; }
-.hero-title { grid-column: 1; font-family: var(--display); font-size: clamp(3.2rem, 4.9vw, 4.8rem); font-weight: 400; line-height: .9; letter-spacing: -.035em; text-transform: uppercase; }
+.hero-title { grid-column: 1; font-family: var(--display); font-size: clamp(3.5rem, 5.6vw, 5.4rem); font-weight: 400; line-height: .9; letter-spacing: -.035em; text-transform: uppercase; }
 .hero-title span { display: block; overflow: hidden; white-space: nowrap; }
 .hero-title span:last-child { font-family: var(--editorial); font-size: 1.06em; font-style: italic; letter-spacing: -.025em; text-transform: none; }
 .hero-meta { grid-column: 2; align-self: end; padding-bottom: .45rem; color: #e0e2df; font-size: .68rem; line-height: 1.5; text-align: right; }
