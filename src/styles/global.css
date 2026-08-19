@@ -183,12 +183,24 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 
    The plate takes whatever height the screen leaves after the header band and the label, so the
    opening is always exactly one screen and the crop tightens rather than the layout breaking. */
-/* A definite height, not a minimum: `1fr` can only measure against the screen if the grid has one,
-   and with `min-height` alone the plate fell back to the photograph's own proportion and pushed the
-   label off the fold. The floor keeps a very short window scrolling rather than crushing the label. */
-.hero { position: relative; height: 100svh; min-height: 40rem; display: grid; grid-template-rows: clamp(6.5rem, 11vh, 9rem) minmax(0, 1fr) auto; padding: 0 var(--gutter) clamp(2.5rem, 5vw, 4.5rem); background: var(--obsidian); }
-.hero-media { grid-row: 2; min-height: 0; overflow: hidden; background: #131617; }
-.hero-media img { object-position: 50% 48%; }
+/* Phase 17.2 — the plate is sized by the photograph, not by the leftover.
+   ------------------------------------------------------------------------------------------
+   Mounting the opening was right; letting the mount take whatever height the screen had left over
+   was not. The plate ran rail to rail and its height was simply the remainder, so its proportion
+   changed with every window and `object-fit: cover` paid for the difference out of the photograph.
+   Measured against the 2600x1736 original: 31% of the frame's height was being discarded at
+   1728x1080 and 43% at 1440x900, and on a short laptop the plate reached better than 3:1. The sky
+   this photograph is actually about was the first thing to go.
+
+   The plate now carries the original's own proportion and takes its height from the row, so its
+   width follows from that rather than the other way round: the whole frame is shown, uncropped, at
+   whatever size the screen can give it, and it hangs from the left rail with the ground open to its
+   right. `max-width` catches the case where the window is tall enough to ask for more width than
+   the field has, and only then does the crop return — mildly, and at the bottom of the range rather
+   than in the middle of it. */
+.hero { position: relative; height: 100svh; min-height: 40rem; display: grid; grid-template-rows: clamp(6.6rem, 9vh, 8rem) minmax(0, 1fr) auto; padding: 0 var(--gutter) clamp(2rem, 4vw, 3.5rem); background: var(--obsidian); }
+.hero-media { grid-row: 2; justify-self: start; height: 100%; width: auto; aspect-ratio: 2600 / 1736; max-width: 100%; min-height: 0; overflow: hidden; background: #131617; }
+.hero-media img { object-position: 50% 50%; }
 /* The wall label: the mark opens it, the title holds the left rail, the dates close on the right,
    and both sit on the same baseline the plate ends on. */
 .hero-label { grid-row: 3; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 1.1rem clamp(2rem, 5vw, 5rem); padding-top: clamp(1.4rem, 2.4vw, 2.2rem); }
@@ -233,7 +245,7 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
    takes the root default. */
 .destination-hero, .journey-hero, .archive-opening { --header-veil: calc(var(--hero-scrim-top) * .62); }
 .hero-mark { grid-column: 1 / -1; margin-bottom: 0; }
-.hero-title { grid-column: 1; font-family: var(--display); font-size: clamp(3.7rem, 6vw, 5.5rem); font-weight: 400; line-height: .9; letter-spacing: -.035em; text-transform: uppercase; }
+.hero-title { grid-column: 1; font-family: var(--display); font-size: clamp(3.2rem, 4.9vw, 4.8rem); font-weight: 400; line-height: .9; letter-spacing: -.035em; text-transform: uppercase; }
 .hero-title span { display: block; overflow: hidden; white-space: nowrap; }
 .hero-title span:last-child { font-family: var(--editorial); font-size: 1.06em; font-style: italic; letter-spacing: -.025em; text-transform: none; }
 .hero-meta { grid-column: 2; align-self: end; padding-bottom: .45rem; color: #e0e2df; font-size: .68rem; line-height: 1.5; text-align: right; }
@@ -334,9 +346,23 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 .world-3 .world-photo, .world-4 .world-photo, .world-5 .world-photo { aspect-ratio: 4 / 5; }
 
 /* Intimacy */
-.people-memory { display: grid; grid-template-columns: 1.15fr .85fr; min-height: 110vh; color: var(--obsidian); background: var(--ivory); }
-.people-memory-photo, .people-memory-photo .figure-window { height: 110vh; }
-.people-memory-copy { align-self: center; padding: clamp(4rem, 8vw, 9rem) var(--gutter); }
+/* Phase 17.2 — the portrait is hung, not split.
+   ------------------------------------------------------------------------------------------
+   This was the last conventional section on Home: a photograph bled to the left edge of the
+   viewport — off every rail the rest of the page is built on — beside a column of copy, the shape
+   any content-managed site produces without deciding anything. It was also cropping 20% off a 2:3
+   portrait to make it fill a half-screen box, so the frame was being cut to serve the layout.
+
+   It is now a work with a wall label. The portrait hangs on the left rail at its own proportion —
+   the whole frame, nothing lost — and the text sits in the facing columns, bottom-aligned to the
+   photograph's foot, which is where a label hangs beside a picture rather than floating level with
+   its middle. Ivory ground is visible above and to the side, so the portrait reads as mounted; the
+   same grammar as the opening plate and the closing work of the Black & White collection. */
+.people-memory { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2vw, 2.5rem); align-items: end; padding: clamp(7rem, 11vw, 12rem) var(--gutter); color: var(--obsidian); background: var(--ivory); }
+.people-memory-photo { grid-column: 1 / 6; }
+.people-memory-photo, .people-memory-photo .figure-window { height: auto; }
+.people-memory-photo .figure-window { aspect-ratio: 1603 / 2400; }
+.people-memory-copy { grid-column: 7 / 13; align-self: end; padding: 0 0 clamp(.5rem, 2.5vw, 2.5rem); }
 .people-memory-copy h2 { margin-top: 1.5rem; font-family: var(--display); font-size: clamp(4rem, 6.5vw, 6rem); font-weight: 400; line-height: .84; letter-spacing: -.035em; text-transform: uppercase; }
 .people-memory-copy > p { max-width: 30rem; margin-top: 2rem; font-family: var(--editorial); font-size: clamp(1.1rem, 1.6vw, 1.45rem); line-height: 1.5; }
 /* WCAG 2.2 target size, bought without changing a single visible measurement: the same padding
@@ -647,6 +673,14 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .primary-nav a span { display: inline; color: var(--ultramarine); font-family: var(--ui); }
   .editorial-link, .site-footer nav a, .footer-wordmark,
   .archive-filter-group button, .archive-filter-group a, .another-frame { min-height: 2.75rem; margin-block: 0; padding-block: .65rem; }
+  /* A phone cannot give a landscape plate the height its width implies. A portrait crop there would
+     throw away the sides of the frame instead of the top and bottom — the same loss wearing a
+     different shape — and a shallow landscape band loses the presence an opening needs in the hand.
+     The plate becomes square: the full height of the photograph, formally cropped at the sides, at a
+     size that still commands the screen. The title is held at the foot with the ground opening
+     between the two, so the opening is a title page rather than a header with space left over. */
+  .hero { grid-template-rows: clamp(5rem, 13vh, 7rem) auto auto minmax(0, 1fr); padding-bottom: clamp(2.5rem, 7vw, 4rem); }
+  .hero-media { justify-self: stretch; width: 100%; height: auto; aspect-ratio: 1 / 1; }
   .premise { grid-template-columns: 1fr; min-height: 75vh; gap: 3rem; }
   /* Explicit rows are a wide-screen device; the single column reverts to auto placement so the
      kicker's `order` still moves it below the deck. */
@@ -660,9 +694,13 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .world-1 .world-photo, .world-3 .world-photo, .world-4 .world-photo { aspect-ratio: 3 / 4; }
   .world-2 .world-photo { aspect-ratio: 4 / 3; }
   .world-5 .world-photo { aspect-ratio: 4 / 5; }
-  .people-memory { grid-template-columns: 1fr; }
-  .people-memory-photo, .people-memory-photo .figure-window { height: 78svh; }
-  .people-memory-copy { padding-block: 6rem; }
+  /* One column: the plate takes the width it is given and the label follows it down the page. */
+  /* `minmax(0, 1fr)`, not `1fr`: a bare `1fr` track takes the item's min-content as its floor, and
+     here that pushed the column 56px wider than the section and the plate under the clip. */
+  .people-memory { grid-template-columns: minmax(0, 1fr); padding-inline: var(--gutter); }
+  .people-memory-photo { grid-column: 1; width: 88%; }
+  .people-memory-photo .figure-window { aspect-ratio: 1603 / 2400; }
+  .people-memory-copy { grid-column: 1; padding-block: 3.5rem 0; }
   .detail-pause { grid-template-columns: 1fr; min-height: 95vh; gap: 4rem; }
   .detail-photo { width: 72%; justify-self: start; }
   .detail-pause > div:last-child { margin-left: 24%; }
@@ -718,7 +756,7 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 @media (max-width: 560px) {
   .primary-nav { grid-template-columns: 1fr; }
   .primary-nav > p { display: none; }
-  .hero { min-height: 100svh; padding-bottom: 2rem; }
+  .hero { padding-bottom: clamp(2.5rem, 8vw, 4rem); }
   .hero-media img { object-position: 45% 50%; }
   /* Two lines, not three: the italic second line was breaking after "as I" and leaving an orphan.
      The measure cap came off with it — a two-line wall label wants the full width of its plate. */
@@ -733,7 +771,9 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .worlds-sequence { margin-top: 5rem; }
   .world-2, .world-4 { width: 82%; }
   .world-label h3 { font-size: clamp(2.6rem, 13vw, 4rem); }
-  .people-memory-photo, .people-memory-photo .figure-window { height: 72svh; }
+  /* The plate is sized by its own proportion now; a fixed height here fed the aspect ratio and
+     drove the width past the column. Small phones simply give the plate more of the field. */
+  .people-memory-photo { width: 94%; }
   .detail-pause { padding-inline: var(--gutter); }
   .detail-photo { width: 82%; }
   .detail-pause > div:last-child { margin-left: 14%; }

@@ -314,3 +314,71 @@ Five weakest moments found after implementation; the first three fixed.
 1728, 1440, 390: zero horizontal overflow, zero broken images, zero console errors. Build, content,
 exclusions and launch validation pass; 0 broken links, 0 broken assets, 0 metadata leaks, 0 repeated
 photographs within a page, 0 source masters touched, 0 new dependencies and no new JavaScript.
+
+---
+
+# Phase 17.2 — hero framing and the Home middle
+
+## The hero was cropping the photograph to fit the leftover
+
+Mounting the opening was right; letting the mount take whatever height the screen had left over was
+not. The plate ran rail to rail and its height was simply the remainder, so its proportion changed
+with every window and `object-fit: cover` paid the difference out of the picture. Measured against
+the 2600×1736 original:
+
+| | plate | frame shown |
+|---|---|---|
+| 1728×1080, before | 1606×743 (2.16:1) | 69% |
+| 1440×900, before | 1348×510 (2.64:1) | 57% |
+| short laptop, before | worse than 3:1 | under half |
+
+The sky this photograph is actually about was the first thing to go, and the amount lost was
+different on every screen.
+
+The plate now carries the original's own proportion and takes its height from the row, so its width
+follows from that rather than the other way round: **100% of the frame, uncropped**, at whatever
+size the screen can give it — 1062×709 at 1728, 829×553 at 1440 — hanging from the left rail with
+the ground open to its right. `max-width` catches the case where a very tall window asks for more
+width than the field has, and only there does a crop return.
+
+Two consequences worth naming: the band above the plate now clears the header at every height (it
+was 81px against a 98px header at 1440×900, so the plate was starting underneath the navigation),
+and `sizes` came down from 94vw to 72vw because the plate is no longer the width of the page.
+
+On a phone the trade is different: a landscape source cannot have both presence and its own
+proportion in a 350px column. A portrait crop there would throw away the sides instead of the top
+and bottom — the same loss wearing a different shape — and a shallow landscape band loses the
+presence an opening needs in the hand. The plate becomes square: the full height of the photograph,
+formally cropped at the sides, at a size that still commands the screen, with the label tethered
+directly beneath it and the ground carrying to the fold.
+
+## The Home middle: the portrait is hung, not split
+
+`people-memory` was the last conventional section on Home — a photograph bled to the left edge of
+the viewport, off every rail the rest of the page is built on, beside a column of copy. The shape
+any content-managed site produces without deciding anything. It was also cropping 20% off a 2:3
+portrait to make it fill a half-screen box, so the frame was being cut to serve the layout.
+
+It is now a work with a wall label: the portrait hangs on the left rail at its own proportion —
+654×979 at 1728, the whole frame — and the text sits in the facing columns, bottom-aligned to the
+photograph's foot, which is where a label hangs beside a picture rather than floating level with its
+middle. Ivory ground is visible above and to the side. The same grammar as the opening plate and the
+closing work of the Black & White collection.
+
+Home now reads as a sequence of acts rather than a stack of sections: mounted plate, wall text,
+spread and suite, hung portrait, whisper, monument, monochrome room, place index, one full-bleed
+split kept as contrast, graduated close.
+
+## Two defects found and fixed during the pass
+
+- A bare `1fr` track took the copy's min-content as its floor and pushed the mobile column 56px past
+  the section, hiding the plate under `overflow-x: clip`. `minmax(0, 1fr)`.
+- A leftover `height: 72svh` in the small-phone block fed the new `aspect-ratio` and drove the plate
+  to 406px inside a 308px figure. Removed; the plate is sized by its proportion alone.
+
+## Verification
+
+1728, 1440, 390: zero horizontal overflow measured against the widest painted edge rather than
+`scrollWidth` alone, zero broken images, zero console errors. Build, content, exclusions and launch
+validation pass; 0 broken links, 0 broken assets, 0 metadata leaks, 0 repeated photographs within a
+page, 0 source masters touched, 0 new dependencies, no new JavaScript.
