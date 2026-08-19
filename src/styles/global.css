@@ -31,6 +31,16 @@
   --ink-soft: #b8bbb8;
   --line-dark: rgba(242, 240, 234, .24);
   --line-light: rgba(11, 12, 13, .24);
+  /* Phase 16X — the drop. Vertical offset on a grouped surface used to be set per card: 12rem,
+     7rem, -2rem, 9rem on the world wall alone, and seven more values across the collection
+     sequences. Eleven numbers, none of them related to any other, which is what "jumbled" was.
+     A row now steps by one of two units, and a card never declares its own. */
+  --drop: clamp(3rem, 6vw, 7rem);
+  --drop-deep: clamp(6rem, 10vw, 11rem);
+  /* Folio ink. Declared as ivory-on-obsidian here and inverted on the four ivory surfaces that
+     carry a folio, rather than mixed out of `currentColor`: a caption that has already muted
+     itself to #4e524f would have handed the folio 56% of a muted grey and produced 2.57:1. */
+  --folio-ink: rgba(242, 240, 234, .58);
   --gutter: clamp(1.25rem, 3.2vw, 4rem);
   --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue Condensed", sans-serif;
   --editorial: "Literata", Georgia, "Times New Roman", serif;
@@ -58,6 +68,13 @@ body { min-width: 20rem; margin: 0; overflow-x: clip; font-family: var(--ui); fo
 ::selection { color: white; background: var(--ultramarine); }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 a { color: inherit; text-decoration: none; }
+/* `hidden` is a statement about whether an element exists for the visitor, and it has to outrank
+   layout. The browser's own `[hidden] { display: none }` sits in the user-agent sheet, so any
+   author rule that gives an element a `display` — `.contact-field { display: grid }`, the viewer's
+   mobile licensing action — silently defeated it, and elements the scripts had marked hidden went
+   on rendering. That is a correctness problem before it is a visual one: the viewer hides its
+   licensing action for a frame that may not be licensed by setting exactly this attribute. */
+[hidden] { display: none !important; }
 button { color: inherit; font: inherit; }
 h1, h2, h3, p, figure, blockquote { margin: 0; }
 h1, h2, h3 { text-wrap: balance; }
@@ -66,6 +83,44 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid
 .skip-link { position: fixed; z-index: 100; top: .75rem; left: .75rem; transform: translateY(-180%); padding: .75rem 1rem; color: white; background: var(--ultramarine); }
 .skip-link:focus { transform: translateY(0); }
 .memory-mark { display: block; width: 1.7rem; height: 2px; background: var(--ultramarine); }
+
+/* Phase 16X — the folio.
+   ------------------------------------------------------------------------------------------
+   Every ordinal on the site was set at .64rem in `--ultramarine`: the world index, the destination
+   index, the closing sequence, the chapter sequence, the place index. Three things were wrong with
+   that, and they compounded.
+
+   Ultramarine is declared further down this file as an interaction cue and nothing else, so a
+   static number wearing it read as a link that could not be clicked. At .64rem in the UI face the
+   glyphs sit below the size at which type reads as type, so what the eye actually registered was
+   not a number but a small blue dot — which is exactly how the owner described them. And on the
+   obsidian ground the pair measures 2.96:1, under the 4.5:1 every other text relationship here
+   holds, so the orientation they were supposed to provide was the hardest thing on the page to
+   read.
+
+   A folio is set in the display face the headings it indexes are already set in, with tabular
+   figures so a column of them aligns down the page, at a size where it reads as typography. Its
+   ink is `--folio-ink`, declared once per ground: ivory at 58% over obsidian measures 6.3:1, and
+   obsidian at 58% over ivory measures 4.6:1. It turns ultramarine only while the thing it belongs
+   to is hovered or focused — which is the one job ultramarine has. */
+.destination-index, .closing-sequence, .index-page, .people-deeper { --folio-ink: rgba(11, 12, 13, .58); }
+.folio {
+  align-self: start;
+  color: var(--folio-ink);
+  font-family: var(--display);
+  font-size: .95rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .2em;
+  line-height: 1;
+  transition: color .45s var(--ease-out);
+}
+/* Phase 16X.2 — the folio stops being a number parked in a margin and becomes a chapter mark.
+   Set immediately before the title it indexes and joined to it by a short rule, `01 —— PEOPLE`
+   reads as one typographic unit — the section-opener idiom of a printed monograph — instead of two
+   unrelated marks separated by three centimetres of nothing. The margin form survives only where a
+   folio genuinely indexes a list (the two place indexes), which is what a margin folio is for. */
+.folio-lead { display: inline-flex; align-items: center; gap: .8rem; align-self: baseline; }
+.folio-lead::after { content: ""; width: 1.5rem; height: 1px; background: currentColor; }
 
 /* Navigation */
 .site-header { position: absolute; z-index: var(--z-header); inset: 0 0 auto; display: flex; align-items: center; justify-content: space-between; min-height: calc(var(--header-safe-top) + var(--header-row) + var(--header-bottom)); padding: var(--header-safe-top) var(--gutter) var(--header-bottom); mix-blend-mode: difference; transition: background-color .32s ease, text-shadow .32s ease; }
@@ -154,30 +209,91 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 
 /* Visual-world signature */
 .worlds { padding: clamp(7rem, 11vw, 12rem) var(--gutter); background: var(--obsidian); }
-.worlds-heading { display: grid; grid-template-columns: .55fr 1.1fr .7fr; align-items: end; gap: 2rem; }
-.worlds-heading > p:first-child { color: var(--ink-soft); font-size: .72rem; }
-.worlds-heading h2 { font-family: var(--display); font-size: clamp(4rem, 8vw, 6rem); font-weight: 400; line-height: .82; letter-spacing: -.035em; text-transform: uppercase; }
-.worlds-deck { max-width: 23rem; justify-self: end; color: var(--ink-soft); line-height: 1.7; }
-.worlds-sequence { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(1rem, 2vw, 2.5rem); margin-top: clamp(6rem, 11vw, 11rem); }
+/* Phase 16X.2 — the section threshold sits on the rails it introduces. The old three-track header
+   put "WHAT REMAINS." at x=332 of a 1348px field — on no rail at all — directly above a wall where
+   every plate is flush to column 1 or column 13. It was the largest type in the section and the
+   only thing in it aligned to nothing, which is precisely the "someone kept adjusting CSS until it
+   looked interesting" reading the collection is trying to shed. Kicker and headline now open on the
+   left rail and the deck closes on the right, which is the header grammar `.people-deeper` already
+   uses elsewhere in this file. */
+.worlds-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 24rem); align-items: end; gap: 1.5rem clamp(2rem, 6vw, 6rem); }
+.worlds-heading > p:first-child { grid-column: 1; grid-row: 1; color: var(--ink-soft); font-size: .72rem; }
+.worlds-heading h2 { grid-column: 1; grid-row: 2; font-family: var(--display); font-size: clamp(4rem, 8vw, 6rem); font-weight: 400; line-height: .82; letter-spacing: -.035em; text-transform: uppercase; }
+.worlds-deck { grid-column: 2; grid-row: 2; max-width: 24rem; justify-self: end; color: var(--ink-soft); line-height: 1.7; }
+/* Phase 16X.2 — the wall, second pass.
+   ------------------------------------------------------------------------------------------
+   The first pass put every plate on a rail, which fixed the horizontal scatter. Measured again at
+   1728 it had two faults left, both of them large.
+
+   The fifth plate hung alone in its row: 929px of photograph against 688px of empty black, a row
+   43% unoccupied, and at 1161px tall it did not fit a 1080 screen. An orphan row that deep is not
+   silence, it is a hole. And inside a "pair", the two labels sat 224px apart vertically (913 and
+   689), because each label hung under its own plate and the plates had different drops — so the
+   pair never read as a pair.
+
+   The wall is now two rows and two rows only: a spread over a suite.
+
+     row 1   People 5 columns · a book gutter · Beaches 6 columns
+     row 2   Urban · Jungle · Ocean, three 4-column plates, tight gutters
+
+   Both rows run rail to rail, so no plate is ever left facing a void. The tallest plate is 817px
+   at 1728, which fits a screen. And the label moved above its plate: a category index should name
+   the door before it shows what is behind it, and because the labels now open each card rather
+   than close it, the two names in a row sit on one line by construction rather than by luck.
+
+   Superseded first-pass note, kept because the measurements are the evidence:
+   ------------------------------------------------------------------------------------------
+   Measured at 1440, the five plates started at x = 0, 803, 115, 688 and 229 and ended at 545,
+   1348, 545, 1233 and 1118. No two shared an edge, and the misses were small: 115px between two
+   left edges, 9px between two labels. A large miss reads as intent. A miss that small reads as a
+   mistake, and five of them read as an accident — which is what made this section feel loose on a
+   wide screen while looking composed on a phone, where it is a single column.
+
+   The plates now hang on two rails and nothing else: the left rail is column 1, the right rail is
+   column 13. Three hang left, two hang right, and the rows alternate which side leads. Width comes
+   from a declared ladder — five, six, seven columns — so a difference in width is a step rather
+   than a near-miss. Proportion comes from the photograph: four of the five frames are portrait and
+   take a 4:5 plate, and the one landscape frame takes a 4:3 one. Nothing here is sized to fill a
+   hole.
+
+   Vertical offset is a row gap. Two plates in a row cannot drift out of line the way five
+   independent margins could, and the wall grows down the page — 681, 824, 968 at 1440 — so it
+   opens on its smallest plate and closes on its largest instead of ending on a wide strip. */
+.worlds-sequence { display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; column-gap: clamp(1rem, 2vw, 2.5rem); row-gap: var(--drop-deep); margin-top: clamp(6rem, 11vw, 11rem); }
 .world { display: block; }
 .world-photo { overflow: hidden; background: #131617; }
 .world-photo img { transition: transform 1s var(--ease-out), filter .7s var(--ease-out); }
-.world:hover .world-photo img { transform: scale(1.025); }
-.world-label { display: grid; grid-template-columns: auto 1fr auto; gap: .8rem 1rem; align-items: baseline; padding-top: .9rem; }
-.world-label > span { color: var(--ultramarine); font-size: .64rem; }
-.world-label h3 { font-family: var(--display); font-size: clamp(2rem, 3.8vw, 4.5rem); font-weight: 400; line-height: .9; text-transform: uppercase; }
-.world-label p { grid-column: 2; color: var(--ink-soft); font-size: .72rem; line-height: 1.45; }
-.world-label i { grid-column: 3; grid-row: 1 / 3; color: var(--ultramarine); font-style: normal; }
+.world:hover .world-photo img, .world:focus-visible .world-photo img { transform: scale(1.025); }
+/* The wall label opens the plate: a rule the exact width of the photograph, the chapter mark and
+   the category on one line, the deck beneath, then the photograph. Two identical measurements —
+   the rule and the picture — are a relationship the eye reads without being told, and putting the
+   name first means the relationship no longer depends on the visitor scrolling past the picture to
+   find out what it was. The entry arrow sits against the word it opens rather than 700px away at
+   the far end of the rule, which is where it read as interface. */
+.world-label { --cat: clamp(1.9rem, 2.9vw, 3.3rem); display: grid; grid-template-columns: auto auto minmax(0, 1fr); align-items: baseline; gap: .6rem .85rem; margin-bottom: 1.2rem; border-top: 1px solid var(--line-dark); padding-top: .95rem; transition: border-color .45s var(--ease-out); }
+.world-label .folio { grid-column: 1; grid-row: 1; }
+.world-label h3 { grid-column: 2; grid-row: 1; font-family: var(--display); font-size: var(--cat); font-weight: 400; line-height: .9; letter-spacing: -.015em; text-transform: uppercase; }
+/* The entry mark rides the title's cap line rather than its baseline. Sitting on the baseline at a
+   fixed size it read as a footnote marker stuck to the last letter; measured off `--cat` it keeps
+   the same optical relationship to the word at every width the title clamps through. */
+.world-label i { grid-column: 3; grid-row: 1; justify-self: start; position: relative; top: calc(var(--cat) * -.285); margin-left: calc(var(--cat) * .06); color: var(--ultramarine); font-size: calc(var(--cat) * .33); font-style: normal; line-height: 1; transition: transform .45s var(--ease-out); }
+.world-label p { grid-column: 1 / -1; grid-row: 2; max-width: 30rem; color: var(--ink-soft); font-size: .74rem; line-height: 1.45; }
+.world:hover .world-label, .world:focus-visible .world-label { border-color: var(--ultramarine); }
+.world:hover .folio, .world:focus-visible .folio { color: var(--ultramarine); }
+.world:hover .world-label i, .world:focus-visible .world-label i { transform: translate(.28rem, -.28rem); }
+/* Row 1 — the spread. Column 6 is left open as a book gutter, which is why these two are the only
+   plates on the wall that do not touch a neighbour. */
 .world-1 { grid-column: 1 / 6; }
 .world-1 .world-photo { aspect-ratio: 4 / 5; }
-.world-2 { grid-column: 8 / 13; margin-top: 12rem; }
+.world-2 { grid-column: 7 / 13; }
 .world-2 .world-photo { aspect-ratio: 4 / 3; }
-.world-3 { grid-column: 2 / 6; margin-top: 7rem; }
-.world-3 .world-photo { aspect-ratio: 3 / 4; }
-.world-4 { grid-column: 7 / 12; margin-top: -2rem; }
-.world-4 .world-photo { aspect-ratio: 3 / 4; }
-.world-5 { grid-column: 3 / 11; margin-top: 9rem; }
-.world-5 .world-photo { aspect-ratio: 16 / 9; }
+/* Row 2 — the suite. Three equal plates, one grid gap apart, rail to rail. The three remaining
+   worlds are all portrait frames of similar character, and hanging them identically is the oldest
+   way there is of saying "these belong together". */
+.world-3 { grid-column: 1 / 5; }
+.world-4 { grid-column: 5 / 9; }
+.world-5 { grid-column: 9 / 13; }
+.world-3 .world-photo, .world-4 .world-photo, .world-5 .world-photo { aspect-ratio: 4 / 5; }
 
 /* Intimacy */
 .people-memory { display: grid; grid-template-columns: 1.15fr .85fr; min-height: 110vh; color: var(--obsidian); background: var(--ivory); }
@@ -217,7 +333,8 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 .destination-index header > p { max-width: 30rem; margin-top: 2rem; line-height: 1.7; }
 .destination-index ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-light); }
 .destination-index li { display: grid; grid-template-columns: 2.5rem 1fr auto; gap: 1rem; align-items: baseline; padding: 1.35rem 0; border-bottom: 1px solid var(--line-light); }
-.destination-number { color: var(--ultramarine); font-size: .64rem; }
+.destination-index li:hover .folio, .destination-index li:focus-within .folio,
+.index-list li:hover .folio, .index-list li:focus-within .folio { color: var(--ultramarine); }
 .destination-index strong { font-family: var(--editorial); font-size: clamp(2rem, 4vw, 4.3rem); font-weight: 400; line-height: 1; }
 .destination-index li > a, .index-list li > a { color: inherit; text-decoration: none; transition: color .4s var(--ease-out); }
 .destination-index li > a:hover, .index-list li > a:hover { color: var(--ultramarine); }
@@ -236,40 +353,56 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 .story-copy .editorial-link { display: flex; width: fit-content; }
 .story-copy .editorial-link + .editorial-link { margin-top: -.2rem; }
 
-.ocean-chapter { position: relative; height: 105vh; overflow: hidden; background: #061b28; }
-.ocean-chapter > img { object-position: 50% 38%; }
-.ocean-copy { position: absolute; top: clamp(4rem, 9vw, 9rem); left: var(--gutter); }
-.ocean-copy h2 { margin-top: 1.3rem; font-family: var(--display); font-size: clamp(4.5rem, 9vw, 6rem); font-weight: 400; line-height: .85; letter-spacing: -.035em; text-transform: uppercase; }
-.ocean-copy p { margin-top: 1rem; }
+/* Phase 16X — the Ocean chapter that used to sit here is gone, and the section it duplicated is
+   the world wall. It rendered `ocean-silhouettes` full-bleed at `object-position: 50% 38%`, a crop
+   that cut the two silhouetted figures out of the frame entirely and left a screen of churning
+   cobalt water — the same water, from the same crossing, as the `ocean-current` plate the wall had
+   already shown under the same word and almost the same line of copy. Two Ocean announcements, the
+   second of them a photograph reduced by its crop to the first one. The photograph is now the
+   wall's closing plate, uncropped enough to keep its figures, and Home ends on the closing
+   sequence instead of repeating itself. */
 
 .closing-sequence { padding: clamp(8rem, 13vw, 14rem) var(--gutter); color: var(--obsidian); background: var(--ivory); }
 .closing-sequence > header { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; }
 .closing-sequence > header .memory-mark { grid-column: 1 / -1; }
 .closing-sequence h2 { font-family: var(--display); font-size: clamp(3.5rem, 6.5vw, 6rem); font-weight: 400; line-height: .87; letter-spacing: -.035em; text-transform: uppercase; }
 .closing-sequence header p { max-width: 20rem; line-height: 1.6; }
-.closing-photos { display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; gap: clamp(1rem, 2vw, 2.5rem); margin-top: clamp(6rem, 10vw, 10rem); }
+/* Phase 16X.2 — the ending, second pass. The first pass fixed the proportions — a 3:2 bird was
+   being forced into a 3:4 portrait — but left the last photograph alone on its own row with 688px
+   of empty ivory beside it at 1728, and the page finished on a hole rather than on a picture.
+
+   The three works now stand on a common floor: one row, rail to rail, three plates at three, four
+   and five columns, bottom-aligned so their captions land on a single line. The sequence rises —
+   210, 323 and 681px tall at 1440 — and stops on its largest frame at the right rail, and the
+   footer's full-width statement takes it from there. That is a conclusion rather than a module
+   running out: a graduated suite hung on one line is read as finished, not as interrupted. */
+.closing-photos { display: grid; grid-template-columns: repeat(12, 1fr); align-items: end; column-gap: clamp(1rem, 2vw, 2.5rem); margin-top: clamp(6rem, 10vw, 10rem); }
 .closing-photo { margin: 0; }
 .closing-photo > div { overflow: hidden; }
-.closing-photo figcaption { display: flex; gap: 1rem; padding-top: .8rem; color: #4e524f; font-size: .75rem; }
-.closing-photo figcaption span { color: var(--ultramarine); font-size: .64rem; }
-.closing-photo-1 { grid-column: 1 / 5; margin-top: 9rem; }
-.closing-photo-1 > div { aspect-ratio: 3 / 4; }
-.closing-photo-2 { grid-column: 7 / 10; }
+.closing-photo figcaption { display: flex; align-items: baseline; gap: .85rem; margin-top: .9rem; border-top: 1px solid var(--line-light); padding-top: .85rem; color: #4e524f; font-size: .78rem; }
+.closing-photo-1 { grid-column: 1 / 4; }
+.closing-photo-1 > div { aspect-ratio: 3 / 2; }
+.closing-photo-2 { grid-column: 4 / 8; }
 .closing-photo-2 > div { aspect-ratio: 4 / 3; }
-.closing-photo-3 { grid-column: 5 / 11; margin-top: 5rem; }
+.closing-photo-3 { grid-column: 8 / 13; }
 .closing-photo-3 > div { aspect-ratio: 4 / 5; }
 
 /* Monochrome room */
-.monochrome-room { position: relative; display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(1rem, 2vw, 2.5rem); min-height: 145vh; padding: clamp(8rem, 13vw, 14rem) var(--gutter); overflow: hidden; background: #080909; }
-.monochrome-copy { grid-column: 1 / 5; align-self: start; position: sticky; top: 8rem; z-index: 2; }
+/* Phase 16X — the monochrome room hung as three plates rather than three accidents. The main plate
+   was placed at columns 7/11 and the small one at 10/13: they overlapped at column 10, so the grid
+   pushed the small plate onto a row of its own and the section needed `min-height: 145vh` to hold
+   the hole that made. Sized 4 + 3 columns they share a row, a top rail and — via `align-self: end`
+   — a bottom rail, and the wide plate below spans exactly their combined width. */
+.monochrome-room { position: relative; display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; column-gap: clamp(1rem, 2vw, 2.5rem); row-gap: var(--drop-deep); padding: clamp(8rem, 13vw, 14rem) var(--gutter); overflow: hidden; background: #080909; }
+.monochrome-copy { grid-column: 1 / 5; grid-row: 1 / 3; align-self: start; position: sticky; top: 8rem; z-index: 2; }
 .monochrome-copy h2 { margin: 1.2rem 0 2rem; font-family: var(--display); font-size: clamp(4rem, 8vw, 8rem); font-weight: 400; line-height: .8; letter-spacing: -.04em; text-transform: uppercase; }
 .monochrome-copy > p { max-width: 23rem; color: #aaaead; font-family: var(--editorial); font-size: 1.2rem; line-height: 1.55; }
 .monochrome-copy .editorial-link { margin-top: 2.2rem; }
 .monochrome-image { margin: 0; overflow: hidden; background: #111; }
-.monochrome-image-main { grid-column: 7 / 11; aspect-ratio: 2 / 3; }
+.monochrome-image-main { grid-column: 6 / 10; aspect-ratio: 2 / 3; }
 .monochrome-image-main img { object-position: 50% 42%; }
-.monochrome-image-small { grid-column: 10 / 13; aspect-ratio: 3 / 4; margin-top: 14rem; }
-.monochrome-image-wide { grid-column: 5 / 13; aspect-ratio: 16 / 7; margin-top: 7rem; }
+.monochrome-image-small { grid-column: 10 / 13; align-self: end; aspect-ratio: 3 / 4; }
+.monochrome-image-wide { grid-column: 6 / 13; aspect-ratio: 16 / 9; }
 
 /* People publication */
 .people-page { background: var(--ivory); color: var(--obsidian); }
@@ -278,34 +411,38 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 .people-hero h1 { margin: 1.3rem 0 2.2rem; font-family: var(--display); font-size: clamp(4rem, 7vw, 7.5rem); font-weight: 400; line-height: .82; letter-spacing: -.04em; text-transform: uppercase; }
 .people-hero-copy p { max-width: 27rem; font-family: var(--editorial); font-size: 1.2rem; line-height: 1.55; }
 .people-hero > img { min-height: 100svh; object-position: 50% 38%; }
-.encounter-sequence { position: relative; display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(1rem, 2vw, 2.5rem); padding: clamp(9rem, 14vw, 15rem) var(--gutter); background: var(--obsidian); color: var(--ivory); }
+.encounter-sequence { position: relative; display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; column-gap: clamp(1rem, 2vw, 2.5rem); row-gap: var(--drop-deep); padding: clamp(9rem, 14vw, 15rem) var(--gutter); background: var(--obsidian); color: var(--ivory); }
 .encounter-sequence > header { grid-column: 1 / 6; }
 .encounter-sequence h2 { font-family: var(--display); font-size: clamp(4rem, 7vw, 7rem); font-weight: 400; line-height: .83; letter-spacing: -.04em; text-transform: uppercase; }
 .encounter-sequence header p { max-width: 24rem; margin-top: 2.2rem; color: var(--ink-soft); line-height: 1.7; }
 .encounter { margin: 0; }
 .encounter img { object-position: center; }
-.encounter figcaption, .bw-frame figcaption { padding-top: .75rem; color: #989c99; font-size: .74rem; line-height: 1.4; }
-.encounter-worker { grid-column: 7 / 12; margin-top: 5rem; }
+/* The same rule that binds a wall label to its plate binds a caption to its photograph, at the
+   photograph's own width. */
+.encounter figcaption, .bw-frame figcaption { margin-top: .9rem; border-top: 1px solid var(--line-dark); padding-top: .85rem; color: #989c99; font-size: .76rem; line-height: 1.4; }
+.encounter-worker { grid-column: 8 / 13; margin-top: var(--drop); }
 .encounter-worker img { aspect-ratio: 3 / 4; object-position: 45% center; }
-.encounter-vendor { grid-column: 2 / 6; margin-top: -6rem; }
+.encounter-vendor { grid-column: 1 / 6; }
 .encounter-vendor img { aspect-ratio: 3 / 4; }
-.encounter-motorcycle { grid-column: 6 / 13; margin-top: 10rem; }
+.encounter-motorcycle { grid-column: 6 / 13; margin-top: var(--drop); }
 .encounter-motorcycle img { aspect-ratio: 16 / 10; }
 .people-deeper { padding: clamp(8rem, 12vw, 13rem) var(--gutter) clamp(5rem, 8vw, 8rem); color: var(--obsidian); background: var(--ivory); }
 .people-deeper > header { display: grid; grid-template-columns: auto minmax(0, 24rem); justify-content: space-between; align-items: end; gap: clamp(2rem, 6vw, 6rem); }
 .people-deeper h2 { font-family: var(--display); font-size: clamp(3.2rem, 5.5vw, 5.4rem); font-weight: 400; line-height: .84; letter-spacing: -.035em; text-transform: uppercase; }
 .people-deeper header p { color: #4d514e; font-family: var(--editorial); line-height: 1.7; }
-.people-deeper-grid { display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; gap: clamp(3rem, 7vw, 8rem) clamp(1rem, 2vw, 2.5rem); margin: clamp(4.5rem, 8vw, 8rem) 0 clamp(3rem, 5vw, 5rem); }
+.people-deeper-grid { display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; column-gap: clamp(1rem, 2vw, 2.5rem); row-gap: var(--drop-deep); margin: clamp(4.5rem, 8vw, 8rem) 0 clamp(3rem, 5vw, 5rem); }
 .people-deeper figure { margin: 0; }
 .people-deeper img { height: auto; }
-.people-deeper figcaption { padding-top: .8rem; color: #555a56; font-size: .78rem; }
-/* Unequal encounter beats preserve the approved order while refusing the equal-record grid. */
+.people-deeper figcaption { margin-top: .9rem; border-top: 1px solid var(--line-light); padding-top: .85rem; color: #555a56; font-size: .78rem; }
+/* Unequal encounter beats preserve the approved order while refusing the equal-record grid — but
+   the inequality is now in the plate widths and in which rail a plate hangs from, not in six
+   unrelated top margins. Each row leads on the left rail and steps down on the right. */
 .people-deeper-grid .is-gesture { grid-column: 1 / 6; }
-.people-deeper-grid .is-proximity { grid-column: 8 / 13; margin-top: clamp(7rem, 13vw, 14rem); }
-.people-deeper-grid .is-threshold { grid-column: 3 / 9; }
-.people-deeper-grid .is-environment { grid-column: 9 / 13; margin-top: clamp(4rem, 9vw, 9rem); }
-.people-deeper-grid .is-intimate { grid-column: 1 / 5; margin-top: clamp(3rem, 7vw, 7rem); }
-.people-deeper-grid .is-closing { grid-column: 6 / 12; }
+.people-deeper-grid .is-proximity { grid-column: 8 / 13; margin-top: var(--drop); }
+.people-deeper-grid .is-threshold { grid-column: 1 / 7; }
+.people-deeper-grid .is-environment { grid-column: 9 / 13; margin-top: var(--drop); }
+.people-deeper-grid .is-intimate { grid-column: 1 / 6; }
+.people-deeper-grid .is-closing { grid-column: 6 / 13; margin-top: var(--drop); }
 
 .people-next, .bw-next { padding: clamp(6rem, 10vw, 10rem) var(--gutter); }
 .people-next { color: var(--obsidian); background: var(--ivory); }
@@ -322,18 +459,38 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 .bw-hero > :not(img) { position: relative; z-index: 2; }
 .bw-hero h1 { margin: 1.2rem 0 1.8rem; font-family: var(--display); font-size: clamp(5rem, 12vw, 12rem); font-weight: 400; line-height: .74; letter-spacing: -.04em; text-transform: uppercase; }
 .bw-hero > p { max-width: 23rem; font-family: var(--editorial); font-size: 1.3rem; }
-.bw-sequence { display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; gap: clamp(2rem, 4vw, 5rem) clamp(1rem, 2vw, 2.5rem); padding: clamp(10rem, 16vw, 18rem) var(--gutter); }
+/* Phase 16X — the collection hung on the wall's two rails. The nine frames used to start at
+   columns 1, 8, 8, 2, 8, 1, 9, 2 and 7 and drop by 14, 3, 16, 10, 20, 12 and 22rem; the left edges
+   missed each other by 115px and the drops belonged to no system. Every frame is now flush to
+   column 1 or column 13, the pairs sit on a shared top rail, and the vertical step is the one
+   shared drop unit. The quote still centres against the opening plate. */
+.bw-sequence { display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; column-gap: clamp(1rem, 2vw, 2.5rem); row-gap: var(--drop-deep); padding: clamp(10rem, 16vw, 18rem) var(--gutter); }
 .bw-frame { margin: 0; }
 .bw-frame img { height: auto; }
-.bw-frame-opening { grid-column: 1 / 7; }
-.bw-sequence blockquote { grid-column: 8 / 13; align-self: center; font-family: var(--editorial); font-size: clamp(2.5rem, 5vw, 5rem); line-height: .95; }
-.bw-frame-distance { grid-column: 8 / 12; margin-top: 14rem; }
-.bw-frame-threshold { grid-column: 2 / 6; margin-top: 3rem; }
-.bw-frame-reflection { grid-column: 8 / 12; margin-top: 16rem; }
-.bw-frame-city { grid-column: 1 / 7; margin-top: 10rem; }
-.bw-frame-reach { grid-column: 9 / 12; margin-top: 20rem; }
-.bw-frame-upward { grid-column: 2 / 6; margin-top: 12rem; }
-.bw-frame-closing { grid-column: 7 / 11; margin-top: 22rem; }
+/* Phase 16X.2 — the collection reads as facing spreads. Auto-placement had left `distance` alone
+   on a row at 40% fill — 964px of empty black beside one photograph at 1728 — because it appears
+   before its natural partner in the sequence. Rows are now stated rather than inferred, so each
+   spread is a decision: the man in the doorway faces the boat under the enormous sky, the city
+   weather faces the smile in the mirror, and the hand reaching for the sun faces the figure
+   looking up. The one work that closes the collection hangs alone, and is treated as such below. */
+.bw-frame-opening { grid-column: 1 / 7; grid-row: 1; }
+.bw-sequence blockquote { grid-column: 8 / 13; grid-row: 1; align-self: center; font-family: var(--editorial); font-size: clamp(2.5rem, 5vw, 5rem); line-height: .95; }
+.bw-frame-threshold { grid-column: 1 / 6; grid-row: 2; }
+.bw-frame-distance { grid-column: 8 / 13; grid-row: 2; margin-top: var(--drop); }
+.bw-frame-city { grid-column: 1 / 7; grid-row: 3; }
+.bw-frame-reflection { grid-column: 8 / 13; grid-row: 3; margin-top: var(--drop); }
+.bw-frame-upward { grid-column: 1 / 6; grid-row: 4; }
+.bw-frame-reach { grid-column: 8 / 13; grid-row: 4; margin-top: var(--drop); }
+.bw-frame-closing { grid-column: 6 / 13; grid-row: 5; margin-top: var(--drop); }
+/* The closing work, hung alone with its label beside it. This is the collection's one declared
+   exception, and it exists only where the problem it solves exists: above 1100px the frame would
+   otherwise sit against a column of empty black, so the empty column becomes the wall label — the
+   caption bottom-aligned to the foot of the photograph, at a distance, under its own rule. */
+@media (min-width: 1101px) {
+  .bw-frame-closing { grid-column: 1 / 13; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: clamp(1rem, 2vw, 2.5rem); align-items: end; }
+  .bw-frame-closing img { grid-column: 1 / 6; }
+  .bw-frame-closing figcaption { grid-column: 7 / 12; margin-top: 0; }
+}
 .bw-next { color: #f1f1ef; background: #080909; }
 .collections-page { min-height: 100vh; padding-top: clamp(9rem, 14vw, 14rem); color: var(--obsidian); background: var(--ivory); }
 .collections-intro { display: grid; grid-template-columns: .7fr 1.3fr .8fr; align-items: end; gap: 2rem; padding: 0 var(--gutter) clamp(7rem, 11vw, 11rem); }
@@ -374,13 +531,22 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 .index-intro > div p { margin-bottom: 2rem; line-height: 1.7; }
 .index-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-light); }
 .index-list li { display: grid; grid-template-columns: 4rem 1fr auto; align-items: baseline; gap: 1rem; padding: 1.4rem 0; border-bottom: 1px solid var(--line-light); }
-.index-list span { color: var(--ultramarine); font-size: .65rem; }
 .index-list strong { font-family: var(--editorial); font-size: clamp(2.15rem, 4.4vw, 4.5rem); font-weight: 400; line-height: 1; letter-spacing: -.02em; }
 .index-list small { color: #656a66; }
 .not-found { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 1.5rem; padding: 8rem var(--gutter); }
 .not-found > p { color: var(--ink-soft); font-size: .72rem; }
 .not-found h1 { font-family: var(--display); font-size: clamp(4rem, 10vw, 9rem); font-weight: 400; line-height: .84; letter-spacing: -.04em; text-transform: uppercase; }
 .not-found .editorial-link + .editorial-link { margin-top: -.7rem; }
+
+/* The closing suite graduates three, four and five columns, which is right once the field is wide
+   enough to carry it. Below 1200px the three-column plate falls to about 220px and the smallest
+   photograph starts to look starved rather than quiet, so the suite squares up to three equal
+   plates and keeps the common floor. */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .closing-photo-1 { grid-column: 1 / 5; }
+  .closing-photo-2 { grid-column: 5 / 9; }
+  .closing-photo-3 { grid-column: 9 / 13; }
+}
 
 @media (max-width: 900px) {
   :root { --header-safe-top: max(1rem, calc(env(safe-area-inset-top, 0px) + .6rem)); --header-bottom: 1rem; }
@@ -413,7 +579,10 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .hero-scroll { display: none; }
   .hero-meta { bottom: 2.2rem; }
   .premise { grid-template-columns: 1fr; min-height: 75vh; gap: 3rem; }
+  /* Explicit rows are a wide-screen device; the single column reverts to auto placement so the
+     kicker's `order` still moves it below the deck. */
   .worlds-heading { grid-template-columns: 1fr; }
+  .worlds-heading > p:first-child, .worlds-heading h2, .worlds-heading .worlds-deck { grid-area: auto; }
   .worlds-heading > p:first-child { order: 3; }
   .worlds-deck { justify-self: start; }
   .worlds-sequence { display: flex; flex-direction: column; gap: 6rem; }
@@ -435,10 +604,15 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .story-image, .story-image .figure-window { height: 70svh; }
   .story-copy { padding-block: 6rem; }
   .closing-sequence > header { grid-template-columns: 1fr; }
-  .closing-photos { display: flex; flex-direction: column; gap: 5rem; }
-  .closing-photo { width: 84%; margin: 0; }
-  .closing-photo-2 { width: 66%; align-self: flex-end; }
-  .closing-photo-3 { width: 88%; align-self: center; }
+  /* The same rising close on a phone. The desktop row's `align-items: end` carries over into the
+     flex column as a cross-axis end alignment, which anchors all three plates to the right margin;
+     stated here rather than left to be inferred, because it is the reason the three widths read as
+     one crescendo instead of three unrelated blocks. */
+  .closing-photos { display: flex; flex-direction: column; align-items: flex-end; gap: 5rem; }
+  .closing-photo { margin: 0; }
+  .closing-photo-1 { width: 62%; }
+  .closing-photo-2 { width: 78%; }
+  .closing-photo-3 { width: 94%; }
   .footer-base { grid-template-columns: 1fr 1fr; }
   .footer-base nav { flex-wrap: wrap; }
   .footer-base small { grid-column: 2; }
@@ -494,10 +668,10 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .destination-index strong { font-size: 2.2rem; }
   .story-image, .story-image .figure-window { height: 62svh; }
   .story-copy h2 { font-size: clamp(2.8rem, 13vw, 4.2rem); }
-  .ocean-chapter { height: 90svh; }
-  .ocean-chapter > img { object-position: 50% 35%; }
   .closing-sequence { padding-block: 7rem; }
-  .closing-photo { width: 90%; }
+  .closing-photo-1 { width: 68%; }
+  .closing-photo-2 { width: 84%; }
+  .closing-photo-3 { width: 100%; }
   .footer-continuation { align-items: flex-end; }
   .footer-continuation span { font-size: clamp(2.7rem, 13vw, 4rem); }
   .footer-base { grid-template-columns: 1fr; gap: 1.6rem; padding-block: 2.5rem max(2.5rem, calc(env(safe-area-inset-bottom, 0px) + 1.5rem)); }
@@ -809,8 +983,7 @@ html[data-viewer-open] body { overflow: hidden; }
 .destination-sequence { display: grid; grid-template-columns: repeat(12, 1fr); align-items: start; gap: clamp(2rem, 5vw, 6rem) clamp(1rem, 2vw, 2.5rem); padding: clamp(8rem, 12vw, 13rem) var(--gutter); }
 .destination-frame { margin: 0; }
 .destination-frame img { height: auto; }
-.destination-frame figcaption { display: flex; gap: 1rem; padding-top: .8rem; color: var(--ink-soft); font-size: .74rem; line-height: 1.4; }
-.destination-frame figcaption span { color: var(--ultramarine); }
+.destination-frame figcaption { display: flex; align-items: baseline; gap: .85rem; margin-top: .9rem; border-top: 1px solid var(--line-dark); padding-top: .85rem; color: var(--ink-soft); font-size: .76rem; line-height: 1.4; }
 /* Sequence placement is driven by role and orientation together, so a chapter of any length and
    any mix of formats keeps its scale. Every rule states an explicit start and end column: a `span`
    running past column 12 would create implicit tracks and shrink every frame on the page.
@@ -821,34 +994,35 @@ html[data-viewer-open] body { overflow: hidden; }
 .destination-frame.is-seq-offset { --seq-offset: clamp(4rem, 8vw, 9rem); }
 .destination-frame.is-seq-closing { --seq-offset: clamp(1rem, 3vw, 4rem); }
 
-.destination-frame.is-seq-wide.is-landscape { grid-column: 2 / 9; }
-.destination-frame.is-seq-wide.is-portrait { grid-column: 2 / 8; }
+/* Phase 16X — every role is flush to the left rail (column 1) or the right rail (column 13). The
+   roles kept their character: `wide` and `offset` lead from the left, `portrait`, `anchor` and
+   `closing` answer from the right, `quiet` stays small on the left. What they lost is the set of
+   inset starts — columns 2, 5 and 7 — that put eight different left edges on one chapter page. */
+.destination-frame.is-seq-wide.is-landscape { grid-column: 1 / 9; }
+.destination-frame.is-seq-wide.is-portrait { grid-column: 1 / 8; }
 .destination-frame.is-seq-portrait.is-landscape { grid-column: 7 / 13; }
 .destination-frame.is-seq-portrait.is-portrait { grid-column: 8 / 13; }
 .destination-frame.is-seq-quiet.is-landscape { grid-column: 1 / 7; }
-.destination-frame.is-seq-quiet.is-portrait { grid-column: 1 / 5; }
+.destination-frame.is-seq-quiet.is-portrait { grid-column: 1 / 6; }
 .destination-frame.is-seq-anchor.is-landscape { grid-column: 5 / 13; }
-.destination-frame.is-seq-anchor.is-portrait { grid-column: 5 / 12; }
-.destination-frame.is-seq-offset.is-landscape { grid-column: 2 / 8; }
-.destination-frame.is-seq-offset.is-portrait { grid-column: 2 / 7; }
+.destination-frame.is-seq-anchor.is-portrait { grid-column: 6 / 13; }
+.destination-frame.is-seq-offset.is-landscape { grid-column: 1 / 8; }
+.destination-frame.is-seq-offset.is-portrait { grid-column: 1 / 7; }
 .destination-frame.is-seq-closing.is-landscape { grid-column: 6 / 13; }
-.destination-frame.is-seq-closing.is-portrait { grid-column: 7 / 12; }
+.destination-frame.is-seq-closing.is-portrait { grid-column: 7 / 13; }
 /* A chapter should end on its largest breath rather than taper. The closing frame takes more
    width than any role would give it, whatever length the sequence happens to be. */
 .destination-sequence > .destination-frame:last-child { --seq-offset: clamp(3rem, 7vw, 8rem); }
-.destination-sequence > .destination-frame:last-child.is-landscape { grid-column: 3 / 12; }
-.destination-sequence > .destination-frame:last-child.is-portrait { grid-column: 4 / 10; }
+.destination-sequence > .destination-frame:last-child.is-landscape { grid-column: 1 / 13; }
+.destination-sequence > .destination-frame:last-child.is-portrait { grid-column: 1 / 9; }
 /* Square and unknown formats fall back to the landscape placement for their role. */
-.destination-frame.is-seq-wide { grid-column: 2 / 9; }
+.destination-frame.is-seq-wide { grid-column: 1 / 9; }
 .destination-frame.is-seq-portrait { grid-column: 7 / 13; }
 .destination-frame.is-seq-quiet { grid-column: 1 / 7; }
 .destination-frame.is-seq-anchor { grid-column: 5 / 13; }
-.destination-frame.is-seq-offset { grid-column: 2 / 8; }
+.destination-frame.is-seq-offset { grid-column: 1 / 8; }
 .destination-frame.is-seq-closing { grid-column: 6 / 13; }
 
-@media (min-width: 901px) and (max-width: 1100px) {
-  .world-4 { margin-top: 2rem; }
-}
 .destination-continuation { padding: clamp(7rem, 12vw, 12rem) var(--gutter); color: var(--obsidian); background: var(--ivory); }
 .destination-continuation > p { max-width: 26rem; line-height: 1.7; }
 .destination-continuation > a:first-of-type { display: flex; align-items: center; justify-content: space-between; margin-top: 3rem; padding-block: 1.5rem; border-block: 1px solid var(--line-light); }
@@ -893,8 +1067,14 @@ html[data-viewer-open] body { overflow: hidden; }
   .viewer-nav { top: auto; bottom: 1rem; background: transparent; }
   .viewer-previous { right: 3.75rem; left: auto; transform: none; }
   .viewer-next { right: .75rem; transform: none; }
-  .viewer-caption { right: auto; max-width: calc(100% - 8.75rem); }
+  .viewer-caption { right: auto; max-width: calc(100% - 8.75rem); flex-wrap: wrap; }
   .viewer-caption a { display: none; }
+  /* Phase 16A — the viewer is the licensing funnel's primary entry, so it has to exist on a phone
+     as well as on a desktop. It returns on its own line, aligned under the caption text, rather
+     than competing for the caption row that was too narrow for it in the first place. The padding
+     buys a thumb-sized hit area without moving the line: the negative bottom margin gives back
+     exactly what the padding takes, so the caption sits where it always did. */
+  .viewer-caption .viewer-licensing { display: block; flex-basis: 100%; width: fit-content; margin: .1rem 0 -.65rem 2.15rem; padding-block: .65rem; }
   .photo-viewer.is-idle .viewer-wordmark, .photo-viewer.is-idle .viewer-count, .photo-viewer.is-idle .viewer-nav, .photo-viewer.is-idle .viewer-caption, .photo-viewer.is-idle .viewer-close { opacity: 1; }
   .destination-hero > img, .archive-opening > img { object-position: var(--hero-focal-mobile); }
   /* "Black & White" is the longest opening title on the site and reached the gutter exactly at 390px.
@@ -1010,6 +1190,42 @@ html[data-viewer-open] body { overflow: hidden; }
 .licensing-scope { margin-top: 1.8rem; color: #5f635f; font-size: .82rem; font-variant-numeric: tabular-nums; }
 .licensing-alt .editorial-link { margin-top: 2.4rem; }
 
+/* Licensing enquiry — Phase 16A. The conversion destination, built from the publication's own
+   input language rather than a form library's: the fields reuse .contact-field, so there is one
+   input design in the project and Formspree contributes no styling of its own. */
+/* Two rows so the form can stand beside both the heading and the selected photograph. The `1fr`
+   sends every pixel of slack to the second row rather than distributing it across both, which is
+   what otherwise pushes the photograph away from the sentence that introduces it. */
+.licensing-enquiry { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); grid-template-rows: auto 1fr; align-items: start; gap: clamp(2rem, 5vw, 5rem) clamp(2.5rem, 6vw, 7rem); padding: clamp(6rem, 10vw, 10rem) var(--gutter) clamp(7rem, 12vw, 12rem); }
+.licensing-enquiry-head { grid-column: 1; }
+.licensing-enquiry h2 { font-family: var(--display); font-size: clamp(2.6rem, 5vw, 4.4rem); font-weight: 400; line-height: .88; letter-spacing: -.035em; text-transform: uppercase; }
+.licensing-enquiry-head p { max-width: 32rem; margin-top: 1.2rem; font-family: var(--editorial); font-size: .98rem; line-height: 1.75; }
+.licensing-form-shell, .licensing-enquiry-fallback { grid-column: 2; grid-row: 1 / span 2; }
+.licensing-selected { grid-column: 1; align-self: start; margin: 0; border-top: 1px solid var(--line-light); padding-top: 1.6rem; }
+.licensing-selected img { width: 100%; height: auto; max-height: 20rem; object-fit: cover; }
+.licensing-selected figcaption { margin-top: 1.1rem; }
+.licensing-selected-kicker { color: #5f635f; font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; }
+.licensing-selected-context { margin-top: .5rem; font-family: var(--editorial); font-size: 1.05rem; line-height: 1.4; }
+.licensing-selected-reference { margin-top: .3rem; color: #5f635f; font-size: .82rem; font-variant-numeric: tabular-nums; }
+.licensing-selected-links { display: flex; flex-wrap: wrap; gap: 0 1.6rem; }
+.licensing-selected-links .editorial-link { margin-top: 1.2rem; }
+.licensing-selected-links i, .licensing-success i { font-style: normal; }
+.licensing-form { margin: 0; }
+.licensing-form .contact-field:first-of-type { margin-top: 0; }
+.licensing-status { margin-top: 1.2rem; color: var(--copper); font-family: var(--editorial); font-size: .9rem; line-height: 1.6; }
+.licensing-status:focus-visible { outline: 2px solid var(--ultramarine); outline-offset: .4rem; }
+.licensing-fallback { margin-top: .7rem; color: #5f635f; font-size: .82rem; line-height: 1.6; }
+.licensing-fallback a { color: var(--ultramarine); }
+.licensing-consent { max-width: 34rem; margin-top: 1.6rem; color: #5f635f; font-size: .78rem; line-height: 1.6; }
+.licensing-preview-note { margin-bottom: 1.8rem; border-left: 2px solid var(--copper); padding: .2rem 0 .2rem .9rem; color: var(--copper); font-size: .78rem; line-height: 1.6; }
+.licensing-success { border-top: 1px solid var(--line-light); padding-top: 1.8rem; }
+.licensing-success h3 { max-width: 9ch; font-family: var(--display); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 400; line-height: .88; letter-spacing: -.035em; text-transform: uppercase; }
+.licensing-success h3:focus-visible { outline: 2px solid var(--ultramarine); outline-offset: .4rem; }
+.licensing-success > p { max-width: 32rem; margin-top: 1.2rem; font-family: var(--editorial); line-height: 1.7; }
+/* Formspree's honeypot. Out of the layout, out of the accessibility tree, out of the tab order —
+   a visitor never meets it, and no visible anti-spam furniture reaches the page. */
+.licensing-gotcha { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
 /* Contact */
 .contact-body { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: start; gap: clamp(2.5rem, 6vw, 7rem); padding: 0 var(--gutter) clamp(7rem, 12vw, 12rem); }
 .contact-field { display: grid; gap: .55rem; margin-bottom: 1.6rem; }
@@ -1042,7 +1258,11 @@ html[data-viewer-open] body { overflow: hidden; }
 .footer-secondary a:hover, .footer-secondary a:focus-visible { color: var(--ultramarine); }
 
 @media (max-width: 900px) {
-  .prose-body, .prose-aside, .studio-premise, .studio-offer, .studio-proof, .licensing-rights, .contact-body { grid-template-columns: 1fr; }
+  .prose-body, .prose-aside, .studio-premise, .studio-offer, .studio-proof, .licensing-rights, .contact-body, .licensing-enquiry { grid-template-columns: 1fr; }
+  /* One column: the heading, then the photograph being enquired about, then the form. Explicit
+     placement because the shell spans two rows on the wide layout. */
+  .licensing-enquiry-head, .licensing-selected, .licensing-form-shell, .licensing-enquiry-fallback { grid-column: 1; grid-row: auto; }
+  .licensing-selected img { max-height: 16rem; }
   .prose-figure, .contact-aside { position: static; }
   .prose-aside figure, .studio-offer figure, .licensing-rights figure { order: 2; }
   .studio-service { grid-template-columns: 3rem minmax(0, 1fr); }
@@ -1058,6 +1278,7 @@ html[data-viewer-open] body { overflow: hidden; }
   .studio-service-body { grid-column: 1; }
   .studio-proof-grid figure:last-child { margin-top: 1.5rem; }
   .enquiry-action.is-large span, .contact-submit span { max-width: 9ch; }
+  .licensing-enquiry h2, .licensing-success h3 { font-size: clamp(2.4rem, 11vw, 3.2rem); }
 }
 
 /* Field Notes. Builds only when a published note exists. */

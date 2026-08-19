@@ -7,19 +7,24 @@ const destinations = destinationData.destinations
   .filter((destination) => destination.confirmedPhotoCount > 0)
   .sort((a, b) => b.confirmedPhotoCount - a.confirmedPhotoCount);
 const isOpen = (destination) => destination.publicationStatus === 'published';
+// The deck said "Three chapters are open" while the list beneath it printed four `chapter open`
+// rows — Dusseldorf opened after the sentence was written. A number a visitor can check by
+// counting has to be derived from the same data the list is built from, or it will drift again.
+const openCount = destinations.filter(isOpen).length;
+const openWord = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'][openCount] ?? String(openCount);
 ---
 
 <section class="destination-index" id="destinations" aria-labelledby="destination-title">
   <header>
     <span class="memory-mark" aria-hidden="true"></span>
     <h2 id="destination-title">Destinations</h2>
-    <p>Place is the second way through the archive. Three chapters are open; the rest of the work is there to be found by place and year.</p>
+    <p>Place is the second way through the archive. {openWord} {openCount === 1 ? 'chapter is' : 'chapters are'} open; the rest of the work is there to be found by place and year.</p>
     <a class="editorial-link" href={withBase("/destinations/")}>Enter the place index <span aria-hidden="true">→</span></a>
   </header>
   <ol>
     {destinations.map((destination, index) => (
       <li>
-        <span class="destination-number">{String(index + 1).padStart(2, '0')}</span>
+        <span class="folio">{String(index + 1).padStart(2, '0')}</span>
         <a href={withBase(isOpen(destination) ? `/destinations/${destination.slug}/` : `/archive/?destination=${destination.slug}`)}><strong>{destination.name}</strong></a>
         <small>{destination.confirmedPhotoCount} photographs{isOpen(destination) ? ' · chapter open' : ' · in the archive'}</small>
       </li>

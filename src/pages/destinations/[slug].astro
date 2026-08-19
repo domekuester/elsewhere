@@ -213,7 +213,7 @@ const destinationSchema = {
               under a photograph it read as a database record attached to the picture — "2025 · ocean,
               people" — rather than as a caption anyone wrote. Authored captions live in the Story
               data, where a human decides them. */}
-          <figcaption><span>{String(index + 2).padStart(2, '0')}</span><p>{photo.year}</p></figcaption>
+          <figcaption><span class="folio folio-lead">{String(index + 2).padStart(2, '0')}</span><p>{photo.year}</p></figcaption>
         </figure>
         );
       })}

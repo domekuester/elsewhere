@@ -28,11 +28,10 @@ const deeper = [...deeperCaptions].map(([id, meta]) => {
 });
 const peopleCount = catalogData.photos.filter((photo) => photo.visualWorlds.includes('people')).length;
 const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
-const deeperSizes = (role) => ['threshold', 'closing'].includes(role)
-  ? '(min-width: 901px) 48vw, (min-width: 561px) 58vw, 100vw'
-  : ['gesture', 'proximity'].includes(role)
-    ? '(min-width: 901px) 40vw, (min-width: 561px) 48vw, 86vw'
-    : '(min-width: 901px) 32vw, (min-width: 561px) 44vw, 76vw';
+// Desktop widths follow the plate each role is given in `.people-deeper-grid`: five, five, six,
+// four, five and seven columns of twelve.
+const deeperPlate = { gesture: '38vw', proximity: '38vw', threshold: '46vw', environment: '30vw', intimate: '38vw', closing: '54vw' };
+const deeperSizes = (role) => `(min-width: 901px) ${deeperPlate[role] ?? '38vw'}, (min-width: 561px) ${['threshold', 'closing'].includes(role) ? '58vw' : '48vw'}, ${['threshold', 'closing'].includes(role) ? '100vw' : '86vw'}`;
 ---
 
 <BaseLayout title="People and encounters — Elsewhere" description="Encounters, gestures, work, and human presence from the Elsewhere visual archive." image="/social/people.jpg" imageAlt="A food vendor works behind a small counter">
@@ -50,8 +49,8 @@ const deeperSizes = (role) => ['threshold', 'closing'].includes(role)
     <section class="encounter-sequence" aria-labelledby="encounter-title">
       <header><h2 id="encounter-title">Encounters,<br />not profiles.</h2><p>Names and places will appear only when known and appropriate. Until then, the photograph remains without invented biography.</p></header>
       <figure class="encounter encounter-worker" data-photo-reveal><img src={withBase("/assets-derived/thumbnails/0045-IMG_8992.jpg")} srcset={`${withBase("/assets-derived/thumbnails/0045-IMG_8992.jpg")} 720w, ${withBase("/assets-derived/archive/0045-IMG_8992.jpg")} 1350w`} sizes="(min-width: 901px) 38vw, 88vw" width="2994" height="3992" alt="A seated craftsperson works beside a window" loading="lazy" decoding="async" /><figcaption>Work · Thailand</figcaption></figure>
-      <figure class="encounter encounter-vendor" data-photo-reveal><Image src={goldenPortrait} alt="A young woman turns towards low evening light" widths={[480, 768, 1000]} sizes="(min-width: 901px) 32vw, 68vw" loading="lazy" /><figcaption>Last light · La Réunion</figcaption></figure>
-      <figure class="encounter encounter-motorcycle" data-photo-reveal><Image src={motorcycle} alt="Two people pause beside a motorcycle on a city street" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 56vw, 100vw" loading="lazy" /><figcaption>Between one place and the next</figcaption></figure>
+      <figure class="encounter encounter-vendor" data-photo-reveal><Image src={goldenPortrait} alt="A young woman turns towards low evening light" widths={[480, 768, 1200]} sizes="(min-width: 901px) 38vw, 68vw" loading="lazy" /><figcaption>Last light · La Réunion</figcaption></figure>
+      <figure class="encounter encounter-motorcycle" data-photo-reveal><Image src={motorcycle} alt="Two people pause beside a motorcycle on a city street" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 54vw, 100vw" loading="lazy" /><figcaption>Between one place and the next</figcaption></figure>
     </section>
 
     <section class="people-deeper" aria-labelledby="people-deeper-title">

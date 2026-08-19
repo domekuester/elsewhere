@@ -14,6 +14,14 @@ interface World {
 
 interface Props { worlds: World[] }
 const { worlds } = Astro.props;
+
+// The wall is a five-column spread over a three-plate suite: five, six, then four, four, four
+// columns of twelve (see `.world-1`…`.world-5`). `sizes` states those widths rather than one
+// approximation, so the browser stops fetching a 54vw derivative for a plate drawn at 30vw.
+const plateSizes = ['38vw', '46vw', '30vw', '30vw', '30vw'];
+// The label leads the plate. A category index should name the door before it shows what is behind
+// it, and putting the heading first in the source is also the order a screen reader and a keyboard
+// user need: name, entry affordance, description, then the photograph it opens.
 ---
 
 <section class="worlds" id="explore" aria-labelledby="worlds-title">
@@ -26,14 +34,14 @@ const { worlds } = Astro.props;
   <div class="worlds-sequence">
     {worlds.map((world, index) => (
       <a class:list={['world', `world-${index + 1}`]} href={withBase(world.href)}>
-        <div class="world-photo" data-photo-reveal>
-          <Image src={world.image} alt={world.alt} widths={[480, 768, 1200, 1600]} sizes={index === 4 ? '(min-width: 901px) 64vw, 100vw' : '(min-width: 901px) 45vw, 100vw'} loading="lazy" style={`object-position:${world.position ?? '50% 50%'}`} />
-        </div>
         <div class="world-label">
-          <span>{String(index + 1).padStart(2, '0')}</span>
+          <span class="folio folio-lead">{String(index + 1).padStart(2, '0')}</span>
           <h3>{world.name}</h3>
-          <p>{world.feeling}</p>
           <i aria-hidden="true">↗</i>
+          <p>{world.feeling}</p>
+        </div>
+        <div class="world-photo" data-photo-reveal>
+          <Image src={world.image} alt={world.alt} widths={[480, 768, 1200, 1600]} sizes={`(min-width: 901px) ${plateSizes[index] ?? '46vw'}, 100vw`} loading="lazy" style={`object-position:${world.position ?? '50% 50%'}`} />
         </div>
       </a>
     ))}

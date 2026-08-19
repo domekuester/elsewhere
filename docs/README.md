@@ -1,5 +1,9 @@
 # ELSEWHERE documentation index
 
+## Phase 16X — collection and exhibition polish
+
+- [Collection and exhibition polish](PHASE-16X-COLLECTION-EXHIBITION-POLISH.md)
+
 ## Current platform
 
 - [Platform architecture](ELSEWHERE-PLATFORM-ARCHITECTURE.md)
