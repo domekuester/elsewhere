@@ -35,7 +35,7 @@ const plateSizes = ['38vw', '46vw', '30vw', '30vw', '30vw'];
     {worlds.map((world, index) => (
       <a class:list={['world', `world-${index + 1}`]} href={withBase(world.href)}>
         <div class="world-label">
-          <span class="folio folio-lead">{String(index + 1).padStart(2, '0')}</span>
+          <span class="folio folio-plate">{String(index + 1).padStart(2, '0')}</span>
           <h3>{world.name}</h3>
           <i aria-hidden="true">↗</i>
           <p>{world.feeling}</p>

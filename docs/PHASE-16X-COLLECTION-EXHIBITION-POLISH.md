@@ -231,3 +231,86 @@ index alternates L/R, R/L, L/R, R/L, R/L down the page.
 Widths 1728, 1440, 1280, 1024, 768, 430, 390: zero horizontal overflow, zero broken images, zero
 console errors. Build, content, exclusions and launch validation all pass; 0 broken internal links,
 0 broken public assets, 0 metadata leaks, 0 repeated photographs within any single page.
+
+---
+
+# Phase 17.1 — the wow pass
+
+Three moves, each chosen because it changes what the site *is* within the first seconds rather than
+how tidy it is on inspection.
+
+## 01 — The opening is a work, not a background
+
+Home opened the way every premium photography template opens: one photograph bled to all four edges,
+a title laid over its lower left, a gradient burned in underneath so the type would hold, and a
+"Scroll" cue at the right. Nothing about it was badly made. It was the default — the composition a
+visitor has already seen a hundred times, which is the one thing a publication cannot afford in its
+first five seconds.
+
+The photograph is now mounted: rail to rail, between a band of obsidian above that clears the
+navigation and the wall label below. Three things follow, and none is decoration.
+
+- The type no longer sits on the photograph, so the header veil and the bottom scrim are both gone
+  and the picture is seen clean.
+- The navigation sits on obsidian rather than on a bright cloud bank, so it needs no darkening at
+  all — `.hero` leaves the veil group entirely.
+- The title becomes wall text with the dates set against it on the right rail.
+
+The plate takes whatever height the screen leaves after the header band and the label, so the
+opening is always exactly one screen and the crop tightens rather than the layout breaking. The
+"Scroll" cue is gone: with the ground visible under the plate the page plainly continues, and an
+exhibition does not narrate its own interface.
+
+## 02 — The folio becomes a plate number
+
+The folio was a 15px mark standing beside a 53px title — correct in kind, invisible in effect, the
+thing an eye skips on the way to the word. A monograph does the opposite: it sets the plate number
+large, in a pale ink, and lets the difference in weight rather than a rule do the separating.
+
+`01 PEOPLE`. The numeral is set at roughly three-fifths of the title it indexes and holds the left
+margin of every collection surface — the world wall, the place index, the archive list, and now the
+open chapters, which become numbered rooms. The ratio is bound to each title's own measure, so it
+holds at 1728 and at 390 alike; where a surface overrides the title size, it overrides the shared
+measure instead, because stating them separately is how they drifted the first time.
+
+It is the one mark that appears on every room, which is what makes it a signature rather than a
+detail.
+
+## 03 — The whisper and the monument
+
+Home's middle was four consecutive sections of one photograph and some copy. Two of them now carry
+the page's scale hierarchy, back to back.
+
+The shell in an open hand is the smallest photograph on Home and is meant to be: 368px wide in a
+1728px field, on the left rail, with its line on the right rail and everything between them empty.
+The section used to set its own inset gutter — 8vw, 138px at 1728 — so the one deliberately quiet
+work on the page hung on an axis nothing else shared.
+
+What follows it is the loudest thing on the site: the cirque given 128vh, more than a screen, with
+the wall text withdrawn a third smaller into the bottom corner and the scrim pulled back so it
+darkens the corner it sits in rather than half the picture. Scrolling past it takes time. That
+adjacency — whisper, then monument — is Home's memorable moment, and it is made of scale alone.
+
+## Red team
+
+Five weakest moments found after implementation; the first three fixed.
+
+1. The plate rule was declared before `.folio` and lost the cascade, so the whole of move 02 was
+   silently inert. **Fixed** — rule order corrected.
+2. In the archive list the plate number came out at 39px against a 42px name, because the list
+   overrides the name size and the numeral went on measuring against the larger one. **Fixed** —
+   one variable now drives both.
+3. Home's two split works faced the same way in the same proportion, so the second read as the
+   first repeated. **Fixed** — the closing split is mirrored; the page alternates.
+4. `.people-memory` still bleeds to the viewport edge rather than the rails. **Left.** It and the
+   mirrored story split are the only two full-bleed moments on Home, and they are what the mounted
+   plates are mounted against. If everything were mounted, the mounting would stop signifying.
+5. The monochrome room's sticky text rail leaves its lower left empty in a static capture.
+   **Left.** The copy travels beside the plates while scrolling, and the room is deliberately a
+   different grammar from the wall.
+
+## Verification
+
+1728, 1440, 390: zero horizontal overflow, zero broken images, zero console errors. Build, content,
+exclusions and launch validation pass; 0 broken links, 0 broken assets, 0 metadata leaks, 0 repeated
+photographs within a page, 0 source masters touched, 0 new dependencies and no new JavaScript.

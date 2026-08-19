@@ -60,12 +60,17 @@ const closingPhotos = [
 <BaseLayout image="/social/home.jpg" imageAlt="Volcanic ridges rising beneath immense sunlit clouds">
   <SiteHeader />
   <main id="main">
+    {/* The opening photograph is mounted rather than bled: obsidian above it to clear the
+        navigation, the wall label beneath. The "Scroll" cue that used to float at the right edge is
+        gone — with the ground visible under the plate the page plainly continues, and an exhibition
+        does not narrate its own interface. */}
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-media"><Image src={islandClouds} alt="Volcanic ridges rising beneath immense sunlit clouds" widths={[768, 1280, 1920, 2400]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
-      <span class="hero-mark memory-mark" aria-hidden="true"></span>
-      <h1 id="hero-title" class="hero-title"><span>The world,</span><span>as I remember it.</span></h1>
-      <p class="hero-meta">Visual archive<br />2024—ongoing</p>
-      <a class="hero-scroll" href="#premise"><span>Scroll</span><i aria-hidden="true">↓</i></a>
+      <div class="hero-media"><Image src={islandClouds} alt="Volcanic ridges rising beneath immense sunlit clouds" widths={[768, 1280, 1920, 2400]} sizes="(min-width: 901px) 94vw, 100vw" loading="eager" fetchpriority="high" /></div>
+      <div class="hero-label">
+        <span class="hero-mark memory-mark" aria-hidden="true"></span>
+        <h1 id="hero-title" class="hero-title"><span>The world,</span><span>as I remember it.</span></h1>
+        <p class="hero-meta">Visual archive<br />2024—ongoing</p>
+      </div>
     </section>
 
     <section class="premise" id="premise" aria-label="Publication premise">

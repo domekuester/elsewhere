@@ -64,6 +64,7 @@ const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
               )}
             </span>
             <span class="chapter-entry-copy">
+              <span class="folio folio-plate">{String(index + 1).padStart(2, '0')}</span>
               <b>{destination.name}</b>
               <i aria-hidden="true">↗</i>
               {destination.parentDestination && <em>{destination.country}</em>}
@@ -79,7 +80,7 @@ const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
       <ol class="index-list">
         {inProgress.map((destination, index) => (
           <li>
-            <span class="folio">{String(index + 1).padStart(2, '0')}</span>
+            <span class="folio folio-plate">{String(index + 1).padStart(2, '0')}</span>
             {/* A named place with a real photograph count must lead somewhere. Without a chapter,
                 that somewhere is the archive addressed to it: /archive/place/<slug>/, which opens on a
                 photograph from that place rather than on the Archive's own frame. */}
