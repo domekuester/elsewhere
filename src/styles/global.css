@@ -254,8 +254,28 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
    The frame itself is untouched — 16:9, the same 84% of the original that 17.2B settled, the same
    object-position. What changed is the wall the plate hangs on, which is where the prompt asked
    the work to be done. */
-.hero { position: relative; min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: clamp(6.6rem, 9.2vh, 8rem) auto auto minmax(0, 1fr); padding: 0 var(--gutter) clamp(1.5rem, 2.6vw, 2.6rem); background: var(--obsidian); }
-.hero-media { grid-row: 3; grid-column: 1 / -1; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #131617; }
+.hero { position: relative; min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: clamp(6.6rem, 9.2vh, 8rem) auto auto minmax(min-content, 1fr); padding: 0 var(--gutter) clamp(1.5rem, 2.6vw, 2.6rem); background: var(--obsidian); }
+/* Phase 17.3 — the plate is the work, at the photograph's own proportion.
+   ------------------------------------------------------------------------------------------
+   17.2B/D built the wall correctly and then paid for it twice out of the photograph. The plate
+   was held at 16:9 while the frame is 2600x1736 — 3:2 — so `cover` took 7.9% off the top and
+   7.9% off the bottom: the crown of the sky and the whole banana-leaf foreground, 15.7% of the
+   frame, gone at every desktop width. Then the label rail took a further 280px of width at 1728,
+   leaving the plate 1337px wide on a 1617px field, with the dateline stranded in the gap it had
+   opened. Measured, the photograph held 82.7% of the wall and 84.3% of itself.
+
+   Both losses close on the same move. The plate carries the original's own ratio, so `cover` has
+   nothing left to take and the whole frame is on the wall; and it spans the field entire, so
+   there is no leftover for a rail to occupy. The dateline goes where a wall label belongs — under
+   the work — and the opening reads mark, statement, work, label.
+
+   The consequence is that the plate no longer lands whole above the fold, and it should not: at
+   3:2 a full-field plate is 1079px tall at 1728, while any arrangement that fits one entirely on
+   a 1080px screen caps it near 1140px wide — narrower than the cropped plate it replaces. There
+   is no version of this that is both complete and contained; the prompt asked for complete. The
+   fold falls three-quarters down, inside the foreground grass, so sky and ridges are whole on the
+   first screen and what continues past it is the least freighted part of the frame. */
+.hero-media { grid-row: 3; grid-column: 1 / -1; width: 100%; aspect-ratio: 2600 / 1736; overflow: hidden; background: #131617; }
 .hero-media img { object-position: 50% 50%; }
 /* The mark opens the wall, the title holds the left rail beneath it. */
 .hero-label { grid-row: 2; grid-column: 1; display: grid; gap: clamp(.8rem, 1.1vw, 1.3rem); padding-bottom: clamp(1.6rem, 2.6vw, 2.8rem); }
@@ -313,23 +333,17 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 .hero-meta { grid-row: 2; grid-column: 2; align-self: end; padding-bottom: clamp(2rem, 3.4vw, 3.35rem); color: #e0e2df; font-size: .7rem; letter-spacing: .04em; line-height: 1.5; text-align: right; white-space: nowrap; }
 .hero-meta span + span::before { content: "·"; padding: 0 .4em; color: #6f736f; }
 
-/* The label rail. Above 1200px the plate stops short of the right edge and the dateline hangs in
-   the ground it leaves, stacked, set on the plate's own bottom edge — the width the plate gives up
-   is what lets it land whole above the fold, and the dateline is what stops that width reading as
-   leftover. It sits at the foot rather than the shoulder so the opening closes on a diagonal: the
-   mark and the title open at the top left, the photograph carries the middle, and the dateline
-   shuts the bottom right on the same line the plate ends on. A label is read after the work. */
+/* The wall label. The rail is gone, so the dateline drops to the line beneath the plate and
+   closes on the right — which keeps 17.2D's diagonal exactly as it was: the mark and the title
+   open at the top left, the photograph carries the middle, and the dateline shuts the bottom
+   right on the edge the plate ends on. It is still read after the work. It has simply stopped
+   standing in for width that belonged to the photograph. Back on one line, the dot separator the
+   stacked rail had to suppress comes back with it. */
 @media (min-width: 1201px) {
-  /* The rail is very nearly a fixed measure rather than a share of the window: what it has to
-     hold is one two-line dateline, and what it buys is a constant amount of plate height. A vw
-     rail widens exactly where the extra height was not needed and pinches where it was. */
-  .hero { --wall-rail: min(17.5rem, 20%); grid-template-columns: minmax(0, 1fr) var(--wall-rail); }
-  .hero-label { grid-column: 1 / -1; }
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .hero-label { grid-column: 1; }
   .hero-media { grid-column: 1; }
-  .hero-meta { grid-row: 3; align-self: end; padding: 0 0 .35rem clamp(1.5rem, 2.4vw, 2.75rem); text-align: left; }
-  .hero-meta span { display: block; }
-  .hero-meta span + span { color: #8f938f; }
-  .hero-meta span + span::before { content: none; }
+  .hero-meta { grid-row: 4; grid-column: 1; justify-self: end; align-self: start; padding: clamp(.85rem, 1.3vw, 1.35rem) 0 0; }
 }
 
 .premise { min-height: 80vh; display: grid; grid-template-columns: 1fr 1fr; align-content: center; gap: 5rem; padding: clamp(7rem, 14vw, 15rem) var(--gutter); color: var(--obsidian); background: var(--ivory); }
