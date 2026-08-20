@@ -37,5 +37,12 @@ const secondaryLinks = secondary.map((item) => ({ ...item, href: withBase(item.h
     <span class="signature-name">Instagram</span>
     <span class="signature-handle">{site.instagram.handle}</span>
   </span>
-  <span aria-hidden="true">↗</span>
+  {/* The one place on the site where the destination is named by a mark rather than by the word for
+      it — which is what lets the label underneath spend itself on the handle instead. Drawn in
+      `currentColor` at the cap-height of the type beside it, so it is punctuation, not a logo. */}
+  <svg class="signature-mark" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true" focusable="false">
+    <rect x=".95" y=".95" width="10.1" height="10.1" rx="3.15" />
+    <circle cx="6" cy="6" r="2.45" />
+    <circle cx="8.85" cy="3.15" r=".62" fill="currentColor" stroke="none" />
+  </svg>
 </a>

@@ -50,6 +50,12 @@
   --editorial: "Literata", Georgia, "Times New Roman", serif;
   --ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --ease-out: cubic-bezier(.16, 1, .3, 1);
+  /* `--ease-out` is an expo curve: it spends most of its range immediately and then holds a
+     very long flat tail. That is right for a mark that travels a distance and settles, and
+     wrong for anything short — a 5px glide reads as a snap, and a fade reads as a flash
+     followed by a ghost. These two are for that register. */
+  --ease-glide: cubic-bezier(.28, .84, .32, 1);
+  --ease-ink: cubic-bezier(.4, 0, .35, 1);
   --z-header: 30;
   --header-safe-top: max(2rem, calc(env(safe-area-inset-top, 0px) + 1rem));
   --header-row: 2.75rem;
@@ -1512,9 +1518,29 @@ html[data-viewer-open] body { overflow: hidden; }
    focus ring is drawn in `currentColor` for the same reason: ultramarine would be inverted by the
    blend into whatever the backdrop makes of it, while the ink follows the ground it lands on.
 
-   The two labels are stacked in one grid cell and closed to the right, so the reveal is a crossfade
-   inside a box the width of the longer of them. Nothing moves — not the mark, not the arrow, and
-   not a pixel of the page around it. */
+   The reveal.
+   ------------------------------------------------------------------------------------------
+   Two labels closed to the right of one grid cell is the correct container — the box is the width
+   of the longer of them and nothing on the page can move — but a crossfade alone was the wrong
+   motion for it, and it read as a stutter for three compounding reasons.
+
+   Both words sat on the same baseline, so every intermediate frame was a double exposure of two
+   different strings: at the midpoint "Instagram" over "@kungfudom" resolves to an unreadable
+   composite, and the eye reports a word shuddering in place rather than a word changing. Both used
+   `--ease-out`, an expo curve that spends ~85% of its range in the first ~70ms and then holds a
+   long flat tail, so the double exposure arrived as a flash and left as a ghost. And the group's
+   own alpha animated .55 → .92 underneath the pair, so each label's true opacity was the product
+   of two curves neither of them declared, on a blended layer that had to recomposite its backdrop
+   for every frame of it.
+
+   So: the group's alpha is now constant and the resting ink lives on the labels themselves — one
+   opacity curve per element, and no repaint of the whole blend group to change it. The labels are
+   separated in space, the outgoing one lifting away while the incoming one rises into its place,
+   which is enough on its own that the two strings never share a baseline. And they are separated
+   in time — whichever label is leaving goes at once, whichever is arriving waits 80ms — so what is
+   legible at any moment is one word, not two. Travel is half a line and the fade is finished well
+   before the clip edge is reached; the clip is there to guarantee nothing escapes when the cursor
+   crosses in and out faster than the transition can run. */
 .signature { display: none; }
 
 @media (min-width: 901px) {
@@ -1524,29 +1550,53 @@ html[data-viewer-open] body { overflow: hidden; }
     right: var(--gutter);
     bottom: var(--gutter);
     display: inline-flex;
-    align-items: baseline;
-    gap: .5rem;
-    padding: .45rem .3rem;
-    margin: -.45rem -.3rem;
+    align-items: center;
+    gap: .45rem;
+    padding: .45rem .5rem;
+    margin: -.45rem -.5rem;
     color: var(--ivory);
     font-size: .7rem;
-    letter-spacing: .04em;
+    letter-spacing: .045em;
     line-height: 1;
     mix-blend-mode: difference;
-    opacity: .55;
-    transition: opacity .24s var(--ease-out), visibility .24s;
+    /* Reserved for the retire below. The hover state never touches it: see the note above. */
+    transition: opacity .32s var(--ease-out), visibility 0s;
   }
-  .signature:hover, .signature:focus-visible { opacity: .92; }
   /* The foot of the page closes the same rail this mark holds, and carries the link itself. So the
      signature retires there rather than being read over the rights line — and it leaves the tab
-     order with it, which is why visibility rather than opacity alone. */
-  .signature[data-retired] { visibility: hidden; opacity: 0; }
-  .signature:focus-visible { outline-color: currentColor; }
-  .signature-labels { display: grid; }
-  .signature-name, .signature-handle { grid-area: 1 / 1; justify-self: end; transition: opacity .24s var(--ease-out); }
-  .signature-handle { opacity: 0; }
-  .signature:hover .signature-name, .signature:focus-visible .signature-name { opacity: 0; }
-  .signature:hover .signature-handle, .signature:focus-visible .signature-handle { opacity: 1; }
+     order with it, which is why visibility rather than opacity alone. `visibility` is a discrete
+     property: transitioned naively it flips at the halfway point, which put a pop in the middle of
+     both the departure and the return. Held to the far end of the fade instead. */
+  .signature[data-retired] { visibility: hidden; opacity: 0; transition: opacity .32s var(--ease-out), visibility 0s .32s; }
+  .signature:focus-visible { outline-color: currentColor; outline-offset: .25rem; }
+
+  .signature-labels { display: grid; overflow: clip; line-height: 1.5; }
+  .signature-name, .signature-handle {
+    grid-area: 1 / 1;
+    justify-self: end;
+    opacity: var(--sig-ink);
+    translate: 0 var(--sig-lift);
+    /* `--sig-wait` is read at the moment each transition starts, so one declaration serves both
+       directions: the state rules below hand the leaving label a wait of zero and the arriving one
+       the full 80ms, and reversing the hover simply swaps which is which. */
+    transition: opacity .22s var(--ease-ink) var(--sig-wait), translate .42s var(--ease-glide);
+  }
+  .signature-name { --sig-ink: .55; --sig-lift: 0; --sig-wait: 80ms; }
+  .signature-handle { --sig-ink: 0; --sig-lift: .55em; --sig-wait: 0ms; }
+  .signature:is(:hover, :focus-visible, :active) .signature-name { --sig-ink: 0; --sig-lift: -.55em; --sig-wait: 0ms; }
+  .signature:is(:hover, :focus-visible, :active) .signature-handle { --sig-ink: .95; --sig-lift: 0; --sig-wait: 80ms; }
+
+  /* The one still element: the labels glide past a mark that does not move, which is what keeps the
+     interaction feeling anchored rather than animated. Cap-height of the type beside it. */
+  .signature-mark { flex: none; width: .95em; height: .95em; opacity: .55; transition: opacity .22s var(--ease-ink); }
+  .signature:is(:hover, :focus-visible, :active) .signature-mark { opacity: .95; }
+}
+
+/* Written after the global reduced-motion rule so it can reach these properties. That rule already
+   collapses the durations; this removes the displacement as well, so the labels resolve in place
+   rather than snapping in from half a line away. */
+@media (prefers-reduced-motion: reduce) {
+  .signature-name, .signature-handle { translate: none; transition-delay: 0s; }
 }
 
 @media (max-width: 900px) {
