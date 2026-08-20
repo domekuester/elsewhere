@@ -34,6 +34,12 @@ export const site = {
     { label: 'About', href: '/about/' },
     { label: 'Studio', href: '/studio/' },
   ],
+  /**
+   * The photographer's own feed. It holds far more frames than this edit does, so it is offered as
+   * a quiet way further into the work rather than as a social action: one address, read by the
+   * fixed signature on wide screens, by the foot of the index on small ones, and by the footer.
+   */
+  instagram: { handle: '@kungfudom', url: 'https://www.instagram.com/kungfudom/' },
   // Commercial routes live at the edges, never in the primary photographic path.
   secondaryNavigation: [
     { label: 'Studio', href: '/studio/' },

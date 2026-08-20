@@ -160,6 +160,10 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 .primary-nav a::after { content: ""; position: absolute; right: .15rem; bottom: .05rem; left: .15rem; height: 1px; background: var(--ultramarine); transform: scaleX(0); transform-origin: right; transition: transform .35s var(--ease-out); }
 .primary-nav a:hover::after, .primary-nav a:focus-visible::after, .primary-nav a[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
 .menu-button { display: none; border: 0; padding: 0; background: none; }
+/* The feed belongs to the index only where the index is a page of its own — see the small-screen
+   block. On a wide screen the primary navigation is a single line of six routes and the signature
+   in the lower right is already carrying this. */
+.primary-nav .nav-signature { display: none; }
 
 /* Opening */
 /* Home is measurably the brightest opening on the site — a near-white cloud bank runs directly
@@ -767,6 +771,11 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
   .primary-nav a[aria-current="page"] { color: #cfd1ce; }
   .primary-nav a[aria-current="page"] span { transform: translateX(-.2rem); }
   .primary-nav a span { display: inline; color: var(--ultramarine); font-family: var(--ui); }
+  /* A coda under the index, in the voice of the sentence at its head rather than of the routes
+     above it: the same right-hand arrow rail, none of their weight. It keeps the last rule of the
+     list as the list's end, and sits below it. */
+  .primary-nav .nav-signature { display: flex; min-height: 2.75rem; border-bottom: 0; padding-top: 1.5rem; color: #8e928f; font-family: var(--ui); font-size: .8rem; letter-spacing: .04em; text-transform: none; }
+  .primary-nav .nav-signature span { color: inherit; }
   .editorial-link, .site-footer nav a, .footer-wordmark,
   .archive-filter-group button, .archive-filter-group a, .another-frame { min-height: 2.75rem; margin-block: 0; padding-block: .65rem; }
   /* A phone cannot give a landscape plate the height its width implies. A portrait crop there would
@@ -1482,6 +1491,63 @@ html[data-viewer-open] body { overflow: hidden; }
    the 24px minimum without moving the rows they sit in. */
 .site-footer nav a, .footer-wordmark { display: inline-flex; align-items: center; min-height: 1.5rem; padding-block: .3rem; margin-block: -.3rem; }
 .footer-secondary a:hover, .footer-secondary a:focus-visible { color: var(--ultramarine); }
+/* Set in the register of the commercial row it sits beside, not of the routes above it. The arrow
+   is the same mark the index uses for a link that leaves the publication. */
+.footer-signature { display: inline-flex; align-items: baseline; gap: .5rem; align-self: start; justify-self: start; min-height: 1.5rem; padding-block: .3rem; margin-block: -.3rem; color: var(--ink-soft); font-size: .72rem; letter-spacing: .04em; transition: color .32s var(--ease-out); }
+.footer-signature:hover, .footer-signature:focus-visible { color: var(--ultramarine); }
+
+/* The signature.
+   ------------------------------------------------------------------------------------------
+   A photographer signs the print in the corner, small, in the same ink as everything else. This is
+   that mark and nothing more: no field, no rule, no colour of its own, and no invitation. It holds
+   the lower right of the viewport for the whole scroll so that somebody who has come to the end of
+   what is shown here has somewhere further to go — and it is set quietly enough that the eye
+   reaches the photograph first every time.
+
+   `mix-blend-mode: difference` is the mechanism the header already uses to survive both grounds,
+   and it is the only one that works for a mark that travels: obsidian, ivory and every photograph
+   between them pass under this corner within a single page. At .55 the composite resolves near
+   grey on either flat ground — measured, about 5:1 on each — and it thins out to nothing over the
+   middle of a photograph, which is the correct order of precedence rather than a shortcoming. The
+   focus ring is drawn in `currentColor` for the same reason: ultramarine would be inverted by the
+   blend into whatever the backdrop makes of it, while the ink follows the ground it lands on.
+
+   The two labels are stacked in one grid cell and closed to the right, so the reveal is a crossfade
+   inside a box the width of the longer of them. Nothing moves — not the mark, not the arrow, and
+   not a pixel of the page around it. */
+.signature { display: none; }
+
+@media (min-width: 901px) {
+  .signature {
+    position: fixed;
+    z-index: 20;
+    right: var(--gutter);
+    bottom: var(--gutter);
+    display: inline-flex;
+    align-items: baseline;
+    gap: .5rem;
+    padding: .45rem .3rem;
+    margin: -.45rem -.3rem;
+    color: var(--ivory);
+    font-size: .7rem;
+    letter-spacing: .04em;
+    line-height: 1;
+    mix-blend-mode: difference;
+    opacity: .55;
+    transition: opacity .24s var(--ease-out), visibility .24s;
+  }
+  .signature:hover, .signature:focus-visible { opacity: .92; }
+  /* The foot of the page closes the same rail this mark holds, and carries the link itself. So the
+     signature retires there rather than being read over the rights line — and it leaves the tab
+     order with it, which is why visibility rather than opacity alone. */
+  .signature[data-retired] { visibility: hidden; opacity: 0; }
+  .signature:focus-visible { outline-color: currentColor; }
+  .signature-labels { display: grid; }
+  .signature-name, .signature-handle { grid-area: 1 / 1; justify-self: end; transition: opacity .24s var(--ease-out); }
+  .signature-handle { opacity: 0; }
+  .signature:hover .signature-name, .signature:focus-visible .signature-name { opacity: 0; }
+  .signature:hover .signature-handle, .signature:focus-visible .signature-handle { opacity: 1; }
+}
 
 @media (max-width: 900px) {
   .prose-body, .prose-aside, .studio-premise, .studio-offer, .studio-proof, .licensing-rights, .contact-body, .licensing-enquiry { grid-template-columns: 1fr; }

@@ -19,6 +19,17 @@ if (opening) {
   ).observe(opening);
 }
 
+// The fixed signature holds the same right-hand rail the footer's rights line closes on, and the
+// footer carries the link in its own row, so the mark steps aside once the foot of the page is in
+// view. Watched rather than measured on scroll, for the same reason as the opening above.
+const signature = document.querySelector<HTMLElement>('.signature');
+const footerBase = document.querySelector('.footer-base');
+if (signature && footerBase) {
+  new IntersectionObserver(
+    ([entry]) => signature.toggleAttribute('data-retired', entry.isIntersecting),
+  ).observe(footerBase);
+}
+
 const syncMenuAvailability = () => {
   if (!nav) return;
   nav.inert = mobile.matches && menuButton?.getAttribute('aria-expanded') !== 'true';

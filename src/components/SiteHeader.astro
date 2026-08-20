@@ -17,6 +17,6 @@ const navigation = site.navigation
   </button>
   <nav id="primary-nav" class="primary-nav" aria-label="Primary" data-nav>
     <p aria-hidden="true">A visual archive<br />of places, people<br />and moments.</p>
-    <div>{navigation.map((item) => <a href={item.href} aria-current={item.href !== '/#story' && item.href !== '/#about' && path.startsWith(item.href) ? 'page' : undefined} data-analytics-event="navigation_open" data-analytics-context={item.label.toLowerCase()}>{item.label}<span aria-hidden="true">↗</span></a>)}</div>
+    <div>{navigation.map((item) => <a href={item.href} aria-current={item.href !== '/#story' && item.href !== '/#about' && path.startsWith(item.href) ? 'page' : undefined} data-analytics-event="navigation_open" data-analytics-context={item.label.toLowerCase()}>{item.label}<span aria-hidden="true">↗</span></a>)}<a class="nav-signature" href={site.instagram.url} target="_blank" rel="noopener noreferrer" aria-label={`Instagram, ${site.instagram.handle}`}>Instagram<span aria-hidden="true">↗</span></a></div>
   </nav>
 </header>

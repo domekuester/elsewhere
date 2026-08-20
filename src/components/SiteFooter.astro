@@ -24,6 +24,18 @@ const secondaryLinks = secondary.map((item) => ({ ...item, href: withBase(item.h
     <p>A visual archive of the world as experienced by one person.</p>
     <nav aria-label="Footer">{primaryLinks.map((item) => <a href={item.href} data-analytics-event="navigation_open" data-analytics-context={`footer:${item.label.toLowerCase()}`}>{item.label}</a>)}</nav>
     <nav class="footer-secondary" aria-label="Studio and licensing">{secondaryLinks.map((item) => <a href={item.href} data-analytics-event="navigation_open" data-analytics-context={`footer:${item.label.toLowerCase()}`}>{item.label}</a>)}</nav>
+    {/* The feed takes the empty cell under the statement line — the conventional place to look for
+        the photographer, and the one the fixed signature cannot serve on a phone. */}
+    <a class="footer-signature" href={site.instagram.url} target="_blank" rel="noopener noreferrer" aria-label={`Instagram, ${site.instagram.handle}`}>Instagram<span aria-hidden="true">↗</span></a>
     <small>{business.copyrightNotice} Original photography throughout.</small>
   </div>
 </footer>
+{/* Viewport chrome rather than footer content, so it is written outside the landmark and read last:
+    a wide screen carries it in the lower right for the whole scroll, a small one never sees it. */}
+<a class="signature" href={site.instagram.url} target="_blank" rel="noopener noreferrer" aria-label={`Instagram, ${site.instagram.handle}`}>
+  <span class="signature-labels" aria-hidden="true">
+    <span class="signature-name">Instagram</span>
+    <span class="signature-handle">{site.instagram.handle}</span>
+  </span>
+  <span aria-hidden="true">↗</span>
+</a>
