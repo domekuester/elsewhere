@@ -1524,7 +1524,7 @@ export const journeyStories: JourneyStory[] = [
       {
         kind: 'text',
         paragraphs: [
-          'Renjun is the mother of Shinku, my host at the temple. She is a fashion designer.',
+          'Renjun is the mother of Shinku, my host at the temple. She used to work as a fashion designer. Today, she is a Buddhist nun. Her mornings begin around five, with chanting and prayer.',
           'She cooked every day. Rice obviously, pickled vegetables, sometimes soba, sometimes sushi, once cabbage with minced meat, and a whole run of dishes whose names I still do not know.',
           'I cannot get her food into words. It was close to perfect every day, and every day I failed to get over it.',
           'We talked a lot, in English, which was easy enough. We went to an exercise class together, taught by a former Japanese baseball player. Baseball is enormous in Japan, and I was comfortably the least informed person in the room.',
