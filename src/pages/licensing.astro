@@ -4,13 +4,17 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import EnquiryAction from '../components/EnquiryAction.astro';
 import { business } from '../config/site';
+import { licensing } from '../config/licensing';
 import catalogData from '../data/photo-catalog';
+import { licensingFrame as licensingFrameRef } from '../data/surface-photos';
+import { imageObject } from '../data/image-schema';
 import { absoluteUrl, withBase } from '../config/paths';
 // Licensing shared its only photograph with Home and Studio. A rights desk that illustrates itself
 // with a picture the visitor has already seen twice argues against its own claim of depth.
+// The id lives in src/data/surface-photos.ts so /sitemap-images.xml declares the same frame.
 const licensingFrame = (() => {
-  const photo = catalogData.photos.find((item) => item.id === 'photo-0333');
-  if (!photo?.public) throw new Error('Licensing references photo-0333, which is not a public photograph.');
+  const photo = catalogData.photos.find((item) => item.id === licensingFrameRef.id);
+  if (!photo?.public) throw new Error(`Licensing references ${licensingFrameRef.id}, which is not a public photograph.`);
   return photo;
 })();
 const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
@@ -19,14 +23,18 @@ const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orienta
 // enquiries are answered per photograph, because rights differ frame by frame.
 const enquirable = catalogData.photos.filter((photo) => photo.licensing !== 'unavailable').length;
 
-const licensingSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'Photography licensing — Elsewhere',
-  description: 'How photographs from the Elsewhere archive may be licensed for editorial and commercial use.',
-  url: absoluteUrl('/licensing/', Astro.site),
-  significantLink: absoluteUrl('/archive/', Astro.site),
-};
+const licensingSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Photography licensing — Elsewhere',
+    description: 'How photographs from the Elsewhere archive may be licensed for editorial and commercial use.',
+    url: absoluteUrl('/licensing/', Astro.site),
+    significantLink: absoluteUrl('/archive/', Astro.site),
+  },
+  // The page's own photograph is a licensable archive frame like any other, and says so.
+  imageObject({ ...licensingFrame, altText: licensingFrameRef.alt }, Astro.site, absoluteUrl('/licensing/', Astro.site), true),
+];
 ---
 
 <BaseLayout
@@ -58,7 +66,7 @@ const licensingSchema = {
 
     <section class="licensing-rights" aria-labelledby="licensing-rights-title">
       <figure data-photo-reveal>
-        <img src={licensingFrame.thumbnail} srcset={`${licensingFrame.thumbnail} ${derivativeWidth(licensingFrame, 960)}w, ${licensingFrame.archiveImage} ${derivativeWidth(licensingFrame, 1800)}w`} sizes="(min-width: 901px) 36vw, 84vw" width={licensingFrame.width} height={licensingFrame.height} alt="A red lighthouse stands at the end of a breakwater under a pale sky." loading="lazy" decoding="async" />
+        <img src={licensingFrame.thumbnail} srcset={`${licensingFrame.thumbnail} ${derivativeWidth(licensingFrame, 960)}w, ${licensingFrame.archiveImage} ${derivativeWidth(licensingFrame, 1800)}w`} sizes="(min-width: 901px) 36vw, 84vw" width={licensingFrame.width} height={licensingFrame.height} alt={licensingFrameRef.alt} loading="lazy" decoding="async" />
       </figure>
       <div>
         <h2 id="licensing-rights-title">How rights are handled</h2>
@@ -71,7 +79,7 @@ const licensingSchema = {
     <section class="licensing-process" aria-labelledby="licensing-process-title">
       <h2 id="licensing-process-title">How an enquiry works</h2>
       <ol class="licensing-steps">
-        <li><b>01</b><span>Identify the photograph. Every frame in the archive carries a reference number — the three digits shown beneath it. Opening a photograph and choosing <i>Licensing enquiry</i> carries that reference across for you.</span></li>
+        <li><b>01</b><span>Identify the photograph. Every frame in the archive carries a reference number — the three digits shown beneath it. Opening a photograph and choosing <i>Enquire about licensing</i> carries that reference to this page for you.</span></li>
         <li><b>02</b><span>Describe the use: where it will appear, in which territory, for how long, and roughly at what scale.</span></li>
         <li><b>03</b><span>Rights are checked for that specific frame and that specific use.</span></li>
         <li><b>04</b><span>You receive a clear answer, a fee, and a licence — or an honest no.</span></li>
@@ -79,14 +87,146 @@ const licensingSchema = {
       <p class="licensing-scope">All {enquirable} published photographs can be asked about. Availability is confirmed individually.</p>
     </section>
 
-    {business.enquiriesEnabled && (
-      <section class="prose-contact" aria-labelledby="licensing-cta-title">
-        <h2 id="licensing-cta-title">Licensing enquiry</h2>
-        <p>If you already know the frame, bring its reference number. If you do not, describe what you need and it can be found.</p>
-        <EnquiryAction type="licensing" label="Make an enquiry" context="licensing" class="is-large" />
-        <p class="licensing-alt"><a class="editorial-link" href={withBase("/archive/")} data-analytics-event="archive_open" data-analytics-context="licensing">Browse the archive first <span aria-hidden="true">→</span></a></p>
+    {(licensing.formRendered || business.enquiriesEnabled) && (
+      <section class="licensing-enquiry" id="enquiry" aria-labelledby="licensing-cta-title" data-licensing-section>
+        <div class="licensing-enquiry-head">
+          <h2 id="licensing-cta-title">Licensing enquiry</h2>
+          <p>Tell me where the photograph will appear and how you would like to use it, and I will come back with availability and terms. If you already know the frame, bring its reference number. If you do not, describe what you need and it can be found.</p>
+        </div>
+
+        {/* Revealed by the client only when ?photo= resolves to a published, licensable frame in the
+            public registry. Absent that, the page is a general licensing enquiry and says nothing. */}
+        <figure class="licensing-selected" data-licensing-selected hidden>
+          <img data-licensing-selected-image src="" alt="" loading="lazy" decoding="async" />
+          <figcaption>
+            <p class="licensing-selected-kicker">Selected photograph</p>
+            <p class="licensing-selected-context" data-licensing-selected-context hidden></p>
+            <p class="licensing-selected-reference">Frame <span data-licensing-selected-reference></span></p>
+            <p class="licensing-selected-links">
+              <a class="editorial-link" data-licensing-selected-return href={withBase('/archive/')} hidden><i data-licensing-return-label>Return to the photograph</i> <span aria-hidden="true">→</span></a>
+              <a class="editorial-link" href={withBase('/archive/')} data-analytics-event="archive_open" data-analytics-context="licensing:change-photograph">Change photograph <span aria-hidden="true">→</span></a>
+            </p>
+          </figcaption>
+        </figure>
+
+        {licensing.formRendered ? (
+          <div class="licensing-form-shell">
+            {/* No-JS fallback is a real POST to the same endpoint rather than a dead button.
+                `novalidate` is set by the script, so without JS the browser's own validation runs. */}
+            <form
+              class="licensing-form"
+              data-licensing-form
+              data-licensing-endpoint={licensing.endpoint}
+              data-licensing-action="form"
+              action={licensing.endpoint || undefined}
+              method="post"
+            >
+              <h3 class="visually-hidden">Enquire about licensing</h3>
+
+              {licensing.previewMode && (
+                <p class="licensing-preview-note">Local preview. No Formspree form ID is configured, so submitting exercises every form state without sending anything. This notice does not exist in a production build.</p>
+              )}
+
+              <p class="contact-field">
+                <label for="licensing-name">Your name</label>
+                <input id="licensing-name" name="name" type="text" autocomplete="name" required />
+                <span class="contact-error" data-error-for="licensing-name" hidden>Please add a name so I know who I am replying to.</span>
+              </p>
+
+              <p class="contact-field">
+                <label for="licensing-email">Email</label>
+                <input id="licensing-email" name="email" type="email" autocomplete="email" required />
+                <span class="contact-error" data-error-for="licensing-email" hidden>Please check this email address.</span>
+              </p>
+
+              <p class="contact-field">
+                <label for="licensing-company">Company or publication <em>optional</em></label>
+                <input id="licensing-company" name="company" type="text" autocomplete="organization" />
+              </p>
+
+              <p class="contact-field">
+                <label for="licensing-use">Intended use</label>
+                <select id="licensing-use" name="intended_use" required>
+                  <option value="">Choose a use</option>
+                  {licensing.intendedUses.map((use) => <option value={use.id}>{use.label}</option>)}
+                </select>
+                <span class="contact-error" data-error-for="licensing-use" hidden>Please choose how the photograph would be used.</span>
+              </p>
+
+              <p class="contact-field">
+                <label for="licensing-destination">Where will it appear? <em>optional</em></label>
+                <input id="licensing-destination" name="publication_or_destination" type="text" />
+              </p>
+
+              {/* Only for an enquiry that did not arrive from a photograph. Once the registry has
+                  identified the frame, asking again would be asking the visitor to repeat the page. */}
+              <p class="contact-field" data-licensing-reference-field>
+                <label for="licensing-reference">Photograph or page reference <em>optional</em></label>
+                <input id="licensing-reference" name="photograph_reference" type="text" />
+                <span class="contact-hint">A frame's three-digit number, or the address of a page on Elsewhere.</span>
+              </p>
+
+              <p class="contact-field contact-field-message">
+                <label for="licensing-message">Project details</label>
+                <textarea id="licensing-message" name="message" rows="7" required></textarea>
+                <span class="contact-hint">Tell me a little about the project and how you would like to use the photograph.</span>
+                <span class="contact-error" data-error-for="licensing-message" hidden>Please add a short description of the project.</span>
+              </p>
+
+              {/* Formspree's supported honeypot. A visitor never meets it; a bot fills it and the
+                  submission is discarded server-side, which is cheaper and quieter than a CAPTCHA. */}
+              <div class="licensing-gotcha" aria-hidden="true">
+                <label for="licensing-gotcha">Leave this field empty</label>
+                <input id="licensing-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+
+              {/* Public-safe context only. Written by the script from the resolved registry record;
+                  nothing here is read back from the URL or from any private field. */}
+              <input type="hidden" name="_subject" value="ELSEWHERE licensing enquiry" data-licensing-subject />
+              <input type="hidden" name="photo_id" data-licensing-field="id" />
+              <input type="hidden" name="photo_reference" data-licensing-field="reference" />
+              <input type="hidden" name="photo_context" data-licensing-field="context" />
+              <input type="hidden" name="photo_public_url" data-licensing-field="image" />
+              <input type="hidden" name="source_page" data-licensing-field="page" />
+              <input type="hidden" name="source_section" data-licensing-field="section" />
+
+              <button class="contact-submit" type="submit" data-licensing-submit data-licensing-action="submit">
+                <span data-licensing-submit-label>Send enquiry</span><b aria-hidden="true">→</b>
+              </button>
+
+              <p class="licensing-status" data-licensing-status role="status" aria-live="polite" tabindex="-1" hidden></p>
+              {/* Offered only once a real address exists. A reserved placeholder is worse than no
+                  fallback: it invites a message that can never arrive. */}
+              {business.contactEmailPublishable && (
+                <p class="licensing-fallback" data-licensing-fallback hidden>You can also write directly to <a href={`mailto:${business.contactEmail}`}>{business.contactEmail}</a>.</p>
+              )}
+              {/* Says only what is verifiable. Formspree's own privacy policy records technical data
+                  beyond the form fields — IP address, browser, access time, referrer — so this must
+                  not claim that nothing else is collected. The detail belongs in a privacy notice
+                  the owner writes, not in a claim made here. */}
+              <p class="licensing-consent">Your enquiry is sent through Formspree, the form service that delivers it to me, and is used only to answer you. Submitting an enquiry does not grant usage rights.</p>
+            </form>
+
+            <div class="licensing-success" data-licensing-success hidden>
+              <h3 tabindex="-1" data-licensing-success-heading>Thank you</h3>
+              <p>Your licensing enquiry has been received. I will look at the use you have described and come back to you with availability and terms.</p>
+              <p class="licensing-selected-links">
+                <a class="editorial-link" data-licensing-success-return href={withBase('/archive/')} hidden><i data-licensing-return-label>Return to the photograph</i> <span aria-hidden="true">→</span></a>
+                <a class="editorial-link" href={withBase('/archive/')}>Continue browsing Elsewhere <span aria-hidden="true">→</span></a>
+              </p>
+            </div>
+          </div>
+        ) : (
+          <div class="licensing-enquiry-fallback">
+            <EnquiryAction type="licensing" label="Enquire about licensing" context="licensing" event="licensing_open" class="is-large" />
+            <p class="licensing-alt"><a class="editorial-link" href={withBase("/archive/")} data-analytics-event="archive_open" data-analytics-context="licensing">Browse the archive first <span aria-hidden="true">→</span></a></p>
+          </div>
+        )}
       </section>
     )}
   </main>
   <SiteFooter />
+  <script>
+    import '../scripts/licensing';
+  </script>
 </BaseLayout>

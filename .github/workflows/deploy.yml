@@ -46,6 +46,12 @@ jobs:
           # rendered and /contact/ is noindexed rather than shipping an address nobody reads.
           PUBLIC_CONTACT_EMAIL: ${{ vars.PUBLIC_CONTACT_EMAIL }}
           PUBLIC_CREATOR_NAME: ${{ vars.PUBLIC_CREATOR_NAME }}
+          # Public integration configuration, not a credential — a repository variable, not a
+          # secret. Absent, the Licensing page renders its enquiry link rather than a form.
+          PUBLIC_FORMSPREE_LICENSING_FORM_ID: ${{ vars.PUBLIC_FORMSPREE_LICENSING_FORM_ID }}
+          PUBLIC_LICENSING_ENABLED: ${{ vars.PUBLIC_LICENSING_ENABLED }}
+          # Search Console verification token for the URL-prefix property. Public, not a secret.
+          PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ vars.PUBLIC_GOOGLE_SITE_VERIFICATION }}
           PUBLIC_ANALYTICS_PROVIDER: ${{ vars.PUBLIC_ANALYTICS_PROVIDER }}
           PUBLIC_ANALYTICS_DOMAIN: ${{ vars.PUBLIC_ANALYTICS_DOMAIN }}
         run: npm run build

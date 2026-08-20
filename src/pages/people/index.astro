@@ -7,34 +7,45 @@ import vendor from '../../assets/photos/people-vendor.jpg';
 import motorcycle from '../../assets/photos/people-motorcycle.jpg';
 import goldenPortrait from '../../assets/photos/golden-portrait.jpg';
 import catalogData from '../../data/photo-catalog';
+import { peopleEncounterFrame, peopleEncounters } from '../../data/surface-photos';
+import { imageObject, breadcrumbs } from '../../data/image-schema';
 import { withBase } from '../../config/paths';
 
 // People sat behind a main-navigation entry with three photographs in it. These six are drawn from
 // the frames a full visual review of the archive marked as being *about* a person — not merely
 // containing one — and none of them appears anywhere else on the site.
-const deeperCaptions = new Map([
-  ['photo-0279', { alt: 'A dancer in a straw hat turns mid-step in front of orange flowers.', note: 'Movement', role: 'gesture' }],
-  ['photo-0380', { alt: 'Two women in white headscarves work over pans at a food counter.', note: 'Work', role: 'proximity' }],
-  ['photo-0566', { alt: 'A man in a cap holds a cigarette at the edge of a doorway.', note: 'Waiting', role: 'threshold' }],
-  ['photo-0592', { alt: 'A woman sits at a small table outside a shop hung with a red rug.', note: 'Afternoon', role: 'environment' }],
-  ['photo-0350', { alt: 'A man bends to drink, water falling from his mouth in low sun.', note: 'Thirst', role: 'intimate' }],
-  ['photo-0557', { alt: 'A woman in a cap stands against dark volcanic rock.', note: 'Attention', role: 'closing' }],
-]);
+// The selection itself lives in src/data/surface-photos.ts, so /sitemap-images.xml declares the
+// same frames this page renders rather than a copy of the list that can fall behind it.
 const photosById = new Map(catalogData.photos.map((photo) => [photo.id, photo]));
-const deeper = [...deeperCaptions].map(([id, meta]) => {
+const resolve = (id, surface) => {
   const photo = photosById.get(id);
-  if (!photo?.public) throw new Error(`People selection references ${id}, which is not a public photograph.`);
-  return { ...photo, ...meta };
-});
+  if (!photo?.public) throw new Error(`People selection references ${id} (${surface}), which is not a public photograph.`);
+  return photo;
+};
+const deeper = peopleEncounters.map((entry) => ({ ...resolve(entry.id, 'further encounters'), ...entry }));
+const craftsperson = resolve(peopleEncounterFrame.id, 'encounter sequence');
 const peopleCount = catalogData.photos.filter((photo) => photo.visualWorlds.includes('people')).length;
 const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
 // Desktop widths follow the plate each role is given in `.people-deeper-grid`: five, five, six,
 // four, five and seven columns of twelve.
 const deeperPlate = { gesture: '38vw', proximity: '38vw', threshold: '46vw', environment: '30vw', intimate: '38vw', closing: '54vw' };
 const deeperSizes = (role) => `(min-width: 901px) ${deeperPlate[role] ?? '38vw'}, (min-width: 561px) ${['threshold', 'closing'].includes(role) ? '58vw' : '48vw'}, ${['threshold', 'closing'].includes(role) ? '100vw' : '86vw'}`;
+// Only the archive derivatives this page actually renders carry ImageObject markup. The hero and
+// the two colour encounters beside it are `astro:assets` crops with build-hashed URLs of their
+// own, and the frames behind them are declared where their canonical derivative lives — in the
+// archive — rather than claimed twice under two different URLs.
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const peopleSchema = [
+  // BaseLayout's default WebPage node is replaced once a page supplies schema of its own, so it is
+  // restated here rather than lost.
+  { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'People and encounters — Elsewhere', description: 'Encounters, gestures, work, and human presence from the Elsewhere visual archive.', url: canonical },
+  breadcrumbs([{ name: 'Elsewhere', path: '/' }, { name: 'People', path: '/people/' }], Astro.site),
+  ...[{ photo: craftsperson, alt: peopleEncounterFrame.alt }, ...deeper.map((photo) => ({ photo, alt: photo.alt }))]
+    .map(({ photo, alt }, index) => imageObject({ ...photo, altText: alt }, Astro.site, canonical, index === 0)),
+];
 ---
 
-<BaseLayout title="People and encounters — Elsewhere" description="Encounters, gestures, work, and human presence from the Elsewhere visual archive." image="/social/people.jpg" imageAlt="A food vendor works behind a small counter">
+<BaseLayout title="People and encounters — Elsewhere" description="Encounters, gestures, work, and human presence from the Elsewhere visual archive." image="/social/people.jpg" imageAlt="A food vendor works behind a small counter" schema={peopleSchema}>
   <SiteHeader />
   <main id="main" class="people-page">
     <header class="people-hero">
@@ -48,7 +59,7 @@ const deeperSizes = (role) => `(min-width: 901px) ${deeperPlate[role] ?? '38vw'}
 
     <section class="encounter-sequence" aria-labelledby="encounter-title">
       <header><h2 id="encounter-title">Encounters,<br />not profiles.</h2><p>Names and places will appear only when known and appropriate. Until then, the photograph remains without invented biography.</p></header>
-      <figure class="encounter encounter-worker" data-photo-reveal><img src={withBase("/assets-derived/thumbnails/0045-IMG_8992.jpg")} srcset={`${withBase("/assets-derived/thumbnails/0045-IMG_8992.jpg")} 720w, ${withBase("/assets-derived/archive/0045-IMG_8992.jpg")} 1350w`} sizes="(min-width: 901px) 38vw, 88vw" width="2994" height="3992" alt="A seated craftsperson works beside a window" loading="lazy" decoding="async" /><figcaption>Work · Thailand</figcaption></figure>
+      <figure class="encounter encounter-worker" data-photo-reveal><img src={craftsperson.thumbnail} srcset={`${craftsperson.thumbnail} ${derivativeWidth(craftsperson, 720)}w, ${craftsperson.archiveImage} ${derivativeWidth(craftsperson, 1350)}w`} sizes="(min-width: 901px) 38vw, 88vw" width={craftsperson.width} height={craftsperson.height} alt={peopleEncounterFrame.alt} loading="lazy" decoding="async" /><figcaption>Work{craftsperson.destination ? ` · ${craftsperson.destination}` : ''}</figcaption></figure>
       <figure class="encounter encounter-vendor" data-photo-reveal><Image src={goldenPortrait} alt="A young woman turns towards low evening light" widths={[480, 768, 1200]} sizes="(min-width: 901px) 38vw, 68vw" loading="lazy" /><figcaption>Last light · La Réunion</figcaption></figure>
       <figure class="encounter encounter-motorcycle" data-photo-reveal><Image src={motorcycle} alt="Two people pause beside a motorcycle on a city street" widths={[768, 1200, 1600]} sizes="(min-width: 901px) 54vw, 100vw" loading="lazy" /><figcaption>Between one place and the next</figcaption></figure>
     </section>

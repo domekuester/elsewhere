@@ -4,6 +4,7 @@ import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import destinationData from '../../../data/destinations.json';
 import catalogData from '../../data/photo-catalog';
+import { imageObject, breadcrumbs } from '../../data/image-schema';
 import { withBase } from '../../config/paths';
 
 // Ordered by archive depth rather than alphabetically, which is how the index has always read.
@@ -17,6 +18,17 @@ const chapters = ranked.filter((destination) => destination.publicationStatus ==
 const inProgress = ranked.filter((destination) => destination.publicationStatus !== 'published');
 const derivativeWidth = (photo, longEdge) => Math.min(photo.width, photo.orientation === 'portrait' ? Math.round(longEdge * photo.width / photo.height) : longEdge);
 const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
+// Each open chapter leads on a real archive derivative — the thumbnail is the `src`, the archive
+// file sits in the same `srcset` — so those frames are indexable photographs on this page and
+// carry the same credit, copyright and licensing metadata they carry anywhere else. The
+// in-progress rows are text, and claim nothing.
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const chapterHeroes = chapters.map((destination) => photosById.get(destination.heroPhotoId)).filter(Boolean);
+const destinationsSchema = [
+  { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Travel photography destinations — Elsewhere', description: 'Photographic chapters from Japan, La Réunion and Essaouira, Morocco, with Malaysia, Thailand, Phu Quoc and Laos held in the archive.', url: canonical },
+  breadcrumbs([{ name: 'Elsewhere', path: '/' }, { name: 'Destinations', path: '/destinations/' }], Astro.site),
+  ...chapterHeroes.map((photo, index) => imageObject(photo, Astro.site, canonical, index === 0)),
+];
 ---
 
 <BaseLayout
@@ -24,6 +36,7 @@ const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
   description="Photographic chapters from Japan, La Réunion and Essaouira, Morocco, with Malaysia, Thailand, Phu Quoc and Laos held in the archive."
   image="/social/japan.jpg"
   imageAlt="A gull approaches a row of outstretched hands above the water"
+  schema={destinationsSchema}
 >
   <SiteHeader />
   <main id="main" class="index-page">
@@ -41,9 +54,11 @@ const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
       {chapters.map((destination, index) => {
         const hero = photosById.get(destination.heroPhotoId);
         // The chapters arrive sorted by archive depth, so the first is the deepest body of work and
-        // takes the full-width lead plate; the rest hang beneath it as a suite four columns wide.
-        // The lead is drawn at the width of the page and needs the derivative to match, or the one
-        // photograph the index leads on is the one it serves softest.
+        // takes the full-width lead plate; the rest hang beneath it as a descending suite. The lead
+        // is drawn at the width of the page and needs the derivative to match, or the one
+        // photograph the index leads on is the one it serves softest. `40vw` is the widest plate
+        // the suite now draws rather than the old uniform third, so the largest of them stops being
+        // served a derivative sized for the smallest.
         const isLead = index === 0;
         return (
           <a class="chapter-entry" href={withBase(`/destinations/${destination.slug}/`)} data-analytics-event="destination_open" data-analytics-context={`index:${destination.slug}`}>
@@ -54,7 +69,7 @@ const year = (destination) => destination.dateRange?.end.slice(0, 4) ?? null;
                   srcset={isLead
                     ? `${hero.thumbnail} ${derivativeWidth(hero, 960)}w, ${hero.archiveImage} ${derivativeWidth(hero, 1800)}w, ${hero.viewerImage} ${derivativeWidth(hero, 3200)}w`
                     : `${hero.thumbnail} ${derivativeWidth(hero, 960)}w, ${hero.archiveImage} ${derivativeWidth(hero, 1800)}w`}
-                  sizes={isLead ? '(min-width: 901px) 94vw, 100vw' : '(min-width: 901px) 30vw, 100vw'}
+                  sizes={isLead ? '(min-width: 901px) 94vw, 100vw' : '(min-width: 901px) 40vw, 100vw'}
                   width={hero.width}
                   height={hero.height}
                   alt={hero.altText}

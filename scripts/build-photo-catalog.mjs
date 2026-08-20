@@ -111,20 +111,35 @@ const catalog = inventory.photos.map((photo, index) => {
     // first that do. Everything else still resolves to null, by absence rather than by rule.
     place: assignment.place ?? null,
     journeyId: assignment.journeyId ?? null,
-    locationSource: assignment.locationSource ?? null,
-    locationConfidence: assignment.locationConfidence ?? null,
+    // `locationSource` and `locationConfidence` are deliberately absent. They are internal
+    // provenance — how a place was decided (GPS, APPLE_PHOTOS, OWNER_TRAVEL_TIMELINE,
+    // CURATION_STUDIO) and how sure the owner is of it (CONFIRMED_OWNER_RANGE,
+    // TRANSITION_DAY_REVIEW, UNKNOWN) — and they were being projected verbatim into a file served
+    // to every visitor. Published together they describe the owner's movements and the reliability
+    // of that description, which is a private editorial signal, not a caption. What the public
+    // record is allowed to say about place is already above: `destination`, `country`, `region`
+    // and `place`, each of which reaches this object only when it has been confirmed. The private
+    // layer keeps both fields; `data/photo-curation.json` is where the curation studio and the
+    // timeline classifier read and write them, and nothing here changes that.
     role: manual?.role ?? 'archive',
     featured: Boolean(manual),
     editorialOrder: manual?.editorialOrder ?? null,
     public: publicAllowed,
     altText,
-    altReviewStatus: reviewedAlt ? 'owner-reviewed' : (manual ? 'editorial-candidate' : 'needs-review'),
     accessibleLabel: `Open frame ${String(index + 1).padStart(3, '0')}${reviewedAlt ? `: ${reviewedAlt}` : (temporaryFacts.length ? ` · ${temporaryFacts.join(' · ')}` : '')}`,
     caption: assignment.publicCaption ?? null,
     // Public-safe rights projection only. Release status and internal rights notes never leave the private layer.
     licensing: publicLicensing[assignment.rightsStatus] ?? 'enquiry',
-    publicationStatus: assignment.publicationStatus ?? 'UNREVIEWED',
-    approvalStatus: manual ? 'editorially-selected' : (reviewedMonochrome ? 'phase7-monochrome-reviewed' : (assignedMonochrome ? 'curatorially-assigned' : (assignment.destinationId ? 'owner-timeline-assigned' : 'unassigned')))
+    // Phase 16B.1 — `publicationStatus`, `approvalStatus` and `altReviewStatus` are deliberately
+    // absent. They are the editorial workflow's own record: how far a frame has moved through
+    // review, and *why* it was selected — `editorially-selected`, `curatorially-assigned`,
+    // `owner-timeline-assigned`, `phase7-monochrome-reviewed`. That is selection rationale, and it
+    // was being served verbatim in a file every visitor and every crawler can read, announcing for
+    // 528 of 535 published photographs that nobody has reviewed them yet. Nothing public consumes
+    // any of the three: the decision they encode has already been applied by the time a record
+    // reaches this catalog, in `public`, `featured`, `role` and `altText`. The private layer keeps
+    // all of it — `data/photo-curation.json` is where the curation studio reads and writes review
+    // state, and nothing here changes that.
   };
 });
 

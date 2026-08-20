@@ -1,4 +1,5 @@
 import { withBase } from '../config/paths';
+import { licensingEnquiryPath } from '../data/licensing';
 
 interface CatalogPhoto {
   id: string; index: number; thumbnail: string; archiveImage: string; viewerImage: string; width: number; height: number;
@@ -39,6 +40,11 @@ if (root) {
   // A /archive/place/<slug>/ page is served already filtered to that place; the control has to agree
   // with what the page is showing, or the first interaction would silently widen the view.
   const initialDestination = root.dataset.initialDestination ?? null;
+  // Which archive surface a licensing enquiry started on. The three routes that mount this viewer
+  // — /archive/, /archive/black-and-white/ and /archive/place/<slug>/ — are answering different
+  // questions, and an enquiry is worth more when the owner knows which one produced it.
+  const funnelSection = initialDestination ? `place-${initialDestination}`
+    : root.dataset.initialWorld === 'black-and-white' ? 'black-and-white' : 'archive';
   let activeIndex = 0;
   let touchStartX = 0;
   let viewerFocusOrigin: HTMLElement | null = null;
@@ -134,11 +140,13 @@ if (root) {
       viewerDestination.firstChild!.textContent = `Open ${photo.destination} `;
     }
     if (viewerLicensing) {
-      // A licensing enquiry must name the exact photograph, so the public archive reference travels with it.
-      const reference = String(photo.index).padStart(3, '0');
+      // A licensing enquiry must name the exact photograph, so the frame's canonical public id
+      // travels with it and is resolved back through the published catalog on arrival. `from`
+      // records which archive surface the enquiry started on; it is a label, never a URL.
+      // `#enquiry` lands on the form rather than on the top of the licensing page.
       viewerLicensing.hidden = photo.licensing === 'unavailable';
-      viewerLicensing.href = withBase(`/contact/?type=licensing&photo=${reference}`);
-      viewerLicensing.dataset.analyticsContext = reference;
+      viewerLicensing.href = withBase(licensingEnquiryPath(photo.id, { from: funnelSection, anchor: true }));
+      viewerLicensing.dataset.analyticsContext = photo.id;
     }
     if (!viewer.open) {
       viewerFocusOrigin = focusOrigin ?? null;

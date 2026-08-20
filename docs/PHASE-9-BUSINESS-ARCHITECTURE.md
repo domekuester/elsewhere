@@ -83,9 +83,12 @@ A licensing enquiry always carries the exact photograph. The viewer writes the f
 three-digit archive reference into the link, the contact form displays it read-only, and it appears
 in the message subject and body.
 
-**Upgrade path when volume justifies it:** replace the `mailto:` composition in `enquiry.ts` with a
-POST to a hosted form provider (Formspree, Basin) or a Vercel serverless function. The markup,
-validation, labels, and analytics events stay as they are — only the submit handler changes.
+**Superseded for licensing by Phase 16A.** Licensing enquiries now have their own destination at
+`/licensing/`, posting to Formspree, with the photograph resolved through the published catalog.
+The viewer's licensing action leads there rather than to `/contact/`. See
+[PHASE-16A-LICENSING-REVENUE-ENGINE.md](PHASE-16A-LICENSING-REVENUE-ENGINE.md). The `mailto:`
+composition in `enquiry.ts` still serves `/contact/`'s other six intents, and still serves
+licensing when no Formspree form id is configured.
 
 ## Enquiry gating
 

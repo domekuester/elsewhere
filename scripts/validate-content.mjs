@@ -133,8 +133,36 @@ for (const [photoId, assignment] of Object.entries(curation.assignments)) {
   if (ownerRejectedIds.has(photoId) && assignment.rightsStatus !== 'NOT_FOR_LICENSE') errors.push(`Owner-rejected ${photoId} must be NOT_FOR_LICENSE, found ${assignment.rightsStatus}`);
 }
 const forbiddenRightsKeys = ['rightsStatus', 'rightsNotesInternal', 'modelReleaseStatus', 'propertyReleaseStatus'];
+// The rights denylist above caught the fields it was written for and nothing else, so
+// `locationSource` and `locationConfidence` — internal provenance describing how a place was
+// decided and how sure the owner is of it — shipped in the public catalog undetected. A denylist
+// only ever finds what someone already thought of. The allowlist below is the actual boundary:
+// every key in the public projection must be named here, so a new internal field cannot reach
+// `public/data/photo-catalog.json` by being added to the projection object and forgotten. Adding a
+// genuinely public field means adding it here too, which is the point — the failure is the review.
+const publicPhotoKeys = new Set([
+  'id', 'index', 'filename', 'thumbnail', 'archiveImage', 'viewerImage',
+  'width', 'height', 'aspectRatio', 'orientation',
+  'captureDate', 'year', 'camera', 'lens', 'colorMode', 'dominantColor',
+  'visualWorlds', 'peoplePresent',
+  'destination', 'destinationId', 'destinationSlug', 'destinationPublished',
+  'country', 'countryCode', 'region', 'place', 'journeyId',
+  'role', 'featured', 'editorialOrder', 'public',
+  'altText', 'altReviewStatus', 'accessibleLabel', 'caption',
+  'licensing', 'publicationStatus', 'approvalStatus'
+]);
+// Named explicitly so the failure says what leaked rather than only that something did.
+const forbiddenProvenanceKeys = [
+  'locationSource', 'locationConfidence', 'locationSourceAttribution',
+  'ownerNotes', 'researchNotes', 'privacyNotes', 'selectionNotes', 'internalNotes',
+  'provenance', 'sourcePath', 'sourceMaster', 'privateLocation',
+  'gps', 'GPS', 'latitude', 'longitude', 'coordinates',
+  'visibility', 'privacyStatus', 'peopleClassification'
+];
 for (const photo of publicCatalog) {
   for (const key of forbiddenRightsKeys) if (key in photo) errors.push(`Public photo ${photo.id} exposes private rights field ${key}`);
+  for (const key of forbiddenProvenanceKeys) if (key in photo) errors.push(`Public photo ${photo.id} exposes internal field ${key}`);
+  for (const key of Object.keys(photo)) if (!publicPhotoKeys.has(key)) errors.push(`Public photo ${photo.id} carries unrecognised field ${key} — add it to publicPhotoKeys if it is genuinely public, or stop projecting it`);
   const expected = publicLicensingByRights[curation.assignments[photo.id]?.rightsStatus];
   if (photo.licensing !== expected) errors.push(`Public photo ${photo.id} licensing "${photo.licensing}" contradicts rights state (expected "${expected}")`);
   if (photo.licensing === 'unavailable') errors.push(`Public photo ${photo.id} is NOT_FOR_LICENSE but publicly listed`);

@@ -214,12 +214,51 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
 
    The trailing track absorbs `min-height` on a window taller than the composition, so the plate is
    never stretched to fill space it did not ask for. */
-.hero { position: relative; min-height: 100svh; display: grid; grid-template-rows: clamp(6.6rem, 9vh, 8rem) auto auto minmax(0, 1fr); padding: 0 var(--gutter) clamp(2rem, 4vw, 3.5rem); background: var(--obsidian); }
-.hero-media { grid-row: 2; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #131617; }
+/* Phase 17.2D — the opening is a title wall, then the first work.
+   ------------------------------------------------------------------------------------------
+   Measured at 1728x1080 the entrance was failing in three places at once. The navigation's foot sat
+   8px above the photograph's top edge — not a threshold, a collision. The publication's own line sat
+   entirely below the fold, so the first screen carried no statement of what the work is: a wordmark
+   in a corner, six nav links, and a picture. And what remained visible under the plate was a 65px
+   strip of obsidian holding a 2px rule, which reads as a page cut off rather than as ground.
+
+   A show names itself on the wall you meet first, then hangs the first work. The title moved above
+   the plate and onto one line — Barlow for the statement, Literata for the turn, the dateline
+   closing on the right rail — with real air on both sides of it, so the sequence a visitor now
+   receives is identity, statement, work. The wall label stays beneath the plate everywhere else on
+   the site, because a plate caption and an exhibition title are not the same object.
+
+   The plate keeps 16:9 and the full width of the field, so nothing of the framing settled in 17.2B
+   is given back; it simply starts lower and runs past the fold, which is what invites the scroll. */
+/* Phase 17.2D (continued) — the wall, the work, and the label beside it.
+   ------------------------------------------------------------------------------------------
+   Moving the title above the plate was right and stays. Measured, it had not finished the job.
+
+   Three things were still unresolved. The navigation's foot cleared the title block by 8px — the
+   collision the move was meant to end had been inherited rather than broken, only now it was two
+   pieces of type crowding each other instead of type crowding a photograph. The dateline was left
+   floating in the open right half of the band, aligned to the title's baseline but attached to
+   nothing, the one element on the screen that had not been placed. And the plate, at the full
+   width of the field, overran the fold by 83px at 1728 and 100px at 1440 — nine and thirteen
+   percent, the exact margin that reads as "did not fit" rather than as "continues".
+
+   All three come from the same cause: the band, the title and the plate were three full-width
+   tenants stacked in one column, so the only variable left was how much each could take from the
+   others. The opening is now a wall with two rails instead. The title still spans the field, but
+   the plate stops short of the right edge, and the ground it leaves is not ground — it is the
+   label rail, where the dateline hangs at the plate's top shoulder. That single change pays for
+   everything: the plate's height drops enough to land whole above the fold at both 1728 and 1440,
+   the band gains real clearance under the navigation, and the negative space on the right is
+   occupied by the one element that used to be adrift in it.
+
+   The frame itself is untouched — 16:9, the same 84% of the original that 17.2B settled, the same
+   object-position. What changed is the wall the plate hangs on, which is where the prompt asked
+   the work to be done. */
+.hero { position: relative; min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: clamp(6.6rem, 9.2vh, 8rem) auto auto minmax(0, 1fr); padding: 0 var(--gutter) clamp(1.5rem, 2.6vw, 2.6rem); background: var(--obsidian); }
+.hero-media { grid-row: 3; grid-column: 1 / -1; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #131617; }
 .hero-media img { object-position: 50% 50%; }
-/* The wall label: the mark opens it, the title holds the left rail, the dates close on the right,
-   and both sit on the same baseline the plate ends on. */
-.hero-label { grid-row: 3; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 1.1rem clamp(2rem, 5vw, 5rem); padding-top: clamp(1.4rem, 2.4vw, 2.2rem); }
+/* The mark opens the wall, the title holds the left rail beneath it. */
+.hero-label { grid-row: 2; grid-column: 1; display: grid; gap: clamp(.8rem, 1.1vw, 1.3rem); padding-bottom: clamp(1.6rem, 2.6vw, 2.8rem); }
 /* Phase 10.2 — one veil, and it is not a header.
    ------------------------------------------------------------------------------------------
    What was here before held the top of every hero at a near-constant .72–.68 black for the first
@@ -260,11 +299,38 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
    the same relative order, at a little over half the density. Home has no per-page value and
    takes the root default. */
 .destination-hero, .journey-hero, .archive-opening { --header-veil: calc(var(--hero-scrim-top) * .62); }
-.hero-mark { grid-column: 1 / -1; margin-bottom: 0; }
-.hero-title { grid-column: 1; font-family: var(--display); font-size: clamp(3.5rem, 5.6vw, 5.4rem); font-weight: 400; line-height: .9; letter-spacing: -.035em; text-transform: uppercase; }
-.hero-title span { display: block; overflow: hidden; white-space: nowrap; }
+.hero-mark { margin-bottom: 0; }
+/* One line, two voices. The spans stay separately animatable for the opening reveal and stay
+   unbreakable in themselves, so a narrow screen folds the sentence at its one natural seam rather
+   than mid-phrase. */
+/* Measured, the old size filled 56% of the plate's width at 1728 and only 50% at 1920, because a
+   4.2rem cap stopped the title growing exactly where the wall kept growing — the opposite of what
+   a large screen is for. It is now set from the width it has to cross, and holds 83–87% of the
+   plate at every desktop width, which is a title wall rather than a line of type above a picture. */
+.hero-title { font-family: var(--display); font-size: clamp(2.05rem, 5.4vw, 7.5rem); font-weight: 400; line-height: 1.02; letter-spacing: -.03em; text-transform: uppercase; }
+.hero-title span { display: inline-block; white-space: nowrap; }
 .hero-title span:last-child { font-family: var(--editorial); font-size: 1.06em; font-style: italic; letter-spacing: -.025em; text-transform: none; }
-.hero-meta { grid-column: 2; align-self: end; padding-bottom: .45rem; color: #e0e2df; font-size: .68rem; line-height: 1.5; text-align: right; }
+.hero-meta { grid-row: 2; grid-column: 2; align-self: end; padding-bottom: clamp(2rem, 3.4vw, 3.35rem); color: #e0e2df; font-size: .7rem; letter-spacing: .04em; line-height: 1.5; text-align: right; white-space: nowrap; }
+.hero-meta span + span::before { content: "·"; padding: 0 .4em; color: #6f736f; }
+
+/* The label rail. Above 1200px the plate stops short of the right edge and the dateline hangs in
+   the ground it leaves, stacked, set on the plate's own bottom edge — the width the plate gives up
+   is what lets it land whole above the fold, and the dateline is what stops that width reading as
+   leftover. It sits at the foot rather than the shoulder so the opening closes on a diagonal: the
+   mark and the title open at the top left, the photograph carries the middle, and the dateline
+   shuts the bottom right on the same line the plate ends on. A label is read after the work. */
+@media (min-width: 1201px) {
+  /* The rail is very nearly a fixed measure rather than a share of the window: what it has to
+     hold is one two-line dateline, and what it buys is a constant amount of plate height. A vw
+     rail widens exactly where the extra height was not needed and pinches where it was. */
+  .hero { --wall-rail: min(17.5rem, 20%); grid-template-columns: minmax(0, 1fr) var(--wall-rail); }
+  .hero-label { grid-column: 1 / -1; }
+  .hero-media { grid-column: 1; }
+  .hero-meta { grid-row: 3; align-self: end; padding: 0 0 .35rem clamp(1.5rem, 2.4vw, 2.75rem); text-align: left; }
+  .hero-meta span { display: block; }
+  .hero-meta span + span { color: #8f938f; }
+  .hero-meta span + span::before { content: none; }
+}
 
 .premise { min-height: 80vh; display: grid; grid-template-columns: 1fr 1fr; align-content: center; gap: 5rem; padding: clamp(7rem, 14vw, 15rem) var(--gutter); color: var(--obsidian); background: var(--ivory); }
 .premise p:first-child { max-width: 14ch; font-family: var(--editorial); font-size: clamp(2.5rem, 5vw, 5.4rem); line-height: .98; letter-spacing: -.025em; }
@@ -695,8 +761,16 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
      The plate becomes square: the full height of the photograph, formally cropped at the sides, at a
      size that still commands the screen. The title is held at the foot with the ground opening
      between the two, so the opening is a title page rather than a header with space left over. */
-  .hero { grid-template-rows: clamp(5rem, 13vh, 7rem) auto auto minmax(0, 1fr); padding-bottom: clamp(2.5rem, 7vw, 4rem); }
-  .hero-media { justify-self: stretch; width: 100%; height: auto; aspect-ratio: 1 / 1; }
+  /* The title moved above the plate on every screen, and on a phone that left the old full-height
+     opening holding 255px of nothing under the photograph — a void, not distance, and the one
+     thing this rule's own note said the opening must never become. The opening stops claiming a
+     whole screen it no longer fills: it is exactly as tall as the wall it carries, the dateline
+     returns beneath the plate as that plate's label, and the ivory edge of the next room shows at
+     the foot of the screen, which is a threshold rather than a remainder. */
+  .hero { grid-template-columns: minmax(0, 1fr); grid-template-rows: clamp(5rem, 13vh, 7rem) auto auto auto; min-height: 0; padding-bottom: clamp(3.5rem, 11vw, 5.5rem); }
+  .hero-label { grid-column: 1; }
+  .hero-media { justify-self: stretch; grid-column: 1; width: 100%; height: auto; aspect-ratio: 1 / 1; }
+  .hero-meta { grid-row: 4; grid-column: 1; align-self: start; padding: clamp(1rem, 3.2vw, 1.4rem) 0 0; text-align: left; }
   .premise { grid-template-columns: 1fr; min-height: 75vh; gap: 3rem; }
   /* Explicit rows are a wide-screen device; the single column reverts to auto placement so the
      kicker's `order` still moves it below the deck. */
@@ -778,8 +852,10 @@ body:has(.hero, .destination-hero, .journey-hero, .archive-opening) .site-header
      The measure cap came off with it — a two-line wall label wants the full width of its plate. */
   .hero-title { max-width: 100%; font-size: clamp(2.1rem, 9.4vw, 3.4rem); line-height: .96; }
   .hero-title span { overflow: visible; white-space: normal; }
-  /* The dates were already invisible at this width; now they also stop reserving a column. */
-  .hero-meta { display: none; }
+  /* The dateline is no longer competing with the title for the top rail, so it can be read here:
+     under the plate, at the size a caption is set, which is the only place on a phone where a
+     label belongs. */
+  .hero-meta { white-space: normal; }
   .premise { padding-block: 7rem; }
   .premise p:first-child { font-size: clamp(2.35rem, 11vw, 3.8rem); }
   .worlds { padding-block: 7rem; }
@@ -1687,6 +1763,41 @@ html[data-viewer-open] body { overflow: hidden; }
   /* Five or six chapters: two rows of two rather than a row of three and an orphan. */
   .chapter-entries:has(> .chapter-entry:nth-child(5):last-child) > .chapter-entry:not(:first-child),
   .chapter-entries:has(> .chapter-entry:nth-child(6):last-child) > .chapter-entry:not(:first-child) { grid-column: span 6; }
+  /* Phase 17.2D — four chapters: the suite is hung, not tiled.
+     ------------------------------------------------------------------------------------------
+     The note above this grid states the principle plainly: a body of 203 photographs must not sit
+     at the size of one of 22, and hierarchy should come from the archive rather than from a layout
+     choice. That principle was applied to the lead plate and then dropped. Every other trailing
+     count has its own hanging; four alone fell through to `span 4` and drew the remaining three at
+     identical size — 101 photographs, 47 and 22 all claiming the same wall. Three equal plates in
+     a row is also the one arrangement on this site that a category template would have produced by
+     itself.
+
+     The suite now descends: 5, 4 and 3 columns, in the order the archive already sorted them. And
+     it hangs from a common bottom rail rather than a common top, so the three plates rise to
+     different heights above one line and every folio, name and count lands on the same baseline.
+     Descending scale off a shared rail is how an index says "these belong together, and they are
+     not the same size" without a word of explanation. */
+  .chapter-entries:has(> .chapter-entry:nth-child(4):last-child) { align-items: end; }
+  .chapter-entries:has(> .chapter-entry:nth-child(4):last-child) > .chapter-entry:nth-child(2) { grid-column: 1 / 6; }
+  .chapter-entries:has(> .chapter-entry:nth-child(4):last-child) > .chapter-entry:nth-child(3) { grid-column: 6 / 10; }
+  .chapter-entries:has(> .chapter-entry:nth-child(4):last-child) > .chapter-entry:nth-child(4) { grid-column: 10 / 13; }
+  /* The wall label is drawn at the size of the work it belongs to. This is not decoration: at a
+     viewport-derived `--plate` the narrowest plate's name, folio and count together measure wider
+     than the three columns the plate sits in, and a grid item cannot be narrower than its own
+     min-content — the plate was being pushed 74px past its track at 1440 and out through the right
+     gutter, where `overflow-x: clip` hid it rather than reporting it. Scaling the label down with
+     the plate fixes the overflow and states the hierarchy twice, in the photograph and in the type.
+     `min-width: 0` holds the floor if a place name ever grows longer than the ones on the wall. */
+  .chapter-entries:has(> .chapter-entry:nth-child(4):last-child) > .chapter-entry { min-width: 0; }
+  .chapter-entries:has(> .chapter-entry:nth-child(4):last-child) > .chapter-entry:nth-child(3) .chapter-entry-copy { --plate: clamp(1.9rem, 3.1vw, 2.7rem); }
+  .chapter-entries:has(> .chapter-entry:nth-child(4):last-child) > .chapter-entry:nth-child(4) .chapter-entry-copy { --plate: clamp(1.6rem, 2.4vw, 2.1rem); }
+  /* Descending type would otherwise descend the label blocks too, and bottom-aligned entries would
+     hand back three plates whose feet — and whose three visible rules — sat 21px apart, which reads
+     as a slip rather than as a hang. The name row is held at the height of the largest label in the
+     suite for all three, so the blocks measure the same, the plates land on one rail, and the names
+     keep a common baseline at three different sizes. */
+  .chapter-entries:has(> .chapter-entry:nth-child(4):last-child) > .chapter-entry:not(:first-child) .chapter-entry-copy { grid-template-rows: calc(clamp(2.4rem, 4.4vw, 3.6rem) * .86) auto; }
 }
 /* An odd final chapter takes the full width instead of sitting alone beside empty space. */
 .chapter-entry { display: grid; gap: 1.1rem; }

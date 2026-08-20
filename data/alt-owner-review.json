@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-20",
+  "purpose": "Phase 16B.1.1 — frames whose reviewed alt text describes a recognisable individual. The descriptions below are visually accurate and contain no identity, name, relationship, occupation, nationality or emotion claims. They are queued only so the owner can confirm that describing the person in public alt text is wanted for each frame. No internal metadata appears here.",
+  "action": "For each: keep the sentence, reword it, or replace it with a non-person description.",
+  "entries": [
+    {
+      "publicPhotoId": "photo-0032",
+      "publicContext": "Children sit in a doorway beside a papaya tree.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0039",
+      "publicContext": "A bartender works behind a lit bar of bottles and glasses.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0050",
+      "publicContext": "A man in a headscarf turns his face toward the light.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0068",
+      "publicContext": "A boatman works the engine of a long-tail boat on a river.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0069",
+      "publicContext": "A cook in a hairnet works in a small kitchen.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0073",
+      "publicContext": "Two people pose in a convex traffic mirror on a leafy street.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0086",
+      "publicContext": "A woman carries a metal frame through a busy market street.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0145",
+      "publicContext": "A person in red boxing gloves holds a guard in low light.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0193",
+      "publicContext": "A man in a cap holds a wooden pole, seen in profile against the shore.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0196",
+      "publicContext": "A man dressed in white stands on a concrete edge before dark volcanic rock.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0208",
+      "publicContext": "A person in a black hat and sunglasses sits among hanging ropes and rigging.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0269",
+      "publicContext": "A person photographs from a rock below an ivy-covered cliff.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0381",
+      "publicContext": "Two cooks in whites work behind a counter.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0383",
+      "publicContext": "A man and a woman stand together in front of a lit food stall.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0396",
+      "publicContext": "A woman's face appears through a window among reflected hanging roots.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0397",
+      "publicContext": "A woman stands behind glass, fine roots hanging across the reflection.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0432",
+      "publicContext": "A woman with dark curls looks away, lit warm against deep green.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0465",
+      "publicContext": "A person sits smoking on a veranda beside a glass door full of reflected cloud.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0533",
+      "publicContext": "Two women stand close together, laughing, near a window.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0536",
+      "publicContext": "A child drinks from a bottle in a crowded night market.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0537",
+      "publicContext": "A woman in an apron stands at her market stall.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0547",
+      "publicContext": "A woman stands beside a beach fire under dark palms.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0558",
+      "publicContext": "A man in a bucket hat looks out from a wooden doorway hung with umbrellas.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0565",
+      "publicContext": "A man in a white coat stands in a dark shopfront hung with wind chimes.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0578",
+      "publicContext": "A person stands in profile with hands pressed together, lit from the side.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0665",
+      "publicContext": "A man stands in the shallows beside a moored boat and its outboard motor.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0669",
+      "publicContext": "A man's face is lit green beneath a leaf held over his head.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0682",
+      "publicContext": "A person crouches over smoke, fanning a small fire among green plants.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0696",
+      "publicContext": "A man stands in the doorway of a shop beneath a painted sign.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    },
+    {
+      "publicPhotoId": "photo-0712",
+      "publicContext": "Three people raise their arms and pose on a grassy clifftop.",
+      "reason": "A recognisable person is the subject, so publishing a describing sentence is an owner decision."
+    }
+  ]
+}

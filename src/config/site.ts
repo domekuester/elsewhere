@@ -4,6 +4,18 @@
 // showing a placeholder: see `business.enquiriesEnabled`.
 const contactEmail = (import.meta.env.PUBLIC_CONTACT_EMAIL ?? '').trim();
 const creatorName = (import.meta.env.PUBLIC_CREATOR_NAME ?? '').trim();
+/**
+ * Google Search Console site verification token, when the owner has chosen the meta-tag method.
+ *
+ * ELSEWHERE is published on a GitHub Pages *project path*, so a Search Console Domain property is
+ * not available — the owner does not control github.io DNS — and the property must be a URL-prefix
+ * one rooted at the deployment path. Of the verification methods that leaves, the meta tag is the
+ * one this repository can carry honestly: it is a public token, not a credential, and it verifies
+ * exactly the prefix whose homepage serves it. Unset, no tag is emitted; nothing is ever invented.
+ *
+ * Set it to the `content` value from Search Console's HTML-tag method, not the whole tag.
+ */
+const searchConsoleVerification = (import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?? '').trim();
 
 export const site = {
   name: 'ELSEWHERE',
@@ -11,6 +23,7 @@ export const site = {
   description: 'An independent visual publication about places, people and the moments that remain.',
   statement: 'The world, as I remember it.',
   locale: 'en',
+  searchConsoleVerification,
   defaultShareImage: '/social/home.jpg',
   defaultShareImageAlt: 'Volcanic ridges rising beneath immense sunlit clouds',
   navigation: [
@@ -41,9 +54,23 @@ export const business = {
    * noindexed, rather than shipping a dead form or an invented address.
    */
   enquiriesEnabled: Boolean(contactEmail),
+  /**
+   * Whether the address may be *printed* on a page, which is a stricter question than whether an
+   * enquiry path may exist. RFC 2606 and RFC 6761 reserve these names so a not-yet-configured
+   * value can be detected rather than published; `scripts/validate-launch.mjs` reports the same
+   * condition as an owner action. Surfaces that offer the address as a fallback check this, so a
+   * placeholder is never shown to a visitor as somewhere they could write.
+   */
+  contactEmailPublishable: Boolean(contactEmail) && !/@([^@]*\.)?(example|test|invalid|localhost)$/i.test(contactEmail),
   copyrightNotice: `© ${creatorName || site.name}. All rights reserved.`,
-  /** Rights holder line shown in the footer and used as ImageObject creditText. */
-  creditText: `${creatorName || site.name} / ELSEWHERE`,
+  /**
+   * Rights holder line shown in the footer and used as ImageObject creditText.
+   *
+   * A named creator is credited alongside the publication. Without one there is only the
+   * publication, and repeating its name on both sides of the slash — "ELSEWHERE / ELSEWHERE" —
+   * is a configuration artefact rather than a credit, so the fallback is the name by itself.
+   */
+  creditText: creatorName ? `${creatorName} / ELSEWHERE` : site.name,
   licensingPage: '/licensing/',
   contactPage: '/contact/',
   /** Enquiry types offered on the contact route. One form, several intents. */

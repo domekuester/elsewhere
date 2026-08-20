@@ -4,6 +4,11 @@
 
 - [Collection and exhibition polish](PHASE-16X-COLLECTION-EXHIBITION-POLISH.md)
 
+## Phase 16A — licensing revenue engine
+
+- [Licensing revenue engine](PHASE-16A-LICENSING-REVENUE-ENGINE.md)
+- [Business architecture](PHASE-9-BUSINESS-ARCHITECTURE.md)
+
 ## Current platform
 
 - [Platform architecture](ELSEWHERE-PLATFORM-ARCHITECTURE.md)

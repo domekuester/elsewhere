@@ -168,7 +168,10 @@ const canonicalPath = `/destinations/${destination.slug}/`;
 const destinationSchema = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'CollectionPage', name: `${destination.name} photographs`, description: `A confirmed photographic chapter from ${destination.name}, edited from the Elsewhere archive.`, url: absoluteUrl(canonicalPath, Astro.site), primaryImageOfPage: { '@type': 'ImageObject', contentUrl: new URL(hero.viewerImage, Astro.site).href } },
+    { '@type': 'CollectionPage', name: `${destination.name} photographs`, description: `A confirmed photographic chapter from ${destination.name}, edited from the Elsewhere archive.`, url: absoluteUrl(canonicalPath, Astro.site), // The full-resolution hero derivative is a different URL from the archive derivative the sequence
+    // below describes, so a bare contentUrl here would name the page's primary image and say nothing
+    // about it. It carries the same reviewed sentence the hero `img` does.
+    primaryImageOfPage: { '@type': 'ImageObject', contentUrl: new URL(hero.viewerImage, Astro.site).href, caption: altByFilename[hero.filename] ?? hero.altText } },
     { '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Elsewhere', item: absoluteUrl('/', Astro.site) },
       { '@type': 'ListItem', position: 2, name: 'Destinations', item: absoluteUrl('/destinations/', Astro.site) },
@@ -176,7 +179,14 @@ const destinationSchema = {
     ] },
     // Every photograph rendered on this page, with truthful credit, copyright and
     // (where the frame's rights state allows an enquiry) a place to ask about using it.
-    ...sequence.map((photo, index) => imageObject(photo, Astro.site, absoluteUrl(canonicalPath, Astro.site), index === 0)),
+    // The authored chapter alt text is the same sentence the ImageObject caption should carry, so
+    // it is passed in rather than falling back to the catalog's unreviewed value.
+    ...sequence.map((photo, index) => imageObject(
+      { ...photo, altText: altByFilename[photo.filename] ?? photo.altText },
+      Astro.site,
+      absoluteUrl(canonicalPath, Astro.site),
+      index === 0,
+    )),
   ],
 };
 ---

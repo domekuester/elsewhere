@@ -1,9 +1,10 @@
 ---
-import { business } from '../config/site';
+import { licensingEnquiryOffered } from '../config/licensing';
 import { homePath } from '../config/paths';
 // The licensing action lives in the secondary caption row, never over the photograph.
-// It is only present at all when a verified enquiry address exists; the archive script
-// then reveals it per photograph according to that frame's rights state.
+// It is only present at all when an enquiry can actually be made — a configured licensing
+// form, or a verified enquiry address behind it; the archive script then reveals it per
+// photograph according to that frame's rights state, and carries the frame's public id.
 ---
 
 <dialog class="photo-viewer" data-photo-viewer aria-label="Immersive photograph viewer" tabindex="-1">
@@ -22,7 +23,7 @@ import { homePath } from '../config/paths';
       <i aria-hidden="true"></i>
       <p data-viewer-meta>Archive frame</p>
       <a data-viewer-destination hidden>Open destination <span aria-hidden="true">↗</span></a>
-      {business.enquiriesEnabled && <a class="viewer-licensing" data-viewer-licensing hidden data-analytics-event="licensing_inquiry_click">Licensing enquiry <span aria-hidden="true">↗</span></a>}
+      {licensingEnquiryOffered && <a class="viewer-licensing" data-viewer-licensing hidden data-licensing-action="open" data-analytics-event="licensing_open">Enquire about licensing <span aria-hidden="true">↗</span></a>}
     </div>
   </div>
 </dialog>

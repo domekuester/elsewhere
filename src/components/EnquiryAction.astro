@@ -9,9 +9,16 @@ interface Props {
   photo?: string | null;
   context: string;
   class?: string;
+  /**
+   * Semantic event name, when the funnel this action opens has one of its own. Licensing does:
+   * every entry into that funnel reports `licensing_open` whatever surface it was clicked on,
+   * so the measurement layer counts one funnel rather than one name per component. Left unset,
+   * the action keeps the generic per-type name.
+   */
+  event?: string;
 }
 
-const { type, label, photo = null, context, class: className } = Astro.props;
+const { type, label, photo = null, context, class: className, event } = Astro.props;
 const query = new URLSearchParams({ type, ...(photo ? { photo } : {}) });
 const href = withBase(`${business.contactPage}?${query.toString()}`);
 ---
@@ -20,7 +27,7 @@ const href = withBase(`${business.contactPage}?${query.toString()}`);
   <a
     class:list={['enquiry-action', className]}
     href={href}
-    data-analytics-event={`${type}_inquiry_click`}
+    data-analytics-event={event ?? `${type}_inquiry_click`}
     data-analytics-context={photo ? `${context}:${photo}` : context}
   >
     <span>{label}</span><b aria-hidden="true">→</b>
