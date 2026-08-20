@@ -36,27 +36,27 @@ const span = `${years[0]}—${years.at(-1) === new Date().getFullYear() ? 'ongoi
     <header class="prose-hero">
       <span class="memory-mark" aria-hidden="true"></span>
       <p class="prose-kicker">About</p>
-      <h1>A record of<br />attention.</h1>
-      <p class="prose-lede">ELSEWHERE is an independent visual publication. One person, one camera, one continuous journey — edited slowly, and published only when a photograph earns it.</p>
+      <h1>Long enough<br />to be ordinary.</h1>
+      <p class="prose-lede">For years I travelled and took photographs on the side. In 2024 I started carrying a real camera, and stopped where I used to keep walking. That is more or less how this started.</p>
     </header>
 
     <section class="prose-body" aria-label="About the publication">
       <div class="prose-column">
         <h2>Why it exists</h2>
-        <p>Most travel photography disappears into feeds. It is compressed, captioned, ranked, and forgotten within a day. This archive was built to do the opposite: to hold photographs still long enough to be looked at.</p>
-        <p>It is not a guide and not a portfolio. It is a record of what a place actually felt like to move through — weather, distance, gesture, the light at the end of an ordinary afternoon.</p>
+        <p>Most of these photographs were taken while doing something else. Working a reception desk, carrying boats into the water, waiting for better weather, riding to the supermarket. I usually stay somewhere long enough that it stops being an event, and most of what is here comes from that part of it.</p>
+        <p>It is not a guide. Some of it is the obvious places, because I went to them like everybody else. Most of it is not.</p>
 
         <h2>How it is edited</h2>
-        <p>The archive and the edit are two different things. The Archive is depth: every photograph considered worth keeping. Home, Destinations and the collections are the edit: a much smaller sequence, ordered by hand.</p>
-        <p>Places are only named when they are actually known. Where the record is uncertain, it stays unassigned rather than guessed. Photographs the photographer has withdrawn stay withdrawn permanently.</p>
+        <p>The Archive is everything I thought was worth keeping. Home, the destination chapters and the collections are a much smaller edit, put in order by hand.</p>
+        <p>Places are named only where I actually know them. Where the record is thin, a photograph stays unassigned rather than guessed at. Anything I have taken down stays down.</p>
 
         <h2>What is here</h2>
-        <p><strong>{publicPhotographs}</strong> published photographs, {span}, across {countries.length} countries. The archive behind it is larger and continues to be reviewed.</p>
+        <p><strong>{publicPhotographs}</strong> published photographs, {span}, from {countries.length} countries. There are more behind them, still being gone through.</p>
       </div>
 
       <figure class="prose-figure" data-photo-reveal>
         <img src={aboutFrame.thumbnail} srcset={`${aboutFrame.thumbnail} ${aboutDerivativeWidth(aboutFrame, 960)}w, ${aboutFrame.archiveImage} ${aboutDerivativeWidth(aboutFrame, 1800)}w`} sizes="(min-width: 901px) 34vw, 84vw" width={aboutFrame.width} height={aboutFrame.height} alt="A stack of balanced stones on a shore of pale boulders." loading="lazy" decoding="async" />
-        <figcaption>Some places resist categories</figcaption>
+        <figcaption>Somebody stacked these</figcaption>
       </figure>
     </section>
 
@@ -66,9 +66,9 @@ const span = `${years[0]}—${years.at(-1) === new Date().getFullYear() ? 'ongoi
       </figure>
       <div>
         <span class="memory-mark" aria-hidden="true"></span>
-        <h2 id="about-work-title">Working<br />together.</h2>
-        <p>The same eye that made this archive is available for commissioned work — photography, visual storytelling, and image-led digital experiences. That side of the practice lives in the Studio.</p>
-        <p>Individual photographs from the archive may also be licensed. Availability depends on the rights held for each frame and is confirmed on request.</p>
+        <h2 id="about-work-title">If you need<br />photographs.</h2>
+        <p>I also take commissions, and build the sites the photographs end up on. That side of it lives in the Studio.</p>
+        <p>Individual frames from the archive can be licensed. What is possible depends on the photograph, so it is answered one at a time.</p>
         <p class="prose-links">
           <a class="editorial-link" href={withBase("/studio/")} data-analytics-event="studio_open" data-analytics-context="about">Elsewhere Studio <span aria-hidden="true">→</span></a>
           <a class="editorial-link" href={withBase("/licensing/")} data-analytics-event="licensing_open" data-analytics-context="about">Licensing <span aria-hidden="true">→</span></a>
@@ -78,8 +78,8 @@ const span = `${years[0]}—${years.at(-1) === new Date().getFullYear() ? 'ongoi
 
     {business.enquiriesEnabled && (
       <section class="prose-contact" aria-labelledby="about-contact-title">
-        <h2 id="about-contact-title">Get in touch</h2>
-        <p>Project enquiries, licensing questions, editorial requests, and print interest all arrive in the same place.</p>
+        <h2 id="about-contact-title">Write to me</h2>
+        <p>Commissions, licensing, editorial requests, print interest. It all reaches the same inbox, and a short message is fine.</p>
         <EnquiryAction type="studio" label="Start a conversation" context="about" class="is-large" />
       </section>
     )}

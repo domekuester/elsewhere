@@ -35,15 +35,15 @@ import { withBase } from '../config/paths';
 // actually reachable there, so the two can never drift apart again.
 const archiveWorldMinimum = 8;
 const worlds = [
-  { name: 'People', feeling: 'Gesture. Presence. Chance encounters.', world: 'people', image: peopleWorker, alt: 'A worker looks across a counter during a conversation', position: '45% 40%' },
-  { name: 'Beaches', feeling: 'Space. Weather. The line of the horizon.', world: 'beaches', image: beachStorm, alt: 'An empty beach and small yellow boat beneath an approaching storm', position: '48% 55%' },
-  { name: 'Urban', feeling: 'Density. Movement. Life between buildings.', world: 'urban', image: tokyoStreet, alt: 'Pedestrians moving through a lantern-lined street', position: '50% 43%' },
-  { name: 'Jungle', feeling: 'Depth. Shadow. The living interior.', world: 'jungle', image: jungleRoots, alt: 'A weathered human figure held inside the roots of an old tree', position: '50% 48%' },
+  { name: 'People', feeling: 'Strangers, mostly. A second each.', world: 'people', image: peopleWorker, alt: 'A worker looks across a counter during a conversation', position: '45% 40%' },
+  { name: 'Beaches', feeling: 'Weather, mostly. And the horizon.', world: 'beaches', image: beachStorm, alt: 'An empty beach and small yellow boat beneath an approaching storm', position: '48% 55%' },
+  { name: 'Urban', feeling: 'Dense. Something happening somewhere.', world: 'urban', image: tokyoStreet, alt: 'Pedestrians moving through a lantern-lined street', position: '50% 43%' },
+  { name: 'Jungle', feeling: 'Green, dark, closer than it looks.', world: 'jungle', image: jungleRoots, alt: 'A weathered human figure held inside the roots of an old tree', position: '50% 48%' },
   // Phase 16X — Ocean was represented twice on this page by the same crossing: `ocean-current`
   // here, and `ocean-silhouettes` full-bleed near the end under the same word. The full-bleed
   // section cropped its figures away, so what shipped was two screens of the same cobalt water.
   // The wall keeps the frame that has something in it; the section below is gone.
-  { name: 'Ocean', feeling: 'Scale. Distance. Perpetual motion.', world: 'ocean', image: oceanSilhouettes, alt: 'Silhouetted passengers look down at turbulent cobalt water', position: '50% 100%' },
+  { name: 'Ocean', feeling: 'Large, and never sitting still.', world: 'ocean', image: oceanSilhouettes, alt: 'Silhouetted passengers look down at turbulent cobalt water', position: '50% 100%' },
 ].map((world) => {
   const count = catalogData.photos.filter((photo) => photo.visualWorlds.includes(world.world)).length;
   if (count < archiveWorldMinimum) throw new Error(`Home offers the world "${world.world}" but the archive holds only ${count} frames in it, below the ${archiveWorldMinimum}-frame threshold that publishes a filter.`);
@@ -52,8 +52,8 @@ const worlds = [
 
 const closingPhotos = [
   { image: yellowBird, alt: 'A small yellow bird poised above moving water', note: 'A bright interruption', position: '50% 50%' },
-  { image: fernSpiral, alt: 'The tight spiral of a fern against saturated colour', note: 'A small form in the living world' },
-  { image: boxingGloves, alt: 'A boxer looks past raised red gloves during practice', note: 'Gesture before movement', position: '50% 44%' },
+  { image: fernSpiral, alt: 'The tight spiral of a fern against saturated colour', note: 'Not open yet' },
+  { image: boxingGloves, alt: 'A boxer looks past raised red gloves during practice', note: 'Gloves up, looking elsewhere', position: '50% 44%' },
 ];
 ---
 
@@ -100,7 +100,7 @@ const closingPhotos = [
 
     <section class="environment" id="environment" aria-labelledby="environment-title">
       <Image src={cirquePortrait} alt="Deep green ridges beneath a gathering field of clouds" widths={[768, 1280, 1920, 2400]} sizes="100vw" loading="lazy" />
-      <div><span class="memory-mark" aria-hidden="true"></span><h2 id="environment-title">Some places<br />resist categories.</h2><p>They alter scale, weather, and the way a photograph is read.</p></div>
+      <div><span class="memory-mark" aria-hidden="true"></span><h2 id="environment-title">Some places<br />resist categories.</h2><p>Nothing in them turns out to be the size you expected.</p></div>
     </section>
 
     <BlackWhitePreview portrait={bwJoyReflection} distance={bwSmallBoat} horizon={bwHorizon} />

@@ -32,22 +32,22 @@ const services = [
     number: '01',
     title: 'Photography',
     lede: 'Places, people, rooms, food, weather, work.',
-    body: 'Travel and hospitality photography made the way this archive was made: slowly, on location, looking for the moment a place stops performing and becomes itself.',
+    body: 'Photographed on location: rooms, food, interiors, and the people working in them where they are happy to be photographed. Delivered edited.',
     detail: ['Hotels, restaurants and interiors', 'Travel and destination', 'People at work', 'Food and product in context', 'Editorial documentation'],
   },
   {
     number: '02',
-    title: 'Visual storytelling',
-    lede: 'The edit is the work.',
-    body: 'A thousand photographs are not a story. Selection, sequence and pacing decide what a place means to someone who was never there — the same judgement that shapes every page of this publication.',
+    title: 'Editing',
+    lede: 'Working out which ones.',
+    body: 'A shoot produces far more photographs than anyone needs. Deciding which ones to use, and in what order, is most of the work. It is what I did to every page here.',
     detail: ['Image selection and edit', 'Editorial sequencing', 'Campaign and location narrative', 'Visual identity through photography', 'Art direction for a shoot'],
   },
   {
     number: '03',
-    title: 'Digital experiences',
-    lede: 'Sites built around photographs, not templates.',
-    body: 'Image-led websites for hospitality, creative brands and photographers — fast, accessible, and designed so the photography is the interface rather than decoration inside one.',
-    detail: ['Hospitality and restaurant sites', 'Portfolio and publication experiences', 'Photographic archives and galleries', 'Performance and accessibility work', 'Design and build end to end'],
+    title: 'Websites',
+    lede: 'Built around the photographs.',
+    body: 'Sites where the photographs are the main thing rather than something dropped in at the end. Fast, accessible, and built rather than assembled from a template. I made this one.',
+    detail: ['Hospitality and restaurant sites', 'Portfolio and publication sites', 'Photographic archives and galleries', 'Performance and accessibility work', 'Design and build end to end'],
   },
 ];
 
@@ -55,17 +55,17 @@ const studioSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'Elsewhere Studio',
-  description: 'Photography, visual storytelling and image-led digital experiences for hospitality, travel and creative brands.',
+  description: 'Commissioned photography, editing, and the websites the photographs go on.',
   url: absoluteUrl('/studio/', Astro.site),
   parentOrganization: { '@type': 'Organization', name: site.name, url: absoluteUrl('/', Astro.site) },
-  serviceType: ['Photography', 'Visual storytelling', 'Web design and development'],
+  serviceType: ['Photography', 'Photo editing and sequencing', 'Web design and development'],
   ...(business.enquiriesEnabled ? { email: business.contactEmail } : {}),
 };
 ---
 
 <BaseLayout
-  title="Elsewhere Studio — photography, visual storytelling, digital experiences"
-  description="Commissioned photography, editorial visual storytelling, and image-led digital experiences for hospitality, travel and creative brands."
+  title="Elsewhere Studio — photography, editing and websites"
+  description="Commissioned photography, editing, and the websites the photographs go on."
   image="/social/studio.jpg"
   imageAlt="Deep green ridges beneath a gathering field of clouds"
   schema={studioSchema}
@@ -78,13 +78,13 @@ const studioSchema = {
       </div>
       <span class="memory-mark" aria-hidden="true"></span>
       <p class="studio-kicker">Elsewhere Studio</p>
-      <h1>Photography.<br />Visual storytelling.<br />Digital experiences.</h1>
-      <p class="studio-lede">For places worth photographing properly.</p>
+      <h1>Photography.<br />Editing.<br />Websites.</h1>
+      <p class="studio-lede">Three things I do for other people.</p>
     </header>
 
     <section class="studio-premise" aria-label="Studio premise">
-      <p>Most places are photographed to be listed.<br />Some deserve to be understood.</p>
-      <p>The work is the same either way: arrive, pay attention, and come back with photographs that hold up on a wall, in a magazine, and on a screen — then build the thing that carries them.</p>
+      <p>The work does not change much<br />when somebody else pays for it.</p>
+      <p>Turn up, photograph the place, come back with something that holds up in print and on a screen. If the site the photographs go on needs building too, I can do that part as well.</p>
     </section>
 
     <section class="studio-services" aria-labelledby="studio-services-title">
@@ -112,8 +112,8 @@ const studioSchema = {
         <span class="memory-mark" aria-hidden="true"></span>
         <p class="studio-kicker">The full commission</p>
         <h2 id="studio-offer-title">Story<br />&amp; Site.</h2>
-        <p>New photography, an edit that gives it a shape, and a site built around it — commissioned as one piece of work rather than three disconnected suppliers.</p>
-        <p>Most hospitality businesses end up with a stock-lit gallery inside a template. This is the alternative: a small number of genuinely good photographs, sequenced deliberately, in an experience designed for them.</p>
+        <p>New photographs, the edit, and the site they go on, as one job instead of three.</p>
+        <p>It is mainly a practical thing. When the same person takes the pictures, chooses them and builds the page, the pictures decide the layout rather than the other way round.</p>
         <p class="studio-note">Scope and cost are quoted per project. There is no package price, because there is no standard project.</p>
       </div>
     </section>
@@ -122,7 +122,7 @@ const studioSchema = {
       <div class="studio-proof-copy">
         <span class="memory-mark" aria-hidden="true"></span>
         <h2 id="studio-proof-title">This site is<br />the portfolio.</h2>
-        <p>Every photograph here was made on location. Every page was designed and built alongside it. The archive, the immersive viewer, the destination chapters and the monochrome collection are the working sample.</p>
+        <p>Everything here was photographed on location, and I built the pages as well. The archive, the viewer, the destination chapters and Black &amp; White are the sample.</p>
         <p class="prose-links">
           <a class="editorial-link" href={withBase("/archive/")} data-analytics-event="archive_open" data-analytics-context="studio">The archive <span aria-hidden="true">→</span></a>
           <a class="editorial-link" href={withBase("/destinations/japan/")} data-analytics-event="destination_open" data-analytics-context="studio:japan">A destination chapter <span aria-hidden="true">→</span></a>
