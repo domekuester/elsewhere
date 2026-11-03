@@ -1,6 +1,8 @@
 // Guest copy: supplied photo evidence; dimensions and unseen details remain estimates.
 export const copy = {
   "de": {
+    "originalPhotos": "Originalfotos der Unterkunft",
+    "galleryGesture": "Wischen oder Pfeile nutzen",
     "photos": "Originalfotos",
     "book": "Auf Booking ansehen",
     "loading": "Der Rundgang wird geladen …",
@@ -140,6 +142,8 @@ export const copy = {
     "coachTouch": "Links am Regler ziehen, um zu gehen. Über das Bild wischen, um euch umzuschauen. Unten könnt ihr direkt einen Raum wählen."
   },
   "fr": {
+    "originalPhotos": "Photos originales du logement",
+    "galleryGesture": "Balayez ou utilisez les flèches",
     "photos": "Photos originales",
     "book": "Voir sur Booking",
     "loading": "Chargement de la visite…",
@@ -279,6 +283,8 @@ export const copy = {
     "coachTouch": "Glissez sur la commande à gauche pour avancer. Glissez sur l’image pour regarder autour de vous. Choisissez un espace en bas pour y accéder directement."
   },
   "en": {
+    "originalPhotos": "Original property photographs",
+    "galleryGesture": "Swipe or use the arrows",
     "photos": "Original photos",
     "book": "View on Booking",
     "loading": "Opening the tour…",

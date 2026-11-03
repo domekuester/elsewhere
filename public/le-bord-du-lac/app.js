@@ -1,9 +1,9 @@
-import {TourGestures} from './touch-controls.js?v=a255798f1d64';
-import {copy} from './copy.js?v=a255798f1d64';
-import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=a255798f1d64';
-import {advanceWalking} from './motion.js?v=a255798f1d64';
-import {addDaylight,refineSurfaces} from './atmosphere.js?v=a255798f1d64';
-import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=a255798f1d64';
+import {TourGestures,PhotoSwipe} from './touch-controls.js?v=e79108d089b5';
+import {copy} from './copy.js?v=e79108d089b5';
+import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=e79108d089b5';
+import {advanceWalking} from './motion.js?v=e79108d089b5';
+import {addDaylight,refineSurfaces} from './atmosphere.js?v=e79108d089b5';
+import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=e79108d089b5';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -13,7 +13,7 @@ import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
-import { spots,movePosition } from './navigation.js?v=a255798f1d64';
+import { spots,movePosition } from './navigation.js?v=e79108d089b5';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 let language=initialLanguage(),currentRoom='living',level='ground',ready=false,changing=false,photoIndex=0,infoMode='about';
 const roomKeys=Object.keys(spots);
@@ -51,13 +51,26 @@ let toastTimer;
 function toast(text){clearTimeout(toastTimer);$('#toast').textContent=text;$('#toast').hidden=false;toastTimer=setTimeout(()=>$('#toast').hidden=true,4300);}
 function changeLanguage(next){if(!isLanguage(next)||next===language)return;releaseInput();language=next;rememberLanguage(next);translate();}
 $$('.language-select').forEach(select=>select.addEventListener('change',event=>changeLanguage(event.target.value)));
+function revealPhotoThumb(){
+ const strip=$('#photo-thumbs'),active=strip.children[photoIndex];
+ if(!active||!$('#gallery').open)return;
+ const left=active.offsetLeft-strip.offsetLeft,right=left+active.offsetWidth;
+ if(left<strip.scrollLeft)strip.scrollLeft=left;
+ else if(right>strip.scrollLeft+strip.clientWidth)strip.scrollLeft=right-strip.clientWidth;
+}
 function showPhoto(i){
  photoIndex=(i+photoFiles.length)%photoFiles.length;
  $('#gallery-image').src=`./photos/${photoFiles[photoIndex]}.jpg`;$('#gallery-image').alt=t('photoNames')[photoIndex];$('#photo-caption').textContent=t('photoNames')[photoIndex];$('#photo-counter').textContent=`${photoIndex+1} / ${photoFiles.length}`;
  $$('#photo-thumbs button').forEach((b,j)=>{b.setAttribute('aria-pressed',String(j===photoIndex));b.ariaLabel=t('photoNames')[j];});
+ revealPhotoThumb();
 }
 photoFiles.forEach((name,i)=>{const b=document.createElement('button');b.innerHTML=`<img src="./photos/${name}.jpg" alt="">`;b.addEventListener('click',()=>showPhoto(i));$('#photo-thumbs').appendChild(b);});
-function gallery(index){releaseInput();showPhoto(Number.isInteger(index)?index:photoIndex);$('#gallery').showModal();}
+function gallery(index){releaseInput();showPhoto(Number.isInteger(index)?index:photoIndex);$('#gallery').showModal();revealPhotoThumb();}
+const photoSwipe=new PhotoSwipe(),photoImage=$('#gallery-image');
+photoImage.addEventListener('touchstart',e=>photoSwipe.begin(e.touches),{passive:true});
+photoImage.addEventListener('touchend',e=>{const direction=photoSwipe.end(e.changedTouches);if(direction&&(!window.visualViewport||window.visualViewport.scale<=1))showPhoto(photoIndex+direction);},{passive:true});
+photoImage.addEventListener('touchcancel',()=>photoSwipe.cancel(),{passive:true});
+$('#gallery').addEventListener('close',()=>photoSwipe.cancel());
 $('#photos').addEventListener('click',gallery);$('#fallback-photos').addEventListener('click',gallery);
 $('#prev-photo').addEventListener('click',()=>showPhoto(photoIndex-1));$('#next-photo').addEventListener('click',()=>showPhoto(photoIndex+1));
 $('#gallery').addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();showPhoto(photoIndex+1);}if(e.key==='ArrowLeft'){e.preventDefault();showPhoto(photoIndex-1);}});
@@ -100,7 +113,7 @@ async function init(){
   const ground=new THREE.Mesh(new THREE.PlaneGeometry(90,90),new THREE.MeshStandardMaterial({color:'#babfa2',roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.13;ground.receiveShadow=true;scene.add(ground);
   const woven=weaveTexture(false);
   const aoExcluded=[];
-  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=a255798f1d64',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
+  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=e79108d089b5',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
   const processedMaterials=new Set();
   gltf.scene.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.receiveShadow=true;let m=o.material;
    if(/glass/i.test(m.name)){o.castShadow=false;m.side=THREE.DoubleSide;m.depthWrite=false;aoExcluded.push(o);}

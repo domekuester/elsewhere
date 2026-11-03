@@ -21,3 +21,15 @@ export class TourGestures {
  }
  endMove(id){if(this.movePointer!==id)return false;this.movePointer=null;this.movement={forward:0,side:0};this.offset={x:0,y:0};return true;}
 }
+
+// A photo turn is one horizontal single-finger gesture; scrolling and pinch remain native.
+export class PhotoSwipe {
+ begin(points){this.start=points.length===1?{x:points[0].clientX,y:points[0].clientY}:null;}
+ cancel(){this.start=null;}
+ end(points){
+  const start=this.start;this.cancel();
+  if(!start||points.length!==1)return 0;
+  const dx=points[0].clientX-start.x,dy=points[0].clientY-start.y;
+  return Math.abs(dx)>=60&&Math.abs(dx)>Math.abs(dy)*1.5?(dx<0?1:-1):0;
+ }
+}
