@@ -1,5 +1,5 @@
 // Original-photo landing page. Booking remains an explicit outbound link.
-import {bookingUrl} from './i18n.js?v=de6a9551f62a';
+import {bookingUrl} from './i18n.js?v=810e0b0cecca';
 export function translateLanding(api){
  const lang=api.language();
  document.querySelectorAll('[data-booking]').forEach(a=>{a.href=bookingUrl(lang);a.ariaLabel=a.textContent.trim()+'. '+api.t('newWindow');});
@@ -10,6 +10,7 @@ export function translateLanding(api){
  document.querySelectorAll('[data-site-language]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.siteLanguage===lang)));
 }
 export function setupLanding(api){
+ document.querySelectorAll('[data-gallery-index]').forEach(b=>b.addEventListener('click',()=>api.gallery(Number(b.dataset.galleryIndex))));
  document.querySelectorAll('[data-photo]').forEach(b=>b.addEventListener('click',()=>api.gallery(Number(b.dataset.photo))));
  document.querySelectorAll('[data-site-language]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.siteLanguage!==api.language())api.changeLanguage(b.dataset.siteLanguage);}));
  document.querySelectorAll('[data-about]').forEach(b=>b.addEventListener('click',()=>api.openInfo('about')));

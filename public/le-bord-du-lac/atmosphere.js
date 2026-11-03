@@ -1,3 +1,4 @@
+import {addSky} from './sky.js?v=810e0b0cecca';
 import * as THREE from 'three';
 import {RectAreaLightUniformsLib} from 'three/addons/lights/RectAreaLightUniformsLib.js';
 
@@ -5,9 +6,10 @@ import {RectAreaLightUniformsLib} from 'three/addons/lights/RectAreaLightUniform
 // Window positions and the existing bedside lamp are retained.
 export function addDaylight(scene){
  RectAreaLightUniformsLib.init();
- scene.background=new THREE.Color('#dedbd0');
- scene.fog=new THREE.Fog('#dedbd0',18,42);
- scene.add(new THREE.HemisphereLight('#e8eff4','#c5a17c',.22));
+ scene.background=new THREE.Color('#b5d3e5');
+ scene.fog=new THREE.Fog('#d7e4e8',24,55);
+ addSky(scene);
+ scene.add(new THREE.HemisphereLight('#c7e3f4','#c5a17c',.34));
  const sun=new THREE.DirectionalLight('#ffd4a0',3.15);
  sun.position.set(7,4.8,3.6);sun.target.position.set(0,0,-.4);sun.castShadow=true;
  sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-6,right:6,top:6,bottom:-6,near:.5,far:24});

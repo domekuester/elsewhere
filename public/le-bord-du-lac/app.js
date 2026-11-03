@@ -1,8 +1,9 @@
-import {copy} from './copy.js?v=de6a9551f62a';
-import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=de6a9551f62a';
-import {advanceWalking} from './motion.js?v=de6a9551f62a';
-import {addDaylight,refineSurfaces} from './atmosphere.js?v=de6a9551f62a';
-import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=de6a9551f62a';
+import {TourGestures} from './touch-controls.js?v=810e0b0cecca';
+import {copy} from './copy.js?v=810e0b0cecca';
+import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=810e0b0cecca';
+import {advanceWalking} from './motion.js?v=810e0b0cecca';
+import {addDaylight,refineSurfaces} from './atmosphere.js?v=810e0b0cecca';
+import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=810e0b0cecca';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -12,11 +13,11 @@ import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
-import { spots,movePosition } from './navigation.js?v=de6a9551f62a';
+import { spots,movePosition } from './navigation.js?v=810e0b0cecca';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 let language=initialLanguage(),currentRoom='living',level='ground',ready=false,changing=false,photoIndex=0,infoMode='about';
 const roomKeys=Object.keys(spots);
-const photoFiles=['living','kitchen','terrace','beach','bedroom','living-reverse','lagoon'];
+const photoFiles=['living-new','kitchen-new','terrace','beach','bedroom-new','living-reverse-new','lagoon','terrace-facade','bathroom-washbasin-toilet','bathroom-shower'];
 function t(key){return copy[language][key];}
 function updateRoomUI(){
  const idx=roomKeys.indexOf(currentRoom);
@@ -39,6 +40,7 @@ function translate(){
  $('.book').href=bookingUrl(language);
  $$('[data-move]').forEach(b=>b.ariaLabel=t('directions')[b.dataset.move]);
  $$('.close').forEach(b=>b.ariaLabel=t('close'));
+ $('#joystick').ariaLabel=t('joystickLabel');$('#joystick').title=t('joystickLabel');
  $('#fullscreen').ariaLabel=$('#fullscreen').title=t('fullscreen');
  $('#help').ariaLabel=t('help');
  $('#prev-photo').ariaLabel=t('previousPhoto');$('#next-photo').ariaLabel=t('nextPhoto');
@@ -69,8 +71,14 @@ $('#retry').addEventListener('click',()=>location.reload());
 $('#fullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if($('#tour').requestFullscreen)await $('#tour').requestFullscreen();else toast(t('fullscreenFail'));}catch{toast(t('fullscreenFail'));}});
 // Locally generated small surface maps. No remote texture or CDN requests.
 let seed=493;const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};
-let renderer,scene,camera,composer,aoPass,fxaaPass,yaw=0,pitch=0,lastRenderedPose='';const keys=new Set();let drag=null,padMove=null,last=performance.now();let walking={forward:0,side:0};const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
-function releaseInput(){walking={forward:0,side:0};keys.clear();padMove=null;drag=null;$$('[data-move]').forEach(b=>b.classList.remove('held'));}
+let renderer,scene,camera,composer,aoPass,fxaaPass,yaw=0,pitch=0,lastRenderedPose='';const keys=new Set();const gestures=new TourGestures();let padMove=null,last=performance.now();let walking={forward:0,side:0};const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+function updateStick(){const {x,y}=gestures.offset;$('#stick-knob').style.transform=`translate(${x}px,${y}px)`;$('#joystick').classList.toggle('held',gestures.movePointer!==null);}
+function releaseInput(){
+ const lookId=gestures.lookPointer,moveId=gestures.movePointer;
+ gestures.reset();walking={forward:0,side:0};keys.clear();padMove=null;updateStick();
+ for(const [element,id] of [[$('#view'),lookId],[$('#joystick'),moveId]])if(id!==null&&element.hasPointerCapture(id))element.releasePointerCapture(id);
+ $$('[data-move]').forEach(b=>b.classList.remove('held'));
+} 
 function setPose(spot){
  camera.position.fromArray(spot.position);const d=new THREE.Vector3().fromArray(spot.target).sub(camera.position).normalize();yaw=Math.atan2(-d.x,-d.z);pitch=Math.asin(d.y);camera.rotation.set(pitch,yaw,0,'YXZ');
 }
@@ -92,7 +100,7 @@ async function init(){
   const ground=new THREE.Mesh(new THREE.PlaneGeometry(90,90),new THREE.MeshStandardMaterial({color:'#babfa2',roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.13;ground.receiveShadow=true;scene.add(ground);
   const woven=weaveTexture(false);
   const aoExcluded=[];
-  const gltf=await new GLTFLoader().loadAsync('./house.glb',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
+  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=810e0b0cecca',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
   const processedMaterials=new Set();
   gltf.scene.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.receiveShadow=true;let m=o.material;
    if(/glass/i.test(m.name)){o.castShadow=false;m.side=THREE.DoubleSide;m.depthWrite=false;aoExcluded.push(o);}
@@ -114,17 +122,40 @@ async function init(){
   composer.addPass(aoPass);composer.addPass(new OutputPass());
   fxaaPass=new ShaderPass(FXAAShader);composer.addPass(fxaaPass);resizeEffects();
   ready=true;document.body.dataset.loaded='true';$('#load-fill').style.width='100%';$('#load-text').textContent='100 %';composer.render();renderer.shadowMap.autoUpdate=false;$('#loading').classList.add('done');setTimeout(()=>$('#loading').hidden=true,550);tourReady();requestAnimationFrame(animate);
-  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();ready=false;$('#error').hidden=false;tourFailed();});
+  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();ready=false;releaseInput();$('#error').hidden=false;tourFailed();});
  }catch(e){console.error('Tour loading failed',e);$('#loading').hidden=true;$('#error').hidden=false;tourFailed();}
 }
-$('#view').addEventListener('pointerdown',e=>{if(!ready||changing||!isExploring())return;$('#view').focus({preventScroll:true});drag={id:e.pointerId,x:e.clientX,y:e.clientY};$('#view').setPointerCapture(e.pointerId);});
-$('#view').addEventListener('pointermove',e=>{if(!drag||drag.id!==e.pointerId)return;yaw-=(e.clientX-drag.x)*.004;pitch=THREE.MathUtils.clamp(pitch-(e.clientY-drag.y)*.003,-1.1,1.1);drag.x=e.clientX;drag.y=e.clientY;});
-$('#view').addEventListener('pointerup',()=>drag=null);$('#view').addEventListener('pointercancel',()=>drag=null);
+const mayNavigate=()=>ready&&!changing&&isExploring()&&!$('dialog[open]');
+const view=$('#view'),stick=$('#joystick');
+view.addEventListener('pointerdown',e=>{
+ if(!mayNavigate()||(e.pointerType==='mouse'&&e.button!==0))return;
+ if(gestures.beginLook(e.pointerId,e.clientX,e.clientY)){view.focus({preventScroll:true});view.setPointerCapture(e.pointerId);}
+});
+view.addEventListener('pointermove',e=>{
+ if(!mayNavigate())return;
+ const delta=gestures.look(e.pointerId,e.clientX,e.clientY,Math.min(innerWidth,900),camera.fov);
+ if(delta){yaw+=delta.yaw;pitch=THREE.MathUtils.clamp(pitch+delta.pitch,-1.35,1.35);}
+});
+for(const event of ['pointerup','pointercancel','lostpointercapture'])view.addEventListener(event,e=>gestures.endLook(e.pointerId));
+stick.addEventListener('pointerdown',e=>{
+ e.preventDefault();if(!mayNavigate())return;
+ const rect=stick.getBoundingClientRect();
+ if(gestures.beginMove(e.pointerId,rect.left+rect.width/2,rect.top+rect.height/2,rect.width*.29)){
+  stick.setPointerCapture(e.pointerId);gestures.move(e.pointerId,e.clientX,e.clientY);updateStick();$('#coach').hidden=true;
+ }
+});
+stick.addEventListener('pointermove',e=>{if(mayNavigate()&&gestures.move(e.pointerId,e.clientX,e.clientY))updateStick();});
+for(const event of ['pointerup','pointercancel','lostpointercapture'])stick.addEventListener(event,e=>{
+ if(gestures.endMove(e.pointerId)){walking={forward:0,side:0};updateStick();}
+});
+// Keyboard users retain four conventional direction buttons.
+stick.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)&&mayNavigate()){e.preventDefault();keys.add(e.code);}});
+stick.addEventListener('blur',releaseInput);
 const activeCodes=['KeyW','KeyA','KeyS','KeyD','KeyQ','KeyE','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'];
 document.addEventListener('keydown',e=>{if(!ready||!isExploring()||$('dialog[open]')||e.ctrlKey||e.metaKey||e.altKey)return;if(e.target.closest('button,a,input,textarea,select'))return;if(activeCodes.includes(e.code)){e.preventDefault();keys.add(e.code);}});
 document.addEventListener('keyup',e=>keys.delete(e.code));window.addEventListener('blur',releaseInput);document.addEventListener('visibilitychange',()=>{if(document.hidden)releaseInput();});
 $$('[data-move]').forEach(b=>{
- b.addEventListener('pointerdown',e=>{e.preventDefault();if(!ready)return;padMove=b.dataset.move;b.classList.add('held');b.setPointerCapture(e.pointerId);});
+ b.addEventListener('pointerdown',e=>{e.preventDefault();if(!mayNavigate())return;padMove=b.dataset.move;b.classList.add('held');b.setPointerCapture(e.pointerId);});
  const stop=()=>{padMove=null;b.classList.remove('held');};b.addEventListener('pointerup',stop);b.addEventListener('pointercancel',stop);b.addEventListener('lostpointercapture',stop);
  b.addEventListener('click',e=>{if(e.detail===0&&ready){padMove=b.dataset.move;setTimeout(stop,150);}});
 });
@@ -134,6 +165,7 @@ function animate(now){
   if(keys.has('KeyQ'))yaw+=dt*1.15;if(keys.has('KeyE'))yaw-=dt*1.15;
   let f=Number(keys.has('KeyW')||keys.has('ArrowUp')||padMove==='forward')-Number(keys.has('KeyS')||keys.has('ArrowDown')||padMove==='back');
   let s=Number(keys.has('KeyD')||keys.has('ArrowRight')||padMove==='right')-Number(keys.has('KeyA')||keys.has('ArrowLeft')||padMove==='left');
+  f+=gestures.movement.forward;s+=gestures.movement.side;
   walking=advanceWalking(walking,f,s,dt,reducedMotion.matches);f=walking.forward;s=walking.side;
   if(f||s){const speed=level==='loft'?.65:1.05;const dx=(-Math.sin(yaw)*f+Math.cos(yaw)*s)*dt*speed;const dz=(-Math.cos(yaw)*f-Math.sin(yaw)*s)*dt*speed;camera.position.fromArray(movePosition(camera.position.toArray(),dx,dz,level));
    if(level==='ground'){const next=camera.position.x>1.9?'terrace':camera.position.z<-.8?'kitchen':'living';if(next!==currentRoom){currentRoom=next;updateRoomUI();}}
@@ -145,7 +177,7 @@ function animate(now){
  if(true){const x=12+(camera.position.x+1.8)/3.6*82,z=16+(camera.position.z+2.5)/5*116;$('#map-dot').setAttribute('cx',x.toFixed(2));$('#map-dot').setAttribute('cy',z.toFixed(2));$('#map-view').setAttribute('transform',`translate(${x} ${z}) rotate(${-yaw*180/Math.PI})`);$('#stair-action').hidden=level!=='ground'||Math.hypot(camera.position.x+1.27,camera.position.z+.42)>1.12||changing;}
  composer.render();
 }
-window.addEventListener('resize',()=>{if(!renderer||!camera)return;camera.aspect=innerWidth/innerHeight;camera.fov=innerWidth<620?70:62;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);if(composer){composer.setSize(innerWidth,innerHeight);resizeEffects();}lastRenderedPose='';});
+window.addEventListener('resize',()=>{releaseInput();if(!renderer||!camera)return;camera.aspect=innerWidth/innerHeight;camera.fov=innerWidth<620?70:62;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);if(composer){composer.setSize(innerWidth,innerHeight);resizeEffects();}lastRenderedPose='';});
 function resizeEffects(){
  const ratio=renderer.getPixelRatio();
  aoPass.setSize(Math.round(innerWidth*ratio*.75),Math.round(innerHeight*ratio*.75));

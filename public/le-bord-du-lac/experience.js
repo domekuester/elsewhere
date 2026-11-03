@@ -1,6 +1,6 @@
-import {setupLanding,translateLanding} from './landing.js?v=de6a9551f62a';
+import {setupLanding,translateLanding} from './landing.js?v=810e0b0cecca';
 // Guest-facing UI state. The scene remains in app.js; no storage or remote calls.
-export {copy as experienceCopy} from './copy.js?v=de6a9551f62a';
+export {copy as experienceCopy} from './copy.js?v=810e0b0cecca';
 let started=false,immersive=false,hasShownCoach=false,available=false,failed=false,api;
 let requested=false,loading=false,attempted=false,lastLaunch=null;
 const $=s=>document.querySelector(s);
@@ -8,7 +8,7 @@ const fadingUI='.topbar,.room-label,.map-panel,.movement,.room-nav,.footbar,#hel
 export const isExploring=()=>started;
 export function dismissCoach(){$('#coach').hidden=true;}
 function focusMode(value){
- immersive=value;document.body.classList.toggle('immersive',value);
+ api.releaseInput();immersive=value;document.body.classList.toggle('immersive',value);
  document.querySelectorAll(fadingUI).forEach(e=>e.inert=value);
  $('#focus-view').setAttribute('aria-pressed',String(value));translateExperience();dismissCoach();
 }
@@ -32,6 +32,7 @@ export function translateExperience(){
  if(!api)return;const t=api.t;
  const status=t(failed?'entryError':available?'prepared':loading?'preparing':'tourHint');
  $('#welcome-status').textContent=status;
+ if(typeof matchMedia==='function')$('#coach p').textContent=t(matchMedia('(pointer:coarse), (max-width:900px)').matches?'coachTouch':'coachText');
  document.querySelectorAll('[data-start-tour]').forEach(b=>{b.disabled=failed||(loading&&requested);b.setAttribute('aria-busy',String(loading));});
  document.querySelectorAll('[data-start-label]').forEach(e=>e.textContent=t(loading?'preparingShort':'start'));
  $('#welcome-cancel').hidden=!requested;

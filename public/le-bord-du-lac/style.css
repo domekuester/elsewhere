@@ -73,3 +73,52 @@ dialog{padding:30px;color:var(--paper);background:#1c3027;border:0;border-radius
 @media(max-width:370px){.language-control{flex-basis:48px;width:48px;gap:1px}.topbar{gap:6px}.brand .wordmark{font-size:21px}}
 
 #info-body{font-size:15px}#info-body .note{font-size:14px}.coach p{font-size:14px}.photo-credit{font-size:12px}
+
+/* Touch movement stays separate from looking; there is no drag inertia. */
+.joystick,.stick-hint,.look-hint{display:none}
+.joystick{position:relative;width:112px;height:112px;border:1px solid #f7f5eeaa;border-radius:50%;background:#f7f5eecf;touch-action:none;user-select:none;-webkit-user-select:none;box-shadow:0 3px 18px #152b2424;padding:0;flex-shrink:0}
+.stick-axis{position:absolute;inset:14px;border:1px solid #233c3222;border-radius:50%;pointer-events:none}
+.stick-axis:before,.stick-axis:after{content:'';position:absolute;background:#233c3233;left:50%;top:50%;transform:translate(-50%,-50%)}
+.stick-axis:before{width:1px;height:100%}.stick-axis:after{height:1px;width:100%}
+.stick-knob{position:absolute;left:calc(50% - 25px);top:calc(50% - 25px);width:50px;height:50px;background:var(--ink);border:2px solid #f7f5ee;border-radius:50%;box-shadow:0 2px 8px #152b2433;pointer-events:none}
+.joystick.held{background:#f7f5eef2;border-color:var(--ink)}
+.stick-hint,.look-hint{font-size:12px;line-height:1.4;padding:5px 8px;background:#f7f5eee8;border-radius:5px;color:var(--ink);text-align:center;pointer-events:none}
+.immersive .look-hint{display:none}
+.bathroom-gallery{margin-top:12px;min-height:44px}
+#tour{height:100dvh;min-height:0}
+.vignette{background:linear-gradient(180deg,#f7f5ee88,transparent 110px,transparent 90%,#f7f5ee30)}
+@media(max-width:900px),(pointer:coarse){
+ .joystick,.stick-hint{display:block}.movement-label,.direction-pad{display:none}
+ .topbar{top:max(12px,env(safe-area-inset-top));left:max(16px,env(safe-area-inset-left));right:max(16px,env(safe-area-inset-right));gap:8px}
+ .topbar .brand{padding:8px 10px;background:#f7f5eef2;border-radius:8px;min-height:44px}
+ .topbar .brand .wordmark{font-size:22px}.brand-place{display:none}
+ .top-actions{gap:5px}.top-actions .quiet,.top-actions .book{width:44px;padding:0}.top-actions .quiet>span:not(.sr-only),.top-actions .book>span:not(.sr-only){display:none}
+ .room-label{top:calc(max(12px,env(safe-area-inset-top)) + 57px);left:16px;padding:8px 12px;max-width:calc(100% - 32px);border-radius:6px;display:flex;align-items:center;gap:10px}
+ .room-label h1{font-size:23px;margin:0}.room-label>span{font-size:11px}.room-label p{display:none}
+ .map-panel{display:none}
+ .bottom-ui{bottom:calc(53px + env(safe-area-inset-bottom));left:max(16px,env(safe-area-inset-left));right:max(16px,env(safe-area-inset-right))}
+ .room-nav{position:relative;left:0;transform:none;width:100%;padding:5px;gap:3px;bottom:0}
+ .room-nav button{flex:1;min-width:0;width:25%}.room-nav img{height:34px}.room-nav span{font-size:12px;min-height:35px;padding:8px 6px}
+ .movement{position:absolute;left:0;bottom:93px;gap:7px}.utility-tools{position:absolute;right:0;bottom:93px;display:flex;flex-direction:row;gap:6px}
+ .utility-row{display:flex;flex-direction:row;gap:6px}.utility-button{width:44px;padding:0;justify-content:center}.utility-button span{display:none}
+ .look-hint{display:block;position:absolute;right:0;bottom:146px;max-width:142px}
+ .footbar{padding:0 max(16px,env(safe-area-inset-left)) env(safe-area-inset-bottom);min-height:calc(44px + env(safe-area-inset-bottom));gap:8px}
+ .footbar button{font-size:11px}.footbar .hint{display:none}
+ .coach{bottom:calc(300px + env(safe-area-inset-bottom));width:calc(100% - 32px);left:16px;transform:none;padding:16px 18px}.coach strong{font-size:25px}.coach p{font-size:14px}.coach button{min-height:44px}
+ .immersive .utility-tools{right:16px;bottom:calc(16px + env(safe-area-inset-bottom))}
+ .vignette{opacity:0}
+}
+/* Compact landscape keeps a usable view and full-size touch targets. */
+@media(max-height:500px){
+ .topbar{top:8px;left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right))}.brand-place{display:none}
+ .topbar .brand{padding:7px 10px;background:#f7f5eee8;border-radius:6px}.topbar .brand .wordmark{font-size:22px}
+ .room-label{top:64px;padding:6px 10px;left:12px;display:flex;gap:10px;align-items:center}.room-label h1{font-size:23px;margin:0}.room-label p{display:none}
+ .map-panel{display:none}.bottom-ui{bottom:calc(56px + env(safe-area-inset-bottom));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right))}
+ .room-nav{left:50%;transform:translateX(-50%);position:absolute;width:min(50vw,420px);padding:5px;bottom:0}.room-nav button{flex:1;width:25%;min-width:0}.room-nav img{display:none}.room-nav span{min-height:44px;font-size:12px;padding:7px}
+ .movement{left:0;bottom:5px;position:absolute;gap:4px}.joystick{width:100px;height:100px}.stick-hint,.look-hint{display:none}
+ .utility-tools{position:absolute;right:0;bottom:5px;display:flex;flex-direction:column}.utility-row{flex-direction:row}.utility-button{width:44px;padding:0;justify-content:center}.utility-button span{display:none}
+ .coach{top:64px;bottom:auto;left:50%;transform:translateX(-50%);width:min(370px,calc(100% - 32px));padding:12px 18px}.coach strong{font-size:23px}.coach p{font-size:13px;margin:6px 0}.coach button{min-height:44px}
+}
+@media(max-width:370px){.topbar .brand .wordmark{font-size:20px}.topbar{gap:4px;left:10px;right:10px}.top-actions{gap:3px}.room-label{left:10px}.look-hint{max-width:120px}.joystick{width:104px;height:104px}}
+
+#tour .footbar{height:calc(44px + env(safe-area-inset-bottom));min-height:calc(44px + env(safe-area-inset-bottom));padding-top:0;padding-bottom:env(safe-area-inset-bottom)}
