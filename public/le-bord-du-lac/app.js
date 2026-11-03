@@ -1,6 +1,8 @@
+import {copy} from './copy.js';
+import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js';
 import {advanceWalking} from './motion.js';
 import {addDaylight,refineSurfaces} from './atmosphere.js';
-import {experienceCopy,setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js';
+import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -12,15 +14,10 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
 import { spots,movePosition } from './navigation.js';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-let language='de',currentRoom='living',level='ground',ready=false,changing=false,photoIndex=0,infoMode='about';
-const strings={
- de:{photos:'Originalfotos',book:'Auf Booking ansehen',loading:'Ein kleiner Moment …',loadingSub:'Wir öffnen die Türen.',error:'Der Rundgang konnte nicht geladen werden.',errorSub:'Versuche es mit einem aktuellen Browser. Die Originalfotos kannst du trotzdem ansehen.',retry:'Erneut versuchen',orientation:'Orientierung',mapNote:'Schematisch · nicht maßstabsgetreu',living:'Wohnen',kitchen:'Küche',bedroom:'Schlafen',terrace:'Terrasse',draft:'Entwurf · Rekonstruktion nach Fotos',hint:'Ziehen zum Umschauen · Pfeiltasten zum Gehen',reset:'Zurück zum Start',sourcePhotos:'Die Unterkunft in Bildern',photoCredit:'Fotovorlagen aus dem Booking.com-Inserat von Le bord du lac.',upstairs:'Zur Schlafebene',hideMap:'Grundriss ein-/ausblenden',ground:'Erdgeschoss',loft:'Schlafebene',outside:'Im Freien',roomTitles:['Der Wohnbereich','Die kleine Küche','Unter dem Dach','Die Terrasse'],roomDescriptions:['Helles Holz, weiche Stoffe und ein Blick ins Grüne.','Alles an einem Ort. Kochen, essen, zusammen sein.','Ein ruhiger Rückzugsort über dem Wohnbereich.','Ein geschützter Platz zwischen Holz und Grün.'],photoNames:['Wohnbereich und Küche','Esstisch und Zugang zur Terrasse','Terrasse und Außenbereich','Strand in der Umgebung','Schlafebene','Wohnbereich, Treppe und Badezimmertür','Badebucht in der Umgebung'],aboutTitle:'Ein erster räumlicher Eindruck',aboutBody:'<p>Dieser begehbare <strong>Entwurf wurde aus fünf Unterkunftsfotos</strong> nachgebaut. Er zeigt die erkennbare Einrichtung und den ungefähren räumlichen Zusammenhang.</p><p>Maße, Abstände, Raumhöhen, Treppe und nicht sichtbare Details sind geschätzt. Das Badezimmer bleibt geschlossen. Der Entwurf ersetzt keine vermessene oder fotografische 360°-Begehung.</p><p class="note">Die Originalfotos sind über „Originalfotos“ abrufbar. Maßgeblich für die Unterkunft sind die aktuellen Angaben des Gastgebers.</p><a href="https://www.booking.com/hotel/re/le-bord-du-lac.de.html" target="_blank" rel="noopener noreferrer">Unterkunft auf Booking.com ansehen ↗</a>',helpTitle:'Ganz in deinem Tempo',helpBody:'<p><strong>Umschauen:</strong> Ziehe mit der Maus oder dem Finger über das Bild.</p><p><strong>Gehen:</strong> Nutze die Richtungstasten im Bild, die Pfeiltasten oder <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>. Mit <kbd>Q</kbd> und <kbd>E</kbd> drehst du dich.</p><p><strong>Bereich wechseln:</strong> Wähle unten Wohnen, Küche, Schlafen oder Terrasse. Die Schlafebene erreichst du über diese Auswahl.</p><p class="note">Der kleine Grundriss zeigt deine ungefähre Position. „Zum Ausgangspunkt“ bringt dich in den Wohnbereich.</p>',welcome:'Ziehe über das Bild, um dich umzuschauen.',fullscreenFail:'Vollbild ist in diesem Browser nicht verfügbar.'},
- fr:{photos:'Photos originales',book:'Voir sur Booking',loading:'Un petit instant…',loadingSub:'Nous ouvrons les portes.',error:'La visite n’a pas pu être chargée.',errorSub:'Essayez un navigateur récent. Les photos originales restent disponibles.',retry:'Réessayer',orientation:'Se repérer',mapNote:'Schéma indicatif · non à l’échelle',living:'Salon',kitchen:'Cuisine',bedroom:'Chambre',terrace:'Terrasse',draft:'Ébauche · Reconstitution d’après photos',hint:'Glisser pour regarder · Flèches pour avancer',reset:'Revenir au départ',sourcePhotos:'Le logement en images',photoCredit:'Photos de référence de l’annonce Booking.com de Le bord du lac.',upstairs:'Vers la mezzanine',hideMap:'Afficher/masquer le plan',ground:'Rez-de-chaussée',loft:'Mezzanine',outside:'À l’extérieur',roomTitles:['Le coin salon','La petite cuisine','Sous les toits','La terrasse'],roomDescriptions:['Du bois clair, des matières douces et une ouverture sur le jardin.','Tout à portée de main. Cuisiner, manger, partager.','Un coin paisible au-dessus du salon.','Un espace abrité, entre bois et végétation.'],photoNames:['Salon et cuisine','Table et accès à la terrasse','Terrasse et extérieur','Plage aux alentours','Mezzanine','Salon, escalier et porte de la salle de bains','Baignade aux alentours'],aboutTitle:'Une première impression des volumes',aboutBody:'<p>Cette <strong>ébauche a été reconstituée à partir de cinq photos du logement</strong>. Elle présente le mobilier visible et une approximation de l’organisation des espaces.</p><p>Les dimensions, distances, hauteurs, l’escalier et les détails non visibles sont estimés. La salle de bains reste fermée. Cette ébauche ne remplace pas un relevé ou une visite photographique à 360°.</p><p class="note">Les photos originales sont accessibles depuis le bouton « Photos originales ». Les informations actuelles de l’hôte font référence.</p><a href="https://www.booking.com/hotel/re/le-bord-du-lac.fr.html" target="_blank" rel="noopener noreferrer">Voir le logement sur Booking.com ↗</a>',helpTitle:'À votre rythme',helpBody:'<p><strong>Regarder :</strong> faites glisser la souris ou le doigt sur l’image.</p><p><strong>Se déplacer :</strong> utilisez les boutons directionnels, les flèches du clavier ou <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>. <kbd>Q</kbd> et <kbd>E</kbd> permettent de tourner.</p><p><strong>Changer d’espace :</strong> choisissez Salon, Cuisine, Chambre ou Terrasse en bas de l’écran. La mezzanine est accessible par ce menu.</p><p class="note">Le petit plan indique votre position approximative. « Au point de départ » vous ramène au salon.</p>',welcome:'Faites glisser l’image pour regarder autour de vous.',fullscreenFail:'Le plein écran n’est pas disponible dans ce navigateur.'}
-};
-Object.assign(strings.de,experienceCopy.de);Object.assign(strings.fr,experienceCopy.fr);
+let language=initialLanguage(),currentRoom='living',level='ground',ready=false,changing=false,photoIndex=0,infoMode='about';
 const roomKeys=Object.keys(spots);
 const photoFiles=['living','kitchen','terrace','beach','bedroom','living-reverse','lagoon'];
-function t(key){return strings[language][key];}
+function t(key){return copy[language][key];}
 function updateRoomUI(){
  const idx=roomKeys.indexOf(currentRoom);
  $('#room-title').textContent=t('roomTitles')[idx];$('#room-description').textContent=t('roomDescriptions')[idx];
@@ -32,20 +29,26 @@ function translate(){
  document.documentElement.lang=language;
  $$('[data-i18n]').forEach(e=>e.textContent=t(e.dataset.i18n));
  $$('[data-i18n-title]').forEach(e=>e.title=t(e.dataset.i18nTitle));
- $('#language').textContent=language==='de'?'FR':'DE';$('#language').ariaLabel=language==='de'?'Passer en français':'Auf Deutsch wechseln';
- $('.book').href=`https://www.booking.com/hotel/re/le-bord-du-lac.${language}.html`;
- const labels=language==='fr'?{forward:'Avancer',back:'Reculer',left:'À gauche',right:'À droite'}:{forward:'Vorwärts',back:'Rückwärts',left:'Nach links',right:'Nach rechts'};
- $$('[data-move]').forEach(b=>b.ariaLabel=labels[b.dataset.move]);
- $$('.close').forEach(b=>b.ariaLabel=language==='fr'?'Fermer':'Schließen');
- $('#fullscreen').ariaLabel=$('#fullscreen').title=language==='fr'?'Plein écran':'Vollbild';
- $('#help').ariaLabel=language==='fr'?'Comment se déplacer':'Bedienung erklären';
- $('#prev-photo').ariaLabel=language==='fr'?'Photo précédente':'Vorheriges Foto';
- $('#next-photo').ariaLabel=language==='fr'?'Photo suivante':'Nächstes Foto';
+ document.title=t('pageTitle');
+ document.querySelector('meta[name="description"]').content=t('pageDescription');
+ document.querySelector('meta[property="og:title"]').content=t('pageTitle');
+ document.querySelector('meta[property="og:description"]').content=t('pageDescription');
+ document.querySelector('meta[property="og:image:alt"]').content=t('heroAlt');
+ $$('.language-select').forEach(select=>{select.value=language;select.ariaLabel=t('chooseLanguage');});
+ $$('[data-language-current]').forEach(label=>label.textContent=language.toUpperCase());
+ $('.book').href=bookingUrl(language);
+ $$('[data-move]').forEach(b=>b.ariaLabel=t('directions')[b.dataset.move]);
+ $$('.close').forEach(b=>b.ariaLabel=t('close'));
+ $('#fullscreen').ariaLabel=$('#fullscreen').title=t('fullscreen');
+ $('#help').ariaLabel=t('help');
+ $('#prev-photo').ariaLabel=t('previousPhoto');$('#next-photo').ariaLabel=t('nextPhoto');
+ $('#map').setAttribute('aria-label',t('positionLabel'));
  updateRoomUI();showPhoto(photoIndex);if($('#information').open)fillInfo();translateExperience();
 }
 let toastTimer;
 function toast(text){clearTimeout(toastTimer);$('#toast').textContent=text;$('#toast').hidden=false;toastTimer=setTimeout(()=>$('#toast').hidden=true,4300);}
-$('#language').addEventListener('click',()=>{language=language==='de'?'fr':'de';translate();});
+function changeLanguage(next){if(!isLanguage(next)||next===language)return;releaseInput();language=next;rememberLanguage(next);translate();}
+$$('.language-select').forEach(select=>select.addEventListener('change',event=>changeLanguage(event.target.value)));
 function showPhoto(i){
  photoIndex=(i+photoFiles.length)%photoFiles.length;
  $('#gallery-image').src=`./photos/${photoFiles[photoIndex]}.jpg`;$('#gallery-image').alt=t('photoNames')[photoIndex];$('#photo-caption').textContent=t('photoNames')[photoIndex];$('#photo-counter').textContent=`${photoIndex+1} / ${photoFiles.length}`;
@@ -162,5 +165,5 @@ function botanicalTexture(){
  }
  const map=new THREE.CanvasTexture(c);map.colorSpace=THREE.SRGBColorSpace;map.wrapS=map.wrapT=THREE.RepeatWrapping;return map;
 }
-setupExperience({t,language:()=>language,gallery,openInfo,releaseInput,prepare:init,changeLanguage:()=>{language=language==='de'?'fr':'de';translate();}});
+setupExperience({t,language:()=>language,gallery,openInfo,releaseInput,prepare:init,changeLanguage});
 translate();

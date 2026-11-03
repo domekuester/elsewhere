@@ -59,3 +59,17 @@ dialog{padding:30px;color:var(--paper);background:#1c3027;border:0;border-radius
 @media(max-width:700px){.room-label{top:91px;padding:12px 14px;max-width:202px}.room-label h1{font-size:27px}.room-label p{display:none}}
 @media(max-width:370px){.room-label{max-width:170px}.room-label h1{font-size:24px}.map-panel{width:100px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* One native language selector in each view; full language names in the picker. */
+.language-control{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:3px;flex:0 0 56px;width:56px;min-height:44px;background:var(--paper);border-radius:6px;font-size:12px;font-weight:550;cursor:pointer}
+.language-control>svg{width:14px;height:14px;pointer-events:none}
+.language-control>span{pointer-events:none}
+.language-select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font:16px 'Instrument Sans',Arial,sans-serif;color:var(--ink);background:var(--paper)}
+.language-control:hover{background:var(--hover)}
+.language-control:focus-within{outline:3px solid var(--accent);outline-offset:3px}
+.flagship .language-control{background:transparent;border-radius:0}
+.flagship .language-control:hover{background:var(--hover)}
+.flagship .language-control:focus-within{outline-color:#ad624c}
+@media(max-width:370px){.language-control{flex-basis:48px;width:48px;gap:1px}.topbar{gap:6px}.brand .wordmark{font-size:21px}}
+
+#info-body{font-size:15px}#info-body .note{font-size:14px}.coach p{font-size:14px}.photo-credit{font-size:12px}

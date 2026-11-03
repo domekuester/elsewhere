@@ -25,3 +25,18 @@
 .flagship .arrival-photo{background:transparent;overflow:visible}.flagship .arrival-photo:after{display:none}
 /* Sticky navigation keeps an uninterrupted paper background across the viewport. */
 .site-header:before{content:'';position:absolute;inset:0 calc((100vw - 100%)/-2);background:var(--paper);z-index:-1}
+
+/* Readable mobile copy and room for all three language names. */
+.flagship .arrival-intro p,.flagship .section-text{font-size:16px}
+.footer-languages{flex-wrap:wrap;column-gap:8px;row-gap:0}
+.footer-languages button{padding-inline:5px}
+@media(max-width:600px){
+ .site-footer>div:first-child{flex:1 0 100%}
+ .footer-languages{width:100%;gap:10px}
+ .booking-close .section-text{font-size:16px}
+}
+
+@media(max-width:600px){html[lang="en"] .flagship h1{font-size:clamp(50px,14vw,62px)}}
+
+.flagship .arrival-photo figcaption,.flagship .footer-note{font-size:12px}
+.flagship .quiet-note,.flagship .start-feedback #welcome-status{font-size:13px}
