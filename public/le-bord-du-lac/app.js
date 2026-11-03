@@ -1,10 +1,10 @@
-import {FrameLoop} from './frame-loop.js?v=5f032c97f385';
-import {TourGestures,PhotoSwipe} from './touch-controls.js?v=5f032c97f385';
-import {copy} from './copy.js?v=5f032c97f385';
-import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=5f032c97f385';
-import {advanceWalking} from './motion.js?v=5f032c97f385';
-import {addDaylight,refineSurfaces} from './atmosphere.js?v=5f032c97f385';
-import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=5f032c97f385';
+import {FrameLoop} from './frame-loop.js?v=4e2b53370ad5';
+import {TourGestures,PhotoSwipe} from './touch-controls.js?v=4e2b53370ad5';
+import {copy} from './copy.js?v=4e2b53370ad5';
+import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=4e2b53370ad5';
+import {advanceWalking} from './motion.js?v=4e2b53370ad5';
+import {addDaylight,refineSurfaces} from './atmosphere.js?v=4e2b53370ad5';
+import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=4e2b53370ad5';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -14,7 +14,7 @@ import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
-import { spots,movePosition } from './navigation.js?v=5f032c97f385';
+import { spots,movePosition } from './navigation.js?v=4e2b53370ad5';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 let language=initialLanguage(),currentRoom='living',level='ground',ready=false,changing=false,photoIndex=0,infoMode='about';
 const roomKeys=Object.keys(spots);
@@ -65,7 +65,7 @@ function showPhoto(i){
  $$('#photo-thumbs button').forEach((b,j)=>{b.setAttribute('aria-pressed',String(j===photoIndex));b.ariaLabel=t('photoNames')[j];});
  revealPhotoThumb();
 }
-photoFiles.forEach((name,i)=>{const b=document.createElement('button');b.innerHTML=`<img src="./photos/${name}.jpg" alt="" loading="lazy" decoding="async">`;b.addEventListener('click',()=>showPhoto(i));$('#photo-thumbs').appendChild(b);});
+photoFiles.forEach((name,i)=>{const b=document.createElement('button');b.innerHTML=`<img src="./photos/thumbs/${name}.jpg" width="96" height="64" alt="" loading="lazy" decoding="async">`;b.addEventListener('click',()=>showPhoto(i));$('#photo-thumbs').appendChild(b);});
 function gallery(index){releaseInput();showPhoto(Number.isInteger(index)?index:photoIndex);$('#gallery').showModal();revealPhotoThumb();}
 const photoSwipe=new PhotoSwipe(),photoImage=$('#gallery-image');
 photoImage.addEventListener('touchstart',e=>photoSwipe.begin(e.touches),{passive:true});
@@ -114,7 +114,7 @@ async function init(){
   const ground=new THREE.Mesh(new THREE.PlaneGeometry(90,90),new THREE.MeshStandardMaterial({color:'#babfa2',roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.13;ground.receiveShadow=true;scene.add(ground);
   const woven=weaveTexture(false);
   const aoExcluded=[];
-  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=5f032c97f385',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
+  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=4e2b53370ad5',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
   const processedMaterials=new Set();
   gltf.scene.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.receiveShadow=true;let m=o.material;
    if(/glass/i.test(m.name)){o.castShadow=false;m.side=THREE.DoubleSide;m.depthWrite=false;aoExcluded.push(o);}

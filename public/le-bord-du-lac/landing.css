@@ -197,7 +197,6 @@
  .flagship .arrival-details .photo-open{aspect-ratio:1.45}
  .photo-label{left:8px;bottom:8px;padding:6px 9px;font-size:12px}
  .flagship .terrace-portrait img{aspect-ratio:4/5;object-position:center}
- #gallery{padding:16px}
 }
 
 /* UI/UX Pro Max refinement: stable room previews, generous touch targets, native scroll. */
@@ -396,3 +395,11 @@
 }
 @media(max-width:370px){.flagship .arrival-heading h1{font-size:47px}.flagship h2{font-size:38px}.colour-pair{gap:12px}}
 @media(prefers-reduced-motion:reduce){.flagship button,.flagship a,.flagship button svg,.site-nav a:after{transition:none!important;transform:none!important}.site-nav a:after{transform:scaleX(0)!important}.site-nav a[aria-current=location]:after,.site-nav a:hover:after{transform:scaleX(1)!important}}
+
+/* Compact chapter rail: the photograph stays close to its controls on phones. */
+@media(max-width:600px){
+ .journey-top .journey-chapters{position:relative;display:flex;gap:16px;overflow-x:auto;overscroll-behavior-x:contain;padding:4px 2px 12px;scrollbar-width:thin;scrollbar-color:#b28f7d #efdfd2}
+ .journey-chapters button{flex:0 0 auto;min-width:76px;min-height:44px;padding:10px 0 6px;white-space:nowrap}
+ .journey-top{padding:8px 16px 0}
+ .journey-copy{padding-top:20px}
+}

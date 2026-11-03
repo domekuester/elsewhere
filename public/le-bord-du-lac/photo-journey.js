@@ -1,4 +1,4 @@
-import {JourneyPlayer} from './journey-player.js?v=5f032c97f385';
+import {JourneyPlayer} from './journey-player.js?v=4e2b53370ad5';
 const frames=[
  {photo:11,file:'terrace-seating-wide.jpg',position:'50% 50%'},
  {photo:5,file:'living-reverse-new.jpg',position:'50% 50%'},
@@ -34,6 +34,12 @@ export function setupJourney(api){
   open.querySelector('span').textContent=t.open;
   open.ariaLabel=api.t('photoNames')[frames[rendered].photo]+' · '+t.open;
   chapters.forEach((b,i)=>{b.querySelector('span').textContent=t.chapters[i].label;b.setAttribute('aria-pressed',String(i===wanted));});
+  const strip=section.querySelector('.journey-chapters'),selected=chapters[wanted];
+  if(strip.scrollWidth>strip.clientWidth){
+   const left=selected.offsetLeft-strip.offsetLeft,right=left+selected.offsetWidth;
+   if(left<strip.scrollLeft)strip.scrollLeft=left;
+   else if(right>strip.scrollLeft+strip.clientWidth)strip.scrollLeft=right-strip.clientWidth;
+  }
   layers[active].querySelector('img').alt=api.t('photoNames')[frames[rendered].photo];
   copy.setAttribute('aria-live',state.playing?'off':'polite');
   section.dataset.playing=String(state.playing);
