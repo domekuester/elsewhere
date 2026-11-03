@@ -84,7 +84,7 @@ export const copy = {
     "newWindow": "Öffnet Booking.com in einem neuen Tab.",
     "navHome": "Das Zuhause",
     "navTour": "Rundgang",
-    "navPhotos": "Einblicke",
+    "navPhotos": "Fotoreise",
     "availability": "Verfügbarkeit",
     "skipContent": "Zum Inhalt",
     "arrivalText": "Schaut euch vor eurem Aufenthalt die Räume und die Terrasse an.",
@@ -103,7 +103,7 @@ export const copy = {
     "previewTitle": "Begehbarer 3D-Entwurf",
     "previewNote": "Nach Fotos rekonstruiert. Maße und nicht sichtbare Details sind geschätzt.",
     "reconstructionMore": "Mehr zur Rekonstruktion",
-    "journalTitle": "Ein Blick in die Räume.",
+    "journalTitle": "Ein kleiner Vorgeschmack.",
     "journalCount": "Innenräume und Außenbereich",
     "kitchenCaption": "Die Küche mit dem Esstisch.",
     "bedroomCaption": "Das Bett auf der Schlafebene.",
@@ -151,7 +151,56 @@ export const copy = {
     "sunsetOpen": "Das ganze Foto ansehen",
     "landscapeTitle": "Wasser und grüne Höhen.",
     "landscapeText": "Ein weiterer Eindruck aus der Umgebung.",
-    "landscapeNote": "Umgebungsaufnahme · kein Ausblick aus der Unterkunft"
+    "landscapeNote": "Umgebungsaufnahme · kein Ausblick aus der Unterkunft",
+    "journeyLink": "Auf Fotoreise gehen",
+    "journeyIntro": "Vom ersten Ankommen bis zum Abendlicht. Sechs Bilder, ein kleiner Weg.",
+    "journey": {
+      "label": "Fotoreise durch Unterkunft und Umgebung",
+      "controls": "Fotoreise steuern",
+      "choose": "Kapitel wählen",
+      "play": "Fotoreise starten",
+      "pause": "Reise pausieren",
+      "replay": "Noch einmal ansehen",
+      "previous": "Vorheriges Kapitel",
+      "next": "Nächstes Kapitel",
+      "open": "Ganzes Foto ansehen",
+      "property": "Le bord du lac · Die Unterkunft",
+      "surroundings": "Umgebung · kein Ausblick aus der Unterkunft",
+      "loading": "Das nächste Foto wird geladen …",
+      "error": "Dieses Foto konnte nicht geladen werden. Bitte wählt das Kapitel noch einmal.",
+      "chapters": [
+        {
+          "label": "Ankommen",
+          "title": "Erst einmal ankommen.",
+          "text": "Ein Platz im Grünen, unter dem Terrassendach. Hier beginnt unser Weg durch Le bord du lac."
+        },
+        {
+          "label": "Wohnen",
+          "title": "Ein Blick nach drinnen.",
+          "text": "Unter der Holzdecke steht das Sofa. Daneben führt die Treppe hinauf zur Schlafebene."
+        },
+        {
+          "label": "Kochen",
+          "title": "Alles an einem Ort.",
+          "text": "Küche und Esstisch teilen sich den Raum. Gleich nebenan öffnet sich die Tür zur Terrasse."
+        },
+        {
+          "label": "Schlafen",
+          "title": "Oben wird es ruhig.",
+          "text": "Ein Bett unter der Dachschräge, Holzdielen und die kleine Lampe zum Lesen."
+        },
+        {
+          "label": "Unterwegs",
+          "title": "Draußen weitersehen.",
+          "text": "Wasser, Schilf und grüne Höhen: ein Eindruck aus der Umgebung."
+        },
+        {
+          "label": "Abendlicht",
+          "title": "Der Tag klingt aus.",
+          "text": "Die Sonne über dem Meer. Ein Boot zwischen den Felsen. Abendlicht in L’Étang-Salé."
+        }
+      ]
+    }
   },
   "fr": {
     "originalPhotos": "Photos originales du logement",
@@ -237,7 +286,7 @@ export const copy = {
     "newWindow": "Ouvre Booking.com dans un nouvel onglet.",
     "navHome": "Le logement",
     "navTour": "La visite",
-    "navPhotos": "En images",
+    "navPhotos": "En photos",
     "availability": "Disponibilités",
     "skipContent": "Aller au contenu",
     "arrivalText": "Découvrez les pièces et la terrasse avant votre séjour.",
@@ -256,7 +305,7 @@ export const copy = {
     "previewTitle": "Une ébauche 3D à explorer",
     "previewNote": "Reconstitution d’après photos. Dimensions et détails non visibles estimés.",
     "reconstructionMore": "À propos de la reconstitution",
-    "journalTitle": "Les pièces en images.",
+    "journalTitle": "Un avant-goût du séjour.",
     "journalCount": "Intérieur et extérieur",
     "kitchenCaption": "La cuisine et sa table.",
     "bedroomCaption": "Le lit sur la mezzanine.",
@@ -304,7 +353,56 @@ export const copy = {
     "sunsetOpen": "Voir la photo en entier",
     "landscapeTitle": "L’eau et les collines.",
     "landscapeText": "Un autre aperçu des environs.",
-    "landscapeNote": "Les environs · pas la vue depuis le logement"
+    "landscapeNote": "Les environs · pas la vue depuis le logement",
+    "journeyLink": "Découvrir en photos",
+    "journeyIntro": "De l’arrivée à la lumière du soir. Six photos, une petite échappée.",
+    "journey": {
+      "label": "Découverte du logement et des environs en photos",
+      "controls": "Commandes du parcours photo",
+      "choose": "Choisir une étape",
+      "play": "Lancer le parcours",
+      "pause": "Mettre en pause",
+      "replay": "Revoir le parcours",
+      "previous": "Étape précédente",
+      "next": "Étape suivante",
+      "open": "Voir la photo entière",
+      "property": "Le bord du lac · Le logement",
+      "surroundings": "Les environs · pas la vue depuis le logement",
+      "loading": "Chargement de la photo suivante…",
+      "error": "Cette photo n’a pas pu être chargée. Sélectionnez à nouveau cette étape.",
+      "chapters": [
+        {
+          "label": "Arriver",
+          "title": "Prendre le temps d’arriver.",
+          "text": "Une place dans la verdure, à l’abri de la terrasse. La découverte du Bord du lac commence ici."
+        },
+        {
+          "label": "Le salon",
+          "title": "Un regard à l’intérieur.",
+          "text": "Le canapé sous le plafond en bois. À côté, l’escalier mène à la mezzanine."
+        },
+        {
+          "label": "La cuisine",
+          "title": "Tout se rejoint ici.",
+          "text": "La cuisine et la table partagent la même pièce. Juste à côté, la porte s’ouvre sur la terrasse."
+        },
+        {
+          "label": "Dormir",
+          "title": "Là-haut, sous le toit.",
+          "text": "Un lit sous la pente du toit, un plancher en bois et une petite lampe pour lire."
+        },
+        {
+          "label": "Les environs",
+          "title": "Un peu plus loin.",
+          "text": "De l’eau, des roseaux et des collines verdoyantes : un aperçu des environs."
+        },
+        {
+          "label": "Le soir",
+          "title": "Le jour s’achève.",
+          "text": "Le soleil sur la mer. Un bateau entre les rochers. La lumière du soir à L’Étang-Salé."
+        }
+      ]
+    }
   },
   "en": {
     "originalPhotos": "Original property photographs",
@@ -390,7 +488,7 @@ export const copy = {
     "newWindow": "Opens Booking.com in a new tab.",
     "navHome": "The place",
     "navTour": "The tour",
-    "navPhotos": "Photos",
+    "navPhotos": "Photo journey",
     "availability": "Availability",
     "skipContent": "Skip to content",
     "arrivalText": "Take a look around the rooms and terrace before you arrive.",
@@ -409,7 +507,7 @@ export const copy = {
     "previewTitle": "An explorable 3D draft",
     "previewNote": "Reconstructed from photos. Dimensions and unseen details are estimated.",
     "reconstructionMore": "About the reconstruction",
-    "journalTitle": "Inside the rooms.",
+    "journalTitle": "A little taste of your stay.",
     "journalCount": "Inside and outside",
     "kitchenCaption": "The kitchen and dining table.",
     "bedroomCaption": "The bed in the sleeping loft.",
@@ -457,6 +555,55 @@ export const copy = {
     "sunsetOpen": "View the full photograph",
     "landscapeTitle": "Water and green hills.",
     "landscapeText": "Another glimpse of the surroundings.",
-    "landscapeNote": "Surroundings · not the view from the property"
+    "landscapeNote": "Surroundings · not the view from the property",
+    "journeyLink": "Take the photo journey",
+    "journeyIntro": "From arriving to the evening light. Six photographs, one short journey.",
+    "journey": {
+      "label": "A photo journey through the property and surroundings",
+      "controls": "Photo journey controls",
+      "choose": "Choose a chapter",
+      "play": "Start photo journey",
+      "pause": "Pause journey",
+      "replay": "Watch again",
+      "previous": "Previous chapter",
+      "next": "Next chapter",
+      "open": "View full photograph",
+      "property": "Le bord du lac · The property",
+      "surroundings": "Surroundings · not the view from the property",
+      "loading": "Loading the next photograph…",
+      "error": "This photograph could not load. Please choose the chapter again.",
+      "chapters": [
+        {
+          "label": "Arrive",
+          "title": "First, settle in.",
+          "text": "A seat among the greenery, beneath the terrace roof. Our journey through Le bord du lac begins here."
+        },
+        {
+          "label": "Living",
+          "title": "A look inside.",
+          "text": "The sofa sits beneath the timber ceiling. Beside it, the stairs lead up to the sleeping loft."
+        },
+        {
+          "label": "Cooking",
+          "title": "Everything together.",
+          "text": "The kitchen and dining table share one space, with the terrace door just beside them."
+        },
+        {
+          "label": "Sleeping",
+          "title": "Up under the roof.",
+          "text": "A bed beneath the sloping ceiling, timber floorboards and a little reading lamp."
+        },
+        {
+          "label": "Explore",
+          "title": "A little further afield.",
+          "text": "Water, reeds and green hills: a glimpse of the surroundings."
+        },
+        {
+          "label": "Sunset",
+          "title": "As the day winds down.",
+          "text": "The sun over the sea. A boat among the rocks. Evening light in L’Étang-Salé."
+        }
+      ]
+    }
   }
 };

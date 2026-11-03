@@ -1,5 +1,6 @@
+import {setupJourney,translateJourney} from './photo-journey.js?v=e0813cbbc0a4';
 // Original-photo landing page. Booking remains an explicit outbound link.
-import {bookingUrl} from './i18n.js?v=d1214798b114';
+import {bookingUrl} from './i18n.js?v=e0813cbbc0a4';
 const spaces={living:{photo:5,file:'living-reverse-new',caption:0},bedroom:{photo:13,file:'bedroom-lamp',caption:1},terrace:{photo:11,file:'terrace-seating-wide',caption:2}};
 let selectedSpace='terrace';
 function updateSpace(api){
@@ -13,6 +14,7 @@ function updateSpace(api){
  document.querySelectorAll('[data-space]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.space===selectedSpace)));
 }
 export function translateLanding(api){
+ translateJourney();
  updateSpace(api);
  const lang=api.language();
  document.querySelectorAll('[data-booking]').forEach(a=>{a.href=bookingUrl(lang);a.ariaLabel=a.textContent.trim()+'. '+api.t('newWindow');});
@@ -23,6 +25,7 @@ export function translateLanding(api){
  document.querySelectorAll('[data-site-language]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.siteLanguage===lang)));
 }
 export function setupLanding(api){
+ setupJourney(api);
  document.querySelectorAll('[data-space]').forEach(b=>b.addEventListener('click',()=>{selectedSpace=b.dataset.space;updateSpace(api);}));
  document.querySelectorAll('[data-gallery-index]').forEach(b=>b.addEventListener('click',()=>api.gallery(Number(b.dataset.galleryIndex))));
  document.querySelectorAll('[data-photo]').forEach(b=>b.addEventListener('click',()=>api.gallery(Number(b.dataset.photo))));

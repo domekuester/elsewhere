@@ -1,6 +1,6 @@
-import {setupLanding,translateLanding} from './landing.js?v=d1214798b114';
+import {setupLanding,translateLanding} from './landing.js?v=e0813cbbc0a4';
 // Guest-facing UI state. The scene remains in app.js; no storage or remote calls.
-export {copy as experienceCopy} from './copy.js?v=d1214798b114';
+export {copy as experienceCopy} from './copy.js?v=e0813cbbc0a4';
 let started=false,immersive=false,hasShownCoach=false,available=false,failed=false,api;
 let requested=false,loading=false,attempted=false,lastLaunch=null;
 const $=s=>document.querySelector(s);
