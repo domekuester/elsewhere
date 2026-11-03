@@ -1,5 +1,5 @@
 // Original-photo landing page. Booking remains an explicit outbound link.
-import {bookingUrl} from './i18n.js?v=db93fa129bd5';
+import {bookingUrl} from './i18n.js?v=a255798f1d64';
 export function translateLanding(api){
  const lang=api.language();
  document.querySelectorAll('[data-booking]').forEach(a=>{a.href=bookingUrl(lang);a.ariaLabel=a.textContent.trim()+'. '+api.t('newWindow');});
