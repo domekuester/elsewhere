@@ -1,11 +1,11 @@
-import {JourneyPlayer} from './journey-player.js?v=e0813cbbc0a4';
+import {JourneyPlayer} from './journey-player.js?v=5f032c97f385';
 const frames=[
  {photo:11,file:'terrace-seating-wide.jpg',position:'50% 50%'},
  {photo:5,file:'living-reverse-new.jpg',position:'50% 50%'},
  {photo:1,file:'kitchen-new.jpg',position:'50% 50%'},
  {photo:13,file:'bedroom-lamp.jpg',position:'50% 50%'},
  {photo:15,file:'water-and-green-hills-sdr.jpg',position:'50% 58%'},
- {photo:14,file:'sunset-etang-sale-sdr.jpg',position:'50% 35%'}
+ {photo:17,file:'boats-evening-etang-sale.jpg',position:'50% 50%'}
 ];
 let journey=null;
 export function translateJourney(){journey?.translate();}

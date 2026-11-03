@@ -1,6 +1,6 @@
-import {setupJourney,translateJourney} from './photo-journey.js?v=e0813cbbc0a4';
+import {setupJourney,translateJourney} from './photo-journey.js?v=5f032c97f385';
 // Original-photo landing page. Booking remains an explicit outbound link.
-import {bookingUrl} from './i18n.js?v=e0813cbbc0a4';
+import {bookingUrl} from './i18n.js?v=5f032c97f385';
 const spaces={living:{photo:5,file:'living-reverse-new',caption:0},bedroom:{photo:13,file:'bedroom-lamp',caption:1},terrace:{photo:11,file:'terrace-seating-wide',caption:2}};
 let selectedSpace='terrace';
 function updateSpace(api){
@@ -14,6 +14,12 @@ function updateSpace(api){
  document.querySelectorAll('[data-space]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.space===selectedSpace)));
 }
 export function translateLanding(api){
+ document.querySelectorAll('[data-editorial-title]').forEach(el=>{
+  const parts=api.t(el.dataset.i18n).split('\n');
+  if(parts.length<2)return;
+  const accent=document.createElement('em');accent.textContent=parts.slice(1).join(' ');
+  el.replaceChildren(document.createTextNode(parts[0]+' '),accent);
+ });
  translateJourney();
  updateSpace(api);
  const lang=api.language();

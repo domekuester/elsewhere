@@ -54,7 +54,10 @@ export const copy = {
       "Sitzplatz unter dem Terrassendach",
       "Schlafebene mit Bett und warmer Leselampe",
       "Sonnenuntergang in L’Étang-Salé · Umgebung",
-      "Wasser, Schilf und grüne Höhen · Umgebung"
+      "Wasser, Schilf und grüne Höhen · Umgebung",
+      "Sonnenuntergang unter dunklen Wolken · Umgebung",
+      "Boote im Abendlicht, eingerahmt von Blättern · Umgebung",
+      "Rosa Blüten und grünes Laub · Umgebung"
     ],
     "aboutTitle": "Ein erster räumlicher Eindruck",
     "aboutBody": "<p>Dieser begehbare <strong>3D-Entwurf wurde anhand der Unterkunftsfotos</strong> nachgebaut. Er zeigt die sichtbare Einrichtung und den ungefähren Zusammenhang der Räume.</p><p>Maße, Abstände, Raumhöhen, Treppe und nicht sichtbare Details sind geschätzt. Die Lichtstimmung ist gestalterisch gewählt. Das Badezimmer wurde nicht rekonstruiert. Die Schlafebene erreicht ihr per Raumauswahl; die Treppe lässt sich nicht begehen.</p><p class=\"note\">Der Entwurf ersetzt keine vermessene oder fotografische 360°-Begehung. Zum Vergleich könnt ihr die Originalfotos öffnen. Maßgeblich sind die aktuellen Angaben des Gastgebers.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.de.html\" target=\"_blank\" rel=\"noopener noreferrer\">Unterkunft auf Booking.com ansehen</a>",
@@ -109,7 +112,7 @@ export const copy = {
     "bedroomCaption": "Das Bett auf der Schlafebene.",
     "allPhotos": "Alle Fotos ansehen",
     "islandTitle": "Abendlicht in\nL’Étang-Salé.",
-    "islandText": "Die Sonne über dem Meer, ein Boot zwischen dunklen Felsen. Ein Eindruck von der Küste rund um L’Étang-Salé.",
+    "islandText": "Boote auf ruhigem Wasser, darüber das letzte Licht des Tages. Ein Eindruck von der Küste rund um L’Étang-Salé.",
     "islandCaption": "Abendstimmung in L’Étang-Salé · Umgebungsfoto",
     "islandNote": "Diese Aufnahme zeigt die Umgebung, nicht den Ausblick aus der Unterkunft.",
     "bookingTitle": "Plant ihr euren Aufenthalt?",
@@ -197,10 +200,12 @@ export const copy = {
         {
           "label": "Abendlicht",
           "title": "Der Tag klingt aus.",
-          "text": "Die Sonne über dem Meer. Ein Boot zwischen den Felsen. Abendlicht in L’Étang-Salé."
+          "text": "Unter den Blättern leuchtet der Abendhimmel. Boote liegen auf dem Wasser vor L’Étang-Salé."
         }
       ]
-    }
+    },
+    "cloudCaption": "Unter dunklen Wolken · Umgebung",
+    "flowerCaption": "Rosa Blüten im Sonnenlicht · Umgebung"
   },
   "fr": {
     "originalPhotos": "Photos originales du logement",
@@ -256,7 +261,10 @@ export const copy = {
       "Coin salon sous le toit de la terrasse",
       "Mezzanine avec lit et lumière douce de la lampe",
       "Coucher de soleil à L’Étang-Salé · Les environs",
-      "L’eau, les roseaux et les collines · Les environs"
+      "L’eau, les roseaux et les collines · Les environs",
+      "Coucher de soleil sous les nuages sombres · Les environs",
+      "Barques au crépuscule, encadrées de feuilles · Les environs",
+      "Fleurs roses et feuillage vert · Les environs"
     ],
     "aboutTitle": "Une première impression des volumes",
     "aboutBody": "<p>Cette <strong>ébauche 3D a été reconstituée à partir des photos du logement</strong>. Elle présente le mobilier visible et une approximation de l’organisation des espaces.</p><p>Les dimensions, distances, hauteurs, l’escalier et les détails non visibles sont estimés. L’éclairage est une interprétation. La salle de bains n’a pas été reconstituée. Pour rejoindre la mezzanine, utilisez le sélecteur d’espaces : l’escalier ne se monte pas dans la visite.</p><p class=\"note\">Cette ébauche ne remplace pas un relevé précis ou une visite photographique à 360°. Vous pouvez la comparer aux photos originales. Les informations actuelles de l’hôte font référence.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.fr.html\" target=\"_blank\" rel=\"noopener noreferrer\">Voir le logement sur Booking.com</a>",
@@ -311,7 +319,7 @@ export const copy = {
     "bedroomCaption": "Le lit sur la mezzanine.",
     "allPhotos": "Voir toutes les photos",
     "islandTitle": "Le soir à\nL’Étang-Salé.",
-    "islandText": "Le soleil sur la mer, une barque entre les rochers sombres. Un aperçu du littoral autour de L’Étang-Salé.",
+    "islandText": "Des barques sur une eau calme, les dernières lumières du jour. Un aperçu du littoral autour de L’Étang-Salé.",
     "islandCaption": "Le soir à L’Étang-Salé · Les environs",
     "islandNote": "Cette photo montre les environs, et non la vue depuis le logement.",
     "bookingTitle": "Envie de venir ?",
@@ -399,10 +407,12 @@ export const copy = {
         {
           "label": "Le soir",
           "title": "Le jour s’achève.",
-          "text": "Le soleil sur la mer. Un bateau entre les rochers. La lumière du soir à L’Étang-Salé."
+          "text": "Sous les feuilles, le ciel du soir s’illumine. Des barques reposent sur l’eau à L’Étang-Salé."
         }
       ]
-    }
+    },
+    "cloudCaption": "Sous les nuages sombres · Les environs",
+    "flowerCaption": "Fleurs roses au soleil · Les environs"
   },
   "en": {
     "originalPhotos": "Original property photographs",
@@ -458,7 +468,10 @@ export const copy = {
       "Seating beneath the terrace roof",
       "Sleeping loft with bed and warm lamplight",
       "Sunset in L’Étang-Salé · Surroundings",
-      "Water, reeds and green hills · Surroundings"
+      "Water, reeds and green hills · Surroundings",
+      "Sunset beneath dark clouds · Surroundings",
+      "Boats in the evening light, framed by leaves · Surroundings",
+      "Pink flowers and green foliage · Surroundings"
     ],
     "aboutTitle": "About this reconstruction",
     "aboutBody": "<p>This <strong>3D draft was built from photos of the accommodation</strong>. It shows the visible furniture and an approximate layout of the rooms.</p><p>Dimensions, distances, ceiling heights, stairs and details outside the photos are estimated. The lighting is an interpretation. The bathroom has not been reconstructed. Use the room selector to reach the loft; the stairs cannot be walked up.</p><p class=\"note\">This is not a measured model or a photographic 360° tour. You can compare it with the original photos. For current details about the accommodation, please refer to the host’s listing.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.en-gb.html\" target=\"_blank\" rel=\"noopener noreferrer\">View the accommodation on Booking.com</a>",
@@ -513,7 +526,7 @@ export const copy = {
     "bedroomCaption": "The bed in the sleeping loft.",
     "allPhotos": "View all photos",
     "islandTitle": "Sunset in\nL’Étang-Salé.",
-    "islandText": "Sunset over the sea, a boat among dark rocks. A glimpse of the coast around L’Étang-Salé.",
+    "islandText": "Boats on calm water, the last light of the day above. A glimpse of the coast around L’Étang-Salé.",
     "islandCaption": "Evening in L’Étang-Salé · Surroundings",
     "islandNote": "This photograph shows the surroundings, not the view from the property.",
     "bookingTitle": "Planning your stay?",
@@ -601,9 +614,11 @@ export const copy = {
         {
           "label": "Sunset",
           "title": "As the day winds down.",
-          "text": "The sun over the sea. A boat among the rocks. Evening light in L’Étang-Salé."
+          "text": "The evening sky glows beneath the leaves. Boats rest on the water at L’Étang-Salé."
         }
       ]
-    }
+    },
+    "cloudCaption": "Beneath dark clouds · Surroundings",
+    "flowerCaption": "Pink flowers in sunlight · Surroundings"
   }
 };
