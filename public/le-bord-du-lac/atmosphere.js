@@ -1,4 +1,4 @@
-import {addSky} from './sky.js?v=c128dcf1d2e6';
+import {addSky} from './sky.js?v=db93fa129bd5';
 import * as THREE from 'three';
 import {RectAreaLightUniformsLib} from 'three/addons/lights/RectAreaLightUniformsLib.js';
 

@@ -46,7 +46,10 @@ export const copy = {
       "Badebucht in der Umgebung",
       "Terrasse, Fassade und Baum",
       "Badezimmer mit Waschtisch und WC",
-      "Dusche und Waschtisch"
+      "Dusche und Waschtisch",
+      "Sofa und Textilien am Fenster",
+      "Terrasse mit Sitzgruppe und Fassade",
+      "Sitzplatz unter dem Terrassendach"
     ],
     "aboutTitle": "Ein erster räumlicher Eindruck",
     "aboutBody": "<p>Dieser begehbare <strong>3D-Entwurf wurde anhand der Unterkunftsfotos</strong> nachgebaut. Er zeigt die sichtbare Einrichtung und den ungefähren Zusammenhang der Räume.</p><p>Maße, Abstände, Raumhöhen, Treppe und nicht sichtbare Details sind geschätzt. Die Lichtstimmung ist gestalterisch gewählt. Das Badezimmer wurde nicht rekonstruiert. Die Schlafebene erreicht ihr per Raumauswahl; die Treppe lässt sich nicht begehen.</p><p class=\"note\">Der Entwurf ersetzt keine vermessene oder fotografische 360°-Begehung. Zum Vergleich könnt ihr die Originalfotos öffnen. Maßgeblich sind die aktuellen Angaben des Gastgebers.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.de.html\" target=\"_blank\" rel=\"noopener noreferrer\">Unterkunft auf Booking.com ansehen</a>",
@@ -181,7 +184,10 @@ export const copy = {
       "Baignade aux alentours",
       "Terrasse, façade et arbre",
       "Salle de bains : vasque et toilettes",
-      "Douche et vasque"
+      "Douche et vasque",
+      "Canapé et textiles près de la fenêtre",
+      "Terrasse, coin salon et façade",
+      "Coin salon sous le toit de la terrasse"
     ],
     "aboutTitle": "Une première impression des volumes",
     "aboutBody": "<p>Cette <strong>ébauche 3D a été reconstituée à partir des photos du logement</strong>. Elle présente le mobilier visible et une approximation de l’organisation des espaces.</p><p>Les dimensions, distances, hauteurs, l’escalier et les détails non visibles sont estimés. L’éclairage est une interprétation. La salle de bains n’a pas été reconstituée. Pour rejoindre la mezzanine, utilisez le sélecteur d’espaces : l’escalier ne se monte pas dans la visite.</p><p class=\"note\">Cette ébauche ne remplace pas un relevé précis ou une visite photographique à 360°. Vous pouvez la comparer aux photos originales. Les informations actuelles de l’hôte font référence.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.fr.html\" target=\"_blank\" rel=\"noopener noreferrer\">Voir le logement sur Booking.com</a>",
@@ -316,7 +322,10 @@ export const copy = {
       "Coastal inlet in the surrounding area",
       "Terrace, exterior and tree",
       "Bathroom with basin and toilet",
-      "Shower and basin"
+      "Shower and basin",
+      "Sofa and textiles by the window",
+      "Terrace seating and exterior",
+      "Seating beneath the terrace roof"
     ],
     "aboutTitle": "About this reconstruction",
     "aboutBody": "<p>This <strong>3D draft was built from photos of the accommodation</strong>. It shows the visible furniture and an approximate layout of the rooms.</p><p>Dimensions, distances, ceiling heights, stairs and details outside the photos are estimated. The lighting is an interpretation. The bathroom has not been reconstructed. Use the room selector to reach the loft; the stairs cannot be walked up.</p><p class=\"note\">This is not a measured model or a photographic 360° tour. You can compare it with the original photos. For current details about the accommodation, please refer to the host’s listing.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.en-gb.html\" target=\"_blank\" rel=\"noopener noreferrer\">View the accommodation on Booking.com</a>",

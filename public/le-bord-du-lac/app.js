@@ -1,9 +1,9 @@
-import {TourGestures} from './touch-controls.js?v=c128dcf1d2e6';
-import {copy} from './copy.js?v=c128dcf1d2e6';
-import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=c128dcf1d2e6';
-import {advanceWalking} from './motion.js?v=c128dcf1d2e6';
-import {addDaylight,refineSurfaces} from './atmosphere.js?v=c128dcf1d2e6';
-import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=c128dcf1d2e6';
+import {TourGestures} from './touch-controls.js?v=db93fa129bd5';
+import {copy} from './copy.js?v=db93fa129bd5';
+import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=db93fa129bd5';
+import {advanceWalking} from './motion.js?v=db93fa129bd5';
+import {addDaylight,refineSurfaces} from './atmosphere.js?v=db93fa129bd5';
+import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=db93fa129bd5';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -13,11 +13,11 @@ import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
-import { spots,movePosition } from './navigation.js?v=c128dcf1d2e6';
+import { spots,movePosition } from './navigation.js?v=db93fa129bd5';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 let language=initialLanguage(),currentRoom='living',level='ground',ready=false,changing=false,photoIndex=0,infoMode='about';
 const roomKeys=Object.keys(spots);
-const photoFiles=['living-new','kitchen-new','terrace','beach','bedroom-new','living-reverse-new','lagoon','terrace-facade','bathroom-washbasin-toilet','bathroom-shower'];
+const photoFiles=['living-new','kitchen-new','terrace','beach','bedroom-new','living-reverse-new','lagoon','terrace-facade','bathroom-washbasin-toilet','bathroom-shower','sofa-detail','terrace-seating-wide','terrace-under-roof'];
 function t(key){return copy[language][key];}
 function updateRoomUI(){
  const idx=roomKeys.indexOf(currentRoom);
@@ -100,7 +100,7 @@ async function init(){
   const ground=new THREE.Mesh(new THREE.PlaneGeometry(90,90),new THREE.MeshStandardMaterial({color:'#babfa2',roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.13;ground.receiveShadow=true;scene.add(ground);
   const woven=weaveTexture(false);
   const aoExcluded=[];
-  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=c128dcf1d2e6',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
+  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=db93fa129bd5',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
   const processedMaterials=new Set();
   gltf.scene.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.receiveShadow=true;let m=o.material;
    if(/glass/i.test(m.name)){o.castShadow=false;m.side=THREE.DoubleSide;m.depthWrite=false;aoExcluded.push(o);}
