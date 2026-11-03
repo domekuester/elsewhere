@@ -20,7 +20,7 @@ export const copy = {
     "hint": "Ziehen zum Umschauen · Pfeiltasten zum Gehen",
     "reset": "Zum Ausgangspunkt",
     "sourcePhotos": "Die Unterkunft in Bildern",
-    "photoCredit": "Originalfotos aus dem Inserat und den bereitgestellten Unterkunftsaufnahmen.",
+    "photoCredit": "Originalfotos aus dem Inserat und bereitgestellte Aufnahmen der Unterkunft und ihrer Umgebung.",
     "upstairs": "Zur Schlafebene",
     "hideMap": "Grundriss ein-/ausblenden",
     "ground": "Erdgeschoss",
@@ -52,7 +52,8 @@ export const copy = {
       "Sofa und Textilien am Fenster",
       "Terrasse mit Sitzgruppe und Fassade",
       "Sitzplatz unter dem Terrassendach",
-      "Schlafebene mit Bett und warmer Leselampe"
+      "Schlafebene mit Bett und warmer Leselampe",
+      "Sonnenuntergang in L’Étang-Salé · Umgebung"
     ],
     "aboutTitle": "Ein erster räumlicher Eindruck",
     "aboutBody": "<p>Dieser begehbare <strong>3D-Entwurf wurde anhand der Unterkunftsfotos</strong> nachgebaut. Er zeigt die sichtbare Einrichtung und den ungefähren Zusammenhang der Räume.</p><p>Maße, Abstände, Raumhöhen, Treppe und nicht sichtbare Details sind geschätzt. Die Lichtstimmung ist gestalterisch gewählt. Das Badezimmer wurde nicht rekonstruiert. Die Schlafebene erreicht ihr per Raumauswahl; die Treppe lässt sich nicht begehen.</p><p class=\"note\">Der Entwurf ersetzt keine vermessene oder fotografische 360°-Begehung. Zum Vergleich könnt ihr die Originalfotos öffnen. Maßgeblich sind die aktuellen Angaben des Gastgebers.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.de.html\" target=\"_blank\" rel=\"noopener noreferrer\">Unterkunft auf Booking.com ansehen</a>",
@@ -106,10 +107,10 @@ export const copy = {
     "kitchenCaption": "Die Küche mit dem Esstisch.",
     "bedroomCaption": "Das Bett auf der Schlafebene.",
     "allPhotos": "Alle Fotos ansehen",
-    "islandTitle": "Rund um\nL’Étang-Salé.",
-    "islandText": "Eindrücke aus der Umgebung, aus dem Inserat von Jean Pierre.",
-    "islandCaption": "Umgebungsfoto aus dem Inserat",
-    "islandNote": "Die Bilder zeigen die Umgebung, nicht den Ausblick aus der Unterkunft.",
+    "islandTitle": "Abendlicht in\nL’Étang-Salé.",
+    "islandText": "Die Sonne über dem Meer, ein Boot zwischen dunklen Felsen. Ein Eindruck von der Küste rund um L’Étang-Salé.",
+    "islandCaption": "Abendstimmung in L’Étang-Salé · Umgebungsfoto",
+    "islandNote": "Diese Aufnahme zeigt die Umgebung, nicht den Ausblick aus der Unterkunft.",
     "bookingTitle": "Plant ihr euren Aufenthalt?",
     "bookingText": "Freie Termine, Preise und Buchungsbedingungen findet ihr auf Booking.com.",
     "bookingAction": "Verfügbarkeit auf Booking prüfen",
@@ -139,7 +140,14 @@ export const copy = {
     "stickHint": "Ziehen zum Gehen",
     "lookHint": "Wischen zum Umschauen",
     "bathroomPhotos": "Das Badezimmer ansehen",
-    "coachTouch": "Links am Regler ziehen, um zu gehen. Über das Bild wischen, um euch umzuschauen. Unten könnt ihr direkt einen Raum wählen."
+    "coachTouch": "Links am Regler ziehen, um zu gehen. Über das Bild wischen, um euch umzuschauen. Unten könnt ihr direkt einen Raum wählen.",
+    "spaceChoose": "Räume entdecken",
+    "spaceCaptions": [
+      "Sofa, Holzdecke und die Tür zum Badezimmer.",
+      "Ein Bett unter dem Dach, mit Licht zum Lesen.",
+      "Ein überdachter Platz zum Draußensitzen."
+    ],
+    "sunsetOpen": "Das ganze Foto ansehen"
   },
   "fr": {
     "originalPhotos": "Photos originales du logement",
@@ -161,7 +169,7 @@ export const copy = {
     "hint": "Glisser pour regarder · Flèches pour avancer",
     "reset": "Au point de départ",
     "sourcePhotos": "Le logement en images",
-    "photoCredit": "Photos originales de l’annonce et photos du logement transmises pour cette visite.",
+    "photoCredit": "Photos originales de l’annonce et photos fournies du logement et de ses environs.",
     "upstairs": "Vers la mezzanine",
     "hideMap": "Afficher/masquer le plan",
     "ground": "Rez-de-chaussée",
@@ -193,7 +201,8 @@ export const copy = {
       "Canapé et textiles près de la fenêtre",
       "Terrasse, coin salon et façade",
       "Coin salon sous le toit de la terrasse",
-      "Mezzanine avec lit et lumière douce de la lampe"
+      "Mezzanine avec lit et lumière douce de la lampe",
+      "Coucher de soleil à L’Étang-Salé · Les environs"
     ],
     "aboutTitle": "Une première impression des volumes",
     "aboutBody": "<p>Cette <strong>ébauche 3D a été reconstituée à partir des photos du logement</strong>. Elle présente le mobilier visible et une approximation de l’organisation des espaces.</p><p>Les dimensions, distances, hauteurs, l’escalier et les détails non visibles sont estimés. L’éclairage est une interprétation. La salle de bains n’a pas été reconstituée. Pour rejoindre la mezzanine, utilisez le sélecteur d’espaces : l’escalier ne se monte pas dans la visite.</p><p class=\"note\">Cette ébauche ne remplace pas un relevé précis ou une visite photographique à 360°. Vous pouvez la comparer aux photos originales. Les informations actuelles de l’hôte font référence.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.fr.html\" target=\"_blank\" rel=\"noopener noreferrer\">Voir le logement sur Booking.com</a>",
@@ -247,10 +256,10 @@ export const copy = {
     "kitchenCaption": "La cuisine et sa table.",
     "bedroomCaption": "Le lit sur la mezzanine.",
     "allPhotos": "Voir toutes les photos",
-    "islandTitle": "Autour de\nL’Étang-Salé.",
-    "islandText": "Quelques vues des alentours, tirées de l’annonce de Jean Pierre.",
-    "islandCaption": "Photo des alentours issue de l’annonce",
-    "islandNote": "Ces images montrent les alentours, pas la vue depuis le logement.",
+    "islandTitle": "Le soir à\nL’Étang-Salé.",
+    "islandText": "Le soleil sur la mer, une barque entre les rochers sombres. Un aperçu du littoral autour de L’Étang-Salé.",
+    "islandCaption": "Le soir à L’Étang-Salé · Les environs",
+    "islandNote": "Cette photo montre les environs, et non la vue depuis le logement.",
     "bookingTitle": "Envie de venir ?",
     "bookingText": "Consultez les dates, les tarifs et les conditions de réservation sur Booking.com.",
     "bookingAction": "Voir les disponibilités sur Booking",
@@ -280,7 +289,14 @@ export const copy = {
     "stickHint": "Glisser pour avancer",
     "lookHint": "Glisser pour regarder",
     "bathroomPhotos": "Voir la salle de bains",
-    "coachTouch": "Glissez sur la commande à gauche pour avancer. Glissez sur l’image pour regarder autour de vous. Choisissez un espace en bas pour y accéder directement."
+    "coachTouch": "Glissez sur la commande à gauche pour avancer. Glissez sur l’image pour regarder autour de vous. Choisissez un espace en bas pour y accéder directement.",
+    "spaceChoose": "Découvrez les espaces",
+    "spaceCaptions": [
+      "Le canapé, le plafond en bois et la porte de la salle de bains.",
+      "Un lit sous les toits, avec une lampe pour lire.",
+      "Un coin couvert pour s’installer dehors."
+    ],
+    "sunsetOpen": "Voir la photo en entier"
   },
   "en": {
     "originalPhotos": "Original property photographs",
@@ -302,7 +318,7 @@ export const copy = {
     "hint": "Drag to look around · Arrow keys to move",
     "reset": "Back to the start",
     "sourcePhotos": "A look inside",
-    "photoCredit": "Original photos from the listing and the supplied accommodation photographs.",
+    "photoCredit": "Original listing photographs and supplied photographs of the property and its surroundings.",
     "upstairs": "Go to the loft",
     "hideMap": "Show or hide the floor plan",
     "ground": "Ground floor",
@@ -334,7 +350,8 @@ export const copy = {
       "Sofa and textiles by the window",
       "Terrace seating and exterior",
       "Seating beneath the terrace roof",
-      "Sleeping loft with bed and warm lamplight"
+      "Sleeping loft with bed and warm lamplight",
+      "Sunset in L’Étang-Salé · Surroundings"
     ],
     "aboutTitle": "About this reconstruction",
     "aboutBody": "<p>This <strong>3D draft was built from photos of the accommodation</strong>. It shows the visible furniture and an approximate layout of the rooms.</p><p>Dimensions, distances, ceiling heights, stairs and details outside the photos are estimated. The lighting is an interpretation. The bathroom has not been reconstructed. Use the room selector to reach the loft; the stairs cannot be walked up.</p><p class=\"note\">This is not a measured model or a photographic 360° tour. You can compare it with the original photos. For current details about the accommodation, please refer to the host’s listing.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.en-gb.html\" target=\"_blank\" rel=\"noopener noreferrer\">View the accommodation on Booking.com</a>",
@@ -388,10 +405,10 @@ export const copy = {
     "kitchenCaption": "The kitchen and dining table.",
     "bedroomCaption": "The bed in the sleeping loft.",
     "allPhotos": "View all photos",
-    "islandTitle": "Around\nL’Étang-Salé.",
-    "islandText": "A few impressions of the area, from Jean Pierre’s listing.",
-    "islandCaption": "Surrounding area · photo from the listing",
-    "islandNote": "These photos show the surrounding area, not the view from the accommodation.",
+    "islandTitle": "Sunset in\nL’Étang-Salé.",
+    "islandText": "Sunset over the sea, a boat among dark rocks. A glimpse of the coast around L’Étang-Salé.",
+    "islandCaption": "Evening in L’Étang-Salé · Surroundings",
+    "islandNote": "This photograph shows the surroundings, not the view from the property.",
     "bookingTitle": "Planning your stay?",
     "bookingText": "Check dates, rates and booking conditions on Booking.com.",
     "bookingAction": "Check availability on Booking",
@@ -421,6 +438,13 @@ export const copy = {
     "stickHint": "Drag to walk",
     "lookHint": "Swipe to look around",
     "bathroomPhotos": "See the bathroom",
-    "coachTouch": "Drag the control on the left to walk. Swipe the view to look around. Choose a room below to go straight there."
+    "coachTouch": "Drag the control on the left to walk. Swipe the view to look around. Choose a room below to go straight there.",
+    "spaceChoose": "Explore the spaces",
+    "spaceCaptions": [
+      "The sofa, timber ceiling and doorway to the bathroom.",
+      "A bed beneath the roof, with a light for reading.",
+      "A covered corner for sitting outside."
+    ],
+    "sunsetOpen": "View the full photograph"
   }
 };

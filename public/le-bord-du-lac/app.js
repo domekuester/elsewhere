@@ -1,9 +1,10 @@
-import {TourGestures,PhotoSwipe} from './touch-controls.js?v=e79108d089b5';
-import {copy} from './copy.js?v=e79108d089b5';
-import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=e79108d089b5';
-import {advanceWalking} from './motion.js?v=e79108d089b5';
-import {addDaylight,refineSurfaces} from './atmosphere.js?v=e79108d089b5';
-import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=e79108d089b5';
+import {FrameLoop} from './frame-loop.js?v=a883b28654e7';
+import {TourGestures,PhotoSwipe} from './touch-controls.js?v=a883b28654e7';
+import {copy} from './copy.js?v=a883b28654e7';
+import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=a883b28654e7';
+import {advanceWalking} from './motion.js?v=a883b28654e7';
+import {addDaylight,refineSurfaces} from './atmosphere.js?v=a883b28654e7';
+import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=a883b28654e7';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -13,11 +14,11 @@ import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
-import { spots,movePosition } from './navigation.js?v=e79108d089b5';
+import { spots,movePosition } from './navigation.js?v=a883b28654e7';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 let language=initialLanguage(),currentRoom='living',level='ground',ready=false,changing=false,photoIndex=0,infoMode='about';
 const roomKeys=Object.keys(spots);
-const photoFiles=['living-new','kitchen-new','terrace','beach','bedroom-new','living-reverse-new','lagoon','terrace-facade','bathroom-washbasin-toilet','bathroom-shower','sofa-detail','terrace-seating-wide','terrace-under-roof','bedroom-lamp'];
+const photoFiles=['living-new','kitchen-new','terrace','beach','bedroom-new','living-reverse-new','lagoon','terrace-facade','bathroom-washbasin-toilet','bathroom-shower','sofa-detail','terrace-seating-wide','terrace-under-roof','bedroom-lamp','sunset-etang-sale'];
 function t(key){return copy[language][key];}
 function updateRoomUI(){
  const idx=roomKeys.indexOf(currentRoom);
@@ -64,7 +65,7 @@ function showPhoto(i){
  $$('#photo-thumbs button').forEach((b,j)=>{b.setAttribute('aria-pressed',String(j===photoIndex));b.ariaLabel=t('photoNames')[j];});
  revealPhotoThumb();
 }
-photoFiles.forEach((name,i)=>{const b=document.createElement('button');b.innerHTML=`<img src="./photos/${name}.jpg" alt="">`;b.addEventListener('click',()=>showPhoto(i));$('#photo-thumbs').appendChild(b);});
+photoFiles.forEach((name,i)=>{const b=document.createElement('button');b.innerHTML=`<img src="./photos/${name}.jpg" alt="" loading="lazy" decoding="async">`;b.addEventListener('click',()=>showPhoto(i));$('#photo-thumbs').appendChild(b);});
 function gallery(index){releaseInput();showPhoto(Number.isInteger(index)?index:photoIndex);$('#gallery').showModal();revealPhotoThumb();}
 const photoSwipe=new PhotoSwipe(),photoImage=$('#gallery-image');
 photoImage.addEventListener('touchstart',e=>photoSwipe.begin(e.touches),{passive:true});
@@ -113,7 +114,7 @@ async function init(){
   const ground=new THREE.Mesh(new THREE.PlaneGeometry(90,90),new THREE.MeshStandardMaterial({color:'#babfa2',roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.13;ground.receiveShadow=true;scene.add(ground);
   const woven=weaveTexture(false);
   const aoExcluded=[];
-  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=e79108d089b5',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
+  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=a883b28654e7',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
   const processedMaterials=new Set();
   gltf.scene.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.receiveShadow=true;let m=o.material;
    if(/glass/i.test(m.name)){o.castShadow=false;m.side=THREE.DoubleSide;m.depthWrite=false;aoExcluded.push(o);}
@@ -134,8 +135,8 @@ async function init(){
   aoPass._overrideVisibility=()=>{baseOverride();for(const o of aoExcluded)if(o.visible){o.visible=false;aoPass._visibilityCache.push(o);}};
   composer.addPass(aoPass);composer.addPass(new OutputPass());
   fxaaPass=new ShaderPass(FXAAShader);composer.addPass(fxaaPass);resizeEffects();
-  ready=true;document.body.dataset.loaded='true';$('#load-fill').style.width='100%';$('#load-text').textContent='100 %';composer.render();renderer.shadowMap.autoUpdate=false;$('#loading').classList.add('done');setTimeout(()=>$('#loading').hidden=true,550);tourReady();requestAnimationFrame(animate);
-  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();ready=false;releaseInput();$('#error').hidden=false;tourFailed();});
+  ready=true;document.body.dataset.loaded='true';$('#load-fill').style.width='100%';$('#load-text').textContent='100 %';composer.render();renderer.shadowMap.autoUpdate=false;$('#loading').classList.add('done');setTimeout(()=>$('#loading').hidden=true,550);tourReady();
+  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();ready=false;setSceneActive(false);releaseInput();$('#error').hidden=false;tourFailed();});
  }catch(e){console.error('Tour loading failed',e);$('#loading').hidden=true;$('#error').hidden=false;tourFailed();}
 }
 const mayNavigate=()=>ready&&!changing&&isExploring()&&!$('dialog[open]');
@@ -166,14 +167,14 @@ stick.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','Arro
 stick.addEventListener('blur',releaseInput);
 const activeCodes=['KeyW','KeyA','KeyS','KeyD','KeyQ','KeyE','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'];
 document.addEventListener('keydown',e=>{if(!ready||!isExploring()||$('dialog[open]')||e.ctrlKey||e.metaKey||e.altKey)return;if(e.target.closest('button,a,input,textarea,select'))return;if(activeCodes.includes(e.code)){e.preventDefault();keys.add(e.code);}});
-document.addEventListener('keyup',e=>keys.delete(e.code));window.addEventListener('blur',releaseInput);document.addEventListener('visibilitychange',()=>{if(document.hidden)releaseInput();});
+document.addEventListener('keyup',e=>keys.delete(e.code));window.addEventListener('blur',releaseInput);document.addEventListener('visibilitychange',()=>{if(document.hidden)releaseInput();setSceneActive(isExploring());});
 $$('[data-move]').forEach(b=>{
  b.addEventListener('pointerdown',e=>{e.preventDefault();if(!mayNavigate())return;padMove=b.dataset.move;b.classList.add('held');b.setPointerCapture(e.pointerId);});
  const stop=()=>{padMove=null;b.classList.remove('held');};b.addEventListener('pointerup',stop);b.addEventListener('pointercancel',stop);b.addEventListener('lostpointercapture',stop);
  b.addEventListener('click',e=>{if(e.detail===0&&ready){padMove=b.dataset.move;setTimeout(stop,150);}});
 });
 function animate(now){
- if(!ready)return;requestAnimationFrame(animate);const dt=Math.min((now-last)/1000,.04);last=now;if(document.hidden)return;
+ if(!ready||document.hidden||!isExploring())return;const dt=Math.min((now-last)/1000,.04);last=now;
  if(isExploring()&&!$('dialog[open]')&&!changing){
   if(keys.has('KeyQ'))yaw+=dt*1.15;if(keys.has('KeyE'))yaw-=dt*1.15;
   let f=Number(keys.has('KeyW')||keys.has('ArrowUp')||padMove==='forward')-Number(keys.has('KeyS')||keys.has('ArrowDown')||padMove==='back');
@@ -210,5 +211,7 @@ function botanicalTexture(){
  }
  const map=new THREE.CanvasTexture(c);map.colorSpace=THREE.SRGBColorSpace;map.wrapS=map.wrapT=THREE.RepeatWrapping;return map;
 }
-setupExperience({t,language:()=>language,gallery,openInfo,releaseInput,prepare:init,changeLanguage});
+const frames=new FrameLoop(animate,requestAnimationFrame.bind(window),cancelAnimationFrame.bind(window));
+function setSceneActive(active){if(active&&ready&&!document.hidden){last=performance.now();frames.start();}else frames.stop();}
+setupExperience({setSceneActive,t,language:()=>language,gallery,openInfo,releaseInput,prepare:init,changeLanguage});
 translate();

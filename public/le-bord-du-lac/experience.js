@@ -1,6 +1,6 @@
-import {setupLanding,translateLanding} from './landing.js?v=e79108d089b5';
+import {setupLanding,translateLanding} from './landing.js?v=a883b28654e7';
 // Guest-facing UI state. The scene remains in app.js; no storage or remote calls.
-export {copy as experienceCopy} from './copy.js?v=e79108d089b5';
+export {copy as experienceCopy} from './copy.js?v=a883b28654e7';
 let started=false,immersive=false,hasShownCoach=false,available=false,failed=false,api;
 let requested=false,loading=false,attempted=false,lastLaunch=null;
 const $=s=>document.querySelector(s);
@@ -20,13 +20,13 @@ function requestEnter(event){
 }
 function cancelEntry(){requested=false;translateExperience();}
 function enter(){
- if(!available)return;requested=false;started=true;$('#welcome-screen').hidden=true;$('#tour').inert=false;document.body.dataset.mode='tour';
+ if(!available)return;requested=false;started=true;$('#welcome-screen').hidden=true;$('#tour').inert=false;document.body.dataset.mode='tour';api.setSceneActive(true);
  api.releaseInput();$('#view').focus({preventScroll:true});
  if(!hasShownCoach){$('#coach').hidden=false;hasShownCoach=true;}
 }
 async function welcome(){
  if(document.fullscreenElement)try{await document.exitFullscreen();}catch{}
- api.releaseInput();focusMode(false);started=false;document.body.dataset.mode='welcome';$('#tour').inert=true;$('#welcome-screen').hidden=false;dismissCoach();(lastLaunch||$('#welcome-start')).focus({preventScroll:true});
+ api.releaseInput();focusMode(false);started=false;api.setSceneActive(false);document.body.dataset.mode='welcome';$('#tour').inert=true;$('#welcome-screen').hidden=false;dismissCoach();(lastLaunch||$('#welcome-start')).focus({preventScroll:true});
 }
 export function translateExperience(){
  if(!api)return;const t=api.t;
