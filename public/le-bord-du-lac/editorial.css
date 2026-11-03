@@ -1,0 +1,117 @@
+/* Photographic editorial finish. Original photographs and native scrolling remain authoritative. */
+.flagship{--motion-ease:cubic-bezier(.16,1,.3,1);--editorial-line:#cdbbab;--paper-warm:#faf7f0}
+.flagship ::selection{background:#dcb39b;color:#302d25}
+.flagship .arrival-photo{animation:none}
+.flagship .arrival-heading{align-items:center;padding-bottom:38px}
+.flagship .arrival-host{font:italic 400 24px/1.25 Newsreader,Georgia,serif;max-width:20ch;text-wrap:balance;text-align:right;color:#705341}
+.arrival-mosaic{grid-template-columns:minmax(0,2.08fr) minmax(0,1fr);gap:24px;align-items:start}
+.flagship .arrival-mosaic>.photo-open{aspect-ratio:2.08;height:auto;align-self:stretch}
+.flagship .arrival-mosaic>.photo-open img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.arrival-details{gap:18px;grid-template-rows:auto auto;padding-top:8px}
+.flagship .arrival-details .photo-open{aspect-ratio:auto;overflow:visible;border-radius:0}
+.flagship .arrival-details img{height:auto;aspect-ratio:2.7;object-fit:cover;border-radius:3px;transition:filter .25s}
+.detail-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:9px;font-size:13px;line-height:1.3;color:#654936}
+.detail-caption svg{width:16px;height:16px;flex-shrink:0;transition:transform .28s var(--motion-ease)}
+.flagship .arrival-details .photo-open:hover img{transform:none;filter:brightness(1.045)}
+.arrival-details .photo-open:hover .detail-caption svg{transform:translateX(4px)}
+.flagship .arrival-photo figcaption{padding-top:12px;border-top:1px solid var(--editorial-line);margin-top:20px}
+.flagship .arrival-intro{margin-top:28px}
+.flagship .arrival-intro>p{max-width:35ch}
+.flagship .site-button{border-radius:3px;min-height:58px;padding:16px 22px;box-shadow:none}
+.flagship .site-button:not(:disabled):hover{transform:none;box-shadow:0 8px 18px -14px #53382d80}
+.site-button svg{flex-shrink:0}
+.flagship .site-button:not(:disabled):hover svg{transform:translateX(5px)}
+.flagship .site-button:not(:disabled):active{transform:scale(.985);box-shadow:none}
+.booking-outline{border-radius:3px}
+.flagship .section-space{padding-block:112px;scroll-margin-top:-112px}
+.flagship .home-story{gap:9%;grid-template-columns:.95fr 1.15fr}
+.space-list button{background:none;padding:16px 8px;gap:20px;min-height:88px}
+.space-list button[aria-pressed=true]{background:transparent;color:var(--clay)}
+.space-list button img{width:70px;height:52px;opacity:.65;transition:opacity .22s}
+.space-list button[aria-pressed=true] img,.space-list button:hover img{opacity:1}
+.space-list button[aria-pressed=true] span{text-decoration:none}
+.space-list button[aria-pressed=true] svg{transform:translateX(4px)}
+.space-preview{padding:24px 24px 0 0}
+.space-preview:before{background:#e5c7b2;border-radius:80px 0 0 0;width:65%;height:80%}
+.space-preview .photo-open{isolation:isolate}
+.space-preview img:not(.room-outgoing){position:relative}
+.flagship .space-preview .room-outgoing{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.space-preview .photo-open-mark{z-index:1}
+.flagship .space-preview figcaption{max-width:38ch;padding-left:16px;border-left:1px solid #b28f7d;margin-top:22px}
+.tour-invitation{padding-block:96px;scroll-margin-top:-96px}
+.invitation-grid{gap:10%}
+.tour-preview .photo-open{border-radius:3px}
+.photo-journey{border-radius:3px;background:#f0e4d6}
+.journey-top{padding:18px 28px 0}
+.journey-controls{padding-bottom:8px}
+.journey-top .journey-chapters{gap:24px;padding-bottom:20px}
+.journey-chapters button{border-top:1px solid #ba9b87;padding-top:12px;transition:color .18s,border-color .18s}
+.journey-chapters button[aria-pressed=true]{border-color:#783b2b}
+.journey-chapters button[aria-pressed=true] span{text-decoration:none}
+.journey-layout{grid-template-columns:minmax(0,1.65fr) minmax(300px,1fr)}
+.journey-stage{aspect-ratio:1.42}
+.journey-copy{padding:40px 38px}
+.journey-count{margin-bottom:24px}
+.flagship .journey-title{font-size:clamp(34px,3.3vw,48px);line-height:1.07;max-width:16ch}
+.journey-description{font-size:16px;max-width:37ch}
+.journey-frame.is-current img{animation-duration:10s}
+.journey-open{text-decoration-thickness:1px}
+.landscape-story .section-heading{padding-bottom:28px;border-bottom:1px solid var(--editorial-line);margin-bottom:30px}
+.landscape-story .photo-open{border-radius:3px}
+.flagship .landscape-story figcaption{text-align:right;margin-top:16px}
+.island-surface{border-radius:88px 0 0 0;background:#ead4c2}
+.island-story{padding-top:100px;gap:9%}
+.island-story h2{font-size:clamp(44px,4.5vw,64px)}
+.colour-pair{gap:10%;grid-template-columns:1.5fr .65fr}
+.colour-pair figure:first-child{padding-bottom:64px}
+.flagship .colour-pair figcaption{max-width:36ch;margin-top:16px}
+.flagship .booking-close{padding-block:88px}
+.site-footer{border-top-color:var(--editorial-line)}
+@media(min-width:801px) and (max-width:1100px){
+ .journey-layout{grid-template-columns:minmax(0,1.35fr) minmax(280px,1fr)}
+ .journey-stage{aspect-ratio:1.04}.journey-copy{padding:28px}
+ .flagship .journey-title{font-size:38px}
+ .arrival-mosaic{gap:18px}.flagship .arrival-details img{aspect-ratio:2.9}
+}
+@media(max-width:800px){
+ .flagship .arrival-heading{align-items:start}.flagship .arrival-host{text-align:left;max-width:none;font-size:23px}
+ .arrival-mosaic{gap:16px}.arrival-details{gap:16px;padding-top:0}
+ .flagship .arrival-details img{aspect-ratio:2.8}
+ .flagship .section-space{padding-block:80px;scroll-margin-top:-80px}
+ .journey-layout{grid-template-columns:1fr}.journey-stage{aspect-ratio:1.6}
+ .journey-copy{padding:30px;column-gap:32px}.flagship .journey-title{font-size:38px}
+ .island-story{padding-top:64px}
+}
+@media(max-width:600px){
+ .flagship .arrival-heading{padding-block:28px 24px}.flagship .arrival-host{font-size:22px;margin-top:16px}
+ .arrival-mosaic{grid-template-columns:1fr;gap:14px}
+ .flagship .arrival-mosaic>.photo-open{aspect-ratio:1.8}
+ .flagship .arrival-mosaic>.photo-open img{height:100%;aspect-ratio:auto}
+ .arrival-details{gap:16px;grid-template-columns:1fr 1fr;grid-template-rows:auto}
+ .flagship .arrival-details img{aspect-ratio:1.65}
+ .detail-caption{font-size:13px;padding-top:8px}
+ .flagship .arrival-photo figcaption{margin-top:16px;padding-top:10px;row-gap:4px}
+ .flagship .arrival-intro{margin-top:22px}
+ .flagship .section-space{padding-block:64px;scroll-margin-top:-64px}
+ .flagship .home-story{gap:28px}.space-list button{min-height:80px;padding:13px 4px;gap:16px}
+ .space-list button img{width:64px;height:48px}
+ .space-preview{padding:16px 16px 0 0}.space-preview:before{border-radius:58px 0 0 0}
+ .flagship .space-preview figcaption{padding-left:12px;margin-top:18px;font-size:14px}
+ .tour-invitation{padding-block:60px;scroll-margin-top:-60px}
+ .journey-top{padding:10px 16px 0}.journey-top .journey-chapters{gap:20px;padding-bottom:12px}
+ .journey-stage{aspect-ratio:4/3}.journey-copy{padding:26px 22px 18px}
+ .flagship .journey-title{font-size:36px;max-width:15ch}.journey-count{margin-bottom:16px}
+ .journey-description{margin-top:16px}.journey-location{min-height:0;margin-bottom:12px}
+ .landscape-story .section-heading{padding-bottom:24px;margin-bottom:24px}
+ .flagship .landscape-story figcaption{text-align:left;font-size:12px}
+ .island-surface{border-radius:52px 0 0 0}.island-story{padding-block:56px 32px;gap:28px}
+ .island-story h2{font-size:46px}.colour-pair{gap:18px;grid-template-columns:1fr 1fr}
+ .colour-pair figure:first-child{padding-bottom:0}.colour-pair figure:last-child{padding-top:40px}
+ .flagship .colour-pair figcaption{font-size:12px;line-height:1.6}
+ .flagship .booking-close{padding-block:64px}
+}
+@media(max-width:370px){.flagship .journey-title{font-size:32px}.journey-copy{padding:24px 18px 16px}.island-story h2{font-size:40px}}
+@media(prefers-reduced-motion:reduce){
+ .flagship .room-outgoing{display:none}
+ .flagship .arrival-details img,.detail-caption svg,.space-list img{transition:none;transform:none}
+}

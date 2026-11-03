@@ -226,7 +226,8 @@ export const copy = {
       "Dunkle Wolken, glühender Himmel: der Abend zeigt Farbe. · Umgebung",
       "Boote im Abendlicht, Blätter wie ein Bilderrahmen. · Umgebung",
       "Ein kräftiger Klecks Rosa zwischen all dem Grün. · Umgebung"
-    ]
+    ],
+    "spaceError": "Dieses Foto konnte nicht geladen werden. Bitte wählt den Raum noch einmal."
   },
   "fr": {
     "originalPhotos": "Photos originales du logement",
@@ -454,7 +455,8 @@ export const copy = {
       "Nuages sombres, ciel incandescent : le soir prend des couleurs. · Les environs",
       "Des bateaux dans la lumière du soir, encadrés de feuilles. · Les environs",
       "Une touche de rose éclatant parmi les feuilles vertes. · Les environs"
-    ]
+    ],
+    "spaceError": "Cette photo n’a pas pu être chargée. Sélectionnez à nouveau la pièce."
   },
   "en": {
     "originalPhotos": "Original property photographs",
@@ -682,6 +684,7 @@ export const copy = {
       "Dark clouds, a glowing sky: evening in full colour. · Surroundings",
       "Boats in the evening light, framed by leaves. · Surroundings",
       "A vivid splash of pink among the green leaves. · Surroundings"
-    ]
+    ],
+    "spaceError": "This photo could not be loaded. Please choose the room again."
   }
 };

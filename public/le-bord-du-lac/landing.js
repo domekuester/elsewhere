@@ -1,11 +1,12 @@
-import {setupJourney,translateJourney} from './photo-journey.js?v=e8ab0e6d50d5';
+import {setupEditorialMotion,blendRoom,latestPhotoRequest} from './editorial-motion.js?v=a36da1a17d7e';
+import {setupJourney,translateJourney} from './photo-journey.js?v=a36da1a17d7e';
 // Original-photo landing page. Booking remains an explicit outbound link.
-import {bookingUrl} from './i18n.js?v=e8ab0e6d50d5';
+import {bookingUrl} from './i18n.js?v=a36da1a17d7e';
 const spaces={living:{photo:5,file:'living-reverse-new',caption:0},bedroom:{photo:13,file:'bedroom-lamp',caption:1},terrace:{photo:11,file:'terrace-seating-wide',caption:2}};
 let selectedSpace='terrace';
 function updateSpace(api){
  const preview=document.querySelector('#space-preview'),choice=spaces[selectedSpace];
- const photo=preview?.querySelector('button'),img=preview?.querySelector('img');
+ const photo=preview?.querySelector('button'),img=preview?.querySelector('img:not(.room-outgoing)');
  if(!img||!photo)return;
  img.src='./photos/'+choice.file+'.jpg';img.alt=api.t('photoNames')[choice.photo];
  photo.dataset.photo=String(choice.photo);photo.ariaLabel=img.alt+' · '+api.t('openPhoto');
@@ -24,7 +25,7 @@ export function translateLanding(api){
  updateSpace(api);
  const lang=api.language();
  document.querySelectorAll('[data-booking]').forEach(a=>{a.href=bookingUrl(lang);a.ariaLabel=a.textContent.trim()+'. '+api.t('newWindow');});
- document.querySelectorAll('[data-photo]').forEach(b=>{const img=b.querySelector('img');const label=img?api.t('photoNames')[Number(b.dataset.photo)]:b.textContent.trim();b.ariaLabel=label+' · '+api.t('openPhoto');if(img)img.alt=api.t('photoNames')[Number(b.dataset.photo)];});
+ document.querySelectorAll('[data-photo]').forEach(b=>{const img=b.querySelector('img:not(.room-outgoing)');const label=img?api.t('photoNames')[Number(b.dataset.photo)]:b.textContent.trim();b.ariaLabel=label+' · '+api.t('openPhoto');if(img)img.alt=api.t('photoNames')[Number(b.dataset.photo)];});
  document.querySelector('.tour-preview button').ariaLabel=api.t('start');
  document.querySelector('.tour-preview img').alt=api.t('previewTitle');
  document.querySelector('.site-nav').ariaLabel=api.t('siteNavigation');
@@ -32,7 +33,18 @@ export function translateLanding(api){
 }
 export function setupLanding(api){
  setupJourney(api);
- document.querySelectorAll('[data-space]').forEach(b=>b.addEventListener('click',()=>{selectedSpace=b.dataset.space;updateSpace(api);}));
+ setupEditorialMotion();
+ const preview=document.querySelector('#space-preview');
+ const requestPhoto=latestPhotoRequest(source=>{const image=new Image();image.src=source;return image.decode();});
+ document.querySelectorAll('[data-space]').forEach(button=>button.addEventListener('click',()=>{
+  const next=button.dataset.space;
+  preview.setAttribute('aria-busy','true');
+  void requestPhoto('./photos/'+spaces[next].file+'.jpg',()=>{
+   const image=preview.querySelector('img:not(.room-outgoing)'),oldSource=image.src;
+   const changed=selectedSpace!==next;selectedSpace=next;updateSpace(api);
+   preview.removeAttribute('aria-busy');if(changed)blendRoom(image,oldSource);
+  },()=>{preview.removeAttribute('aria-busy');preview.querySelector('[data-space-caption]').textContent=api.t('spaceError');});
+ }));
  document.querySelectorAll('[data-gallery-index]').forEach(b=>b.addEventListener('click',()=>api.gallery(Number(b.dataset.galleryIndex))));
  document.querySelectorAll('[data-photo]').forEach(b=>b.addEventListener('click',()=>api.gallery(Number(b.dataset.photo))));
  document.querySelectorAll('[data-site-language]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.siteLanguage!==api.language())api.changeLanguage(b.dataset.siteLanguage);}));

@@ -1,4 +1,5 @@
-import {JourneyPlayer} from './journey-player.js?v=e8ab0e6d50d5';
+import {revealChapter} from './editorial-motion.js?v=a36da1a17d7e';
+import {JourneyPlayer} from './journey-player.js?v=a36da1a17d7e';
 const frames=[
  {photo:11,file:'terrace-seating-wide.jpg',position:'50% 50%'},
  {photo:5,file:'living-reverse-new.jpg',position:'50% 50%'},
@@ -59,10 +60,10 @@ export function setupJourney(api){
   img.src=image.src;img.alt=api.t('photoNames')[frames[index].photo];img.style.objectPosition=frames[index].position;
   layers[active].classList.remove('is-current');layers[active].setAttribute('aria-hidden','true');
   layer.classList.add('is-current');layer.removeAttribute('aria-hidden');
-  active=incoming;rendered=index;stage.setAttribute('aria-busy','false');status.textContent='';translate();
+  active=incoming;rendered=index;stage.setAttribute('aria-busy','false');status.textContent='';translate();revealChapter(copy);
   player.setReady(true);
  }
- const player=new JourneyPlayer({count:frames.length,onChange:state=>{
+ const player=new JourneyPlayer({count:frames.length,delay:10000,onChange:state=>{
   if(state.index!==wanted)void render(state.index);
   translate();
  }});
