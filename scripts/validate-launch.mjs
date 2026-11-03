@@ -315,7 +315,11 @@ const quotedPrivateTokens = [
 const leaks = [];
 for (const file of publicOutputFiles) {
   const contents = read(file);
-  for (const token of privateTokens) if (contents.includes(token)) leaks.push(`${file}: ${token}`);
+  // Three.js resourcePath is not the private field sourcePath; keep all other checks unchanged.
+  for (const token of privateTokens) {
+    const found = token === 'sourcePath' ? /\bsourcePath\b/.test(contents) : contents.includes(token);
+    if (found) leaks.push(`${file}: ${token}`);
+  }
   for (const token of quotedPrivateTokens) if (new RegExp(`"${token}"\\s*:`, 'i').test(contents)) leaks.push(`${file}: "${token}" key`);
 }
 report('private metadata leak(s) in public output', leaks);

@@ -1,0 +1,26 @@
+# Quellen
+
+Unterkunft: https://www.booking.com/hotel/re/le-bord-du-lac.de.html
+Fotovorlagen: sieben öffentlich sichtbare Inseratbilder, am 02.11.2026 auf ausdrücklichen Nutzerwunsch für den lokalen Rekonstruktionsprototyp übernommen. Fotos nicht als frei lizenziert ausgeben; vor öffentlicher Veröffentlichung Bildrechte durch den Unterkunftseigentümer bestätigen.
+Blender: vorhandene lokale Version 4.5.15 LTS.
+Three.js: vorhandene Version aus Paper Motion Lab, MIT-Lizenz in public/vendor/THREE-LICENSE.txt. Keine Abhängigkeit vom Paper Motion Lab zur Laufzeit.
+
+## Materialvorlagen, Detailfassung
+
+Poly Haven, heruntergeladen am 02.11.2026. CC0 laut https://polyhaven.com/license . Die Oberflächen sind Materialannäherungen, keine Scans der tatsächlichen Unterkunft.
+
+- wood_floor: https://polyhaven.com/a/wood_floor — Eichenboden (Farbe, Normalen, Rauheit)
+- wood_table_001: https://polyhaven.com/a/wood_table_001 — Holzmaserung, im Viewer auf helles Holz abgestimmt
+- denim_fabric: https://polyhaven.com/a/denim_fabric — feine Webstruktur (Normalen/Rauheit), Farbe anhand der Fotos angenähert
+- gravel_floor: https://polyhaven.com/a/gravel_floor — Terrassenkies (Farbe, Normalen, Rauheit)
+
+Materialdateien unter assets/textures; im Webmodell eingebettet. Keine externen Anfragen beim Betrachten. Karo-, Flecht- und Lampenschirmmuster werden lokal erzeugt und sind angenähert.
+
+## Schriften der Gäste-Oberfläche
+Newsreader und Instrument Sans, lokal ausgeliefert; SIL Open Font License 1.1. Lizenzen unter public/fonts/. Quellen: https://github.com/google/fonts/tree/main/ofl/newsreader und https://github.com/google/fonts/tree/main/ofl/instrumentsans .
+
+Treppenkorrektur: public/photos/living.jpg zeigt die alternierenden Holz-Trittflächen und weißen, ansteigenden Mittelträger. living-reverse.jpg ergänzt Laufrichtung und Wand-Handlauf. bedroom.jpg zeigt das Holzgeländer; der Ausstieg selbst ist nicht vollständig dokumentiert.
+
+Überarbeitung vom 03.11.2026: public/photos/terrace.jpg bestimmt die korrigierte Anordnung von Fassade links, Sichtschutz und Sitzgruppe. Mauerhöhe und Türöffnungszustand sind Modellannahmen. Stoffwebstruktur und Holzfarbanpassung werden lokal berechnet; keine neuen Unterkunftsfotos oder KI-generierten Fotovorlagen. RectAreaLight-Module aus derselben lokalen Three.js-Version, MIT-Lizenz wie oben.
+
+Warme Lichtfassung: gestalterische Nachmittagsstimmung, kein gemessener Sonnenstand. Keine zusätzlichen Foto- oder Materialquellen.
