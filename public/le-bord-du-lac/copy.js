@@ -100,7 +100,7 @@ export const copy = {
     "spaceLiving": "Wohnen & Kochen",
     "spaceBedroom": "Schlafen unter dem Dach",
     "spaceTerrace": "Draußen sitzen",
-    "terraceCaption": "Ein überdachter Platz zum Draußensitzen.",
+    "terraceCaption": "Ein Platz im Grünen. Vielleicht bleibt ihr noch ein bisschen.",
     "invitationTitle": "Schaut euch schon\nmal um.",
     "invitationHelp": "Geht durch die Räume oder direkt auf die Terrasse.",
     "previewTitle": "Begehbarer 3D-Entwurf",
@@ -108,12 +108,12 @@ export const copy = {
     "reconstructionMore": "Mehr zur Rekonstruktion",
     "journalTitle": "Ein kleiner Vorgeschmack.",
     "journalCount": "Innenräume und Außenbereich",
-    "kitchenCaption": "Die Küche mit dem Esstisch.",
-    "bedroomCaption": "Das Bett auf der Schlafebene.",
+    "kitchenCaption": "Für den ersten Kaffee und die Pläne des Tages.",
+    "bedroomCaption": "Unter dem Dach, ein kleines Stück Geborgenheit.",
     "allPhotos": "Alle Fotos ansehen",
     "islandTitle": "Abendlicht in\nL’Étang-Salé.",
-    "islandText": "Boote auf ruhigem Wasser, darüber das letzte Licht des Tages. Ein Eindruck von der Küste rund um L’Étang-Salé.",
-    "islandCaption": "Abendstimmung in L’Étang-Salé · Umgebungsfoto",
+    "islandText": "Die Blätter rahmen den Himmel ein, kleine Boote liegen im Abendlicht. So viel Farbe für die letzten Minuten des Tages.",
+    "islandCaption": "Wenn der Abend das Wasser färbt. · Umgebung von L’Étang-Salé",
     "islandNote": "Diese Aufnahme zeigt die Umgebung, nicht den Ausblick aus der Unterkunft.",
     "bookingTitle": "Plant ihr euren Aufenthalt?",
     "bookingText": "Freie Termine, Preise und Buchungsbedingungen findet ihr auf Booking.com.",
@@ -147,16 +147,16 @@ export const copy = {
     "coachTouch": "Links am Regler ziehen, um zu gehen. Über das Bild wischen, um euch umzuschauen. Unten könnt ihr direkt einen Raum wählen.",
     "spaceChoose": "Räume entdecken",
     "spaceCaptions": [
-      "Sofa, Holzdecke und die Tür zum Badezimmer.",
-      "Ein Bett unter dem Dach, mit Licht zum Lesen.",
-      "Ein überdachter Platz zum Draußensitzen."
+      "Holz über dem Kopf, weiche Kissen im Rücken. Erst einmal ankommen.",
+      "Noch ein paar Seiten lesen, dann das Licht ausmachen.",
+      "Korbstühle, Blätter und ein Platz für eine kleine Pause."
     ],
     "sunsetOpen": "Das ganze Foto ansehen",
     "landscapeTitle": "Wasser und grüne Höhen.",
-    "landscapeText": "Ein weiterer Eindruck aus der Umgebung.",
+    "landscapeText": "Vorne das Schilf, dahinter die grünen Höhen. Lasst den Blick ein wenig wandern.",
     "landscapeNote": "Umgebungsaufnahme · kein Ausblick aus der Unterkunft",
     "journeyLink": "Auf Fotoreise gehen",
-    "journeyIntro": "Vom ersten Ankommen bis zum Abendlicht. Sechs Bilder, ein kleiner Weg.",
+    "journeyIntro": "Ein Platz im Grünen, ein Blick nach drinnen, ein Abend am Wasser. Kommt ein Stück mit.",
     "journey": {
       "label": "Fotoreise durch Unterkunft und Umgebung",
       "controls": "Fotoreise steuern",
@@ -175,37 +175,58 @@ export const copy = {
         {
           "label": "Ankommen",
           "title": "Erst einmal ankommen.",
-          "text": "Ein Platz im Grünen, unter dem Terrassendach. Hier beginnt unser Weg durch Le bord du lac."
+          "text": "Unter dem Terrassendach steht ein Stuhl für euch bereit. Taschen abstellen, kurz durchatmen – hier beginnt unser kleiner Rundgang."
         },
         {
           "label": "Wohnen",
-          "title": "Ein Blick nach drinnen.",
-          "text": "Unter der Holzdecke steht das Sofa. Daneben führt die Treppe hinauf zur Schlafebene."
+          "title": "Ein Platz zum Bleiben.",
+          "text": "Die Holzdecke, das Sofa, die Kissen am Fenster. Ein Raum, in dem man sich leicht vorstellen kann, den Tag gemütlich ausklingen zu lassen."
         },
         {
           "label": "Kochen",
-          "title": "Alles an einem Ort.",
-          "text": "Küche und Esstisch teilen sich den Raum. Gleich nebenan öffnet sich die Tür zur Terrasse."
+          "title": "Kaffee und kleine Pläne.",
+          "text": "Ein Tisch für den ersten Kaffee, die Küche gleich dahinter. Und nebenan die Tür nach draußen – vielleicht wird heute auf der Terrasse gefrühstückt."
         },
         {
           "label": "Schlafen",
-          "title": "Oben wird es ruhig.",
-          "text": "Ein Bett unter der Dachschräge, Holzdielen und die kleine Lampe zum Lesen."
+          "title": "Noch ein paar Seiten.",
+          "text": "Unter der Dachschräge liegt das Bett, daneben leuchtet die kleine Lampe. Ein schönes Plätzchen für das letzte Kapitel vor dem Einschlafen."
         },
         {
           "label": "Unterwegs",
-          "title": "Draußen weitersehen.",
-          "text": "Wasser, Schilf und grüne Höhen: ein Eindruck aus der Umgebung."
+          "title": "Den Blick wandern lassen.",
+          "text": "Am Wasser wächst das Schilf, dahinter steigen grüne Höhen auf. Ein kleiner Abstecher in die Umgebung, bevor unser Weg zum Abendlicht führt."
         },
         {
           "label": "Abendlicht",
-          "title": "Der Tag klingt aus.",
-          "text": "Unter den Blättern leuchtet der Abendhimmel. Boote liegen auf dem Wasser vor L’Étang-Salé."
+          "title": "Der Tag zeigt noch einmal Farbe.",
+          "text": "Blätter im Vordergrund, Boote auf dem Wasser, ein Himmel in Orange und Rosa. Ein letzter Blick auf L’Étang-Salé – und vielleicht gleich noch einer."
         }
       ]
     },
-    "cloudCaption": "Unter dunklen Wolken · Umgebung",
-    "flowerCaption": "Rosa Blüten im Sonnenlicht · Umgebung"
+    "cloudCaption": "Dunkle Wolken, ein Himmel voller Glut. · Umgebung",
+    "flowerCaption": "Ein kleiner Farbenrausch zwischen grünen Blättern. · Umgebung",
+    "photoCaptions": [
+      "Holz, Licht und ein Sofa zum Ankommen.",
+      "Ein Platz für den ersten Kaffee. Die Terrasse gleich nebenan.",
+      "Unter dem Terrassendach darf der Tag langsam beginnen.",
+      "Ein bisschen Sand, ein weiter Horizont. · Umgebung",
+      "Unter dem Dach wartet ein gemütlicher Rückzugsort.",
+      "Alles nah beieinander: Sofa, Holztreppe und das kleine Bad.",
+      "Ein Blick aufs Wasser, ein Moment zum Durchatmen. · Umgebung",
+      "Zwischen Blättern und Fassade: unser Platz im Grünen.",
+      "Helles Holz und weiße Keramik für einen frischen Start.",
+      "Gemusterte Fliesen geben dem kleinen Bad seinen Charakter.",
+      "Kissen zurechtrücken, zurücklehnen. Der Fensterplatz wartet.",
+      "Ein Tisch, Korbstühle und Zeit zum Draußensitzen.",
+      "Ein schattiger Sitzplatz unter dem Terrassendach.",
+      "Noch ein paar Seiten lesen, im warmen Licht der kleinen Lampe.",
+      "Das letzte Gold des Tages auf dem Wasser. · Umgebung",
+      "Vom Schilf am Wasser wandert der Blick zu den grünen Höhen. · Umgebung",
+      "Dunkle Wolken, glühender Himmel: der Abend zeigt Farbe. · Umgebung",
+      "Boote im Abendlicht, Blätter wie ein Bilderrahmen. · Umgebung",
+      "Ein kräftiger Klecks Rosa zwischen all dem Grün. · Umgebung"
+    ]
   },
   "fr": {
     "originalPhotos": "Photos originales du logement",
@@ -307,7 +328,7 @@ export const copy = {
     "spaceLiving": "Salon et cuisine",
     "spaceBedroom": "La mezzanine",
     "spaceTerrace": "La terrasse",
-    "terraceCaption": "Un coin couvert pour s’installer dehors.",
+    "terraceCaption": "Un coin de verdure. Et si l’on restait encore un peu ?",
     "invitationTitle": "Faites un tour\navant de venir.",
     "invitationHelp": "Passez d’une pièce à l’autre ou rejoignez directement la terrasse.",
     "previewTitle": "Une ébauche 3D à explorer",
@@ -315,12 +336,12 @@ export const copy = {
     "reconstructionMore": "À propos de la reconstitution",
     "journalTitle": "Un avant-goût du séjour.",
     "journalCount": "Intérieur et extérieur",
-    "kitchenCaption": "La cuisine et sa table.",
-    "bedroomCaption": "Le lit sur la mezzanine.",
+    "kitchenCaption": "Pour le premier café et les envies de la journée.",
+    "bedroomCaption": "Sous les toits, un petit cocon.",
     "allPhotos": "Voir toutes les photos",
     "islandTitle": "Le soir à\nL’Étang-Salé.",
-    "islandText": "Des barques sur une eau calme, les dernières lumières du jour. Un aperçu du littoral autour de L’Étang-Salé.",
-    "islandCaption": "Le soir à L’Étang-Salé · Les environs",
+    "islandText": "Les feuilles encadrent le ciel, de petits bateaux reposent dans la lumière du soir. Tant de couleurs pour les derniers instants du jour.",
+    "islandCaption": "Quand le soir colore l’eau. · Les environs de L’Étang-Salé",
     "islandNote": "Cette photo montre les environs, et non la vue depuis le logement.",
     "bookingTitle": "Envie de venir ?",
     "bookingText": "Consultez les dates, les tarifs et les conditions de réservation sur Booking.com.",
@@ -354,16 +375,16 @@ export const copy = {
     "coachTouch": "Glissez sur la commande à gauche pour avancer. Glissez sur l’image pour regarder autour de vous. Choisissez un espace en bas pour y accéder directement.",
     "spaceChoose": "Découvrez les espaces",
     "spaceCaptions": [
-      "Le canapé, le plafond en bois et la porte de la salle de bains.",
-      "Un lit sous les toits, avec une lampe pour lire.",
-      "Un coin couvert pour s’installer dehors."
+      "Du bois au-dessus de la tête, des coussins dans le dos. On se pose.",
+      "Encore quelques pages, puis on éteint la lumière.",
+      "Des fauteuils en rotin, du feuillage et une petite pause dehors."
     ],
     "sunsetOpen": "Voir la photo en entier",
     "landscapeTitle": "L’eau et les collines.",
-    "landscapeText": "Un autre aperçu des environs.",
+    "landscapeText": "Les roseaux au premier plan, les hauteurs verdoyantes au loin. Le regard prend son temps.",
     "landscapeNote": "Les environs · pas la vue depuis le logement",
     "journeyLink": "Découvrir en photos",
-    "journeyIntro": "De l’arrivée à la lumière du soir. Six photos, une petite échappée.",
+    "journeyIntro": "Un coin de verdure, un regard à l’intérieur, un soir au bord de l’eau. Venez, on vous emmène.",
     "journey": {
       "label": "Découverte du logement et des environs en photos",
       "controls": "Commandes du parcours photo",
@@ -382,37 +403,58 @@ export const copy = {
         {
           "label": "Arriver",
           "title": "Prendre le temps d’arriver.",
-          "text": "Une place dans la verdure, à l’abri de la terrasse. La découverte du Bord du lac commence ici."
+          "text": "Sous le toit de la terrasse, une chaise vous attend. On pose ses sacs, on souffle un peu : notre petite visite commence ici."
         },
         {
           "label": "Le salon",
-          "title": "Un regard à l’intérieur.",
-          "text": "Le canapé sous le plafond en bois. À côté, l’escalier mène à la mezzanine."
+          "title": "Un coin où se poser.",
+          "text": "Le plafond en bois, le canapé, les coussins près de la fenêtre. On s’imagine facilement y terminer la journée, tout simplement."
         },
         {
           "label": "La cuisine",
-          "title": "Tout se rejoint ici.",
-          "text": "La cuisine et la table partagent la même pièce. Juste à côté, la porte s’ouvre sur la terrasse."
+          "title": "Un café, quelques envies.",
+          "text": "Une table pour le premier café, la cuisine juste derrière. Et la porte ouverte sur l’extérieur : pourquoi ne pas déjeuner sur la terrasse ?"
         },
         {
           "label": "Dormir",
-          "title": "Là-haut, sous le toit.",
-          "text": "Un lit sous la pente du toit, un plancher en bois et une petite lampe pour lire."
+          "title": "Encore quelques pages.",
+          "text": "Sous la pente du toit, le lit et sa petite lampe. Un joli coin pour lire le dernier chapitre avant de s’endormir."
         },
         {
           "label": "Les environs",
-          "title": "Un peu plus loin.",
-          "text": "De l’eau, des roseaux et des collines verdoyantes : un aperçu des environs."
+          "title": "Laisser le regard voyager.",
+          "text": "Des roseaux au bord de l’eau, des hauteurs verdoyantes à l’horizon. Une petite échappée dans les environs, avant de retrouver la lumière du soir."
         },
         {
           "label": "Le soir",
-          "title": "Le jour s’achève.",
-          "text": "Sous les feuilles, le ciel du soir s’illumine. Des barques reposent sur l’eau à L’Étang-Salé."
+          "title": "Les couleurs du dernier instant.",
+          "text": "Des feuilles au premier plan, des bateaux sur l’eau, un ciel rose et orange. Un dernier regard sur L’Étang-Salé. Peut-être encore un."
         }
       ]
     },
-    "cloudCaption": "Sous les nuages sombres · Les environs",
-    "flowerCaption": "Fleurs roses au soleil · Les environs"
+    "cloudCaption": "Des nuages sombres, un ciel de braise. · Les environs",
+    "flowerCaption": "Une petite explosion de couleurs. · Les environs",
+    "photoCaptions": [
+      "Du bois, de la lumière et un canapé où se poser.",
+      "Une place pour le premier café, la terrasse juste à côté.",
+      "Sous le toit de la terrasse, la journée peut commencer doucement.",
+      "Un peu de sable, un horizon ouvert. · Les environs",
+      "Sous les toits, un petit coin pour se retrouver au calme.",
+      "Le canapé, l’escalier en bois, la salle de bains : tout est là.",
+      "Un regard sur l’eau, une pause dans la journée. · Les environs",
+      "Entre feuillage et façade, un petit coin de verdure.",
+      "Bois clair et céramique blanche pour commencer la journée.",
+      "Des carreaux à motifs donnent du caractère à la salle de bains.",
+      "On ajuste les coussins, on s’installe près de la fenêtre.",
+      "Une table, des fauteuils en rotin et le temps de s’installer dehors.",
+      "Une place à l’ombre, sous le toit de la terrasse.",
+      "Encore quelques pages, à la lumière de la petite lampe.",
+      "Les dernières touches d’or sur l’eau. · Les environs",
+      "Des roseaux au bord de l’eau aux hauteurs verdoyantes. · Les environs",
+      "Nuages sombres, ciel incandescent : le soir prend des couleurs. · Les environs",
+      "Des bateaux dans la lumière du soir, encadrés de feuilles. · Les environs",
+      "Une touche de rose éclatant parmi les feuilles vertes. · Les environs"
+    ]
   },
   "en": {
     "originalPhotos": "Original property photographs",
@@ -514,7 +556,7 @@ export const copy = {
     "spaceLiving": "Living & cooking",
     "spaceBedroom": "The sleeping loft",
     "spaceTerrace": "The terrace",
-    "terraceCaption": "A covered corner for sitting outside.",
+    "terraceCaption": "A little corner of green. Perhaps you’ll stay a while.",
     "invitationTitle": "Have a look around\nbefore you arrive.",
     "invitationHelp": "Move through the rooms or go straight to the terrace.",
     "previewTitle": "An explorable 3D draft",
@@ -522,12 +564,12 @@ export const copy = {
     "reconstructionMore": "About the reconstruction",
     "journalTitle": "A little taste of your stay.",
     "journalCount": "Inside and outside",
-    "kitchenCaption": "The kitchen and dining table.",
-    "bedroomCaption": "The bed in the sleeping loft.",
+    "kitchenCaption": "For the first coffee and the day’s little plans.",
+    "bedroomCaption": "A cosy nook tucked beneath the roof.",
     "allPhotos": "View all photos",
     "islandTitle": "Sunset in\nL’Étang-Salé.",
-    "islandText": "Boats on calm water, the last light of the day above. A glimpse of the coast around L’Étang-Salé.",
-    "islandCaption": "Evening in L’Étang-Salé · Surroundings",
+    "islandText": "Leaves frame the sky, small boats rest in the evening light. So much colour in the last few moments of the day.",
+    "islandCaption": "When evening colours the water. · Around L’Étang-Salé",
     "islandNote": "This photograph shows the surroundings, not the view from the property.",
     "bookingTitle": "Planning your stay?",
     "bookingText": "Check dates, rates and booking conditions on Booking.com.",
@@ -561,16 +603,16 @@ export const copy = {
     "coachTouch": "Drag the control on the left to walk. Swipe the view to look around. Choose a room below to go straight there.",
     "spaceChoose": "Explore the spaces",
     "spaceCaptions": [
-      "The sofa, timber ceiling and doorway to the bathroom.",
-      "A bed beneath the roof, with a light for reading.",
-      "A covered corner for sitting outside."
+      "Wood overhead, cushions at your back. Time to settle in.",
+      "A few more pages before turning out the light.",
+      "Rattan chairs, green leaves and a little pause outside."
     ],
     "sunsetOpen": "View the full photograph",
     "landscapeTitle": "Water and green hills.",
-    "landscapeText": "Another glimpse of the surroundings.",
+    "landscapeText": "Reeds in the foreground, green hills beyond. Let your eyes wander a little.",
     "landscapeNote": "Surroundings · not the view from the property",
     "journeyLink": "Take the photo journey",
-    "journeyIntro": "From arriving to the evening light. Six photographs, one short journey.",
+    "journeyIntro": "A corner of green, a look inside, an evening by the water. Come along for a little while.",
     "journey": {
       "label": "A photo journey through the property and surroundings",
       "controls": "Photo journey controls",
@@ -588,37 +630,58 @@ export const copy = {
       "chapters": [
         {
           "label": "Arrive",
-          "title": "First, settle in.",
-          "text": "A seat among the greenery, beneath the terrace roof. Our journey through Le bord du lac begins here."
+          "title": "Take a moment to arrive.",
+          "text": "A chair is waiting beneath the terrace roof. Put down your bags, take a breath. Our little tour begins here."
         },
         {
           "label": "Living",
-          "title": "A look inside.",
-          "text": "The sofa sits beneath the timber ceiling. Beside it, the stairs lead up to the sleeping loft."
+          "title": "Somewhere to settle in.",
+          "text": "The wooden ceiling, the sofa, the cushions by the window. It’s easy to picture a gentle end to the day right here."
         },
         {
           "label": "Cooking",
-          "title": "Everything together.",
-          "text": "The kitchen and dining table share one space, with the terrace door just beside them."
+          "title": "Coffee and little plans.",
+          "text": "A table for that first coffee, the kitchen just behind. And a door leading outside: perhaps breakfast on the terrace today?"
         },
         {
           "label": "Sleeping",
-          "title": "Up under the roof.",
-          "text": "A bed beneath the sloping ceiling, timber floorboards and a little reading lamp."
+          "title": "Just a few more pages.",
+          "text": "Beneath the sloping roof, a bed and a little lamp. A lovely spot for one last chapter before drifting off."
         },
         {
           "label": "Explore",
-          "title": "A little further afield.",
-          "text": "Water, reeds and green hills: a glimpse of the surroundings."
+          "title": "Let your eyes wander.",
+          "text": "Reeds beside the water, green hills in the distance. A small detour through the surroundings before we follow the evening light."
         },
         {
           "label": "Sunset",
-          "title": "As the day winds down.",
-          "text": "The evening sky glows beneath the leaves. Boats rest on the water at L’Étang-Salé."
+          "title": "One last splash of colour.",
+          "text": "Leaves in the foreground, boats on the water, a sky of orange and pink. One last look at L’Étang-Salé. And perhaps another."
         }
       ]
     },
-    "cloudCaption": "Beneath dark clouds · Surroundings",
-    "flowerCaption": "Pink flowers in sunlight · Surroundings"
+    "cloudCaption": "Dark clouds and a sky full of fire. · Surroundings",
+    "flowerCaption": "A little burst of colour. · Surroundings",
+    "photoCaptions": [
+      "Wood, light and a sofa to settle into.",
+      "A spot for that first coffee, with the terrace just beside you.",
+      "Under the terrace roof, the day can take its time.",
+      "A little sand, an open horizon. · Surroundings",
+      "A cosy little retreat tucked beneath the roof.",
+      "All close by: the sofa, the wooden stairs and the little bathroom.",
+      "A look across the water, a moment to pause. · Surroundings",
+      "Between the leaves and the house, a little corner of green.",
+      "Light wood and white ceramics for a fresh start.",
+      "Patterned tiles give the little bathroom its character.",
+      "Fluff the cushions, settle in. The window seat is waiting.",
+      "A table, rattan chairs and time to sit outside.",
+      "A shady spot beneath the terrace roof.",
+      "A few more pages by the warm glow of the little lamp.",
+      "The last gold of the day on the water. · Surroundings",
+      "From waterside reeds to green hills beyond. · Surroundings",
+      "Dark clouds, a glowing sky: evening in full colour. · Surroundings",
+      "Boats in the evening light, framed by leaves. · Surroundings",
+      "A vivid splash of pink among the green leaves. · Surroundings"
+    ]
   }
 };

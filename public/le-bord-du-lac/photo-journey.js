@@ -1,4 +1,4 @@
-import {JourneyPlayer} from './journey-player.js?v=aa9a8d801d5f';
+import {JourneyPlayer} from './journey-player.js?v=e8ab0e6d50d5';
 const frames=[
  {photo:11,file:'terrace-seating-wide.jpg',position:'50% 50%'},
  {photo:5,file:'living-reverse-new.jpg',position:'50% 50%'},
