@@ -53,7 +53,8 @@ export const copy = {
       "Terrasse mit Sitzgruppe und Fassade",
       "Sitzplatz unter dem Terrassendach",
       "Schlafebene mit Bett und warmer Leselampe",
-      "Sonnenuntergang in L’Étang-Salé · Umgebung"
+      "Sonnenuntergang in L’Étang-Salé · Umgebung",
+      "Wasser, Schilf und grüne Höhen · Umgebung"
     ],
     "aboutTitle": "Ein erster räumlicher Eindruck",
     "aboutBody": "<p>Dieser begehbare <strong>3D-Entwurf wurde anhand der Unterkunftsfotos</strong> nachgebaut. Er zeigt die sichtbare Einrichtung und den ungefähren Zusammenhang der Räume.</p><p>Maße, Abstände, Raumhöhen, Treppe und nicht sichtbare Details sind geschätzt. Die Lichtstimmung ist gestalterisch gewählt. Das Badezimmer wurde nicht rekonstruiert. Die Schlafebene erreicht ihr per Raumauswahl; die Treppe lässt sich nicht begehen.</p><p class=\"note\">Der Entwurf ersetzt keine vermessene oder fotografische 360°-Begehung. Zum Vergleich könnt ihr die Originalfotos öffnen. Maßgeblich sind die aktuellen Angaben des Gastgebers.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.de.html\" target=\"_blank\" rel=\"noopener noreferrer\">Unterkunft auf Booking.com ansehen</a>",
@@ -147,7 +148,10 @@ export const copy = {
       "Ein Bett unter dem Dach, mit Licht zum Lesen.",
       "Ein überdachter Platz zum Draußensitzen."
     ],
-    "sunsetOpen": "Das ganze Foto ansehen"
+    "sunsetOpen": "Das ganze Foto ansehen",
+    "landscapeTitle": "Wasser und grüne Höhen.",
+    "landscapeText": "Ein weiterer Eindruck aus der Umgebung.",
+    "landscapeNote": "Umgebungsaufnahme · kein Ausblick aus der Unterkunft"
   },
   "fr": {
     "originalPhotos": "Photos originales du logement",
@@ -202,7 +206,8 @@ export const copy = {
       "Terrasse, coin salon et façade",
       "Coin salon sous le toit de la terrasse",
       "Mezzanine avec lit et lumière douce de la lampe",
-      "Coucher de soleil à L’Étang-Salé · Les environs"
+      "Coucher de soleil à L’Étang-Salé · Les environs",
+      "L’eau, les roseaux et les collines · Les environs"
     ],
     "aboutTitle": "Une première impression des volumes",
     "aboutBody": "<p>Cette <strong>ébauche 3D a été reconstituée à partir des photos du logement</strong>. Elle présente le mobilier visible et une approximation de l’organisation des espaces.</p><p>Les dimensions, distances, hauteurs, l’escalier et les détails non visibles sont estimés. L’éclairage est une interprétation. La salle de bains n’a pas été reconstituée. Pour rejoindre la mezzanine, utilisez le sélecteur d’espaces : l’escalier ne se monte pas dans la visite.</p><p class=\"note\">Cette ébauche ne remplace pas un relevé précis ou une visite photographique à 360°. Vous pouvez la comparer aux photos originales. Les informations actuelles de l’hôte font référence.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.fr.html\" target=\"_blank\" rel=\"noopener noreferrer\">Voir le logement sur Booking.com</a>",
@@ -296,7 +301,10 @@ export const copy = {
       "Un lit sous les toits, avec une lampe pour lire.",
       "Un coin couvert pour s’installer dehors."
     ],
-    "sunsetOpen": "Voir la photo en entier"
+    "sunsetOpen": "Voir la photo en entier",
+    "landscapeTitle": "L’eau et les collines.",
+    "landscapeText": "Un autre aperçu des environs.",
+    "landscapeNote": "Les environs · pas la vue depuis le logement"
   },
   "en": {
     "originalPhotos": "Original property photographs",
@@ -351,7 +359,8 @@ export const copy = {
       "Terrace seating and exterior",
       "Seating beneath the terrace roof",
       "Sleeping loft with bed and warm lamplight",
-      "Sunset in L’Étang-Salé · Surroundings"
+      "Sunset in L’Étang-Salé · Surroundings",
+      "Water, reeds and green hills · Surroundings"
     ],
     "aboutTitle": "About this reconstruction",
     "aboutBody": "<p>This <strong>3D draft was built from photos of the accommodation</strong>. It shows the visible furniture and an approximate layout of the rooms.</p><p>Dimensions, distances, ceiling heights, stairs and details outside the photos are estimated. The lighting is an interpretation. The bathroom has not been reconstructed. Use the room selector to reach the loft; the stairs cannot be walked up.</p><p class=\"note\">This is not a measured model or a photographic 360° tour. You can compare it with the original photos. For current details about the accommodation, please refer to the host’s listing.</p><a href=\"https://www.booking.com/hotel/re/le-bord-du-lac.en-gb.html\" target=\"_blank\" rel=\"noopener noreferrer\">View the accommodation on Booking.com</a>",
@@ -445,6 +454,9 @@ export const copy = {
       "A bed beneath the roof, with a light for reading.",
       "A covered corner for sitting outside."
     ],
-    "sunsetOpen": "View the full photograph"
+    "sunsetOpen": "View the full photograph",
+    "landscapeTitle": "Water and green hills.",
+    "landscapeText": "Another glimpse of the surroundings.",
+    "landscapeNote": "Surroundings · not the view from the property"
   }
 };

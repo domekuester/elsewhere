@@ -243,4 +243,12 @@
 @media(max-width:800px){.island-story{gap:7%;padding-block:64px}.island-story .section-text{font-size:16px}}
 @media(max-width:600px){.island-story{padding-block:40px 48px;gap:32px}.island-story img{aspect-ratio:4/5}.island-story h2{max-width:10ch}}
 
+/* The supplied daytime landscape keeps the ridge and water together. */
+.landscape-story .section-heading {align-items:end}
+.landscape-story h2 {max-width:15ch}
+.landscape-intro {max-width:26ch;margin:0;color:var(--muted);font-size:16px}
+.landscape-story img {aspect-ratio:1.7;object-fit:cover;object-position:center 58%}
+@media(max-width:800px){.landscape-story .section-heading{align-items:start}.landscape-intro{max-width:none}}
+@media(max-width:600px){.landscape-story img{aspect-ratio:4/3}.landscape-story h2{max-width:13ch}}
+
 @media(prefers-reduced-motion:reduce){.flagship{scroll-behavior:auto}.flagship *{animation:none!important;transition:none!important}}

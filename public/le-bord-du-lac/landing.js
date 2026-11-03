@@ -1,5 +1,5 @@
 // Original-photo landing page. Booking remains an explicit outbound link.
-import {bookingUrl} from './i18n.js?v=a883b28654e7';
+import {bookingUrl} from './i18n.js?v=d1214798b114';
 const spaces={living:{photo:5,file:'living-reverse-new',caption:0},bedroom:{photo:13,file:'bedroom-lamp',caption:1},terrace:{photo:11,file:'terrace-seating-wide',caption:2}};
 let selectedSpace='terrace';
 function updateSpace(api){
