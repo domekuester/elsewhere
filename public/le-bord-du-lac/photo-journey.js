@@ -1,4 +1,4 @@
-import {JourneyPlayer} from './journey-player.js?v=4e2b53370ad5';
+import {JourneyPlayer} from './journey-player.js?v=aa9a8d801d5f';
 const frames=[
  {photo:11,file:'terrace-seating-wide.jpg',position:'50% 50%'},
  {photo:5,file:'living-reverse-new.jpg',position:'50% 50%'},
@@ -36,7 +36,7 @@ export function setupJourney(api){
   chapters.forEach((b,i)=>{b.querySelector('span').textContent=t.chapters[i].label;b.setAttribute('aria-pressed',String(i===wanted));});
   const strip=section.querySelector('.journey-chapters'),selected=chapters[wanted];
   if(strip.scrollWidth>strip.clientWidth){
-   const left=selected.offsetLeft-strip.offsetLeft,right=left+selected.offsetWidth;
+   const left=selected.getBoundingClientRect().left-strip.getBoundingClientRect().left+strip.scrollLeft,right=left+selected.offsetWidth;
    if(left<strip.scrollLeft)strip.scrollLeft=left;
    else if(right>strip.scrollLeft+strip.clientWidth)strip.scrollLeft=right-strip.clientWidth;
   }
