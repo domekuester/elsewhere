@@ -156,6 +156,9 @@ export const copy = {
     "landscapeText": "Vorne das Schilf, dahinter die grünen Höhen. Lasst den Blick ein wenig wandern.",
     "landscapeNote": "Umgebungsaufnahme · kein Ausblick aus der Unterkunft",
     "journeyLink": "Auf Fotoreise gehen",
+    "photoEntry": "Hier eintreten",
+    "photoEntryNote": "Vom Foto in den begehbaren 3D-Entwurf.",
+    "photoEntryRooms": ["Terrasse · 3D", "Wohnbereich · 3D", "Küche · 3D", "Schlafebene · 3D"],
     "journeyIntro": "Ein Platz im Grünen, ein Blick nach drinnen, ein Abend am Wasser. Kommt ein Stück mit.",
     "journey": {
       "label": "Fotoreise durch Unterkunft und Umgebung",
@@ -385,6 +388,9 @@ export const copy = {
     "landscapeText": "Les roseaux au premier plan, les hauteurs verdoyantes au loin. Le regard prend son temps.",
     "landscapeNote": "Les environs · pas la vue depuis le logement",
     "journeyLink": "Découvrir en photos",
+    "photoEntry": "Entrez ici",
+    "photoEntryNote": "De la photo à la reconstitution en 3D.",
+    "photoEntryRooms": ["Terrasse · 3D", "Séjour · 3D", "Cuisine · 3D", "Mezzanine · 3D"],
     "journeyIntro": "Un coin de verdure, un regard à l’intérieur, un soir au bord de l’eau. Venez, on vous emmène.",
     "journey": {
       "label": "Découverte du logement et des environs en photos",
@@ -614,6 +620,9 @@ export const copy = {
     "landscapeText": "Reeds in the foreground, green hills beyond. Let your eyes wander a little.",
     "landscapeNote": "Surroundings · not the view from the property",
     "journeyLink": "Take the photo journey",
+    "photoEntry": "Step inside",
+    "photoEntryNote": "From the photograph into the 3D reconstruction.",
+    "photoEntryRooms": ["Terrace · 3D", "Living area · 3D", "Kitchen · 3D", "Sleeping loft · 3D"],
     "journeyIntro": "A corner of green, a look inside, an evening by the water. Come along for a little while.",
     "journey": {
       "label": "A photo journey through the property and surroundings",

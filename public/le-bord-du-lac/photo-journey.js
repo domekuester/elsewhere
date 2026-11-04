@@ -1,10 +1,10 @@
-import {revealChapter} from './editorial-motion.js?v=f813dcd27159';
-import {JourneyPlayer} from './journey-player.js?v=f813dcd27159';
+import {revealChapter} from './editorial-motion.js?v=eab064138910';
+import {JourneyPlayer} from './journey-player.js?v=eab064138910';
 const frames=[
- {photo:11,file:'terrace-seating-wide.jpg',position:'50% 50%'},
- {photo:5,file:'living-reverse-new.jpg',position:'50% 50%'},
- {photo:1,file:'kitchen-new.jpg',position:'50% 50%'},
- {photo:13,file:'bedroom-lamp.jpg',position:'50% 50%'},
+ {room:'terrace',photo:11,file:'terrace-seating-wide.jpg',position:'50% 50%'},
+ {room:'living',photo:5,file:'living-reverse-new.jpg',position:'50% 50%'},
+ {room:'kitchen',photo:1,file:'kitchen-new.jpg',position:'50% 50%'},
+ {room:'bedroom',photo:13,file:'bedroom-lamp.jpg',position:'50% 50%'},
  {photo:15,file:'water-and-green-hills-sdr.jpg',position:'50% 58%'},
  {photo:17,file:'boats-evening-etang-sale.jpg',position:'50% 50%'}
 ];
@@ -16,6 +16,7 @@ export function setupJourney(api){
  const stage=section.querySelector('.journey-stage'),layers=[...stage.querySelectorAll('.journey-frame')];
  const play=section.querySelector('[data-journey-play]'),prev=section.querySelector('[data-journey-prev]'),next=section.querySelector('[data-journey-next]');
  const open=section.querySelector('[data-journey-open]'),chapters=[...section.querySelectorAll('[data-chapter]')];
+ const entry=section.querySelector('[data-journey-enter]'),entryNote=section.querySelector('.journey-entry-note');
  const status=section.querySelector('.journey-status'),copy=section.querySelector('.journey-copy');
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
  let rendered=0,wanted=0,token=0,active=0,imageInView=typeof IntersectionObserver==='undefined',pendingStart=false,touch=null;
@@ -45,6 +46,14 @@ export function setupJourney(api){
   layers[active].querySelector('img').alt=api.t('photoNames')[frames[rendered].photo];
   copy.setAttribute('aria-live',state.playing?'off':'polite');
   section.dataset.playing=String(state.playing);
+  if(entry){
+   const entryState=api.entryState?.()||{},hasRoom=!!frames[rendered].room;
+   entry.hidden=!hasRoom;section.querySelector('[data-journey-doorway]').hidden=!hasRoom;if(entryNote)entryNote.hidden=!hasRoom;
+   entry.disabled=entryState.failed||(entryState.loading&&entryState.requested)||wanted!==rendered;
+   entry.setAttribute('aria-busy',String(!!entryState.loading));
+   entry.querySelector('[data-journey-enter-label]').textContent=api.t(entryState.loading&&entryState.requested?'preparingShort':'photoEntry');
+   entry.querySelector('[data-journey-enter-detail]').textContent=api.t('photoEntryRooms')[rendered]||'';
+  }
  }
  async function render(index){
   const request=++token;wanted=index;
@@ -71,6 +80,7 @@ export function setupJourney(api){
  journey={translate};translate();
  const pause=()=>{pendingStart=false;player.pause();};
  play.addEventListener('click',()=>{
+  api.cancelTourEntry?.();
   if(player.playing||pendingStart){pause();return;}
   if(!available())return;
   if(imageInView){player.start();return;}
@@ -79,10 +89,16 @@ export function setupJourney(api){
   // Only this explicit click may request playback once the photograph is visible.
   stage.scrollIntoView({block:'center',behavior:reduced.matches?'auto':'smooth'});
  });
- const select=i=>{pendingStart=false;status.textContent='';player.select(i);};
+ const select=i=>{api.cancelTourEntry?.();pendingStart=false;status.textContent='';player.select(i);};
  prev.addEventListener('click',()=>select(player.index-1));next.addEventListener('click',()=>select(player.index+1));
  chapters.forEach(b=>b.addEventListener('click',()=>select(Number(b.dataset.chapter))));
  open.addEventListener('click',()=>{pause();api.gallery(frames[rendered].photo);});
+ entry?.addEventListener('click',()=>{
+  const frame=frames[rendered];if(!frame.room||wanted!==rendered||entry.disabled)return;
+  pause();
+  const image=layers[active].querySelector('img'),rect=stage.getBoundingClientRect();
+  api.enterFromPhoto?.({room:frame.room,trigger:entry,source:{src:image.currentSrc||image.src,position:frame.position,element:stage,rect:{left:rect.left,top:rect.top,width:rect.width,height:rect.height},width:image.naturalWidth,height:image.naturalHeight}});
+ });
  section.addEventListener('focusin',e=>{if(e.target!==play&&(player.playing||pendingStart))pause();});
  section.addEventListener('keydown',e=>{
   if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();select(player.index+(e.key==='ArrowRight'?1:-1));}

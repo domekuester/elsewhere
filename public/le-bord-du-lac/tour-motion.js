@@ -1,5 +1,7 @@
+import {createPhotoOpening} from './photo-opening.js?v=eab064138910';
 // A finite photographic opening and interruptible room dissolves. No camera animation.
 export function createTourMotion(doc,preference){
+ const photoOpening=createPhotoOpening(doc,preference);
  const active=new Set(),cover=doc.querySelector('#transition');
  const select=s=>doc.querySelector(s);
  const reduced=()=>preference.matches||doc.hidden;
@@ -16,10 +18,11 @@ export function createTourMotion(doc,preference){
    signal?.removeEventListener('abort',abort);active.delete(animation);animation.cancel();
   });
  }
- function finish(){for(const animation of active){try{animation.finish();}catch{animation.cancel();}}}
- function stop(){generation++;for(const animation of active)animation.cancel();active.clear();if(cover)cover.style.opacity='0';}
- function arrival(){
+ function finish(){photoOpening.stop();for(const animation of active){try{animation.finish();}catch{animation.cancel();}}}
+ function stop(){photoOpening.stop();generation++;for(const animation of active)animation.cancel();active.clear();if(cover)cover.style.opacity='0';}
+ function arrival(source){
   stop();
+  if(source&&photoOpening.show(source)){opened=true;return;}
   if(opened||reduced()){opened=true;return;}opened=true;
   // Open the prepared scene like a photograph, then place its quiet controls.
   void play(select('#view'),[{clipPath:'inset(2% 1.5% round 16px)',opacity:.55},{clipPath:'inset(0% 0% round 0px)',opacity:1}],620);

@@ -5,6 +5,14 @@ export const spots = {
  bedroom:{position:[1.25,3.18,.80],target:[-.30,2.78,1.75]},
  terrace:{position:[3.22,1.56,2.05],target:[2.70,1.95,-1.20]}
 };
+// Entry views follow the direction of the journey's original photographs.
+// These remain approximate positions inside the existing walkable areas.
+export const photoEntrySpots={
+ living:{position:[1.20,1.48,-.60],target:[-.10,1.15,2.20]},
+ kitchen:{position:[.30,1.52,.25],target:[-.15,1.05,-2.15]},
+ bedroom:spots.bedroom,
+ terrace:spots.terrace
+};
 const inRect=(x,z,[a,b,c,d])=>x>a&&x<b&&z>c&&z<d;
 const groundObstacles=[[-.62,1.08,-1.28,-.34],[-.35,.91,-.46,.14],[-1.78,-.65,-1.62,.47],[.69,1.78,.26,2.28],[-1.7,-.7,1.96,2.5],[-.83,-.43,.25,.61],[-1.46,-.9,.29,.79],[-1.8,-1.34,.69,2.02],[-1.65,1.7,-2.5,-1.72],[2.04,3.83,-2.5,-1.37],[3.55,4.58,-1.78,.55],[2.60,3.29,-1.49,-.82],[4.25,4.72,.35,1.18]];
 export function canOccupy(x,z,level='ground'){

@@ -1,8 +1,8 @@
-import {setupLanding,translateLanding} from './landing.js?v=f813dcd27159';
+import {setupLanding,translateLanding} from './landing.js?v=eab064138910';
 // Guest-facing UI state. The scene remains in app.js; no storage or remote calls.
-export {copy as experienceCopy} from './copy.js?v=f813dcd27159';
-let started=false,immersive=false,hasShownCoach=false,available=false,failed=false,api;
-let requested=false,loading=false,attempted=false,lastLaunch=null;
+export {copy as experienceCopy} from './copy.js?v=eab064138910';
+let started=false,immersive=false,hasShownCoach=false,available=false,failed=false,api,landingApi;
+let requested=false,loading=false,attempted=false,lastLaunch=null,pendingEntry=null;
 const $=s=>document.querySelector(s);
 const fadingUI='.topbar,.room-label,.map-panel,.movement,.room-nav,.footbar,#help,#fullscreen,#stair-action';
 export const isExploring=()=>started;
@@ -12,18 +12,37 @@ function focusMode(value){
  document.querySelectorAll(fadingUI).forEach(e=>e.inert=value);
  $('#focus-view').setAttribute('aria-pressed',String(value));translateExperience();dismissCoach();
 }
-function requestEnter(event){
- lastLaunch=event.currentTarget;
- if(available){enter();return;}
- if(attempted){if(loading){requested=true;translateExperience();}return;}
- attempted=true;requested=true;loading=true;translateExperience();api.prepare();
+const photoRooms=new Set(['living','kitchen','bedroom','terrace']);
+const copyRect=rect=>rect?Object.fromEntries(['x','y','left','top','right','bottom','width','height'].filter(key=>typeof rect[key]==='number').map(key=>[key,rect[key]])):null;
+const entryState=()=>({loading,requested,failed,available});
+function requestEntry(trigger,entry=null){
+ if(failed||started)return false;
+ lastLaunch=trigger||$('#welcome-start');pendingEntry=entry;
+ if(available){enter();return true;}
+ if(attempted){if(loading){requested=true;translateExperience();return true;}return false;}
+ attempted=true;requested=true;loading=true;translateExperience();api.prepare();return true;
 }
-function cancelEntry(){requested=false;translateExperience();}
+function requestEnter(event){requestEntry(event.currentTarget);}
+function enterFromPhoto({room,source,trigger}={}){
+ if(!photoRooms.has(room))return false;
+ const snapshot=source?{src:source.src,position:source.position,width:Number.isFinite(source.width)&&source.width>0?source.width:undefined,height:Number.isFinite(source.height)&&source.height>0?source.height:undefined,rect:copyRect(source.rect),element:source.element}:null;
+ return requestEntry(trigger,{room,source:snapshot});
+}
+function cancelEntry(){requested=false;pendingEntry=null;translateExperience();}
 function enter(){
- if(!available)return;requested=false;started=true;$('#welcome-screen').hidden=true;$('#tour').inert=false;document.body.dataset.mode='tour';api.setSceneActive(true);
+ if(!available)return;
+ // The photograph can move while the model loads. Measure before hiding it,
+ // while preserving the original photo and destination chosen by the guest.
+ const entry=pendingEntry;pendingEntry=null;
+ if(entry?.source){
+  const {element}=entry.source;
+  if(element?.getBoundingClientRect)entry.source.rect=copyRect(element.getBoundingClientRect());
+  delete entry.source.element;
+ }
+ requested=false;started=true;$('#welcome-screen').hidden=true;$('#tour').inert=false;document.body.dataset.mode='tour';api.setSceneActive(true);
  api.releaseInput();$('#view').focus({preventScroll:true});
  if(!hasShownCoach){$('#coach').hidden=false;hasShownCoach=true;}
- api.onEnter?.();
+ api.onEnter?.(entry);
 }
 async function welcome(){
  api.cancelNavigation?.();
@@ -40,7 +59,7 @@ export function translateExperience(){
  $('#welcome-cancel').hidden=!requested;
  document.querySelectorAll('[data-cancel-loading]').forEach(b=>b.hidden=!requested);
  document.querySelectorAll('.secondary-tour-status').forEach(e=>{e.hidden=!loading&&!failed;e.textContent=status;});
- translateLanding(api);
+ translateLanding(landingApi||api);
  $('#focus-view').ariaLabel=$('#focus-view').title=t(immersive?'showControls':'freeView');$('#focus-label').textContent=t(immersive?'showControls':'freeView');
  $('#photos').ariaLabel=t('photos');$('.book').ariaLabel=t('book')+'. '+t('newWindow');$('#help').ariaLabel=t('help');
  $('#return-welcome').ariaLabel=t('backWelcome');$('#map-toggle').ariaLabel=t('map');
@@ -51,13 +70,13 @@ export function translateExperience(){
 
 }
 export function tourReady(){available=true;loading=false;failed=false;$('#welcome-retry').hidden=true;translateExperience();if(requested)enter();}
-export function tourFailed(){available=false;loading=false;requested=false;failed=true;$('#welcome-retry').hidden=false;translateExperience();}
+export function tourFailed(){available=false;loading=false;requested=false;pendingEntry=null;failed=true;$('#welcome-retry').hidden=false;translateExperience();}
 export function setupExperience(callbacks){
  api=callbacks;
  document.querySelectorAll('[data-start-tour]').forEach(b=>b.addEventListener('click',requestEnter));
  $('#welcome-cancel').addEventListener('click',cancelEntry);
  document.querySelectorAll('[data-cancel-loading]').forEach(b=>b.addEventListener('click',cancelEntry));
- const landingApi={...api,
+ landingApi={...api,enterFromPhoto,cancelTourEntry:cancelEntry,entryState,
   gallery:(index)=>{cancelEntry();api.gallery(index);},
   openInfo:(mode)=>{cancelEntry();api.openInfo(mode);}
  };
@@ -75,4 +94,5 @@ export function setupExperience(callbacks){
   if(started&&['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d'].includes(e.key))dismissCoach();
  });
  $('#tour').inert=true;document.body.dataset.mode='welcome';
+ return landingApi;
 }
