@@ -1,5 +1,5 @@
-import {revealChapter} from './editorial-motion.js?v=a2966e5665fa';
-import {JourneyPlayer} from './journey-player.js?v=a2966e5665fa';
+import {revealChapter} from './editorial-motion.js?v=600dd3c2c649';
+import {JourneyPlayer} from './journey-player.js?v=600dd3c2c649';
 const frames=[
  {photo:11,file:'terrace-seating-wide.jpg',position:'50% 50%'},
  {photo:5,file:'living-reverse-new.jpg',position:'50% 50%'},

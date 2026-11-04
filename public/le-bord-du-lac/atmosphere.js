@@ -1,4 +1,4 @@
-import {addSky} from './sky.js?v=a2966e5665fa';
+import {addSky} from './sky.js?v=600dd3c2c649';
 import * as THREE from 'three';
 import {RectAreaLightUniformsLib} from 'three/addons/lights/RectAreaLightUniformsLib.js';
 
@@ -30,4 +30,4 @@ export function addDaylight(scene){
  return sun;
 }
 
-export {refineSurfaces} from './surfaces.js?v=a2966e5665fa';
+export {refineSurfaces} from './surfaces.js?v=600dd3c2c649';

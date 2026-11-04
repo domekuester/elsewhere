@@ -115,3 +115,6 @@
  .flagship .room-outgoing{display:none}
  .flagship .arrival-details img,.detail-caption svg,.space-list img{transition:none;transform:none}
 }
+
+/* Warm secondary copy on the sunset surface, with AA text contrast. */
+.flagship .island-surface .quiet-note{color:#654936}

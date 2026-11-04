@@ -1,10 +1,12 @@
-import {FrameLoop} from './frame-loop.js?v=a2966e5665fa';
-import {TourGestures,PhotoSwipe} from './touch-controls.js?v=a2966e5665fa';
-import {copy} from './copy.js?v=a2966e5665fa';
-import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=a2966e5665fa';
-import {advanceWalking} from './motion.js?v=a2966e5665fa';
-import {addDaylight,refineSurfaces} from './atmosphere.js?v=a2966e5665fa';
-import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=a2966e5665fa';
+import {createRoomTransition} from './room-transition.js?v=600dd3c2c649';
+import {createTourMotion} from './tour-motion.js?v=600dd3c2c649';
+import {FrameLoop} from './frame-loop.js?v=600dd3c2c649';
+import {TourGestures,PhotoSwipe} from './touch-controls.js?v=600dd3c2c649';
+import {copy} from './copy.js?v=600dd3c2c649';
+import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=600dd3c2c649';
+import {advanceWalking} from './motion.js?v=600dd3c2c649';
+import {addDaylight,refineSurfaces} from './atmosphere.js?v=600dd3c2c649';
+import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=600dd3c2c649';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -14,9 +16,9 @@ import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
-import { spots,movePosition } from './navigation.js?v=a2966e5665fa';
+import { spots,movePosition } from './navigation.js?v=600dd3c2c649';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-let language=initialLanguage(),currentRoom='living',level='ground',ready=false,changing=false,photoIndex=0,infoMode='about';
+let language=initialLanguage(),currentRoom='living',level='ground',ready=false,photoIndex=0,infoMode='about';
 const roomKeys=Object.keys(spots);
 const photoFiles=['living-new','kitchen-new','terrace','beach','bedroom-new','living-reverse-new','lagoon','terrace-facade','bathroom-washbasin-toilet','bathroom-shower','sofa-detail','terrace-seating-wide','terrace-under-roof','bedroom-lamp','sunset-etang-sale-sdr','water-and-green-hills-sdr','sunset-clouds-etang-sale','boats-evening-etang-sale','pink-flowers-etang-sale'];
 function t(key){return copy[language][key];}
@@ -66,7 +68,7 @@ function showPhoto(i){
  revealPhotoThumb();
 }
 photoFiles.forEach((name,i)=>{const b=document.createElement('button');b.innerHTML=`<img src="./photos/thumbs/${name}.jpg" width="96" height="64" alt="" loading="lazy" decoding="async">`;b.addEventListener('click',()=>showPhoto(i));$('#photo-thumbs').appendChild(b);});
-function gallery(index){releaseInput();showPhoto(Number.isInteger(index)?index:photoIndex);$('#gallery').showModal();revealPhotoThumb();}
+function gallery(index){cancelNavigation();releaseInput();showPhoto(Number.isInteger(index)?index:photoIndex);$('#gallery').showModal();revealPhotoThumb();}
 const photoSwipe=new PhotoSwipe(),photoImage=$('#gallery-image');
 photoImage.addEventListener('touchstart',e=>photoSwipe.begin(e.touches),{passive:true});
 photoImage.addEventListener('touchend',e=>{const direction=photoSwipe.end(e.changedTouches);if(direction&&(!window.visualViewport||window.visualViewport.scale<=1))showPhoto(photoIndex+direction);},{passive:true});
@@ -78,7 +80,7 @@ $('#gallery').addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventD
 $$('[data-close]').forEach(b=>b.addEventListener('click',()=>document.getElementById(b.dataset.close).close()));
 $$('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
 function fillInfo(){$('#info-title').textContent=t(infoMode+'Title');$('#info-body').innerHTML=t(infoMode+'Body');}
-function openInfo(mode){releaseInput();infoMode=mode;fillInfo();$('#information').showModal();}
+function openInfo(mode){cancelNavigation();releaseInput();infoMode=mode;fillInfo();$('#information').showModal();}
 $('#about').addEventListener('click',()=>openInfo('about'));$('#help').addEventListener('click',()=>openInfo('help'));
 $('#map-toggle').addEventListener('click',()=>{const open=$('#map-content').hidden;$('#map-content').hidden=!open;$('#map-toggle').setAttribute('aria-expanded',String(open));$('#map-toggle svg').style.transform=open?'rotate(180deg)':'rotate(0deg)';});
 $('#retry').addEventListener('click',()=>location.reload());
@@ -96,11 +98,27 @@ function releaseInput(){
 function setPose(spot){
  camera.position.fromArray(spot.position);const d=new THREE.Vector3().fromArray(spot.target).sub(camera.position).normalize();yaw=Math.atan2(-d.x,-d.z);pitch=Math.asin(d.y);camera.rotation.set(pitch,yaw,0,'YXZ');
 }
+const tourMotion=createTourMotion(document,reducedMotion);
+const roomTransition=createRoomTransition({
+ conceal:signal=>tourMotion.conceal(signal),reveal:signal=>tourMotion.reveal(signal),
+ allowed:()=>ready&&isExploring()&&!document.hidden&&!$('dialog[open]'),
+ commit:name=>{
+  currentRoom=name;level=name==='bedroom'?'loft':'ground';setPose(spots[name]);updateRoomUI();
+  $('#stair-action').hidden=true;$('#view').focus({preventScroll:true});
+ },
+ cleanup:()=>{tourMotion.stop();lastRenderedPose='';$$('[data-room]').forEach(b=>b.removeAttribute('data-pending'));}
+});
+function cancelNavigation(){roomTransition.cancel();tourMotion.stop();}
 async function goToRoom(name,instant=false){
- if(!ready||changing)return;releaseInput();changing=true;
- if(!instant){$('#transition').classList.add('active');await new Promise(r=>setTimeout(r,matchMedia('(prefers-reduced-motion: reduce)').matches?0:180));}
- currentRoom=name;level=name==='bedroom'?'loft':'ground';setPose(spots[name]);updateRoomUI();$('#stair-action').hidden=true;
- $('#transition').classList.remove('active');changing=false;$('#view').focus({preventScroll:true});
+ if(!ready||!isExploring()||document.hidden||$('dialog[open]')||!spots[name])return;
+ releaseInput();roomTransition.cancel();
+ $$('[data-room]').forEach(b=>{if(b.dataset.room===name)b.dataset.pending='true';});
+ try{await roomTransition.go(name,{instant:instant||reducedMotion.matches});}
+ catch(error){
+  console.error('Room transition failed',error);
+  // A visual failure must not turn the room controls into dead buttons.
+  await roomTransition.go(name,{instant:true});
+ }
 }
 $$('[data-room]').forEach(b=>b.addEventListener('click',()=>goToRoom(b.dataset.room)));
 $('#reset').addEventListener('click',()=>goToRoom('living'));$('#stair-action').addEventListener('click',()=>goToRoom('bedroom'));
@@ -114,7 +132,7 @@ async function init(){
   const ground=new THREE.Mesh(new THREE.PlaneGeometry(90,90),new THREE.MeshStandardMaterial({color:'#babfa2',roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.13;ground.receiveShadow=true;scene.add(ground);
   const woven=weaveTexture(false);
   const aoExcluded=[];
-  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=a2966e5665fa',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
+  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=600dd3c2c649',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
   const processedMaterials=new Set();
   gltf.scene.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.receiveShadow=true;let m=o.material;
    if(/glass/i.test(m.name)){o.castShadow=false;m.side=THREE.DoubleSide;m.depthWrite=false;aoExcluded.push(o);}
@@ -135,11 +153,11 @@ async function init(){
   aoPass._overrideVisibility=()=>{baseOverride();for(const o of aoExcluded)if(o.visible){o.visible=false;aoPass._visibilityCache.push(o);}};
   composer.addPass(aoPass);composer.addPass(new OutputPass());
   fxaaPass=new ShaderPass(FXAAShader);composer.addPass(fxaaPass);resizeEffects();
-  ready=true;document.body.dataset.loaded='true';$('#load-fill').style.width='100%';$('#load-text').textContent='100 %';composer.render();renderer.shadowMap.autoUpdate=false;$('#loading').classList.add('done');setTimeout(()=>$('#loading').hidden=true,550);tourReady();
-  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();ready=false;setSceneActive(false);releaseInput();$('#error').hidden=false;tourFailed();});
+  ready=true;document.body.dataset.loaded='true';$('#load-fill').style.width='100%';$('#load-text').textContent='100 %';composer.render();renderer.shadowMap.autoUpdate=false;$('#loading').hidden=true;tourReady();
+  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();ready=false;cancelNavigation();setSceneActive(false);releaseInput();$('#error').hidden=false;tourFailed();});
  }catch(e){console.error('Tour loading failed',e);$('#loading').hidden=true;$('#error').hidden=false;tourFailed();}
 }
-const mayNavigate=()=>ready&&!changing&&isExploring()&&!$('dialog[open]');
+const mayNavigate=()=>ready&&!roomTransition.busy&&isExploring()&&!$('dialog[open]');
 const view=$('#view'),stick=$('#joystick');
 view.addEventListener('pointerdown',e=>{
  if(!mayNavigate()||(e.pointerType==='mouse'&&e.button!==0))return;
@@ -167,7 +185,7 @@ stick.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','Arro
 stick.addEventListener('blur',releaseInput);
 const activeCodes=['KeyW','KeyA','KeyS','KeyD','KeyQ','KeyE','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'];
 document.addEventListener('keydown',e=>{if(!ready||!isExploring()||$('dialog[open]')||e.ctrlKey||e.metaKey||e.altKey)return;if(e.target.closest('button,a,input,textarea,select'))return;if(activeCodes.includes(e.code)){e.preventDefault();keys.add(e.code);}});
-document.addEventListener('keyup',e=>keys.delete(e.code));window.addEventListener('blur',releaseInput);document.addEventListener('visibilitychange',()=>{if(document.hidden)releaseInput();setSceneActive(isExploring());});
+document.addEventListener('keyup',e=>keys.delete(e.code));window.addEventListener('blur',releaseInput);document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelNavigation();releaseInput();}setSceneActive(isExploring());});
 $$('[data-move]').forEach(b=>{
  b.addEventListener('pointerdown',e=>{e.preventDefault();if(!mayNavigate())return;padMove=b.dataset.move;b.classList.add('held');b.setPointerCapture(e.pointerId);});
  const stop=()=>{padMove=null;b.classList.remove('held');};b.addEventListener('pointerup',stop);b.addEventListener('pointercancel',stop);b.addEventListener('lostpointercapture',stop);
@@ -175,7 +193,7 @@ $$('[data-move]').forEach(b=>{
 });
 function animate(now){
  if(!ready||document.hidden||!isExploring())return;const dt=Math.min((now-last)/1000,.04);last=now;
- if(isExploring()&&!$('dialog[open]')&&!changing){
+ if(isExploring()&&!$('dialog[open]')&&!roomTransition.busy){
   if(keys.has('KeyQ'))yaw+=dt*1.15;if(keys.has('KeyE'))yaw-=dt*1.15;
   let f=Number(keys.has('KeyW')||keys.has('ArrowUp')||padMove==='forward')-Number(keys.has('KeyS')||keys.has('ArrowDown')||padMove==='back');
   let s=Number(keys.has('KeyD')||keys.has('ArrowRight')||padMove==='right')-Number(keys.has('KeyA')||keys.has('ArrowLeft')||padMove==='left');
@@ -188,7 +206,7 @@ function animate(now){
  camera.rotation.set(pitch,yaw,0,'YXZ');
  const pose=camera.position.toArray().join(',')+','+yaw+','+pitch;
  if(pose===lastRenderedPose)return;lastRenderedPose=pose;
- if(true){const x=12+(camera.position.x+1.8)/3.6*82,z=16+(camera.position.z+2.5)/5*116;$('#map-dot').setAttribute('cx',x.toFixed(2));$('#map-dot').setAttribute('cy',z.toFixed(2));$('#map-view').setAttribute('transform',`translate(${x} ${z}) rotate(${-yaw*180/Math.PI})`);$('#stair-action').hidden=level!=='ground'||Math.hypot(camera.position.x+1.27,camera.position.z+.42)>1.12||changing;}
+ if(true){const x=12+(camera.position.x+1.8)/3.6*82,z=16+(camera.position.z+2.5)/5*116;$('#map-dot').setAttribute('cx',x.toFixed(2));$('#map-dot').setAttribute('cy',z.toFixed(2));$('#map-view').setAttribute('transform',`translate(${x} ${z}) rotate(${-yaw*180/Math.PI})`);$('#stair-action').hidden=level!=='ground'||Math.hypot(camera.position.x+1.27,camera.position.z+.42)>1.12||roomTransition.busy;}
  composer.render();
 }
 window.addEventListener('resize',()=>{releaseInput();if(!renderer||!camera)return;camera.aspect=innerWidth/innerHeight;camera.fov=innerWidth<620?70:62;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);if(composer){composer.setSize(innerWidth,innerHeight);resizeEffects();}lastRenderedPose='';});
@@ -213,5 +231,5 @@ function botanicalTexture(){
 }
 const frames=new FrameLoop(animate,requestAnimationFrame.bind(window),cancelAnimationFrame.bind(window));
 function setSceneActive(active){if(active&&ready&&!document.hidden){last=performance.now();frames.start();}else frames.stop();}
-setupExperience({setSceneActive,t,language:()=>language,gallery,openInfo,releaseInput,prepare:init,changeLanguage});
+setupExperience({setSceneActive,cancelNavigation,onEnter:()=>tourMotion.arrival(),t,language:()=>language,gallery,openInfo,releaseInput,prepare:init,changeLanguage});
 translate();
