@@ -1,10 +1,10 @@
-import {FrameLoop} from './frame-loop.js?v=a36da1a17d7e';
-import {TourGestures,PhotoSwipe} from './touch-controls.js?v=a36da1a17d7e';
-import {copy} from './copy.js?v=a36da1a17d7e';
-import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=a36da1a17d7e';
-import {advanceWalking} from './motion.js?v=a36da1a17d7e';
-import {addDaylight,refineSurfaces} from './atmosphere.js?v=a36da1a17d7e';
-import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=a36da1a17d7e';
+import {FrameLoop} from './frame-loop.js?v=a2966e5665fa';
+import {TourGestures,PhotoSwipe} from './touch-controls.js?v=a2966e5665fa';
+import {copy} from './copy.js?v=a2966e5665fa';
+import {initialLanguage,rememberLanguage,bookingUrl,isLanguage} from './i18n.js?v=a2966e5665fa';
+import {advanceWalking} from './motion.js?v=a2966e5665fa';
+import {addDaylight,refineSurfaces} from './atmosphere.js?v=a2966e5665fa';
+import {setupExperience,isExploring,tourReady,tourFailed,translateExperience} from './experience.js?v=a2966e5665fa';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -14,7 +14,7 @@ import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
-import { spots,movePosition } from './navigation.js?v=a36da1a17d7e';
+import { spots,movePosition } from './navigation.js?v=a2966e5665fa';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 let language=initialLanguage(),currentRoom='living',level='ground',ready=false,changing=false,photoIndex=0,infoMode='about';
 const roomKeys=Object.keys(spots);
@@ -114,7 +114,7 @@ async function init(){
   const ground=new THREE.Mesh(new THREE.PlaneGeometry(90,90),new THREE.MeshStandardMaterial({color:'#babfa2',roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.13;ground.receiveShadow=true;scene.add(ground);
   const woven=weaveTexture(false);
   const aoExcluded=[];
-  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=a36da1a17d7e',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
+  const gltf=await new GLTFLoader().loadAsync('./house.glb?v=a2966e5665fa',e=>{const n=e.total?Math.round(e.loaded/e.total*90):30;$('#load-fill').style.width=n+'%';$('#load-text').textContent=n+' %';});
   const processedMaterials=new Set();
   gltf.scene.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.receiveShadow=true;let m=o.material;
    if(/glass/i.test(m.name)){o.castShadow=false;m.side=THREE.DoubleSide;m.depthWrite=false;aoExcluded.push(o);}
@@ -129,7 +129,7 @@ async function init(){
   const target=new THREE.WebGLRenderTarget(innerWidth,innerHeight,{type:THREE.HalfFloatType,samples:2});
   composer=new EffectComposer(renderer,target);composer.setPixelRatio(Math.min(devicePixelRatio,1.5));composer.setSize(innerWidth,innerHeight);
   composer.addPass(new RenderPass(scene,camera));
-  aoPass=new SSAOPass(scene,camera,innerWidth,innerHeight,24);aoPass.kernelRadius=.24;aoPass.minDistance=.0005;aoPass.maxDistance=.025;
+  aoPass=new SSAOPass(scene,camera,innerWidth,innerHeight,24);aoPass.kernelRadius=.16;aoPass.minDistance=.001;aoPass.maxDistance=.018;
   // Transparent glass must not become an opaque occluder in the normal pass.
   const baseOverride=aoPass._overrideVisibility.bind(aoPass);
   aoPass._overrideVisibility=()=>{baseOverride();for(const o of aoExcluded)if(o.visible){o.visible=false;aoPass._visibilityCache.push(o);}};

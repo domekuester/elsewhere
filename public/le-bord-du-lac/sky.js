@@ -5,7 +5,7 @@ import * as THREE from 'three';
 export function addSky(scene){
  const sky=new THREE.Mesh(new THREE.SphereGeometry(54,32,16),new THREE.ShaderMaterial({
   side:THREE.BackSide,depthWrite:false,fog:false,
-  uniforms:{zenith:{value:new THREE.Color('#5c9dce')},horizon:{value:new THREE.Color('#dee9ec')},sunDirection:{value:new THREE.Vector3(7,4.8,4).normalize()}},
+  uniforms:{zenith:{value:new THREE.Color('#3986bd')},horizon:{value:new THREE.Color('#bad9e9')},sunDirection:{value:new THREE.Vector3(7,4.8,4).normalize()}},
   vertexShader:`varying vec3 direction;void main(){direction=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}`,
   fragmentShader:`
    uniform vec3 zenith,horizon,sunDirection;varying vec3 direction;
@@ -16,8 +16,8 @@ export function addSky(scene){
     vec3 color=mix(horizon,zenith,pow(elevation,.48));
     vec2 p=d.xz/(max(d.y,.12)+.3)*3.;
     float n=noise(p)*.56+noise(p*2.03+7.)*.28+noise(p*4.11)*.16;
-    float cloud=smoothstep(.56,.8,n)*smoothstep(.06,.27,d.y)*.32;
-    color=mix(color,vec3(.91,.92,.91),cloud);
+    float cloud=smoothstep(.48,.76,n)*smoothstep(.04,.25,d.y)*.58;
+    color=mix(color,vec3(.83,.88,.91),cloud);
     float glow=pow(max(dot(d,sunDirection),0.),24.);
     color+=vec3(.23,.17,.09)*glow;
     gl_FragColor=vec4(color,1.);
