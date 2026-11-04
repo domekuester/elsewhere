@@ -1,5 +1,5 @@
-import {revealChapter} from './editorial-motion.js?v=600dd3c2c649';
-import {JourneyPlayer} from './journey-player.js?v=600dd3c2c649';
+import {revealChapter} from './editorial-motion.js?v=f813dcd27159';
+import {JourneyPlayer} from './journey-player.js?v=f813dcd27159';
 const frames=[
  {photo:11,file:'terrace-seating-wide.jpg',position:'50% 50%'},
  {photo:5,file:'living-reverse-new.jpg',position:'50% 50%'},
@@ -18,8 +18,9 @@ export function setupJourney(api){
  const open=section.querySelector('[data-journey-open]'),chapters=[...section.querySelectorAll('[data-chapter]')];
  const status=section.querySelector('.journey-status'),copy=section.querySelector('.journey-copy');
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
- let rendered=0,wanted=0,token=0,active=0,inView=true,touch=null;
+ let rendered=0,wanted=0,token=0,active=0,imageInView=typeof IntersectionObserver==='undefined',pendingStart=false,touch=null;
  const text=()=>api.t('journey');
+ const available=()=>!document.hidden&&document.body.dataset.mode==='welcome'&&!document.querySelector('dialog[open]');
  function translate(){
   const t=text(),chapter=t.chapters[rendered],state=player;
   section.ariaLabel=t.label;
@@ -29,8 +30,8 @@ export function setupJourney(api){
   section.querySelector('.journey-count').textContent=String(rendered+1).padStart(2,'0')+' / 06';
   section.querySelector('.journey-controls').ariaLabel=t.controls;
   section.querySelector('.journey-chapters').ariaLabel=t.choose;
-  play.querySelector('span').textContent=state.playing?t.pause:(state.index===5?t.replay:t.play);
-  play.setAttribute('aria-pressed',String(state.playing));
+  play.querySelector('span').textContent=state.playing||pendingStart?t.pause:(state.index===5?t.replay:t.play);
+  play.setAttribute('aria-pressed',String(state.playing||pendingStart));
   prev.ariaLabel=t.previous;next.ariaLabel=t.next;prev.disabled=wanted===0;next.disabled=wanted===5;
   open.querySelector('span').textContent=t.open;
   open.ariaLabel=api.t('photoNames')[frames[rendered].photo]+' · '+t.open;
@@ -68,24 +69,47 @@ export function setupJourney(api){
   translate();
  }});
  journey={translate};translate();
- play.addEventListener('click',()=>{if(player.playing)player.pause();else player.start();});
- const select=i=>{status.textContent='';player.select(i);};
+ const pause=()=>{pendingStart=false;player.pause();};
+ play.addEventListener('click',()=>{
+  if(player.playing||pendingStart){pause();return;}
+  if(!available())return;
+  if(imageInView){player.start();return;}
+  pendingStart=true;translate();
+  // Native centering respects the page's scroll-padding for its sticky header.
+  // Only this explicit click may request playback once the photograph is visible.
+  stage.scrollIntoView({block:'center',behavior:reduced.matches?'auto':'smooth'});
+ });
+ const select=i=>{pendingStart=false;status.textContent='';player.select(i);};
  prev.addEventListener('click',()=>select(player.index-1));next.addEventListener('click',()=>select(player.index+1));
  chapters.forEach(b=>b.addEventListener('click',()=>select(Number(b.dataset.chapter))));
- open.addEventListener('click',()=>{player.pause();api.gallery(frames[rendered].photo);});
- section.addEventListener('focusin',e=>{if(e.target!==play&&player.playing)player.pause();});
+ open.addEventListener('click',()=>{pause();api.gallery(frames[rendered].photo);});
+ section.addEventListener('focusin',e=>{if(e.target!==play&&(player.playing||pendingStart))pause();});
  section.addEventListener('keydown',e=>{
   if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();select(player.index+(e.key==='ArrowRight'?1:-1));}
  });
  stage.addEventListener('touchstart',e=>{if(e.touches.length===1)touch={x:e.touches[0].clientX,y:e.touches[0].clientY};else touch=null;},{passive:true});
  stage.addEventListener('touchend',e=>{if(!touch)return;const end=e.changedTouches[0],dx=end.clientX-touch.x,dy=end.clientY-touch.y;touch=null;if(Math.abs(dx)>48&&Math.abs(dx)>Math.abs(dy)*1.5)select(player.index+(dx<0?1:-1));},{passive:true});
  stage.addEventListener('touchcancel',()=>touch=null,{passive:true});
- const visibility=()=>player.setVisible(inView&&!document.hidden&&document.body.dataset.mode==='welcome');
- if(typeof IntersectionObserver!=='undefined')new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;visibility();},{root:document.querySelector('#welcome-screen'),threshold:0}).observe(section);
- if(typeof IntersectionObserver!=='undefined')new IntersectionObserver(entries=>{section.dataset.imageVisible=String(entries[0].isIntersecting);},{root:document.querySelector('#welcome-screen'),threshold:0}).observe(stage);
+ const visibility=()=>{
+  const allowed=available(),visible=imageInView&&allowed;
+  if(!allowed)pendingStart=false;
+  // Reading the caption below an off-screen image must not silently advance it.
+  // Discard an automatic next frame that is still decoding, but honour manual choices.
+  if(!visible&&player.playing&&wanted!==rendered){
+   token++;wanted=rendered;stage.setAttribute('aria-busy','false');status.textContent='';player.select(rendered);player.setReady(true);
+  }
+  player.setVisible(visible);
+  if(visible&&pendingStart){pendingStart=false;player.start();}
+ };
+ section.dataset.imageVisible=String(imageInView);
+ if(typeof IntersectionObserver!=='undefined')new IntersectionObserver(entries=>{
+  const entry=entries[0];imageInView=entry.isIntersecting&&entry.intersectionRatio>=.3;
+  section.dataset.imageVisible=String(imageInView);visibility();
+ },{root:document.querySelector('#welcome-screen'),threshold:[0,.3]}).observe(stage);
+ visibility();
  document.addEventListener('visibilitychange',visibility);
  new MutationObserver(visibility).observe(document.body,{attributes:true,attributeFilter:['data-mode']});
- reduced.addEventListener('change',()=>player.pause());
+ reduced.addEventListener('change',pause);
  // Any modal or tour entry pauses the photographic narrative.
- document.addEventListener('click',e=>{if(e.target.closest('[data-start-tour],[data-gallery-index],[data-photo],#welcome-gallery,[data-about]'))player.pause();});
+ document.addEventListener('click',e=>{if(e.target.closest('[data-start-tour],[data-gallery-index],[data-photo],#welcome-gallery,[data-about]'))pause();});
 }

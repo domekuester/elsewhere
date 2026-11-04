@@ -117,4 +117,37 @@
 }
 
 /* Warm secondary copy on the sunset surface, with AA text contrast. */
-.flagship .island-surface .quiet-note{color:#654936}
+.flagship .island-surface .quiet-note,.flagship .island-surface figcaption{color:#654936}
+
+/* Reading rhythm: one horizon opens with the visitor's native scroll. */
+.reading-progress{position:absolute;left:0;bottom:-1px;width:100%;height:2px;pointer-events:none;background:var(--clay);transform:scaleX(0);transform-origin:left}
+.flagship .site-wordmark{display:inline-flex;align-items:center;min-height:44px}
+.landscape-window{display:block;position:relative;overflow:hidden;border-radius:3px;clip-path:inset(0 var(--panorama-inset,0%));isolation:isolate}
+.flagship .landscape-window img{transform:scale(var(--panorama-scale,1));transition:none}
+.landscape-story .photo-open:focus-visible .landscape-window{clip-path:none}
+.landscape-story .photo-open:focus-visible img{transform:none}
+.flagship .photo-open-mark{border:1px solid #e8d8c8;box-shadow:none;transition:background-color .18s,color .18s,transform .18s var(--motion-ease)}
+@media(hover:hover) and (pointer:fine){
+ .flagship .photo-open:hover .photo-open-mark{background:#88543b;color:#fff8ef;transform:scale(1.06)}
+ .flagship .landscape-window img{transition:none}
+}
+@media(max-width:600px){
+ .reading-progress{height:2px}
+ .flagship .site-wordmark{font-size:25px}
+ .flagship .photo-open:active .photo-open-mark{background:#88543b;color:#fff8ef;transform:scale(.96)}
+}
+@media(prefers-reduced-motion:reduce){
+ .landscape-window{clip-path:none!important}
+ .flagship .landscape-window img{transform:none!important}
+ .reading-progress{transition:none}
+}
+
+/* Reserve room for the longest translated chapter without clipping enlarged text. */
+@media(max-width:600px){.flagship .journey-copy{min-block-size:384px}}
+@media(max-width:370px){.flagship .site-wordmark{font-size:22px}}
+@media(min-width:601px) and (max-width:800px){.flagship .journey-copy{min-block-size:304px}}
+@media(max-width:600px){
+ .flagship .arrival-heading{padding-block:24px 20px}
+ .flagship .arrival-mosaic>.photo-open{aspect-ratio:1.9}
+ .flagship .arrival-intro{margin-top:18px}
+}

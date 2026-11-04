@@ -1,7 +1,7 @@
-import {setupEditorialMotion,blendRoom,latestPhotoRequest} from './editorial-motion.js?v=600dd3c2c649';
-import {setupJourney,translateJourney} from './photo-journey.js?v=600dd3c2c649';
+import {setupEditorialMotion,blendRoom,latestPhotoRequest} from './editorial-motion.js?v=f813dcd27159';
+import {setupJourney,translateJourney} from './photo-journey.js?v=f813dcd27159';
 // Original-photo landing page. Booking remains an explicit outbound link.
-import {bookingUrl} from './i18n.js?v=600dd3c2c649';
+import {bookingUrl} from './i18n.js?v=f813dcd27159';
 const spaces={living:{photo:5,file:'living-reverse-new',caption:0},bedroom:{photo:13,file:'bedroom-lamp',caption:1},terrace:{photo:11,file:'terrace-seating-wide',caption:2}};
 let selectedSpace='terrace';
 function updateSpace(api){
@@ -33,7 +33,7 @@ export function translateLanding(api){
 }
 export function setupLanding(api){
  setupJourney(api);
- setupEditorialMotion();
+ const editorialMotion=setupEditorialMotion();
  const preview=document.querySelector('#space-preview');
  const requestPhoto=latestPhotoRequest(source=>{const image=new Image();image.src=source;return image.decode();});
  document.querySelectorAll('[data-space]').forEach(button=>button.addEventListener('click',()=>{
@@ -54,14 +54,23 @@ export function setupLanding(api){
  if(typeof window.requestAnimationFrame==='function'){
   const header=document.querySelector('.site-header');
   const sections=[...document.querySelectorAll('#zuhause,#rundgang,#einblicke')];
+  const progress=root.querySelector('.reading-progress');
   let scheduled=false;
   const update=()=>{
    scheduled=false;const edge=header.getBoundingClientRect().bottom+60;
    const active=sections.find(s=>{const rect=s.getBoundingClientRect();return rect.top<=edge&&rect.bottom>edge;});
+   const distance=root.scrollHeight-root.clientHeight;
+   const fraction=distance>0?Math.max(0,Math.min(1,root.scrollTop/distance)):0;
+   editorialMotion.update();
+   if(progress)progress.style.transform='scaleX('+fraction.toFixed(4)+')';
    header.classList.toggle('is-scrolled',root.scrollTop>12);
    document.querySelectorAll('.site-nav a').forEach(a=>{if(active&&a.hash==='#'+active.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
   };
   const schedule=()=>{if(!scheduled){scheduled=true;window.requestAnimationFrame(update);}};
-  root.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);schedule();
+  root.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);
+  // Lazy photos, translated copy and orientation changes may alter the reading distance.
+  root.addEventListener('load',schedule,true);
+  if(window.ResizeObserver){const sizes=new ResizeObserver(schedule);root.querySelectorAll(':scope > div,:scope > section,:scope > footer').forEach(element=>sizes.observe(element));}
+  schedule();
  }
 }
