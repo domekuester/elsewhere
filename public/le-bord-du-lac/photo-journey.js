@@ -1,9 +1,9 @@
-import {revealChapter} from './editorial-motion.js?v=eab064138910';
-import {JourneyPlayer} from './journey-player.js?v=eab064138910';
+import {revealChapter} from './editorial-motion.js?v=f132706da4f0';
+import {JourneyPlayer} from './journey-player.js?v=f132706da4f0';
 const frames=[
  {room:'terrace',photo:11,file:'terrace-seating-wide.jpg',position:'50% 50%'},
  {room:'living',photo:5,file:'living-reverse-new.jpg',position:'50% 50%'},
- {room:'kitchen',photo:1,file:'kitchen-new.jpg',position:'50% 50%'},
+ {room:'kitchen',photo:0,file:'living-new.jpg',position:'50% 50%'},
  {room:'bedroom',photo:13,file:'bedroom-lamp.jpg',position:'50% 50%'},
  {photo:15,file:'water-and-green-hills-sdr.jpg',position:'50% 58%'},
  {photo:17,file:'boats-evening-etang-sale.jpg',position:'50% 50%'}

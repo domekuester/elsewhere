@@ -32,13 +32,19 @@ function upholstery(old,check){
   bumpMap:old.bumpMap,bumpScale:old.bumpScale,
   alphaMap:old.alphaMap,opacity:old.opacity,transparent:old.transparent,alphaTest:old.alphaTest,
   vertexColors:old.vertexColors,side:old.side,depthWrite:old.depthWrite,
-  sheen:.2,sheenRoughness:.92,sheenColor:new THREE.Color('#b9b5aa'),
-  envMapIntensity:.42,dithering:true
+  sheen:.10,sheenRoughness:.95,sheenColor:old.color.clone().lerp(new THREE.Color('#eee8da'),.25),
+  specularIntensity:.42,envMapIntensity:.30,dithering:true
  });
  // The checked cushion is visible in the source photographs; its colour
  // pattern supplements the retained scan normal/roughness channels.
  if(old.name.toLowerCase().includes('check')&&!old.map){material.map=check;material.color.set('#ffffff');}
- material.normalScale.multiplyScalar(.6);
+ material.normalScale.multiplyScalar(.85);
+ // Scan roughness must not turn matte cotton into varnish under a broad window.
+ material.onBeforeCompile=shader=>{
+  shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>',
+   '#include <roughnessmap_fragment>\n roughnessFactor = clamp(roughnessFactor, .88, .98);');
+ };
+ material.customProgramCacheKey=()=> 'reference-woven-matte-v1';
  return material;
 }
 
@@ -50,17 +56,20 @@ export function refineSurfaces(root,renderer){
   const name=old.name.toLowerCase();let material=old;
   if(name.includes('fabric'))material=upholstery(old,details.check);
   if(/oak|wood/.test(name)&&!name.includes('scanned')){
-   // Lift the dark scan continuously in each colour channel, preserving grain
-   // and hue variation. A narrow grayscale threshold erased both in the old pass.
-   material.color.set(name.includes('dark')?'#90765a':name.includes('light')?'#d7ba93':'#bca17a');
-   material.roughness=1;material.normalScale?.multiplyScalar(.65);material.envMapIntensity=.30;
+   // Keep the source RGB variation. A gentler lift retains more of the grain;
+   // the pale tint compensates without flattening it into uniform beige.
+   const countertop=name.includes('laminate'),cabinet=name.includes('cabinet'),cane=name.includes('cane');
+   const tint=cane?'#c79c64':countertop?'#c9b08e':cabinet?'#d9c6aa':name.includes('dark')?'#a68c6d':name.includes('light')?'#e1cfb0':'#cfb897';
+   const limits=countertop?'.58, .82':cabinet?'.65, .90':'.70, .94';
+   material.color.set(tint);
+   material.roughness=1;material.metalness=0;material.normalScale?.multiplyScalar(cane ? .22 : (countertop||cabinet) ? .45 : .65);material.envMapIntensity=countertop ? .45 : .30;
    material.onBeforeCompile=shader=>{
     shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',THREE.ShaderChunk.map_fragment.replace('diffuseColor *= sampledDiffuseColor;',
-     'sampledDiffuseColor.rgb = pow(max(sampledDiffuseColor.rgb, vec3(0.0)), vec3(.26));\n diffuseColor *= sampledDiffuseColor;'));
+     'sampledDiffuseColor.rgb = pow(max(sampledDiffuseColor.rgb, vec3(0.0)), vec3(.34));\n diffuseColor *= sampledDiffuseColor;'));
     shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>',
-     '#include <roughnessmap_fragment>\n roughnessFactor = clamp(roughnessFactor, .70, .94);');
+     '#include <roughnessmap_fragment>\n roughnessFactor = clamp(roughnessFactor, '+limits+');');
    };
-   material.customProgramCacheKey=()=> 'reference-pine-rgb-v1';
+   material.customProgramCacheKey=()=> 'reference-timber-rgb-v2-'+limits;
   }
   if(name.includes('scanned timber')){
    // The separate floor scan already carries the appropriate board colours.
@@ -74,11 +83,18 @@ export function refineSurfaces(root,renderer){
   if(name.includes('ceramic')){material.roughness=.32;material.envMapIntensity=.65;}
   if(name.includes('painted sage')){material.roughness=.60;material.envMapIntensity=.42;}
   if(name.includes('brushed steel')){material.roughness=.34;material.envMapIntensity=.9;}
+  if(name.includes('refrigerator satin')||name.includes('appliance brushed')){
+   material.color.set('#a2a6a7');material.metalness=.65;material.roughness=.47;material.envMapIntensity=.75;
+  }
+  if(name.includes('sink graphite')){
+   material.color.set('#242829');material.metalness=0;material.roughness=.64;material.envMapIntensity=.45;
+  }
   if(name.includes('lampshade')){
-   material.emissive.set('#ffbf7e');material.emissiveIntensity=.18;material.roughness=.96;
+   material.emissive.set('#ffcf98');material.emissiveIntensity=.20;material.roughness=.96;
   }
   if(name.includes('plant')){
-   material.roughness=.82;material.envMapIntensity=.25;
+   material.roughness=.78;material.envMapIntensity=.25;
+   material.color.set(name.includes('light')?'#79894a':'#426338');
    // A very small transmitted-light approximation, with no artificial glow.
    material.emissive.set('#203815');material.emissiveIntensity=.025;
   }

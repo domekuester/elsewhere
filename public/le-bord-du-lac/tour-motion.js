@@ -1,4 +1,4 @@
-import {createPhotoOpening} from './photo-opening.js?v=eab064138910';
+import {createPhotoOpening} from './photo-opening.js?v=f132706da4f0';
 // A finite photographic opening and interruptible room dissolves. No camera animation.
 export function createTourMotion(doc,preference){
  const photoOpening=createPhotoOpening(doc,preference);
