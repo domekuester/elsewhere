@@ -1,7 +1,7 @@
-import {setupEditorialMotion,blendRoom,latestPhotoRequest} from './editorial-motion.js?v=f132706da4f0';
-import {setupJourney,translateJourney} from './photo-journey.js?v=f132706da4f0';
+import {setupEditorialMotion,blendRoom,latestPhotoRequest} from './editorial-motion.js?v=1d11232b9f40';
+import {setupJourney,translateJourney} from './photo-journey.js?v=1d11232b9f40';
 // Original-photo landing page. Booking remains an explicit outbound link.
-import {bookingUrl} from './i18n.js?v=f132706da4f0';
+import {bookingUrl} from './i18n.js?v=1d11232b9f40';
 const spaces={living:{photo:5,file:'living-reverse-new',caption:0},bedroom:{photo:13,file:'bedroom-lamp',caption:1},terrace:{photo:11,file:'terrace-seating-wide',caption:2}};
 let selectedSpace='terrace';
 function updateSpace(api){

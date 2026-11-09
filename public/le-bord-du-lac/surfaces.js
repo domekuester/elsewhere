@@ -23,7 +23,32 @@ function makeDetailMaps(){
  return {plaster,check};
 }
 
-function upholstery(old,check){
+// Short, irregular crossing fibres avoid continuous stripes. With the model's
+// .42–.60 m fabric UV tiles, a texel is roughly 1.6–2.3 mm; mipmaps soften it
+// naturally with distance. This is a neutral linear multiplier, not a new dye.
+function makeFineWeave(){
+ const size=256,canvas=document.createElement('canvas');canvas.width=canvas.height=size;
+ const ctx=canvas.getContext('2d'),pixels=ctx.createImageData(size,size),noise=new Float32Array(size*size);
+ let seed=90217,sum=0;
+ for(let i=0;i<noise.length;i++){seed=(seed*1664525+1013904223)>>>0;noise[i]=seed/4294967296*2-1;}
+ const at=(x,y)=>noise[(y&255)*size+(x&255)];
+ for(let y=0;y<size;y++)for(let x=0;x<size;x++){
+  const warp=(at(x,y-2)+2*at(x,y-1)+2*at(x,y)+2*at(x,y+1)+at(x,y+2))/8;
+  const weft=(at(x-2,y)+2*at(x-1,y)+2*at(x,y)+2*at(x+1,y)+at(x+2,y))/8;
+  const value=Math.round(128+((x+y)%2 ? 10*warp+3*weft : 10*weft+3*warp)+2*at(x,y));
+  pixels.data.set([value,value,value,255],(y*size+x)*4);sum+=value;
+ }
+ ctx.putImageData(pixels,0,0);
+ const map=new THREE.CanvasTexture(canvas);map.name='Fine neutral fabric weave';
+ map.colorSpace=THREE.NoColorSpace;map.wrapS=map.wrapT=THREE.RepeatWrapping;
+ map.minFilter=THREE.LinearMipmapLinearFilter;map.magFilter=THREE.LinearFilter;map.generateMipmaps=true;
+ return {map,gain:255/(sum/(size*size))};
+}
+
+function upholstery(old,details){
+ // Curtains use the same scan as upholstery, but their finer cloth should not
+ // exaggerate its large stitched seam or brighten every window-facing fold.
+ const curtain=old.name.toLowerCase().includes('curtain');
  const material=new THREE.MeshPhysicalMaterial({
   name:old.name,color:old.color.clone(),map:old.map,
   normalMap:old.normalMap,normalScale:old.normalScale.clone(),normalMapType:old.normalMapType,
@@ -32,19 +57,28 @@ function upholstery(old,check){
   bumpMap:old.bumpMap,bumpScale:old.bumpScale,
   alphaMap:old.alphaMap,opacity:old.opacity,transparent:old.transparent,alphaTest:old.alphaTest,
   vertexColors:old.vertexColors,side:old.side,depthWrite:old.depthWrite,
-  sheen:.10,sheenRoughness:.95,sheenColor:old.color.clone().lerp(new THREE.Color('#eee8da'),.25),
-  specularIntensity:.42,envMapIntensity:.30,dithering:true
+  sheen:curtain ? .07 : .10,sheenRoughness:.95,sheenColor:old.color.clone().lerp(new THREE.Color('#eee8da'),.25),
+  specularIntensity:curtain ? .24 : .42,envMapIntensity:.30,dithering:true
  });
  // The checked cushion is visible in the source photographs; its colour
  // pattern supplements the retained scan normal/roughness channels.
- if(old.name.toLowerCase().includes('check')&&!old.map){material.map=check;material.color.set('#ffffff');}
- material.normalScale.multiplyScalar(.85);
+ let weaveGain=null;
+ if(!old.map){
+  if(old.name.toLowerCase().includes('check')){material.map=details.check;material.color.set('#ffffff');}
+  else{
+   details.weave??=makeFineWeave();material.map=details.weave.map;weaveGain=details.weave.gain;
+  }
+ }
+ material.normalScale.multiplyScalar(curtain ? .30 : .85);
  // Scan roughness must not turn matte cotton into varnish under a broad window.
  material.onBeforeCompile=shader=>{
   shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>',
    '#include <roughnessmap_fragment>\n roughnessFactor = clamp(roughnessFactor, .88, .98);');
+  if(weaveGain!==null)shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',
+   THREE.ShaderChunk.map_fragment.replace('diffuseColor *= sampledDiffuseColor;',
+    'sampledDiffuseColor.rgb *= '+weaveGain.toFixed(8)+';\n diffuseColor *= sampledDiffuseColor;'));
  };
- material.customProgramCacheKey=()=> 'reference-woven-matte-v1';
+ material.customProgramCacheKey=()=> weaveGain===null ? 'reference-woven-matte-v1' : 'reference-woven-fibres-v1';
  return material;
 }
 
@@ -54,7 +88,7 @@ export function refineSurfaces(root,renderer){
  function refine(old){
   if(replacements.has(old))return replacements.get(old);
   const name=old.name.toLowerCase();let material=old;
-  if(name.includes('fabric'))material=upholstery(old,details.check);
+  if(name.includes('fabric'))material=upholstery(old,details);
   if(/oak|wood/.test(name)&&!name.includes('scanned')){
    // Keep the source RGB variation. A gentler lift retains more of the grain;
    // the pale tint compensates without flattening it into uniform beige.
